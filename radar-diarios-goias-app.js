@@ -87,6 +87,57 @@
     return "<div class='story-image fallback'>" + escapeHtml(abbr) + "</div>";
   }
 
+  function formatAccessDate(value) {
+    if (!value) return "";
+    var parts = String(value).split("-");
+    if (parts.length === 3) {
+      return parts[2] + "/" + parts[1] + "/" + parts[0];
+    }
+    return value;
+  }
+
+  function getDocumentUrl(entry) {
+    return entry.document_url || entry.source_url || "";
+  }
+
+  function getDocumentLinkLabel(entry) {
+    return entry.document_url ? "Abrir documento original" : "Abrir fonte original";
+  }
+
+  function getDocumentMarker(entry) {
+    return entry.page_marker || entry.source_note || "Marcador a confirmar no documento original";
+  }
+
+  function getAccessedAt(entry) {
+    return entry.accessed_at || DATA.accessed_at || DATA.updated_at || "";
+  }
+
+  function renderDocumentTools(entry) {
+    var documentUrl = getDocumentUrl(entry);
+    var marker = getDocumentMarker(entry);
+    var accessedAt = getAccessedAt(entry);
+    var blocks = [
+      "<div class='doc-strip'>",
+      "<div class='doc-meta'>",
+      "<span><strong>Pagina / marcador</strong>" + escapeHtml(marker) + "</span>",
+      "<span><strong>Data de acesso</strong>" + escapeHtml(formatAccessDate(accessedAt)) + "</span>",
+      "</div>"
+    ];
+
+    if (documentUrl) {
+      blocks.push(
+        "<a class='doc-link' href='" +
+          escapeHtml(documentUrl) +
+          "' target='_blank' rel='noopener noreferrer'>" +
+          escapeHtml(getDocumentLinkLabel(entry)) +
+        "</a>"
+      );
+    }
+
+    blocks.push("</div>");
+    return blocks.join("");
+  }
+
   function renderImage(entry) {
     if (entry.image_url) {
       return "<img class='story-image' loading='lazy' src='" + escapeHtml(entry.image_url) + "' alt='" + escapeHtml("Imagem relacionada a " + entry.city) + "'>";
@@ -108,6 +159,7 @@
       "<p class='story-line'>" + escapeHtml(entry.line) + "</p>",
       "<p class='story-summary'>" + escapeHtml(entry.summary) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
+      renderDocumentTools(entry),
       "</div>",
       "</article>"
     ].join("");
@@ -122,6 +174,7 @@
       "<p class='story-line'>" + escapeHtml(entry.line) + "</p>",
       "<p>" + escapeHtml(entry.summary) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
+      renderDocumentTools(entry),
       "</article>"
     ].join("");
   }
