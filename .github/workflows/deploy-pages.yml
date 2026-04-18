@@ -28,6 +28,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir site
+          cp index.html site/
           cp radar-diarios-goias.html site/
           cp radar-diarios-goias-cronologia.html site/
           cp radar-diarios-goias-dia.html site/
