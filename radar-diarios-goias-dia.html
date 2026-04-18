@@ -2,18 +2,17 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Radar GO | Dia</title>
-  <link rel="stylesheet" href="radar-diarios-goias.css">
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const data = params.get("data");
+    const target = data
+      ? "radar-diarios-goias.html?view=day&data=" + encodeURIComponent(data)
+      : "radar-diarios-goias.html?view=day";
+    window.location.replace(target);
+  </script>
+  <title>Redirecionando...</title>
 </head>
-<body data-view="day">
-  <main id="app" class="wrap page-shell">
-    <div class="empty-state">
-      <h3>Carregando a pagina diaria...</h3>
-      <p class="empty-copy">O calendario do indice mensal aponta para este template com a data da rodada no endereco.</p>
-    </div>
-  </main>
-  <script src="radar-diarios-goias-data.js"></script>
-  <script src="radar-diarios-goias-app.js"></script>
+<body>
+  <p>Redirecionando para a pagina diaria...</p>
 </body>
 </html>

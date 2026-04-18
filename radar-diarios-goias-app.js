@@ -7,8 +7,6 @@
   }
 
   var MONTH_PAGE = "radar-diarios-goias.html";
-  var CHRONO_PAGE = "radar-diarios-goias-cronologia.html";
-  var DAY_PAGE = "radar-diarios-goias-dia.html";
   var MONTH_START = new Date(DATA.month + "-01T00:00:00");
   var CUTOFF = new Date(DATA.cutoff_date + "T00:00:00");
   var DAYS_IN_MONTH = new Date(MONTH_START.getFullYear(), MONTH_START.getMonth() + 1, 0).getDate();
@@ -63,8 +61,12 @@
     return new Date(value + "T00:00:00");
   }
 
+  function chronologyUrl() {
+    return MONTH_PAGE + "?view=chronology";
+  }
+
   function dayUrl(value) {
-    return DAY_PAGE + "?data=" + encodeURIComponent(value);
+    return MONTH_PAGE + "?view=day&data=" + encodeURIComponent(value);
   }
 
   function entryCount(dateValue) {
@@ -239,7 +241,7 @@
       "<span class='chip'>" + daysWithEntries + " dias ja tem pauta fechada na rodada atual.</span>",
       "</div>",
       "<div class='top-links'>",
-      "<a class='top-link' href='" + CHRONO_PAGE + "'>Abrir cronologia completa</a>",
+      "<a class='top-link' href='" + chronologyUrl() + "'>Abrir cronologia completa</a>",
       "<a class='top-link' href='radar-diarios-goias-data.json'>Abrir base JSON</a>",
       "<a class='top-link' href='" + dayUrl("2026-04-08") + "'>Abrir dia com maior carga</a>",
       "</div>",
@@ -357,7 +359,7 @@
       "<p class='intro'>" + escapeHtml(stateCopy) + "</p>",
       "<div class='nav-row'>",
       "<a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar ao mes</a>",
-      "<a class='nav-pill' href='" + CHRONO_PAGE + "'>Abrir cronologia</a>",
+      "<a class='nav-pill' href='" + chronologyUrl() + "'>Abrir cronologia</a>",
       (prev ? "<a class='nav-pill' href='" + dayUrl(prev) + "'>Dia anterior</a>" : ""),
       (next ? "<a class='nav-pill' href='" + dayUrl(next) + "'>Dia seguinte</a>" : ""),
       "</div>",
@@ -380,7 +382,8 @@
     ].join("");
   }
 
-  var view = document.body.getAttribute("data-view") || "month";
+  var pageParams = new URLSearchParams(window.location.search);
+  var view = pageParams.get("view") || document.body.getAttribute("data-view") || "month";
   if (view === "chronology") {
     renderChronologyView();
   } else if (view === "day") {
