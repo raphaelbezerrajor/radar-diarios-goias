@@ -17,6 +17,32 @@
     return a.title.localeCompare(b.title);
   });
 
+  function slugify(value) {
+    return String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  function entryId(entry) {
+    return [
+      entry.date,
+      slugify(entry.city),
+      slugify(entry.title).slice(0, 48)
+    ].join("-");
+  }
+
+  entries.forEach(function (entry) {
+    entry.entry_id = entry.entry_id || entryId(entry);
+  });
+
+  var entryMap = entries.reduce(function (acc, entry) {
+    acc[entry.entry_id] = entry;
+    return acc;
+  }, {});
+
   var grouped = entries.reduce(function (acc, entry) {
     if (!acc[entry.date]) acc[entry.date] = [];
     acc[entry.date].push(entry);
@@ -67,6 +93,10 @@
 
   function dayUrl(value) {
     return MONTH_PAGE + "?view=day&data=" + encodeURIComponent(value);
+  }
+
+  function assistantUrl(entry, tool) {
+    return MONTH_PAGE + "?view=assistant&id=" + encodeURIComponent(entry.entry_id) + "&tool=" + encodeURIComponent(tool);
   }
 
   function entryCount(dateValue) {
@@ -138,6 +168,62 @@
     return blocks.join("");
   }
 
+  function renderAssistantLinks(entry) {
+    return [
+      "<div class='assistant-strip'>",
+      "<a class='assistant-link' href='" + assistantUrl(entry, "gpt") + "'>Texto GPT</a>",
+      "<a class='assistant-link' href='" + assistantUrl(entry, "notebook") + "'>Texto NotebookLM</a>",
+      "</div>"
+    ].join("");
+  }
+
+  function lowerFirst(value) {
+    if (!value) return "";
+    return value.charAt(0).toLowerCase() + value.slice(1);
+  }
+
+  function gptDraft(entry) {
+    return [
+      "Lead inicial para abertura:",
+      entry.summary,
+      "",
+      "Enquadramento sugerido:",
+      "Em " + formatAccessDate(entry.date) + ", " + entry.city + " entrou no radar com uma publicacao de " + lowerFirst(entry.tag) + " na editoria de " + lowerFirst(entry.editoria) + ". O dado central da pauta e que " + lowerFirst(entry.line),
+      "",
+      "Caminho de apuracao:",
+      "Vale ouvir a fonte oficial, checar impacto pratico, puxar historico do tema no municipio e medir o efeito administrativo, orcamentario ou politico da publicacao.",
+      "",
+      "Titulo de partida:",
+      entry.title
+    ].join("\n");
+  }
+
+  function notebookDraft(entry) {
+    return [
+      "Resumo documental para NotebookLM:",
+      entry.summary,
+      "",
+      "Metadados da pauta:",
+      "- Cidade: " + entry.city,
+      "- Editoria: " + entry.editoria,
+      "- Tipo de ato: " + entry.tag,
+      "- Fonte: " + entry.source_label,
+      "- Marcador: " + getDocumentMarker(entry),
+      "- Data do documento: " + formatAccessDate(entry.date),
+      "- Data de acesso: " + formatAccessDate(getAccessedAt(entry)),
+      "",
+      "Perguntas para a leitura assistida:",
+      "- Qual e o efeito pratico imediato desse ato?",
+      "- Existe valor, prazo, cronograma ou entrega futura que deva entrar no calendario?",
+      "- Ha historico recente do mesmo tema, orgao ou fornecedor?",
+      "- Quais pontos pedem checagem jornalistica adicional antes de publicar?"
+    ].join("\n");
+  }
+
+  function assistantDraft(entry, tool) {
+    return tool === "notebook" ? notebookDraft(entry) : gptDraft(entry);
+  }
+
   function renderImage(entry) {
     if (entry.image_url) {
       return "<img class='story-image' loading='lazy' src='" + escapeHtml(entry.image_url) + "' alt='" + escapeHtml("Imagem relacionada a " + entry.city) + "'>";
@@ -160,6 +246,7 @@
       "<p class='story-summary'>" + escapeHtml(entry.summary) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
       renderDocumentTools(entry),
+      renderAssistantLinks(entry),
       "</div>",
       "</article>"
     ].join("");
@@ -175,6 +262,7 @@
       "<p>" + escapeHtml(entry.summary) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
       renderDocumentTools(entry),
+      renderAssistantLinks(entry),
       "</article>"
     ].join("");
   }
@@ -578,10 +666,79 @@
     ].join("");
   }
 
+  function renderAssistantView() {
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get("id") || "";
+    var tool = params.get("tool") === "notebook" ? "notebook" : "gpt";
+    var entry = entryMap[id];
+
+    if (!entry) {
+      root.className = "wrap page-shell";
+      root.innerHTML = "<div class='empty-state'><h3>Pauta nao encontrada</h3><p class='empty-copy'>Esse link de texto assistido nao localizou a pauta na base atual.</p></div>";
+      return;
+    }
+
+    var draft = assistantDraft(entry, tool);
+    var toolLabel = tool === "notebook" ? "NotebookLM" : "GPT";
+    var externalUrl = tool === "notebook" ? "https://notebooklm.google.com/" : "https://chatgpt.com/";
+
+    document.title = DATA.site_title + " | " + toolLabel + " | " + entry.city;
+    root.className = "wrap page-shell";
+    root.innerHTML = [
+      "<header class='page-header'>",
+      "<div>",
+      "<p class='eyebrow'>PAUTEIRO! | Texto assistido</p>",
+      "<h1 class='page-title'>" + escapeHtml(entry.title) + "</h1>",
+      "<p class='intro'>Aqui voce abre um texto-base por pauta. Ele nasce da base documental do PAUTEIRO! e ja fica pronto para levar ao " + escapeHtml(toolLabel) + " ou para reaproveitar na redacao.</p>",
+      "<div class='nav-row'>",
+      "<a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar ao indice</a>",
+      "<a class='nav-pill' href='" + dayUrl(entry.date) + "'>Abrir o dia</a>",
+      "<a class='nav-pill' href='" + assistantUrl(entry, tool === "gpt" ? "notebook" : "gpt") + "'>Trocar de ferramenta</a>",
+      "</div>",
+      "</div>",
+      "<aside class='sidebar-card'>",
+      "<h3>Base da pauta</h3>",
+      "<div class='panel-item'><span>Cidade</span><strong>" + escapeHtml(entry.city) + "</strong></div>",
+      "<div class='panel-item'><span>Editoria</span><strong>" + escapeHtml(entry.editoria) + "</strong></div>",
+      "<div class='panel-item'><span>Documento</span><strong>" + escapeHtml(entry.tag) + "</strong></div>",
+      "<p class='panel-note'>" + escapeHtml(getDocumentMarker(entry)) + "</p>",
+      "</aside>",
+      "</header>",
+      "<section class='assistant-page-grid'>",
+      "<article class='assistant-draft-card'>",
+      "<div class='assistant-card-head'><p class='section-kicker'>Texto " + escapeHtml(toolLabel) + "</p><h2>Saida pronta para copiar</h2></div>",
+      "<pre class='assistant-draft' id='assistant-draft-text'>" + escapeHtml(draft) + "</pre>",
+      "<div class='assistant-actions'>",
+      "<button class='assistant-button' type='button' data-copy-text='" + escapeHtml(draft) + "'>Copiar texto</button>",
+      "<a class='assistant-button is-link' href='" + escapeHtml(externalUrl) + "' target='_blank' rel='noopener noreferrer'>Abrir " + escapeHtml(toolLabel) + "</a>",
+      "</div>",
+      "</article>",
+      "<aside class='note-stack'>",
+      "<div class='note-card'><h3>Linha fina</h3><p class='muted'>" + escapeHtml(entry.line) + "</p></div>",
+      "<div class='note-card'><h3>Documento original</h3><p class='muted'>Fonte: " + escapeHtml(entry.source_label) + "</p><p class='story-source'><a href='" + escapeHtml(entry.source_url) + "' target='_blank' rel='noopener noreferrer'>Abrir documento</a></p></div>",
+      "</aside>",
+      "</section>"
+    ].join("");
+
+    var copyButton = root.querySelector("[data-copy-text]");
+    if (copyButton && navigator.clipboard && navigator.clipboard.writeText) {
+      copyButton.addEventListener("click", function () {
+        navigator.clipboard.writeText(draft).then(function () {
+          copyButton.textContent = "Texto copiado";
+          window.setTimeout(function () {
+            copyButton.textContent = "Copiar texto";
+          }, 1600);
+        });
+      });
+    }
+  }
+
   var pageParams = new URLSearchParams(window.location.search);
   var view = pageParams.get("view") || document.body.getAttribute("data-view") || "month";
   if (view === "chronology") {
     renderChronologyView();
+  } else if (view === "assistant") {
+    renderAssistantView();
   } else if (view === "day") {
     renderDayView();
   } else {
