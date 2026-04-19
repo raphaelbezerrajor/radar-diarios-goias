@@ -1,4 +1,4 @@
-# Radar GO | Pautas de diarios oficiais
+# PAUTEIRO! | Pautas de diarios oficiais
 
 Atualizado em 17 de abril de 2026.
 
