@@ -49,6 +49,17 @@ img {
   background: linear-gradient(135deg, rgba(13, 117, 109, 0.09), rgba(185, 83, 55, 0.08), rgba(166, 121, 28, 0.08));
 }
 
+.masthead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.75fr);
+  gap: 20px;
+  align-items: end;
+}
+
+.masthead-copy {
+  min-width: 0;
+}
+
 .top-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(280px, 340px);
@@ -127,6 +138,31 @@ ol {
   gap: 12px;
 }
 
+.newsdesk-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(260px, 0.72fr) minmax(220px, 0.5fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.lead-stage,
+.utility-rail {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.desk-head {
+  display: grid;
+  gap: 4px;
+}
+
+.desk-note {
+  font-size: 12px;
+  color: var(--muted);
+}
+
 .stat {
   border: 1px solid rgba(23, 23, 20, 0.08);
   background: rgba(255, 255, 255, 0.86);
@@ -180,6 +216,7 @@ ol {
 .panel-note,
 .section-intro,
 .muted,
+.desk-note,
 .story-credit,
 .story-source,
 .timeline-note,
@@ -260,6 +297,11 @@ ol {
   margin-top: 16px;
 }
 
+.top-links {
+  justify-content: flex-end;
+  align-content: start;
+}
+
 .top-link,
 .page-link {
   border: 1px solid rgba(23, 23, 20, 0.1);
@@ -301,6 +343,112 @@ ol {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 16px;
+}
+
+.municipality-panel {
+  padding: 16px;
+}
+
+.municipality-list {
+  margin-top: 12px;
+  display: grid;
+  gap: 0;
+  max-height: 710px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.municipality-item {
+  display: grid;
+  gap: 6px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.municipality-item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.municipality-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: start;
+}
+
+.municipality-top strong {
+  font-size: 16px;
+  line-height: 1.05;
+}
+
+.municipality-top span,
+.municipality-item small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.municipality-item p {
+  font-size: 13px;
+  color: #2a2925;
+}
+
+.utility-card .panel-item strong {
+  font-size: 20px;
+}
+
+.compact-calendar-panel .calendar-note {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.mini-weekday-row,
+.mini-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.mini-weekday-row {
+  margin-top: 12px;
+}
+
+.mini-weekday {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.mini-day {
+  min-height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  font-size: 11px;
+  color: var(--ink);
+}
+
+.mini-day.is-covered {
+  background: rgba(13, 117, 109, 0.08);
+  border-color: rgba(13, 117, 109, 0.18);
+}
+
+.mini-day.is-partial {
+  background: rgba(166, 121, 28, 0.08);
+  border-color: rgba(166, 121, 28, 0.18);
+}
+
+.mini-day.is-future {
+  background: rgba(95, 94, 88, 0.08);
+  border-color: rgba(95, 94, 88, 0.12);
+}
+
+.mini-day.is-empty {
+  border-style: dashed;
+  background: transparent;
 }
 
 .flow-grid,
@@ -793,6 +941,8 @@ ol {
 }
 
 @media (max-width: 960px) {
+  .masthead,
+  .newsdesk-grid,
   .top-grid,
   .page-header,
   .page-grid,
@@ -809,6 +959,14 @@ ol {
   .timeline-date {
     position: static;
     max-width: 160px;
+  }
+
+  .top-links {
+    justify-content: flex-start;
+  }
+
+  .municipality-list {
+    max-height: none;
   }
 }
 
