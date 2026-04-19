@@ -29,13 +29,17 @@ jobs:
         run: |
           mkdir site
           cp index.html site/
+          cp pauteiro.html site/
+          cp pauteiro-2026-pautas.txt site/
           cp radar-diarios-goias.html site/
           cp radar-diarios-goias-cronologia.html site/
           cp radar-diarios-goias-dia.html site/
           cp radar-diarios-goias.css site/
           cp radar-diarios-goias-app.js site/
           cp radar-diarios-goias-data.js site/
+          cp radar-diarios-goias-data.json site/
           cp README.md site/
+          cp radar-diarios-goias.md site/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
