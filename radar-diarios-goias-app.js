@@ -249,6 +249,82 @@
     }).join("");
   }
 
+  function municipalityBoard() {
+    var cities = {};
+    entries.forEach(function (entry) {
+      if (!cities[entry.city]) {
+        cities[entry.city] = {
+          city: entry.city,
+          count: 0,
+          latestDate: entry.date,
+          latestLine: entry.line,
+          latestTitle: entry.title,
+          topEditoria: entry.editoria,
+          topEditoriaCount: 0,
+          editorias: {}
+        };
+      }
+
+      var bucket = cities[entry.city];
+      bucket.count += 1;
+      bucket.editorias[entry.editoria] = (bucket.editorias[entry.editoria] || 0) + 1;
+
+      if (entry.date > bucket.latestDate) {
+        bucket.latestDate = entry.date;
+        bucket.latestLine = entry.line;
+        bucket.latestTitle = entry.title;
+      }
+    });
+
+    Object.keys(cities).forEach(function (key) {
+      var bucket = cities[key];
+      Object.keys(bucket.editorias).forEach(function (editoria) {
+        if (bucket.editorias[editoria] > bucket.topEditoriaCount) {
+          bucket.topEditoria = editoria;
+          bucket.topEditoriaCount = bucket.editorias[editoria];
+        }
+      });
+    });
+
+    return Object.keys(cities)
+      .map(function (key) { return cities[key]; })
+      .sort(function (a, b) {
+        if (b.count !== a.count) return b.count - a.count;
+        return a.city.localeCompare(b.city);
+      })
+      .map(function (item) {
+        return [
+          "<a class='municipality-item' href='" + dayUrl(item.latestDate) + "'>",
+          "<div class='municipality-top'><strong>" + escapeHtml(item.city) + "</strong><span>" + item.count + " pauta(s)</span></div>",
+          "<p>" + escapeHtml(item.latestLine) + "</p>",
+          "<small>" + escapeHtml(item.topEditoria) + " | " + escapeHtml(formatAccessDate(item.latestDate)) + "</small>",
+          "</a>"
+        ].join("");
+      })
+      .join("");
+  }
+
+  function buildMiniCalendar() {
+    var weekdayRow = ["S", "T", "Q", "Q", "S", "S", "D"].map(function (label) {
+      return "<div class='mini-weekday'>" + label + "</div>";
+    }).join("");
+
+    var cells = [];
+    var offset = (MONTH_START.getDay() + 6) % 7;
+    var i;
+    for (i = 0; i < offset; i += 1) {
+      cells.push("<div class='mini-day is-empty'></div>");
+    }
+
+    for (i = 1; i <= DAYS_IN_MONTH; i += 1) {
+      var value = dateText(i);
+      var status = dayStatus(value);
+      cells.push("<a class='mini-day is-" + status + "' href='" + dayUrl(value) + "'>" + i + "</a>");
+    }
+
+    return "<div class='mini-weekday-row'>" + weekdayRow + "</div><div class='mini-calendar-grid'>" + cells.join("") + "</div>";
+  }
+
   function buildCalendar() {
     var weekdayRow = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"].map(function (label) {
       return "<div class='weekday'>" + label + "</div>";
@@ -306,7 +382,11 @@
     var editoriasCount = new Set(entries.map(function (entry) { return entry.editoria; })).size;
     var daysWithEntries = Object.keys(grouped).length;
     var monthsInYear = (DATA.year_months || []).length || 12;
-    var features = highlights.map(function (entry, index) { return storyCard(entry, index === 0); }).join("");
+    var cityCount = new Set(entries.map(function (entry) { return entry.city; })).size;
+    var leadEntry = highlights[0] || null;
+    var secondaryFeatures = highlights.slice(1, 4);
+    var leadCard = leadEntry ? storyCard(leadEntry, true) : "<div class='empty-state'><h3>Base em montagem</h3><p class='empty-copy'>A primeira manchete principal entra aqui quando a rodada do dia estiver fechada.</p></div>";
+    var features = secondaryFeatures.length ? secondaryFeatures.map(function (entry) { return storyCard(entry, false); }).join("") : "";
     var textExportFile = DATA.text_export ? DATA.text_export.file : "";
     var remoteLink = DATA.remote_url ? "<a class='top-link' href='" + escapeHtml(DATA.remote_url) + "' target='_blank' rel='noopener noreferrer'>Abrir versao remota</a>" : "";
     var textExportLink = textExportFile ? "<a class='top-link' href='" + escapeHtml(textExportFile) + "' target='_blank' rel='noopener noreferrer'>Abrir pautas em TXT</a>" : "";
@@ -314,22 +394,18 @@
     root.className = "";
     root.innerHTML = [
       "<header class='topbar'>",
-      "<div class='wrap top-grid'>",
-      "<div>",
+      "<div class='wrap'>",
+      "<div class='masthead'>",
+      "<div class='masthead-copy'>",
       "<p class='eyebrow'>PAUTEIRO! | Livro de pautas 2026</p>",
-      "<h1 class='title'>Base anual para ler diarios, marcar agenda e devolver pautas com lead pronto</h1>",
-      "<p class='intro'>O PAUTEIRO! organiza 2026 como um caderno vivo de apuracao. Abril ja entra preenchido ate 18 de abril de 2026; o restante do ano fica estruturado para receber novas rodadas, com cruzamento entre diarios municipais, Estado, MPGO, AGM e TJGO.</p>",
-      "<p class='meta-line'>Atualizado em 18 de abril de 2026. A proxima camada do calendario vai receber tambem prazos de edital, sessoes, audiencias e datas futuras extraidas do proprio documento.</p>",
-      "<div class='stats'>",
-      "<div class='stat'><strong>" + DATA.sources.length + "</strong><span>fontes oficiais e familias permanentes de leitura no livro anual.</span></div>",
-      "<div class='stat'><strong>" + DATA.evaluated_units + "</strong><span>paginas, edicoes e atos ja avaliados nesta rodada de abril.</span></div>",
-      "<div class='stat'><strong>" + entries.length + "</strong><span>pautas com potencial noticioso e saida editorial imediata.</span></div>",
-      "<div class='stat'><strong>" + monthsInYear + "</strong><span>meses armados para compor o caderno completo de 2026.</span></div>",
-      "</div>",
+      "<h1 class='title'>Livro de pautas para ler diarios, marcar agenda e devolver texto pronto de redacao</h1>",
+      "<p class='intro'>Abril abriu a frente publica do PAUTEIRO! com recorte factual ate 18 de abril de 2026. O resto do ano ja fica armado para crescer por mes, por municipio, por editoria e depois por agenda derivada de editais, sessoes e prazos.</p>",
+      "<p class='meta-line'>Atualizado em 18 de abril de 2026. A leitura assistida entra para acelerar triagem e lead, nao para substituir curadoria.</p>",
       "<div class='chip-row'>",
       "<span class='chip'>ChatGPT e NotebookLM entram na camada assistida de leitura e devolucao de pautas.</span>",
-      "<span class='chip'>Gemini fica como camada opcional de comparacao e reforco de leitura.</span>",
-      "<span class='chip'>" + daysWithEntries + " dias ja tem pauta fechada e abril segue navegavel por data.</span>",
+      "<span class='chip'>Gemini fica como camada opcional de comparacao.</span>",
+      "<span class='chip'>" + daysWithEntries + " dias ja tem pauta fechada nesta rodada.</span>",
+      "</div>",
       "</div>",
       "<div class='top-links'>",
       "<a class='top-link' href='" + chronologyUrl() + "'>Abrir cronologia completa</a>",
@@ -339,17 +415,36 @@
       remoteLink,
       "</div>",
       "</div>",
-      "<aside class='calendar-panel'>",
-      "<p class='panel-kicker'>Abril na base anual</p>",
-      "<h2>" + capitalize(monthName(MONTH_START.getMonth())) + " " + MONTH_START.getFullYear() + "</h2>",
-      "<p class='calendar-note'>Dias com pauta confirmada ficam em verde; leitura parcial fica em dourado; datas futuras ficam em cinza. Em seguida entram tambem marcos derivados de editais e agendas publicadas.</p>",
-      buildCalendar(),
+      "<section class='newsdesk-grid'>",
+      "<div class='lead-stage'>",
+      "<div class='desk-head'><p class='panel-kicker'>Abertura principal</p><p class='desk-note'>A pauta de maior escala abre a capa do caderno.</p></div>",
+      leadCard,
+      "</div>",
+      "<aside class='municipality-panel panel'>",
+      "<div class='desk-head'><p class='panel-kicker'>Por municipio</p><p class='desk-note'>" + cityCount + " cidades ou frentes territoriais com pauta nesta base.</p></div>",
+      "<div class='municipality-list'>" + municipalityBoard() + "</div>",
       "</aside>",
+      "<aside class='utility-rail'>",
+      "<div class='panel utility-card'>",
+      "<p class='panel-kicker'>Pulso da base</p>",
+      "<div class='panel-item'><span>Fontes</span><strong>" + DATA.sources.length + "</strong></div>",
+      "<div class='panel-item'><span>Paginas e atos</span><strong>" + DATA.evaluated_units + "</strong></div>",
+      "<div class='panel-item'><span>Pautas</span><strong>" + entries.length + "</strong></div>",
+      "<div class='panel-item'><span>Editorias</span><strong>" + editoriasCount + "</strong></div>",
+      "<div class='panel-item'><span>Meses armados</span><strong>" + monthsInYear + "</strong></div>",
+      "</div>",
+      "<div class='calendar-panel compact-calendar-panel'>",
+      "<p class='panel-kicker'>Abril de 2026</p>",
+      "<p class='calendar-note'>Calendario compacto para navegar a rodada.</p>",
+      buildMiniCalendar(),
+      "</div>",
+      "</aside>",
+      "</section>",
       "</div>",
       "</header>",
       "<main class='wrap'>",
       "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Publicacoes em destaque</p><h2>Manchetes que abrem o livro de pautas</h2></div><p class='section-intro'>Esses cards puxam a frente publica do PAUTEIRO! pelo que tem escala, valor, efeito administrativo ou repercussao institucional mais nitida. O bloco segue em formato de agencia e ja aponta para o documento original.</p></div>",
+      "<div class='section-head'><div><p class='section-kicker'>Publicacoes em destaque</p><h2>Manchetes que abrem o livro de pautas</h2></div><p class='section-intro'>Aqui entram as aberturas secundarias da capa, ja em formato de agencia e com o documento original amarrado ao card.</p></div>",
       "<div class='feature-grid'>" + features + "</div>",
       "</section>",
       "<section class='section'>",
