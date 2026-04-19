@@ -177,6 +177,14 @@
     ].join("");
   }
 
+  function getLead(entry) {
+    return entry.lead || entry.summary || "";
+  }
+
+  function getSublead(entry) {
+    return entry.sublead || entry.line || "";
+  }
+
   function lowerFirst(value) {
     if (!value) return "";
     return value.charAt(0).toLowerCase() + value.slice(1);
@@ -184,11 +192,14 @@
 
   function gptDraft(entry) {
     return [
-      "Lead inicial para abertura:",
-      entry.summary,
+      "Lead:",
+      getLead(entry),
+      "",
+      "Sublead:",
+      getSublead(entry),
       "",
       "Enquadramento sugerido:",
-      "Em " + formatAccessDate(entry.date) + ", " + entry.city + " entrou no radar com uma publicacao de " + lowerFirst(entry.tag) + " na editoria de " + lowerFirst(entry.editoria) + ". O dado central da pauta e que " + lowerFirst(entry.line),
+      "Em " + formatAccessDate(entry.date) + ", " + entry.city + " entrou no radar com uma publicacao de " + lowerFirst(entry.tag) + " na editoria de " + lowerFirst(entry.editoria) + ". O dado central da pauta e que " + lowerFirst(getSublead(entry)),
       "",
       "Caminho de apuracao:",
       "Vale ouvir a fonte oficial, checar impacto pratico, puxar historico do tema no municipio e medir o efeito administrativo, orcamentario ou politico da publicacao.",
@@ -201,7 +212,10 @@
   function notebookDraft(entry) {
     return [
       "Resumo documental para NotebookLM:",
-      entry.summary,
+      getLead(entry),
+      "",
+      "Sublead de apoio:",
+      getSublead(entry),
       "",
       "Metadados da pauta:",
       "- Cidade: " + entry.city,
@@ -242,8 +256,8 @@
       credit,
       "<div class='meta-row'><span class='tag'>" + escapeHtml(entry.tag) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(entry.date) + "</span></div>",
       "<" + tagName + ">" + escapeHtml(entry.title) + "</" + tagName + ">",
-      "<p class='story-line'>" + escapeHtml(entry.line) + "</p>",
-      "<p class='story-summary'>" + escapeHtml(entry.summary) + "</p>",
+      "<p class='story-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
+      "<p class='story-lead'>" + escapeHtml(getLead(entry)) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
       renderDocumentTools(entry),
       renderAssistantLinks(entry),
@@ -258,8 +272,8 @@
       "<article class='timeline-card'>",
       "<div class='meta-row'><span class='tag'>" + escapeHtml(entry.tag) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(entry.editoria) + "</span></div>",
       "<h3>" + escapeHtml(entry.title) + "</h3>",
-      "<p class='story-line'>" + escapeHtml(entry.line) + "</p>",
-      "<p>" + escapeHtml(entry.summary) + "</p>",
+      "<p class='story-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
+      "<p class='story-lead'>" + escapeHtml(getLead(entry)) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
       renderDocumentTools(entry),
       renderAssistantLinks(entry),
@@ -714,7 +728,8 @@
       "</div>",
       "</article>",
       "<aside class='note-stack'>",
-      "<div class='note-card'><h3>Linha fina</h3><p class='muted'>" + escapeHtml(entry.line) + "</p></div>",
+      "<div class='note-card'><h3>Sublead</h3><p class='muted'>" + escapeHtml(getSublead(entry)) + "</p></div>",
+      "<div class='note-card'><h3>Lead</h3><p class='muted'>" + escapeHtml(getLead(entry)) + "</p></div>",
       "<div class='note-card'><h3>Documento original</h3><p class='muted'>Fonte: " + escapeHtml(entry.source_label) + "</p><p class='story-source'><a href='" + escapeHtml(entry.source_url) + "' target='_blank' rel='noopener noreferrer'>Abrir documento</a></p></div>",
       "</aside>",
       "</section>"
