@@ -303,6 +303,93 @@ ol {
   gap: 16px;
 }
 
+.flow-grid,
+.year-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.flow-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.year-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.flow-card,
+.year-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.flow-card {
+  padding: 16px;
+}
+
+.flow-index,
+.year-month {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 5px 9px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.flow-index {
+  background: rgba(185, 83, 55, 0.1);
+  color: var(--coral);
+}
+
+.flow-card h3 {
+  margin-top: 12px;
+  font-size: 19px;
+  line-height: 1.08;
+}
+
+.flow-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.year-card {
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+  min-height: 118px;
+}
+
+.year-month {
+  background: rgba(13, 117, 109, 0.1);
+  color: var(--teal);
+  text-transform: uppercase;
+}
+
+.year-card strong {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.year-card small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.year-card.is-active {
+  background: rgba(13, 117, 109, 0.08);
+  border-color: rgba(13, 117, 109, 0.24);
+}
+
+.year-card.is-open {
+  background: rgba(255, 255, 255, 0.9);
+}
+
 .story-card {
   overflow: hidden;
 }
@@ -532,6 +619,10 @@ ol {
   margin-bottom: 4px;
 }
 
+.line-list span {
+  display: block;
+}
+
 .sources-list {
   list-style: none;
   padding: 0;
@@ -710,6 +801,11 @@ ol {
     grid-template-columns: 1fr;
   }
 
+  .flow-grid,
+  .year-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .timeline-date {
     position: static;
     max-width: 160px;
@@ -721,7 +817,9 @@ ol {
   .editoria-grid,
   .cards,
   .day-board,
-  .line-list {
+  .line-list,
+  .flow-grid,
+  .year-grid {
     grid-template-columns: 1fr;
   }
 

@@ -1,11 +1,50 @@
 {
-  "site_title": "Radar GO | Abril de 2026",
-  "site_slug": "radar-diarios-goias",
+  "project_name": "PAUTEIRO!",
+  "site_title": "PAUTEIRO! | Livro de pautas 2026",
+  "site_slug": "pauteiro",
+  "year": 2026,
   "month": "2026-04",
   "updated_at": "2026-04-18",
   "accessed_at": "2026-04-18",
   "cutoff_date": "2026-04-18",
   "evaluated_units": 54,
+  "remote_url": "https://raphaelbezerrajor.github.io/radar-diarios-goias/",
+  "text_export": {
+    "label": "Caderno TXT de pautas",
+    "file": "pauteiro-2026-pautas.txt"
+  },
+  "analysis_stack": [
+    {
+      "title": "Coleta oficial",
+      "body": "Diarios municipais, DJE do TJGO, MPGO, AGM e atos do Estado entram na fila diaria de leitura."
+    },
+    {
+      "title": "Triagem com IA",
+      "body": "ChatGPT e NotebookLM fazem leitura assistida, agrupam atos e devolvem caminhos de pauta. Gemini entra como camada opcional de comparacao."
+    },
+    {
+      "title": "Agenda derivada",
+      "body": "Editais, sessoes, audiencias, prazos e entregas futuras sobem para o calendario junto com a data da publicacao original."
+    },
+    {
+      "title": "Livro de pautas",
+      "body": "Cada achado sai com linha fina, lead, editoria, cidade, documento original, marcador e data de acesso."
+    }
+  ],
+  "year_months": [
+    { "label": "Jan", "month": "2026-01", "status": "open", "note": "estrutura pronta" },
+    { "label": "Fev", "month": "2026-02", "status": "open", "note": "estrutura pronta" },
+    { "label": "Mar", "month": "2026-03", "status": "open", "note": "estrutura pronta" },
+    { "label": "Abr", "month": "2026-04", "status": "active", "note": "abril preenchido ate 18/04" },
+    { "label": "Mai", "month": "2026-05", "status": "open", "note": "estrutura pronta" },
+    { "label": "Jun", "month": "2026-06", "status": "open", "note": "estrutura pronta" },
+    { "label": "Jul", "month": "2026-07", "status": "open", "note": "estrutura pronta" },
+    { "label": "Ago", "month": "2026-08", "status": "open", "note": "estrutura pronta" },
+    { "label": "Set", "month": "2026-09", "status": "open", "note": "estrutura pronta" },
+    { "label": "Out", "month": "2026-10", "status": "open", "note": "estrutura pronta" },
+    { "label": "Nov", "month": "2026-11", "status": "open", "note": "estrutura pronta" },
+    { "label": "Dez", "month": "2026-12", "status": "open", "note": "estrutura pronta" }
+  ],
   "sources": [
     {
       "label": "Diario Oficial de Goiania / Sileg",

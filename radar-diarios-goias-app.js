@@ -6,7 +6,7 @@
     return;
   }
 
-  var MONTH_PAGE = "radar-diarios-goias.html";
+  var MONTH_PAGE = "pauteiro.html";
   var MONTH_START = new Date(DATA.month + "-01T00:00:00");
   var CUTOFF = new Date(DATA.cutoff_date + "T00:00:00");
   var DAYS_IN_MONTH = new Date(MONTH_START.getFullYear(), MONTH_START.getMonth() + 1, 0).getDate();
@@ -204,7 +204,7 @@
         return a.title.localeCompare(b.title);
       })
       .map(function (entry) {
-        return "<li><strong>" + escapeHtml(entry.city) + "</strong>" + escapeHtml(entry.line) + "</li>";
+        return "<li><strong>" + escapeHtml(entry.city) + "</strong><span>" + escapeHtml(entry.line) + "</span></li>";
       })
       .join("");
   }
@@ -212,6 +212,40 @@
   function sourceList() {
     return DATA.sources.map(function (source) {
       return "<li><strong>" + escapeHtml(source.label) + "</strong><br><a href='" + escapeHtml(source.url) + "'>" + escapeHtml(source.url) + "</a></li>";
+    }).join("");
+  }
+
+  function analysisStack() {
+    return (DATA.analysis_stack || []).map(function (item, index) {
+      var order = String(index + 1).padStart(2, "0");
+      return [
+        "<article class='flow-card'>",
+        "<span class='flow-index'>" + order + "</span>",
+        "<h3>" + escapeHtml(item.title) + "</h3>",
+        "<p>" + escapeHtml(item.body) + "</p>",
+        "</article>"
+      ].join("");
+    }).join("");
+  }
+
+  function monthStatusLabel(status) {
+    if (status === "active") return "ativo";
+    if (status === "ready") return "pronto";
+    return "aberto";
+  }
+
+  function yearBoard() {
+    return (DATA.year_months || []).map(function (item) {
+      var isCurrent = item.month === DATA.month;
+      var tag = isCurrent ? "a" : "div";
+      var attrs = isCurrent ? " href='" + MONTH_PAGE + "'" : "";
+      return [
+        "<" + tag + " class='year-card is-" + escapeHtml(item.status) + "'" + attrs + ">",
+        "<span class='year-month'>" + escapeHtml(item.label) + "</span>",
+        "<strong>" + escapeHtml(monthStatusLabel(item.status)) + "</strong>",
+        "<small>" + escapeHtml(item.note) + "</small>",
+        "</" + tag + ">"
+      ].join("");
     }).join("");
   }
 
@@ -271,46 +305,60 @@
 
     var editoriasCount = new Set(entries.map(function (entry) { return entry.editoria; })).size;
     var daysWithEntries = Object.keys(grouped).length;
+    var monthsInYear = (DATA.year_months || []).length || 12;
     var features = highlights.map(function (entry, index) { return storyCard(entry, index === 0); }).join("");
+    var textExportFile = DATA.text_export ? DATA.text_export.file : "";
+    var remoteLink = DATA.remote_url ? "<a class='top-link' href='" + escapeHtml(DATA.remote_url) + "' target='_blank' rel='noopener noreferrer'>Abrir versao remota</a>" : "";
+    var textExportLink = textExportFile ? "<a class='top-link' href='" + escapeHtml(textExportFile) + "' target='_blank' rel='noopener noreferrer'>Abrir pautas em TXT</a>" : "";
 
     root.className = "";
     root.innerHTML = [
       "<header class='topbar'>",
       "<div class='wrap top-grid'>",
       "<div>",
-      "<p class='eyebrow'>Radar Diario GO | Base por dia</p>",
-      "<h1 class='title'>Abril de 2026 virou base diaria, com calendario, cronologia e frente propria para o TJGO</h1>",
-      "<p class='intro'>Estrutura mensal organizada para o periodo de 1 a 30 de abril de 2026, com preenchimento factual ate 18 de abril de 2026. O recorte prioriza fator-noticia em contratos, compras, estruturas de gestao, plantoes judiciais, obras, habitacao, saude e atos de tribunal.</p>",
-      "<p class='meta-line'>Atualizado em 18 de abril de 2026. Dias 19 a 30 permanecem no calendario como placeholders da rodada futura.</p>",
+      "<p class='eyebrow'>PAUTEIRO! | Livro de pautas 2026</p>",
+      "<h1 class='title'>Base anual para ler diarios, marcar agenda e devolver pautas com lead pronto</h1>",
+      "<p class='intro'>O PAUTEIRO! organiza 2026 como um caderno vivo de apuracao. Abril ja entra preenchido ate 18 de abril de 2026; o restante do ano fica estruturado para receber novas rodadas, com cruzamento entre diarios municipais, Estado, MPGO, AGM e TJGO.</p>",
+      "<p class='meta-line'>Atualizado em 18 de abril de 2026. A proxima camada do calendario vai receber tambem prazos de edital, sessoes, audiencias e datas futuras extraidas do proprio documento.</p>",
       "<div class='stats'>",
-      "<div class='stat'><strong>" + DATA.sources.length + "</strong><span>fontes oficiais e familias de leitura nesta base mensal.</span></div>",
-      "<div class='stat'><strong>" + DATA.evaluated_units + "</strong><span>paginas, edicoes e atos efetivamente abertos nesta passada de abril.</span></div>",
-      "<div class='stat'><strong>" + entries.length + "</strong><span>pautas com potencial claro de noticia ate 18 de abril de 2026.</span></div>",
-      "<div class='stat'><strong>" + editoriasCount + "</strong><span>editorias separadas com contagem automatica da base diaria.</span></div>",
+      "<div class='stat'><strong>" + DATA.sources.length + "</strong><span>fontes oficiais e familias permanentes de leitura no livro anual.</span></div>",
+      "<div class='stat'><strong>" + DATA.evaluated_units + "</strong><span>paginas, edicoes e atos ja avaliados nesta rodada de abril.</span></div>",
+      "<div class='stat'><strong>" + entries.length + "</strong><span>pautas com potencial noticioso e saida editorial imediata.</span></div>",
+      "<div class='stat'><strong>" + monthsInYear + "</strong><span>meses armados para compor o caderno completo de 2026.</span></div>",
       "</div>",
       "<div class='chip-row'>",
-      "<span class='chip'>Justica e DJE do TJGO entram como eixo fixo da leitura pesada.</span>",
-      "<span class='chip'>Base separada por dia com pagina diaria e cronologia completa.</span>",
-      "<span class='chip'>" + daysWithEntries + " dias ja tem pauta fechada na rodada atual.</span>",
+      "<span class='chip'>ChatGPT e NotebookLM entram na camada assistida de leitura e devolucao de pautas.</span>",
+      "<span class='chip'>Gemini fica como camada opcional de comparacao e reforco de leitura.</span>",
+      "<span class='chip'>" + daysWithEntries + " dias ja tem pauta fechada e abril segue navegavel por data.</span>",
       "</div>",
       "<div class='top-links'>",
       "<a class='top-link' href='" + chronologyUrl() + "'>Abrir cronologia completa</a>",
+      textExportLink,
       "<a class='top-link' href='radar-diarios-goias-data.json'>Abrir base JSON</a>",
       "<a class='top-link' href='" + dayUrl("2026-04-08") + "'>Abrir dia com maior carga</a>",
+      remoteLink,
       "</div>",
       "</div>",
       "<aside class='calendar-panel'>",
-      "<p class='panel-kicker'>Calendario na rodada</p>",
+      "<p class='panel-kicker'>Abril na base anual</p>",
       "<h2>" + capitalize(monthName(MONTH_START.getMonth())) + " " + MONTH_START.getFullYear() + "</h2>",
-      "<p class='calendar-note'>Clique em qualquer data. Dias com pauta confirmada ficam em verde; dias lidos sem fechamento ficam em dourado; datas futuras ficam em cinza.</p>",
+      "<p class='calendar-note'>Dias com pauta confirmada ficam em verde; leitura parcial fica em dourado; datas futuras ficam em cinza. Em seguida entram tambem marcos derivados de editais e agendas publicadas.</p>",
       buildCalendar(),
       "</aside>",
       "</div>",
       "</header>",
       "<main class='wrap'>",
       "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Publicacoes em destaque</p><h2>Manchetes que abriram a base mensal</h2></div><p class='section-intro'>Esses cards puxam o mes pelo que tem escala, valor, efeito administrativo ou repercussao institucional mais nitida. O bloco segue em formato de agencia, com foto quando a base ja trouxe um credito usavel.</p></div>",
+      "<div class='section-head'><div><p class='section-kicker'>Publicacoes em destaque</p><h2>Manchetes que abrem o livro de pautas</h2></div><p class='section-intro'>Esses cards puxam a frente publica do PAUTEIRO! pelo que tem escala, valor, efeito administrativo ou repercussao institucional mais nitida. O bloco segue em formato de agencia e ja aponta para o documento original.</p></div>",
       "<div class='feature-grid'>" + features + "</div>",
+      "</section>",
+      "<section class='section'>",
+      "<div class='section-head'><div><p class='section-kicker'>Fluxo do sistema</p><h2>Como o PAUTEIRO! funciona</h2></div><p class='section-intro'>A ideia e transformar diario em agenda, agenda em pauta e pauta em texto de saida. A camada assistida por IA entra no meio do processo, nao no lugar da curadoria jornalistica.</p></div>",
+      "<div class='flow-grid'>" + analysisStack() + "</div>",
+      "</section>",
+      "<section class='section'>",
+      "<div class='section-head'><div><p class='section-kicker'>Caderno 2026</p><h2>Estrutura anual pronta para receber os proximos meses</h2></div><p class='section-intro'>Abril ja esta povoado. Os outros meses entram como caderno aberto, para a base crescer sem desmontar o produto nem pesar demais a navegacao.</p></div>",
+      "<div class='year-grid'>" + yearBoard() + "</div>",
       "</section>",
       "<section class='section'>",
       "<div class='section-head'><div><p class='section-kicker'>Dias de abril</p><h2>Base organizada por dia</h2></div><p class='section-intro'>Cada data abre uma pagina propria, com navegacao entre dias, resumo do que entrou e alerta quando a rodada ainda esta parcial.</p></div>",
@@ -321,7 +369,7 @@
       "<div class='editoria-grid'>" + editoriaCards() + "</div>",
       "</section>",
       "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Linha fina</p><h2>Assuntos do mes em uma passada curta</h2></div></div>",
+      "<div class='section-head'><div><p class='section-kicker'>Linha fina</p><h2>Assuntos do mes em uma passada curta</h2></div><p class='section-intro'>A exportacao leve em TXT leva as pautas em texto corrido, com linha fina e lead para uso de redacao.</p></div>",
       "<ul class='line-list'>" + lineList() + "</ul>",
       "</section>",
       "<section class='section'>",
@@ -329,7 +377,7 @@
       "<ul class='sources-list'>" + sourceList() + "</ul>",
       "</section>",
       "</main>",
-      "<footer class='footer'><div class='wrap'><p class='footer-note'>Base mensal gerada a partir de <a href='radar-diarios-goias-data.json'>radar-diarios-goias-data.json</a>. Recorte factual preenchido ate 18 de abril de 2026. O calendario ja cobre o mes inteiro para receber novas rodadas sem desmontar o template.</p></div></footer>"
+      "<footer class='footer'><div class='wrap'><p class='footer-note'>PAUTEIRO! roda a partir de <a href='radar-diarios-goias-data.json'>radar-diarios-goias-data.json</a> e da saida leve <a href='" + escapeHtml(textExportFile || "#") + "'>pauteiro-2026-pautas.txt</a>. Abril esta preenchido ate 18 de abril de 2026; o caderno anual segue aberto para as proximas rodadas.</p></div></footer>"
     ].join("");
   }
 
@@ -359,10 +407,10 @@
     root.innerHTML = [
       "<header class='page-header'>",
       "<div>",
-      "<p class='eyebrow'>Cronologia do mes</p>",
+      "<p class='eyebrow'>PAUTEIRO! | Cronologia</p>",
       "<h1 class='page-title'>Linha do tempo de abril de 2026</h1>",
-      "<p class='intro'>Aqui a base aparece em ordem cronologica crescente. O objetivo e enxergar o mes como fluxo: o que entrou no inicio, onde o volume se concentrou e em quais datas o TJGO fez a curva subir.</p>",
-      "<div class='nav-row'><a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar ao indice mensal</a><a class='nav-pill' href='radar-diarios-goias-data.json'>Abrir base JSON</a></div>",
+      "<p class='intro'>Aqui a base aparece em ordem cronologica crescente. O objetivo e enxergar abril como fluxo editorial: o que entrou no inicio, onde o volume se concentrou e em quais datas o TJGO fez a curva subir.</p>",
+      "<div class='nav-row'><a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar ao indice anual</a><a class='nav-pill' href='radar-diarios-goias-data.json'>Abrir base JSON</a></div>",
       "</div>",
       "<aside class='sidebar-card'>",
       "<h3>Recorte</h3>",
@@ -407,11 +455,11 @@
     root.innerHTML = [
       "<header class='page-header'>",
       "<div>",
-      "<p class='eyebrow'>Base diaria</p>",
+      "<p class='eyebrow'>PAUTEIRO! | Base diaria</p>",
       "<h1 class='page-title'>" + escapeHtml(longDate(current)) + "</h1>",
       "<p class='intro'>" + escapeHtml(stateCopy) + "</p>",
       "<div class='nav-row'>",
-      "<a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar ao mes</a>",
+      "<a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar ao indice anual</a>",
       "<a class='nav-pill' href='" + chronologyUrl() + "'>Abrir cronologia</a>",
       (prev ? "<a class='nav-pill' href='" + dayUrl(prev) + "'>Dia anterior</a>" : ""),
       (next ? "<a class='nav-pill' href='" + dayUrl(next) + "'>Dia seguinte</a>" : ""),

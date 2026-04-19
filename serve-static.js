@@ -22,7 +22,7 @@ const mimeTypes = {
 
 function safeResolve(urlPath) {
   const cleaned = decodeURIComponent((urlPath || "/").split("?")[0]);
-  const relative = cleaned === "/" ? "/radar-diarios-goias.html" : cleaned;
+  const relative = cleaned === "/" ? "/pauteiro.html" : cleaned;
   const filePath = path.resolve(root, "." + relative);
   if (!filePath.startsWith(root)) {
     return null;
@@ -40,7 +40,7 @@ const server = http.createServer((req, res) => {
 
   let target = resolved;
   if (fs.existsSync(target) && fs.statSync(target).isDirectory()) {
-    target = path.join(target, "radar-diarios-goias.html");
+    target = path.join(target, "pauteiro.html");
   }
 
   fs.readFile(target, (error, data) => {
@@ -58,5 +58,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`Radar GO server running at http://127.0.0.1:${port}`);
+  console.log(`PAUTEIRO! server running at http://127.0.0.1:${port}`);
 });

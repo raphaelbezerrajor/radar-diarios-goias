@@ -24,7 +24,7 @@ $MimeTypes = @{
   ".ico" = "image/x-icon"
 }
 
-Write-Output "Radar GO server running at http://127.0.0.1:$Port"
+Write-Output "PAUTEIRO! server running at http://127.0.0.1:$Port"
 
 try {
   while ($Listener.IsListening) {
@@ -35,7 +35,7 @@ try {
     try {
       $PathPart = [System.Uri]::UnescapeDataString($Request.Url.AbsolutePath)
       if ([string]::IsNullOrWhiteSpace($PathPart) -or $PathPart -eq "/") {
-        $PathPart = "/radar-diarios-goias.html"
+        $PathPart = "/pauteiro.html"
       }
 
       $Relative = $PathPart.TrimStart("/") -replace "/", "\"
