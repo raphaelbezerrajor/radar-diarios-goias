@@ -95,6 +95,10 @@
     return MONTH_PAGE + "?view=day&data=" + encodeURIComponent(value);
   }
 
+  function storyUrl(entry) {
+    return MONTH_PAGE + "?view=story&id=" + encodeURIComponent(entry.entry_id);
+  }
+
   function assistantUrl(entry, tool) {
     return MONTH_PAGE + "?view=assistant&id=" + encodeURIComponent(entry.entry_id) + "&tool=" + encodeURIComponent(tool);
   }
@@ -111,10 +115,10 @@
     return "future";
   }
 
-  function fallbackBlock(label) {
+  function fallbackBlock(label, className) {
     var parts = String(label || "GO").split(/\s+/).filter(Boolean).slice(0, 2);
     var abbr = parts.map(function (item) { return item.charAt(0).toUpperCase(); }).join("") || "GO";
-    return "<div class='story-image fallback'>" + escapeHtml(abbr) + "</div>";
+    return "<div class='" + escapeHtml(className || "story-image") + " fallback'>" + escapeHtml(abbr) + "</div>";
   }
 
   function formatAccessDate(value) {
@@ -238,11 +242,167 @@
     return tool === "notebook" ? notebookDraft(entry) : gptDraft(entry);
   }
 
-  function renderImage(entry) {
+  function rankedEntries() {
+    return entries
+      .slice()
+      .sort(function (a, b) {
+        if ((b.highlight_score || 0) !== (a.highlight_score || 0)) return (b.highlight_score || 0) - (a.highlight_score || 0);
+        if (b.date !== a.date) return b.date.localeCompare(a.date);
+        return a.title.localeCompare(b.title);
+      });
+  }
+
+  function hasAgendaSignal(entry) {
+    var hay = (entry.title + " " + getSublead(entry) + " " + getLead(entry)).toLowerCase();
+    return /(marcad|previst|periodo|convoc|sessao|edital|concorrencia|pregao|plantao|31 de maio|30 de abril|28 de abril|22 de abril|15 de abril)/.test(hay);
+  }
+
+  function renderHeroMain(entry) {
+    if (!entry) return "";
+    return [
+      "<article class='hero-main-story'>",
+      "<a class='hero-link' href='" + storyUrl(entry) + "'>",
+      renderImage(entry, "hero-image"),
+      "<div class='hero-copy'>",
+      "<p class='hero-meta'><span class='tag'>" + escapeHtml(entry.tag) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span></p>",
+      "<h1 class='hero-title'>" + escapeHtml(entry.title) + "</h1>",
+      "<p class='hero-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
+      "<p class='hero-lead'>" + escapeHtml(getLead(entry)) + "</p>",
+      "</div>",
+      "</a>",
+      "</article>"
+    ].join("");
+  }
+
+  function renderHeroSecondary(entry) {
+    return [
+      "<article class='hero-secondary-story'>",
+      "<a class='hero-link' href='" + storyUrl(entry) + "'>",
+      renderImage(entry, "hero-secondary-image"),
+      "<div class='hero-secondary-copy'>",
+      "<p class='hero-secondary-meta'>" + escapeHtml(entry.city) + " | " + escapeHtml(entry.editoria) + "</p>",
+      "<h2>" + escapeHtml(entry.title) + "</h2>",
+      "<p>" + escapeHtml(getSublead(entry)) + "</p>",
+      "</div>",
+      "</a>",
+      "</article>"
+    ].join("");
+  }
+
+  function renderNowItem(entry) {
+    return [
+      "<li>",
+      "<a href='" + storyUrl(entry) + "'>",
+      "<strong>" + escapeHtml(entry.city) + "</strong>",
+      "<span>" + escapeHtml(entry.title) + "</span>",
+      "</a>",
+      "</li>"
+    ].join("");
+  }
+
+  function renderAgendaItem(entry) {
+    return [
+      "<li>",
+      "<a href='" + storyUrl(entry) + "'>",
+      "<strong>" + escapeHtml(entry.city) + "</strong>",
+      "<span>" + escapeHtml(getSublead(entry)) + "</span>",
+      "<small>" + escapeHtml(entry.tag) + " | " + escapeHtml(formatAccessDate(entry.date)) + "</small>",
+      "</a>",
+      "</li>"
+    ].join("");
+  }
+
+  function renderEditoriaSection(label, items) {
+    var lead = items[0];
+    var rest = items.slice(1, 4);
+    return [
+      "<section class='editoria-block'>",
+      "<div class='editoria-head'><p class='section-kicker'>" + escapeHtml(label) + "</p><a class='editoria-more' href='" + chronologyUrl() + "'>Ver tudo</a></div>",
+      "<a class='editoria-lead' href='" + storyUrl(lead) + "'>",
+      "<h3>" + escapeHtml(lead.title) + "</h3>",
+      "<p class='editoria-sublead'>" + escapeHtml(getSublead(lead)) + "</p>",
+      "</a>",
+      "<ul class='editoria-list'>",
+      rest.map(function (entry) {
+        return "<li><a href='" + storyUrl(entry) + "'><strong>" + escapeHtml(entry.city) + "</strong><span>" + escapeHtml(entry.title) + "</span></a></li>";
+      }).join(""),
+      "</ul>",
+      "</section>"
+    ].join("");
+  }
+
+  function renderEditoriaDeck(ranked) {
+    var groupedByEditoria = {};
+    ranked.forEach(function (entry) {
+      if (!groupedByEditoria[entry.editoria]) groupedByEditoria[entry.editoria] = [];
+      groupedByEditoria[entry.editoria].push(entry);
+    });
+
+    return Object.keys(groupedByEditoria)
+      .sort(function (a, b) {
+        if (groupedByEditoria[b].length !== groupedByEditoria[a].length) return groupedByEditoria[b].length - groupedByEditoria[a].length;
+        return a.localeCompare(b);
+      })
+      .slice(0, 4)
+      .map(function (editoria) {
+        return renderEditoriaSection(editoria, groupedByEditoria[editoria]);
+      })
+      .join("");
+  }
+
+  function renderMunicipalitySpotlight(ranked) {
+    var cities = {};
+    ranked.forEach(function (entry) {
+      if (!cities[entry.city]) cities[entry.city] = [];
+      cities[entry.city].push(entry);
+    });
+
+    return Object.keys(cities)
+      .sort(function (a, b) {
+        if (cities[b].length !== cities[a].length) return cities[b].length - cities[a].length;
+        return a.localeCompare(b);
+      })
+      .slice(0, 6)
+      .map(function (city) {
+        var lead = cities[city][0];
+        return [
+          "<article class='city-spotlight'>",
+          "<p class='section-kicker'>" + escapeHtml(city) + "</p>",
+          "<a href='" + storyUrl(lead) + "'><h3>" + escapeHtml(lead.title) + "</h3></a>",
+          "<p>" + escapeHtml(getSublead(lead)) + "</p>",
+          "<span>" + cities[city].length + " pauta(s) nesta rodada</span>",
+          "</article>"
+        ].join("");
+      })
+      .join("");
+  }
+
+  function storyBody(entry) {
+    return [
+      getLead(entry),
+      "A publicacao foi localizada pelo PAUTEIRO! em " + entry.source_label + ", com registro em " + getDocumentMarker(entry) + ".",
+      "No recorte editorial desta pauta, o que chama atencao e que " + lowerFirst(getSublead(entry)) + "."
+    ];
+  }
+
+  function renderRelatedStories(entry) {
+    return rankedEntries()
+      .filter(function (item) {
+        return item.entry_id !== entry.entry_id && (item.city === entry.city || item.editoria === entry.editoria);
+      })
+      .slice(0, 4)
+      .map(function (item) {
+        return "<li><a href='" + storyUrl(item) + "'><strong>" + escapeHtml(item.city) + "</strong><span>" + escapeHtml(item.title) + "</span></a></li>";
+      })
+      .join("");
+  }
+
+  function renderImage(entry, className) {
+    var finalClass = className || "story-image";
     if (entry.image_url) {
-      return "<img class='story-image' loading='lazy' src='" + escapeHtml(entry.image_url) + "' alt='" + escapeHtml("Imagem relacionada a " + entry.city) + "'>";
+      return "<img class='" + escapeHtml(finalClass) + "' loading='lazy' src='" + escapeHtml(entry.image_url) + "' alt='" + escapeHtml("Imagem relacionada a " + entry.city) + "'>";
     }
-    return fallbackBlock(entry.city);
+    return fallbackBlock(entry.city, finalClass);
   }
 
   function storyCard(entry, large) {
@@ -473,108 +633,62 @@
 
   function renderMonthView() {
     document.title = DATA.site_title;
-    var highlights = entries
-      .slice()
-      .sort(function (a, b) {
-        if ((b.highlight_score || 0) !== (a.highlight_score || 0)) return (b.highlight_score || 0) - (a.highlight_score || 0);
-        return b.date.localeCompare(a.date);
-      })
-      .slice(0, 6);
-
-    var editoriasCount = new Set(entries.map(function (entry) { return entry.editoria; })).size;
+    var ranked = rankedEntries();
+    var leadEntry = ranked[0] || null;
+    var secondaryEntries = ranked.slice(1, 3);
+    var nowEntries = ranked.slice(3, 9);
+    var agendaEntries = ranked.filter(hasAgendaSignal).slice(0, 5);
     var daysWithEntries = Object.keys(grouped).length;
-    var monthsInYear = (DATA.year_months || []).length || 12;
-    var cityCount = new Set(entries.map(function (entry) { return entry.city; })).size;
-    var leadEntry = highlights[0] || null;
-    var secondaryFeatures = highlights.slice(1, 4);
-    var leadCard = leadEntry ? storyCard(leadEntry, true) : "<div class='empty-state'><h3>Base em montagem</h3><p class='empty-copy'>A primeira manchete principal entra aqui quando a rodada do dia estiver fechada.</p></div>";
-    var features = secondaryFeatures.length ? secondaryFeatures.map(function (entry) { return storyCard(entry, false); }).join("") : "";
     var textExportFile = DATA.text_export ? DATA.text_export.file : "";
     var remoteLink = DATA.remote_url ? "<a class='top-link' href='" + escapeHtml(DATA.remote_url) + "' target='_blank' rel='noopener noreferrer'>Abrir versao remota</a>" : "";
     var textExportLink = textExportFile ? "<a class='top-link' href='" + escapeHtml(textExportFile) + "' target='_blank' rel='noopener noreferrer'>Abrir pautas em TXT</a>" : "";
 
-    root.className = "";
+    root.className = "front-page-root";
     root.innerHTML = [
-      "<header class='topbar'>",
-      "<div class='wrap'>",
-      "<div class='masthead'>",
-      "<div class='masthead-copy'>",
-      "<p class='eyebrow'>PAUTEIRO! | Livro de pautas 2026</p>",
-      "<h1 class='title'>Livro de pautas para ler diarios, marcar agenda e devolver texto pronto de redacao</h1>",
-      "<p class='intro'>Abril abriu a frente publica do PAUTEIRO! com recorte factual ate 18 de abril de 2026. O resto do ano ja fica armado para crescer por mes, por municipio, por editoria e depois por agenda derivada de editais, sessoes e prazos.</p>",
-      "<p class='meta-line'>Atualizado em 18 de abril de 2026. A leitura assistida entra para acelerar triagem e lead, nao para substituir curadoria.</p>",
-      "<div class='chip-row'>",
-      "<span class='chip'>ChatGPT e NotebookLM entram na camada assistida de leitura e devolucao de pautas.</span>",
-      "<span class='chip'>Gemini fica como camada opcional de comparacao.</span>",
-      "<span class='chip'>" + daysWithEntries + " dias ja tem pauta fechada nesta rodada.</span>",
+      "<header class='news-header'>",
+      "<div class='wrap news-header-inner'>",
+      "<div class='news-branding'>",
+      "<a class='brand-name' href='" + MONTH_PAGE + "'>PAUTEIRO!</a>",
+      "<div class='brand-deck'><p class='eyebrow'>Noticias a partir dos diarios oficiais</p><p class='meta-line'>Edicao de " + formatAccessDate(DATA.updated_at) + " | " + daysWithEntries + " dias com pauta fechada nesta rodada</p></div>",
       "</div>",
-      "</div>",
-      "<div class='top-links'>",
-      "<a class='top-link' href='" + chronologyUrl() + "'>Abrir cronologia completa</a>",
+      "<nav class='news-nav'><a href='#capa'>Capa</a><a href='#editorias'>Editorias</a><a href='#agenda'>Agenda</a><a href='#municipios'>Municipios</a></nav>",
+      "<div class='news-tools'>",
+      "<a class='top-link' href='" + chronologyUrl() + "'>Cronologia</a>",
       textExportLink,
-      "<a class='top-link' href='radar-diarios-goias-data.json'>Abrir base JSON</a>",
-      "<a class='top-link' href='" + dayUrl("2026-04-08") + "'>Abrir dia com maior carga</a>",
+      "<a class='top-link' href='radar-diarios-goias-data.json'>Base</a>",
       remoteLink,
       "</div>",
       "</div>",
-      "<section class='newsdesk-grid'>",
-      "<div class='lead-stage'>",
-      "<div class='desk-head'><p class='panel-kicker'>Abertura principal</p><p class='desk-note'>A pauta de maior escala abre a capa do caderno.</p></div>",
-      leadCard,
-      "</div>",
-      "<aside class='municipality-panel panel'>",
-      "<div class='desk-head'><p class='panel-kicker'>Por municipio</p><p class='desk-note'>" + cityCount + " cidades ou frentes territoriais com pauta nesta base.</p></div>",
-      "<div class='municipality-list'>" + municipalityBoard() + "</div>",
-      "</aside>",
-      "<aside class='utility-rail'>",
-      "<div class='panel utility-card'>",
-      "<p class='panel-kicker'>Pulso da base</p>",
-      "<div class='panel-item'><span>Fontes</span><strong>" + DATA.sources.length + "</strong></div>",
-      "<div class='panel-item'><span>Paginas e atos</span><strong>" + DATA.evaluated_units + "</strong></div>",
-      "<div class='panel-item'><span>Pautas</span><strong>" + entries.length + "</strong></div>",
-      "<div class='panel-item'><span>Editorias</span><strong>" + editoriasCount + "</strong></div>",
-      "<div class='panel-item'><span>Meses armados</span><strong>" + monthsInYear + "</strong></div>",
-      "</div>",
-      "<div class='calendar-panel compact-calendar-panel'>",
-      "<p class='panel-kicker'>Abril de 2026</p>",
-      "<p class='calendar-note'>Calendario compacto para navegar a rodada.</p>",
-      buildMiniCalendar(),
-      "</div>",
-      "</aside>",
-      "</section>",
-      "</div>",
       "</header>",
-      "<main class='wrap'>",
-      "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Publicacoes em destaque</p><h2>Manchetes que abrem o livro de pautas</h2></div><p class='section-intro'>Aqui entram as aberturas secundarias da capa, ja em formato de agencia e com o documento original amarrado ao card.</p></div>",
-      "<div class='feature-grid'>" + features + "</div>",
+      "<main class='wrap front-page'>",
+      "<section class='hero-news-grid' id='capa'>",
+      "<div class='hero-main-column'>" + renderHeroMain(leadEntry) + "</div>",
+      "<div class='hero-side-column'>" + secondaryEntries.map(renderHeroSecondary).join("") + "</div>",
+      "<aside class='hero-rail' id='agenda'>",
+      "<div class='rail-block'><div class='rail-head'><p class='section-kicker'>Agora</p><h2>Radar do dia</h2></div><ul class='rail-list'>" + nowEntries.map(renderNowItem).join("") + "</ul></div>",
+      "<div class='rail-block'><div class='rail-head'><p class='section-kicker'>Agenda publica</p><h2>O que pede seguimento</h2></div><ul class='rail-list agenda-list'>" + agendaEntries.map(renderAgendaItem).join("") + "</ul></div>",
+      "<div class='rail-block compact-calendar-panel'><div class='rail-head'><p class='section-kicker'>Calendario</p><h2>Abril de 2026</h2></div>" + buildMiniCalendar() + "</div>",
+      "</aside>",
       "</section>",
-      "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Fluxo do sistema</p><h2>Como o PAUTEIRO! funciona</h2></div><p class='section-intro'>A ideia e transformar diario em agenda, agenda em pauta e pauta em texto de saida. A camada assistida por IA entra no meio do processo, nao no lugar da curadoria jornalistica.</p></div>",
-      "<div class='flow-grid'>" + analysisStack() + "</div>",
+      "<section class='news-section' id='editorias'>",
+      "<div class='section-head'><div><p class='section-kicker'>Editorias</p><h2>O mapa do dia por assunto</h2></div><p class='section-intro'>A capa abre pelo peso noticioso. Abaixo, as pautas se reorganizam pela editoria que mais ajuda a leitura jornalistica.</p></div>",
+      "<div class='editoria-deck'>" + renderEditoriaDeck(ranked) + "</div>",
       "</section>",
-      "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Caderno 2026</p><h2>Estrutura anual pronta para receber os proximos meses</h2></div><p class='section-intro'>Abril ja esta povoado. Os outros meses entram como caderno aberto, para a base crescer sem desmontar o produto nem pesar demais a navegacao.</p></div>",
-      "<div class='year-grid'>" + yearBoard() + "</div>",
+      "<section class='news-section' id='municipios'>",
+      "<div class='section-head'><div><p class='section-kicker'>Municipios</p><h2>Territorios em foco</h2></div><p class='section-intro'>As frentes abaixo puxam as cidades e orgaos com mais densidade de pauta na rodada aberta.</p></div>",
+      "<div class='city-spotlight-grid'>" + renderMunicipalitySpotlight(ranked) + "</div>",
       "</section>",
-      "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Dias de abril</p><h2>Base organizada por dia</h2></div><p class='section-intro'>Cada data abre uma pagina propria, com navegacao entre dias, resumo do que entrou e alerta quando a rodada ainda esta parcial.</p></div>",
-      "<div class='day-board'>" + dayBoard() + "</div>",
-      "</section>",
-      "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Editorias</p><h2>Separacao automatica por assunto</h2></div><p class='section-intro'>A contagem abaixo olha para a vocacao principal da pauta, nao apenas para o orgao que publicou o ato.</p></div>",
-      "<div class='editoria-grid'>" + editoriaCards() + "</div>",
-      "</section>",
-      "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Linha fina</p><h2>Assuntos do mes em uma passada curta</h2></div><p class='section-intro'>A exportacao leve em TXT leva as pautas em texto corrido, com linha fina e lead para uso de redacao.</p></div>",
-      "<ul class='line-list'>" + lineList() + "</ul>",
-      "</section>",
-      "<section class='section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Fontes fixas</p><h2>Familias de fonte que sustentam a base</h2></div><p class='section-intro'>O TJGO entra aqui como frente propria de leitura pesada. A pagina do DJE fica indexada e as noticias oficiais do tribunal ajudam a puxar atos para leitura posterior no diario.</p></div>",
-      "<ul class='sources-list'>" + sourceList() + "</ul>",
+      "<section class='news-section'>",
+      "<div class='section-head'><div><p class='section-kicker'>Radar interno</p><h2>Ferramentas da base</h2></div><p class='section-intro'>O jornal abre pela noticia. O restante da base continua acessivel para apuracao, navegacao por data e exportacao leve.</p></div>",
+      "<div class='service-grid'>",
+      "<a class='service-card' href='" + dayUrl("2026-04-08") + "'><strong>Dia com maior carga</strong><span>Abre a rodada de 08/04/2026 com as pautas mais densas da base atual.</span></a>",
+      "<a class='service-card' href='" + chronologyUrl() + "'><strong>Cronologia</strong><span>Enxerga o mes como fluxo, em ordem cronologica crescente.</span></a>",
+      "<a class='service-card' href='" + escapeHtml(textExportFile || "#") + "'><strong>Pautas em TXT</strong><span>Leva lead e sublead para uso leve na redacao.</span></a>",
+      "<a class='service-card' href='radar-diarios-goias-data.json'><strong>Base documental</strong><span>Abre a base estruturada com os metadados de cada pauta.</span></a>",
+      "</div>",
       "</section>",
       "</main>",
-      "<footer class='footer'><div class='wrap'><p class='footer-note'>PAUTEIRO! roda a partir de <a href='radar-diarios-goias-data.json'>radar-diarios-goias-data.json</a> e da saida leve <a href='" + escapeHtml(textExportFile || "#") + "'>pauteiro-2026-pautas.txt</a>. Abril esta preenchido ate 18 de abril de 2026; o caderno anual segue aberto para as proximas rodadas.</p></div></footer>"
+      "<footer class='footer'><div class='wrap'><p class='footer-note'>PAUTEIRO! publica a partir dos diarios oficiais e liga a pauta ao documento original, com marcador e data de acesso. A camada de apoio para GPT e NotebookLM segue disponivel em cada materia.</p></div></footer>"
     ].join("");
   }
 
@@ -680,6 +794,49 @@
     ].join("");
   }
 
+  function renderStoryView() {
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get("id") || "";
+    var entry = entryMap[id];
+
+    if (!entry) {
+      root.className = "wrap page-shell";
+      root.innerHTML = "<div class='empty-state'><h3>Materia nao encontrada</h3><p class='empty-copy'>A pauta pedida nao aparece na base publica atual.</p></div>";
+      return;
+    }
+
+    var paragraphs = storyBody(entry);
+    var related = renderRelatedStories(entry);
+
+    document.title = entry.title + " | " + DATA.project_name;
+    root.className = "wrap page-shell";
+    root.innerHTML = [
+      "<article class='article-shell'>",
+      "<header class='article-header'>",
+      "<p class='eyebrow'>" + escapeHtml(entry.editoria) + " | " + escapeHtml(entry.city) + "</p>",
+      "<h1 class='article-title'>" + escapeHtml(entry.title) + "</h1>",
+      "<p class='article-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
+      "<div class='article-meta'><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span><span>" + escapeHtml(entry.source_label) + "</span></div>",
+      renderImage(entry, "article-image"),
+      "</header>",
+      "<section class='article-page-grid'>",
+      "<div class='article-body'>",
+      paragraphs.map(function (paragraph, index) {
+        var className = index === 0 ? "article-lead" : "article-paragraph";
+        return "<p class='" + className + "'>" + escapeHtml(paragraph) + "</p>";
+      }).join(""),
+      "</div>",
+      "<aside class='article-sidebar'>",
+      "<div class='sidebar-card'><h3>Documento</h3><div class='panel-item'><span>Fonte</span><strong>" + escapeHtml(entry.source_label) + "</strong></div><div class='panel-item'><span>Marcador</span><strong>" + escapeHtml(getDocumentMarker(entry)) + "</strong></div><div class='panel-item'><span>Acesso</span><strong>" + escapeHtml(formatAccessDate(getAccessedAt(entry))) + "</strong></div><p class='story-source'><a href='" + escapeHtml(entry.source_url) + "' target='_blank' rel='noopener noreferrer'>Baixar documento original</a></p></div>",
+      "<div class='sidebar-card'><h3>Apoio de apuracao</h3>" + renderAssistantLinks(entry) + "</div>",
+      "<div class='sidebar-card'><h3>Outras do radar</h3><ul class='related-list'>" + related + "</ul></div>",
+      "</aside>",
+      "</section>",
+      "<div class='article-nav'><a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar a capa</a><a class='nav-pill' href='" + dayUrl(entry.date) + "'>Abrir o dia</a><a class='nav-pill' href='" + chronologyUrl() + "'>Ver cronologia</a></div>",
+      "</article>"
+    ].join("");
+  }
+
   function renderAssistantView() {
     var params = new URLSearchParams(window.location.search);
     var id = params.get("id") || "";
@@ -752,6 +909,8 @@
   var view = pageParams.get("view") || document.body.getAttribute("data-view") || "month";
   if (view === "chronology") {
     renderChronologyView();
+  } else if (view === "story") {
+    renderStoryView();
   } else if (view === "assistant") {
     renderAssistantView();
   } else if (view === "day") {
