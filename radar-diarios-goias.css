@@ -597,13 +597,15 @@ ol {
   font-size: 19px;
 }
 
-.story-line {
+.story-line,
+.story-sublead {
   font-size: 14px;
   color: var(--coral);
   font-weight: 700;
 }
 
-.story-summary {
+.story-summary,
+.story-lead {
   font-size: 15px;
   color: #2a2925;
 }
