@@ -622,6 +622,78 @@ img {
   gap: 16px;
 }
 
+.search-organizer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.search-cluster-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.search-cluster-intro {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.search-cluster-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.search-cluster-list a {
+  display: grid;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+  padding: 12px;
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  border-radius: 6px;
+  background: var(--surface-soft);
+}
+
+.search-cluster-list a:hover {
+  border-color: rgba(13, 117, 109, 0.24);
+}
+
+.search-cluster-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.search-cluster-list p {
+  font-size: 14px;
+  color: #2a2925;
+}
+
+.search-cluster-list small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.search-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.search-results-deck {
+  display: grid;
+  gap: 16px;
+}
+
 .search-result-card {
   display: grid;
   grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
@@ -651,6 +723,42 @@ img {
   font-size: 28px;
   line-height: 1.05;
   overflow-wrap: anywhere;
+}
+
+.search-compact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.search-compact-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.search-compact-item h3 {
+  font-size: 22px;
+  line-height: 1.08;
+}
+
+.search-compact-item h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.search-compact-item h3 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.search-compact-item small {
+  font-size: 12px;
+  color: var(--muted);
 }
 
 .search-match-copy {
@@ -2034,6 +2142,8 @@ ol {
   .service-grid,
   .follow-up-grid,
   .pauta-line-list,
+  .search-organizer-grid,
+  .search-compact-list,
   .year-analysis-grid,
   .cadence-grid,
   .search-form-grid,
@@ -2103,6 +2213,9 @@ ol {
   .service-grid,
   .follow-up-grid,
   .pauta-line-list,
+  .search-organizer-grid,
+  .search-compact-list,
+  .search-signal-grid,
   .year-analysis-grid,
   .cadence-grid,
   .search-form-grid,
