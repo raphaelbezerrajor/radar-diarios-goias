@@ -1108,22 +1108,147 @@
     ].join("");
   }
 
-  function renderSearchResultCard(result) {
+  function mergeSearchFilters(base, extra) {
+    var next = {};
+    ["q", "year", "family", "city", "editoria", "scope", "from", "to"].forEach(function (key) {
+      if (base && base[key]) next[key] = base[key];
+    });
+    Object.keys(extra || {}).forEach(function (key) {
+      if (extra[key]) {
+        next[key] = extra[key];
+      } else {
+        delete next[key];
+      }
+    });
+    return next;
+  }
+
+  function summarizeSearchBuckets(results, projector, limit) {
+    var map = {};
+    results.forEach(function (result) {
+      var entry = result.entry;
+      var label = projector(entry);
+      if (!label) return;
+      if (!map[label]) {
+        map[label] = { label: label, count: 0, sample: entry };
+      }
+      map[label].count += 1;
+      if ((entry.highlight_score || 0) > (map[label].sample.highlight_score || 0)) {
+        map[label].sample = entry;
+      }
+    });
+
+    return Object.keys(map)
+      .map(function (key) { return map[key]; })
+      .sort(function (a, b) {
+        if (b.count !== a.count) return b.count - a.count;
+        return a.label.localeCompare(b.label);
+      })
+      .slice(0, limit || 5);
+  }
+
+  function renderSearchBucketCard(title, intro, items, filters, fieldName) {
+    return [
+      "<article class='search-cluster-card'>",
+      "<p class='section-kicker'>" + escapeHtml(title) + "</p>",
+      "<p class='search-cluster-intro'>" + escapeHtml(intro) + "</p>",
+      (items.length
+        ? "<ul class='search-cluster-list'>" + items.map(function (item) {
+            return [
+              "<li>",
+              "<a href='" + searchUrl(mergeSearchFilters(filters, (function () { var bucket = {}; bucket[fieldName] = item.label; return bucket; })())) + "'>",
+              "<div class='search-cluster-top'><strong>" + escapeHtml(item.label) + "</strong><span>" + item.count + " pauta(s)</span></div>",
+              "<p>" + escapeHtml(item.sample.title) + "</p>",
+              "<small>" + escapeHtml(item.sample.line || getSublead(item.sample)) + "</small>",
+              "</a>",
+              "</li>"
+            ].join("");
+          }).join("") + "</ul>"
+        : "<p class='panel-note'>Nenhum agrupamento relevante neste recorte.</p>"),
+      "</article>"
+    ].join("");
+  }
+
+  function renderSearchSignalCard(results) {
+    var critical = 0;
+    var hot = 0;
+    var followUp = 0;
+
+    results.forEach(function (result) {
+      var signal = pautaSignal(result.entry);
+      if (signal === "Pauta critica") critical += 1;
+      if (signal === "Pauta quente") hot += 1;
+      if (signal === "Seguimento") followUp += 1;
+    });
+
+    return [
+      "<article class='search-cluster-card'>",
+      "<p class='section-kicker'>Leitura rapida</p>",
+      "<div class='search-signal-grid'>",
+      "<div class='metric-card is-warn'><span>Pautas criticas</span><strong>" + critical + "</strong></div>",
+      "<div class='metric-card is-medio'><span>Pautas quentes</span><strong>" + hot + "</strong></div>",
+      "<div class='metric-card is-pendente'><span>Seguimentos</span><strong>" + followUp + "</strong></div>",
+      "</div>",
+      "<p class='panel-note'>Esse quadro organiza o que pede manchete imediata, o que merece prioridade de apuracao e o que ja exige nova checagem por agenda ou prazo.</p>",
+      "</article>"
+    ].join("");
+  }
+
+  function renderSearchOrganizer(results, filters) {
+    var cityBuckets = summarizeSearchBuckets(results, function (entry) { return entry.city; }, 5);
+    var editoriaBuckets = summarizeSearchBuckets(results, function (entry) { return entry.editoria; }, 5);
+    var familyBuckets = summarizeSearchBuckets(results, function (entry) { return sourceFamily(entry); }, 5);
+
+    return [
+      "<section class='search-organizer-grid'>",
+      renderSearchBucketCard("Municipios", "Quem puxa esse recorte territorialmente.", cityBuckets, filters, "city"),
+      renderSearchBucketCard("Editorias", "Assuntos dominantes para dividir a cobertura.", editoriaBuckets, filters, "editoria"),
+      renderSearchBucketCard("Fontes", "De onde sai o grosso documental desta busca.", familyBuckets, filters, "family"),
+      renderSearchSignalCard(results),
+      "</section>"
+    ].join("");
+  }
+
+  function renderSearchCompactResult(result) {
+    var entry = result.entry;
+    var matches = result.matchedTokens.length
+      ? "<p class='search-match-copy'>Bate com: " + escapeHtml(result.matchedTokens.slice(0, 6).join(", ")) + "</p>"
+      : "";
+
+    return [
+      "<article class='search-compact-item'>",
+      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(sourceFamily(entry)) + "</span></div>",
+      "<h3><a href='" + storyUrl(entry) + "'>" + escapeHtml(entry.title) + "</a></h3>",
+      "<p class='story-sublead'>" + escapeHtml(entry.line || getSublead(entry)) + "</p>",
+      matches,
+      "<small>Marcador: " + escapeHtml(getDocumentMarker(entry)) + " | Acesso: " + escapeHtml(formatAccessDate(getAccessedAt(entry))) + "</small>",
+      "<div class='assistant-strip'>",
+      "<a class='assistant-link' href='" + storyUrl(entry) + "'>Abrir pauta</a>",
+      "<a class='assistant-link' href='" + dayUrl(entry.date) + "'>Abrir dia</a>",
+      "</div>",
+      "</article>"
+    ].join("");
+  }
+
+  function renderSearchResultCard(result, large) {
     var entry = result.entry;
     var matches = result.matchedTokens.length
       ? "<p class='search-match-copy'>Bate com: " + escapeHtml(result.matchedTokens.slice(0, 8).join(", ")) + "</p>"
       : "";
 
     return [
-      "<article class='search-result-card'>",
+      "<article class='search-result-card" + (large ? " is-lead" : "") + "'>",
       "<a class='search-result-media' href='" + storyUrl(entry) + "'>" + renderImage(entry, "search-result-image") + "</a>",
       "<div class='search-result-body'>",
-      "<div class='meta-row'><span class='tag'>" + escapeHtml(entry.tag) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(sourceFamily(entry)) + "</span><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span></div>",
+      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(sourceFamily(entry)) + "</span><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span></div>",
       "<h2><a href='" + storyUrl(entry) + "'>" + escapeHtml(entry.title) + "</a></h2>",
       "<p class='story-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
       "<p class='story-lead'>" + escapeHtml(getLead(entry)) + "</p>",
+      "<p class='pauta-line-note'><strong>Linha fina:</strong> " + escapeHtml(entry.line || getSublead(entry)) + "</p>",
       matches,
+      "<p class='search-match-copy'>Marcador: " + escapeHtml(getDocumentMarker(entry)) + " | Acesso: " + escapeHtml(formatAccessDate(getAccessedAt(entry))) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "' target='_blank' rel='noopener noreferrer'>" + escapeHtml(entry.source_label) + "</a></p>",
+      renderDocumentTools(entry),
       "<div class='assistant-strip'>",
       "<a class='assistant-link' href='" + storyUrl(entry) + "'>Abrir pauta</a>",
       "<a class='assistant-link' href='" + workflowUrl(entry) + "'>Mesa hibrida</a>",
@@ -1131,6 +1256,21 @@
       "</div>",
       "</div>",
       "</article>"
+    ].join("");
+  }
+
+  function renderSearchResultsDeck(results) {
+    if (!results.length) {
+      return "<div class='empty-state'><h3>Nenhuma pauta localizada</h3><p class='empty-copy'>Tente abrir mais o periodo, tirar um filtro ou trocar o assunto por termos como edital, contrato, nomeacao, saude ou justica.</p></div>";
+    }
+
+    return [
+      "<div class='search-results-deck'>",
+      renderSearchResultCard(results[0], true),
+      (results.length > 1
+        ? "<div class='search-compact-list'>" + results.slice(1).map(renderSearchCompactResult).join("") + "</div>"
+        : ""),
+      "</div>"
     ].join("");
   }
 
@@ -1213,10 +1353,9 @@
       metricCard("Ate", lastDate ? formatAccessDate(lastDate) : "n/a"),
       "</div>",
       "</section>",
+      renderSearchOrganizer(results, filters),
       "<section class='search-results-stack'>",
-      (results.length
-        ? results.map(renderSearchResultCard).join("")
-        : "<div class='empty-state'><h3>Nenhuma pauta localizada</h3><p class='empty-copy'>Tente abrir mais o periodo, tirar um filtro ou trocar o assunto por termos como edital, contrato, nomeacao, saude ou justica.</p></div>"),
+      renderSearchResultsDeck(results),
       "</section>",
       "</div>",
       "<aside class='note-stack'>",
