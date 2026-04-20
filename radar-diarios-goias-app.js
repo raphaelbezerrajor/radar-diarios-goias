@@ -736,6 +736,15 @@
       .sort(function (a, b) { return b.localeCompare(a); });
   }
 
+  function archiveYearMeta(year) {
+    var value = String(year || "").trim();
+    if (!value) return null;
+    var found = (DATA.archive_years || []).find(function (item) {
+      return String(item.year) === value;
+    });
+    return found || null;
+  }
+
   function sourceFamilyOptions() {
     var seen = {};
     var seed = [
@@ -886,10 +895,10 @@
       "<div class='coverage-grid'>",
       years.map(function (item) {
         return [
-          "<div class='coverage-chip is-" + escapeHtml(item.status || "open") + "'>",
+          "<a class='coverage-chip is-" + escapeHtml(item.status || "open") + "' href='" + searchUrl({ year: String(item.year) }) + "'>",
           "<strong>" + escapeHtml(String(item.year)) + "</strong>",
           "<span>" + escapeHtml(item.note || "arquivo em preparacao") + "</span>",
-          "</div>"
+          "</a>"
         ].join("");
       }).join(""),
       "</div>"
@@ -1259,9 +1268,12 @@
     ].join("");
   }
 
-  function renderSearchResultsDeck(results) {
+  function renderSearchResultsDeck(results, filters, selectedYearMeta) {
     if (!results.length) {
-      return "<div class='empty-state'><h3>Nenhuma pauta localizada</h3><p class='empty-copy'>Tente abrir mais o periodo, tirar um filtro ou trocar o assunto por termos como edital, contrato, nomeacao, saude ou justica.</p></div>";
+      var emptyCopy = selectedYearMeta && filters.year && selectedYearMeta.status !== "active"
+        ? "O ano de " + filters.year + " esta aberto como arquivo consultavel, mas a camada analitica ainda nao foi fechada nesta versao publica. Quando o recorte desse ano entrar na base, ele aparecera aqui com o mesmo fluxo de pauta, marcador e documento original."
+        : "Tente abrir mais o periodo, tirar um filtro ou trocar o assunto por termos como edital, contrato, nomeacao, saude ou justica.";
+      return "<div class='empty-state'><h3>Nenhuma pauta localizada</h3><p class='empty-copy'>" + escapeHtml(emptyCopy) + "</p></div>";
     }
 
     return [
@@ -1277,6 +1289,7 @@
   function renderSearchView() {
     var filters = currentSearchFilters();
     var results = searchEntries(filters);
+    var selectedYearMeta = archiveYearMeta(filters.year);
     var years = archiveYearOptions();
     var families = sourceFamilyOptions();
     var cities = uniqueFieldValues("city");
@@ -1293,7 +1306,9 @@
     });
     var firstDate = results.length ? results[results.length - 1].entry.date : "";
     var lastDate = results.length ? results[0].entry.date : "";
-    var queryIntro = activeFilterCount
+    var queryIntro = selectedYearMeta && filters.year && selectedYearMeta.status !== "active"
+      ? "O arquivo de " + filters.year + " entra como recorte consultavel. Nesse ano, a camada de analise editorial ainda esta pendente em parte da serie, entao a busca precisa priorizar documento, marcador e leitura direta da fonte."
+      : activeFilterCount
       ? "A busca cruza municipio, ano, familia de fonte, periodo e assunto sobre o arquivo do PAUTEIRO!. Hoje, o preenchimento factual publico vai ate " + formatAccessDate(DATA.cutoff_date) + "."
       : "Abra uma busca geral por municipio, ano, tipo de diario, editoria ou assunto. A estrutura ja esta pronta para 2024, 2025 e 2026; a base publica atual cobre ate " + formatAccessDate(DATA.cutoff_date) + ".";
 
@@ -1355,11 +1370,14 @@
       "</section>",
       renderSearchOrganizer(results, filters),
       "<section class='search-results-stack'>",
-      renderSearchResultsDeck(results),
+      renderSearchResultsDeck(results, filters, selectedYearMeta),
       "</section>",
       "</div>",
       "<aside class='note-stack'>",
       "<div class='sidebar-card'><h3>Arquivo historico</h3><p class='panel-note'>O PAUTEIRO! entra em modo de expansao para 2024, 2025 e 2026, com busca unica por toda a serie.</p>" + renderArchiveYearBoard() + "</div>",
+      (selectedYearMeta
+        ? "<div class='sidebar-card'><h3>Status de " + escapeHtml(String(selectedYearMeta.year)) + "</h3><p class='panel-note'>" + escapeHtml(selectedYearMeta.note || "arquivo em preparacao") + ".</p><p class='muted'>A navegacao por ano continua funcionando; quando a camada analitica nao estiver fechada, a pesquisa se apoia no documento original, no marcador e na triagem por assunto.</p></div>"
+        : ""),
       "<div class='sidebar-card'><h3>Meta de cobertura</h3><div class='panel-item'><span>Municipios alvo</span><strong>" + escapeHtml(String((DATA.coverage_goal && DATA.coverage_goal.municipalities_total) || 0)) + "</strong></div><div class='panel-item'><span>Prioridade</span><strong>TJGO + MPGO</strong></div><p class='panel-note'>" + escapeHtml(((DATA.coverage_goal && DATA.coverage_goal.target_scope) || "todos os municipios goianos").replace(/^./, function (letter) { return letter.toUpperCase(); })) + ".</p></div>",
       "<div class='note-card'><h3>Como perguntar</h3><ul><li>Use municipio + tema + ano: Rio Verde contratos saude 2025.</li><li>Use orgao + tipo de ato: MPGO recomendacao, TJGO edital, AGM licitacao.</li><li>Use recorte amplo para varrer o arquivo: medicacao, nomeacao, jeton, contrato, inquerito.</li></ul></div>",
       "<div class='note-card'><h3>Ponto editorial</h3><p class='muted'>Resultado de busca nao substitui leitura documental. Quando o ato vier sem lista, anexo ou corpo integral, a mesa hibrida sinaliza a segunda busca antes da manchete.</p></div>",
