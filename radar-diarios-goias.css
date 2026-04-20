@@ -780,11 +780,17 @@ img {
   background: var(--surface-soft);
   display: grid;
   gap: 6px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .coverage-chip strong {
   font-size: 14px;
   line-height: 1;
+}
+
+.coverage-chip:hover {
+  border-color: rgba(13, 117, 109, 0.22);
 }
 
 .coverage-chip span {

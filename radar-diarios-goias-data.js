@@ -8,8 +8,8 @@ window.RADAR_GO_DATA = {
   accessed_at: "2026-04-20",
   cutoff_date: "2026-04-18",
   archive_years: [
-    { year: 2024, status: "open", note: "prioridade historica para TJGO, MPGO e municipios" },
-    { year: 2025, status: "open", note: "prioridade historica para TJGO, MPGO e municipios" },
+    { year: 2024, status: "open", note: "arquivo consultavel; camada de analise editorial pendente" },
+    { year: 2025, status: "open", note: "arquivo consultavel; camada de analise editorial pendente" },
     { year: 2026, status: "active", note: "caderno corrente em expansao" }
   ],
   coverage_goal: {
