@@ -1,6 +1,6 @@
 # PAUTEIRO!
 
-Livro de pautas em HTML, CSS e JavaScript para leitura de diarios oficiais de Goias ao longo de 2026.
+Livro de pautas em HTML, CSS e JavaScript para leitura de diarios oficiais de Goias, com expansao historica preparada para 2024, 2025 e 2026.
 
 ## Entrada principal
 
@@ -34,15 +34,17 @@ flowchart LR
 
 ## Escopo atual
 
-- 2026 entra como caderno anual;
+- 2026 segue como caderno corrente;
+- 2024 e 2025 ja entram como arquivo historico pronto para carga;
 - abril de 2026 esta preenchido ate 18/04/2026;
+- busca por municipio, ano, editoria, tipo de diario e assunto;
 - calendario por dia;
 - cronologia;
 - pagina diaria;
 - bloco de fluxo do sistema;
 - exportacao leve em TXT;
-- primeiras entradas de Goiânia, Aparecida de Goiânia, Senador Canedo, Anápolis, AGM, MPGO, Estado de Goiás e TJGO.
+- meta declarada de cobertura para os 246 municipios goianos, alem de MPGO, TJGO, Estado e diarios proprios.
 
 ## Observacao
 
-O projeto esta em evolucao editorial. A proxima camada inclui agenda derivada do diario, ampliacao por mes e refinamento visual das manchetes e das fotos.
+O projeto esta em evolucao editorial. A proxima camada inclui ingestao historica de 2024 e 2025, ampliacao do volume de pautas em MPGO e TJGO, e cobertura municipal total dentro da mesma interface de busca.

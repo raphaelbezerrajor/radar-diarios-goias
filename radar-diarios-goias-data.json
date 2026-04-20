@@ -1,12 +1,27 @@
 {
   "project_name": "PAUTEIRO!",
-  "site_title": "PAUTEIRO! | Livro de pautas 2026",
+  "site_title": "PAUTEIRO! | Livro de pautas 2024-2026",
   "site_slug": "pauteiro",
   "year": 2026,
   "month": "2026-04",
   "updated_at": "2026-04-18",
   "accessed_at": "2026-04-18",
   "cutoff_date": "2026-04-18",
+  "archive_years": [
+    { "year": 2024, "status": "open", "note": "prioridade historica para TJGO, MPGO e municipios" },
+    { "year": 2025, "status": "open", "note": "prioridade historica para TJGO, MPGO e municipios" },
+    { "year": 2026, "status": "active", "note": "caderno corrente em expansao" }
+  ],
+  "coverage_goal": {
+    "municipalities_total": 246,
+    "target_scope": "todos os municipios goianos, MPGO, TJGO, Estado e diarios proprios",
+    "priority_fronts": [
+      "TJGO com leitura pesada do DJE e atos derivados",
+      "MPGO com inqueritos, recomendacoes, TACs e arquivamentos",
+      "AGM para municipios sem diario proprio",
+      "Diarios municipais proprios e atos do Estado"
+    ]
+  },
   "evaluated_units": 54,
   "remote_url": "https://raphaelbezerrajor.github.io/radar-diarios-goias/",
   "text_export": {
@@ -148,8 +163,8 @@
       "source_label": "SES-GO",
       "source_url": "https://goias.gov.br/saude/extrato-do-contrato-no-29-2026-ses-go/",
       "source_note": "Publicado em 06/04/2026.",
-      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Goi%C3%A2nia%20GO.jpg",
-      "image_credit": "HVL/Wikimedia Commons",
+      "image_url": "https://goias.gov.br/saude/wp-content/uploads/sites/34/2024/01/0601-cemac-1024x684.jpg",
+      "image_credit": "SES-GO",
       "highlight_score": 5
     },
     {
