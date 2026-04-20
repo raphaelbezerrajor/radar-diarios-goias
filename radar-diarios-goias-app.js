@@ -1403,6 +1403,128 @@
     ].join("");
   }
 
+  function pautaSignal(entry) {
+    var hay = documentCorpus(entry);
+    if (/(devolu|ressarc|tomada de contas|dano ao erario|notificacao extrajudicial|responsabilizacao|glosa|descumpr|inquerito civil|acao civil publica|recomendacao|suspensao|bloqueio|condenacao|audiencia de custodia)/.test(hay)) {
+      return "Pauta critica";
+    }
+    if ((entry.highlight_score || 0) >= 5) {
+      return "Pauta quente";
+    }
+    if (hasAgendaSignal(entry)) {
+      return "Seguimento";
+    }
+    return "Pauta aberta";
+  }
+
+  function pautaCard(entry, large) {
+    var tagName = large ? "h3" : "h4";
+    var credit = entry.image_credit ? "<p class='story-credit'>Credito da imagem: " + escapeHtml(entry.image_credit) + "</p>" : "";
+    var note = entry.source_note ? " <span>" + escapeHtml(entry.source_note) + "</span>" : "";
+    var line = entry.line || getSublead(entry);
+    return [
+      "<article class='story-card pauta-card" + (large ? " is-large" : "") + "'>",
+      "<a class='pauta-image-link' href='" + storyUrl(entry) + "'>",
+      renderImage(entry),
+      "</a>",
+      "<div class='story-body'>",
+      credit,
+      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span><span>" + escapeHtml(entry.editoria) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span></div>",
+      "<" + tagName + " class='pauta-title'><a href='" + storyUrl(entry) + "'>" + escapeHtml(entry.title) + "</a></" + tagName + ">",
+      "<p class='story-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
+      "<p class='story-lead'>" + escapeHtml(getLead(entry)) + "</p>",
+      "<p class='pauta-line-note'><strong>Linha fina:</strong> " + escapeHtml(line) + "</p>",
+      "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
+      renderDocumentTools(entry),
+      renderAssistantLinks(entry),
+      "</div>",
+      "</article>"
+    ].join("");
+  }
+
+  function renderPautaBoardSection(ranked) {
+    var leadEntries = ranked.slice(0, 7);
+    if (!leadEntries.length) return "";
+    return [
+      "<section class='news-section pauta-home-section' id='capa'>",
+      "<div class='section-head'><div><p class='section-kicker'>Livro de pautas</p><h2>Capa em modo de pauta</h2></div><p class='section-intro'>A home agora abre direto pelo que pode render manchete, seguimento, desdobramento e chamada curta de reuniao.</p></div>",
+      "<div class='pauta-board-grid'>",
+      leadEntries.map(function (entry, index) {
+        return pautaCard(entry, index === 0);
+      }).join(""),
+      "</div>",
+      "</section>"
+    ].join("");
+  }
+
+  function renderFollowUpCard(entry) {
+    return [
+      "<article class='follow-up-card'>",
+      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span><span>" + escapeHtml(entry.city) + "</span></div>",
+      "<h3><a href='" + storyUrl(entry) + "'>" + escapeHtml(entry.title) + "</a></h3>",
+      "<p>" + escapeHtml(getSublead(entry)) + "</p>",
+      "<small>" + escapeHtml(entry.tag) + " | " + escapeHtml(formatAccessDate(entry.date)) + "</small>",
+      "</article>"
+    ].join("");
+  }
+
+  function renderPautaAgendaSection(agendaEntries) {
+    if (!agendaEntries.length) return "";
+    return [
+      "<section class='news-section' id='agenda'>",
+      "<div class='section-head'><div><p class='section-kicker'>Seguimentos</p><h2>Pautas que pedem nova rodada</h2></div><p class='section-intro'>Editais, audiencias, sessoes, periodos de inscricao e atos com data marcada ficam agrupados para nao sumirem no fluxo.</p></div>",
+      "<div class='follow-up-grid'>",
+      agendaEntries.map(renderFollowUpCard).join(""),
+      "</div>",
+      "</section>"
+    ].join("");
+  }
+
+  function renderPautaLineItem(entry) {
+    var line = entry.line || getSublead(entry);
+    var note = entry.source_note ? " | " + escapeHtml(entry.source_note) : "";
+    return [
+      "<li class='pauta-line-item'>",
+      "<a href='" + storyUrl(entry) + "'>",
+      "<div class='pauta-line-top'><strong>" + escapeHtml(entry.city) + "</strong><span>" + escapeHtml(pautaSignal(entry)) + "</span></div>",
+      "<h3>" + escapeHtml(entry.title) + "</h3>",
+      "<p>" + escapeHtml(line) + "</p>",
+      "<small>" + escapeHtml(entry.editoria) + " | " + escapeHtml(entry.source_label) + note + "</small>",
+      "</a>",
+      "</li>"
+    ].join("");
+  }
+
+  function renderPautaLineSection(ranked) {
+    var remaining = ranked.slice(7);
+    if (!remaining.length) return "";
+    return [
+      "<section class='news-section' id='linhas-finas'>",
+      "<div class='section-head'><div><p class='section-kicker'>Linhas finas</p><h2>Resumo curto para a reuniao</h2></div><p class='section-intro'>O restante da rodada fica em formato de pauta curta, com gancho, origem documental e link para abrir o material completo.</p></div>",
+      "<ul class='pauta-line-list'>",
+      remaining.map(renderPautaLineItem).join(""),
+      "</ul>",
+      "</section>"
+    ].join("");
+  }
+
+  function renderPautaServiceSection(leadEntry, textExportFile) {
+    return [
+      "<section class='news-section'>",
+      "<div class='section-head'><div><p class='section-kicker'>Apuracao</p><h2>Buscar, baixar e fechar texto</h2></div><p class='section-intro'>O arquivo continua acessivel para pesquisa por municipio, tema, ano, familia de fonte e para cruzamento com o fluxo de IA.</p></div>",
+      "<div class='service-grid'>",
+      "<a class='service-card' href='" + chronologyUrl() + "'><strong>Cronologia da rodada</strong><span>Abre o mes em ordem cronologica para enxergar sequencia de atos e repeticoes.</span></a>",
+      "<a class='service-card' href='" + searchUrl({ year: String(DATA.year) }) + "'><strong>Busca por pauta</strong><span>Consulta municipio, ano, tipo de diario, escopo e assunto dentro do arquivo.</span></a>",
+      "<a class='service-card' href='" + searchUrl({ family: "Estado de Goias" }) + "'><strong>Triagem DOE</strong><span>Filtra o Diario Oficial do Estado para contratos, cobrancas, notificacoes e responsabilizacoes.</span></a>",
+      "<a class='service-card' href='" + searchUrl({ family: "MPGO" }) + "'><strong>Triagem MPGO</strong><span>Deixa pronta a varredura por inqueritos, recomendacoes, ACPs, TACs e arquivamentos.</span></a>",
+      "<a class='service-card' href='" + escapeHtml(textExportFile || "#") + "'><strong>Pautas em TXT</strong><span>Leva lead, sublead e linha fina para uso leve na redacao.</span></a>",
+      (leadEntry ? "<a class='service-card' href='" + workflowUrl(leadEntry) + "'><strong>Mesa hibrida</strong><span>Prepara o pacote do NotebookLM, recebe retorno manual e fecha o texto no chat.</span></a>" : ""),
+      "<a class='service-card' href='radar-diarios-goias-data.json'><strong>Base documental</strong><span>Abre a base estruturada com marcadores, paginas e datas de acesso.</span></a>",
+      "</div>",
+      "</section>"
+    ].join("");
+  }
+
   function timelineCard(entry) {
     var note = entry.source_note ? " | " + escapeHtml(entry.source_note) : "";
     return [
@@ -1612,9 +1734,7 @@
     document.title = DATA.site_title;
     var ranked = rankedEntries();
     var leadEntry = ranked[0] || null;
-    var secondaryEntries = ranked.slice(1, 3);
-    var nowEntries = ranked.slice(3, 9);
-    var agendaEntries = ranked.filter(hasAgendaSignal).slice(0, 5);
+    var agendaEntries = ranked.filter(hasAgendaSignal).slice(0, 6);
     var daysWithEntries = Object.keys(grouped).length;
     var textExportFile = DATA.text_export ? DATA.text_export.file : "";
     var remoteLink = DATA.remote_url ? "<a class='top-link' href='" + escapeHtml(DATA.remote_url) + "' target='_blank' rel='noopener noreferrer'>Abrir versao remota</a>" : "";
@@ -1626,12 +1746,12 @@
       "<div class='wrap news-header-inner'>",
       "<div class='news-branding'>",
       "<a class='brand-name' href='" + MONTH_PAGE + "'>PAUTEIRO!</a>",
-      "<div class='brand-deck'><p class='eyebrow'>Noticias a partir dos diarios oficiais</p><p class='meta-line'>Site atualizado em " + formatAccessDate(DATA.updated_at) + " | base factual ate " + formatAccessDate(DATA.cutoff_date) + " | " + daysWithEntries + " dias com pauta fechada nesta rodada</p></div>",
+      "<div class='brand-deck'><p class='eyebrow'>Noticias a partir dos diarios oficiais</p><p class='meta-line'>Atualizado em " + formatAccessDate(DATA.updated_at) + " | arquivo de " + DATA.year + " aberto por data, municipio, tema e tipo de diario | " + daysWithEntries + " dias com pauta publicada na rodada atual</p></div>",
       "</div>",
-      "<nav class='news-nav'><a href='#capa'>Capa</a><a href='#analise-2026'>Arquivo</a><a href='#editorias'>Editorias</a><a href='#agenda'>Agenda</a><a href='#municipios'>Municipios</a><a href='#atualizacao'>Atualizacao</a><a href='" + searchUrl({ year: String(DATA.year) }) + "'>Busca</a></nav>",
+      "<nav class='news-nav'><a href='#capa'>Capa</a><a href='#agenda'>Seguimentos</a><a href='#editorias'>Editorias</a><a href='#linhas-finas'>Linhas finas</a><a href='#municipios'>Municipios</a><a href='" + searchUrl({ year: String(DATA.year) }) + "'>Busca</a></nav>",
       "<div class='news-tools'>",
       "<a class='top-link' href='" + chronologyUrl() + "'>Cronologia</a>",
-      "<a class='top-link' href='" + searchUrl({ year: String(DATA.year) }) + "'>Buscar arquivo</a>",
+      "<a class='top-link' href='" + searchUrl({ year: String(DATA.year) }) + "'>Buscar pauta</a>",
       textExportLink,
       "<a class='top-link' href='radar-diarios-goias-data.json'>Base</a>",
       remoteLink,
@@ -1639,41 +1759,20 @@
       "</div>",
       "</header>",
       "<main class='wrap front-page'>",
-      renderExpansionPulseSection(),
-      "<section class='hero-news-grid' id='capa'>",
-      "<div class='hero-main-column'>" + renderHeroMain(leadEntry) + "</div>",
-      "<div class='hero-side-column'>" + secondaryEntries.map(renderHeroSecondary).join("") + "</div>",
-      "<aside class='hero-rail' id='agenda'>",
-      "<div class='rail-block'><div class='rail-head'><p class='section-kicker'>Agora</p><h2>Radar do dia</h2></div><ul class='rail-list'>" + nowEntries.map(renderNowItem).join("") + "</ul></div>",
-      "<div class='rail-block'><div class='rail-head'><p class='section-kicker'>Agenda publica</p><h2>O que pede seguimento</h2></div><ul class='rail-list agenda-list'>" + agendaEntries.map(renderAgendaItem).join("") + "</ul></div>",
-      "<div class='rail-block compact-calendar-panel'><div class='rail-head'><p class='section-kicker'>Calendario</p><h2>Abril | base publica atual</h2></div>" + buildMiniCalendar() + "</div>",
-      "</aside>",
-      "</section>",
-      renderAnnualAnalysisSection(),
+      renderPautaBoardSection(ranked),
+      renderPautaAgendaSection(agendaEntries),
       "<section class='news-section' id='editorias'>",
-      "<div class='section-head'><div><p class='section-kicker'>Editorias</p><h2>O mapa do dia por assunto</h2></div><p class='section-intro'>A capa abre pelo peso noticioso. Abaixo, as pautas se reorganizam pela editoria que mais ajuda a leitura jornalistica.</p></div>",
+      "<div class='section-head'><div><p class='section-kicker'>Editorias</p><h2>Pautas separadas por assunto</h2></div><p class='section-intro'>Depois da capa, a rodada se reorganiza pela editoria que ajuda a distribuir cobertura, repasse e apuracao.</p></div>",
       "<div class='editoria-deck'>" + renderEditoriaDeck(ranked) + "</div>",
       "</section>",
+      renderPautaLineSection(ranked),
       "<section class='news-section' id='municipios'>",
-      "<div class='section-head'><div><p class='section-kicker'>Municipios</p><h2>Territorios em foco</h2></div><p class='section-intro'>As frentes abaixo puxam as cidades e orgaos com mais densidade de pauta na rodada aberta.</p></div>",
+      "<div class='section-head'><div><p class='section-kicker'>Municipios</p><h2>Pautas puxadas por territorio</h2></div><p class='section-intro'>As frentes abaixo organizam a rodada por cidade e ajudam a enxergar onde a cobertura precisa abrir mais uma passada.</p></div>",
       "<div class='city-spotlight-grid'>" + renderMunicipalitySpotlight(ranked) + "</div>",
       "</section>",
-      "<section class='news-section'>",
-      "<div class='section-head'><div><p class='section-kicker'>Radar interno</p><h2>Ferramentas da base</h2></div><p class='section-intro'>O jornal abre pela noticia. O restante da base continua acessivel para apuracao, navegacao por data e exportacao leve.</p></div>",
-      "<div class='service-grid'>",
-      "<a class='service-card' href='" + dayUrl("2026-04-08") + "'><strong>Dia com maior carga</strong><span>Abre a rodada de 08/04/2026 com as pautas mais densas da base atual.</span></a>",
-      "<a class='service-card' href='" + chronologyUrl() + "'><strong>Cronologia</strong><span>Enxerga o mes como fluxo, em ordem cronologica crescente.</span></a>",
-      "<a class='service-card' href='" + searchUrl({ year: String(DATA.year) }) + "'><strong>Pesquisa historica</strong><span>Consulta municipio, ano, tipo de diario, escopo e assunto dentro do arquivo.</span></a>",
-      "<a class='service-card' href='" + searchUrl({ family: "Estado de Goias" }) + "'><strong>Varredura DOE</strong><span>Abre a triagem do Diario Oficial do Estado com filtro pronto para atos pesados.</span></a>",
-      "<a class='service-card' href='" + searchUrl({ family: "MPGO" }) + "'><strong>Varredura MPGO</strong><span>Deixa a porta pronta para recomendacoes, inqueritos, TACs e ACPs.</span></a>",
-      "<a class='service-card' href='" + escapeHtml(textExportFile || "#") + "'><strong>Pautas em TXT</strong><span>Leva lead e sublead para uso leve na redacao.</span></a>",
-      (leadEntry ? "<a class='service-card' href='" + workflowUrl(leadEntry) + "'><strong>Mesa hibrida</strong><span>Prepara o pacote do NotebookLM, recebe o retorno manual e fecha o material para o chat.</span></a>" : ""),
-      "<a class='service-card' href='radar-diarios-goias-data.json'><strong>Base documental</strong><span>Abre a base estruturada com os metadados de cada pauta.</span></a>",
-      "</div>",
-      "</section>",
-      renderUpdateCadenceSection(),
+      renderPautaServiceSection(leadEntry, textExportFile),
       "</main>",
-      "<footer class='footer'><div class='wrap'><p class='footer-note'>PAUTEIRO! publica a partir dos diarios oficiais e liga a pauta ao documento original, com marcador e data de acesso. A camada de apoio para GPT e NotebookLM segue disponivel em cada materia.</p></div></footer>"
+      "<footer class='footer'><div class='wrap'><p class='footer-note'>PAUTEIRO! liga cada pauta ao documento original, com marcador, data de acesso, lead, sublead e caminho para apuracao complementar.</p></div></footer>"
     ].join("");
   }
 
