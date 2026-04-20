@@ -296,6 +296,107 @@ img {
   gap: 16px;
 }
 
+.expansion-pulse-section {
+  display: grid;
+  gap: 16px;
+}
+
+.expansion-pulse-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) repeat(3, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.pulse-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.pulse-card-wide {
+  grid-column: span 2;
+}
+
+.pulse-card h2,
+.pulse-card h3 {
+  line-height: 1.06;
+  overflow-wrap: anywhere;
+}
+
+.pulse-card h2 {
+  font-size: clamp(28px, 3.4vw, 40px);
+}
+
+.pulse-card h3 {
+  font-size: 22px;
+}
+
+.pulse-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.front-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.front-item {
+  border: 1px solid rgba(23, 23, 20, 0.08);
+  border-radius: 6px;
+  background: var(--surface-soft);
+  padding: 12px;
+  display: grid;
+  gap: 4px;
+}
+
+.front-item strong {
+  font-size: 14px;
+}
+
+.front-item span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.front-item.is-priority {
+  border-color: rgba(185, 83, 55, 0.24);
+  background: rgba(185, 83, 55, 0.08);
+}
+
+.front-item.is-open {
+  border-color: rgba(166, 121, 28, 0.2);
+  background: rgba(166, 121, 28, 0.08);
+}
+
+.alert-term-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.alert-term-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(13, 117, 109, 0.18);
+  background: rgba(13, 117, 109, 0.08);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+}
+
 .year-analysis-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1788,6 +1889,7 @@ ol {
   .news-header-inner,
   .masthead,
   .newsdesk-grid,
+  .expansion-pulse-grid,
   .hero-news-grid,
   .top-grid,
   .page-header,
@@ -1811,6 +1913,10 @@ ol {
   .flow-grid,
   .year-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pulse-card-wide {
+    grid-column: auto;
   }
 
   .timeline-date {
@@ -1859,6 +1965,7 @@ ol {
   }
 
   .stats,
+  .expansion-pulse-grid,
   .editoria-deck,
   .city-spotlight-grid,
   .service-grid,
