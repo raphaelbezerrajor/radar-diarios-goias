@@ -4,8 +4,8 @@ window.RADAR_GO_DATA = {
   site_slug: "pauteiro",
   year: 2026,
   month: "2026-04",
-  updated_at: "2026-04-18",
-  accessed_at: "2026-04-18",
+  updated_at: "2026-04-20",
+  accessed_at: "2026-04-20",
   cutoff_date: "2026-04-18",
   archive_years: [
     { year: 2024, status: "open", note: "prioridade historica para TJGO, MPGO e municipios" },
@@ -45,6 +45,38 @@ window.RADAR_GO_DATA = {
       title: "Livro de pautas",
       body: "Cada achado sai com linha fina, lead, editoria, cidade, documento original, marcador e data de acesso."
     }
+  ],
+  expansion_queue: [
+    {
+      front: "DOE / ABC",
+      status: "priority",
+      note: "notificacoes, ressarcimento, dano ao erario, contratos e atos da SES"
+    },
+    {
+      front: "MPGO",
+      status: "priority",
+      note: "inqueritos, recomendacoes, TACs, ACPs e arquivamentos relevantes"
+    },
+    {
+      front: "TJGO",
+      status: "priority",
+      note: "liminares, colegiados, bloqueios, custodia e decisoes com impacto publico"
+    },
+    {
+      front: "Municipios",
+      status: "open",
+      note: "todos os 246 municipios goianos, com diarios proprios e AGM"
+    }
+  ],
+  alert_terms: [
+    "notificacao extrajudicial",
+    "devolucao",
+    "ressarcimento",
+    "dano ao erario",
+    "tomada de contas especial",
+    "descumprimento contratual",
+    "nao cumprimento de metas",
+    "servicos nao implantados"
   ],
   year_months: [
     { label: "Jan", month: "2026-01", status: "open", note: "estrutura pronta" },
@@ -86,6 +118,10 @@ window.RADAR_GO_DATA = {
       url: "https://www.rioverde.go.gov.br/"
     },
     {
+      label: "Diario Oficial do Estado de Goias | ABC",
+      url: "https://diariooficial.abc.go.gov.br/"
+    },
+    {
       label: "Secretaria de Estado da Saude de Goias",
       url: "https://goias.gov.br/saude/"
     },
@@ -100,6 +136,10 @@ window.RADAR_GO_DATA = {
     {
       label: "TJGO | Agencia de Noticias",
       url: "https://www.tjgo.jus.br/index.php/agencia-de-noticias"
+    },
+    {
+      label: "MPGO | Diario Oficial do Ministerio Publico",
+      url: "https://www.mpgo.mp.br/portal/domp"
     }
   ],
   entries: [

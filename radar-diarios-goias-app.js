@@ -896,6 +896,87 @@
     ].join("");
   }
 
+  function renderExpansionQueue() {
+    var queue = DATA.expansion_queue || [];
+    if (!queue.length) return "";
+
+    return [
+      "<ul class='front-list'>",
+      queue.map(function (item) {
+        return [
+          "<li class='front-item is-" + escapeHtml(item.status || "open") + "'>",
+          "<strong>" + escapeHtml(item.front) + "</strong>",
+          "<span>" + escapeHtml(item.note || "frente aberta") + "</span>",
+          "</li>"
+        ].join("");
+      }).join(""),
+      "</ul>"
+    ].join("");
+  }
+
+  function renderAlertTerms() {
+    var terms = DATA.alert_terms || [];
+    if (!terms.length) return "";
+
+    return [
+      "<div class='alert-term-grid'>",
+      terms.slice(0, 8).map(function (term) {
+        return "<span class='alert-term-chip'>" + escapeHtml(term) + "</span>";
+      }).join(""),
+      "</div>"
+    ].join("");
+  }
+
+  function renderExpansionPulseSection() {
+    var coverageGoal = DATA.coverage_goal || {};
+    var priorityFronts = (coverageGoal.priority_fronts || []).slice(0, 4);
+
+    return [
+      "<section class='expansion-pulse-section' id='expansao'>",
+      "<div class='expansion-pulse-grid'>",
+      "<article class='pulse-card pulse-card-wide'>",
+      "<p class='section-kicker'>Base em expansao</p>",
+      "<h2>O arquivo deixou de ser so abril</h2>",
+      "<p class='muted'>A estrutura agora assume 2024, 2025 e 2026 como serie editorial. A carga factual publica ainda esta concentrada em abril de 2026, mas DOE, MPGO, TJGO e municipios entraram como frentes criticas permanentes.</p>",
+      "<div class='metrics-grid'>" +
+        metricCard("Atualizado", formatAccessDate(DATA.updated_at)) +
+        metricCard("Base factual", formatAccessDate(DATA.cutoff_date)) +
+        metricCard("Fontes", DATA.sources.length) +
+        metricCard("Municipios alvo", coverageGoal.municipalities_total || "n/a") +
+        metricCard("Unidades avaliadas", DATA.evaluated_units || "n/a") +
+        metricCard("Pautas atuais", entries.length) +
+      "</div>",
+      "<div class='pulse-actions'>",
+      "<a class='nav-pill' href='" + searchUrl({ year: "2026" }) + "'>Buscar 2026</a>",
+      "<a class='nav-pill' href='" + searchUrl({ year: "2025" }) + "'>Abrir 2025</a>",
+      "<a class='nav-pill' href='" + searchUrl({ family: "Estado de Goias" }) + "'>Varredura DOE</a>",
+      "<a class='nav-pill' href='" + searchUrl({ family: "MPGO" }) + "'>Varredura MPGO</a>",
+      "<a class='nav-pill' href='" + searchUrl({ family: "TJGO" }) + "'>Varredura TJGO</a>",
+      "</div>",
+      "</article>",
+      "<article class='pulse-card'>",
+      "<p class='section-kicker'>Arquivos abertos</p>",
+      "<h3>Camadas do acervo</h3>",
+      "<p class='panel-note'>O site precisava mostrar que a casa esta montada para serie historica, nao apenas para a rodada do mes.</p>",
+      renderArchiveYearBoard(),
+      "</article>",
+      "<article class='pulse-card'>",
+      "<p class='section-kicker'>Frentes imediatas</p>",
+      "<h3>Onde a captura ainda precisa crescer</h3>",
+      renderExpansionQueue(),
+      "</article>",
+      "<article class='pulse-card'>",
+      "<p class='section-kicker'>Fator-noticia</p>",
+      "<h3>Atos que precisam disparar alerta</h3>",
+      "<p class='panel-note'>Esses termos agora aparecem como sinais vermelhos para nao deixar passar cobranca, dano ao erario, glosa ou responsabilizacao enterrada no diario.</p>",
+      renderAlertTerms(),
+      (priorityFronts.length ? "<p class='panel-note'><strong>Prioridades editoriais:</strong> " + escapeHtml(priorityFronts.join(" | ")) + "</p>" : ""),
+      "</article>",
+      "</div>",
+      "</section>"
+    ].join("");
+  }
+
   function groupCount(field) {
     return entries.reduce(function (acc, entry) {
       acc[entry[field]] = (acc[entry[field]] || 0) + 1;
@@ -1545,7 +1626,7 @@
       "<div class='wrap news-header-inner'>",
       "<div class='news-branding'>",
       "<a class='brand-name' href='" + MONTH_PAGE + "'>PAUTEIRO!</a>",
-      "<div class='brand-deck'><p class='eyebrow'>Noticias a partir dos diarios oficiais</p><p class='meta-line'>Edicao de " + formatAccessDate(DATA.updated_at) + " | " + daysWithEntries + " dias com pauta fechada nesta rodada</p></div>",
+      "<div class='brand-deck'><p class='eyebrow'>Noticias a partir dos diarios oficiais</p><p class='meta-line'>Site atualizado em " + formatAccessDate(DATA.updated_at) + " | base factual ate " + formatAccessDate(DATA.cutoff_date) + " | " + daysWithEntries + " dias com pauta fechada nesta rodada</p></div>",
       "</div>",
       "<nav class='news-nav'><a href='#capa'>Capa</a><a href='#analise-2026'>Arquivo</a><a href='#editorias'>Editorias</a><a href='#agenda'>Agenda</a><a href='#municipios'>Municipios</a><a href='#atualizacao'>Atualizacao</a><a href='" + searchUrl({ year: String(DATA.year) }) + "'>Busca</a></nav>",
       "<div class='news-tools'>",
@@ -1558,13 +1639,14 @@
       "</div>",
       "</header>",
       "<main class='wrap front-page'>",
+      renderExpansionPulseSection(),
       "<section class='hero-news-grid' id='capa'>",
       "<div class='hero-main-column'>" + renderHeroMain(leadEntry) + "</div>",
       "<div class='hero-side-column'>" + secondaryEntries.map(renderHeroSecondary).join("") + "</div>",
       "<aside class='hero-rail' id='agenda'>",
       "<div class='rail-block'><div class='rail-head'><p class='section-kicker'>Agora</p><h2>Radar do dia</h2></div><ul class='rail-list'>" + nowEntries.map(renderNowItem).join("") + "</ul></div>",
       "<div class='rail-block'><div class='rail-head'><p class='section-kicker'>Agenda publica</p><h2>O que pede seguimento</h2></div><ul class='rail-list agenda-list'>" + agendaEntries.map(renderAgendaItem).join("") + "</ul></div>",
-      "<div class='rail-block compact-calendar-panel'><div class='rail-head'><p class='section-kicker'>Calendario</p><h2>Abril de 2026</h2></div>" + buildMiniCalendar() + "</div>",
+      "<div class='rail-block compact-calendar-panel'><div class='rail-head'><p class='section-kicker'>Calendario</p><h2>Abril | base publica atual</h2></div>" + buildMiniCalendar() + "</div>",
       "</aside>",
       "</section>",
       renderAnnualAnalysisSection(),
@@ -1582,6 +1664,8 @@
       "<a class='service-card' href='" + dayUrl("2026-04-08") + "'><strong>Dia com maior carga</strong><span>Abre a rodada de 08/04/2026 com as pautas mais densas da base atual.</span></a>",
       "<a class='service-card' href='" + chronologyUrl() + "'><strong>Cronologia</strong><span>Enxerga o mes como fluxo, em ordem cronologica crescente.</span></a>",
       "<a class='service-card' href='" + searchUrl({ year: String(DATA.year) }) + "'><strong>Pesquisa historica</strong><span>Consulta municipio, ano, tipo de diario, escopo e assunto dentro do arquivo.</span></a>",
+      "<a class='service-card' href='" + searchUrl({ family: "Estado de Goias" }) + "'><strong>Varredura DOE</strong><span>Abre a triagem do Diario Oficial do Estado com filtro pronto para atos pesados.</span></a>",
+      "<a class='service-card' href='" + searchUrl({ family: "MPGO" }) + "'><strong>Varredura MPGO</strong><span>Deixa a porta pronta para recomendacoes, inqueritos, TACs e ACPs.</span></a>",
       "<a class='service-card' href='" + escapeHtml(textExportFile || "#") + "'><strong>Pautas em TXT</strong><span>Leva lead e sublead para uso leve na redacao.</span></a>",
       (leadEntry ? "<a class='service-card' href='" + workflowUrl(leadEntry) + "'><strong>Mesa hibrida</strong><span>Prepara o pacote do NotebookLM, recebe o retorno manual e fecha o material para o chat.</span></a>" : ""),
       "<a class='service-card' href='radar-diarios-goias-data.json'><strong>Base documental</strong><span>Abre a base estruturada com os metadados de cada pauta.</span></a>",
