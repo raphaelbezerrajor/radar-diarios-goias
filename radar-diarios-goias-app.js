@@ -1,5 +1,6 @@
 (function () {
   var DATA = window.RADAR_GO_DATA;
+  var COVERAGE = window.PAUTEIRO_COVERAGE || {};
   var root = document.getElementById("app");
 
   if (!DATA || !root) {
@@ -179,6 +180,14 @@
 
     if (label.indexOf("aparecida de goiania") >= 0 || city === "aparecida de goiania") {
       return "Aparecida de Goiania";
+    }
+
+    if (label.indexOf("senador canedo") >= 0 || city === "senador canedo") {
+      return "Senador Canedo";
+    }
+
+    if (label.indexOf("anapolis") >= 0 || city === "anapolis") {
+      return "Anapolis";
     }
 
     if (label.indexOf("goiania") >= 0 || city === "goiania") {
@@ -745,6 +754,39 @@
     return found || null;
   }
 
+  function coverageSummary() {
+    return COVERAGE.summary || {};
+  }
+
+  function coverageMunicipalities() {
+    return COVERAGE.municipality_catalog || [];
+  }
+
+  function municipalityCoverageMeta(city) {
+    var target = normalizeSearchText(city || "");
+    if (!target) return null;
+    return coverageMunicipalities().find(function (item) {
+      return normalizeSearchText(item.name) === target;
+    }) || null;
+  }
+
+  function cityOptions() {
+    var seen = {};
+    return coverageMunicipalities().map(function (item) {
+      return item.name;
+    }).concat(entries.map(function (entry) {
+      return entry.city;
+    }))
+      .filter(function (value) {
+        if (!value) return false;
+        var key = normalizeSearchText(value);
+        if (seen[key]) return false;
+        seen[key] = true;
+        return true;
+      })
+      .sort(function (a, b) { return a.localeCompare(b); });
+  }
+
   function sourceFamilyOptions() {
     var seen = {};
     var seed = [
@@ -753,11 +795,13 @@
       "Estado de Goias",
       "AGM / Municipios",
       "Municipios",
+      "Anapolis",
       "Goiania",
-      "Aparecida de Goiania"
+      "Aparecida de Goiania",
+      "Senador Canedo"
     ];
 
-    return seed.concat(entries.map(sourceFamily))
+    return seed.concat((COVERAGE.diary_families || []).map(function (item) { return item.label; })).concat(entries.map(sourceFamily))
       .filter(function (value) {
         if (!value) return false;
         if (seen[value]) return false;
@@ -815,7 +859,7 @@
       .map(function (entry) {
         if (filters.year && entryYear(entry) !== filters.year) return null;
         if (filters.family && sourceFamily(entry) !== filters.family) return null;
-        if (filters.city && entry.city !== filters.city) return null;
+        if (filters.city && normalizeSearchText(entry.city) !== normalizeSearchText(filters.city)) return null;
         if (filters.editoria && entry.editoria !== filters.editoria) return null;
         if (filters.scope && entry.scope !== filters.scope) return null;
         if (filters.from && entry.date < filters.from) return null;
@@ -1268,10 +1312,12 @@
     ].join("");
   }
 
-  function renderSearchResultsDeck(results, filters, selectedYearMeta) {
+  function renderSearchResultsDeck(results, filters, selectedYearMeta, selectedCityMeta) {
     if (!results.length) {
       var emptyCopy = selectedYearMeta && filters.year && selectedYearMeta.status !== "active"
         ? "O ano de " + filters.year + " esta aberto como arquivo consultavel, mas a camada analitica ainda nao foi fechada nesta versao publica. Quando o recorte desse ano entrar na base, ele aparecera aqui com o mesmo fluxo de pauta, marcador e documento original."
+        : selectedCityMeta
+        ? selectedCityMeta.name + " ja esta mapeado na cobertura, com rota de diario em " + selectedCityMeta.diary_family + ". Neste recorte, ainda nao ha entradas carregadas para a base publica."
         : "Tente abrir mais o periodo, tirar um filtro ou trocar o assunto por termos como edital, contrato, nomeacao, saude ou justica.";
       return "<div class='empty-state'><h3>Nenhuma pauta localizada</h3><p class='empty-copy'>" + escapeHtml(emptyCopy) + "</p></div>";
     }
@@ -1290,9 +1336,11 @@
     var filters = currentSearchFilters();
     var results = searchEntries(filters);
     var selectedYearMeta = archiveYearMeta(filters.year);
+    var selectedCityMeta = municipalityCoverageMeta(filters.city);
+    var mappedCoverage = coverageSummary();
     var years = archiveYearOptions();
     var families = sourceFamilyOptions();
-    var cities = uniqueFieldValues("city");
+    var cities = cityOptions();
     var editorias = uniqueFieldValues("editoria");
     var scopes = uniqueFieldValues("scope");
     var activeFilterCount = [filters.q, filters.year, filters.family, filters.city, filters.editoria, filters.scope, filters.from, filters.to].filter(Boolean).length;
@@ -1306,7 +1354,9 @@
     });
     var firstDate = results.length ? results[results.length - 1].entry.date : "";
     var lastDate = results.length ? results[0].entry.date : "";
-    var queryIntro = selectedYearMeta && filters.year && selectedYearMeta.status !== "active"
+    var queryIntro = selectedCityMeta && filters.city
+      ? "A busca por " + selectedCityMeta.name + " usa a rota documental mapeada em " + selectedCityMeta.diary_family + ". Hoje, esse municipio tem " + (filters.year === "2025" ? selectedCityMeta.loaded_entries_2025 : filters.year === "2026" ? selectedCityMeta.loaded_entries_2026 : selectedCityMeta.loaded_entries_total) + " entrada(s) carregada(s) no recorte filtrado por ano."
+      : selectedYearMeta && filters.year && selectedYearMeta.status !== "active"
       ? "O arquivo de " + filters.year + " entra como recorte consultavel. Nesse ano, a camada de analise editorial ainda esta pendente em parte da serie, entao a busca precisa priorizar documento, marcador e leitura direta da fonte."
       : activeFilterCount
       ? "A busca cruza municipio, ano, familia de fonte, periodo e assunto sobre o arquivo do PAUTEIRO!. Hoje, o preenchimento factual publico vai ate " + formatAccessDate(DATA.cutoff_date) + "."
@@ -1370,11 +1420,15 @@
       "</section>",
       renderSearchOrganizer(results, filters),
       "<section class='search-results-stack'>",
-      renderSearchResultsDeck(results, filters, selectedYearMeta),
+      renderSearchResultsDeck(results, filters, selectedYearMeta, selectedCityMeta),
       "</section>",
       "</div>",
       "<aside class='note-stack'>",
       "<div class='sidebar-card'><h3>Arquivo historico</h3><p class='panel-note'>O PAUTEIRO! entra em modo de expansao para 2024, 2025 e 2026, com busca unica por toda a serie.</p>" + renderArchiveYearBoard() + "</div>",
+      "<div class='sidebar-card'><h3>Cobertura municipal</h3><div class='panel-item'><span>Municipios mapeados</span><strong>" + escapeHtml(String(mappedCoverage.municipalities_total || 0)) + "</strong></div><div class='panel-item'><span>Diarios proprios confirmados</span><strong>" + escapeHtml(String(mappedCoverage.own_diary_confirmed || 0)) + "</strong></div><div class='panel-item'><span>Rota AGM</span><strong>" + escapeHtml(String(mappedCoverage.agm_default || 0)) + "</strong></div><div class='panel-item'><span>Carga 2026</span><strong>" + escapeHtml(String(mappedCoverage.loaded_municipalities_2026 || 0)) + " municipios</strong></div><p class='panel-note'>A cobertura agora parte de um catalogo com os 246 municipios goianos e separa a rota entre diario proprio confirmado e AGM padrao.</p></div>",
+      (selectedCityMeta
+        ? "<div class='sidebar-card'><h3>Rota de " + escapeHtml(selectedCityMeta.name) + "</h3><div class='panel-item'><span>Diario-base</span><strong>" + escapeHtml(selectedCityMeta.diary_family) + "</strong></div><div class='panel-item'><span>Carga 2025</span><strong>" + escapeHtml(String(selectedCityMeta.loaded_entries_2025 || 0)) + "</strong></div><div class='panel-item'><span>Carga 2026</span><strong>" + escapeHtml(String(selectedCityMeta.loaded_entries_2026 || 0)) + "</strong></div><p class='panel-note'>" + escapeHtml(selectedCityMeta.note || "municipio mapeado na cobertura") + "</p></div>"
+        : ""),
       (selectedYearMeta
         ? "<div class='sidebar-card'><h3>Status de " + escapeHtml(String(selectedYearMeta.year)) + "</h3><p class='panel-note'>" + escapeHtml(selectedYearMeta.note || "arquivo em preparacao") + ".</p><p class='muted'>A navegacao por ano continua funcionando; quando a camada analitica nao estiver fechada, a pesquisa se apoia no documento original, no marcador e na triagem por assunto.</p></div>"
         : ""),
