@@ -1,0 +1,52 @@
+{
+  "year": 2026,
+  "source_id": "municipios",
+  "label": "Municipios / AGM e diarios proprios",
+  "status": "active",
+  "analysis_status": "partial",
+  "entry_count": 8,
+  "loaded_months": ["2026-04"],
+  "official_url": "https://www.diariomunicipal.com.br/agm/",
+  "analysis_focus": "licitacoes, contratos, editais, nomeacoes, leis, gastos, shows, saude, educacao e urbanismo",
+  "material_types": "AGM, diarios municipais proprios, atos locais, extratos, leis e decretos",
+  "covered_cities": ["Senador Canedo", "Itaucu", "Rio Verde", "Aparecida de Goiania", "Anapolis"],
+  "main_editorias": ["Eventos e gasto publico", "Saude", "Habitacao", "Urbanismo e manutencao"],
+  "top_tags": ["Inexigibilidade", "Dispensa emergencial", "Programa habitacional", "Pregao / ARP", "Lei"],
+  "note": "a frente municipal ja mostra volume em cidades-chave e evidencia que licitacoes, saude e gasto com eventos puxam o fator-noticia",
+  "next_step": "expandir a ingestao para mais municipios e completar 2025 por rota AGM ou diario proprio",
+  "highlight_entries": [
+    {
+      "date": "2026-04-13",
+      "city": "Rio Verde",
+      "editoria": "Habitacao",
+      "tag": "Programa habitacional",
+      "title": "Rio Verde entra na segunda etapa do Minha Casa, Minha Vida com 432 moradias",
+      "line": "Volume, urbanismo e entrega federal puxam a manchete quase sozinhos.",
+      "source_label": "Prefeitura de Rio Verde",
+      "source_url": "https://www.rioverde.go.gov.br/rio-verde-e-a-primeira-cidade-de-goias-contemplada-na-2a-etapa-do-programa-habitacional-far-em-parceria-com-o-governo-federal/",
+      "source_note": "Publicado em 13/04/2026."
+    },
+    {
+      "date": "2026-04-08",
+      "city": "Senador Canedo",
+      "editoria": "Saude",
+      "tag": "Dispensa emergencial",
+      "title": "Senador Canedo abre dispensa emergencial de R$ 633 mil para insulina e insumos de diabetes",
+      "line": "Compra critica em saude basica tem potencial claro de manchete e cobranca.",
+      "source_label": "Diario Oficial de Senador Canedo",
+      "source_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/diario?d=08-04-2026",
+      "source_note": "Edicao 383, publicada em 08/04/2026."
+    },
+    {
+      "date": "2026-04-08",
+      "city": "Senador Canedo",
+      "editoria": "Eventos e gasto publico",
+      "tag": "Inexigibilidade",
+      "title": "Senador Canedo contrata show do cantor Daniel por R$ 700 mil para o Rodeio Show",
+      "line": "Evento puxado por artista nacional eleva o fator noticia da rodada.",
+      "source_label": "Diario Oficial de Senador Canedo",
+      "source_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/diario?d=08-04-2026",
+      "source_note": "Edicao 383, publicada em 08/04/2026."
+    }
+  ]
+}

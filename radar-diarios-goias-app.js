@@ -146,6 +146,17 @@
     return MONTH_PAGE + "?" + params.toString();
   }
 
+  function analysisUrl(filters) {
+    var params = new URLSearchParams();
+    params.set("view", "analysis");
+    Object.keys(filters || {}).forEach(function (key) {
+      if (filters[key]) {
+        params.set(key, filters[key]);
+      }
+    });
+    return MONTH_PAGE + "?" + params.toString();
+  }
+
   function entryCount(dateValue) {
     return grouped[dateValue] ? grouped[dateValue].length : 0;
   }
@@ -729,16 +740,54 @@
     ].join("");
   }
 
+  function renderCurrentFlow() {
+    var stack = DATA.analysis_stack || [];
+    if (!stack.length) return "";
+    return [
+      "<div class='sidebar-card'>",
+      "<h3>Fluxo agora</h3>",
+      "<ol class='ingestion-list'>",
+      stack.map(function (item) {
+        return "<li><strong>" + escapeHtml(item.title || "") + "</strong><span>" + escapeHtml(item.body || "") + "</span></li>";
+      }).join(""),
+      "</ol>",
+      "</div>"
+    ].join("");
+  }
+
+  function sourceStatusLabel(status) {
+    var labels = {
+      active: "ativo",
+      ready: "pronto",
+      paused: "pausado",
+      mapped: "mapeado"
+    };
+    return labels[status] || status || "mapeado";
+  }
+
+  function analysisStatusLabel(status) {
+    var labels = {
+      partial: "analise parcial",
+      pending: "analise pendente",
+      paused: "analise pausada",
+      ready: "pronto para leitura"
+    };
+    return labels[status] || status || "analise pendente";
+  }
+
+  function renderSourceStatusPill(status) {
+    return "<span class='source-status source-status-" + escapeHtml(status || "mapped") + "'>" + escapeHtml(sourceStatusLabel(status)) + "</span>";
+  }
+
+  function describeLoadedMonths(months) {
+    var list = months || [];
+    if (!list.length) return "sem mes carregado";
+    return list.join(", ");
+  }
+
   function renderYearSourceStatus(year) {
     var bucket = archiveYearBucket(year);
     if (!bucket || !bucket.sources) return "";
-    var labels = {
-      goiania: "Goiania / Sileg",
-      estado: "Estado / DOE",
-      mpgo: "MPGO",
-      municipios: "Municipios",
-      tjgo: "TJGO"
-    };
     var order = ["goiania", "estado", "mpgo", "municipios", "tjgo"];
     return [
       "<div class='sidebar-card'>",
@@ -747,7 +796,27 @@
       order.map(function (key) {
         var item = bucket.sources[key];
         if (!item) return "";
-        return "<li><div class='panel-item'><span>" + escapeHtml(labels[key] || key) + "</span><strong>" + escapeHtml(item.status || "mapped") + "</strong></div><p class='panel-note'>" + escapeHtml(String(item.entry_count || 0)) + " entrada(s) carregada(s)</p></li>";
+        var meta = ((ARCHIVE.source_library || {})[key]) || {};
+        var label = item.label || meta.label || key;
+        var links = [];
+        if (item.official_url || meta.official_url) {
+          links.push("<a class='assistant-link' target='_blank' rel='noreferrer' href='" + escapeHtml(item.official_url || meta.official_url) + "'>Fonte oficial</a>");
+        }
+        if (item.manifest) {
+          links.push("<a class='assistant-link' target='_blank' rel='noreferrer' href='" + escapeHtml(item.manifest) + "'>Arquivo da fonte</a>");
+        }
+        return [
+          "<li>",
+          "<div class='panel-item'><span>" + escapeHtml(label) + "</span>" + renderSourceStatusPill(item.status) + "</div>",
+          "<p class='panel-note'><strong>" + escapeHtml(String(item.entry_count || 0)) + "</strong> entrada(s) | " + escapeHtml(describeLoadedMonths(item.loaded_months)) + "</p>",
+          "<p class='panel-note'>Analise: " + escapeHtml(analysisStatusLabel(item.analysis_status)) + "</p>",
+          ((item.analysis_focus || meta.analysis_focus) ? "<p class='panel-note'>Foco: " + escapeHtml(item.analysis_focus || meta.analysis_focus) + "</p>" : ""),
+          ((item.material_types || meta.material_types) ? "<p class='panel-note'>Material: " + escapeHtml(item.material_types || meta.material_types) + "</p>" : ""),
+          (item.note ? "<p class='panel-note'>" + escapeHtml(item.note) + "</p>" : ""),
+          ((item.next_step || meta.next_step) ? "<p class='panel-note'><strong>Proximo passo:</strong> " + escapeHtml(item.next_step || meta.next_step) + "</p>" : ""),
+          (links.length ? "<div class='source-links'>" + links.join("") + "</div>" : ""),
+          "</li>"
+        ].join("");
       }).join(""),
       "</ul>",
       "</div>"
@@ -1223,6 +1292,7 @@
         metricCard("Pautas atuais", entries.length) +
       "</div>",
       "<div class='pulse-actions'>",
+      "<a class='nav-pill' href='" + analysisUrl({ year: "2026" }) + "'>Analise editorial</a>",
       "<a class='nav-pill' href='" + searchUrl({ year: "2026" }) + "'>Buscar 2026</a>",
       "<a class='nav-pill' href='" + searchUrl({ year: "2025" }) + "'>Abrir 2025</a>",
       "<a class='nav-pill' href='" + searchUrl({ family: "Estado de Goias" }) + "'>Varredura DOE</a>",
@@ -1470,6 +1540,239 @@
     ].join("");
   }
 
+  function monthBucket(entry) {
+    return String((entry && entry.date) || "").slice(0, 7);
+  }
+
+  function formatMonthBucket(value) {
+    var parts = String(value || "").split("-");
+    if (parts.length !== 2) return value || "";
+    var year = parts[0];
+    var monthIndex = Number(parts[1]) - 1;
+    if (isNaN(monthIndex) || monthIndex < 0 || monthIndex > 11) return value || "";
+    return capitalize(monthName(monthIndex)) + " de " + year;
+  }
+
+  function newsPotentialScore(entry) {
+    var signal = pautaSignal(entry);
+    if (signal === "Pauta critica") return 4;
+    if (signal === "Pauta quente") return 3;
+    if (signal === "Seguimento") return 2;
+    return 1;
+  }
+
+  function summarizeAnalysisGroups(results, labelFn, options) {
+    var settings = options || {};
+    var map = {};
+    results.forEach(function (result) {
+      var entry = result.entry;
+      var rawLabel = labelFn(entry);
+      if (!rawLabel) return;
+      var label = String(rawLabel);
+      if (!map[label]) {
+        map[label] = {
+          raw: label,
+          label: (settings.displayLabel ? settings.displayLabel(label) : label),
+          count: 0,
+          totalScore: 0,
+          critical: 0,
+          hot: 0,
+          followUp: 0,
+          open: 0,
+          sample: entry,
+          sampleWeight: -1
+        };
+      }
+      var group = map[label];
+      var signal = pautaSignal(entry);
+      var weight = newsPotentialScore(entry);
+      group.count += 1;
+      group.totalScore += weight;
+      if (signal === "Pauta critica") group.critical += 1;
+      else if (signal === "Pauta quente") group.hot += 1;
+      else if (signal === "Seguimento") group.followUp += 1;
+      else group.open += 1;
+
+      if (
+        weight > group.sampleWeight ||
+        (weight === group.sampleWeight && (entry.highlight_score || 0) > (group.sample.highlight_score || 0))
+      ) {
+        group.sample = entry;
+        group.sampleWeight = weight;
+      }
+    });
+
+    return Object.keys(map)
+      .map(function (key) {
+        var item = map[key];
+        item.average = (item.totalScore / item.count).toFixed(1);
+        return item;
+      })
+      .sort(function (a, b) {
+        if (b.critical !== a.critical) return b.critical - a.critical;
+        if (Number(b.average) !== Number(a.average)) return Number(b.average) - Number(a.average);
+        if (b.count !== a.count) return b.count - a.count;
+        return a.label.localeCompare(b.label);
+      })
+      .slice(0, settings.limit || 8);
+  }
+
+  function distinctAnalysisGroupCount(results, labelFn) {
+    var seen = {};
+    results.forEach(function (result) {
+      var label = labelFn(result.entry);
+      if (!label) return;
+      seen[String(label)] = true;
+    });
+    return Object.keys(seen).length;
+  }
+
+  function analysisFilterUrl(fieldName, item, filters) {
+    if (fieldName === "month") {
+      var parts = String(item.raw || "").split("-");
+      if (parts.length === 2) {
+        var year = Number(parts[0]);
+        var month = Number(parts[1]);
+        var lastDay = new Date(year, month, 0).getDate();
+        return analysisUrl(mergeSearchFilters(filters, {
+          year: parts[0],
+          from: parts[0] + "-" + parts[1] + "-01",
+          to: parts[0] + "-" + parts[1] + "-" + String(lastDay).padStart(2, "0")
+        }));
+      }
+    }
+
+    var next = {};
+    next[fieldName] = item.raw;
+    return analysisUrl(mergeSearchFilters(filters, next));
+  }
+
+  function renderAnalysisGroupCard(title, intro, items, filters, fieldName) {
+    return [
+      "<article class='search-cluster-card'>",
+      "<p class='section-kicker'>" + escapeHtml(title) + "</p>",
+      "<p class='search-cluster-intro'>" + escapeHtml(intro) + "</p>",
+      (items.length
+        ? "<ul class='search-cluster-list'>" + items.map(function (item) {
+            return [
+              "<li>",
+              "<a href='" + analysisFilterUrl(fieldName, item, filters) + "'>",
+              "<div class='search-cluster-top'><strong>" + escapeHtml(item.label) + "</strong><span>" + item.count + " pauta(s)</span></div>",
+              "<p>Potencial medio " + escapeHtml(item.average) + " | criticas " + item.critical + " | quentes " + item.hot + " | seguimentos " + item.followUp + "</p>",
+              "<small>Abre com: " + escapeHtml(item.sample.title) + "</small>",
+              "</a>",
+              "</li>"
+            ].join("");
+          }).join("") + "</ul>"
+        : "<p class='panel-note'>Nenhum agrupamento relevante neste recorte.</p>"),
+      "</article>"
+    ].join("");
+  }
+
+  function renderAnalysisView() {
+    var filters = currentSearchFilters();
+    var results = searchResults(filters);
+    var selectedYearMeta = filters.year ? archiveYearMeta(filters.year) : null;
+    var selectedCityMeta = filters.city ? municipalityCoverageMeta(filters.city) : null;
+    var sorted = results.slice().sort(function (a, b) {
+      var aScore = newsPotentialScore(a.entry);
+      var bScore = newsPotentialScore(b.entry);
+      if (bScore !== aScore) return bScore - aScore;
+      if ((b.entry.highlight_score || 0) !== (a.entry.highlight_score || 0)) return (b.entry.highlight_score || 0) - (a.entry.highlight_score || 0);
+      if (b.entry.date !== a.entry.date) return b.entry.date.localeCompare(a.entry.date);
+      return a.entry.title.localeCompare(b.entry.title);
+    });
+    var monthGroups = summarizeAnalysisGroups(sorted, monthBucket, { displayLabel: formatMonthBucket, limit: 6 });
+    var cityGroups = summarizeAnalysisGroups(sorted, function (entry) { return entry.city; }, { limit: 8 });
+    var editoriaGroups = summarizeAnalysisGroups(sorted, function (entry) { return entry.editoria; }, { limit: 8 });
+    var sourceGroups = summarizeAnalysisGroups(sorted, function (entry) { return sourceFamily(entry); }, { limit: 8 });
+    var monthCount = distinctAnalysisGroupCount(sorted, monthBucket);
+    var cityCount = distinctAnalysisGroupCount(sorted, function (entry) { return entry.city; });
+    var editoriaCount = distinctAnalysisGroupCount(sorted, function (entry) { return entry.editoria; });
+    var sourceCount = distinctAnalysisGroupCount(sorted, function (entry) { return sourceFamily(entry); });
+    var critical = 0;
+    var hot = 0;
+    var followUp = 0;
+    var open = 0;
+
+    sorted.forEach(function (result) {
+      var signal = pautaSignal(result.entry);
+      if (signal === "Pauta critica") critical += 1;
+      else if (signal === "Pauta quente") hot += 1;
+      else if (signal === "Seguimento") followUp += 1;
+      else open += 1;
+    });
+
+    var intro = filters.year
+      ? "A leitura editorial de " + filters.year + " organiza o material carregado por potencial de noticia e ajuda a mesa a enxergar onde o volume esta concentrado."
+      : "Essa camada organiza o acervo carregado por potencial de noticia, sem perder o recorte por mes, cidade, editoria e familia documental.";
+
+    document.title = DATA.site_title + " | Analise";
+    root.className = "wrap page-shell";
+    root.innerHTML = [
+      "<header class='page-header'>",
+      "<div>",
+      "<p class='eyebrow'>PAUTEIRO! | Analise editorial</p>",
+      "<h1 class='page-title'>O que pede manchete, seguimento e segunda busca</h1>",
+      "<p class='intro'>" + escapeHtml(intro) + "</p>",
+      "<div class='nav-row'>",
+      "<a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar a capa</a>",
+      "<a class='nav-pill' href='" + searchUrl(filters) + "'>Abrir busca</a>",
+      "<a class='nav-pill' href='" + analysisUrl(mergeSearchFilters(filters, { year: "2026", from: "", to: "" })) + "'>Analise 2026</a>",
+      "<a class='nav-pill' href='" + analysisUrl(mergeSearchFilters(filters, { year: "2025", from: "", to: "" })) + "'>Analise 2025</a>",
+      "</div>",
+      "</div>",
+      "<aside class='sidebar-card'>",
+      "<h3>Leitura rapida</h3>",
+      "<div class='search-signal-grid'>",
+      "<div class='metric-card is-warn'><span>Pautas criticas</span><strong>" + critical + "</strong></div>",
+      "<div class='metric-card is-medio'><span>Pautas quentes</span><strong>" + hot + "</strong></div>",
+      "<div class='metric-card is-pendente'><span>Seguimentos</span><strong>" + followUp + "</strong></div>",
+      "</div>",
+      "<p class='panel-note'>Pautas abertas no recorte: " + open + ". O ranking usa o sinal editorial ja aplicado no PAUTEIRO para separar o que pede manchete imediata do que precisa de apuracao complementar.</p>",
+      "</aside>",
+      "</header>",
+      "<section class='page-grid'>",
+      "<div class='content-stack'>",
+      "<section class='metrics-grid'>",
+      metricCard("Resultados", sorted.length),
+      metricCard("Meses", monthCount),
+      metricCard("Municipios", cityCount),
+      metricCard("Editorias", editoriaCount),
+      metricCard("Fontes", sourceCount),
+      metricCard("Pautas criticas", critical, "warn"),
+      metricCard("Pautas quentes", hot, "medio"),
+      metricCard("Seguimentos", followUp, "pendente"),
+      "</section>",
+      "<section class='search-organizer-grid'>",
+      renderAnalysisGroupCard("Meses", "Onde o volume de material mais empurra noticia.", monthGroups, filters, "month"),
+      renderAnalysisGroupCard("Municipios", "Quem concentra mais sinais de pauta neste recorte.", cityGroups, filters, "city"),
+      renderAnalysisGroupCard("Editorias", "Assuntos que mais rendem manchete e acompanhamento.", editoriaGroups, filters, "editoria"),
+      renderAnalysisGroupCard("Fontes", "Familias documentais que mais puxam achados agora.", sourceGroups, filters, "family"),
+      "</section>",
+      "<section class='search-results-stack'>",
+      "<div class='section-head'><div><p class='section-kicker'>Abrem a reuniao</p><h2>Materiais com maior potencial de noticia</h2></div></div>",
+      (sorted.length
+        ? "<div class='search-results-deck'>" + sorted.slice(0, 6).map(function (result, index) {
+            return renderSearchResultCard(result, index < 2);
+          }).join("") + "</div>"
+        : "<div class='empty-state'><h3>Nenhum material encontrado</h3><p class='empty-copy'>Esse recorte ainda nao tem entrada factual carregada. A estrutura de analise esta pronta, mas a base precisa ser preenchida.</p></div>"),
+      "</section>",
+      "</div>",
+      "<aside class='note-stack'>",
+      renderIngestionQueue(),
+      renderCurrentFlow(),
+      (selectedYearMeta ? renderYearSourceStatus(selectedYearMeta.year) : ""),
+      (selectedCityMeta
+        ? "<div class='sidebar-card'><h3>Rota de " + escapeHtml(selectedCityMeta.name) + "</h3><div class='panel-item'><span>Diario-base</span><strong>" + escapeHtml(selectedCityMeta.diary_family) + "</strong></div><div class='panel-item'><span>Carga 2025</span><strong>" + escapeHtml(String(selectedCityMeta.loaded_entries_2025 || 0)) + "</strong></div><div class='panel-item'><span>Carga 2026</span><strong>" + escapeHtml(String(selectedCityMeta.loaded_entries_2026 || 0)) + "</strong></div><p class='panel-note'>" + escapeHtml(selectedCityMeta.note || "municipio mapeado na cobertura") + "</p></div>"
+        : ""),
+      "<div class='note-card'><h3>Como ler</h3><ul><li>Pauta critica: responsabilizacao, devolucao, recomendacao, inquerito ou dano ao erario.</li><li>Pauta quente: contrato alto, mudanca de governo, licitacao relevante, gasto ou ato com impacto direto.</li><li>Seguimento: edital, agenda, prazo, programa ou publicacao que pede continuidade.</li></ul></div>",
+      "<div class='note-card'><h3>Recorte atual</h3><p class='muted'>A analise so enxerga o que ja foi carregado na base publica. Quando 2025 ou novas frentes entrarem, esses quadros sobem automaticamente de volume.</p></div>",
+      "</aside>",
+      "</section>"
+    ].join("");
+  }
+
   function renderSearchOrganizer(results, filters) {
     var cityBuckets = summarizeSearchBuckets(results, function (entry) { return entry.city; }, 5);
     var editoriaBuckets = summarizeSearchBuckets(results, function (entry) { return entry.editoria; }, 5);
@@ -1597,6 +1900,7 @@
       "<div class='nav-row'>",
       "<a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar a capa</a>",
       "<a class='nav-pill' href='" + chronologyUrl() + "'>Abrir cronologia</a>",
+      "<a class='nav-pill' href='" + analysisUrl(filters) + "'>Analise editorial</a>",
       "<a class='nav-pill' href='" + searchUrl({ year: "2026" }) + "'>Buscar 2026</a>",
       "<a class='nav-pill' href='" + searchUrl({ year: "2025" }) + "'>Abrir 2025</a>",
       "<a class='nav-pill' href='" + searchUrl({ family: "TJGO" }) + "'>Foco TJGO</a>",
@@ -1651,6 +1955,7 @@
       "<div class='sidebar-card'><h3>Arquivo historico</h3><p class='panel-note'>O PAUTEIRO! entra em modo de expansao para 2024, 2025 e 2026, com busca unica por toda a serie.</p>" + renderArchiveYearBoard() + "</div>",
       renderSearchHistory(searchHistory),
       renderIngestionQueue(),
+      renderCurrentFlow(),
       (selectedYearMeta ? renderYearSourceStatus(selectedYearMeta.year) : ""),
       "<div class='sidebar-card'><h3>Cobertura municipal</h3><div class='panel-item'><span>Municipios mapeados</span><strong>" + escapeHtml(String(mappedCoverage.municipalities_total || 0)) + "</strong></div><div class='panel-item'><span>Diarios proprios confirmados</span><strong>" + escapeHtml(String(mappedCoverage.own_diary_confirmed || 0)) + "</strong></div><div class='panel-item'><span>Rota AGM</span><strong>" + escapeHtml(String(mappedCoverage.agm_default || 0)) + "</strong></div><div class='panel-item'><span>Carga 2026</span><strong>" + escapeHtml(String(mappedCoverage.loaded_municipalities_2026 || 0)) + " municipios</strong></div><p class='panel-note'>A cobertura agora parte de um catalogo com os 246 municipios goianos e separa a rota entre diario proprio confirmado e AGM padrao.</p></div>",
       (selectedCityMeta
@@ -2614,6 +2919,8 @@
   var view = pageParams.get("view") || document.body.getAttribute("data-view") || "month";
   if (view === "chronology") {
     renderChronologyView();
+  } else if (view === "analysis") {
+    renderAnalysisView();
   } else if (view === "search") {
     renderSearchView();
   } else if (view === "story") {

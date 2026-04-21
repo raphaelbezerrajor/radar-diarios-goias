@@ -6,16 +6,16 @@
   "loaded_months": [],
   "sources_priority": [
     "Goiania / Sileg",
-    "Estado de Goias",
-    "MPGO",
+    "Estado de Goias / DOE",
+    "MPGO / DOMP",
     "Municipios / AGM e diarios proprios"
   ],
   "sources": {
-    "goiania": { "status": "ready", "entry_count": 0, "loaded_months": [] },
-    "estado": { "status": "ready", "entry_count": 0, "loaded_months": [] },
-    "mpgo": { "status": "ready", "entry_count": 0, "loaded_months": [] },
-    "municipios": { "status": "ready", "entry_count": 0, "loaded_months": [] },
-    "tjgo": { "status": "paused", "entry_count": 0, "loaded_months": [] }
+    "goiania": { "status": "ready", "analysis_status": "pending", "entry_count": 0, "loaded_months": [], "manifest": "arquivo/2025/goiania.json" },
+    "estado": { "status": "ready", "analysis_status": "pending", "entry_count": 0, "loaded_months": [], "manifest": "arquivo/2025/estado.json" },
+    "mpgo": { "status": "ready", "analysis_status": "pending", "entry_count": 0, "loaded_months": [], "manifest": "arquivo/2025/mpgo.json" },
+    "municipios": { "status": "ready", "analysis_status": "pending", "entry_count": 0, "loaded_months": [], "manifest": "arquivo/2025/municipios.json" },
+    "tjgo": { "status": "paused", "analysis_status": "paused", "entry_count": 0, "loaded_months": [], "manifest": "arquivo/2025/tjgo.json" }
   },
-  "note": "bucket anual aberto para ingestao historica com TJGO pausado."
+  "note": "bucket anual aberto para ingestao historica com fonte e analise editorial mapeadas."
 }
