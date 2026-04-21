@@ -5,6 +5,7 @@ Livro de pautas em HTML, CSS e JavaScript para leitura de diarios oficiais de Go
 ## Entrada principal
 
 - `pauteiro.html`: frente publica principal.
+- `pauteiro-arquivo.js`: bucket anual do arquivo, com manifestos de 2024, 2025 e 2026.
 - `pauteiro-2026-pautas.txt`: saida leve com linha fina e lead das pautas.
 - `pauteiro-cobertura.js`: catalogo de cobertura com os 246 municipios de Goias, rota de diario e contagem carregada por ano.
 - `radar-diarios-goias.html`: alias legado que redireciona para `pauteiro.html`.
@@ -13,6 +14,7 @@ Livro de pautas em HTML, CSS e JavaScript para leitura de diarios oficiais de Go
 - `radar-diarios-goias-data.js`: base principal consumida pela interface.
 - `radar-diarios-goias-data.json`: espelho estruturado da base.
 - `build-pauteiro-cobertura.ps1`: script para regenerar a camada de cobertura municipal a partir do IBGE e da base atual.
+- `build-pauteiro-arquivo.ps1`: script para regenerar o bucket anual do arquivo.
 - `radar-diarios-goias.css`: estilos da interface.
 - `radar-diarios-goias-app.js`: montagem dinamica das paginas.
 
@@ -39,8 +41,10 @@ flowchart LR
 - 2026 segue como caderno corrente;
 - 2024 e 2025 ja entram como arquivo historico pronto para carga;
 - abril de 2026 esta preenchido ate 18/04/2026;
+- buckets anuais separados para 2024, 2025 e 2026;
 - catalogo municipal com os 246 municipios goianos e separacao entre diario proprio confirmado e rota AGM;
 - busca por municipio, ano, editoria, tipo de diario e assunto;
+- historico de busca salvo localmente no navegador da redacao;
 - calendario por dia;
 - cronologia;
 - pagina diaria;
