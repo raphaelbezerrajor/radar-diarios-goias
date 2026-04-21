@@ -30,6 +30,8 @@ jobs:
           mkdir site
           cp index.html site/
           cp pauteiro.html site/
+          cp pauteiro-arquivo.js site/
+          cp pauteiro-cobertura.js site/
           cp pauteiro-2026-pautas.txt site/
           cp radar-diarios-goias.html site/
           cp radar-diarios-goias-cronologia.html site/
