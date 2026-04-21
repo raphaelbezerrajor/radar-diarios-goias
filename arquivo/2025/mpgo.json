@@ -2,14 +2,48 @@
   "year": 2025,
   "source_id": "mpgo",
   "label": "MPGO / DOMP",
-  "status": "ready",
-  "analysis_status": "pending",
-  "entry_count": 0,
-  "loaded_months": [],
+  "status": "active",
+  "analysis_status": "partial",
+  "entry_count": 3,
+  "loaded_months": ["2025-01", "2025-03", "2025-05"],
   "official_url": "https://www.mpgo.mp.br/portal/domp",
   "analysis_focus": "inqueritos, recomendacoes, TACs, ACPs, arquivamentos e expedientes com impacto publico",
   "material_types": "diario oficial do ministerio publico, editais, recomendacoes, inqueritos e termos",
-  "note": "2025 do MPGO ainda nao entrou como base factual publica, mas a frente ja esta na fila ativa",
-  "next_step": "abrir o DOMP e separar recomendacoes, inqueritos, TACs e arquivamentos com impacto publico",
-  "highlight_entries": []
+  "note": "o MPGO de 2025 entrou com lote inicial puxado por saude publica, concurso e gasto com evento festivo.",
+  "next_step": "ampliar recomendacoes, ACPs, TACs e inqueritos civis de repercussao municipal.",
+  "highlight_entries": [
+    {
+      "date": "2025-01-14",
+      "city": "Santo Antonio do Descoberto",
+      "editoria": "Saude e controle publico",
+      "tag": "ACP / cumprimento de sentenca",
+      "title": "Apos acao do MPGO, Santo Antonio do Descoberto tera de prever verba para reformar hospital ou construir nova unidade",
+      "line": "Saude publica, orcamento e cobranca judicial aparecem juntos numa pauta de impacto regional.",
+      "source_label": "MPGO",
+      "source_url": "https://www.mpgo.mp.br/portal/noticia/apos-sentenca-em-acao-do-mpgo-municipio-de-santo-antonio-do-descoberto-tera-que-tomar-providencias-para-reformar-hospital-ou-construir-nova-unidade",
+      "source_note": "Noticia oficial do MPGO, publicada em 14/01/2025, editoria Saude."
+    },
+    {
+      "date": "2025-03-05",
+      "city": "Cristianopolis",
+      "editoria": "Patrimonio publico e concursos",
+      "tag": "Recomendacao",
+      "title": "Apos recomendacao do MPGO, Cristianopolis rescinde contrato com banca de concurso e reabre o cronograma",
+      "line": "Intervencao do MP atinge concurso publico e abre pauta sobre integridade de bancas em cidades pequenas.",
+      "source_label": "MPGO",
+      "source_url": "https://www.mpgo.mp.br/portal/noticia/apos-recomendacao-do-mpgo-prefeitura-de-cristianopolis-cancela-contrato-com-a-empresa-que-seria-responsavel-pela-realizacao-do-concurso-publico",
+      "source_note": "Noticia oficial do MPGO, publicada em 05/03/2025, editoria Patrimonio Publico."
+    },
+    {
+      "date": "2025-05-23",
+      "city": "Abadiania",
+      "editoria": "Patrimonio publico",
+      "tag": "ACP / recomendacao",
+      "title": "MPGO aciona Abadiania para travar gasto acima do orcamento com o 6o Rodeio Country",
+      "line": "Gasto com festa vira pauta critica ao cruzar orcamento, recomendacao ignorada e pedido de multa diaria.",
+      "source_label": "MPGO",
+      "source_url": "https://www.mpgo.mp.br/portal/noticia/mpgo-propoe-acao-para-que-gastos-publicos-de-abadiania-com-eventos-festivos-fiquem-limitados-ao-orcamento-municipal",
+      "source_note": "Noticia oficial do MPGO, publicada em 23/05/2025, editoria Patrimonio Publico."
+    }
+  ]
 }

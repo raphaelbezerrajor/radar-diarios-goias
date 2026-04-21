@@ -101,11 +101,15 @@
   };
 
   var loadedCounts = {
+    abadiania: { total: 1, 2025: 1, 2026: 0 },
     anapolis: { total: 1, 2025: 0, 2026: 1 },
     "aparecida de goiania": { total: 1, 2025: 0, 2026: 1 },
-    goiania: { total: 1, 2025: 0, 2026: 1 },
+    cristianopolis: { total: 1, 2025: 1, 2026: 0 },
+    goiania: { total: 3, 2025: 2, 2026: 1 },
+    goianira: { total: 1, 2025: 1, 2026: 0 },
     itaucu: { total: 1, 2025: 0, 2026: 1 },
     "rio verde": { total: 1, 2025: 0, 2026: 1 },
+    "santo antonio do descoberto": { total: 1, 2025: 1, 2026: 0 },
     "senador canedo": { total: 4, 2025: 0, 2026: 4 }
   };
 
@@ -408,7 +412,7 @@
   };
 
   window.PAUTEIRO_COVERAGE = {
-    generated_at: "2026-04-20",
+    generated_at: "2026-04-21",
     years: [2025, 2026],
     ibge_source: {
       label: "IBGE localidades",

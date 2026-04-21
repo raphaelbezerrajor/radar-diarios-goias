@@ -4,12 +4,12 @@
   "site_slug": "pauteiro",
   "year": 2026,
   "month": "2026-04",
-  "updated_at": "2026-04-20",
-  "accessed_at": "2026-04-20",
+  "updated_at": "2026-04-21",
+  "accessed_at": "2026-04-21",
   "cutoff_date": "2026-04-18",
   "archive_years": [
     { "year": 2024, "status": "open", "note": "arquivo consultavel; camada de analise editorial pendente" },
-    { "year": 2025, "status": "open", "note": "arquivo consultavel; camada de analise editorial pendente" },
+    { "year": 2025, "status": "open", "note": "arquivo consultavel; primeiro lote factual de 2025 ja carregado no arquivo anual" },
     { "year": 2026, "status": "active", "note": "caderno corrente em expansao" }
   ],
   "coverage_goal": {
@@ -23,7 +23,7 @@
       "TJGO mapeado, mas pausado ate avaliacao editorial do DJE"
     ]
   },
-  "evaluated_units": 54,
+  "evaluated_units": 62,
   "remote_url": "https://raphaelbezerrajor.github.io/radar-diarios-goias/",
   "text_export": {
     "label": "Caderno TXT de pautas",

@@ -77,6 +77,21 @@
     return acc;
   }, {});
 
+  function filterEntriesByYear(list, year) {
+    var target = String(year || "");
+    return (list || []).filter(function (entry) {
+      return String((entry && entry.date) || "").slice(0, 4) === target;
+    });
+  }
+
+  function groupEntriesByDate(list) {
+    return (list || []).reduce(function (acc, entry) {
+      if (!acc[entry.date]) acc[entry.date] = [];
+      acc[entry.date].push(entry);
+      return acc;
+    }, {});
+  }
+
   function escapeHtml(value) {
     return String(value || "")
       .replace(/&/g, "&amp;")
@@ -2490,10 +2505,10 @@
 
   function renderMonthView() {
     document.title = DATA.site_title;
-    var ranked = rankedEntries();
+    var ranked = filterEntriesByYear(rankedEntries(), DATA.year);
     var leadEntry = ranked[0] || null;
     var agendaEntries = ranked.filter(hasAgendaSignal).slice(0, 6);
-    var daysWithEntries = Object.keys(grouped).length;
+    var daysWithEntries = Object.keys(groupEntriesByDate(ranked)).length;
     var textExportFile = DATA.text_export ? DATA.text_export.file : "";
     var remoteLink = DATA.remote_url ? "<a class='top-link' href='" + escapeHtml(DATA.remote_url) + "' target='_blank' rel='noopener noreferrer'>Abrir versao remota</a>" : "";
     var textExportLink = textExportFile ? "<a class='top-link' href='" + escapeHtml(textExportFile) + "' target='_blank' rel='noopener noreferrer'>Abrir pautas em TXT</a>" : "";
@@ -2536,10 +2551,12 @@
 
   function renderChronologyView() {
     document.title = DATA.site_title + " | Cronologia";
-    var dates = Object.keys(grouped).sort();
+    var cycleEntries = filterEntriesByYear(entries, DATA.year);
+    var cycleGrouped = groupEntriesByDate(cycleEntries);
+    var dates = Object.keys(cycleGrouped).sort();
     var groups = dates.map(function (value) {
       var date = parseDate(value);
-      var cards = grouped[value]
+      var cards = cycleGrouped[value]
         .slice()
         .sort(function (a, b) {
           if ((b.highlight_score || 0) !== (a.highlight_score || 0)) return (b.highlight_score || 0) - (a.highlight_score || 0);
@@ -2550,7 +2567,7 @@
 
       return [
         "<section class='timeline-group'>",
-        "<div class='timeline-date'><strong>" + date.getDate() + "</strong><span>" + shortWeekday(date) + "</span><span>" + grouped[value].length + " pauta(s)</span></div>",
+        "<div class='timeline-date'><strong>" + date.getDate() + "</strong><span>" + shortWeekday(date) + "</span><span>" + cycleGrouped[value].length + " pauta(s)</span></div>",
         "<div>" + cards + "</div>",
         "</section>"
       ].join("");
@@ -2568,7 +2585,7 @@
       "<aside class='sidebar-card'>",
       "<h3>Recorte</h3>",
       "<p class='muted'>Preenchimento factual ate 18/04/2026. Dias sem pauta confirmada permanecem no calendario do indice mensal e podem receber nova rodada depois.</p>",
-      "<div class='panel-item'><span>Pautas na cronologia</span><strong>" + entries.length + "</strong></div>",
+      "<div class='panel-item'><span>Pautas na cronologia</span><strong>" + cycleEntries.length + "</strong></div>",
       "<div class='panel-item'><span>Dias com entrada</span><strong>" + dates.length + "</strong></div>",
       "</aside>",
       "</header>",

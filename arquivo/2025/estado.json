@@ -2,14 +2,37 @@
   "year": 2025,
   "source_id": "estado",
   "label": "Estado de Goias / DOE",
-  "status": "ready",
-  "analysis_status": "pending",
-  "entry_count": 0,
-  "loaded_months": [],
+  "status": "active",
+  "analysis_status": "partial",
+  "entry_count": 2,
+  "loaded_months": ["2025-08", "2025-09"],
   "official_url": "https://diariooficial.abc.go.gov.br/",
   "analysis_focus": "notificacoes, devolucao, ressarcimento, dano ao erario, contratos, SES, SSP e autarquias",
   "material_types": "diario oficial do estado, avisos, portarias, extratos, notificacoes e cobrancas",
-  "note": "2025 do DOE ainda nao foi ingerido na versao publica, embora a trilha editorial ja esteja definida",
-  "next_step": "subir DOE, SES e SSP com foco em cobrancas, contratos e ressarcimento",
-  "highlight_entries": []
+  "note": "a frente estadual de 2025 ja ganhou a primeira dupla factual com contrato e licitacao da SES-GO.",
+  "next_step": "abrir o retroativo do DOE e da SSP para notificacoes, cobrancas e contratos de maior impacto.",
+  "highlight_entries": [
+    {
+      "date": "2025-08-21",
+      "city": "Estado de Goias",
+      "editoria": "Saude e contratos",
+      "tag": "Contrato",
+      "title": "SES-GO fecha contrato de R$ 1,49 milhao para bicicletas eletricas de agentes de saude",
+      "line": "Saude publica abre pauta sobre capilaridade, logistica e gasto com mobilidade para a atencao basica.",
+      "source_label": "SES-GO",
+      "source_url": "https://goias.gov.br/saude/extrato-do-contrato-no-76-2025-ses-go/",
+      "source_note": "Publicado em 21/08/2025."
+    },
+    {
+      "date": "2025-09-15",
+      "city": "Estado de Goias",
+      "editoria": "Saude e licitacoes",
+      "tag": "Pregao eletronico",
+      "title": "SES-GO abre pregao 245/2025 para medicamentos do CEMAC e marca sessao para 30 de setembro",
+      "line": "Nova compra de remedios entra na fila da saude estadual com sessao marcada e valor ja estimado.",
+      "source_label": "SES-GO",
+      "source_url": "https://goias.gov.br/saude/aviso-de-licitacao-do-p-e-n-o-245-2025/",
+      "source_note": "Publicado em 15/09/2025."
+    }
+  ]
 }
