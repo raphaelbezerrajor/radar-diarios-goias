@@ -4,6 +4,48 @@ window.PAUTEIRO_ARCHIVE = {
     mode: "localStorage",
     key: "pauteiro:search-history"
   },
+  source_library: {
+    goiania: {
+      id: "goiania",
+      label: "Goiania / Sileg",
+      official_url: "https://www.goiania.go.gov.br/casa-civil/diario-oficial/",
+      analysis_focus: "nomeacoes, decretos, contratos, compras, jetons, comissoes e reorganizacao administrativa",
+      material_types: "diario oficial, sileg, decretos de pessoal, extratos de contrato e atos de governo",
+      next_step: "carregar as edicoes de 2025 e fechar o retroativo de 2026 por atos de pessoal e contratos"
+    },
+    estado: {
+      id: "estado",
+      label: "Estado de Goias / DOE",
+      official_url: "https://diariooficial.abc.go.gov.br/",
+      analysis_focus: "notificacoes, devolucao, ressarcimento, dano ao erario, contratos, SES, SSP e autarquias",
+      material_types: "diario oficial do estado, avisos, portarias, extratos, notificacoes e cobrancas",
+      next_step: "varrer DOE, SES e SSP por notificacoes, cobrancas, contratos e extratos de saude"
+    },
+    mpgo: {
+      id: "mpgo",
+      label: "MPGO / DOMP",
+      official_url: "https://www.mpgo.mp.br/portal/domp",
+      analysis_focus: "inqueritos, recomendacoes, TACs, ACPs, arquivamentos e expedientes com impacto publico",
+      material_types: "diario oficial do ministerio publico, editais, recomendacoes, inqueritos e termos",
+      next_step: "abrir a coleta dos diarios do MPGO e cruzar recomendacoes, inqueritos e arquivamentos relevantes"
+    },
+    municipios: {
+      id: "municipios",
+      label: "Municipios / AGM e diarios proprios",
+      official_url: "https://www.diariomunicipal.com.br/agm/",
+      analysis_focus: "licitacoes, contratos, editais, nomeacoes, leis, gastos, shows, saude, educacao e urbanismo",
+      material_types: "AGM, diarios municipais proprios, atos locais, extratos, leis e decretos",
+      next_step: "escalar a ingestao por municipios e preencher os anos a partir da rota AGM ou diario proprio"
+    },
+    tjgo: {
+      id: "tjgo",
+      label: "TJGO / DJE",
+      official_url: "https://www.tjgo.jus.br/index.php/processos/dj-eletronico",
+      analysis_focus: "decisoes, plantoes, liminares, colegiados e atos do tribunal ainda em avaliacao editorial",
+      material_types: "diario da justica eletronico e noticias do tribunal",
+      next_step: "manter mapeado, mas fora da rodada atual ate fechar o criterio editorial do DJE"
+    }
+  },
   ingestion: {
     active_order: [
       {
@@ -81,11 +123,11 @@ window.PAUTEIRO_ARCHIVE = {
       entries: [],
       loaded_months: [],
       sources: {
-        goiania: { status: "ready", entry_count: 0, loaded_months: [] },
-        estado: { status: "ready", entry_count: 0, loaded_months: [] },
-        mpgo: { status: "ready", entry_count: 0, loaded_months: [] },
-        municipios: { status: "ready", entry_count: 0, loaded_months: [] },
-        tjgo: { status: "paused", entry_count: 0, loaded_months: [] }
+        goiania: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2024/goiania.json" },
+        estado: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2024/estado.json" },
+        mpgo: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2024/mpgo.json" },
+        municipios: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2024/municipios.json" },
+        tjgo: { status: "paused", analysis_status: "paused", entry_count: 0, loaded_months: [], manifest: "arquivo/2024/tjgo.json" }
       },
       note: "ano estruturado para ingestao"
     },
@@ -94,11 +136,11 @@ window.PAUTEIRO_ARCHIVE = {
       entries: [],
       loaded_months: [],
       sources: {
-        goiania: { status: "ready", entry_count: 0, loaded_months: [] },
-        estado: { status: "ready", entry_count: 0, loaded_months: [] },
-        mpgo: { status: "ready", entry_count: 0, loaded_months: [] },
-        municipios: { status: "ready", entry_count: 0, loaded_months: [] },
-        tjgo: { status: "paused", entry_count: 0, loaded_months: [] }
+        goiania: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2025/goiania.json" },
+        estado: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2025/estado.json" },
+        mpgo: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2025/mpgo.json" },
+        municipios: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2025/municipios.json" },
+        tjgo: { status: "paused", analysis_status: "paused", entry_count: 0, loaded_months: [], manifest: "arquivo/2025/tjgo.json" }
       },
       note: "ano estruturado para ingestao"
     },
@@ -107,11 +149,11 @@ window.PAUTEIRO_ARCHIVE = {
       entries: [],
       loaded_months: ["2026-04"],
       sources: {
-        goiania: { status: "active", entry_count: 1, loaded_months: ["2026-04"] },
-        estado: { status: "active", entry_count: 5, loaded_months: ["2026-04"] },
-        mpgo: { status: "ready", entry_count: 0, loaded_months: [] },
-        municipios: { status: "active", entry_count: 8, loaded_months: ["2026-04"] },
-        tjgo: { status: "paused", entry_count: 10, loaded_months: ["2026-04"] }
+        goiania: { status: "active", analysis_status: "partial", entry_count: 1, loaded_months: ["2026-04"], manifest: "arquivo/2026/goiania.json" },
+        estado: { status: "active", analysis_status: "partial", entry_count: 5, loaded_months: ["2026-04"], manifest: "arquivo/2026/estado.json" },
+        mpgo: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2026/mpgo.json" },
+        municipios: { status: "active", analysis_status: "partial", entry_count: 8, loaded_months: ["2026-04"], manifest: "arquivo/2026/municipios.json" },
+        tjgo: { status: "paused", analysis_status: "paused", entry_count: 10, loaded_months: ["2026-04"], manifest: "arquivo/2026/tjgo.json" }
       },
       note: "as entradas factuais seguem em radar-diarios-goias-data.js ate a consolidacao do bucket anual"
     }

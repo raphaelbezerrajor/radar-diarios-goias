@@ -1,0 +1,52 @@
+{
+  "year": 2026,
+  "source_id": "tjgo",
+  "label": "TJGO / DJE",
+  "status": "paused",
+  "analysis_status": "paused",
+  "entry_count": 10,
+  "loaded_months": ["2026-04"],
+  "official_url": "https://www.tjgo.jus.br/index.php/processos/dj-eletronico",
+  "analysis_focus": "decisoes, plantoes, liminares, colegiados e atos do tribunal ainda em avaliacao editorial",
+  "material_types": "diario da justica eletronico e noticias do tribunal",
+  "covered_cities": ["TJGO"],
+  "main_editorias": ["Justica e plantao", "Justica criminal", "Violencia domestica", "DJE"],
+  "top_tags": ["Decreto judiciario", "Painel institucional", "Edital", "Portaria"],
+  "note": "ha volume relevante do tribunal em abril, mas a frente segue pausada para evitar inflar a base antes de fechar o criterio editorial do DJE",
+  "next_step": "manter mapeado e reavaliar a abertura da frente quando o recorte do DJE estiver mais claro",
+  "highlight_entries": [
+    {
+      "date": "2026-04-10",
+      "city": "TJGO",
+      "editoria": "Justica criminal",
+      "tag": "Decreto judiciario",
+      "title": "TJGO cria grupo interinstitucional para destravar fluxo de prisao e audiencia de custodia",
+      "line": "Tema pesado do tribunal entra no radar com publicacao expressa no DJE.",
+      "source_label": "Agencia de Noticias do TJGO",
+      "source_url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs/17-tribunal/35937-tjgo-cria-grupo-de-trabalho-interinstitucional-ao-aprimoramento-do-fluxo-de-comunicacao-das-prisoes-e-da-realizacao-das-audiencias-de-custodia",
+      "source_note": "Publicado em 10/04/2026, com referencia explicita ao DJE 4409."
+    },
+    {
+      "date": "2026-04-16",
+      "city": "TJGO",
+      "editoria": "Violencia domestica",
+      "tag": "Painel institucional",
+      "title": "TJGO diz analisar medidas protetivas em ate 24 horas e abaixo do prazo recomendado pelo CNJ",
+      "line": "Dado de desempenho do tribunal vira pauta pronta para checagem e comparacao.",
+      "source_label": "Agencia de Noticias do TJGO",
+      "source_url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs/17-tribunal/35992-tjgo-analisa-medidas-protetivas-de-urgencia-em-24-horas-abaixo-da-media-nacional-de-tres-dias",
+      "source_note": "Publicado em 16/04/2026."
+    },
+    {
+      "date": "2026-04-15",
+      "city": "TJGO",
+      "editoria": "Justica e plantao",
+      "tag": "Decreto judiciario",
+      "title": "TJGO aciona 100 magistrados e servidores para o plantao judicial de 15 a 22 de abril",
+      "line": "Numero da escala ajuda a medir o peso operacional da semana no tribunal.",
+      "source_label": "Agencia de Noticias do TJGO",
+      "source_url": "https://www.tjgo.jus.br/index.php/agencia-de-noticias/noticias-ccs/17-tribunal/35972-plantao-judicial-em-primeiro-grau-de-jurisdicao-e-central-de-custodia-de-15-a-22-de-abril",
+      "source_note": "Publicado em 15/04/2026."
+    }
+  ]
+}

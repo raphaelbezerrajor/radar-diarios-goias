@@ -1,0 +1,52 @@
+{
+  "year": 2026,
+  "source_id": "estado",
+  "label": "Estado de Goias / DOE",
+  "status": "active",
+  "analysis_status": "partial",
+  "entry_count": 5,
+  "loaded_months": ["2026-04"],
+  "official_url": "https://diariooficial.abc.go.gov.br/",
+  "analysis_focus": "notificacoes, devolucao, ressarcimento, dano ao erario, contratos, SES, SSP e autarquias",
+  "material_types": "diario oficial do estado, avisos, portarias, extratos, notificacoes e cobrancas",
+  "covered_cities": ["Estado de Goias"],
+  "main_editorias": ["Saude e licitacoes", "Saude e contratos", "Gestao e contratos", "Energia e eficiencia"],
+  "top_tags": ["Contrato", "Pregao eletronico"],
+  "note": "a frente estadual ja tem abril parcialmente lido, puxada por saude, contratos altos e compras de grande valor",
+  "next_step": "aprofundar DOE, SES e SSP, com foco em cobrancas, ressarcimento e contratos sensiveis",
+  "highlight_entries": [
+    {
+      "date": "2026-04-14",
+      "city": "Estado de Goias",
+      "editoria": "Saude e licitacoes",
+      "tag": "Pregao eletronico",
+      "title": "SES-GO abre licitacao de R$ 11,88 milhoes para registro de precos de medicamentos",
+      "line": "Rodada estadual de remedios vira uma das maiores cifras do mes.",
+      "source_label": "SES-GO",
+      "source_url": "https://goias.gov.br/saude/aviso-de-licitacao-do-p-e-n-o-063-2026/",
+      "source_note": "Publicado em 14/04/2026."
+    },
+    {
+      "date": "2026-04-07",
+      "city": "Estado de Goias",
+      "editoria": "Gestao e contratos",
+      "tag": "Contrato",
+      "title": "PCGO fecha contrato de R$ 18,74 milhoes para gerenciamento de combustivel",
+      "line": "Valor alto e prazo de 24 meses pedem segunda leitura de demanda e controle.",
+      "source_label": "Secretaria da Seguranca Publica de Goias",
+      "source_url": "https://goias.gov.br/seguranca/extrato-do-contrato-5-2026-2/",
+      "source_note": "Publicado em 07/04/2026."
+    },
+    {
+      "date": "2026-04-06",
+      "city": "Estado de Goias",
+      "editoria": "Saude e contratos",
+      "tag": "Contrato",
+      "title": "Saude de Goias assina contrato de R$ 6,17 milhoes para 18 furgoes adaptados de vacinacao",
+      "line": "Compra estadual reforca a narrativa de logistica e capilaridade da imunizacao.",
+      "source_label": "SES-GO",
+      "source_url": "https://goias.gov.br/saude/extrato-do-contrato-no-29-2026-ses-go/",
+      "source_note": "Publicado em 06/04/2026."
+    }
+  ]
+}
