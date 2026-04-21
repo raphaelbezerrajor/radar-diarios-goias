@@ -1544,6 +1544,36 @@ ol {
   font-weight: 700;
 }
 
+.source-origin-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 5px 9px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+.source-origin-badge.is-diario-bruto {
+  background: rgba(13, 117, 109, 0.12);
+  color: var(--teal);
+}
+
+.source-origin-badge.is-ato-espelhado {
+  background: rgba(209, 91, 44, 0.12);
+  color: var(--coral);
+}
+
+.source-origin-badge.is-noticia-institucional {
+  background: rgba(116, 92, 54, 0.12);
+  color: #6f5837;
+}
+
+.source-origin-badge.is-origem-oficial {
+  background: rgba(23, 23, 20, 0.08);
+  color: var(--ink);
+}
+
 .story-card h3,
 .story-card h4 {
   font-size: 23px;
@@ -1582,6 +1612,19 @@ ol {
 
 .story-source {
   font-size: 13px;
+}
+
+.story-origin {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.source-origin-copy {
+  color: var(--muted);
 }
 
 .pauta-line-note {

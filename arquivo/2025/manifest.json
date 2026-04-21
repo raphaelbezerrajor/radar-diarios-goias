@@ -17,5 +17,5 @@
     "municipios": { "status": "active", "analysis_status": "partial", "entry_count": 1, "loaded_months": ["2025-03"], "manifest": "arquivo/2025/municipios.json" },
     "tjgo": { "status": "paused", "analysis_status": "paused", "entry_count": 0, "loaded_months": [], "manifest": "arquivo/2025/tjgo.json" }
   },
-  "note": "primeiro lote factual de 2025 carregado com fonte oficial e leitura editorial inicial; a serie segue aberta para expansao."
+  "note": "primeiro lote factual de 2025 carregado em modo hibrido; Goiania e AGM ja vieram do diario bruto, enquanto Estado e MPGO ainda entram por ato espelhado ou noticia institucional."
 }
