@@ -1,5 +1,6 @@
 (function () {
   var DATA = window.RADAR_GO_DATA;
+  var ARCHIVE = window.PAUTEIRO_ARCHIVE || {};
   var COVERAGE = window.PAUTEIRO_COVERAGE || {};
   var root = document.getElementById("app");
 
@@ -11,12 +12,6 @@
   var MONTH_START = new Date(DATA.month + "-01T00:00:00");
   var CUTOFF = new Date(DATA.cutoff_date + "T00:00:00");
   var DAYS_IN_MONTH = new Date(MONTH_START.getFullYear(), MONTH_START.getMonth() + 1, 0).getDate();
-
-  var entries = DATA.entries.slice().sort(function (a, b) {
-    if (a.date !== b.date) return a.date.localeCompare(b.date);
-    if ((b.highlight_score || 0) !== (a.highlight_score || 0)) return (b.highlight_score || 0) - (a.highlight_score || 0);
-    return a.title.localeCompare(b.title);
-  });
 
   function slugify(value) {
     return String(value || "")
@@ -34,6 +29,38 @@
       slugify(entry.title).slice(0, 48)
     ].join("-");
   }
+
+  function archiveEntries() {
+    var buckets = ARCHIVE.year_buckets || {};
+    var list = [];
+    Object.keys(buckets).forEach(function (year) {
+      var bucket = buckets[year] || {};
+      (bucket.entries || []).forEach(function (entry) {
+        list.push(entry);
+      });
+    });
+    return list;
+  }
+
+  function mergedEntries() {
+    var seen = {};
+    var merged = [];
+    (DATA.entries || []).concat(archiveEntries()).forEach(function (entry) {
+      if (!entry) return;
+      var id = entry.entry_id || entryId(entry);
+      if (seen[id]) return;
+      seen[id] = true;
+      entry.entry_id = id;
+      merged.push(entry);
+    });
+    return merged.sort(function (a, b) {
+      if (a.date !== b.date) return a.date.localeCompare(b.date);
+      if ((b.highlight_score || 0) !== (a.highlight_score || 0)) return (b.highlight_score || 0) - (a.highlight_score || 0);
+      return a.title.localeCompare(b.title);
+    });
+  }
+
+  var entries = mergedEntries();
 
   entries.forEach(function (entry) {
     entry.entry_id = entry.entry_id || entryId(entry);
@@ -532,6 +559,10 @@
     return "pauteiro:notebook:" + entry.entry_id;
   }
 
+  function searchHistoryStorageKey() {
+    return (ARCHIVE.search_storage && ARCHIVE.search_storage.key) || "pauteiro:search-history";
+  }
+
   function storageAvailable() {
     try {
       return !!window.localStorage;
@@ -555,6 +586,124 @@
     if (!storageAvailable()) return false;
     window.localStorage.removeItem(workflowStorageKey(entry));
     return true;
+  }
+
+  function cleanedSearchFilters(filters) {
+    var next = {};
+    ["q", "year", "family", "city", "editoria", "scope", "from", "to"].forEach(function (key) {
+      if (filters && filters[key]) {
+        next[key] = String(filters[key]).trim();
+      }
+    });
+    return next;
+  }
+
+  function hasSearchFilters(filters) {
+    return Object.keys(cleanedSearchFilters(filters)).length > 0;
+  }
+
+  function searchHistorySignature(filters) {
+    return JSON.stringify(cleanedSearchFilters(filters));
+  }
+
+  function searchHistoryLabel(filters) {
+    var cleaned = cleanedSearchFilters(filters);
+    var pieces = [];
+    if (cleaned.q) pieces.push('"' + cleaned.q + '"');
+    if (cleaned.year) pieces.push(cleaned.year);
+    if (cleaned.city) pieces.push(cleaned.city);
+    if (cleaned.family) pieces.push(cleaned.family);
+    if (cleaned.editoria) pieces.push(cleaned.editoria);
+    return pieces.join(" | ") || "Busca geral";
+  }
+
+  function readSearchHistory() {
+    if (!storageAvailable()) return [];
+    try {
+      var raw = window.localStorage.getItem(searchHistoryStorageKey());
+      if (!raw) return [];
+      var parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function writeSearchHistory(items) {
+    if (!storageAvailable()) return false;
+    window.localStorage.setItem(searchHistoryStorageKey(), JSON.stringify(items || []));
+    return true;
+  }
+
+  function clearSearchHistory() {
+    if (!storageAvailable()) return false;
+    window.localStorage.removeItem(searchHistoryStorageKey());
+    return true;
+  }
+
+  function rememberSearch(filters, resultsCount) {
+    if (!hasSearchFilters(filters)) return readSearchHistory();
+    var signature = searchHistorySignature(filters);
+    var cleaned = cleanedSearchFilters(filters);
+    var history = readSearchHistory().filter(function (item) {
+      return item.signature !== signature;
+    });
+    history.unshift({
+      signature: signature,
+      label: searchHistoryLabel(cleaned),
+      filters: cleaned,
+      results_count: resultsCount,
+      saved_at: new Date().toISOString()
+    });
+    history = history.slice(0, 12);
+    writeSearchHistory(history);
+    return history;
+  }
+
+  function searchHistoryExport(history) {
+    return (history || []).map(function (item, index) {
+      var savedAt = item.saved_at ? formatAccessDate(String(item.saved_at).slice(0, 10)) : "n/a";
+      return [
+        (index + 1) + ". " + (item.label || "Busca"),
+        "Data: " + savedAt,
+        "Resultados: " + (item.results_count || 0),
+        "Link: " + searchUrl(item.filters || {}),
+        ""
+      ].join("\n");
+    }).join("\n");
+  }
+
+  function renderSearchHistory(history) {
+    if (!storageAvailable()) {
+      return "<div class='sidebar-card'><h3>Buscas salvas</h3><p class='panel-note'>Este navegador nao liberou armazenamento local. O historico de busca fica indisponivel aqui.</p></div>";
+    }
+
+    if (!history.length) {
+      return "<div class='sidebar-card'><h3>Buscas salvas</h3><p class='panel-note'>Quando a redacao rodar consultas por ano, cidade, fonte ou assunto, elas ficam guardadas aqui neste navegador.</p></div>";
+    }
+
+    return [
+      "<div class='sidebar-card'>",
+      "<h3>Buscas salvas</h3>",
+      "<ul class='search-history-list'>",
+      history.map(function (item) {
+        var savedAt = item.saved_at ? formatAccessDate(String(item.saved_at).slice(0, 10)) : "n/a";
+        return [
+          "<li>",
+          "<a href='" + searchUrl(item.filters || {}) + "'>",
+          "<strong>" + escapeHtml(item.label || "Busca") + "</strong>",
+          "<span>" + escapeHtml(savedAt) + " | " + escapeHtml(String(item.results_count || 0)) + " resultado(s)</span>",
+          "</a>",
+          "</li>"
+        ].join("");
+      }).join(""),
+      "</ul>",
+      "<div class='assistant-actions'>",
+      "<button class='assistant-button' type='button' id='search-history-clear'>Limpar historico</button>",
+      "<button class='assistant-button is-link' type='button' id='search-history-export'>Baixar TXT</button>",
+      "</div>",
+      "</div>"
+    ].join("");
   }
 
   function notebookPackage(entry) {
@@ -731,9 +880,25 @@
       .sort(function (a, b) { return a.localeCompare(b); });
   }
 
+  function archiveYearRecords() {
+    var merged = {};
+    (DATA.archive_years || []).forEach(function (item) {
+      if (!item || typeof item.year === "undefined") return;
+      merged[String(item.year)] = Object.assign({}, item);
+    });
+    (ARCHIVE.years || []).forEach(function (item) {
+      if (!item || typeof item.year === "undefined") return;
+      merged[String(item.year)] = Object.assign({}, merged[String(item.year)] || {}, item);
+    });
+
+    return Object.keys(merged)
+      .map(function (key) { return merged[key]; })
+      .sort(function (a, b) { return String(b.year).localeCompare(String(a.year)); });
+  }
+
   function archiveYearOptions() {
     var seen = {};
-    return ((DATA.archive_years || []).map(function (item) {
+    return (archiveYearRecords().map(function (item) {
       return String(item.year);
     }).concat(entries.map(entryYear)))
       .filter(function (value) {
@@ -748,7 +913,7 @@
   function archiveYearMeta(year) {
     var value = String(year || "").trim();
     if (!value) return null;
-    var found = (DATA.archive_years || []).find(function (item) {
+    var found = archiveYearRecords().find(function (item) {
       return String(item.year) === value;
     });
     return found || null;
@@ -932,7 +1097,7 @@
   }
 
   function renderArchiveYearBoard() {
-    var years = DATA.archive_years || [];
+    var years = archiveYearRecords();
     if (!years.length) return "";
 
     return [
@@ -1344,6 +1509,7 @@
     var editorias = uniqueFieldValues("editoria");
     var scopes = uniqueFieldValues("scope");
     var activeFilterCount = [filters.q, filters.year, filters.family, filters.city, filters.editoria, filters.scope, filters.from, filters.to].filter(Boolean).length;
+    var searchHistory = activeFilterCount ? rememberSearch(filters, results.length) : readSearchHistory();
     var cityCount = {};
     var editoriaCount = {};
     var familyCount = {};
@@ -1425,6 +1591,7 @@
       "</div>",
       "<aside class='note-stack'>",
       "<div class='sidebar-card'><h3>Arquivo historico</h3><p class='panel-note'>O PAUTEIRO! entra em modo de expansao para 2024, 2025 e 2026, com busca unica por toda a serie.</p>" + renderArchiveYearBoard() + "</div>",
+      renderSearchHistory(searchHistory),
       "<div class='sidebar-card'><h3>Cobertura municipal</h3><div class='panel-item'><span>Municipios mapeados</span><strong>" + escapeHtml(String(mappedCoverage.municipalities_total || 0)) + "</strong></div><div class='panel-item'><span>Diarios proprios confirmados</span><strong>" + escapeHtml(String(mappedCoverage.own_diary_confirmed || 0)) + "</strong></div><div class='panel-item'><span>Rota AGM</span><strong>" + escapeHtml(String(mappedCoverage.agm_default || 0)) + "</strong></div><div class='panel-item'><span>Carga 2026</span><strong>" + escapeHtml(String(mappedCoverage.loaded_municipalities_2026 || 0)) + " municipios</strong></div><p class='panel-note'>A cobertura agora parte de um catalogo com os 246 municipios goianos e separa a rota entre diario proprio confirmado e AGM padrao.</p></div>",
       (selectedCityMeta
         ? "<div class='sidebar-card'><h3>Rota de " + escapeHtml(selectedCityMeta.name) + "</h3><div class='panel-item'><span>Diario-base</span><strong>" + escapeHtml(selectedCityMeta.diary_family) + "</strong></div><div class='panel-item'><span>Carga 2025</span><strong>" + escapeHtml(String(selectedCityMeta.loaded_entries_2025 || 0)) + "</strong></div><div class='panel-item'><span>Carga 2026</span><strong>" + escapeHtml(String(selectedCityMeta.loaded_entries_2026 || 0)) + "</strong></div><p class='panel-note'>" + escapeHtml(selectedCityMeta.note || "municipio mapeado na cobertura") + "</p></div>"
@@ -1438,6 +1605,21 @@
       "</aside>",
       "</section>"
     ].join("");
+
+    var clearHistoryButton = root.querySelector("#search-history-clear");
+    if (clearHistoryButton) {
+      clearHistoryButton.addEventListener("click", function () {
+        clearSearchHistory();
+        renderSearchView();
+      });
+    }
+
+    var exportHistoryButton = root.querySelector("#search-history-export");
+    if (exportHistoryButton) {
+      exportHistoryButton.addEventListener("click", function () {
+        downloadTextFile("pauteiro-buscas-salvas.txt", searchHistoryExport(readSearchHistory()));
+      });
+    }
   }
 
   function hasAgendaSignal(entry) {
