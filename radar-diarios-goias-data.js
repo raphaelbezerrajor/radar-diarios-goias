@@ -18,8 +18,9 @@ window.RADAR_GO_DATA = {
     priority_fronts: [
       "TJGO com leitura pesada do DJE e atos derivados",
       "MPGO com inqueritos, recomendacoes, TACs e arquivamentos",
-      "AGM para municipios sem diario proprio",
-      "Diarios municipais proprios e atos do Estado"
+      "Diario Oficial do Estado com DOE, SES, SSP e autarquias",
+      "Goiania / Sileg com nomeacoes, decretos, contratos e compras",
+      "AGM e diarios municipais proprios para os 246 municipios"
     ]
   },
   evaluated_units: 54,
@@ -51,6 +52,11 @@ window.RADAR_GO_DATA = {
       front: "DOE / ABC",
       status: "priority",
       note: "notificacoes, ressarcimento, dano ao erario, contratos e atos da SES"
+    },
+    {
+      front: "Goiania / Sileg",
+      status: "priority",
+      note: "nomeacoes, decretos, contratos, jetons, comissoes e estrutura de gestao"
     },
     {
       front: "MPGO",

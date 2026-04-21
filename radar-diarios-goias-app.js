@@ -1074,7 +1074,7 @@
 
     return [
       "<section class='news-section' id='analise-2026'>",
-      "<div class='section-head'><div><p class='section-kicker'>Arquivo editorial</p><h2>Da rodada diaria ao acervo 2024-2026</h2></div><p class='section-intro'>A home deixa de olhar so para abril e passa a assumir a expansao historica. Hoje, a carga publica segue preenchida ate " + escapeHtml(formatAccessDate(DATA.cutoff_date)) + ", mas a estrutura ja foi aberta para 2024, 2025 e 2026 inteiro, com prioridade alta para TJGO, MPGO e municipios.</p></div>",
+      "<div class='section-head'><div><p class='section-kicker'>Arquivo editorial</p><h2>Da rodada diaria ao acervo 2024-2026</h2></div><p class='section-intro'>A home deixa de olhar so para abril e passa a assumir a expansao historica. Hoje, a carga publica segue preenchida ate " + escapeHtml(formatAccessDate(DATA.cutoff_date)) + ", mas a estrutura ja foi aberta para 2024, 2025 e 2026 inteiro, com prioridade alta para TJGO, MPGO, Goiania, Estado e municipios.</p></div>",
       "<div class='year-analysis-grid'>",
       "<div class='sidebar-card'><h3>Leitura do ano</h3><div class='metrics-grid'>" +
         metricCard("Ano", DATA.year) +
@@ -1086,7 +1086,7 @@
         metricCard("Editoria lider", topGroupLabel("editoria")) +
       "</div></div>",
       "<div class='sidebar-card'><h3>Cobertura mes a mes</h3><p class='panel-note'>Os meses abertos ja aparecem no radar para receber ingestao assim que entrarem no fluxo. Abril segue como base publica preenchida nesta versao.</p>" + renderCoverageBoard() + "</div>",
-      "<div class='sidebar-card'><h3>Cobertura alvo</h3><div class='panel-item'><span>Primeira pauta</span><strong>" + escapeHtml(earliestEntry ? formatAccessDate(earliestEntry.date) : "n/a") + "</strong></div><div class='panel-item'><span>Ultima pauta</span><strong>" + escapeHtml(latestEntry ? formatAccessDate(latestEntry.date) : "n/a") + "</strong></div><div class='panel-item'><span>Meta territorial</span><strong>" + escapeHtml(String(coverageGoal.municipalities_total || 0)) + " municipios</strong></div><p class='panel-note'>Prioridades imediatas: " + escapeHtml(priorityFronts || "TJGO, MPGO e municipios") + ".</p>" + renderArchiveYearBoard() + "</div>",
+      "<div class='sidebar-card'><h3>Cobertura alvo</h3><div class='panel-item'><span>Primeira pauta</span><strong>" + escapeHtml(earliestEntry ? formatAccessDate(earliestEntry.date) : "n/a") + "</strong></div><div class='panel-item'><span>Ultima pauta</span><strong>" + escapeHtml(latestEntry ? formatAccessDate(latestEntry.date) : "n/a") + "</strong></div><div class='panel-item'><span>Meta territorial</span><strong>" + escapeHtml(String(coverageGoal.municipalities_total || 0)) + " municipios</strong></div><p class='panel-note'>Prioridades imediatas: " + escapeHtml(priorityFronts || "TJGO, MPGO, Goiania, Estado e municipios") + ".</p>" + renderArchiveYearBoard() + "</div>",
       "</div>",
       "</section>"
     ].join("");
@@ -1432,7 +1432,7 @@
       (selectedYearMeta
         ? "<div class='sidebar-card'><h3>Status de " + escapeHtml(String(selectedYearMeta.year)) + "</h3><p class='panel-note'>" + escapeHtml(selectedYearMeta.note || "arquivo em preparacao") + ".</p><p class='muted'>A navegacao por ano continua funcionando; quando a camada analitica nao estiver fechada, a pesquisa se apoia no documento original, no marcador e na triagem por assunto.</p></div>"
         : ""),
-      "<div class='sidebar-card'><h3>Meta de cobertura</h3><div class='panel-item'><span>Municipios alvo</span><strong>" + escapeHtml(String((DATA.coverage_goal && DATA.coverage_goal.municipalities_total) || 0)) + "</strong></div><div class='panel-item'><span>Prioridade</span><strong>TJGO + MPGO</strong></div><p class='panel-note'>" + escapeHtml(((DATA.coverage_goal && DATA.coverage_goal.target_scope) || "todos os municipios goianos").replace(/^./, function (letter) { return letter.toUpperCase(); })) + ".</p></div>",
+      "<div class='sidebar-card'><h3>Meta de cobertura</h3><div class='panel-item'><span>Municipios alvo</span><strong>" + escapeHtml(String((DATA.coverage_goal && DATA.coverage_goal.municipalities_total) || 0)) + "</strong></div><div class='panel-item'><span>Prioridade</span><strong>TJGO + MPGO + Goiania + Estado</strong></div><p class='panel-note'>" + escapeHtml(((DATA.coverage_goal && DATA.coverage_goal.target_scope) || "todos os municipios goianos").replace(/^./, function (letter) { return letter.toUpperCase(); })) + ".</p></div>",
       "<div class='note-card'><h3>Como perguntar</h3><ul><li>Use municipio + tema + ano: Rio Verde contratos saude 2025.</li><li>Use orgao + tipo de ato: MPGO recomendacao, TJGO edital, AGM licitacao.</li><li>Use recorte amplo para varrer o arquivo: medicacao, nomeacao, jeton, contrato, inquerito.</li></ul></div>",
       "<div class='note-card'><h3>Ponto editorial</h3><p class='muted'>Resultado de busca nao substitui leitura documental. Quando o ato vier sem lista, anexo ou corpo integral, a mesa hibrida sinaliza a segunda busca antes da manchete.</p></div>",
       "</aside>",
