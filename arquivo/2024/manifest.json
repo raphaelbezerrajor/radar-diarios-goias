@@ -5,11 +5,17 @@
   "entry_count": 0,
   "loaded_months": [],
   "sources_priority": [
-    "TJGO",
-    "MPGO",
-    "Estado de Goias",
     "Goiania / Sileg",
-    "AGM / Municipios"
+    "Estado de Goias",
+    "MPGO",
+    "Municipios / AGM e diarios proprios"
   ],
-  "note": "bucket anual aberto para ingestao historica."
+  "sources": {
+    "goiania": { "status": "ready", "entry_count": 0, "loaded_months": [] },
+    "estado": { "status": "ready", "entry_count": 0, "loaded_months": [] },
+    "mpgo": { "status": "ready", "entry_count": 0, "loaded_months": [] },
+    "municipios": { "status": "ready", "entry_count": 0, "loaded_months": [] },
+    "tjgo": { "status": "paused", "entry_count": 0, "loaded_months": [] }
+  },
+  "note": "bucket anual aberto para ingestao historica com TJGO pausado."
 }

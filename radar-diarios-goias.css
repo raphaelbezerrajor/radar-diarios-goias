@@ -721,6 +721,40 @@ img {
   color: var(--muted);
 }
 
+.ingestion-list,
+.year-source-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.ingestion-list li,
+.year-source-list li {
+  color: #2a2925;
+}
+
+.ingestion-list span {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.ingestion-paused {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.ingestion-paused ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
 .search-results-deck {
   display: grid;
   gap: 16px;

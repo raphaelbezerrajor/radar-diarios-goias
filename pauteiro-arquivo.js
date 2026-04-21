@@ -4,6 +4,51 @@ window.PAUTEIRO_ARCHIVE = {
     mode: "localStorage",
     key: "pauteiro:search-history"
   },
+  ingestion: {
+    active_order: [
+      {
+        id: "goiania",
+        label: "Goiania / Sileg",
+        status: "active",
+        priority: 1,
+        years: [2025, 2026],
+        note: "Primeira frente de ingestao para nomeacoes, decretos, contratos, jetons e compras."
+      },
+      {
+        id: "estado",
+        label: "Estado de Goias / DOE",
+        status: "active",
+        priority: 2,
+        years: [2025, 2026],
+        note: "Segunda frente de ingestao para DOE, SES, SSP e autarquias."
+      },
+      {
+        id: "mpgo",
+        label: "MPGO / DOMP",
+        status: "active",
+        priority: 3,
+        years: [2025, 2026],
+        note: "Terceira frente para inqueritos, recomendacoes, TACs, ACPs e arquivamentos."
+      },
+      {
+        id: "municipios",
+        label: "Municipios / AGM e diarios proprios",
+        status: "active",
+        priority: 4,
+        years: [2025, 2026],
+        note: "Quarta frente para escalar a cobertura municipal dos 246 municipios."
+      }
+    ],
+    paused: [
+      {
+        id: "tjgo",
+        label: "TJGO / DJE",
+        status: "paused",
+        years: [2025, 2026],
+        note: "Fonte mapeada, mas pausada ate avaliacao editorial mais firme do material do DJE."
+      }
+    ]
+  },
   years: [
     {
       year: 2024,
@@ -35,18 +80,39 @@ window.PAUTEIRO_ARCHIVE = {
       year: 2024,
       entries: [],
       loaded_months: [],
+      sources: {
+        goiania: { status: "ready", entry_count: 0, loaded_months: [] },
+        estado: { status: "ready", entry_count: 0, loaded_months: [] },
+        mpgo: { status: "ready", entry_count: 0, loaded_months: [] },
+        municipios: { status: "ready", entry_count: 0, loaded_months: [] },
+        tjgo: { status: "paused", entry_count: 0, loaded_months: [] }
+      },
       note: "ano estruturado para ingestao"
     },
     "2025": {
       year: 2025,
       entries: [],
       loaded_months: [],
+      sources: {
+        goiania: { status: "ready", entry_count: 0, loaded_months: [] },
+        estado: { status: "ready", entry_count: 0, loaded_months: [] },
+        mpgo: { status: "ready", entry_count: 0, loaded_months: [] },
+        municipios: { status: "ready", entry_count: 0, loaded_months: [] },
+        tjgo: { status: "paused", entry_count: 0, loaded_months: [] }
+      },
       note: "ano estruturado para ingestao"
     },
     "2026": {
       year: 2026,
       entries: [],
       loaded_months: ["2026-04"],
+      sources: {
+        goiania: { status: "active", entry_count: 1, loaded_months: ["2026-04"] },
+        estado: { status: "active", entry_count: 5, loaded_months: ["2026-04"] },
+        mpgo: { status: "ready", entry_count: 0, loaded_months: [] },
+        municipios: { status: "active", entry_count: 8, loaded_months: ["2026-04"] },
+        tjgo: { status: "paused", entry_count: 10, loaded_months: ["2026-04"] }
+      },
       note: "as entradas factuais seguem em radar-diarios-goias-data.js ate a consolidacao do bucket anual"
     }
   }

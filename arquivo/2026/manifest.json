@@ -7,11 +7,17 @@
     "2026-04"
   ],
   "sources_priority": [
-    "TJGO",
-    "MPGO",
-    "Estado de Goias",
     "Goiania / Sileg",
-    "AGM / Municipios"
+    "Estado de Goias",
+    "MPGO",
+    "Municipios / AGM e diarios proprios"
   ],
-  "note": "abril de 2026 carregado na base principal enquanto o bucket anual e consolidado."
+  "sources": {
+    "goiania": { "status": "active", "entry_count": 1, "loaded_months": ["2026-04"] },
+    "estado": { "status": "active", "entry_count": 5, "loaded_months": ["2026-04"] },
+    "mpgo": { "status": "ready", "entry_count": 0, "loaded_months": [] },
+    "municipios": { "status": "active", "entry_count": 8, "loaded_months": ["2026-04"] },
+    "tjgo": { "status": "paused", "entry_count": 10, "loaded_months": ["2026-04"] }
+  },
+  "note": "abril de 2026 carregado na base principal enquanto o bucket anual e consolidado; TJGO fica pausado nesta rodada."
 }

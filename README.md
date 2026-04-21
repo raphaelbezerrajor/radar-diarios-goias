@@ -45,6 +45,7 @@ flowchart LR
 - catalogo municipal com os 246 municipios goianos e separacao entre diario proprio confirmado e rota AGM;
 - busca por municipio, ano, editoria, tipo de diario e assunto;
 - historico de busca salvo localmente no navegador da redacao;
+- fila operacional de ingestao em: Goiania, Estado, MPGO e Municipios; TJGO fica pausado nesta rodada;
 - calendario por dia;
 - cronologia;
 - pagina diaria;

@@ -16,11 +16,11 @@
     "municipalities_total": 246,
     "target_scope": "todos os municipios goianos, MPGO, TJGO, Estado e diarios proprios",
     "priority_fronts": [
-      "TJGO com leitura pesada do DJE e atos derivados",
-      "MPGO com inqueritos, recomendacoes, TACs e arquivamentos",
-      "Diario Oficial do Estado com DOE, SES, SSP e autarquias",
       "Goiania / Sileg com nomeacoes, decretos, contratos e compras",
-      "AGM e diarios municipais proprios para os 246 municipios"
+      "Diario Oficial do Estado com DOE, SES, SSP e autarquias",
+      "MPGO com inqueritos, recomendacoes, TACs e arquivamentos",
+      "AGM e diarios municipais proprios para os 246 municipios",
+      "TJGO mapeado, mas pausado ate avaliacao editorial do DJE"
     ]
   },
   "evaluated_units": 54,
@@ -49,14 +49,14 @@
   ],
   "expansion_queue": [
     {
-      "front": "DOE / ABC",
-      "status": "priority",
-      "note": "notificacoes, ressarcimento, dano ao erario, contratos e atos da SES"
-    },
-    {
       "front": "Goiania / Sileg",
       "status": "priority",
       "note": "nomeacoes, decretos, contratos, jetons, comissoes e estrutura de gestao"
+    },
+    {
+      "front": "DOE / ABC",
+      "status": "priority",
+      "note": "notificacoes, ressarcimento, dano ao erario, contratos e atos da SES"
     },
     {
       "front": "MPGO",
@@ -64,14 +64,14 @@
       "note": "inqueritos, recomendacoes, TACs, ACPs e arquivamentos relevantes"
     },
     {
-      "front": "TJGO",
+      "front": "Municipios",
       "status": "priority",
-      "note": "liminares, colegiados, bloqueios, custodia e decisoes com impacto publico"
+      "note": "todos os 246 municipios goianos, com diarios proprios e AGM"
     },
     {
-      "front": "Municipios",
-      "status": "open",
-      "note": "todos os 246 municipios goianos, com diarios proprios e AGM"
+      "front": "TJGO",
+      "status": "paused",
+      "note": "fonte mapeada, mas fora da rodada atual ate avaliacao editorial do DJE"
     }
   ],
   "alert_terms": [
