@@ -706,6 +706,54 @@
     ].join("");
   }
 
+  function renderIngestionQueue() {
+    var ingestion = archiveIngestion();
+    var activeOrder = ingestion.active_order || [];
+    var paused = ingestion.paused || [];
+    if (!activeOrder.length && !paused.length) return "";
+
+    return [
+      "<div class='sidebar-card'>",
+      "<h3>Fila de ingestao</h3>",
+      (activeOrder.length
+        ? "<ol class='ingestion-list'>" + activeOrder.map(function (item) {
+            return "<li><strong>" + escapeHtml(item.label) + "</strong><span>" + escapeHtml(item.note || "") + "</span></li>";
+          }).join("") + "</ol>"
+        : ""),
+      (paused.length
+        ? "<div class='ingestion-paused'><strong>Pausado agora:</strong><ul>" + paused.map(function (item) {
+            return "<li>" + escapeHtml(item.label) + " | " + escapeHtml(item.note || "") + "</li>";
+          }).join("") + "</ul></div>"
+        : ""),
+      "</div>"
+    ].join("");
+  }
+
+  function renderYearSourceStatus(year) {
+    var bucket = archiveYearBucket(year);
+    if (!bucket || !bucket.sources) return "";
+    var labels = {
+      goiania: "Goiania / Sileg",
+      estado: "Estado / DOE",
+      mpgo: "MPGO",
+      municipios: "Municipios",
+      tjgo: "TJGO"
+    };
+    var order = ["goiania", "estado", "mpgo", "municipios", "tjgo"];
+    return [
+      "<div class='sidebar-card'>",
+      "<h3>Fontes em " + escapeHtml(String(year)) + "</h3>",
+      "<ul class='year-source-list'>",
+      order.map(function (key) {
+        var item = bucket.sources[key];
+        if (!item) return "";
+        return "<li><div class='panel-item'><span>" + escapeHtml(labels[key] || key) + "</span><strong>" + escapeHtml(item.status || "mapped") + "</strong></div><p class='panel-note'>" + escapeHtml(String(item.entry_count || 0)) + " entrada(s) carregada(s)</p></li>";
+      }).join(""),
+      "</ul>",
+      "</div>"
+    ].join("");
+  }
+
   function notebookPackage(entry) {
     var pageText = getPageText(entry);
     var pageImageUrl = getPageImageUrl(entry);
@@ -917,6 +965,16 @@
       return String(item.year) === value;
     });
     return found || null;
+  }
+
+  function archiveIngestion() {
+    return ARCHIVE.ingestion || {};
+  }
+
+  function archiveYearBucket(year) {
+    var value = String(year || "").trim();
+    if (!value) return null;
+    return (ARCHIVE.year_buckets && ARCHIVE.year_buckets[value]) || null;
   }
 
   function coverageSummary() {
@@ -1239,7 +1297,7 @@
 
     return [
       "<section class='news-section' id='analise-2026'>",
-      "<div class='section-head'><div><p class='section-kicker'>Arquivo editorial</p><h2>Da rodada diaria ao acervo 2024-2026</h2></div><p class='section-intro'>A home deixa de olhar so para abril e passa a assumir a expansao historica. Hoje, a carga publica segue preenchida ate " + escapeHtml(formatAccessDate(DATA.cutoff_date)) + ", mas a estrutura ja foi aberta para 2024, 2025 e 2026 inteiro, com prioridade alta para TJGO, MPGO, Goiania, Estado e municipios.</p></div>",
+      "<div class='section-head'><div><p class='section-kicker'>Arquivo editorial</p><h2>Da rodada diaria ao acervo 2024-2026</h2></div><p class='section-intro'>A home deixa de olhar so para abril e passa a assumir a expansao historica. Hoje, a carga publica segue preenchida ate " + escapeHtml(formatAccessDate(DATA.cutoff_date)) + ", mas a estrutura ja foi aberta para 2024, 2025 e 2026 inteiro, com foco imediato em Goiania, Estado, MPGO e municipios. O TJGO segue mapeado, mas pausado nesta rodada.</p></div>",
       "<div class='year-analysis-grid'>",
       "<div class='sidebar-card'><h3>Leitura do ano</h3><div class='metrics-grid'>" +
         metricCard("Ano", DATA.year) +
@@ -1251,7 +1309,7 @@
         metricCard("Editoria lider", topGroupLabel("editoria")) +
       "</div></div>",
       "<div class='sidebar-card'><h3>Cobertura mes a mes</h3><p class='panel-note'>Os meses abertos ja aparecem no radar para receber ingestao assim que entrarem no fluxo. Abril segue como base publica preenchida nesta versao.</p>" + renderCoverageBoard() + "</div>",
-      "<div class='sidebar-card'><h3>Cobertura alvo</h3><div class='panel-item'><span>Primeira pauta</span><strong>" + escapeHtml(earliestEntry ? formatAccessDate(earliestEntry.date) : "n/a") + "</strong></div><div class='panel-item'><span>Ultima pauta</span><strong>" + escapeHtml(latestEntry ? formatAccessDate(latestEntry.date) : "n/a") + "</strong></div><div class='panel-item'><span>Meta territorial</span><strong>" + escapeHtml(String(coverageGoal.municipalities_total || 0)) + " municipios</strong></div><p class='panel-note'>Prioridades imediatas: " + escapeHtml(priorityFronts || "TJGO, MPGO, Goiania, Estado e municipios") + ".</p>" + renderArchiveYearBoard() + "</div>",
+      "<div class='sidebar-card'><h3>Cobertura alvo</h3><div class='panel-item'><span>Primeira pauta</span><strong>" + escapeHtml(earliestEntry ? formatAccessDate(earliestEntry.date) : "n/a") + "</strong></div><div class='panel-item'><span>Ultima pauta</span><strong>" + escapeHtml(latestEntry ? formatAccessDate(latestEntry.date) : "n/a") + "</strong></div><div class='panel-item'><span>Meta territorial</span><strong>" + escapeHtml(String(coverageGoal.municipalities_total || 0)) + " municipios</strong></div><p class='panel-note'>Prioridades imediatas: " + escapeHtml(priorityFronts || "Goiania, Estado, MPGO e municipios; TJGO pausado") + ".</p>" + renderArchiveYearBoard() + "</div>",
       "</div>",
       "</section>"
     ].join("");
@@ -1592,6 +1650,8 @@
       "<aside class='note-stack'>",
       "<div class='sidebar-card'><h3>Arquivo historico</h3><p class='panel-note'>O PAUTEIRO! entra em modo de expansao para 2024, 2025 e 2026, com busca unica por toda a serie.</p>" + renderArchiveYearBoard() + "</div>",
       renderSearchHistory(searchHistory),
+      renderIngestionQueue(),
+      (selectedYearMeta ? renderYearSourceStatus(selectedYearMeta.year) : ""),
       "<div class='sidebar-card'><h3>Cobertura municipal</h3><div class='panel-item'><span>Municipios mapeados</span><strong>" + escapeHtml(String(mappedCoverage.municipalities_total || 0)) + "</strong></div><div class='panel-item'><span>Diarios proprios confirmados</span><strong>" + escapeHtml(String(mappedCoverage.own_diary_confirmed || 0)) + "</strong></div><div class='panel-item'><span>Rota AGM</span><strong>" + escapeHtml(String(mappedCoverage.agm_default || 0)) + "</strong></div><div class='panel-item'><span>Carga 2026</span><strong>" + escapeHtml(String(mappedCoverage.loaded_municipalities_2026 || 0)) + " municipios</strong></div><p class='panel-note'>A cobertura agora parte de um catalogo com os 246 municipios goianos e separa a rota entre diario proprio confirmado e AGM padrao.</p></div>",
       (selectedCityMeta
         ? "<div class='sidebar-card'><h3>Rota de " + escapeHtml(selectedCityMeta.name) + "</h3><div class='panel-item'><span>Diario-base</span><strong>" + escapeHtml(selectedCityMeta.diary_family) + "</strong></div><div class='panel-item'><span>Carga 2025</span><strong>" + escapeHtml(String(selectedCityMeta.loaded_entries_2025 || 0)) + "</strong></div><div class='panel-item'><span>Carga 2026</span><strong>" + escapeHtml(String(selectedCityMeta.loaded_entries_2026 || 0)) + "</strong></div><p class='panel-note'>" + escapeHtml(selectedCityMeta.note || "municipio mapeado na cobertura") + "</p></div>"
@@ -1599,7 +1659,7 @@
       (selectedYearMeta
         ? "<div class='sidebar-card'><h3>Status de " + escapeHtml(String(selectedYearMeta.year)) + "</h3><p class='panel-note'>" + escapeHtml(selectedYearMeta.note || "arquivo em preparacao") + ".</p><p class='muted'>A navegacao por ano continua funcionando; quando a camada analitica nao estiver fechada, a pesquisa se apoia no documento original, no marcador e na triagem por assunto.</p></div>"
         : ""),
-      "<div class='sidebar-card'><h3>Meta de cobertura</h3><div class='panel-item'><span>Municipios alvo</span><strong>" + escapeHtml(String((DATA.coverage_goal && DATA.coverage_goal.municipalities_total) || 0)) + "</strong></div><div class='panel-item'><span>Prioridade</span><strong>TJGO + MPGO + Goiania + Estado</strong></div><p class='panel-note'>" + escapeHtml(((DATA.coverage_goal && DATA.coverage_goal.target_scope) || "todos os municipios goianos").replace(/^./, function (letter) { return letter.toUpperCase(); })) + ".</p></div>",
+      "<div class='sidebar-card'><h3>Meta de cobertura</h3><div class='panel-item'><span>Municipios alvo</span><strong>" + escapeHtml(String((DATA.coverage_goal && DATA.coverage_goal.municipalities_total) || 0)) + "</strong></div><div class='panel-item'><span>Prioridade</span><strong>Goiania + Estado + MPGO + Municipios</strong></div><p class='panel-note'>" + escapeHtml(((DATA.coverage_goal && DATA.coverage_goal.target_scope) || "todos os municipios goianos").replace(/^./, function (letter) { return letter.toUpperCase(); })) + ".</p></div>",
       "<div class='note-card'><h3>Como perguntar</h3><ul><li>Use municipio + tema + ano: Rio Verde contratos saude 2025.</li><li>Use orgao + tipo de ato: MPGO recomendacao, TJGO edital, AGM licitacao.</li><li>Use recorte amplo para varrer o arquivo: medicacao, nomeacao, jeton, contrato, inquerito.</li></ul></div>",
       "<div class='note-card'><h3>Ponto editorial</h3><p class='muted'>Resultado de busca nao substitui leitura documental. Quando o ato vier sem lista, anexo ou corpo integral, a mesa hibrida sinaliza a segunda busca antes da manchete.</p></div>",
       "</aside>",
