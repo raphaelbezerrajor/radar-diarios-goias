@@ -274,6 +274,61 @@
     return entry.page_image_url || entry.page_snapshot_url || entry.document_image_url || "";
   }
 
+  function sourceOriginCode(entry) {
+    if (entry && entry.source_origin) return entry.source_origin;
+
+    var label = normalizeSearchText((entry && entry.source_label) || "");
+    var note = normalizeSearchText((entry && entry.source_note) || "");
+    var url = String((entry && entry.source_url) || "").toLowerCase();
+    var title = normalizeSearchText((entry && entry.title) || "");
+    var tag = normalizeSearchText((entry && entry.tag) || "");
+
+    if (
+      /sileg|diario oficial|diario municipal|agm|dom /.test(label) ||
+      /diario municipal|diario da justica|edicao \d|dom \d/.test(note) ||
+      /diario\.senadorcanedo|diariomunicipal\.com\.br\/agm|sileg\/dados\/legis/.test(url)
+    ) {
+      return "diario_bruto";
+    }
+
+    if (
+      /agencia de noticias|prefeitura de|noticia oficial/.test(label + " " + note) ||
+      /\/portal\/noticia\/|agencia-de-noticias|rio-verde-e-a-primeira-cidade/.test(url)
+    ) {
+      return "noticia_institucional";
+    }
+
+    if (
+      /goias\.gov\.br\/(saude|seguranca)\//.test(url) ||
+      /extrato|licitacao|pregao|contrato|decreto|portaria|ato/.test(title + " " + tag)
+    ) {
+      return "ato_espelhado";
+    }
+
+    return "origem_oficial";
+  }
+
+  function sourceOriginLabel(entry) {
+    var code = sourceOriginCode(entry);
+    if (code === "diario_bruto") return "Diario bruto";
+    if (code === "ato_espelhado") return "Ato oficial espelhado";
+    if (code === "noticia_institucional") return "Noticia institucional";
+    return "Origem oficial";
+  }
+
+  function sourceOriginNote(entry) {
+    if (entry && entry.source_origin_note) return entry.source_origin_note;
+    var code = sourceOriginCode(entry);
+    if (code === "diario_bruto") return "Leitura puxada da publicacao bruta do diario oficial.";
+    if (code === "ato_espelhado") return "Leitura puxada de pagina oficial do ato, fora da edicao bruta do diario.";
+    if (code === "noticia_institucional") return "Leitura puxada de noticia oficial do orgao, e nao da edicao bruta do diario.";
+    return "Origem oficial ainda sem classificacao mais fina.";
+  }
+
+  function renderSourceOriginBadge(entry) {
+    return "<span class='source-origin-badge is-" + escapeHtml(sourceOriginCode(entry).replace(/_/g, "-")) + "'>" + escapeHtml(sourceOriginLabel(entry)) + "</span>";
+  }
+
   function getPageText(entry) {
     return entry.page_text || entry.full_text || entry.document_text || entry.raw_text || entry.ocr_text || entry.page_excerpt || "";
   }
@@ -454,6 +509,7 @@
       "- Editoria: " + entry.editoria,
       "- Tipo de ato: " + entry.tag,
       "- Fonte: " + entry.source_label,
+      "- Procedencia: " + sourceOriginLabel(entry),
       "- Marcador: " + getDocumentMarker(entry),
       "- Data do documento: " + formatAccessDate(entry.date),
       "- Data de acesso: " + formatAccessDate(getAccessedAt(entry)),
@@ -616,7 +672,7 @@
 
   function cleanedSearchFilters(filters) {
     var next = {};
-    ["q", "year", "family", "city", "editoria", "scope", "from", "to"].forEach(function (key) {
+    ["q", "year", "family", "origin", "city", "editoria", "scope", "from", "to"].forEach(function (key) {
       if (filters && filters[key]) {
         next[key] = String(filters[key]).trim();
       }
@@ -639,6 +695,7 @@
     if (cleaned.year) pieces.push(cleaned.year);
     if (cleaned.city) pieces.push(cleaned.city);
     if (cleaned.family) pieces.push(cleaned.family);
+    if (cleaned.origin) pieces.push(cleaned.origin);
     if (cleaned.editoria) pieces.push(cleaned.editoria);
     return pieces.join(" | ") || "Busca geral";
   }
@@ -851,6 +908,7 @@
       "- Escopo: " + entry.scope,
       "- Tipo de ato: " + entry.tag,
       "- Fonte: " + entry.source_label,
+      "- Procedencia: " + sourceOriginLabel(entry),
       "- Marcador: " + getDocumentMarker(entry),
       "- Documento original: " + (getDocumentUrl(entry) || entry.source_url || "sem link cadastrado"),
       "- Data do ato: " + formatAccessDate(entry.date),
@@ -927,7 +985,7 @@
       dateMentions.length ? dateMentions.join(" | ") : "Sem nova data detectada na leitura cruzada.",
       "",
       "Fonte oficial:",
-      entry.source_label + " | " + getDocumentMarker(entry),
+      entry.source_label + " | " + sourceOriginLabel(entry) + " | " + getDocumentMarker(entry),
       getDocumentUrl(entry) || entry.source_url || "",
       "",
       "Instrucao para o chat final:",
@@ -1131,9 +1189,24 @@
       entryYear(entry),
       entry.source_label,
       entry.source_note,
+      sourceOriginLabel(entry),
+      sourceOriginNote(entry),
       getDocumentMarker(entry),
       getPageText(entry)
     ].join(" "));
+  }
+
+  function sourceOriginOptions() {
+    var seen = {};
+    return entries
+      .map(sourceOriginLabel)
+      .filter(function (value) {
+        if (!value) return false;
+        if (seen[value]) return false;
+        seen[value] = true;
+        return true;
+      })
+      .sort(function (a, b) { return a.localeCompare(b); });
   }
 
   function normalizeFilterDate(value) {
@@ -1146,6 +1219,7 @@
       q: (params.get("q") || "").trim(),
       year: (params.get("year") || "").trim(),
       family: (params.get("family") || "").trim(),
+      origin: (params.get("origin") || "").trim(),
       city: (params.get("city") || "").trim(),
       editoria: (params.get("editoria") || "").trim(),
       scope: (params.get("scope") || "").trim(),
@@ -1166,6 +1240,7 @@
       .map(function (entry) {
         if (filters.year && entryYear(entry) !== filters.year) return null;
         if (filters.family && sourceFamily(entry) !== filters.family) return null;
+        if (filters.origin && sourceOriginLabel(entry) !== filters.origin) return null;
         if (filters.city && normalizeSearchText(entry.city) !== normalizeSearchText(filters.city)) return null;
         if (filters.editoria && entry.editoria !== filters.editoria) return null;
         if (filters.scope && entry.scope !== filters.scope) return null;
@@ -1197,6 +1272,7 @@
 
         if (filters.year) score += 4;
         if (filters.family) score += 4;
+        if (filters.origin) score += 3;
         if (filters.city) score += 4;
         if (filters.editoria) score += 3;
         if (filters.scope) score += 2;
@@ -1471,7 +1547,7 @@
 
   function mergeSearchFilters(base, extra) {
     var next = {};
-    ["q", "year", "family", "city", "editoria", "scope", "from", "to"].forEach(function (key) {
+    ["q", "year", "family", "origin", "city", "editoria", "scope", "from", "to"].forEach(function (key) {
       if (base && base[key]) next[key] = base[key];
     });
     Object.keys(extra || {}).forEach(function (key) {
@@ -1792,12 +1868,14 @@
     var cityBuckets = summarizeSearchBuckets(results, function (entry) { return entry.city; }, 5);
     var editoriaBuckets = summarizeSearchBuckets(results, function (entry) { return entry.editoria; }, 5);
     var familyBuckets = summarizeSearchBuckets(results, function (entry) { return sourceFamily(entry); }, 5);
+    var originBuckets = summarizeSearchBuckets(results, function (entry) { return sourceOriginLabel(entry); }, 5);
 
     return [
       "<section class='search-organizer-grid'>",
       renderSearchBucketCard("Municipios", "Quem puxa esse recorte territorialmente.", cityBuckets, filters, "city"),
       renderSearchBucketCard("Editorias", "Assuntos dominantes para dividir a cobertura.", editoriaBuckets, filters, "editoria"),
       renderSearchBucketCard("Fontes", "De onde sai o grosso documental desta busca.", familyBuckets, filters, "family"),
+      renderSearchBucketCard("Procedencia", "Como esse material entrou na base publica.", originBuckets, filters, "origin"),
       renderSearchSignalCard(results),
       "</section>"
     ].join("");
@@ -1811,11 +1889,11 @@
 
     return [
       "<article class='search-compact-item'>",
-      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(sourceFamily(entry)) + "</span></div>",
+      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span>" + renderSourceOriginBadge(entry) + "<span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(sourceFamily(entry)) + "</span></div>",
       "<h3><a href='" + storyUrl(entry) + "'>" + escapeHtml(entry.title) + "</a></h3>",
       "<p class='story-sublead'>" + escapeHtml(entry.line || getSublead(entry)) + "</p>",
       matches,
-      "<small>Marcador: " + escapeHtml(getDocumentMarker(entry)) + " | Acesso: " + escapeHtml(formatAccessDate(getAccessedAt(entry))) + "</small>",
+      "<small>Marcador: " + escapeHtml(getDocumentMarker(entry)) + " | Procedencia: " + escapeHtml(sourceOriginLabel(entry)) + " | Acesso: " + escapeHtml(formatAccessDate(getAccessedAt(entry))) + "</small>",
       "<div class='assistant-strip'>",
       "<a class='assistant-link' href='" + storyUrl(entry) + "'>Abrir pauta</a>",
       "<a class='assistant-link' href='" + dayUrl(entry.date) + "'>Abrir dia</a>",
@@ -1834,7 +1912,7 @@
       "<article class='search-result-card" + (large ? " is-lead" : "") + "'>",
       "<a class='search-result-media' href='" + storyUrl(entry) + "'>" + renderImage(entry, "search-result-image") + "</a>",
       "<div class='search-result-body'>",
-      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(sourceFamily(entry)) + "</span><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span></div>",
+      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span>" + renderSourceOriginBadge(entry) + "<span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(sourceFamily(entry)) + "</span><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span></div>",
       "<h2><a href='" + storyUrl(entry) + "'>" + escapeHtml(entry.title) + "</a></h2>",
       "<p class='story-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
       "<p class='story-lead'>" + escapeHtml(getLead(entry)) + "</p>",
@@ -1842,6 +1920,7 @@
       matches,
       "<p class='search-match-copy'>Marcador: " + escapeHtml(getDocumentMarker(entry)) + " | Acesso: " + escapeHtml(formatAccessDate(getAccessedAt(entry))) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "' target='_blank' rel='noopener noreferrer'>" + escapeHtml(entry.source_label) + "</a></p>",
+      "<p class='story-origin'><strong>Procedencia:</strong> " + renderSourceOriginBadge(entry) + "<span class='source-origin-copy'>" + escapeHtml(sourceOriginNote(entry)) + "</span></p>",
       renderDocumentTools(entry),
       "<div class='assistant-strip'>",
       "<a class='assistant-link' href='" + storyUrl(entry) + "'>Abrir pauta</a>",
@@ -1881,10 +1960,11 @@
     var mappedCoverage = coverageSummary();
     var years = archiveYearOptions();
     var families = sourceFamilyOptions();
+    var origins = sourceOriginOptions();
     var cities = cityOptions();
     var editorias = uniqueFieldValues("editoria");
     var scopes = uniqueFieldValues("scope");
-    var activeFilterCount = [filters.q, filters.year, filters.family, filters.city, filters.editoria, filters.scope, filters.from, filters.to].filter(Boolean).length;
+    var activeFilterCount = [filters.q, filters.year, filters.family, filters.origin, filters.city, filters.editoria, filters.scope, filters.from, filters.to].filter(Boolean).length;
     var searchHistory = activeFilterCount ? rememberSearch(filters, results.length) : readSearchHistory();
     var cityCount = {};
     var editoriaCount = {};
@@ -1901,8 +1981,8 @@
       : selectedYearMeta && filters.year && selectedYearMeta.status !== "active"
       ? "O arquivo de " + filters.year + " entra como recorte consultavel. Nesse ano, a camada de analise editorial ainda esta pendente em parte da serie, entao a busca precisa priorizar documento, marcador e leitura direta da fonte."
       : activeFilterCount
-      ? "A busca cruza municipio, ano, familia de fonte, periodo e assunto sobre o arquivo do PAUTEIRO!. Hoje, o preenchimento factual publico vai ate " + formatAccessDate(DATA.cutoff_date) + "."
-      : "Abra uma busca geral por municipio, ano, tipo de diario, editoria ou assunto. A estrutura ja esta pronta para 2024, 2025 e 2026; a base publica atual cobre ate " + formatAccessDate(DATA.cutoff_date) + ".";
+      ? "A busca cruza municipio, ano, familia de fonte, procedencia, periodo e assunto sobre o arquivo do PAUTEIRO!. Hoje, o preenchimento factual publico vai ate " + formatAccessDate(DATA.cutoff_date) + "."
+      : "Abra uma busca geral por municipio, ano, tipo de diario, procedencia, editoria ou assunto. A estrutura ja esta pronta para 2024, 2025 e 2026; a base publica atual cobre ate " + formatAccessDate(DATA.cutoff_date) + ".";
 
     document.title = DATA.site_title + " | Busca";
     root.className = "wrap page-shell";
@@ -1938,6 +2018,7 @@
       "<label class='filter-field filter-field-wide'><span>Assunto ou pergunta</span><input type='search' name='q' value='" + escapeHtml(filters.q) + "' placeholder='Ex.: MPGO inqueritos ambientais, TJGO custodia, Goiania nomeacoes'></label>",
       "<label class='filter-field'><span>Ano</span><select name='year'>" + optionList(years, filters.year, "Todos") + "</select></label>",
       "<label class='filter-field'><span>Tipo de diario</span><select name='family'>" + optionList(families, filters.family, "Todos") + "</select></label>",
+      "<label class='filter-field'><span>Procedencia</span><select name='origin'>" + optionList(origins, filters.origin, "Todas") + "</select></label>",
       "<label class='filter-field'><span>Municipio ou orgao</span><select name='city'>" + optionList(cities, filters.city, "Todos") + "</select></label>",
       "<label class='filter-field'><span>Editoria</span><select name='editoria'>" + optionList(editorias, filters.editoria, "Todas") + "</select></label>",
       "<label class='filter-field'><span>Escopo</span><select name='scope'>" + optionList(scopes, filters.scope, "Todos") + "</select></label>",
@@ -1950,7 +2031,7 @@
       "</div>",
       "</form>",
       "<section class='search-summary-card'>",
-      "<div class='section-head'><div><p class='section-kicker'>Resultado</p><h2>Leitura geral do recorte</h2></div><p class='section-intro'>A busca trabalha com texto livre, ano, municipio, familia de fonte, editoria, escopo e intervalo de datas. O ranking mistura aderencia textual e peso noticioso.</p></div>",
+      "<div class='section-head'><div><p class='section-kicker'>Resultado</p><h2>Leitura geral do recorte</h2></div><p class='section-intro'>A busca trabalha com texto livre, ano, municipio, familia de fonte, procedencia, editoria, escopo e intervalo de datas. O ranking mistura aderencia textual e peso noticioso.</p></div>",
       "<div class='metrics-grid'>",
       metricCard("Resultados", results.length),
       metricCard("Municipios", Object.keys(cityCount).length),
@@ -2130,7 +2211,7 @@
   function storyBody(entry) {
     return [
       getLead(entry),
-      "A publicacao foi localizada pelo PAUTEIRO! em " + entry.source_label + ", com registro em " + getDocumentMarker(entry) + ".",
+      "A publicacao foi localizada pelo PAUTEIRO! em " + entry.source_label + ", na classe de procedencia " + lowerFirst(sourceOriginLabel(entry)) + ", com registro em " + getDocumentMarker(entry) + ".",
       "No recorte editorial desta pauta, o que chama atencao e que " + lowerFirst(getSublead(entry)) + "."
     ];
   }
@@ -2164,11 +2245,12 @@
       renderImage(entry),
       "<div class='story-body'>",
       credit,
-      "<div class='meta-row'><span class='tag'>" + escapeHtml(entry.tag) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(entry.date) + "</span></div>",
+      "<div class='meta-row'><span class='tag'>" + escapeHtml(entry.tag) + "</span>" + renderSourceOriginBadge(entry) + "<span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(entry.date) + "</span></div>",
       "<" + tagName + ">" + escapeHtml(entry.title) + "</" + tagName + ">",
       "<p class='story-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
       "<p class='story-lead'>" + escapeHtml(getLead(entry)) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
+      "<p class='story-origin'><strong>Procedencia:</strong> " + renderSourceOriginBadge(entry) + "<span class='source-origin-copy'>" + escapeHtml(sourceOriginNote(entry)) + "</span></p>",
       renderDocumentTools(entry),
       renderAssistantLinks(entry),
       "</div>",
@@ -2202,12 +2284,13 @@
       "</a>",
       "<div class='story-body'>",
       credit,
-      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span><span>" + escapeHtml(entry.editoria) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span></div>",
+      "<div class='meta-row'><span class='tag'>" + escapeHtml(pautaSignal(entry)) + "</span>" + renderSourceOriginBadge(entry) + "<span>" + escapeHtml(entry.editoria) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span></div>",
       "<" + tagName + " class='pauta-title'><a href='" + storyUrl(entry) + "'>" + escapeHtml(entry.title) + "</a></" + tagName + ">",
       "<p class='story-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
       "<p class='story-lead'>" + escapeHtml(getLead(entry)) + "</p>",
       "<p class='pauta-line-note'><strong>Linha fina:</strong> " + escapeHtml(line) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
+      "<p class='story-origin'><strong>Procedencia:</strong> " + renderSourceOriginBadge(entry) + "<span class='source-origin-copy'>" + escapeHtml(sourceOriginNote(entry)) + "</span></p>",
       renderDocumentTools(entry),
       renderAssistantLinks(entry),
       "</div>",
@@ -2262,7 +2345,7 @@
       "<div class='pauta-line-top'><strong>" + escapeHtml(entry.city) + "</strong><span>" + escapeHtml(pautaSignal(entry)) + "</span></div>",
       "<h3>" + escapeHtml(entry.title) + "</h3>",
       "<p>" + escapeHtml(line) + "</p>",
-      "<small>" + escapeHtml(entry.editoria) + " | " + escapeHtml(entry.source_label) + note + "</small>",
+      "<small>" + escapeHtml(entry.editoria) + " | " + escapeHtml(entry.source_label) + " | " + escapeHtml(sourceOriginLabel(entry)) + note + "</small>",
       "</a>",
       "</li>"
     ].join("");
@@ -2302,11 +2385,12 @@
     var note = entry.source_note ? " | " + escapeHtml(entry.source_note) : "";
     return [
       "<article class='timeline-card'>",
-      "<div class='meta-row'><span class='tag'>" + escapeHtml(entry.tag) + "</span><span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(entry.editoria) + "</span></div>",
+      "<div class='meta-row'><span class='tag'>" + escapeHtml(entry.tag) + "</span>" + renderSourceOriginBadge(entry) + "<span>" + escapeHtml(entry.city) + "</span><span>" + escapeHtml(entry.editoria) + "</span></div>",
       "<h3>" + escapeHtml(entry.title) + "</h3>",
       "<p class='story-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
       "<p class='story-lead'>" + escapeHtml(getLead(entry)) + "</p>",
       "<p class='story-source'>Fonte: <a href='" + escapeHtml(entry.source_url) + "'>" + escapeHtml(entry.source_label) + "</a>" + note + "</p>",
+      "<p class='story-origin'><strong>Procedencia:</strong> " + renderSourceOriginBadge(entry) + "<span class='source-origin-copy'>" + escapeHtml(sourceOriginNote(entry)) + "</span></p>",
       renderDocumentTools(entry),
       renderAssistantLinks(entry),
       "</article>"
@@ -2678,7 +2762,7 @@
       "<p class='eyebrow'>" + escapeHtml(entry.editoria) + " | " + escapeHtml(entry.city) + "</p>",
       "<h1 class='article-title'>" + escapeHtml(entry.title) + "</h1>",
       "<p class='article-sublead'>" + escapeHtml(getSublead(entry)) + "</p>",
-      "<div class='article-meta'><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span><span>" + escapeHtml(entry.source_label) + "</span></div>",
+      "<div class='article-meta'><span>" + escapeHtml(formatAccessDate(entry.date)) + "</span><span>" + escapeHtml(entry.source_label) + "</span>" + renderSourceOriginBadge(entry) + "</div>",
       renderImage(entry, "article-image"),
       "</header>",
       "<section class='article-page-grid'>",
@@ -2689,7 +2773,7 @@
       }).join(""),
       "</div>",
       "<aside class='article-sidebar'>",
-      "<div class='sidebar-card'><h3>Documento</h3><div class='panel-item'><span>Fonte</span><strong>" + escapeHtml(entry.source_label) + "</strong></div><div class='panel-item'><span>Marcador</span><strong>" + escapeHtml(getDocumentMarker(entry)) + "</strong></div><div class='panel-item'><span>Acesso</span><strong>" + escapeHtml(formatAccessDate(getAccessedAt(entry))) + "</strong></div><p class='story-source'><a href='" + escapeHtml(entry.source_url) + "' target='_blank' rel='noopener noreferrer'>Baixar documento original</a></p></div>",
+      "<div class='sidebar-card'><h3>Documento</h3><div class='panel-item'><span>Fonte</span><strong>" + escapeHtml(entry.source_label) + "</strong></div><div class='panel-item'><span>Procedencia</span><strong>" + escapeHtml(sourceOriginLabel(entry)) + "</strong></div><div class='panel-item'><span>Marcador</span><strong>" + escapeHtml(getDocumentMarker(entry)) + "</strong></div><div class='panel-item'><span>Acesso</span><strong>" + escapeHtml(formatAccessDate(getAccessedAt(entry))) + "</strong></div><p class='panel-note'>" + escapeHtml(sourceOriginNote(entry)) + "</p><p class='story-source'><a href='" + escapeHtml(entry.source_url) + "' target='_blank' rel='noopener noreferrer'>Baixar documento original</a></p></div>",
       "<div class='sidebar-card'><h3>Apoio de apuracao</h3>" + renderAssistantLinks(entry) + "</div>",
       "<div class='sidebar-card'><h3>Fluxo Notebook + Chat</h3><p class='panel-note'>Abra a mesa hibrida para copiar o pacote do NotebookLM, colar o retorno manual e fechar o texto para o chat.</p><p class='story-source'><a href='" + workflowUrl(entry) + "'>Abrir mesa hibrida</a></p></div>",
       "<div class='sidebar-card'><h3>Outras do radar</h3><ul class='related-list'>" + related + "</ul></div>",
@@ -2751,7 +2835,7 @@
       "<aside class='note-stack'>",
       "<div class='note-card'><h3>Sublead</h3><p class='muted'>" + escapeHtml(getSublead(entry)) + "</p></div>",
       "<div class='note-card'><h3>Lead</h3><p class='muted'>" + escapeHtml(getLead(entry)) + "</p></div>",
-      "<div class='note-card'><h3>Documento original</h3><p class='muted'>Fonte: " + escapeHtml(entry.source_label) + "</p><p class='story-source'><a href='" + escapeHtml(entry.source_url) + "' target='_blank' rel='noopener noreferrer'>Abrir documento</a></p></div>",
+      "<div class='note-card'><h3>Documento original</h3><p class='muted'>Fonte: " + escapeHtml(entry.source_label) + "</p><p class='muted'>Procedencia: " + escapeHtml(sourceOriginLabel(entry)) + "</p><p class='muted'>" + escapeHtml(sourceOriginNote(entry)) + "</p><p class='story-source'><a href='" + escapeHtml(entry.source_url) + "' target='_blank' rel='noopener noreferrer'>Abrir documento</a></p></div>",
       "</aside>",
       "</section>"
     ].join("");
@@ -2849,7 +2933,7 @@
       "<a class='assistant-button is-link' href='https://chatgpt.com/' target='_blank' rel='noopener noreferrer'>Abrir ChatGPT</a>",
       "</div>",
       "</article>",
-      "<div class='note-card'><h3>Documento original</h3><p class='muted'>Fonte: " + escapeHtml(entry.source_label) + "</p><p class='muted'>Marcador: " + escapeHtml(getDocumentMarker(entry)) + "</p><p class='story-source'><a href='" + escapeHtml(getDocumentUrl(entry) || entry.source_url) + "' target='_blank' rel='noopener noreferrer'>Abrir documento</a></p></div>",
+      "<div class='note-card'><h3>Documento original</h3><p class='muted'>Fonte: " + escapeHtml(entry.source_label) + "</p><p class='muted'>Procedencia: " + escapeHtml(sourceOriginLabel(entry)) + "</p><p class='muted'>Marcador: " + escapeHtml(getDocumentMarker(entry)) + "</p><p class='muted'>" + escapeHtml(sourceOriginNote(entry)) + "</p><p class='story-source'><a href='" + escapeHtml(getDocumentUrl(entry) || entry.source_url) + "' target='_blank' rel='noopener noreferrer'>Abrir documento</a></p></div>",
       "</aside>",
       "</section>"
     ].join("");
