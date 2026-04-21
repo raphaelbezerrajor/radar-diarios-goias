@@ -2,14 +2,26 @@
   "year": 2025,
   "source_id": "municipios",
   "label": "Municipios / AGM e diarios proprios",
-  "status": "ready",
-  "analysis_status": "pending",
-  "entry_count": 0,
-  "loaded_months": [],
+  "status": "active",
+  "analysis_status": "partial",
+  "entry_count": 1,
+  "loaded_months": ["2025-03"],
   "official_url": "https://www.diariomunicipal.com.br/agm/",
   "analysis_focus": "licitacoes, contratos, editais, nomeacoes, leis, gastos, shows, saude, educacao e urbanismo",
   "material_types": "AGM, diarios municipais proprios, atos locais, extratos, leis e decretos",
-  "note": "os municipios de 2025 ja estao catalogados, mas o acervo ainda nao foi preenchido por fonte",
-  "next_step": "escalar a coleta de 2025 por municipio e diario-base, começando pelas cidades de maior impacto",
-  "highlight_entries": []
+  "note": "a AGM de 2025 saiu do zero com Goianira e agora abre a porta para escalar o retroativo municipal.",
+  "next_step": "subir mais editais, licitacoes, contratos e shows dos municipios de maior repercussao.",
+  "highlight_entries": [
+    {
+      "date": "2025-03-21",
+      "city": "Goianira",
+      "editoria": "Assistencia social e selecoes",
+      "tag": "Processo seletivo simplificado",
+      "title": "Goianira abre processo seletivo 001/2025 para contratacao temporaria na assistencia social",
+      "line": "Cidade da Regiao Metropolitana poe assistencia social no radar com contratacao temporaria e cronograma curto.",
+      "source_label": "Diario Municipal de Goias | Goianira",
+      "source_url": "https://www.diariomunicipal.com.br/agm/materia/DFDFA467/99eab034fa249602f5198539b3686ec099eab034fa249602f5198539b3686ec0",
+      "source_note": "Materia publicada no Diario Municipal de Goias em 21/03/2025. Edicao 3328."
+    }
+  ]
 }

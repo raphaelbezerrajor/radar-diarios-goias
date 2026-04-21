@@ -2,14 +2,37 @@
   "year": 2025,
   "source_id": "goiania",
   "label": "Goiania / Sileg",
-  "status": "ready",
-  "analysis_status": "pending",
-  "entry_count": 0,
-  "loaded_months": [],
+  "status": "active",
+  "analysis_status": "partial",
+  "entry_count": 2,
+  "loaded_months": ["2025-01", "2025-06"],
   "official_url": "https://www.goiania.go.gov.br/casa-civil/diario-oficial/",
   "analysis_focus": "nomeacoes, decretos, contratos, compras, jetons, comissoes e reorganizacao administrativa",
   "material_types": "diario oficial, sileg, decretos de pessoal, extratos de contrato e atos de governo",
-  "note": "2025 de Goiania esta aberto para carga, mas ainda sem material factual salvo na base publica",
-  "next_step": "iniciar o retroativo do Sileg por pessoal, contratos e reorganizacao administrativa",
-  "highlight_entries": []
+  "note": "primeira leva factual de 2025 ja entrou com calamidade na saude e reorganizacao da Casa Civil.",
+  "next_step": "aprofundar pessoal, contratos e comissoes para ganhar volume mensal no Sileg.",
+  "highlight_entries": [
+    {
+      "date": "2025-01-02",
+      "city": "Goiania",
+      "editoria": "Saude e gestao",
+      "tag": "Decreto",
+      "title": "Goiania decreta calamidade na Fazenda e na Saude na abertura da nova gestao",
+      "line": "Crise financeira e saude entram juntas em ato de alto impacto politico logo no primeiro dia util do ano.",
+      "source_label": "Sileg Goiania",
+      "source_url": "https://www.goiania.go.gov.br/html/gabinete_civil/sileg/dados/legis/2025/dc_20250102_000000028.html",
+      "source_note": "DOM 8448, de 02/01/2025."
+    },
+    {
+      "date": "2025-06-04",
+      "city": "Goiania",
+      "editoria": "Gestao institucional",
+      "tag": "Decreto",
+      "title": "Goiania reorganiza o gabinete do prefeito e reforca a Casa Civil sobre atos, imprensa oficial e pessoal",
+      "line": "Rearranjo interno atinge a maquina que produz decretos, pessoal e publicacao oficial.",
+      "source_label": "Sileg Goiania",
+      "source_url": "https://www.goiania.go.gov.br/html/gabinete_civil/sileg/dados/legis/2025/dc_20250604_000002715.html",
+      "source_note": "Sileg Goiania, publicado em 04/06/2025."
+    }
+  ]
 }
