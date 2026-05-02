@@ -1,5 +1,5 @@
 window.PAUTEIRO_ARCHIVE = {
-  generated_at: "2026-04-21",
+  generated_at: "2026-05-01",
   search_storage: {
     mode: "localStorage",
     key: "pauteiro:search-history"
@@ -112,9 +112,9 @@ window.PAUTEIRO_ARCHIVE = {
       year: 2026,
       status: "active",
       analysis_status: "partial",
-      entry_count: 24,
+      entry_count: 33,
       manifest: "arquivo/2026/manifest.json",
-      note: "bucket anual ativo; as entradas de abril seguem na base principal enquanto a migracao anual nao fecha."
+      note: "bucket anual ativo; rodada semanal de 27/04 a 01/05 carregada na base principal, com predominio de diario bruto municipal e atos oficiais do Estado."
     }
   ],
   year_buckets: {
@@ -325,15 +325,15 @@ window.PAUTEIRO_ARCHIVE = {
     "2026": {
       year: 2026,
       entries: [],
-      loaded_months: ["2026-04"],
+      loaded_months: ["2026-04", "2026-05"],
       sources: {
         goiania: { status: "active", analysis_status: "partial", entry_count: 1, loaded_months: ["2026-04"], manifest: "arquivo/2026/goiania.json" },
-        estado: { status: "active", analysis_status: "partial", entry_count: 5, loaded_months: ["2026-04"], manifest: "arquivo/2026/estado.json" },
+        estado: { status: "active", analysis_status: "partial", entry_count: 7, loaded_months: ["2026-04"], manifest: "arquivo/2026/estado.json" },
         mpgo: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2026/mpgo.json" },
-        municipios: { status: "active", analysis_status: "partial", entry_count: 8, loaded_months: ["2026-04"], manifest: "arquivo/2026/municipios.json" },
+        municipios: { status: "active", analysis_status: "partial", entry_count: 15, loaded_months: ["2026-04", "2026-05"], manifest: "arquivo/2026/municipios.json" },
         tjgo: { status: "paused", analysis_status: "paused", entry_count: 10, loaded_months: ["2026-04"], manifest: "arquivo/2026/tjgo.json" }
       },
-      note: "as entradas factuais seguem em radar-diarios-goias-data.js ate a consolidacao do bucket anual"
+      note: "as entradas factuais seguem em radar-diarios-goias-data.js ate a consolidacao do bucket anual; semana de 27/04 a 01/05 ja integrada"
     }
   }
 };
