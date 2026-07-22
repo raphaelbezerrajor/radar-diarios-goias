@@ -1,0 +1,105 @@
+---
+import siteData from "../../generated/site-data.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import { compactNumber } from "../../lib/format.js";
+const portalTrindade = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
+const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item.id === "diario");
+---
+
+<BaseLayout title="Painel Diário | Trindade" description="Atos do Diário, atividade legislativa, TCM e notícias verificadas de Trindade integrados ao painel estadual.">
+  <section class="section-band">
+    <div class="shell page-intro">
+      <p class="section-kicker">Edição municipal</p>
+      <h1>Trindade: atos públicos, Câmara, TCM e notícias verificadas.</h1>
+      <p class="page-summary">O inventário do Diário cobre oito anos. A leitura ato a ato está estruturada no recorte anual mais recente e conversa com contratos, proposições, empresas e processos de controle.</p>
+      <div class="hero-actions">
+        <a class="button-primary" href="../busca/?city=Trindade&year=all">Pesquisar Trindade</a>
+        <a class="button-secondary" href={portalTrindade}>Abrir portal municipal ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band section-band-contrast">
+    <div class="shell split-grid">
+      <div class="rhythm-panel">
+        <article>
+          <strong>{compactNumber(siteData.trindadeStats.analysis.acts)}</strong>
+          <span>atos estruturados do Diario</span>
+        </article>
+        <article>
+          <strong>{compactNumber(diaryCoverage?.available)}</strong>
+          <span>edições catalogadas em oito anos</span>
+        </article>
+        <article>
+          <strong>{compactNumber(siteData.trindadeStats.analysis.procurementRecords)}</strong>
+          <span>rastros de compras e contratacoes</span>
+        </article>
+        <article>
+          <strong>{compactNumber(siteData.trindadeStats.status.source_counts.tcm_confirmed)}</strong>
+          <span>processos do TCM com vínculo confirmado</span>
+        </article>
+      </div>
+      <div>
+        <SectionHeader
+          kicker="Pulso do Diario"
+          title="Os tipos de ato que mais se repetem no acervo"
+          intro="Portarias, decretos, editais e contratos dominam a leitura; os blocos mais sensiveis ficam prontos para filtro imediato."
+        />
+        <div class="city-board">
+          {siteData.trindadeStats.actsByType.map((item) => (
+            <article class="city-card">
+              <strong>{item.label}</strong>
+              <span>{compactNumber(item.count)} atos</span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="shell">
+      <SectionHeader
+          kicker="Notícias verificadas"
+          title="Pautas locais com contexto e ressalvas"
+        intro="O noticiario de Trindade continua separado do bruto do Diario, mas conversa com a mesma base."
+      />
+      <div class="story-grid story-grid-wide">
+        {siteData.trindadeFront.filter((item) => item.kind === "noticia").slice(0, 6).map((record) => <StoryCard record={record} compact={true} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band section-band-newsprint">
+    <div class="shell split-grid">
+      <div>
+        <SectionHeader
+          kicker="Atos prontos para triagem"
+          title="Recortes com página, edição e PDF original"
+          intro="Editais, dispensas, decretos, rescisões, contratos e nomeações seguem visíveis sem engordar a capa."
+        />
+        <div class="story-grid">
+          {siteData.actsFront.slice(0, 6).map((record) => <StoryCard record={record} compact={true} />)}
+        </div>
+      </div>
+      <div>
+        <SectionHeader
+          kicker="Mes a mes"
+          title="Volume recente do Diario"
+          intro="A cadencia ajuda a saber quando apertar o filtro e onde a leitura ainda pode abrir novas pautas."
+        />
+        <div class="monthly-list">
+          {siteData.trindadeStats.monthlyActs.slice(0, 8).map((item) => (
+            <article class="monthly-item">
+              <strong>{item.month}</strong>
+              <span>{compactNumber(item.total)} atos</span>
+              <small>{item.topType ? item.topType.replace(/_/g, " ") : "sem destaque"}</small>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

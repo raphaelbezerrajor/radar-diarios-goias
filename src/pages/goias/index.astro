@@ -1,0 +1,69 @@
+---
+import siteData from "../../generated/site-data.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import { compactNumber } from "../../lib/format.js";
+---
+
+<BaseLayout title="Painel Diário | Goiás" description="Caderno estadual com atos, pautas e frentes abertas por fonte oficial em Goiás.">
+  <section class="section-band">
+    <div class="shell page-intro">
+      <p class="section-kicker">Edição estadual</p>
+      <h1>Nomeações, contratos, MPGO, Estado e municípios na mesma prateleira de pauta.</h1>
+      <p class="page-summary">A cobertura estadual segue em modo curado, com prioridade para atos que abrem apuração em saúde, gestão, compras, urbanismo, justiça e controle. O painel diferencia claramente o escopo desejado do material já carregado.</p>
+    </div>
+  </section>
+
+  <section class="section-band section-band-newsprint">
+    <div class="shell split-grid">
+      <div class="stats-column">
+        <article class="hero-panel">
+          <strong>{compactNumber(siteData.metrics.curatedStories)}</strong>
+          <span>pautas editoriais já organizadas</span>
+        </article>
+        <article class="hero-panel">
+          <strong>{compactNumber(siteData.metrics.evaluatedUnits)}</strong>
+          <span>unidades avaliadas no recorte atual</span>
+        </article>
+        <article class="hero-panel">
+          <strong>{compactNumber(siteData.metrics.stateCities)}</strong>
+          <span>cidades com registros estaduais carregados</span>
+        </article>
+      </div>
+      <div>
+        <SectionHeader
+          kicker="Fontes prioritarias"
+          title="DOE, MPGO, diários próprios e AGM puxam o caderno."
+          intro="As frentes abaixo concentram o que já esta lido e o que ainda precisa de nova rodada de ingestao."
+        />
+        <div class="source-list">
+          {siteData.sourceCards.filter((item) => item.id !== "trindade").map((item) => (
+            <article class="source-card">
+              <div class="source-card-top">
+                <strong>{item.label}</strong>
+                <span>{compactNumber(item.stateCount)} registros</span>
+              </div>
+              <p>{item.analysisFocus}</p>
+              <small>{item.nextStep}</small>
+              <a class="text-link" href={item.officialUrl}>Abrir fonte</a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="shell">
+      <SectionHeader
+        kicker="Ultimas pautas"
+        title="Leitura curada por editoria e recencia"
+        intro="Cada item segura link de origem, marcador e linha de apuracao para a redacao."
+      />
+      <div class="story-grid">
+        {siteData.stateFront.map((record) => <StoryCard record={record} compact={true} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

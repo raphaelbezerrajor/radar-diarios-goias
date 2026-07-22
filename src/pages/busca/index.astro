@@ -1,0 +1,220 @@
+---
+import siteData from "../../generated/site-data.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.label || "";
+---
+
+<BaseLayout title="Painel Diário | Busca pública" description="Consulta pública por município, fonte, ano, tipo e assunto na base integrada de Goiás e Trindade.">
+  <section class="section-band">
+    <div class="shell page-intro">
+      <p class="section-kicker">Busca publica</p>
+      <h1>Encontre qualquer ato na base.</h1>
+      <p class="page-summary">Busque por empresa, pessoa, contrato, município, Diário, ano ou tipo. Cada resultado aponta para o contexto e para a fonte disponível.</p>
+    </div>
+  </section>
+
+  <section class="section-band section-band-newsprint">
+    <div
+      class="shell search-shell"
+      data-search-root
+      data-search-manifest-url={`${baseHref}data/site-search-manifest.json`}
+      data-search-all-url={`${baseHref}data/site-search.json`}
+      data-search-base={`${baseHref}data/search/`}
+      data-default-year={defaultYear}
+    >
+      <form class="search-form" data-search-form>
+        <label>
+          <span>Assunto</span>
+          <input type="search" name="q" placeholder="empresa, contrato, pessoa ou assunto" autocomplete="off" />
+        </label>
+        <label>
+          <span>Cidade</span>
+          <select name="city">
+            <option value="">Todas</option>
+            {siteData.searchFilters.cities.map((item) => <option value={item.label}>{item.label}</option>)}
+          </select>
+        </label>
+        <label>
+          <span>Ano</span>
+          <select name="year">
+            <option value="all">Todos os anos</option>
+            {siteData.searchFilters.years.map((item) => <option value={item.label}>{item.label}</option>)}
+          </select>
+        </label>
+        <label>
+          <span>Tipo</span>
+          <select name="type">
+            <option value="">Todos</option>
+            {siteData.searchFilters.types.map((item) => <option value={item.label}>{item.label}</option>)}
+          </select>
+        </label>
+        <label>
+          <span>Fonte</span>
+          <select name="family">
+            <option value="">Todas</option>
+            {siteData.searchFilters.families.map((item) => <option value={item.label}>{item.label}</option>)}
+          </select>
+        </label>
+        <button class="button-primary" type="submit">Aplicar filtros</button>
+      </form>
+
+      <div class="search-summary" data-search-summary aria-live="polite">
+        <strong>{siteData.metrics.records}</strong>
+        <span>registros integrados</span>
+      </div>
+
+      <div class="quick-grid">
+        <article class="quick-card">
+          <strong>Comece por aqui</strong>
+          <div class="quick-links">
+            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&city=Trindade`}>Trindade</a>
+            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&family=${encodeURIComponent("Estado de Goias / DOE")}`}>DOE</a>
+            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&family=${encodeURIComponent("MPGO / DOMP")}`}>MPGO</a>
+            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&q=${encodeURIComponent("edital")}`}>Editais</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="results-grid" data-search-results aria-live="polite"></div>
+    </div>
+  </section>
+
+  <script type="module" is:inline define:vars={{ baseUrl: baseHref, defaultYear }}>
+    const root = document.querySelector("[data-search-root]");
+    if (root) {
+      const manifestUrl = root.dataset.searchManifestUrl;
+      const allUrl = root.dataset.searchAllUrl;
+      const searchBaseUrl = root.dataset.searchBase;
+      const fallbackYear = root.dataset.defaultYear || defaultYear;
+      const form = root.querySelector("[data-search-form]");
+      const resultsNode = root.querySelector("[data-search-results]");
+      const summaryNode = root.querySelector("[data-search-summary]");
+      const params = new URLSearchParams(window.location.search);
+      const state = { manifest: null, cache: new Map() };
+
+      const value = (name) => form.elements[name]?.value?.trim?.() ?? "";
+
+      function fillForm() {
+        if (!params.has("year") && form.elements.year) {
+          form.elements.year.value = fallbackYear;
+        }
+        for (const [key, current] of params.entries()) {
+          const field = form.elements[key];
+          if (field) field.value = current;
+        }
+      }
+
+      function updateUrl(filters) {
+        const next = new URLSearchParams();
+        Object.entries(filters).forEach(([key, current]) => {
+          if (current && !(key === "year" && current === fallbackYear)) next.set(key, current);
+        });
+        const query = next.toString();
+        history.replaceState(null, "", query ? `${window.location.pathname}?${query}` : window.location.pathname);
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "").replace(/[&<>"']/g, (character) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          "\"": "&quot;",
+          "'": "&#039;"
+        })[character]);
+      }
+
+      function renderCard(record) {
+        const detailHref = `${baseUrl.replace(/\/$/, "")}${record.path}`;
+        return `
+          <article class="story-card is-compact is-text-only">
+            <div class="story-body">
+              <div class="story-kickers">
+                <span class="pill">${escapeHtml(record.type)}</span>
+                <span class="muted">${escapeHtml(record.city || "Base integrada")}</span>
+                <span class="muted">${escapeHtml(record.date || "Sem data")}</span>
+              </div>
+              <h3><a href="${escapeHtml(detailHref)}">${escapeHtml(record.title)}</a></h3>
+              ${record.deck ? `<p class="story-deck">${escapeHtml(record.deck)}</p>` : ""}
+              <div class="story-meta">
+                <span>${escapeHtml(record.sourceFamily)}</span>
+                <span>${escapeHtml(record.marker || "")}</span>
+              </div>
+              <a class="card-action" href="${escapeHtml(detailHref)}">Ler registro <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        `;
+      }
+
+      function matches(record, filters) {
+        const q = filters.q.toLowerCase();
+        if (q && !record.search.includes(q.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) return false;
+        if (filters.city && record.city !== filters.city) return false;
+        if (filters.year && filters.year !== "all" && String(record.year || "") !== filters.year) return false;
+        if (filters.type && record.type !== filters.type) return false;
+        if (filters.family && record.sourceFamily !== filters.family) return false;
+        return true;
+      }
+
+      function collectFilters() {
+        return {
+          q: value("q"),
+          city: value("city"),
+          year: value("year"),
+          type: value("type"),
+          family: value("family")
+        };
+      }
+
+      async function ensurePayload(year) {
+        const key = year || fallbackYear;
+        if (state.cache.has(key)) return state.cache.get(key);
+        if (key === "all") {
+          const response = await fetch(allUrl);
+          const payload = await response.json();
+          state.cache.set(key, payload);
+          return payload;
+        }
+        const shard = state.manifest.shards.find((item) => item.id === key) || state.manifest.shards[0];
+        const response = await fetch(`${searchBaseUrl}${shard.file}`);
+        const payload = await response.json();
+        state.cache.set(key, payload);
+        return payload;
+      }
+
+      async function render() {
+        const filters = collectFilters();
+        if (!filters.year) {
+          filters.year = fallbackYear;
+          form.elements.year.value = fallbackYear;
+        }
+        updateUrl(filters);
+        summaryNode.innerHTML = `<strong>...</strong><span>carregando recorte ${filters.year === "all" ? "completo" : filters.year}</span>`;
+        const payload = await ensurePayload(filters.year);
+        const matchesFound = payload.records.filter((record) => matches(record, filters));
+        const filtered = matchesFound.slice(0, 60);
+        const currentLabel = filters.year === "all" ? "todos os anos" : filters.year;
+        summaryNode.innerHTML = `<strong>${matchesFound.length}</strong><span>resultados em ${escapeHtml(currentLabel)}${matchesFound.length > 60 ? " · mostrando os 60 primeiros" : ""}</span>`;
+        resultsNode.innerHTML = filtered.length
+          ? filtered.map(renderCard).join("")
+          : `<article class="empty-card"><strong>Nada por aqui nesse corte.</strong><span>Troque cidade, ano, fonte ou solte o filtro de tipo para abrir mais resultado.</span></article>`;
+      }
+
+      fetch(manifestUrl)
+        .then((response) => response.json())
+        .then((payload) => {
+          state.manifest = payload;
+          fillForm();
+          render();
+          form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            render();
+          });
+          form.addEventListener("change", render);
+        })
+        .catch(() => {
+          summaryNode.innerHTML = "<strong>Busca indisponível</strong><span>Tente recarregar a página em alguns instantes.</span>";
+        });
+    }
+  </script>
+</BaseLayout>

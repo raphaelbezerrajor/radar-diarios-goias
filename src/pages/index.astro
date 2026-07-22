@@ -1,0 +1,206 @@
+---
+import siteData from "../generated/site-data.json";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MetricStrip from "../components/MetricStrip.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import StoryCard from "../components/StoryCard.astro";
+import { compactNumber, formatDate, withBase } from "../lib/format.js";
+
+const hero = siteData.leadStory;
+const heroImage = withBase(hero.image?.src);
+const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const portalTrindade = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
+const yearCards = siteData.yearSnapshots.slice(0, 6);
+const stateFeatured = siteData.stateFront.slice(0, 2);
+const stateBriefs = siteData.stateFront.slice(2, 6);
+const actsBriefs = siteData.actsFront.slice(0, 6);
+const quickCities = siteData.priorityMunicipalities.slice(0, 6).map((item) => ({
+  label: item.name,
+  href: `${baseHref}busca/?city=${encodeURIComponent(item.name)}&year=${encodeURIComponent(siteData.latestYear || "")}`
+}));
+const quickTopics = ["contrato", "nomeação", "edital", "processo TCM"].map((label) => ({
+  label,
+  href: `${baseHref}busca/?q=${encodeURIComponent(label)}&year=all`
+}));
+const metrics = [
+  { label: "Registros pesquisáveis", value: compactNumber(siteData.metrics.records), note: "base integrada" },
+  { label: "Atos de Trindade", value: compactNumber(siteData.metrics.trindadeActs), note: "leitura ato a ato" },
+  { label: "Cidades com registros", value: compactNumber(siteData.metrics.loadedCities), note: "carga já disponível" },
+  { label: "Anos consultáveis", value: compactNumber(siteData.searchFilters.years.length), note: "2018 a 2026" }
+];
+---
+
+<BaseLayout title="Painel Diário | Atos públicos de Goiás e Trindade" description="Consulte atos públicos, contratos, Diário Oficial, Câmara e TCM de Trindade junto da cobertura estadual de Goiás.">
+  <section class="opening-band">
+    <div class="shell opening-grid">
+      <div class="opening-copy">
+        <p class="section-kicker section-kicker-light">Trindade + Goiás</p>
+        <h1>O poder público, documento por documento.</h1>
+        <p class="page-summary">Diários oficiais, contratos, Câmara, TCM e pautas estaduais em uma leitura rápida, clara e feita primeiro para o celular.</p>
+        <form class="quick-search" action={`${baseHref}busca/`} method="get">
+          <label class="sr-only" for="home-search">Buscar na base pública</label>
+          <input id="home-search" type="search" name="q" placeholder="Busque empresa, contrato, pessoa ou assunto" />
+          <input type="hidden" name="year" value="all" />
+          <button type="submit">Buscar</button>
+        </form>
+        <div class="topic-links" aria-label="Buscas rápidas">
+          {quickTopics.map((item) => <a href={item.href}>{item.label}</a>)}
+        </div>
+      </div>
+      <aside class="opening-side" aria-label="Situação da base">
+        <p>Atualização da base</p>
+        <strong>{formatDate(siteData.metadata.updatedAt)}</strong>
+        <span>{compactNumber(siteData.metrics.records)} registros com origem identificada</span>
+        <a href={`${baseHref}busca/`}>Explorar a base completa <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="hero-band">
+    <div class="shell hero-grid">
+      <article class="hero-lead">
+        <a class="hero-image" href={withBase(hero.path)} aria-label={`Abrir: ${hero.title}`}>
+          <img src={heroImage} alt={hero.image?.alt || hero.title} fetchpriority="high" decoding="async" />
+        </a>
+        <div class="hero-copy">
+          <p class="section-kicker">Em destaque</p>
+          <h2>{hero.title}</h2>
+          <p class="hero-deck">{hero.deck}</p>
+          <p class="hero-summary">{hero.summary}</p>
+          <div class="hero-meta">
+            <span>{hero.sourceFamily}</span>
+            <span>{hero.city}</span>
+            <span>{formatDate(hero.date)}</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button-primary" href={withBase(hero.path)}>Ler com contexto</a>
+            <a class="button-secondary" href={portalTrindade}>Portal Trindade ↗</a>
+          </div>
+        </div>
+      </article>
+      <aside class="hero-side">
+        <div class="rail-heading">
+          <p class="section-kicker">Agora</p>
+          <h2>Mais itens para acompanhar</h2>
+        </div>
+        <div class="stack-list">
+          {siteData.heroSidebar.map((record) => (
+            <a class="stack-item" href={withBase(record.path)}>
+              <span class="pill">{record.type}</span>
+              <strong>{record.title}</strong>
+              <small>{record.city} · {formatDate(record.date)}</small>
+            </a>
+          ))}
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <MetricStrip items={metrics} />
+
+  <section class="section-band section-band-newsprint content-auto">
+    <div class="shell split-grid acts-package">
+      <div>
+        <SectionHeader
+          kicker="Atos públicos"
+          title="O que merece uma segunda leitura em Trindade"
+          intro="Editais, dispensas, decretos, contratos e nomeações com edição, página e documento de origem."
+          actionHref={`${baseHref}busca/?city=Trindade&year=all`}
+          actionLabel="Ver todos os atos"
+        />
+        <div class="brief-list">
+          {actsBriefs.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="hide" />)}
+        </div>
+      </div>
+      <aside class="coverage-card">
+        <p class="section-kicker">O que já temos</p>
+        <h2>Oito anos catalogados, com a leitura detalhada avançando por camadas.</h2>
+        <dl class="coverage-list">
+          <div><dt>Edições catalogadas</dt><dd>{compactNumber(siteData.trindadeStats.status.coverage[0].available)}</dd></div>
+          <div><dt>Atos estruturados</dt><dd>{compactNumber(siteData.trindadeStats.analysis.acts)}</dd></div>
+          <div><dt>Contratos da Câmara</dt><dd>{compactNumber(siteData.trindadeStats.chamberSummary.contracts)}</dd></div>
+          <div><dt>Processos do TCM</dt><dd>{compactNumber(siteData.trindadeStats.status.source_counts.tcm_confirmed)}</dd></div>
+        </dl>
+        <p class="coverage-note">O inventário cobre oito anos. A leitura ato a ato do Diário ainda está concentrada no recorte anual indicado em cada registro.</p>
+        <a class="button-secondary" href={`${baseHref}trindade/`}>Entender a cobertura</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-band content-auto">
+    <div class="shell">
+      <SectionHeader
+        kicker="Cobertura estadual"
+        title="Goiás entra em modo de pauta, sem misturar volume com cobertura pronta"
+        intro={`${compactNumber(siteData.metrics.stateCities)} cidades já têm registros no painel; o escopo de monitoramento permanece aberto para os 246 municípios.`}
+        actionHref={`${baseHref}goias/`}
+        actionLabel="Abrir caderno Goiás"
+      />
+      <div class="headline-package">
+        <div class="story-grid story-grid-featured">
+          {stateFeatured.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="auto" />)}
+        </div>
+        <div class="brief-list">
+          {stateBriefs.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="hide" />)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band section-band-contrast content-auto">
+    <div class="shell split-grid">
+      <div>
+        <SectionHeader
+          kicker="Arquivo"
+          title="Entre pela data"
+          intro="Cada ano abre somente o recorte necessário, deixando a consulta mais leve no celular."
+        />
+        <div class="year-board">
+          {yearCards.map((item) => (
+            <a class="year-card" href={withBase(item.href)}>
+              <strong>{item.year}</strong>
+              <span>{compactNumber(item.count)} registros</span>
+              <small>{item.cities.map((city) => city.label).join(" · ") || "base integrada"}</small>
+            </a>
+          ))}
+        </div>
+      </div>
+      <div>
+        <SectionHeader
+          kicker="Atalhos"
+          title="Entre pela cidade"
+          intro="Os municípios abaixo já têm algum conteúdo carregado ou estão na fila prioritária."
+        />
+        <div class="quick-card">
+          <div class="quick-links">
+            {quickCities.map((item) => <a href={item.href}>{item.label}</a>)}
+          </div>
+          <a class="text-link" href={`${baseHref}busca/`}>Abrir todos os filtros</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band content-auto">
+    <div class="shell">
+      <SectionHeader
+        kicker="Transparência da coleta"
+        title="De onde vêm os registros"
+        intro="A fonte oficial, o estágio da leitura e as lacunas ficam visíveis para evitar conclusões maiores que os documentos."
+      />
+      <div class="source-list source-list-wide">
+        {siteData.sourceCards.slice(0, 6).map((item) => (
+          <article class="source-card">
+            <div class="source-card-top">
+              <strong>{item.label}</strong>
+              <span>{compactNumber(item.stateCount)}</span>
+            </div>
+            <p>{item.analysisFocus}</p>
+            <small>{item.materialTypes}</small>
+            <a class="text-link" href={item.officialUrl}>Abrir fonte oficial ↗</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
