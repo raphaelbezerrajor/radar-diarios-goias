@@ -1373,7 +1373,7 @@
       "<article class='pulse-card pulse-card-wide'>",
       "<p class='section-kicker'>Base em expansao</p>",
       "<h2>O arquivo deixou de ser so abril</h2>",
-      "<p class='muted'>A estrutura agora assume 2024, 2025 e 2026 como serie editorial. A carga factual publica ainda esta concentrada em abril de 2026, mas DOE, MPGO, TJGO e municipios entraram como frentes criticas permanentes.</p>",
+      "<p class='muted'>A estrutura agora assume 2024, 2025 e 2026 como serie editorial. A carga factual publica ja saiu do piloto de abril e agora carrega abril inteiro, maio de abertura, uma ponte de junho e novo lote de julho, com foco permanente em Estado, MPGO e municipios.</p>",
       "<div class='metrics-grid'>" +
         metricCard("Atualizado", formatAccessDate(DATA.updated_at)) +
         metricCard("Base factual", formatAccessDate(DATA.cutoff_date)) +
@@ -2662,13 +2662,13 @@
       "<header class='page-header'>",
       "<div>",
       "<p class='eyebrow'>PAUTEIRO! | Cronologia</p>",
-      "<h1 class='page-title'>Linha do tempo de abril de 2026</h1>",
-      "<p class='intro'>Aqui a base aparece em ordem cronologica crescente. O objetivo e enxergar abril como fluxo editorial: o que entrou no inicio, onde o volume se concentrou e em quais datas o TJGO fez a curva subir.</p>",
+      "<h1 class='page-title'>Linha do tempo de " + monthName(MONTH_START.getMonth()) + " de " + DATA.year + "</h1>",
+      "<p class='intro'>Aqui a base aparece em ordem cronologica crescente. O objetivo e enxergar " + monthName(MONTH_START.getMonth()) + " como fluxo editorial do caderno corrente, sem perder o acumulado que segue aparecendo na busca e na analise anual.</p>",
       "<div class='nav-row'><a class='nav-pill' href='" + MONTH_PAGE + "'>Voltar ao indice anual</a><a class='nav-pill' href='radar-diarios-goias-data.json'>Abrir base JSON</a></div>",
       "</div>",
       "<aside class='sidebar-card'>",
       "<h3>Recorte</h3>",
-      "<p class='muted'>Preenchimento factual ate 18/04/2026. Dias sem pauta confirmada permanecem no calendario do indice mensal e podem receber nova rodada depois.</p>",
+      "<p class='muted'>Preenchimento factual ate " + formatAccessDate(DATA.cutoff_date) + ". Dias sem pauta confirmada permanecem no calendario do indice mensal e podem receber nova rodada depois.</p>",
       "<div class='panel-item'><span>Pautas na cronologia</span><strong>" + cycleEntries.length + "</strong></div>",
       "<div class='panel-item'><span>Dias com entrada</span><strong>" + dates.length + "</strong></div>",
       "</aside>",
