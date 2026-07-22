@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
+import { createTrindadeJsonProvider, isPublicDocumentUrl } from "../src/lib/municipal/trindade-json-provider.mjs";
 
 const root = process.cwd();
 const generatedDir = path.join(root, "src", "generated");
@@ -8,6 +9,7 @@ const publicDataDir = path.join(root, "public", "data");
 const publicDownloadsDir = path.join(root, "public", "downloads");
 const publicSearchDir = path.join(publicDataDir, "search");
 const trindadePortalUrl = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
+const trindadeProvider = createTrindadeJsonProvider({ dataDir: path.join(root, "data", "trindade") });
 
 const importantActTypes = new Map([
   ["edital", 7],
@@ -269,7 +271,7 @@ function normalizeTrindadeAct(item) {
     editoria: item.public_body || "Trindade",
     sourceFamily: "Trindade | Diario Oficial",
     sourceLabel: item.public_body || "Prefeitura de Trindade",
-    sourceUrl: item.source_url || null,
+    sourceUrl: isPublicDocumentUrl(item.source_url) ? item.source_url : null,
     sourceNote: `Edicao ${item.edition_number}${pageLabel ? ` · ${pageLabel}` : ""}`,
     scope: "Municipal",
     tags: [actType, item.public_body, ...(item.reference_numbers || [])].filter(Boolean),
@@ -374,15 +376,27 @@ async function main() {
   const radar = await readJson("radar-diarios-goias-data.json");
   const archiveMeta = await readWindowObject("pauteiro-arquivo.js", "PAUTEIRO_ARCHIVE");
   const coverage = await readWindowObject("pauteiro-cobertura.js", "PAUTEIRO_COVERAGE");
-  const trindadeActsRaw = await readJson("data", "trindade", "agm-trindade-acts-search.json");
-  const trindadeAnalysis = await readJson("data", "trindade", "agm-trindade-analysis-index.json");
-  const trindadeCoverage = await readJson("data", "trindade", "agm-trindade-coverage.json");
-  const trindadeStatus = await readJson("data", "trindade", "data-status.json");
-  const trindadeNewsRaw = await readJson("data", "trindade", "news-2026.json");
-  const trindadeUnified = await readJson("data", "trindade", "unified-search-index.json");
-  const trindadeCamara = await readJson("data", "trindade", "camara-index.json");
-  const trindadeLegislative = await readJson("data", "trindade", "camara-legislative-index.json");
-  const tcmDecisions = await readJson("data", "trindade", "tcmgo-trindade-decisions.json");
+  const [
+    trindadeActs,
+    trindadeAnalysis,
+    trindadeCoverage,
+    trindadeStatus,
+    trindadeNews,
+    trindadeUnifiedRecords,
+    trindadeCamara,
+    trindadeLegislative,
+    tcmDecisions
+  ] = await Promise.all([
+    trindadeProvider.buscarAtos(),
+    trindadeProvider.obterAnalise(),
+    trindadeProvider.obterCoberturaDiario(),
+    trindadeProvider.obterEstadoDaBase(),
+    trindadeProvider.listarNoticias(),
+    trindadeProvider.buscarRegistros(),
+    trindadeProvider.obterCamara(),
+    trindadeProvider.obterLegislativo(),
+    trindadeProvider.readDataset("processosTCM")
+  ]);
 
   const municipalityByName = new Map(
     (coverage.municipality_catalog || []).map((item) => [normalizeText(item.name), item])
@@ -421,32 +435,32 @@ async function main() {
     ).concat(archiveHighlights)
   );
 
-  const trindadeNews = (trindadeNewsRaw.items || []).map(normalizeTrindadeNews);
-  const trindadeActs = (trindadeActsRaw.acts || []).map(normalizeTrindadeAct);
-  const trindadeActIds = new Set(trindadeActs.map((item) => item.id));
-  const residualUnified = (trindadeUnified.records || [])
+  const normalizedTrindadeNews = trindadeNews.map(normalizeTrindadeNews);
+  const normalizedTrindadeActs = trindadeActs.map(normalizeTrindadeAct);
+  const trindadeActIds = new Set(normalizedTrindadeActs.map((item) => item.id));
+  const residualUnified = trindadeUnifiedRecords
     .filter((item) => item.type !== "ato" && item.type !== "noticia" && !trindadeActIds.has(item.id))
     .map(normalizeUnifiedRecord);
 
   const allRecords = sortForSearch(
     dedupeById(
       stateRecords
-        .concat(trindadeNews)
-        .concat(trindadeActs)
+        .concat(normalizedTrindadeNews)
+        .concat(normalizedTrindadeActs)
         .concat(residualUnified)
         .map(attachSearch)
     )
   );
 
-  const leadStory = pickLead(stateRecords.concat(trindadeNews));
+  const leadStory = pickLead(stateRecords.concat(normalizedTrindadeNews));
   const heroSidebar = sortForSearch(
-    stateRecords.concat(trindadeNews).filter((item) => item.id !== leadStory?.id)
+    stateRecords.concat(normalizedTrindadeNews).filter((item) => item.id !== leadStory?.id)
   ).slice(0, 3);
 
   const stateFront = sortForSearch(stateRecords).slice(0, 8);
-  const trindadeFront = sortForSearch(trindadeNews.concat(trindadeActs)).slice(0, 8);
+  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs)).slice(0, 8);
   const actsFront = sortForSearch(
-    trindadeActs.filter((item) => (importantActTypes.get(item.actCode) || 0) >= 4 || item.valueTotal > 0)
+    normalizedTrindadeActs.filter((item) => (importantActTypes.get(item.actCode) || 0) >= 4 || item.valueTotal > 0)
   ).slice(0, 8);
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>
@@ -538,8 +552,8 @@ async function main() {
     },
     metrics: {
       records: allRecords.length,
-      curatedStories: stateRecords.length + trindadeNews.length,
-      trindadeActs: trindadeActs.length,
+      curatedStories: stateRecords.length + normalizedTrindadeNews.length,
+      trindadeActs: normalizedTrindadeActs.length,
       consultedSources: sourceCards.length,
       pagesReviewed: trindadeCoverage.pages || 0,
       municipalities: coverage.summary?.municipalities_total || radar.coverage_goal?.municipalities_total || 0,
@@ -592,7 +606,7 @@ async function main() {
   };
 
   const searchPayload = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: radar.updated_at || trindadeStatus.generated_at,
     total: allRecords.length,
     filters: searchFilters,
     records: allRecords.map(buildSearchRecord)

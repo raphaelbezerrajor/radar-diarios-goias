@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-07-20T03:12:43.263427+00:00",
+  "published_scope": "Somente processos com menção institucional inequívoca a Trindade no bloco oficial extraído.",
+  "methodology": "exact process block extraction from official TCM-GO PDFs plus deterministic dispositive analysis",
+  "human_review_notice": "A classificação é automatizada e serve como triagem documental. Vínculo territorial não significa irregularidade, e sanções, valores e responsáveis devem ser confirmados no ato oficial.",
+  "summary": {
+    "official_acts_read": 858,
+    "unique_processes_in_corpus": 650,
+    "confirmed_trindade_processes": 445,
+    "confirmed_occurrences": 651,
+    "priority": {
+      "baixa": 352,
+      "media": 78,
+      "alta": 14,
+      "critica": 1
+    },
+    "result": {
+      "ato_considerado_legal_e_registrado": 198,
+      "contas_julgadas_regulares": 46,
+      "arquivamento_determinado": 41,
+      "informacoes_sobre_proventos": 41,
+      "resultado_nao_identificado_automaticamente": 28,
+      "recomendacao_emitida": 16,
+      "determinacao_emitida": 15,
+      "despacho_sem_resultado_final_identificado": 9,
+      "abertura_de_vista_ou_defesa": 8,
+      "processo_extinto_sem_julgamento_de_merito": 6,
+      "proposta_tecnica_de_irregularidade_e_multa": 5,
+      "cumprimento_de_decisao_reconhecido": 5,
+      "contas_com_parecer_pela_aprovacao": 4,
+      "procedimento_considerado_regular_ou_legal": 4,
+      "recurso_improvido": 3,
+      "multa_aplicada_ou_mantida": 3,
+      "contas_rejeitadas": 2,
+      "debito_parcialmente_mantido_e_desconstituido": 2,
+      "medida_cautelar_revogada": 2,
+      "multas_parcialmente_mantidas_e_afastadas": 2,
+      "medida_cautelar_indeferida": 2,
+      "recursos_com_resultados_distintos": 1,
+      "medida_cautelar_deferida": 1,
+      "citacao_intimacao_ou_notificacao": 1
+    },
+    "fine_status": {
+      "nao_localizada_no_dispositivo": 355,
+      "proposta_condicional_ou_advertida": 77,
+      "confirmada_no_dispositivo": 10,
+      "parcialmente_mantida_e_parcialmente_afastada": 2,
+      "afastada_ou_cancelada": 1
+    },
+    "debit_status": {
+      "nao_localizado_no_dispositivo": 440,
+      "parcialmente_mantido_e_parcialmente_desconstituido": 2,
+      "afastado_ou_desconstituido": 2,
+      "proposto_condicional": 1
+    },
+    "confidence": {
+      "alta": 396,
+      "media": 49
+    }
+  }
+}
