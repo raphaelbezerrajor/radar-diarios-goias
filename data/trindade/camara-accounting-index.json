@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-07-19T21:02:14.157Z",
+  "coverage": {
+    "from_year": 2023,
+    "to_year": 2026,
+    "through": "2026-07-19"
+  },
+  "sources": {
+    "balances": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/balancos",
+    "management_reports": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/relatorios_circunstanciados",
+    "fiscal_reports": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/rgfscnt",
+    "duodecimo": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/transparencia/sgduodecimo",
+    "tcm_opinions": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/tcpareceres",
+    "accounts_review": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/legislacao/apreciacao_contas"
+  },
+  "years": {
+    "2023": {
+      "balances": [
+        {
+          "id": "6",
+          "published_at": "2024-05-03",
+          "page_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/balanco/id=6",
+          "attachments": 1
+        }
+      ],
+      "management_reports": [
+        {
+          "id": "3",
+          "published_at": "2024-03-11",
+          "page_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/relatorio_circunstanciado/id=3",
+          "attachments": 1
+        }
+      ],
+      "fiscal_report_categories": 7,
+      "fiscal_documents": 21,
+      "duodecimo_records": 15,
+      "duodecimo_received": 13323476.760000004,
+      "duodecimo_returned": 0,
+      "duodecimo_net": 13323476.760000004
+    },
+    "2024": {
+      "balances": [
+        {
+          "id": "7",
+          "published_at": "2025-01-31",
+          "page_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/balanco/id=7",
+          "attachments": 1
+        }
+      ],
+      "management_reports": [
+        {
+          "id": "5",
+          "published_at": "2025-01-06",
+          "page_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/relatorio_circunstanciado/id=5",
+          "attachments": 1
+        }
+      ],
+      "fiscal_report_categories": 7,
+      "fiscal_documents": 21,
+      "duodecimo_records": 16,
+      "duodecimo_received": 15193319.4,
+      "duodecimo_returned": 202365.68,
+      "duodecimo_net": 14990953.72
+    },
+    "2025": {
+      "balances": [
+        {
+          "id": "8",
+          "published_at": "2026-03-31",
+          "page_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/balanco/id=8",
+          "attachments": 1
+        }
+      ],
+      "management_reports": [
+        {
+          "id": "6",
+          "published_at": "2026-01-07",
+          "page_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/relatorio_circunstanciado/id=6",
+          "attachments": 1
+        }
+      ],
+      "fiscal_report_categories": 7,
+      "fiscal_documents": 21,
+      "duodecimo_records": 15,
+      "duodecimo_received": 16881740.16,
+      "duodecimo_returned": 0,
+      "duodecimo_net": 16881740.16
+    },
+    "2026": {
+      "balances": [],
+      "management_reports": [],
+      "fiscal_report_categories": 7,
+      "fiscal_documents": 7,
+      "duodecimo_records": 6,
+      "duodecimo_received": 9923478.34,
+      "duodecimo_returned": 0,
+      "duodecimo_net": 9923478.34
+    }
+  }
+}

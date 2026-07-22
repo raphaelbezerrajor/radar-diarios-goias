@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-07-19T21:20:00.000Z",
+  "methodology": "Comparação entre repasses de duodécimo, despesas pagas no portal e demonstrativos anuais publicados pela Câmara. Diferenças indicam valores a conciliar entre bases e estágios contábeis; não constituem, isoladamente, irregularidade.",
+  "years": [
+    {"year": 2023, "duodecimo_received": 13323476.76, "duodecimo_returned": 0, "duodecimo_net": 13323476.76, "portal_paid": 12498751.62, "net_transfer_minus_paid": 824725.14, "budget_expense_realized": null, "realized_minus_paid": null, "comparison_status": "limited", "comparison_note": "O arquivo anual disponível é um pacote de prestação de contas e não contém demonstrativo consolidado equivalente ao balancete de 2025.", "balance_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/balanco/id=6", "management_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/relatorio_circunstanciado/id=3"},
+    {"year": 2024, "duodecimo_received": 15193319.40, "duodecimo_returned": 202365.68, "duodecimo_net": 14990953.72, "portal_paid": 14161007.27, "net_transfer_minus_paid": 829946.45, "budget_expense_realized": null, "realized_minus_paid": null, "comparison_status": "limited", "comparison_note": "O arquivo anual disponível é um pacote de prestação de contas e não contém demonstrativo consolidado equivalente ao balancete de 2025.", "balance_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/balanco/id=7", "management_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/relatorio_circunstanciado/id=5"},
+    {"year": 2025, "duodecimo_received": 16881740.16, "duodecimo_returned": 0, "duodecimo_net": 16881740.16, "portal_paid": 15666851.61, "net_transfer_minus_paid": 1214888.55, "budget_expense_realized": 17373208.79, "realized_minus_paid": 1706357.18, "restos_a_pagar_paid": 283950.00, "bank_income": 37799.98, "prior_year_bank_balance": 300206.65, "comparison_status": "reconcile", "comparison_note": "A diferença foi decomposta em duas inconsistências de escopo. O detalhamento do portal não permite atribuí-la a credores porque marca todos os registros como integralmente pagos.", "balance_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/balanco/id=8", "management_url": "https://acessoainformacao.camaratrindade.go.gov.br/cidadao/resp_fiscal/relatorio_circunstanciado/id=6", "source_pages": "Comparativo da despesa: páginas 4–6 do PDF; balancete financeiro: página 7."}
+  ],
+  "management_assertion": "Os relatórios de controle interno de 2023 a 2025 declaram que não houve operações de crédito; trata-se de declaração do órgão, ainda não de verificação independente.",
+  "reconciliation_2025": {
+    "balance_realized": 17373208.79,
+    "detail_rows_total": 16935796.79,
+    "aggregate_paid_total": 15666851.61,
+    "balance_vs_detail": 437412.00,
+    "detail_vs_aggregate": 1268945.18,
+    "total_difference": 1706357.18,
+    "detail_records": 1463,
+    "detail_stage_equality": true,
+    "finding": "Os 1.463 registros detalhados somam R$ 16.935.796,79 e apresentam, linha a linha, valores líquido empenhado, liquidado e pago iguais. O totalizador da mesma consulta informa R$ 15.666.851,61 pagos. Por isso, a diferença não pode ser distribuída com segurança entre credores.",
+    "validation": "O valor detalhado de R$ 16.935.796,79 também aparece no balancete financeiro como pagamentos de despesa a pagar, reforçando que as telas usam conceitos ou filtros diferentes."
+  }
+}
