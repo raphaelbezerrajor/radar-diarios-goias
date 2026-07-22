@@ -1,5 +1,5 @@
 window.PAUTEIRO_ARCHIVE = {
-  generated_at: "2026-05-01",
+  generated_at: "2026-07-22",
   search_storage: {
     mode: "localStorage",
     key: "pauteiro:search-history"
@@ -325,15 +325,15 @@ window.PAUTEIRO_ARCHIVE = {
     "2026": {
       year: 2026,
       entries: [],
-      loaded_months: ["2026-04", "2026-05"],
+      loaded_months: ["2026-04", "2026-05", "2026-06", "2026-07"],
       sources: {
         goiania: { status: "active", analysis_status: "partial", entry_count: 1, loaded_months: ["2026-04"], manifest: "arquivo/2026/goiania.json" },
-        estado: { status: "active", analysis_status: "partial", entry_count: 7, loaded_months: ["2026-04"], manifest: "arquivo/2026/estado.json" },
-        mpgo: { status: "ready", analysis_status: "pending", entry_count: 0, loaded_months: [], manifest: "arquivo/2026/mpgo.json" },
-        municipios: { status: "active", analysis_status: "partial", entry_count: 15, loaded_months: ["2026-04", "2026-05"], manifest: "arquivo/2026/municipios.json" },
+        estado: { status: "active", analysis_status: "partial", entry_count: 12, loaded_months: ["2026-04", "2026-07"], manifest: "arquivo/2026/estado.json" },
+        mpgo: { status: "active", analysis_status: "partial", entry_count: 3, loaded_months: ["2026-06", "2026-07"], manifest: "arquivo/2026/mpgo.json" },
+        municipios: { status: "active", analysis_status: "partial", entry_count: 19, loaded_months: ["2026-04", "2026-05", "2026-07"], manifest: "arquivo/2026/municipios.json" },
         tjgo: { status: "paused", analysis_status: "paused", entry_count: 10, loaded_months: ["2026-04"], manifest: "arquivo/2026/tjgo.json" }
       },
-      note: "as entradas factuais seguem em radar-diarios-goias-data.js ate a consolidacao do bucket anual; semana de 27/04 a 01/05 ja integrada"
+      note: "as entradas factuais seguem em radar-diarios-goias-data.js ate a consolidacao do bucket anual; junho e julho ganharam lote publico com SES-GO, MPGO, AGM e diario de Senador Canedo"
     }
   }
 };
