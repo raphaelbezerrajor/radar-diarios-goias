@@ -1,58 +1,49 @@
-# PAUTEIRO!
+# Painel Diário
 
-Livro de pautas em HTML, CSS e JavaScript para leitura de diarios oficiais de Goias, com expansao historica preparada para 2024, 2025 e 2026.
+Base pública de atos e pautas para cobertura de Goiás, refeita em Astro e integrada ao acervo do Trindade Aberta.
 
-## Entrada principal
+## O que entrou nesta fase
 
-- `pauteiro.html`: frente publica principal.
-- `pauteiro-arquivo.js`: bucket anual do arquivo, com manifestos de 2024, 2025 e 2026.
-- `pauteiro-2026-pautas.txt`: saida leve com linha fina e lead das pautas.
-- `pauteiro-cobertura.js`: catalogo de cobertura com os 246 municipios de Goias, rota de diario e contagem carregada por ano.
-- `radar-diarios-goias.html`: alias legado que redireciona para `pauteiro.html`.
-- `radar-diarios-goias-cronologia.html`: alias legado da cronologia.
-- `radar-diarios-goias-dia.html`: alias legado da pagina diaria parametrica.
-- `radar-diarios-goias-data.js`: base principal consumida pela interface.
-- `radar-diarios-goias-data.json`: espelho estruturado da base.
-- `build-pauteiro-cobertura.ps1`: script para regenerar a camada de cobertura municipal a partir do IBGE e da base atual.
-- `build-pauteiro-arquivo.ps1`: script para regenerar o bucket anual do arquivo.
-- `radar-diarios-goias.css`: estilos da interface.
-- `radar-diarios-goias-app.js`: montagem dinamica das paginas.
+- capa editorial responsiva, desenhada primeiro para celular;
+- rotas separadas para `Goiás`, `Trindade` e `Busca`;
+- busca publica por assunto, cidade, ano, tipo e frente de origem, com carga por ano para ficar mais leve no celular;
+- detalhe estatico para cada pauta, noticia ou registro integrado;
+- integracao do painel estadual com a base publica de Trindade;
+- exportacao TXT preservada em `downloads/pauteiro-2026-pautas.txt`;
+- aliases legados (`pauteiro.html`, `radar-diarios-goias.html` e afins) mantidos por redirecionamento.
 
-## Como abrir
+## Arquitetura
 
-- Local: abra `pauteiro.html` no navegador.
-- Remoto: [https://raphaelbezerrajor.github.io/radar-diarios-goias/](https://raphaelbezerrajor.github.io/radar-diarios-goias/)
+- `src/`: paginas Astro, layout, componentes e estilos.
+- `scripts/build-site-data.mjs`: consolida o painel estadual, os manifests anuais e os dados de Trindade em uma base unica.
+- `scripts/sync-trindade-data.mjs`: atualiza o espelho municipal a partir da pasta principal no disco D.
+- `src/generated/`: saida gerada no build com resumo do site e registros detalhados.
+- `public/data/site-search-manifest.json`: manifesto da busca com filtros e shards anuais.
+- `public/data/search/year-*.json`: recortes anuais carregados sob demanda.
+- `public/data/site-search.json`: carga completa, usada apenas quando a busca pede todos os anos.
+- `data/trindade/`: espelho dos datasets publicos reaproveitados do portal local.
+- `radar-diarios-goias-data.json`, `pauteiro-arquivo.js` e `pauteiro-cobertura.js`: continuam como camada de origem da cobertura estadual.
 
-## Fluxo
+## Como rodar
 
-```mermaid
-flowchart LR
-  A["Diarios oficiais, DJE, MPGO, AGM e fontes do Estado"] --> B["Coleta e indexacao por dia, cidade, editoria e tipo de ato"]
-  B --> C["Leitura assistida com ChatGPT e NotebookLM"]
-  C --> D["Camada comparativa opcional com Gemini"]
-  C --> E["Agenda derivada de editais, audiencias e prazos"]
-  D --> F["Livro de pautas com linha fina, lead, fonte e documento original"]
-  E --> F
-  F --> G["PAUTEIRO! publico + exportacao TXT para a redacao"]
+```bash
+pnpm install
+pnpm sync:trindade
+pnpm build
+pnpm validate
 ```
 
-## Escopo atual
+Publicacao atual:
+[https://raphaelbezerrajor.github.io/radar-diarios-goias/](https://raphaelbezerrajor.github.io/radar-diarios-goias/)
 
-- 2026 segue como caderno corrente;
-- 2024 e 2025 ja entram como arquivo historico pronto para carga;
-- abril de 2026 esta preenchido ate 18/04/2026;
-- buckets anuais separados para 2024, 2025 e 2026;
-- catalogo municipal com os 246 municipios goianos e separacao entre diario proprio confirmado e rota AGM;
-- busca por municipio, ano, editoria, tipo de diario e assunto;
-- historico de busca salvo localmente no navegador da redacao;
-- fila operacional de ingestao em: Goiania, Estado, MPGO e Municipios; TJGO fica pausado nesta rodada;
-- calendario por dia;
-- cronologia;
-- pagina diaria;
-- bloco de fluxo do sistema;
-- exportacao leve em TXT;
-- meta declarada de cobertura para os 246 municipios goianos, alem de MPGO, TJGO, Estado e diarios proprios.
+## Base integrada
 
-## Observacao
+- painel estadual com pautas curadas de 2025 e 2026;
+- escopo municipal aberto para os 246 municipios goianos;
+- Trindade com atos do Diario, noticias verificadas e busca publica reaproveitada do outro projeto;
+- 4.621 registros municipais integrados, incluindo 2.919 atos estruturados;
+- recortes por DOE, MPGO, diarios proprios, AGM e DJE mapeado.
 
-O projeto esta em evolucao editorial. A proxima camada inclui ingestao historica de 2024 e 2025, ampliacao do volume de pautas em MPGO e TJGO, e cobertura municipal total dentro da mesma interface de busca.
+## Nota
+
+O acervo segue em expansao editorial. A camada atual privilegia desempenho e legibilidade sem perder a trilha de origem, os marcadores e o recorte por fonte.

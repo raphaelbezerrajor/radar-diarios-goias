@@ -1,0 +1,37 @@
+---
+import { formatDate, formatCurrency, withBase } from "../lib/format.js";
+
+const { record, compact = false, showSummary = true, imageMode = "auto" } = Astro.props;
+const hasImage = Boolean(record.image?.src);
+const hasUsefulImage = hasImage && record.image?.kind !== "fallback";
+const shouldShowImage = imageMode === "show"
+  ? hasImage
+  : imageMode === "hide"
+    ? false
+    : hasUsefulImage;
+const imageSrc = shouldShowImage ? withBase(record.image?.src) : "";
+const storyHref = withBase(record.path);
+---
+
+<article class:list={["story-card", compact && "is-compact", !shouldShowImage && "is-text-only"]}>
+  {shouldShowImage ? (
+    <a class="story-media" href={storyHref} aria-label={`Abrir: ${record.title}`}>
+      <img src={imageSrc} alt={record.image?.alt || record.title} loading="lazy" decoding="async" />
+    </a>
+  ) : null}
+  <div class="story-body">
+    <div class="story-kickers">
+      <span class="pill">{record.type}</span>
+      <span class="muted">{record.city}</span>
+      <span class="muted">{formatDate(record.date)}</span>
+    </div>
+    <h3><a href={storyHref}>{record.title}</a></h3>
+    {record.deck && <p class="story-deck">{record.deck}</p>}
+    {showSummary && record.summary && <p class="story-summary">{record.summary}</p>}
+    <div class="story-meta">
+      <span>{record.sourceFamily}</span>
+      {record.valueTotal ? <span>{formatCurrency(record.valueTotal)}</span> : <span>{record.marker || record.sourceNote}</span>}
+    </div>
+    <a class="card-action" href={storyHref}>Ler registro <span aria-hidden="true">→</span></a>
+  </div>
+</article>

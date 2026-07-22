@@ -5,3 +5,10 @@ server.pid
 *.bak
 Thumbs.db
 .DS_Store
+node_modules/
+dist/
+.astro/
+src/generated/
+.preview-root-4321/
+preview*.log
+preview*.pid

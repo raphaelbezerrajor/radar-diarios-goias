@@ -1,0 +1,62 @@
+---
+import records from "../../generated/site-records.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatCurrency, formatDate, withBase } from "../../lib/format.js";
+const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
+export function getStaticPaths() {
+  return records.map((record) => ({
+    params: { id: record.slug },
+    props: { record }
+  }));
+}
+
+const { record } = Astro.props;
+const imageSrc = withBase(record.image?.src);
+const hasUsefulImage = Boolean(imageSrc && record.image?.kind !== "fallback");
+---
+
+<BaseLayout title={`Painel Diário | ${record.title}`} description={record.deck || record.summary || record.title}>
+  <article class="detail-shell shell">
+    <a class="back-link" href={`${baseHref}busca/`}>Voltar para a busca</a>
+    <div class="detail-grid">
+      <div class="detail-main">
+        <p class="section-kicker">{record.type} · {record.city}</p>
+        <h1>{record.title}</h1>
+        {record.deck && <p class="detail-deck">{record.deck}</p>}
+        {hasUsefulImage && <img class="detail-image" src={imageSrc} alt={record.image?.alt || record.title} decoding="async" />}
+        {record.summary && <p class="detail-summary">{record.summary}</p>}
+        {record.paragraphs?.length ? (
+          <div class="detail-copy">
+            {record.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+        ) : null}
+      </div>
+      <aside class="detail-side">
+        <div class="hero-panel">
+          <strong>{record.sourceFamily}</strong>
+          <span>{record.sourceLabel}</span>
+          <small>{formatDate(record.date)}</small>
+        </div>
+        {record.valueTotal ? (
+          <div class="hero-panel">
+            <strong>{formatCurrency(record.valueTotal)}</strong>
+            <span>valor encontrado no recorte</span>
+          </div>
+        ) : null}
+        {record.marker ? (
+          <div class="hero-panel">
+            <strong>Marcador</strong>
+            <span>{record.marker}</span>
+          </div>
+        ) : null}
+        <div class="detail-actions">
+          {record.sourceUrl && (
+            <a class="button-primary" href={record.sourceUrl} target="_blank" rel="noreferrer">{record.sourceActionLabel || "Abrir fonte original"} ↗</a>
+          )}
+          <a class="button-secondary" href={`${baseHref}busca/?city=${encodeURIComponent(record.city || "")}&q=${encodeURIComponent(record.title)}`}>Buscar relacionados</a>
+        </div>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>

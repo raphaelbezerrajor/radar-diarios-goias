@@ -1,0 +1,13 @@
+---
+const { items = [] } = Astro.props;
+---
+
+<section class="metric-strip shell" aria-label="Panorama">
+  {items.map((item) => (
+    <article class="metric-card">
+      <span>{item.label}</span>
+      <strong>{item.value}</strong>
+      {item.note && <small>{item.note}</small>}
+    </article>
+  ))}
+</section>
