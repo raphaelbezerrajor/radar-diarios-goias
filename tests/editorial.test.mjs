@@ -3,6 +3,12 @@ import test from "node:test";
 import { EDITORIAL_STATES, PUBLICATION_ADAPTER, canTransition, requiresMandatoryHumanReview } from "../src/lib/editorial/workflow.mjs";
 import { buildBreadcrumbSchema, buildNewsArticleSchema, validateJsonLdSchema, validateStorySeo } from "../src/lib/editorial/seo.mjs";
 import { assessActNewsValue, assessTcmNewsValue } from "../src/lib/editorial/document-news.mjs";
+import {
+  applyApprovedCuration,
+  evaluateCurationCandidate,
+  selectCurationCandidates,
+  validateEditorialBrief
+} from "../src/lib/editorial/curation.mjs";
 
 test("separa valor-notícia de rotina burocrática", () => {
   const routine = assessActNewsValue({
@@ -140,4 +146,71 @@ test("detecta link interno quebrado e schema editorial incompleto", () => {
   assert.equal(result.valid, false);
   assert.ok(result.issues.includes("link_interno_quebrado:/inexistente/"));
   assert.equal(validateJsonLdSchema({ "@context": "https://schema.org", "@type": "NewsArticle" }).valid, false);
+});
+
+test("envia apenas pautas relevantes e documentadas para curadoria", () => {
+  const routine = evaluateCurationCandidate({
+    id: "rotina",
+    importance: 30,
+    official_url: "https://diario.exemplo.go.gov.br/rotina.pdf",
+    evidence_excerpt: "Concede férias a servidor."
+  });
+  const relevant = evaluateCurationCandidate({
+    id: "contrato",
+    city: "Trindade",
+    importance: 91,
+    official_url: "https://diario.exemplo.go.gov.br/contrato.pdf",
+    evidence_excerpt: "Contrato de obra da rede municipal de saúde."
+  });
+  assert.equal(routine.eligible, false);
+  assert.equal(relevant.eligible, true);
+  assert.ok(relevant.reasons.includes("alto valor-notícia calculado"));
+});
+
+test("fila de curadoria respeita data, prioridade e limite diário", () => {
+  const items = Array.from({ length: 4 }, (_, index) => ({
+    id: `ato-${index}`,
+    date: index === 3 ? "2026-07-22" : "2026-07-23",
+    city: "Trindade",
+    importance: 95 - index,
+    official_url: `https://diario.exemplo.go.gov.br/${index}.pdf`,
+    evidence_excerpt: "Contrato para serviço público."
+  }));
+  const queue = selectCurationCandidates(items, [], { maximumPerDate: 2, maximumPerRun: 3 });
+  assert.deepEqual(queue.map((item) => item.id), ["ato-0", "ato-1", "ato-3"]);
+  assert.ok(queue.every((item) => item.status === "pending"));
+});
+
+test("curadoria só altera matéria depois de aprovação humana registrada", () => {
+  const record = {
+    id: "ato-1",
+    title: "Título burocrático",
+    deck: "Olho burocrático.",
+    paragraphs: ["Parágrafo um.", "Parágrafo dois."],
+    sourceHash: "abc"
+  };
+  const draft = {
+    id: "ato-1",
+    status: "draft",
+    editorial: {
+      mainAngle: "Impacto no atendimento",
+      whyItMatters: "Afeta a rede pública.",
+      headlineOptions: ["Título A", "Título B"],
+      reportingQuestions: ["Quanto será pago?", "Qual é o prazo?"],
+      verifiedFacts: ["O contrato foi publicado."],
+      doNotState: [],
+      publication: { title: "Novo título", deck: "Novo olho.", paragraphs: ["Lead.", "Contexto."] }
+    }
+  };
+  assert.equal(applyApprovedCuration(record, draft).title, "Título burocrático");
+
+  const approved = {
+    ...draft,
+    status: "approved",
+    source: { documentSha256: "abc" },
+    humanReview: { approvedBy: "Editor", approvedAt: "2026-07-23T12:00:00Z" }
+  };
+  const validation = validateEditorialBrief(approved);
+  assert.equal(validation.valid, true);
+  assert.equal(applyApprovedCuration(record, approved).title, "Novo título");
 });

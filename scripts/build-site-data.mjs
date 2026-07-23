@@ -11,6 +11,7 @@ import {
   hasPrimarySource,
   isPrimaryOfficialSource
 } from "../src/lib/editorial/document-news.mjs";
+import { applyApprovedCuration } from "../src/lib/editorial/curation.mjs";
 
 const root = process.cwd();
 const generatedDir = path.join(root, "src", "generated");
@@ -513,7 +514,8 @@ async function main() {
     sourcePreviews,
     municipalDiaries,
     alegoMonitor,
-    julyDocumentNews
+    julyDocumentNews,
+    curatedBriefs
   ] = await Promise.all([
     trindadeProvider.buscarAtos(),
     trindadeProvider.obterAnalise(),
@@ -527,7 +529,8 @@ async function main() {
     readJsonOptional({ items: [] }, "data", "trindade", "source-previews.json"),
     readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], range: {} }, "data", "trindade", "municipal-diaries-2026.json"),
     readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], analysis_queue: [], range: {} }, "data", "trindade", "alego-monitor-2026.json"),
-    readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "july-document-news-2026.json")
+    readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "july-document-news-2026.json"),
+    readJsonOptional({ briefs: [] }, "data", "editorial", "curated-briefs.json")
   ]);
 
   const municipalityByName = new Map(
@@ -587,6 +590,8 @@ async function main() {
   const normalizedTcmNews = (tcmDossiers.dossiers || [])
     .filter((item) => item.scope_status === "trindade_confirmado")
     .map(normalizeTcmDossier);
+  const curatedBriefById = new Map((curatedBriefs.briefs || []).map((brief) => [brief.id, brief]));
+  const applyCuration = (item) => applyApprovedCuration(item, curatedBriefById.get(item.id));
   const editorialYear = Number(String(radar.cutoff_date || radar.updated_at).slice(0, 4));
   const editorialPublicationDate = [
     radar.updated_at,
@@ -610,6 +615,7 @@ async function main() {
         .concat(normalizedJulyDocumentNews)
         .concat(normalizedTcmNews)
         .concat(residualUnified)
+        .map(applyCuration)
         .map(addPublicationMetadata)
         .map(attachSearch)
     )
@@ -618,6 +624,7 @@ async function main() {
   const publishedNews = stateRecords
     .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedTcmNews)
     .filter((item) => item.recordType === "story")
+    .map(applyCuration)
     .map(addPublicationMetadata);
   const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
   const leadStory = pickLead(timelineNews);
@@ -625,12 +632,14 @@ async function main() {
     timelineNews.filter((item) => item.id !== leadStory?.id)
   ).slice(0, 3);
 
-  const stateFront = sortForSearch(stateRecords.filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
-  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs)
+  const stateFront = sortForSearch(stateRecords.map(applyCuration)
+    .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
+  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs).map(applyCuration)
     .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
   const actsFront = sortForSearch(
     normalizedTrindadeActs
       .concat(normalizedJulyDocumentNews)
+      .map(applyCuration)
       .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)
   ).slice(0, 8);
   const julyPublishedNews = sortForSearch(
@@ -638,7 +647,7 @@ async function main() {
       normalizedJulyDocumentNews.concat(
         normalizedTrindadeActs.filter((item) => item.month === "2026-07" && item.recordType === "story")
       )
-    )
+    ).map(applyCuration)
   );
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>
