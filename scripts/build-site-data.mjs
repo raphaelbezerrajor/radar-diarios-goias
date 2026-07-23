@@ -17,7 +17,6 @@ const generatedDir = path.join(root, "src", "generated");
 const publicDataDir = path.join(root, "public", "data");
 const publicDownloadsDir = path.join(root, "public", "downloads");
 const publicSearchDir = path.join(publicDataDir, "search");
-const trindadePortalUrl = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
 const trindadeProvider = createTrindadeJsonProvider({ dataDir: path.join(root, "data", "trindade") });
 
 function normalizeText(value) {
@@ -369,8 +368,8 @@ function normalizeUnifiedRecord(item) {
     editoria: "Base publica de Trindade",
     sourceFamily: "Trindade | Base integrada",
     sourceLabel: item.source_label || "Trindade em Dados",
-    sourceUrl: item.href ? `${trindadePortalUrl}${String(item.href).startsWith("/") ? "" : "/"}${item.href}` : trindadePortalUrl,
-    sourceActionLabel: "Abrir no Portal Trindade",
+    sourceUrl: null,
+    sourceActionLabel: null,
     sourceNote: item.subtitle || "",
     scope: "Municipal",
     tags: item.tags || [],
@@ -382,7 +381,7 @@ function normalizeUnifiedRecord(item) {
     },
     marker: item.subtitle || "",
     importance: 20,
-    hasOriginalSource: Boolean(item.href),
+    hasOriginalSource: false,
     recordType: "record"
   };
 }
@@ -446,7 +445,8 @@ async function main() {
     trindadeLegislative,
     tcmDossiers,
     sourcePreviews,
-    municipalDiaries
+    municipalDiaries,
+    alegoMonitor
   ] = await Promise.all([
     trindadeProvider.buscarAtos(),
     trindadeProvider.obterAnalise(),
@@ -458,7 +458,8 @@ async function main() {
     trindadeProvider.obterLegislativo(),
     trindadeProvider.obterDossiesTCM(),
     readJsonOptional({ items: [] }, "data", "trindade", "source-previews.json"),
-    readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], range: {} }, "data", "trindade", "municipal-diaries-2026.json")
+    readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], range: {} }, "data", "trindade", "municipal-diaries-2026.json"),
+    readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], analysis_queue: [], range: {} }, "data", "trindade", "alego-monitor-2026.json")
   ]);
 
   const municipalityByName = new Map(
@@ -557,6 +558,17 @@ async function main() {
     materialTypes: "atos publicos, noticias verificadas, proposicoes, contratos, credores e processos do TCM.",
     nextStep: "continuar a expandir os recortes historicos e manter a busca unificada leve no celular.",
     stateCount: trindadeStatus.source_counts?.unified_search_records || 0
+  });
+  sourceCards.push({
+    id: "alego",
+    label: "ALEGO | Diário, votações e contratos",
+    officialUrl: "https://transparencia.al.go.leg.br/",
+    analysisFocus: "Diário da Assembleia, votações nominais, contratos, aditivos e sanções administrativas.",
+    materialTypes: "atos legislativos, votos individualizados, contratos, valores empenhados e pagos.",
+    nextStep: "ler os PDFs ato a ato e promover os fatos de maior impacto para a capa.",
+    stateCount: Number(alegoMonitor.summary?.diary_editions || 0)
+      + Number(alegoMonitor.summary?.roll_calls || 0)
+      + Number(alegoMonitor.summary?.contracts || 0)
   });
 
   const cityCounts = countBy(
@@ -714,6 +726,22 @@ async function main() {
         publicationPattern: source.publication_pattern || {},
         summary: source.summary || {}
       }))
+    },
+    alego: {
+      generatedAt: alegoMonitor.generated_at || null,
+      range: alegoMonitor.range || {},
+      summary: alegoMonitor.summary || {},
+      dailyCheckWindows: alegoMonitor.daily_check_windows || [],
+      sources: (alegoMonitor.sources || []).map((source) => ({
+        id: source.id,
+        name: source.name,
+        officialUrl: source.official_url,
+        status: source.status,
+        collectionMethod: source.collection_method,
+        publicationPattern: source.publication_pattern || {},
+        summary: source.summary || {}
+      })),
+      analysisQueue: (alegoMonitor.analysis_queue || []).slice(0, 12)
     }
   };
 

@@ -12,6 +12,11 @@ if (!configuredSource) {
 const sourceDir = path.resolve(configuredSource);
 const targetDir = path.resolve("data", "trindade");
 const files = [
+  "alego-contracts-2026.json",
+  "alego-diaries-2026.json",
+  "alego-monitor-2026.json",
+  "alego-sanctions.json",
+  "alego-votacoes-2026.json",
   "agm-index.json",
   "agm-trindade-acts-search.json",
   "agm-trindade-analysis-index.json",
@@ -36,6 +41,9 @@ const files = [
 ];
 
 const baselines = {
+  "alego-contracts-2026.json": ["records", 50],
+  "alego-diaries-2026.json": ["editions", 31],
+  "alego-votacoes-2026.json": ["rows", 4000],
   "agm-index.json": ["editions", 2066],
   "agm-trindade-acts-search.json": ["acts", 2919],
   "agm-trindade-procurement.json": ["records", 822],
