@@ -9,6 +9,7 @@ Plataforma editorial modular para coleta, análise documental, radar de pautas e
 - busca publica por assunto, cidade, ano, tipo e frente de origem, com carga por ano para ficar mais leve no celular;
 - detalhe estatico para cada pauta, noticia ou registro integrado;
 - integracao do painel estadual com a base publica de Trindade;
+- apresentação dos 2.919 atos de Trindade como registros-notícia factuais, cada um com fonte e estado de triagem;
 - exportacao TXT preservada em `downloads/pauteiro-2026-pautas.txt`;
 - aliases legados (`pauteiro.html`, `radar-diarios-goias.html` e afins) mantidos por redirecionamento.
 

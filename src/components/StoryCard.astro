@@ -11,6 +11,11 @@ const shouldShowImage = imageMode === "show"
     : hasUsefulImage;
 const imageSrc = shouldShowImage ? withBase(record.image?.src) : "";
 const storyHref = withBase(record.path);
+const actionLabel = record.recordType === "story"
+  ? "Ler notícia"
+  : record.recordType === "act_news"
+    ? "Ler nota do ato"
+    : "Ler registro";
 ---
 
 <article class:list={["story-card", compact && "is-compact", !shouldShowImage && "is-text-only"]}>
@@ -32,6 +37,6 @@ const storyHref = withBase(record.path);
       <span>{record.sourceFamily}</span>
       {record.valueTotal ? <span>{formatCurrency(record.valueTotal)}</span> : <span>{record.marker || record.sourceNote}</span>}
     </div>
-    <a class="card-action" href={storyHref}>{record.recordType === "story" ? "Ler notícia" : "Ler registro"} <span aria-hidden="true">→</span></a>
+    <a class="card-action" href={storyHref}>{actionLabel} <span aria-hidden="true">→</span></a>
   </div>
 </article>
