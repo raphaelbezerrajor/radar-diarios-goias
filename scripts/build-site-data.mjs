@@ -445,7 +445,8 @@ async function main() {
     trindadeCamara,
     trindadeLegislative,
     tcmDossiers,
-    sourcePreviews
+    sourcePreviews,
+    municipalDiaries
   ] = await Promise.all([
     trindadeProvider.buscarAtos(),
     trindadeProvider.obterAnalise(),
@@ -456,7 +457,8 @@ async function main() {
     trindadeProvider.obterCamara(),
     trindadeProvider.obterLegislativo(),
     trindadeProvider.obterDossiesTCM(),
-    readJsonOptional({ items: [] }, "data", "trindade", "source-previews.json")
+    readJsonOptional({ items: [] }, "data", "trindade", "source-previews.json"),
+    readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], range: {} }, "data", "trindade", "municipal-diaries-2026.json")
   ]);
 
   const municipalityByName = new Map(
@@ -695,7 +697,24 @@ async function main() {
       tcmTotal: normalizedTcmNews.length
     },
     municipalitySummary: coverage.summary || {},
-    priorityMunicipalities: (coverage.municipality_catalog || []).filter((item) => item.priority).slice(0, 12)
+    priorityMunicipalities: (coverage.municipality_catalog || []).filter((item) => item.priority).slice(0, 12),
+    municipalDiaries: {
+      generatedAt: municipalDiaries.generated_at || null,
+      range: municipalDiaries.range || {},
+      summary: municipalDiaries.summary || {},
+      dailyCheckWindows: municipalDiaries.daily_check_windows || [],
+      sources: (municipalDiaries.sources || []).map((source) => ({
+        id: source.id,
+        name: source.name,
+        officialUrl: source.official_url,
+        municipalities: source.municipalities || [],
+        status: source.status,
+        warning: source.source_warning || null,
+        checkedAt: source.checked_at,
+        publicationPattern: source.publication_pattern || {},
+        summary: source.summary || {}
+      }))
+    }
   };
 
   const searchPayload = {
