@@ -26,6 +26,7 @@ const files = [
   "camara-legislative-index.json",
   "company-profiles.json",
   "data-status.json",
+  "municipal-diaries-2026.json",
   "news-2026.json",
   "tcmgo-trindade-checked-summary.json",
   "tcmgo-trindade-coverage.json",

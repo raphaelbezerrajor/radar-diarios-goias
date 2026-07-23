@@ -1594,3 +1594,39 @@ a.module-card:hover {
 .news-value-box li + li {
   margin-top: 0.35rem;
 }
+
+.municipal-stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.25rem 0 1.5rem;
+}
+
+.municipal-source-list {
+  margin-top: 1rem;
+}
+
+.source-card-footer {
+  align-items: end;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 0.55rem;
+}
+
+.source-card .source-warning {
+  background: #fff4e8;
+  border-left: 3px solid var(--accent);
+  color: #6f3d1d;
+  font-size: 0.84rem;
+  margin: 0.35rem 0;
+  padding: 0.65rem 0.75rem;
+}
+
+@media (max-width: 720px) {
+  .municipal-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .source-card-footer {
+    align-items: start;
+    flex-direction: column;
+  }
+}

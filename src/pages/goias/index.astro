@@ -4,6 +4,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionHeader from "../../components/SectionHeader.astro";
 import StoryCard from "../../components/StoryCard.astro";
 import { compactNumber } from "../../lib/format.js";
+
+const municipal = siteData.municipalDiaries;
 ---
 
 <BaseLayout title="Pauteiro | Painel Diário de Goiás" description="Caderno estadual com atos, pautas e frentes abertas por fonte oficial em Goiás.">
@@ -50,6 +52,47 @@ import { compactNumber } from "../../lib/format.js";
             </article>
           ))}
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="shell">
+      <SectionHeader
+        kicker="Monitor municipal"
+        title="Junho e julho: PDFs preservados e conferência em três rodadas por dia"
+        intro={`O lote reúne ${compactNumber(municipal.summary.editions || 0)} edições de ${compactNumber(municipal.summary.municipalities || 0)} municípios prioritários. Cada arquivo baixado passa por validação de PDF e hash antes de entrar na fila de leitura ato a ato.`}
+      />
+      <div class="stats-column municipal-stats">
+        <article class="hero-panel">
+          <strong>{compactNumber(municipal.summary.downloaded || 0)}</strong>
+          <span>PDFs baixados e validados</span>
+        </article>
+        <article class="hero-panel">
+          <strong>{compactNumber(municipal.summary.failed_downloads || 0)}</strong>
+          <span>falhas de download</span>
+        </article>
+        <article class="hero-panel">
+          <strong>{municipal.dailyCheckWindows.map((item) => item.time).join(" · ")}</strong>
+          <span>janelas diárias de conferência</span>
+        </article>
+      </div>
+      <div class="source-list source-list-wide municipal-source-list">
+        {municipal.sources.map((source) => (
+          <article class="source-card">
+            <div class="source-card-top">
+              <strong>{source.name}</strong>
+              <span>{compactNumber(source.summary.editions_total || 0)} edições</span>
+            </div>
+            <p>{source.municipalities.join(" · ")}</p>
+            <small>{source.publicationPattern.ordinary_window}</small>
+            {source.warning && <p class="source-warning">Atenção: {source.warning}</p>}
+            <div class="source-card-top source-card-footer">
+              <span>Última edição: {source.summary.last_date || "não localizada"}</span>
+              <a class="text-link" href={source.officialUrl}>Fonte oficial ↗</a>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>

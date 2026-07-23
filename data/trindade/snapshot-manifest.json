@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "source": "Trindade-Aberta/data/public",
-  "syncedAt": "2026-07-22T23:33:16.928Z",
+  "syncedAt": "2026-07-23T02:59:06.514Z",
   "files": [
     {
       "file": "agm-index.json",
-      "bytes": 669722,
-      "sha256": "6b5c6cd2dc9b1162d6190b6b3709faa1c73d085160b82113527e51ce9221a520"
+      "bytes": 686321,
+      "sha256": "43c685b4bd6c3403b4a52514a793651f197e429047270ec79893bd29a02d0648"
     },
     {
       "file": "agm-trindade-acts-search.json",
@@ -25,13 +25,13 @@
     },
     {
       "file": "agm-trindade-coverage.json",
-      "bytes": 339,
-      "sha256": "461e81af44da8b9d19701e330e8abee463a2dbc2566fd4ea4db948c1f8854b30"
+      "bytes": 344,
+      "sha256": "1bd6adbdb4d93b3b8b0417b1f07aea0ca004f054687a39ba798eebe75f3741aa"
     },
     {
       "file": "agm-trindade-editions.json",
-      "bytes": 146943,
-      "sha256": "b8ed58e837f1f4c017f33dae2e88cdf20408a599f7891b0565b1c05ec9ca7bf8"
+      "bytes": 147038,
+      "sha256": "d4c0ac237a4ea5c7a78aab75ec63003e65a7f9cf3807026917f1f60e03a0ba30"
     },
     {
       "file": "agm-trindade-procurement.json",
@@ -40,48 +40,53 @@
     },
     {
       "file": "budget-execution-index.json",
-      "bytes": 15603,
-      "sha256": "b4f189d5e434a89061c28ce859595eef1f287a0935931133497800e40980a118"
+      "bytes": 16144,
+      "sha256": "0ead2d0504c5df638ee1f1ab52588d71429945ad30852f41a29c1dad35706c45"
     },
     {
       "file": "camara-accounting-index.json",
-      "bytes": 3369,
-      "sha256": "d2322da001982b8a61bc740778c5e441a6c71cf8ceacaf0bae48bc0642ae5a7e"
+      "bytes": 3469,
+      "sha256": "0ee11f2e5dc2f954091c9c0179dbf20c1f5ab78be0e8c7da3198b97570156efe"
     },
     {
       "file": "camara-annual-results.json",
-      "bytes": 3586,
-      "sha256": "a57f1c5a6f64c11ffb8bda3754ca9f5488bc2ddd49df4ae7b74ac8958a1ff485"
+      "bytes": 3608,
+      "sha256": "2f56a6b8e509284a53efa032c90c6fbc0b42ec71245fd9e3e1eeb28fedc54d85"
     },
     {
       "file": "camara-index.json",
-      "bytes": 78003,
-      "sha256": "0c90eb75426c517c519e4046274d23c40237a6cd2406e09ef17fcb479adca808"
+      "bytes": 80222,
+      "sha256": "07033ae006827699ea749a81c7b7613504782c8ffe60a3a41528468001519a31"
     },
     {
       "file": "camara-legislative-index.json",
-      "bytes": 252198,
-      "sha256": "27df2fc3f7f2d2d906644ef0d07d5e811b98beffad0a08693184568d20a5ca40"
+      "bytes": 257818,
+      "sha256": "a6876e33c18723e2f8963a124136046c0558cb799a7a52660c7a42c38facea57"
     },
     {
       "file": "company-profiles.json",
-      "bytes": 1233435,
-      "sha256": "70dd0cbb22859d4ed84ff6db0b248a30125e4d87da534c104974d08556465288"
+      "bytes": 1233436,
+      "sha256": "0b9b0e8292ed0269777fe4b1673190a8f6ba3e7e0de0ba53a1014c327cde1ffe"
     },
     {
       "file": "data-status.json",
-      "bytes": 1921,
-      "sha256": "c02afe7b99b38533dffc17df7b089e7f0dc7e2437c57f95581faa09619085f9d"
+      "bytes": 1922,
+      "sha256": "b54bb228855dfb0413d30973ea54ea7f3d5513558f4db5295df678b221d7a974"
+    },
+    {
+      "file": "municipal-diaries-2026.json",
+      "bytes": 172209,
+      "sha256": "fc08357333ace37ccbb4ab6684bc9eb4cf1fad58c222bb63e185f7a292ac28e9"
     },
     {
       "file": "news-2026.json",
-      "bytes": 22731,
-      "sha256": "82b617ca157d5309f4077a623e94730d4f5a587d69191ce41dfea2f84aebf742"
+      "bytes": 23178,
+      "sha256": "1224a2682e1c7416481db014d8b9d49a53e864c39a3028f3b512509f299e6901"
     },
     {
       "file": "tcmgo-trindade-checked-summary.json",
-      "bytes": 2375,
-      "sha256": "217b282f232731f2bb84c133db3077ccc35be577a403277ea336ceffa1f9d0c2"
+      "bytes": 2436,
+      "sha256": "e0c1c73357bffb66ccdfafbd46a121f3ff029f0972fbd162449605930fce9db7"
     },
     {
       "file": "tcmgo-trindade-coverage.json",
@@ -100,8 +105,8 @@
     },
     {
       "file": "unified-search-index.json",
-      "bytes": 3703181,
-      "sha256": "f69bbd527129322e13f5c17732859fdda5bbdc4694ad0a6f6bd92d283ed8c437"
+      "bytes": 3703182,
+      "sha256": "88153cfd63e7d46ba7ecab71dc83743a55cbccbd0c732785746a631ba927d88c"
     }
   ]
 }
