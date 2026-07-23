@@ -2,11 +2,13 @@
 
 ## Objetivo
 
-Transformar cada ato oficial verificado em notícia legível, pesquisável e auditável. O Pauteiro é a linha publicada; o Trindade Aberta preserva documentos, coletores e dados municipais.
+Transformar documentos oficiais relevantes em notícias legíveis, pesquisáveis e auditáveis. O Pauteiro é a linha publicada; o Trindade Aberta preserva documentos, coletores e dados municipais.
 
-O corpus atual possui 2.919 atos estruturados. A regra é `1 ato = 1 matéria documental`, com possibilidade de uma reportagem posterior reunir vários atos relacionados.
+O corpus atual possui 2.919 atos estruturados. A regra é `1 ato = 1 registro auditável`; somente atos com valor-notícia viram matéria. O repositório preserva o conjunto completo sem transformar volume burocrático em cobertura jornalística.
 
-## O que é publicado
+## O que é publicado como notícia
+
+Entram no noticiário atos ligados a dinheiro público, contratos, licitações, orçamento, obras, serviços, direitos, mudanças estratégicas, decisões de controle, sanções, correções e efeitos concretos para a população. Diárias, férias, licenças, rotinas internas e atos sem consequência pública clara permanecem apenas no repositório.
 
 Cada matéria documental contém:
 
@@ -34,9 +36,10 @@ A linha do tempo pública mostra somente o ano corrente. Em 2026, fatos de 2018 
 5. Classificar município, órgão, tema e tipo.
 6. Extrair nomes, empresas, CNPJs, valores, datas e referências.
 7. Isolar a página usada como fonte e gerar WebP leve.
-8. Produzir título, olho, lead, detalhamento e contexto.
-9. Conferir os campos sensíveis contra a página original.
-10. Publicar no Pauteiro e atualizar a busca.
+8. Calcular e registrar o valor-notícia; separar rotina de interesse público.
+9. Produzir título, olho, lead, detalhamento e contexto somente para o recorte relevante.
+10. Conferir os campos sensíveis contra a página original.
+11. Publicar notícias no Pauteiro e atualizar o repositório completo na busca.
 
 ## Regras de linguagem
 
@@ -49,4 +52,4 @@ A linha do tempo pública mostra somente o ano corrente. Em 2026, fatos de 2018 
 
 ## Implementação atual
 
-Os 2.919 atos de Trindade e 445 dossiês confirmados do TCM-GO já geram páginas jornalísticas individuais. O filtro bloqueia notícias institucionais, a capa usa apenas fatos de 2026 e a busca preserva o acervo histórico.
+Os 2.919 atos de Trindade e 445 dossiês confirmados do TCM-GO permanecem pesquisáveis. O filtro editorial promove somente o recorte de interesse público, bloqueia notícias institucionais e mantém a capa limitada aos fatos relevantes de 2026.

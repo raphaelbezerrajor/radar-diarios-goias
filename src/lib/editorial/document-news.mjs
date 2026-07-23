@@ -35,11 +35,127 @@ const resultLabels = Object.freeze({
   contas_regulares: "aprovação das contas",
   multa_aplicada: "aplicação de multa",
   determinacao_emitida: "determinação do tribunal",
+  recomendacao_emitida: "recomendação à gestão",
+  proposta_tecnica_de_irregularidade_e_multa: "proposta técnica de irregularidade e multa",
   abertura_de_vista_ou_defesa: "abertura de prazo para defesa",
+  contas_com_parecer_pela_aprovacao: "parecer pela aprovação das contas",
+  contas_julgadas_regulares: "julgamento regular das contas",
+  ato_considerado_legal_e_registrado: "registro de legalidade do ato",
+  arquivamento_determinado: "arquivamento do processo",
+  medida_cautelar_indeferida: "indeferimento de medida cautelar",
+  medida_cautelar_revogada: "revogação de medida cautelar",
+  processo_extinto_sem_julgamento_de_merito: "extinção sem julgamento de mérito",
   autorizacao_emitida: "autorização administrativa",
   processo_extinto: "extinção do processo",
   nao_classificado: "novo andamento"
 });
+
+const clamp = (value, minimum = 0, maximum = 100) => Math.max(minimum, Math.min(maximum, value));
+
+const actBaseScore = Object.freeze({
+  contrato: 76,
+  extrato_de_contrato: 74,
+  convenio: 72,
+  dispensa: 70,
+  inexigibilidade: 70,
+  aviso_de_licitacao: 68,
+  rescisao: 66,
+  aditivo: 62,
+  apostilamento: 56,
+  lei: 60,
+  lei_complementar: 65,
+  edital: 48,
+  homologacao: 52,
+  notificacao: 45,
+  resolucao: 44,
+  decreto: 32,
+  nomeacao: 30,
+  exoneracao: 30,
+  convocacao: 28,
+  portaria: 16,
+  errata: 10,
+  manual_review_required: 0
+});
+
+export function assessActNewsValue(item = {}, valueTotal = 0) {
+  const normalizedType = normalize(clean(item.act_type) || "ato").replaceAll(" ", "_");
+  const text = normalize([item.title, item.summary, item.public_body, ...(item.reference_numbers || [])].join(" "));
+  const reasons = [];
+  let score = actBaseScore[normalizedType] ?? 25;
+
+  if (/(contrato|licitacao|dispensa|inexigibilidade|convenio|aditivo|apostilamento|rescisao)/.test(normalizedType)) {
+    reasons.push("uso de recursos ou contratação pública");
+  }
+  if (valueTotal > 0) {
+    score += valueTotal >= 1_000_000 ? 25 : valueTotal >= 100_000 ? 20 : valueTotal >= 10_000 ? 15 : 10;
+    reasons.push("valor financeiro identificado");
+  }
+  if ((item.cnpjs || []).length) {
+    score += 6;
+    reasons.push("empresa ou CNPJ identificado");
+  }
+  if (/(obra|saude|educacao|medicamento|transporte|saneamento|energia|tecnologia|imovel|concurso|chamamento|orcamento|credito suplementar|desapropriacao|tribut|tarifa|repasse|festival|show)/.test(text)) {
+    score += 18;
+    reasons.push("impacto potencial em serviço, política ou patrimônio público");
+  }
+  if (/(multa|irregular|correcao|determinacao|rejeicao|prestacao de contas|ressarcimento|debito)/.test(text)) {
+    score += 25;
+    reasons.push("controle, correção ou responsabilização");
+  }
+  if (/(secretario municipal|chefe de gabinete|procurador geral|controlador geral|presidente de autarquia)/.test(text)
+      && /(nomeacao|exoneracao)/.test(normalizedType)) {
+    score += 22;
+    reasons.push("mudança em cargo estratégico");
+  }
+  if (/(diaria|ferias|licenca|deslocamento|ponto facultativo|feriado|substituicao temporaria|horario de expediente)/.test(text)) {
+    score -= 38;
+    reasons.push("rotina administrativa sem impacto amplo identificado");
+  }
+  if (/consulte o documento oficial para o conteudo integral/.test(text)) score -= 14;
+  if (normalizedType === "manual_review_required") score = 0;
+
+  score = clamp(score);
+  return {
+    score,
+    tier: score >= 85 ? "alta_relevancia" : score >= 60 ? "relevante" : score >= 40 ? "monitoramento" : "repositorio",
+    publish: score >= 60,
+    reasons: [...new Set(reasons)]
+  };
+}
+
+export function assessTcmNewsValue(dossier = {}, latest = {}) {
+  const result = normalize(latest.result || dossier.current_result).replaceAll(" ", "_");
+  const text = normalize([result, dossier.analysis_summary, latest.analysis_summary, ...(dossier.review_reasons || [])].join(" "));
+  const reasons = [];
+  let score = 28;
+
+  if (/(irregular|rejeitad|multa|debito|ressarcimento|imputacao|proposta_tecnica_de_irregularidade)/.test(text)) {
+    score = 92;
+    reasons.push("possível responsabilização ou dano ao erário registrado pelo controle externo");
+  } else if (/(cautelar|determinacao|recomendacao|correcao|alerta)/.test(text)) {
+    score = 74;
+    reasons.push("medida de controle com efeito sobre a gestão");
+  } else if (/(ressalva|abertura_de_vista|defesa)/.test(text)) {
+    score = 56;
+    reasons.push("processo relevante ainda em andamento");
+  } else if (/(regular|legal_e_registrado|aprovacao|arquivamento|extinto)/.test(text)) {
+    score = 30;
+    reasons.push("resultado de rotina sem sanção ou correção identificada");
+  }
+
+  if ((dossier.amounts || []).length) {
+    score += 8;
+    reasons.push("valor financeiro identificado na decisão");
+  }
+  if (/confirmada/.test(normalize(dossier.fine_status)) || /confirmad/.test(normalize(dossier.debit_status))) score += 8;
+  score = clamp(score);
+  return {
+    score,
+    tier: score >= 85 ? "alta_relevancia" : score >= 60 ? "relevante" : score >= 45 ? "monitoramento" : "repositorio",
+    publish: score >= 60,
+    reasons: [...new Set(reasons)]
+  };
+}
 
 export function isPrimaryOfficialSource(entry = {}) {
   const origin = normalize(entry.source_origin);
@@ -58,19 +174,85 @@ export function hasPrimarySource(newsItem = {}) {
   return sources.some((source) => source.kind !== "noticia-oficial" && /^https?:\/\//i.test(clean(source.url)));
 }
 
-function headlineFromAct(item) {
+function truncateHeadline(value, limit = 148) {
+  const text = clean(value);
+  if (text.length <= limit) return text;
+  return `${text.slice(0, limit - 1).replace(/\s+\S*$/, "")}…`;
+}
+
+function headlineValue(value) {
+  if (!value) return "";
+  if (value >= 1_000_000) return `R$ ${(value / 1_000_000).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} ${value >= 2_000_000 ? "milhões" : "milhão"}`;
+  if (value >= 1_000) return `R$ ${(value / 1_000).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} mil`;
+  return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
+}
+
+function humanizePurpose(value) {
+  let text = clean(value).replace(/\s+\p{L}$/u, "");
+  const letters = text.match(/\p{L}/gu) || [];
+  const uppercase = text.match(/\p{Lu}/gu) || [];
+  if (letters.length > 10 && uppercase.length / letters.length > 0.68) {
+    text = text.toLocaleLowerCase("pt-BR");
+    text = `${text.charAt(0).toLocaleUpperCase("pt-BR")}${text.slice(1)}`;
+    text = text.replace(/\b(cantor(?:a)?|banda|dupla)\s+([^,.;]+?)(?=\s+(?:durante|para|a ser|no|na)\b|[,.;]|$)/giu, (_, role, name) => {
+      const properName = name.split(/\s+/).map((word) => /^(?:da|de|do|das|dos|e)$/i.test(word)
+        ? word.toLocaleLowerCase("pt-BR")
+        : `${word.charAt(0).toLocaleUpperCase("pt-BR")}${word.slice(1)}`).join(" ");
+      return `${role.toLocaleLowerCase("pt-BR")} ${properName}`;
+    });
+    text = text.replace(/\b(cnpj|cpf|sus|upa|ubs|arp|saas)\b/giu, (term) => term.toLocaleUpperCase("pt-BR"));
+  }
+  if (text.lastIndexOf("(") > text.lastIndexOf(")")) text = text.slice(0, text.lastIndexOf("(")).trim();
+  text = text.replace(/\btrindade\b/giu, "Trindade");
+  return text;
+}
+
+function purposeFromSummary(summary) {
+  const text = clean(summary).replace(/[.;]+$/, "");
+  if (!text || /consulte o documento oficial para o conteudo integral/i.test(normalize(text))) return "";
+  const purpose = text.match(/\b(?:para|visando)(?:\s+(?:a|o|ao|à))?\s+(.+)/i)?.[1] || "";
+  return humanizePurpose(purpose.split(/(?<=[.!?;])\s/)[0]);
+}
+
+function headlineFromAct(item, valueTotal) {
   const officialTitle = clean(item.title) || "Ato oficial";
   const summary = clean(item.summary);
-  if (!summary || normalize(summary) === normalize(officialTitle)) return `${officialTitle} é publicado em Trindade`;
+  const type = normalize(item.act_type).replaceAll(" ", "_");
+  const typeLabels = {
+    contrato: "contrato",
+    extrato_de_contrato: "contrato",
+    convenio: "convênio",
+    dispensa: "dispensa de licitação",
+    inexigibilidade: "contratação direta",
+    aviso_de_licitacao: "licitação",
+    rescisao: "rescisão contratual",
+    aditivo: "aditivo contratual",
+    apostilamento: "apostilamento",
+    edital: "edital",
+    lei: "lei",
+    lei_complementar: "lei complementar"
+  };
+  const label = typeLabels[type];
+  const reference = /(contrato|convenio|dispensa|inexigibilidade|licitacao|aditivo|apostilamento|rescisao|edital)/.test(normalize(officialTitle))
+    ? officialTitle.match(/\bN[º°.]?\s*[\d./-]+/i)?.[0] || ""
+    : "";
+  const value = headlineValue(valueTotal);
+  const purpose = purposeFromSummary(summary);
+
+  if (label && /(contrato|convenio|dispensa|inexigibilidade|licitacao|rescisao|aditivo|apostilamento)/.test(type)) {
+    const core = `Trindade publica ${label}${reference ? ` ${reference}` : ""}${value ? ` de ${value}` : ""}`;
+    return truncateHeadline(purpose ? `${core} para ${lowerFirst(purpose)}` : `${core}: ${summary || officialTitle}`);
+  }
+  if (!summary || normalize(summary) === normalize(officialTitle)) return truncateHeadline(`Trindade publica ${officialTitle}`);
   const subject = summary
     .replace(/^dispõe sobre\s+/i, "")
     .replace(/^dispõe acerca de\s+/i, "")
     .replace(/^torna público\s+/i, "")
     .replace(/[.;]+$/, "");
   if (/^(portaria|decreto|lei|edital|resolu[cç][aã]o|aviso|extrato|termo)/i.test(officialTitle)) {
-    return clean(`${officialTitle} trata de ${lowerFirst(subject)}`).slice(0, 156);
+    return truncateHeadline(`Trindade publica ${officialTitle}: ${lowerFirst(subject)}`);
   }
-  return clean(`${officialTitle}: ${summary.replace(/[.;]+$/, "")}`).slice(0, 156);
+  return truncateHeadline(`${officialTitle}: ${summary.replace(/[.;]+$/, "")}`);
 }
 
 function actContext(item, valueTotal) {
@@ -111,7 +293,7 @@ export function buildActNews(item = {}) {
   const lead = finish(`${body} publicou ${officialTitle} no Diário Oficial de ${datePtBr(item.edition_date)}. ${summary}`);
   const documentParagraph = finish(`A matéria consta na edição ${clean(item.edition_number) || "sem número informado"}, na ${pageLabel}. ${facts}`);
   return {
-    title: headlineFromAct(item),
+    title: headlineFromAct(item, valueTotal),
     deck: finish(`${summary} O ato aparece na edição ${clean(item.edition_number) || "sem número informado"}, ${pageLabel}.`),
     summary: lead,
     paragraphs: [lead, documentParagraph, actContext(item, valueTotal)],

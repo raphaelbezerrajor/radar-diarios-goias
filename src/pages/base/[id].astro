@@ -18,6 +18,7 @@ const imageSrc = withBase(record.image?.src);
 const hasUsefulImage = Boolean(imageSrc && record.image?.kind !== "fallback");
 const isStory = record.recordType === "story";
 const isDocumentNews = record.publicationMode === "automatic_document_news";
+const isRepositoryDocument = record.publicationMode === "repository_record";
 const hasEditorialReading = isStory;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const homeUrl = new URL(baseHref, Astro.site).toString();
@@ -57,7 +58,9 @@ if (isStory) {
           <p class="section-kicker">{record.type} · {record.city}</p>
           {isDocumentNews
             ? <span class="archive-badge">Matéria baseada em documento oficial</span>
-            : isStory && <span class="archive-badge">Notícia documental</span>}
+            : isStory
+              ? <span class="archive-badge">Notícia documental</span>
+              : isRepositoryDocument && <span class="archive-badge">Documento no repositório</span>}
         </div>
         <h1>{record.title}</h1>
         {record.deck && <p class="detail-deck">{record.deck}</p>}
@@ -84,6 +87,12 @@ if (isStory) {
             {record.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           </div>
         ) : null}
+        {isStory && record.newsValue?.reasons?.length ? (
+          <aside class="news-value-box">
+            <strong>Por que importa</strong>
+            <ul>{record.newsValue.reasons.filter((reason) => !reason.includes("rotina administrativa")).map((reason) => <li>{reason}</li>)}</ul>
+          </aside>
+        ) : null}
         {record.officialTitle && record.officialTitle !== record.title ? (
           <div class="editorial-note">
             <strong>Título do ato no documento:</strong> {record.officialTitle}
@@ -101,6 +110,7 @@ if (isStory) {
           {isStory && <small>Publicação no Pauteiro: {formatDate(record.publishedAt || siteData.metadata.updatedAt)}</small>}
           {isStory && <small>Autoria editorial: Redação Pauteiro</small>}
           {isStory && <small>Estado editorial: publicada · fonte oficial</small>}
+          {isRepositoryDocument && <small>Estado editorial: repositório · sem destaque noticioso</small>}
         </div>
         {record.valueTotal ? (
           <div class="hero-panel">

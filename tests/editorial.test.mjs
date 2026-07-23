@@ -2,6 +2,31 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { EDITORIAL_STATES, PUBLICATION_ADAPTER, canTransition, requiresMandatoryHumanReview } from "../src/lib/editorial/workflow.mjs";
 import { buildBreadcrumbSchema, buildNewsArticleSchema, validateJsonLdSchema, validateStorySeo } from "../src/lib/editorial/seo.mjs";
+import { assessActNewsValue, assessTcmNewsValue } from "../src/lib/editorial/document-news.mjs";
+
+test("separa valor-notícia de rotina burocrática", () => {
+  const routine = assessActNewsValue({
+    act_type: "portaria",
+    title: "Portaria nº 124",
+    summary: "Concede uma diária sem pernoite para deslocamento de servidor."
+  });
+  const contract = assessActNewsValue({
+    act_type: "extrato_de_contrato",
+    title: "Extrato de contrato nº 58/2026",
+    summary: "Contratação de apresentação artística para o festival municipal.",
+    cnpjs: ["00.000.000/0001-00"]
+  }, 300_000);
+  assert.equal(routine.publish, false);
+  assert.equal(contract.publish, true);
+  assert.ok(contract.score >= 85);
+});
+
+test("prioriza punição e correção do TCM sobre registro regular", () => {
+  const sanction = assessTcmNewsValue({ amounts: [{ value: "R$ 1.000" }] }, { result: "proposta_tecnica_de_irregularidade_e_multa" });
+  const routine = assessTcmNewsValue({}, { result: "ato_considerado_legal_e_registrado" });
+  assert.equal(sanction.publish, true);
+  assert.equal(routine.publish, false);
+});
 
 test("publica automaticamente somente matéria apoiada em documento oficial", () => {
   assert.equal(EDITORIAL_STATES.includes("publicada"), true);

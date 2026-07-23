@@ -3,6 +3,8 @@ import path from "node:path";
 import vm from "node:vm";
 import { createTrindadeJsonProvider, isPublicDocumentUrl } from "../src/lib/municipal/trindade-json-provider.mjs";
 import {
+  assessActNewsValue,
+  assessTcmNewsValue,
   buildActNews,
   buildStateNews,
   buildTcmNews,
@@ -17,26 +19,6 @@ const publicDownloadsDir = path.join(root, "public", "downloads");
 const publicSearchDir = path.join(publicDataDir, "search");
 const trindadePortalUrl = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
 const trindadeProvider = createTrindadeJsonProvider({ dataDir: path.join(root, "data", "trindade") });
-
-const importantActTypes = new Map([
-  ["edital", 7],
-  ["aviso_de_licitacao", 7],
-  ["dispensa", 6],
-  ["inexigibilidade", 6],
-  ["extrato_de_contrato", 6],
-  ["contrato", 6],
-  ["rescisao", 5],
-  ["aditivo", 5],
-  ["apostilamento", 5],
-  ["notificacao", 5],
-  ["nomeacao", 5],
-  ["exoneracao", 5],
-  ["lei", 4],
-  ["lei_complementar", 4],
-  ["decreto", 4],
-  ["convocacao", 4],
-  ["portaria", 2]
-]);
 
 function normalizeText(value) {
   return String(value || "")
@@ -58,10 +40,6 @@ function titleCase(value) {
     .filter(Boolean)
     .map((chunk) => chunk.charAt(0).toUpperCase() + chunk.slice(1))
     .join(" ");
-}
-
-function sumValues(values) {
-  return (values || []).reduce((total, item) => total + (Number(item?.value) || 0), 0);
 }
 
 function trimText(value, maxLength = 220) {
@@ -100,15 +78,6 @@ function buildSearchRecord(item) {
     recordType: item.recordType,
     search: item.search
   };
-}
-
-function scoreByValue(total) {
-  if (total >= 1000000) return 8;
-  if (total >= 250000) return 6;
-  if (total >= 100000) return 5;
-  if (total >= 50000) return 4;
-  if (total >= 10000) return 2;
-  return 0;
 }
 
 function compareByDateDesc(a, b) {
@@ -272,6 +241,7 @@ function normalizeTrindadeNews(item) {
 function normalizeTrindadeAct(item, preview) {
   const article = buildActNews(item);
   const totalValue = article.valueTotal;
+  const newsValue = assessActNewsValue(item, totalValue);
   const actType = item.act_type || "ato";
   const slug = `trindade-ato-${slugify(item.id)}`;
   const pageLabel = item.page_start
@@ -315,12 +285,13 @@ function normalizeTrindadeAct(item, preview) {
       kind: "fallback"
     },
     marker: `Ed. ${item.edition_number}${pageLabel ? ` · ${pageLabel}` : ""}`,
-    importance: 35 + (importantActTypes.get(actType) || 1) + scoreByValue(totalValue),
+    importance: newsValue.score,
+    newsValue,
     hasOriginalSource: Boolean(item.source_url),
-    recordType: "story",
+    recordType: newsValue.publish ? "story" : "record",
     sourceType: "official_document",
-    publicationMode: "automatic_document_news",
-    editorialStatus: "published",
+    publicationMode: newsValue.publish ? "automatic_document_news" : "repository_record",
+    editorialStatus: newsValue.publish ? "published" : "archived",
     paragraphs: article.paragraphs,
     valueTotal: totalValue,
     pageStart: article.pageStart,
@@ -333,6 +304,7 @@ function normalizeTrindadeAct(item, preview) {
 function normalizeTcmDossier(dossier) {
   const article = buildTcmNews(dossier);
   const latest = article.latest;
+  const newsValue = assessTcmNewsValue(dossier, latest);
   const slug = `trindade-tcm-processo-${slugify(dossier.normalized_process_number || dossier.process_number)}`;
   const pages = latest.source?.pages || [];
   const pageLabel = pages.length ? `p. ${pages.join(", ")}` : "páginas não informadas";
@@ -365,12 +337,13 @@ function normalizeTcmDossier(dossier) {
       kind: "fallback"
     },
     marker: dossier.priority ? `Prioridade documental: ${dossier.priority}` : `Processo ${dossier.process_number}`,
-    importance: 48 + Math.min(30, Number(dossier.priority_score) || 0),
+    importance: newsValue.score,
+    newsValue,
     hasOriginalSource: true,
-    recordType: "story",
+    recordType: newsValue.publish ? "story" : "record",
     sourceType: "official_document",
-    publicationMode: "automatic_document_news",
-    editorialStatus: "published",
+    publicationMode: newsValue.publish ? "automatic_document_news" : "repository_record",
+    editorialStatus: newsValue.publish ? "published" : "archived",
     documentReference: `Processo ${dossier.process_number} · ${pageLabel}`,
     sourceHash: latest.source?.pdf_sha256 || null,
     confidence: dossier.confidence || latest.confidence || null
@@ -553,6 +526,7 @@ async function main() {
 
   const publishedNews = stateRecords
     .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedTcmNews)
+    .filter((item) => item.recordType === "story")
     .map(addPublicationMetadata);
   const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
   const leadStory = pickLead(timelineNews);
@@ -560,12 +534,11 @@ async function main() {
     timelineNews.filter((item) => item.id !== leadStory?.id)
   ).slice(0, 3);
 
-  const stateFront = sortForSearch(stateRecords.filter((item) => Number(item.year) === editorialYear)).slice(0, 8);
+  const stateFront = sortForSearch(stateRecords.filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
   const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs)
-    .filter((item) => Number(item.year) === editorialYear)).slice(0, 8);
+    .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
   const actsFront = sortForSearch(
-    normalizedTrindadeActs.filter((item) => Number(item.year) === editorialYear
-      && ((importantActTypes.get(item.actCode) || 0) >= 4 || item.valueTotal > 0))
+    normalizedTrindadeActs.filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)
   ).slice(0, 8);
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>
@@ -661,10 +634,14 @@ async function main() {
       publishedOfficialStories: publishedNews.length,
       currentYearStories: timelineNews.length,
       currentYear: editorialYear,
+      repositoryRecords: allRecords.length,
+      routineRecordsArchived: normalizedTrindadeActs.filter((item) => item.recordType !== "story").length
+        + normalizedTcmNews.filter((item) => item.recordType !== "story").length,
       excludedInstitutionalNews: (radar.entries || []).filter((item) => !isPrimaryOfficialSource(item)).length
         + trindadeNews.filter((item) => !hasPrimarySource(item)).length,
       trindadeActs: normalizedTrindadeActs.length,
-      tcmStories: normalizedTcmNews.length,
+      tcmStories: normalizedTcmNews.filter((item) => item.recordType === "story").length,
+      tcmDocuments: normalizedTcmNews.length,
       consultedSources: sourceCards.length,
       pagesReviewed: trindadeCoverage.pages || 0,
       municipalities: coverage.summary?.municipalities_total || radar.coverage_goal?.municipalities_total || 0,
