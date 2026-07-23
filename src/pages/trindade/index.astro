@@ -13,7 +13,7 @@ const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item
     <div class="shell page-intro">
       <p class="section-kicker">Edição municipal</p>
       <h1>Trindade: atos públicos, Câmara, TCM e notícias verificadas.</h1>
-      <p class="page-summary">O inventário do Diário cobre oito anos. Cada um dos 2.919 atos estruturados no recorte anual mais recente já aparece como nota factual, com olho, resumo e documento original.</p>
+      <p class="page-summary">O inventário do Diário cobre oito anos. Cada um dos 2.919 atos estruturados no recorte anual mais recente já aparece como matéria, com olho, lead, contexto e documento original.</p>
       <div class="hero-actions">
         <a class="button-primary" href="../busca/?city=Trindade&year=all">Pesquisar Trindade</a>
         <a class="button-secondary" href={portalTrindade}>Abrir portal municipal ↗</a>
@@ -31,11 +31,11 @@ const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item
       <div class="module-grid municipal-module-grid">
         {[
           ["Diário Oficial", "2.066 edições catalogadas", `${portalTrindade}/diario-oficial`],
-          ["Atos", "2.919 registros-notícia estruturados", `${portalTrindade}/atos`],
+          ["Atos", "2.919 matérias documentais", `${portalTrindade}/atos`],
           ["Câmara", "Contratos, credores e resultados", `${portalTrindade}/camara`],
           ["Orçamento", "Peças e execução disponíveis", `${portalTrindade}/orcamento`],
-          ["TCM-GO", "Processos, alertas e revisão", `${portalTrindade}/tcm-go`],
-          ["Notícias", "Acervo factual reeditado", `${portalTrindade}/noticias`],
+          ["TCM-GO", `${compactNumber(siteData.metrics.tcmStories)} processos noticiados`, `${portalTrindade}/tcm-go`],
+          ["Notícias", "Matérias produzidas a partir de atos oficiais", `${portalTrindade}/noticias`],
           ["Busca", "Consulta municipal integrada", `${portalTrindade}/busca`],
           ["Estado da base", "Cobertura, lacunas e qualidade", `${portalTrindade}/qualidade`]
         ].map(([label, description, href]) => (
@@ -91,12 +91,12 @@ const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item
   <section class="section-band">
     <div class="shell">
       <SectionHeader
-          kicker="Notícias verificadas"
-          title="Pautas locais com contexto e ressalvas"
-        intro="O noticiario de Trindade continua separado do bruto do Diario, mas conversa com a mesma base."
+          kicker="Notícias de Trindade"
+          title="O fato público explicado para o leitor"
+        intro="As matérias partem de documentos oficiais, detalham o ato e mantêm a fonte original disponível para conferência."
       />
       <div class="story-grid story-grid-wide">
-        {siteData.trindadeFront.filter((item) => item.kind === "noticia").slice(0, 6).map((record) => <StoryCard record={record} compact={true} />)}
+        {siteData.trindadeFront.slice(0, 6).map((record) => <StoryCard record={record} compact={true} />)}
       </div>
     </div>
   </section>
@@ -106,8 +106,8 @@ const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item
       <div>
         <SectionHeader
           kicker="Ato a ato em notícia"
-          title="Notas factuais com página, edição e PDF original"
-          intro="Cada ato recebe leitura curta e estado editorial detectada. Os casos relevantes avançam para apuração; o restante continua pesquisável sem perder a fonte."
+          title="Matérias com página, edição e PDF original"
+          intro="Cada ato recebe lead, explicação e contexto. A matéria é publicada sem perder o caminho até a página exata que sustenta nomes, datas e números."
         />
         <div class="story-grid">
           {siteData.actsFront.slice(0, 6).map((record) => <StoryCard record={record} compact={true} />)}

@@ -140,7 +140,7 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
                 <span>${escapeHtml(record.sourceFamily)}</span>
                 <span>${escapeHtml(record.marker || "")}</span>
               </div>
-              <a class="card-action" href="${escapeHtml(detailHref)}">${record.recordType === "act_news" ? "Ler nota do ato" : record.recordType === "story" ? "Ler notícia" : "Ler registro"} <span aria-hidden="true">→</span></a>
+              <a class="card-action" href="${escapeHtml(detailHref)}">${record.recordType === "story" ? "Ler matéria" : "Ler registro"} <span aria-hidden="true">→</span></a>
             </div>
           </article>
         `;

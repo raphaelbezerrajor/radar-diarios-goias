@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "node scripts/build-site-data.mjs && astro dev",
     "sync:trindade": "node scripts/sync-trindade-data.mjs",
+    "news:previews": "python scripts/render-source-previews.py --limit 24",
     "build:data": "node scripts/build-site-data.mjs",
     "build": "node scripts/build-site-data.mjs && astro build",
-    "validate": "node scripts/validate-site.mjs",
+    "validate:news": "node scripts/validate-news-policy.mjs",
+    "validate": "node scripts/validate-news-policy.mjs && node scripts/validate-site.mjs",
     "test:unit": "node --test tests/*.test.mjs",
     "test": "pnpm run test:unit && pnpm build && pnpm validate",
     "preview": "astro preview"

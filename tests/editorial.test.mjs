@@ -3,10 +3,42 @@ import test from "node:test";
 import { EDITORIAL_STATES, PUBLICATION_ADAPTER, canTransition, requiresMandatoryHumanReview } from "../src/lib/editorial/workflow.mjs";
 import { buildBreadcrumbSchema, buildNewsArticleSchema, validateJsonLdSchema, validateStorySeo } from "../src/lib/editorial/seo.mjs";
 
-test("não oferece publicação funcional", () => {
-  assert.equal(EDITORIAL_STATES.includes("publicada"), false);
-  assert.equal(PUBLICATION_ADAPTER.status, "disabled");
-  assert.equal(PUBLICATION_ADAPTER.automaticPublishing, false);
+test("publica automaticamente somente matéria apoiada em documento oficial", () => {
+  assert.equal(EDITORIAL_STATES.includes("publicada"), true);
+  assert.equal(PUBLICATION_ADAPTER.status, "active");
+  assert.equal(PUBLICATION_ADAPTER.automaticPublishing, true);
+  const result = canTransition({
+    from: "detectada",
+    to: "publicada",
+    story: {
+      publicationMode: "automatic_document_news",
+      sourceType: "official_document",
+      sourceUrl: "https://diario.exemplo.go.gov.br/edicao.pdf",
+      title: "Prefeitura publica edital",
+      deck: "Documento define datas e condições.",
+      paragraphs: ["O edital foi publicado.", "A íntegra está na fonte oficial."],
+      date: "2026-07-22"
+    }
+  });
+  assert.deepEqual(result, { allowed: true, issues: [] });
+});
+
+test("bloqueia reportagem institucional na coleta automática", () => {
+  const result = canTransition({
+    from: "detectada",
+    to: "publicada",
+    story: {
+      publicationMode: "automatic_document_news",
+      sourceType: "official_document",
+      sourceUrl: "https://prefeitura.go.gov.br/noticias/festa",
+      title: "Prefeitura anuncia festa",
+      deck: "Texto institucional.",
+      paragraphs: ["Primeiro parágrafo.", "Segundo parágrafo."],
+      date: "2026-07-22"
+    }
+  });
+  assert.equal(result.allowed, false);
+  assert.ok(result.issues.includes("reportagem_institucional_bloqueada"));
 });
 
 test("bloqueia aprovação sem segurança editorial", () => {

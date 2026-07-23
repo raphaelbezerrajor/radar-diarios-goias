@@ -1,5 +1,6 @@
 ---
 import records from "../../generated/site-records.json";
+import siteData from "../../generated/site-data.json";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatCurrency, formatDate, withBase } from "../../lib/format.js";
 import { buildBreadcrumbSchema, buildNewsArticleSchema } from "../../lib/editorial/seo.mjs";
@@ -16,8 +17,8 @@ const { record } = Astro.props;
 const imageSrc = withBase(record.image?.src);
 const hasUsefulImage = Boolean(imageSrc && record.image?.kind !== "fallback");
 const isStory = record.recordType === "story";
-const isActNews = record.recordType === "act_news";
-const hasEditorialReading = isStory || isActNews;
+const isDocumentNews = record.publicationMode === "automatic_document_news";
+const hasEditorialReading = isStory;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const homeUrl = new URL(baseHref, Astro.site).toString();
 const searchUrl = new URL(`${baseHref}busca/`, Astro.site).toString();
@@ -33,8 +34,8 @@ if (isStory) {
       tituloEditorial: record.title,
       metadescricao: record.deck || record.summary,
       linhaFina: record.deck,
-      dataPublicacao: record.date,
-      dataAtualizacao: record.date,
+      dataPublicacao: record.publishedAt || record.date,
+      dataAtualizacao: record.publishedAt || record.date,
       autor: "Pauteiro",
       imagem: hasUsefulImage ? {
         url: new URL(imageSrc, Astro.site).toString(),
@@ -54,21 +55,16 @@ if (isStory) {
       <div class="detail-main">
         <div class="story-kickers">
           <p class="section-kicker">{record.type} · {record.city}</p>
-          {isStory && <span class="archive-badge">Acervo editorial integrado</span>}
-          {isActNews && <span class="archive-badge">Ato em formato de notícia</span>}
+          {isDocumentNews
+            ? <span class="archive-badge">Matéria baseada em documento oficial</span>
+            : isStory && <span class="archive-badge">Notícia documental</span>}
         </div>
         <h1>{record.title}</h1>
         {record.deck && <p class="detail-deck">{record.deck}</p>}
         {isStory && (
           <div class="editorial-provenance">
             <strong>Publicado pelo Pauteiro</strong>
-            <span>{formatDate(record.date)} · conteúdo já publicado, reapresentado no novo padrão editorial</span>
-          </div>
-        )}
-        {isActNews && (
-          <div class="editorial-provenance">
-            <strong>Leitura factual do Diário Oficial</strong>
-            <span>{formatDate(record.date)} · título oficial, olho e resumo vinculados ao ato de origem</span>
+            <span>Matéria publicada em {formatDate(record.publishedAt || siteData.metadata.updatedAt)} · ato de {formatDate(record.date)}</span>
           </div>
         )}
         {hasUsefulImage && (
@@ -82,23 +78,29 @@ if (isStory) {
             )}
           </figure>
         )}
-        {record.summary && !record.paragraphs?.length && !(isActNews && record.summary === record.deck) && <p class="detail-summary">{record.summary}</p>}
+        {record.summary && !record.paragraphs?.length && <p class="detail-summary">{record.summary}</p>}
         {record.paragraphs?.length ? (
           <div class="detail-copy">
             {record.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           </div>
         ) : null}
+        {record.officialTitle && record.officialTitle !== record.title ? (
+          <div class="editorial-note">
+            <strong>Título do ato no documento:</strong> {record.officialTitle}
+          </div>
+        ) : null}
         {hasEditorialReading && (
-          <p class="editorial-note">Os fatos, números e links documentais foram preservados. A fonte original deve ser consultada para conferência integral; esta nota não substitui apuração adicional quando o ato exigir contexto.</p>
+          <p class="editorial-note">Esta matéria usa documento oficial como fonte primária. Datas, números, nomes, valores e estágio do ato são preservados; a íntegra continua disponível para conferência.</p>
         )}
       </div>
       <aside class="detail-side">
         <div class="hero-panel">
           <strong>{record.sourceFamily}</strong>
           <span>{record.sourceLabel}</span>
-          <small>{formatDate(record.date)}</small>
-          {isStory && <small>Autoria editorial: Pauteiro</small>}
-          {isActNews && <small>Estado editorial: detectada · aguardando triagem</small>}
+          <small>Data do ato: {formatDate(record.date)}</small>
+          {isStory && <small>Publicação no Pauteiro: {formatDate(record.publishedAt || siteData.metadata.updatedAt)}</small>}
+          {isStory && <small>Autoria editorial: Redação Pauteiro</small>}
+          {isStory && <small>Estado editorial: publicada · fonte oficial</small>}
         </div>
         {record.valueTotal ? (
           <div class="hero-panel">
