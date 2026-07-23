@@ -1,0 +1,220 @@
+---
+import siteData from "../../generated/site-data.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import { compactNumber, formatDate, withBase } from "../../lib/format.js";
+
+const july = siteData.july;
+const latestStories = july.stories;
+const indexUrl = withBase("/data/july-news-index.json");
+const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout
+  title="Notícias dos diários de julho de 2026 | Pauteiro"
+  description={`Consulte ${july.total} notícias factuais extraídas dos atos publicados nos diários oficiais de julho de 2026.`}
+>
+  <section class="opening-band july-opening">
+    <div class="shell opening-grid">
+      <div class="opening-copy">
+        <p class="section-kicker section-kicker-light">Julho de 2026 · publicação ato a ato</p>
+        <h1>O mais recente sempre vem primeiro.</h1>
+        <p class="page-summary">Cada ato segmentado nos PDFs oficiais vira uma notícia factual com edição, página e fonte. A relevância define o destaque visual; nenhum item deixa de ser publicado por ser burocrático.</p>
+      </div>
+      <aside class="opening-side">
+        <p>Cobertura processada</p>
+        <strong>{compactNumber(july.total)} notícias</strong>
+        <span>{compactNumber(july.pdfs)} PDFs · {compactNumber(july.pages)} páginas</span>
+        <small>Atualizado até {formatDate(july.through)}</small>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-band july-dashboard">
+    <div class="shell">
+      <div class="july-stat-grid" aria-label="Resumo da cobertura de julho">
+        <div><strong>{compactNumber(july.total)}</strong><span>notícias publicadas</span></div>
+        <div><strong>{compactNumber(july.byCity.length)}</strong><span>localidades identificadas</span></div>
+        <div><strong>{compactNumber(july.bySource.length)}</strong><span>famílias de fontes</span></div>
+        <div><strong>{compactNumber(july.byType.length)}</strong><span>tipos de ato</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band section-band-newsprint content-auto">
+    <div class="shell">
+      <header class="july-heading">
+        <div>
+          <p class="section-kicker">Últimas publicações</p>
+          <h2>Notícias em ordem decrescente</h2>
+          <p>Use os filtros para reduzir o volume. Dentro de cada resultado, a data mais nova permanece no topo.</p>
+        </div>
+        <a class="button-secondary" href={`${baseHref}busca/?year=2026`}>Busca avançada</a>
+      </header>
+
+      <div class="july-filters" data-july-filters>
+        <label>
+          <span>Cidade</span>
+          <select data-filter="city">
+            <option value="">Todas</option>
+          </select>
+        </label>
+        <label>
+          <span>Fonte</span>
+          <select data-filter="sourceFamily">
+            <option value="">Todas</option>
+          </select>
+        </label>
+        <label>
+          <span>Tipo de ato</span>
+          <select data-filter="type">
+            <option value="">Todos</option>
+          </select>
+        </label>
+        <label class="july-query">
+          <span>Palavra, número ou nome</span>
+          <input type="search" data-filter="query" placeholder="Ex.: contrato, saúde, empresa" />
+        </label>
+      </div>
+
+      <p class="july-result-count" data-july-count>{compactNumber(july.total)} notícias</p>
+
+      <div class="july-list" data-july-list>
+        {latestStories.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="hide" />)}
+      </div>
+
+      <div class="july-load">
+        <button class="button-primary" type="button" data-july-more>Carregar mais notícias</button>
+      </div>
+      <noscript>
+        <p>Ative JavaScript para filtrar e carregar toda a listagem. As notícias também estão disponíveis na busca avançada.</p>
+      </noscript>
+    </div>
+  </section>
+
+  <script
+    is:inline
+    define:vars={{ indexUrl, baseHref }}
+  >
+    (() => {
+      const list = document.querySelector("[data-july-list]");
+      const count = document.querySelector("[data-july-count]");
+      const more = document.querySelector("[data-july-more]");
+      const controls = [...document.querySelectorAll("[data-july-filters] [data-filter]")];
+      if (!list || !count || !more || !controls.length) return;
+
+      let records = [];
+      let filtered = [];
+      let visible = 36;
+
+      const normalize = (value) => String(value || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+
+      const formatDate = (value) => {
+        if (!value) return "";
+        return new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC" }).format(new Date(`${value}T12:00:00Z`));
+      };
+
+      const optionValues = (field) => [...new Set(records.map((record) => record[field]).filter(Boolean))]
+        .sort((a, b) => String(a).localeCompare(String(b), "pt-BR"));
+
+      const fillSelect = (control) => {
+        const field = control.dataset.filter;
+        if (!field || field === "query") return;
+        for (const value of optionValues(field)) {
+          const option = document.createElement("option");
+          option.value = value;
+          option.textContent = value;
+          control.append(option);
+        }
+      };
+
+      const storyCard = (record) => {
+        const article = document.createElement("article");
+        article.className = "story-card is-compact is-text-only";
+        const body = document.createElement("div");
+        body.className = "story-body";
+
+        const kickers = document.createElement("div");
+        kickers.className = "story-kickers";
+        for (const [className, value] of [["pill", record.type], ["muted", record.city], ["muted", formatDate(record.date)]]) {
+          const span = document.createElement("span");
+          span.className = className;
+          span.textContent = value;
+          kickers.append(span);
+        }
+
+        const heading = document.createElement("h3");
+        const headingLink = document.createElement("a");
+        headingLink.href = `${baseHref}${String(record.path).replace(/^\//, "")}`;
+        headingLink.textContent = record.title;
+        heading.append(headingLink);
+
+        const deck = document.createElement("p");
+        deck.className = "story-deck";
+        deck.textContent = record.deck || "";
+
+        const meta = document.createElement("div");
+        meta.className = "story-meta";
+        const family = document.createElement("span");
+        family.textContent = record.sourceFamily || "Fonte oficial";
+        const reference = document.createElement("span");
+        reference.textContent = record.sourceNote || "";
+        meta.append(family, reference);
+
+        const action = document.createElement("a");
+        action.className = "card-action";
+        action.href = headingLink.href;
+        action.textContent = "Ler matéria →";
+
+        body.append(kickers, heading);
+        if (record.deck) body.append(deck);
+        body.append(meta, action);
+        article.append(body);
+        return article;
+      };
+
+      const render = () => {
+        list.replaceChildren(...filtered.slice(0, visible).map(storyCard));
+        count.textContent = `${filtered.length.toLocaleString("pt-BR")} ${filtered.length === 1 ? "notícia" : "notícias"}`;
+        more.hidden = visible >= filtered.length;
+      };
+
+      const applyFilters = () => {
+        const values = Object.fromEntries(controls.map((control) => [control.dataset.filter, control.value]));
+        const query = normalize(values.query);
+        filtered = records.filter((record) => {
+          if (values.city && record.city !== values.city) return false;
+          if (values.sourceFamily && record.sourceFamily !== values.sourceFamily) return false;
+          if (values.type && record.type !== values.type) return false;
+          if (query && !normalize([record.title, record.deck, record.city, record.type, record.sourceFamily].join(" ")).includes(query)) return false;
+          return true;
+        });
+        visible = 36;
+        render();
+      };
+
+      fetch(indexUrl)
+        .then((response) => {
+          if (!response.ok) throw new Error(`Falha ao carregar o índice: ${response.status}`);
+          return response.json();
+        })
+        .then((payload) => {
+          records = payload.records || [];
+          filtered = records;
+          controls.forEach(fillSelect);
+          controls.forEach((control) => control.addEventListener(control.tagName === "INPUT" ? "input" : "change", applyFilters));
+          more.addEventListener("click", () => {
+            visible += 36;
+            render();
+          });
+          render();
+        })
+        .catch(() => {
+          more.hidden = true;
+        });
+    })();
+  </script>
+</BaseLayout>

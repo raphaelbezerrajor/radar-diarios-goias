@@ -16,8 +16,8 @@ const groups = Object.entries(
   <section class="section-band">
     <div class="shell page-intro">
       <p class="section-kicker">Linha do tempo · {siteData.timeline.year}</p>
-      <h1>O que realmente importa neste ano.</h1>
-      <p class="page-summary">Esta linha reúne fatos de {siteData.timeline.year} com valor-notícia e interesse público. Atos burocráticos permanecem no repositório, e o acervo anterior continua separado na busca histórica.</p>
+      <h1>O mais recente vem primeiro.</h1>
+      <p class="page-summary">Esta linha reúne as notícias de {siteData.timeline.year} em ordem cronológica decrescente. Em julho, todo ato segmentado é publicado; os assuntos de maior interesse recebem mais destaque, sem retirar os demais da consulta.</p>
       <div class="hero-actions">
         <a class="button-primary" href="../busca/?year=2026">Pesquisar todo o ano</a>
         <span class="timeline-count">{compactNumber(siteData.timeline.total)} notícias relevantes em {siteData.timeline.year}</span>

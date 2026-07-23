@@ -7,13 +7,13 @@ const {
   schemas = []
 } = Astro.props;
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-const portalTrindade = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const socialImage = new URL(`${baseHref}assets/trindade/og.png`, Astro.site);
 const currentPath = Astro.url.pathname;
 const navItems = [
   { label: "Capa", href: baseHref, active: currentPath === baseHref },
   { label: "Últimas", href: `${baseHref}linha-do-tempo/`, active: currentPath.includes("/linha-do-tempo/") },
+  { label: "Julho", href: `${baseHref}julho/`, active: currentPath.includes("/julho/") },
   { label: "Trindade", href: `${baseHref}trindade/`, active: currentPath.includes("/trindade/") },
   { label: "Goiás", href: `${baseHref}goias/`, active: currentPath.includes("/goias/") },
   { label: "Buscar", href: `${baseHref}busca/`, active: currentPath.includes("/busca/") }
@@ -44,7 +44,7 @@ const navItems = [
       <div class="site-topline">
         <div class="shell topline-bar">
           <span>Notícias públicas · fatos extraídos de documentos oficiais</span>
-          <a href={portalTrindade}>Abrir Portal Trindade ↗</a>
+          <a href={`${baseHref}julho/`}>Abrir cobertura de julho →</a>
         </div>
       </div>
       <div class="shell header-bar">
@@ -75,7 +75,7 @@ const navItems = [
         <div class="footer-links">
           <a href={`${baseHref}busca/`}>Buscar na base</a>
           <a href={`${baseHref}linha-do-tempo/`}>Últimas notícias</a>
-          <a href={portalTrindade}>Portal Trindade ↗</a>
+          <a href={`${baseHref}julho/`}>Notícias de julho</a>
         </div>
       </div>
     </footer>

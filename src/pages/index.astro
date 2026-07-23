@@ -9,7 +9,6 @@ import { compactNumber, formatDate, withBase } from "../lib/format.js";
 const hero = siteData.leadStory;
 const heroImage = withBase(hero.image?.src);
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-const portalTrindade = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
 const yearCards = siteData.yearSnapshots.slice(0, 6);
 const stateFeatured = siteData.stateFront.slice(0, 2);
 const stateBriefs = siteData.stateFront.slice(2, 6);
@@ -23,10 +22,10 @@ const quickTopics = ["contrato", "nomeação", "edital", "processo TCM"].map((la
   href: `${baseHref}busca/?q=${encodeURIComponent(label)}&year=all`
 }));
 const metrics = [
-  { label: `Notícias relevantes em ${siteData.metrics.currentYear}`, value: compactNumber(siteData.metrics.currentYearStories), note: "seleção por interesse público" },
-  { label: "Documentos pesquisáveis", value: compactNumber(siteData.metrics.repositoryRecords), note: "sem inflar o noticiário" },
+  { label: "Notícias de julho", value: compactNumber(siteData.metrics.julyStories), note: "todo ato segmentado é publicado" },
+  { label: "PDFs de julho", value: compactNumber(siteData.metrics.julyPdfs), note: `${compactNumber(siteData.metrics.julyPages)} páginas processadas` },
   { label: "Processos relevantes do TCM", value: compactNumber(siteData.metrics.tcmStories), note: "controle e responsabilização" },
-  { label: "Atos de rotina no arquivo", value: compactNumber(siteData.metrics.routineRecordsArchived), note: "fora da capa" }
+  { label: "Documentos pesquisáveis", value: compactNumber(siteData.metrics.repositoryRecords), note: "fonte e página preservadas" }
 ];
 ---
 
@@ -50,7 +49,7 @@ const metrics = [
       <aside class="opening-side" aria-label="Situação da base">
         <p>Estado do Pauteiro</p>
         <strong>{formatDate(siteData.metadata.updatedAt)}</strong>
-        <span>{compactNumber(siteData.metrics.currentYearStories)} fatos relevantes selecionados em {siteData.metrics.currentYear}</span>
+        <span>{compactNumber(siteData.metrics.julyStories)} notícias documentais de julho, com as mais recentes no topo</span>
         <a href={`${baseHref}pauteiro/`}>Entender a redação <span aria-hidden="true">→</span></a>
       </aside>
     </div>
@@ -101,13 +100,13 @@ const metrics = [
   <section class="section-band platform-band content-auto">
     <div class="shell platform-callout">
       <div>
-        <p class="section-kicker">Nova dinâmica editorial</p>
-        <h2>Importância antes do volume.</h2>
-        <p>Contratos, valores, licitações, orçamento, controle e serviços públicos entram no noticiário. Rotinas internas ficam no repositório, com a mesma fonte e possibilidade de conferência.</p>
+        <p class="section-kicker">Julho ato a ato</p>
+        <h2>Tudo publicado, destaque com critério.</h2>
+        <p>Cada ato extraído vira notícia e pode ser conferido na página e edição de origem. Valor-notícia define o tamanho do destaque; a data mais recente define a ordem.</p>
       </div>
       <div class="platform-actions">
-        <a class="button-primary" href={`${baseHref}pauteiro/`}>Ver a plataforma</a>
-        <span>Publicação documental em escala</span>
+        <a class="button-primary" href={`${baseHref}julho/`}>Abrir notícias de julho</a>
+        <span>{compactNumber(siteData.metrics.julyStories)} matérias em ordem cronológica</span>
       </div>
     </div>
   </section>

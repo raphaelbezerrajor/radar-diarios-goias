@@ -48,17 +48,14 @@ function trimText(value, maxLength = 220) {
 }
 
 function buildSearchText(record) {
-  return normalizeText([
+  return trimText(normalizeText([
     record.title,
-    trimText(record.deck, 120),
-    trimText(record.summary, 72),
+    trimText(record.deck, 96),
     record.city,
     record.type,
-    record.editoria,
     record.sourceFamily,
-    record.sourceLabel,
-    ...(record.tags || []).slice(0, 4)
-  ].join(" "));
+    ...(record.tags || []).slice(0, 6)
+  ].join(" ")), 360);
 }
 
 function buildSearchRecord(item) {
@@ -70,9 +67,9 @@ function buildSearchRecord(item) {
     year: item.year,
     type: item.type,
     title: item.title,
-    deck: trimText(item.deck, 112),
+    deck: trimText(item.deck, 88),
     sourceFamily: item.sourceFamily,
-    marker: trimText(item.marker || item.sourceNote || "", 52),
+    marker: trimText(item.marker || item.sourceNote || "", 42),
     importance: item.importance,
     recordType: item.recordType,
     search: item.search
@@ -241,6 +238,8 @@ function normalizeTrindadeAct(item, preview) {
   const article = buildActNews(item);
   const totalValue = article.valueTotal;
   const newsValue = assessActNewsValue(item, totalValue);
+  const julyPublication = String(item.edition_date || "").startsWith("2026-07");
+  const publishedAsStory = newsValue.publish || julyPublication;
   const actType = item.act_type || "ato";
   const slug = `trindade-ato-${slugify(item.id)}`;
   const pageLabel = item.page_start
@@ -287,16 +286,80 @@ function normalizeTrindadeAct(item, preview) {
     importance: newsValue.score,
     newsValue,
     hasOriginalSource: Boolean(item.source_url),
-    recordType: newsValue.publish ? "story" : "record",
+    recordType: publishedAsStory ? "story" : "record",
     sourceType: "official_document",
-    publicationMode: newsValue.publish ? "automatic_document_news" : "repository_record",
-    editorialStatus: newsValue.publish ? "published" : "archived",
+    publicationMode: publishedAsStory ? "automatic_document_news" : "repository_record",
+    editorialStatus: publishedAsStory ? "published" : "archived",
+    prominence: newsValue.publish ? "section" : julyPublication ? "archive" : "repository",
     paragraphs: article.paragraphs,
     valueTotal: totalValue,
     pageStart: article.pageStart,
     pageEnd: article.pageEnd,
     documentReference: `Edição ${item.edition_number}${pageLabel ? ` · ${pageLabel}` : ""}`,
     sourceHash: preview?.source_sha256 || null
+  };
+}
+
+function normalizeJulyDocumentNews(item, preview) {
+  const slug = `julho-documento-${slugify(item.id).slice(0, 96)}`;
+  return {
+    id: item.id,
+    slug,
+    path: `/base/${slug}/`,
+    cluster: item.source_id === "alego" ? "goias" : "municipios",
+    city: item.city,
+    date: item.date,
+    year: Number(String(item.date).slice(0, 4)),
+    month: String(item.date).slice(0, 7),
+    kind: "ato",
+    actCode: item.act_type,
+    type: item.type_label || titleCase(item.act_type || "ato"),
+    title: item.title,
+    officialTitle: item.official_title,
+    deck: item.deck,
+    summary: item.summary,
+    paragraphs: item.paragraphs || [],
+    editoria: item.public_body || "Atos públicos",
+    sourceFamily: item.source_name || "Documento oficial",
+    sourceLabel: item.source_label || item.public_body || "Fonte oficial",
+    sourceUrl: item.official_url || item.source_landing_url || null,
+    sourceNote: item.document_reference || "",
+    scope: item.scope || "Municipal",
+    tags: [
+      item.act_type,
+      item.city,
+      item.public_body,
+      ...(item.reference_numbers || []),
+      ...(item.cnpjs || [])
+    ].filter(Boolean),
+    image: preview ? {
+      src: preview.src,
+      alt: `Página ${preview.page} do documento oficial com ${item.official_title || item.title}`,
+      credit: `${item.source_name || "Fonte oficial"} · recorte documental do Pauteiro`,
+      caption: `${item.document_reference}. Imagem comprimida sem alteração do conteúdo do documento.`,
+      kind: "source-page"
+    } : {
+      src: "/assets/trindade/og.png",
+      alt: item.official_title || item.title,
+      credit: item.source_name || "Fonte oficial",
+      kind: "fallback"
+    },
+    marker: item.document_reference || "",
+    importance: Number(item.importance) || 25,
+    newsValue: item.news_value || { score: Number(item.importance) || 25, reasons: [] },
+    prominence: item.prominence || "archive",
+    hasOriginalSource: Boolean(item.official_url || item.source_landing_url),
+    recordType: "story",
+    sourceType: "official_document",
+    publicationMode: "automatic_document_news",
+    editorialStatus: "published",
+    pageStart: item.page_start,
+    pageEnd: item.page_end,
+    documentReference: item.document_reference || "",
+    sourceHash: item.document_sha256 || null,
+    actHash: item.act_sha256 || null,
+    confidence: item.confidence || null,
+    externalIdentifier: item.external_identifier || null
   };
 }
 
@@ -402,18 +465,21 @@ function dedupeById(items) {
 
 function sortForSearch(items) {
   return [...items].sort((a, b) => {
-    if ((b.importance || 0) !== (a.importance || 0)) return (b.importance || 0) - (a.importance || 0);
-    return compareByDateDesc(a, b);
+    const byDate = compareByDateDesc(a, b);
+    if (byDate !== 0) return byDate;
+    return (b.importance || 0) - (a.importance || 0);
   });
 }
 
 function pickLead(items) {
   return [...items]
     .sort((a, b) => {
+      const byDate = compareByDateDesc(a, b);
+      if (byDate !== 0) return byDate;
       const imageWeightA = a.image?.src ? 4 : 0;
       const imageWeightB = b.image?.src ? 4 : 0;
       if (imageWeightB !== imageWeightA) return imageWeightB - imageWeightA;
-      return (b.importance || 0) - (a.importance || 0) || compareByDateDesc(a, b);
+      return (b.importance || 0) - (a.importance || 0);
     })
     .at(0);
 }
@@ -446,7 +512,8 @@ async function main() {
     tcmDossiers,
     sourcePreviews,
     municipalDiaries,
-    alegoMonitor
+    alegoMonitor,
+    julyDocumentNews
   ] = await Promise.all([
     trindadeProvider.buscarAtos(),
     trindadeProvider.obterAnalise(),
@@ -459,7 +526,8 @@ async function main() {
     trindadeProvider.obterDossiesTCM(),
     readJsonOptional({ items: [] }, "data", "trindade", "source-previews.json"),
     readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], range: {} }, "data", "trindade", "municipal-diaries-2026.json"),
-    readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], analysis_queue: [], range: {} }, "data", "trindade", "alego-monitor-2026.json")
+    readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], analysis_queue: [], range: {} }, "data", "trindade", "alego-monitor-2026.json"),
+    readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "july-document-news-2026.json")
   ]);
 
   const municipalityByName = new Map(
@@ -502,11 +570,30 @@ async function main() {
   const previewByRecord = new Map((sourcePreviews.items || []).map((item) => [item.record_id, item]));
   const normalizedTrindadeNews = trindadeNews.filter(hasPrimarySource).map(normalizeTrindadeNews);
   const normalizedTrindadeActs = trindadeActs.map((item) => normalizeTrindadeAct(item, previewByRecord.get(item.id)));
+  const existingTrindadeActKeys = new Set(
+    normalizedTrindadeActs
+      .map((item) => String(item.id || "").match(/^agm-([^-]+)-([A-Z0-9]+)-/i))
+      .filter(Boolean)
+      .map((match) => `${match[1]}:${match[2].toUpperCase()}`)
+  );
+  const normalizedJulyDocumentNews = (julyDocumentNews.items || [])
+    .filter((item) => {
+      if (normalizeText(item.city) !== "trindade" || item.source_id !== "agm") return true;
+      const editionId = String(item.edition_id || "").split(":").at(-1);
+      const externalId = String(item.external_identifier || "").toUpperCase();
+      return !externalId || !existingTrindadeActKeys.has(`${editionId}:${externalId}`);
+    })
+    .map((item) => normalizeJulyDocumentNews(item, previewByRecord.get(item.id)));
   const normalizedTcmNews = (tcmDossiers.dossiers || [])
     .filter((item) => item.scope_status === "trindade_confirmado")
     .map(normalizeTcmDossier);
   const editorialYear = Number(String(radar.cutoff_date || radar.updated_at).slice(0, 4));
-  const editorialPublicationDate = radar.updated_at || radar.cutoff_date;
+  const editorialPublicationDate = [
+    radar.updated_at,
+    radar.cutoff_date,
+    String(julyDocumentNews.generated_at || "").slice(0, 10),
+    julyDocumentNews.period?.to
+  ].filter(Boolean).sort().at(-1);
   const addPublicationMetadata = (item) => item.recordType === "story"
     ? { ...item, publishedAt: item.publishedAt || editorialPublicationDate }
     : item;
@@ -520,6 +607,7 @@ async function main() {
       stateRecords
         .concat(normalizedTrindadeNews)
         .concat(normalizedTrindadeActs)
+        .concat(normalizedJulyDocumentNews)
         .concat(normalizedTcmNews)
         .concat(residualUnified)
         .map(addPublicationMetadata)
@@ -528,7 +616,7 @@ async function main() {
   );
 
   const publishedNews = stateRecords
-    .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedTcmNews)
+    .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedTcmNews)
     .filter((item) => item.recordType === "story")
     .map(addPublicationMetadata);
   const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
@@ -541,8 +629,17 @@ async function main() {
   const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs)
     .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
   const actsFront = sortForSearch(
-    normalizedTrindadeActs.filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)
+    normalizedTrindadeActs
+      .concat(normalizedJulyDocumentNews)
+      .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)
   ).slice(0, 8);
+  const julyPublishedNews = sortForSearch(
+    dedupeById(
+      normalizedJulyDocumentNews.concat(
+        normalizedTrindadeActs.filter((item) => item.month === "2026-07" && item.recordType === "story")
+      )
+    )
+  );
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>
     sourceCardFromLibrary(
@@ -569,6 +666,7 @@ async function main() {
     stateCount: Number(alegoMonitor.summary?.diary_editions || 0)
       + Number(alegoMonitor.summary?.roll_calls || 0)
       + Number(alegoMonitor.summary?.contracts || 0)
+      + normalizedJulyDocumentNews.filter((item) => item.sourceFamily?.includes("Assembleia")).length
   });
 
   const cityCounts = countBy(
@@ -637,8 +735,8 @@ async function main() {
     metadata: {
       brand: radar.project_name,
       title: radar.site_title,
-      updatedAt: radar.updated_at,
-      cutoffDate: radar.cutoff_date,
+      updatedAt: editorialPublicationDate,
+      cutoffDate: [radar.cutoff_date, julyDocumentNews.period?.to].filter(Boolean).sort().at(-1),
       remoteUrl: radar.remote_url,
       yearsOpen: radar.archive_years || []
     },
@@ -647,6 +745,9 @@ async function main() {
       curatedStories: publishedNews.length,
       publishedOfficialStories: publishedNews.length,
       currentYearStories: timelineNews.length,
+      julyStories: julyPublishedNews.length,
+      julyPdfs: Number(julyDocumentNews.summary?.pdfs || 0),
+      julyPages: Number(julyDocumentNews.summary?.pages || 0),
       currentYear: editorialYear,
       repositoryRecords: allRecords.length,
       routineRecordsArchived: normalizedTrindadeActs.filter((item) => item.recordType !== "story").length
@@ -669,6 +770,17 @@ async function main() {
       year: editorialYear,
       total: timelineNews.length,
       stories: timelineNews.slice(0, 60)
+    },
+    july: {
+      month: "2026-07",
+      through: julyDocumentNews.period?.to || null,
+      total: julyPublishedNews.length,
+      pdfs: Number(julyDocumentNews.summary?.pdfs || 0),
+      pages: Number(julyDocumentNews.summary?.pages || 0),
+      bySource: countBy(julyPublishedNews, (item) => item.sourceFamily),
+      byCity: countBy(julyPublishedNews, (item) => item.city).slice(0, 24),
+      byType: countBy(julyPublishedNews, (item) => item.type).slice(0, 24),
+      stories: julyPublishedNews.slice(0, 36)
     },
     stateFront,
     trindadeFront,
@@ -746,10 +858,29 @@ async function main() {
   };
 
   const searchPayload = {
-    generatedAt: radar.updated_at || trindadeStatus.generated_at,
+    generatedAt: editorialPublicationDate || trindadeStatus.generated_at,
     total: allRecords.length,
     filters: searchFilters,
     records: allRecords.map(buildSearchRecord)
+  };
+
+  const julyNewsIndex = {
+    generatedAt: julyDocumentNews.generated_at || searchPayload.generatedAt,
+    month: "2026-07",
+    total: julyPublishedNews.length,
+    records: julyPublishedNews.map((item) => ({
+      id: item.id,
+      path: item.path,
+      date: item.date,
+      city: item.city,
+      type: item.type,
+      title: item.title,
+      deck: trimText(item.deck, 240),
+      sourceFamily: item.sourceFamily,
+      sourceNote: item.sourceNote,
+      importance: item.importance,
+      prominence: item.prominence || "archive"
+    }))
   };
 
   const searchManifest = {
@@ -790,6 +921,10 @@ async function main() {
   await fs.writeFile(
     path.join(publicDataDir, "site-summary.json"),
     JSON.stringify(siteData)
+  );
+  await fs.writeFile(
+    path.join(publicDataDir, "july-news-index.json"),
+    JSON.stringify(julyNewsIndex)
   );
   for (const shard of searchManifest.shards) {
     const shardPayload = {
