@@ -17,6 +17,7 @@ const platform = await readFile(path.join(root, "dist", "pauteiro", "index.html"
 const trindade = await readFile(path.join(root, "dist", "trindade", "index.html"), "utf8");
 const searchPage = await readFile(path.join(root, "dist", "busca", "index.html"), "utf8");
 const checkedStory = await readFile(path.join(root, "dist", "base", "trindade-noticia-shows-festival-gastronomico-2026", "index.html"), "utf8");
+const checkedActNews = await readFile(path.join(root, "dist", "base", "trindade-ato-agm-106613-e4566c23-ccf266959c8d", "index.html"), "utf8");
 const ids = new Set(search.records.map((record) => record.id));
 const trindadeCount = search.records.filter((record) => record.city === "Trindade").length;
 
@@ -38,6 +39,10 @@ assert(checkedStory.includes("Acervo editorial integrado"), "O acervo já public
 assert(checkedStory.includes('"@type":"NewsArticle"') && checkedStory.includes('"@type":"BreadcrumbList"'), "Os schemas editoriais não foram renderizados.");
 assert(checkedStory.includes("Crédito: Trindade Aberta"), "O crédito da imagem não aparece na matéria checada.");
 assert(checkedStory.match(/Dois extratos de contratos artísticos publicados pelo Município/g)?.length === 1, "A matéria checada repete o resumo no corpo.");
+assert(checkedActNews.includes("Ato em formato de notícia"), "O ato não recebeu a apresentação de registro-notícia.");
+assert(checkedActNews.includes("Estado editorial: detectada"), "O ato não preserva o estado editorial seguro.");
+assert(checkedActNews.includes('<p class="detail-deck">Dispõe sobre concessão de diárias a servidores que menciona e dá outras providências.</p>'), "A nota factual do ato não aparece no corpo.");
+assert(!checkedActNews.includes('class="detail-summary"'), "A nota factual do ato está repetida no corpo.");
 assert((await stat(path.join(root, "dist", "index.html"))).size < 90_000, "A capa HTML ultrapassou o limite de peso.");
 
 console.log(JSON.stringify({

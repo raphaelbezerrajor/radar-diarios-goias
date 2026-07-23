@@ -13,7 +13,7 @@ const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item
     <div class="shell page-intro">
       <p class="section-kicker">Edição municipal</p>
       <h1>Trindade: atos públicos, Câmara, TCM e notícias verificadas.</h1>
-      <p class="page-summary">O inventário do Diário cobre oito anos. A leitura ato a ato está estruturada no recorte anual mais recente e conversa com contratos, proposições, empresas e processos de controle.</p>
+      <p class="page-summary">O inventário do Diário cobre oito anos. Cada um dos 2.919 atos estruturados no recorte anual mais recente já aparece como nota factual, com olho, resumo e documento original.</p>
       <div class="hero-actions">
         <a class="button-primary" href="../busca/?city=Trindade&year=all">Pesquisar Trindade</a>
         <a class="button-secondary" href={portalTrindade}>Abrir portal municipal ↗</a>
@@ -31,7 +31,7 @@ const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item
       <div class="module-grid municipal-module-grid">
         {[
           ["Diário Oficial", "2.066 edições catalogadas", `${portalTrindade}/diario-oficial`],
-          ["Atos", "2.919 atos estruturados", `${portalTrindade}/atos`],
+          ["Atos", "2.919 registros-notícia estruturados", `${portalTrindade}/atos`],
           ["Câmara", "Contratos, credores e resultados", `${portalTrindade}/camara`],
           ["Orçamento", "Peças e execução disponíveis", `${portalTrindade}/orcamento`],
           ["TCM-GO", "Processos, alertas e revisão", `${portalTrindade}/tcm-go`],
@@ -105,9 +105,9 @@ const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item
     <div class="shell split-grid">
       <div>
         <SectionHeader
-          kicker="Atos prontos para triagem"
-          title="Recortes com página, edição e PDF original"
-          intro="Editais, dispensas, decretos, rescisões, contratos e nomeações seguem visíveis sem engordar a capa."
+          kicker="Ato a ato em notícia"
+          title="Notas factuais com página, edição e PDF original"
+          intro="Cada ato recebe leitura curta e estado editorial detectada. Os casos relevantes avançam para apuração; o restante continua pesquisável sem perder a fonte."
         />
         <div class="story-grid">
           {siteData.actsFront.slice(0, 6).map((record) => <StoryCard record={record} compact={true} />)}

@@ -90,6 +90,7 @@ function buildSearchRecord(item) {
     sourceFamily: item.sourceFamily,
     marker: trimText(item.marker || item.sourceNote || "", 52),
     importance: item.importance,
+    recordType: item.recordType,
     search: item.search
   };
 }
@@ -284,7 +285,7 @@ function normalizeTrindadeAct(item) {
     marker: `Ed. ${item.edition_number}${pageLabel ? ` · ${pageLabel}` : ""}`,
     importance: 35 + (importantActTypes.get(actType) || 1) + scoreByValue(totalValue),
     hasOriginalSource: Boolean(item.source_url),
-    recordType: "record",
+    recordType: "act_news",
     valueTotal: totalValue,
     pageStart: item.page_start || null,
     pageEnd: item.page_end || null

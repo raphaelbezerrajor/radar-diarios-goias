@@ -16,6 +16,8 @@ const { record } = Astro.props;
 const imageSrc = withBase(record.image?.src);
 const hasUsefulImage = Boolean(imageSrc && record.image?.kind !== "fallback");
 const isStory = record.recordType === "story";
+const isActNews = record.recordType === "act_news";
+const hasEditorialReading = isStory || isActNews;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const homeUrl = new URL(baseHref, Astro.site).toString();
 const searchUrl = new URL(`${baseHref}busca/`, Astro.site).toString();
@@ -53,6 +55,7 @@ if (isStory) {
         <div class="story-kickers">
           <p class="section-kicker">{record.type} · {record.city}</p>
           {isStory && <span class="archive-badge">Acervo editorial integrado</span>}
+          {isActNews && <span class="archive-badge">Ato em formato de notícia</span>}
         </div>
         <h1>{record.title}</h1>
         {record.deck && <p class="detail-deck">{record.deck}</p>}
@@ -60,6 +63,12 @@ if (isStory) {
           <div class="editorial-provenance">
             <strong>Publicado pelo Pauteiro</strong>
             <span>{formatDate(record.date)} · conteúdo já publicado, reapresentado no novo padrão editorial</span>
+          </div>
+        )}
+        {isActNews && (
+          <div class="editorial-provenance">
+            <strong>Leitura factual do Diário Oficial</strong>
+            <span>{formatDate(record.date)} · título oficial, olho e resumo vinculados ao ato de origem</span>
           </div>
         )}
         {hasUsefulImage && (
@@ -73,14 +82,14 @@ if (isStory) {
             )}
           </figure>
         )}
-        {record.summary && !record.paragraphs?.length && <p class="detail-summary">{record.summary}</p>}
+        {record.summary && !record.paragraphs?.length && !(isActNews && record.summary === record.deck) && <p class="detail-summary">{record.summary}</p>}
         {record.paragraphs?.length ? (
           <div class="detail-copy">
             {record.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           </div>
         ) : null}
-        {isStory && (
-          <p class="editorial-note">Os fatos, números e links documentais foram preservados na migração. A fonte original deve ser consultada para conferência integral.</p>
+        {hasEditorialReading && (
+          <p class="editorial-note">Os fatos, números e links documentais foram preservados. A fonte original deve ser consultada para conferência integral; esta nota não substitui apuração adicional quando o ato exigir contexto.</p>
         )}
       </div>
       <aside class="detail-side">
@@ -89,6 +98,7 @@ if (isStory) {
           <span>{record.sourceLabel}</span>
           <small>{formatDate(record.date)}</small>
           {isStory && <small>Autoria editorial: Pauteiro</small>}
+          {isActNews && <small>Estado editorial: detectada · aguardando triagem</small>}
         </div>
         {record.valueTotal ? (
           <div class="hero-panel">
