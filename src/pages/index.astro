@@ -30,13 +30,13 @@ const metrics = [
 ];
 ---
 
-<BaseLayout title="Painel Diário | Atos públicos de Goiás e Trindade" description="Consulte atos públicos, contratos, Diário Oficial, Câmara e TCM de Trindade junto da cobertura estadual de Goiás.">
+<BaseLayout title="Pauteiro | Documentos públicos, pautas e bases municipais" description="Consulte atos públicos, contratos, Diário Oficial, Câmara e TCM de Trindade junto da cobertura estadual de Goiás.">
   <section class="opening-band">
     <div class="shell opening-grid">
       <div class="opening-copy">
-        <p class="section-kicker section-kicker-light">Trindade + Goiás</p>
+        <p class="section-kicker section-kicker-light">Radar de pautas · Trindade + Goiás</p>
         <h1>O poder público, documento por documento.</h1>
-        <p class="page-summary">Diários oficiais, contratos, Câmara, TCM e pautas estaduais em uma leitura rápida, clara e feita primeiro para o celular.</p>
+        <p class="page-summary">O Pauteiro reúne Diários, contratos, Câmara, TCM e cobertura estadual para transformar documento público em pauta verificável — sem publicação automática.</p>
         <form class="quick-search" action={`${baseHref}busca/`} method="get">
           <label class="sr-only" for="home-search">Buscar na base pública</label>
           <input id="home-search" type="search" name="q" placeholder="Busque empresa, contrato, pessoa ou assunto" />
@@ -48,10 +48,10 @@ const metrics = [
         </div>
       </div>
       <aside class="opening-side" aria-label="Situação da base">
-        <p>Atualização da base</p>
+        <p>Estado do Pauteiro</p>
         <strong>{formatDate(siteData.metadata.updatedAt)}</strong>
         <span>{compactNumber(siteData.metrics.records)} registros com origem identificada</span>
-        <a href={`${baseHref}busca/`}>Explorar a base completa <span aria-hidden="true">→</span></a>
+        <a href={`${baseHref}pauteiro/`}>Conhecer os módulos <span aria-hidden="true">→</span></a>
       </aside>
     </div>
   </section>
@@ -97,6 +97,20 @@ const metrics = [
   </section>
 
   <MetricStrip items={metrics} />
+
+  <section class="section-band platform-band content-auto">
+    <div class="shell platform-callout">
+      <div>
+        <p class="section-kicker">Nova dinâmica editorial</p>
+        <h2>Coletar, comparar, pautar, apurar e editar.</h2>
+        <p>O material que já estava publicado entra agora como acervo verificado: preserva fatos e fontes, ganha contexto documental e passa a conversar com o fluxo editorial do Pauteiro.</p>
+      </div>
+      <div class="platform-actions">
+        <a class="button-primary" href={`${baseHref}pauteiro/`}>Ver a plataforma</a>
+        <span>Publicação automática desativada</span>
+      </div>
+    </div>
+  </section>
 
   <section class="section-band section-band-newsprint content-auto">
     <div class="shell split-grid acts-package">

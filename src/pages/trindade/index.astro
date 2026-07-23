@@ -8,7 +8,7 @@ const portalTrindade = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
 const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item.id === "diario");
 ---
 
-<BaseLayout title="Painel Diário | Trindade" description="Atos do Diário, atividade legislativa, TCM e notícias verificadas de Trindade integrados ao painel estadual.">
+<BaseLayout title="Pauteiro | Base municipal de Trindade" description="Atos do Diário, atividade legislativa, TCM e notícias verificadas de Trindade integrados ao painel estadual.">
   <section class="section-band">
     <div class="shell page-intro">
       <p class="section-kicker">Edição municipal</p>
@@ -21,7 +21,36 @@ const diaryCoverage = siteData.trindadeStats.status.coverage.find((item) => item
     </div>
   </section>
 
-  <section class="section-band section-band-contrast">
+  <section class="section-band section-band-newsprint content-auto">
+    <div class="shell">
+      <SectionHeader
+        kicker="Base municipal"
+        title="Tudo de Trindade, organizado por área"
+        intro="A base municipal preserva o portal já publicado e o integra ao fluxo do Pauteiro. Cada entrada abre o recorte correspondente, sem duplicar nem alterar os dados de origem."
+      />
+      <div class="module-grid municipal-module-grid">
+        {[
+          ["Diário Oficial", "2.066 edições catalogadas", `${portalTrindade}/diario-oficial`],
+          ["Atos", "2.919 atos estruturados", `${portalTrindade}/atos`],
+          ["Câmara", "Contratos, credores e resultados", `${portalTrindade}/camara`],
+          ["Orçamento", "Peças e execução disponíveis", `${portalTrindade}/orcamento`],
+          ["TCM-GO", "Processos, alertas e revisão", `${portalTrindade}/tcm-go`],
+          ["Notícias", "Acervo factual reeditado", `${portalTrindade}/noticias`],
+          ["Busca", "Consulta municipal integrada", `${portalTrindade}/busca`],
+          ["Estado da base", "Cobertura, lacunas e qualidade", `${portalTrindade}/qualidade`]
+        ].map(([label, description, href]) => (
+          <a class="module-card" href={href}>
+            <span class="status-badge">Trindade</span>
+            <strong>{label}</strong>
+            <p>{description}</p>
+            <small>Abrir módulo ↗</small>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band section-band-contrast content-auto">
     <div class="shell split-grid">
       <div class="rhythm-panel">
         <article>

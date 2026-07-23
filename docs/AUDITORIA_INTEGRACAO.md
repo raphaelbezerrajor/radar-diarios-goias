@@ -217,3 +217,18 @@ A integração anterior copiou datasets e criou links entre os sites, mas não c
 6. Testar os dois builds e as rotas públicas.
 7. Em etapa posterior, criar um pacote compartilhado versionado ou API municipal, migrar gradualmente as páginas do Trindade Aberta e só então avaliar banco PostgreSQL.
 
+## 11. Verificação após a implementação controlada
+
+A primeira etapa da migração foi concluída sem modificar a raiz canônica do Trindade Aberta:
+
+- `MunicipalDataProvider` criado e coberto por testes;
+- build do Pauteiro desacoplado dos nomes físicos dos JSONs municipais;
+- caminho local fixo removido do sincronizador;
+- snapshot ampliado para vinte datasets municipais públicos, com allowlist, baselines e hashes;
+- módulo Trindade exposto na navegação do Pauteiro;
+- domínio editorial e validações de SEO adicionados sem adaptador de publicação;
+- acervo já publicado reapresentado sem alterar fatos, números, datas ou fontes;
+- Pauteiro: 9 testes unitários, build de 4.679 páginas e validação de contagens aprovados;
+- Trindade Aberta: build de produção e 14 testes de HTML aprovados.
+
+O lint do Trindade Aberta ainda falha com 31 erros e 7 avisos preexistentes. Os grupos principais são links internos feitos com `<a>` em vez de `Link`, atualizações síncronas de estado em efeitos React e avisos de imagens. Como o repositório municipal contém uma coleta não versionada e regressiva em andamento, esses componentes não foram reescritos nesta etapa. A dívida deve ser tratada em um commit próprio, com nova verificação de interface e sem misturar correção de componentes com regeneração de dados.
