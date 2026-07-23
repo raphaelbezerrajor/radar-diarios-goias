@@ -13,9 +13,10 @@ const previews = await readJson("data", "trindade", "source-previews.json");
 const automatic = records.filter((item) => item.publicationMode === "automatic_document_news");
 const institutionalPattern = /\/(?:noticia|noticias|news|imprensa|agencia-de-noticias)(?:\/|\?|$)/i;
 
-assert(automatic.length >= 3_300, `O lote documental automático encolheu: ${automatic.length}.`);
+assert(automatic.length >= 650 && automatic.length < 1_500, `O filtro de valor-notícia saiu da faixa esperada: ${automatic.length}.`);
 assert(records.filter((item) => item.kind === "ato").length === 2_919, "Os 2.919 atos de Trindade não foram preservados.");
-assert(records.filter((item) => item.kind === "tcm_process").length === 445, "Os 445 dossiês confirmados do TCM-GO não viraram matérias.");
+assert(records.filter((item) => item.kind === "tcm_process").length === 445, "Os 445 dossiês confirmados do TCM-GO não foram preservados.");
+assert(records.filter((item) => item.publicationMode === "repository_record").length >= 2_500, "Atos burocráticos demais entraram no noticiário.");
 assert(site.timeline.year === site.metrics.currentYear, "A linha do tempo não usa o ano editorial corrente.");
 assert(site.timeline.stories.every((item) => Number(item.year) === site.timeline.year), "A linha do tempo mistura fatos históricos com o ano corrente.");
 assert(site.leadStory.year === site.timeline.year, "A manchete principal não pertence ao ano corrente.");
@@ -42,6 +43,7 @@ for (const preview of previews.items || []) {
 
 console.log(JSON.stringify({
   automaticDocumentNews: automatic.length,
+  repositoryOnly: records.filter((item) => item.publicationMode === "repository_record").length,
   currentYear: site.timeline.year,
   currentTimeline: site.timeline.total,
   institutionalNewsExcluded: site.metrics.excludedInstitutionalNews,

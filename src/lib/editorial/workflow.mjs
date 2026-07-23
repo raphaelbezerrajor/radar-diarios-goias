@@ -55,6 +55,7 @@ export function validateAutomaticDocumentNews(story = {}) {
   if (!story.deck && !story.linhaFina) issues.push("olho");
   if (!Array.isArray(story.paragraphs) || story.paragraphs.length < 2) issues.push("texto_jornalistico");
   if (!/^\d{4}-\d{2}-\d{2}$/.test(story.date || "")) issues.push("data_do_ato");
+  if (story.newsValue?.publish === false) issues.push("sem_valor_noticia");
   if (/\/(?:noticia|noticias|news|imprensa|agencia-de-noticias)(?:\/|\?|$)/i.test(story.sourceUrl || "")) {
     issues.push("reportagem_institucional_bloqueada");
   }

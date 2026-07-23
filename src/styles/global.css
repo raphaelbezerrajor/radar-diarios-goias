@@ -1562,3 +1562,35 @@ a.module-card:hover {
     align-items: end;
   }
 }
+.news-reason {
+  color: #41544d;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 0.65rem 0 0;
+}
+
+.news-reason strong {
+  color: #0d211c;
+}
+
+.news-value-box {
+  background: #edf3ef;
+  border-left: 4px solid #bd6b2e;
+  margin-top: 1.5rem;
+  padding: 1rem 1.15rem;
+}
+
+.news-value-box strong {
+  color: #0d211c;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.05rem;
+}
+
+.news-value-box ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.news-value-box li + li {
+  margin-top: 0.35rem;
+}

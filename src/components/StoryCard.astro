@@ -29,6 +29,9 @@ const actionLabel = record.recordType === "story" ? "Ler matéria" : "Ler regist
     <h3><a href={storyHref}>{record.title}</a></h3>
     {record.deck && <p class="story-deck">{record.deck}</p>}
     {showSummary && record.summary && <p class="story-summary">{record.summary}</p>}
+    {record.recordType === "story" && record.newsValue?.reasons?.[0] ? (
+      <p class="news-reason"><strong>Por que importa:</strong> {record.newsValue.reasons[0]}</p>
+    ) : null}
     <div class="story-meta">
       <span>{record.sourceFamily}</span>
       {record.valueTotal ? <span>{formatCurrency(record.valueTotal)}</span> : <span>{record.marker || record.sourceNote}</span>}
