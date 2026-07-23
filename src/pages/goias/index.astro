@@ -6,6 +6,14 @@ import StoryCard from "../../components/StoryCard.astro";
 import { compactNumber } from "../../lib/format.js";
 
 const municipal = siteData.municipalDiaries;
+const alego = siteData.alego;
+
+function alegoSourceTotal(source) {
+  if (source.id === "alego-diario") return source.summary.editions || 0;
+  if (source.id === "alego-votacoes") return source.summary.roll_calls || 0;
+  if (source.id === "alego-contratos") return source.summary.records || 0;
+  return source.summary.registers || 0;
+}
 ---
 
 <BaseLayout title="Pauteiro | Painel Diário de Goiás" description="Caderno estadual com atos, pautas e frentes abertas por fonte oficial em Goiás.">
@@ -13,7 +21,7 @@ const municipal = siteData.municipalDiaries;
     <div class="shell page-intro">
       <p class="section-kicker">Edição estadual</p>
       <h1>Nomeações, contratos, decisões e gastos públicos viram notícia.</h1>
-      <p class="page-summary">O caderno Goiás publica matérias produzidas a partir do DOE, TCE-GO e Diários municipais. Reportagens já publicadas em outros sites não entram nessa coleta.</p>
+      <p class="page-summary">O caderno Goiás publica matérias produzidas a partir do DOE, TCE-GO, ALEGO e Diários municipais. Reportagens já publicadas em outros sites não entram nessa coleta.</p>
     </div>
   </section>
 
@@ -56,11 +64,71 @@ const municipal = siteData.municipalDiaries;
     </div>
   </section>
 
+  <section class="section-band section-band-contrast">
+    <div class="shell">
+      <SectionHeader
+        kicker="Nova frente estadual"
+        title="ALEGO: Diário, votações e contratos entram no radar"
+        intro={`A primeira carga reúne ${compactNumber(alego.summary.diary_editions || 0)} edições do Diário da Assembleia, ${compactNumber(alego.summary.roll_calls || 0)} votações e ${compactNumber(alego.summary.contracts || 0)} contratos. A fila abaixo destaca documentos que merecem leitura jornalística prioritária.`}
+      />
+      <div class="stats-column municipal-stats">
+        <article class="hero-panel">
+          <strong>{compactNumber(alego.summary.downloaded_diaries || 0)}</strong>
+          <span>Diários baixados e validados</span>
+        </article>
+        <article class="hero-panel">
+          <strong>{compactNumber(alego.summary.vote_rows || 0)}</strong>
+          <span>votos individualizados</span>
+        </article>
+        <article class="hero-panel">
+          <strong>{compactNumber(alego.summary.current_contracts || 0)}</strong>
+          <span>contratos vigentes na fonte</span>
+        </article>
+      </div>
+      <div class="source-list source-list-wide municipal-source-list">
+        {alego.sources.map((source) => (
+          <article class="source-card">
+            <div class="source-card-top">
+              <strong>{source.name}</strong>
+              <span>{compactNumber(alegoSourceTotal(source))} registros</span>
+            </div>
+            <p>{source.collectionMethod.replaceAll("_", " ")}</p>
+            <small>{source.publicationPattern.ordinary_window || "Atualização acompanhada nas quatro varreduras diárias."}</small>
+            <div class="source-card-top source-card-footer">
+              <span>Fonte primária</span>
+              <a class="text-link" href={source.officialUrl}>Conferir na ALEGO ↗</a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="alego-queue">
+        <div class="alego-queue-head">
+          <p class="section-kicker">Fila de análise</p>
+          <h2>O que já apareceu com maior valor-notícia</h2>
+          <p>São pistas documentais, ainda não acusações. A publicação como matéria depende da leitura do ato e do contexto.</p>
+        </div>
+        <div class="source-list alego-queue-list">
+          {alego.analysisQueue.slice(0, 6).map((item) => (
+            <article class="source-card alego-queue-card">
+              <div class="source-card-top">
+                <span>{item.type === "votacao_nominal" ? "Votação nominal" : "Contrato"}</span>
+                <span>{item.date || "sem data"}</span>
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.why}</p>
+              <a class="text-link" href={item.source_url}>Abrir documento oficial ↗</a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section-band">
     <div class="shell">
       <SectionHeader
         kicker="Monitor municipal"
-        title="Junho e julho: PDFs preservados e conferência em três rodadas por dia"
+        title="Junho e julho: PDFs preservados e conferência em quatro rodadas por dia"
         intro={`O lote reúne ${compactNumber(municipal.summary.editions || 0)} edições de ${compactNumber(municipal.summary.municipalities || 0)} municípios prioritários. Cada arquivo baixado passa por validação de PDF e hash antes de entrar na fila de leitura ato a ato.`}
       />
       <div class="stats-column municipal-stats">

@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "project": "Pauteiro",
+  "purpose": "Monitoramento documental, legislativo e financeiro da Assembleia Legislativa de Goias",
+  "generated_at": "2026-07-23T10:34:02.128Z",
+  "timezone": "America/Sao_Paulo",
+  "range": {
+    "from": "2026-06-01",
+    "to": "2026-07-23",
+    "last_checked": {
+      "from": "2026-07-16",
+      "to": "2026-07-23"
+    }
+  },
+  "summary": {
+    "diary_editions": 31,
+    "downloaded_diaries": 31,
+    "failed_diary_downloads": 0,
+    "extraction_pending": 31,
+    "vote_rows": 4365,
+    "roll_calls": 196,
+    "contracts": 81,
+    "current_contracts": 75,
+    "sanctions_registers": 1,
+    "analysis_queue": 30
+  },
+  "daily_check_windows": [
+    {
+      "time": "06:30",
+      "purpose": "Diario da Assembleia, contratos e republicacoes da madrugada"
+    },
+    {
+      "time": "17:30",
+      "purpose": "pautas, atos administrativos e documentos do fim do expediente"
+    },
+    {
+      "time": "19:30",
+      "purpose": "votacoes, resultados das sessoes e atualizacoes legislativas"
+    },
+    {
+      "time": "00:30",
+      "purpose": "repescagem, edicoes tardias e consolidacao do dia"
+    }
+  ],
+  "sources": [
+    {
+      "id": "alego-diario",
+      "name": "Diario da Assembleia",
+      "official_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/diario",
+      "status": "checked",
+      "collection_method": "api_publica_oficial_e_pdf_certificado",
+      "publication_pattern": {
+        "certainty": "official_portal_does_not_expose_stable_release_time",
+        "ordinary_window": "sem horario fixo publicamente documentado",
+        "recommended_checks": [
+          "06:30",
+          "17:30",
+          "00:30"
+        ]
+      },
+      "summary": {
+        "editions": 31,
+        "downloaded": 31,
+        "failed": 0,
+        "first_date": "2026-06-01",
+        "last_date": "2026-07-14"
+      }
+    },
+    {
+      "id": "alego-votacoes",
+      "name": "Votacoes nominais",
+      "official_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "status": "checked",
+      "collection_method": "api_publica_oficial",
+      "summary": {
+        "rows": 4365,
+        "roll_calls": 196
+      }
+    },
+    {
+      "id": "alego-contratos",
+      "name": "Contratos e aditivos",
+      "official_url": "https://transparencia.al.go.leg.br/licitacoes-contratos-e-convenios/contratos-e-convenios/contratos",
+      "status": "checked",
+      "collection_method": "api_publica_oficial",
+      "summary": {
+        "records": 81,
+        "current": 75
+      }
+    },
+    {
+      "id": "alego-sancoes",
+      "name": "Sancoes administrativas",
+      "official_url": "https://transparencia.al.go.leg.br/licitacoes-contratos-e-convenios",
+      "status": "checked",
+      "collection_method": "api_publica_oficial_com_documentos_anexos",
+      "summary": {
+        "registers": 1
+      }
+    }
+  ],
+  "analysis_queue": [
+    {
+      "id": "alego-votacao:2026-07-07:39753",
+      "type": "votacao_nominal",
+      "date": "2026-07-07",
+      "priority": 90,
+      "title": "ALTERA A LEI Nº 23.457, DE 6 DE JUNHO DE 2025, QUE AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO NO BANCO INTERAMERICANO DE DESENVOLVIMENTO - BID, COM A GARANTIA DA UNIÃO.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39753 · 20ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-07:39751",
+      "type": "votacao_nominal",
+      "date": "2026-07-07",
+      "priority": 90,
+      "title": "ALTERA A LEI Nº 13.194, DE 26 DE DEZEMBRO DE 1997, QUE TRATA DE MATÉRIA TRIBUTÁRIA, E REVOGA DISPOSITIVO DA LEI Nº 19.754, DE 17 DE JULHO DE 2017, QUE INSTITUI O CADASTRO INFORMATIVO DOS CRÉDITOS NÃO QUITADOS DE ÓRGÃOS E ENTIDADES ESTADUAIS (CADIN ESTADUAL).",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39751 · 20ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-07:39747",
+      "type": "votacao_nominal",
+      "date": "2026-07-07",
+      "priority": 90,
+      "title": "ALTERA A LEI Nº 22.524, DE 3 DE JANEIRO DE 2024, QUE DISPÕE SOBRE PLANO DE CARREIRA E REMUNERAÇÃO DA SECRETARIA DE ESTADO DA SAÚDE.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39747 · 20ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-07:39745",
+      "type": "votacao_nominal",
+      "date": "2026-07-07",
+      "priority": 90,
+      "title": "ALTERA A LEI Nº 23.457, DE 6 DE JUNHO DE 2025, QUE AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO NO BANCO INTERAMERICANO DE DESENVOLVIMENTO - BID, COM A GARANTIA DA UNIÃO.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39745 · 19ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-07:39741",
+      "type": "votacao_nominal",
+      "date": "2026-07-07",
+      "priority": 90,
+      "title": "ALTERA A LEI Nº 13.194, DE 26 DE DEZEMBRO DE 1997, QUE TRATA DE MATÉRIA TRIBUTÁRIA, E REVOGA DISPOSITIVO DA LEI Nº 19.754, DE 17 DE JULHO DE 2017, QUE INSTITUI O CADASTRO INFORMATIVO DOS CRÉDITOS NÃO QUITADOS DE ÓRGÃOS E ENTIDADES ESTADUAIS (CADIN ESTADUAL).",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39741 · 19ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-07:39733",
+      "type": "votacao_nominal",
+      "date": "2026-07-07",
+      "priority": 90,
+      "title": "ALTERA A LEI Nº 22.524, DE 3 DE JANEIRO DE 2024, QUE DISPÕE SOBRE PLANO DE CARREIRA E REMUNERAÇÃO DA SECRETARIA DE ESTADO DA SAÚDE.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39733 · 19ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-02:39592",
+      "type": "votacao_nominal",
+      "date": "2026-07-02",
+      "priority": 90,
+      "title": "AUTORIZA O PODER EXECUTIVO ESTADUAL A INSTITUIR A AGÊNCIA GOIANA DE PROMOÇÃO DE INVESTIMENTOS, COMPETITIVIDADE E INOVAÇÃO — INVEST GO.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 23 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39592 · 18ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-02:39589",
+      "type": "votacao_nominal",
+      "date": "2026-07-02",
+      "priority": 90,
+      "title": "AUTORIZA O PODER EXECUTIVO ESTADUAL A INSTITUIR A AGÊNCIA GOIANA DE PROMOÇÃO DE INVESTIMENTOS, COMPETITIVIDADE E INOVAÇÃO — INVEST GO.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39589 · 17ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-02:39584",
+      "type": "votacao_nominal",
+      "date": "2026-07-02",
+      "priority": 90,
+      "title": "ALTERA A LEI Nº 15.680, DE 2 DE JUNHO DE 2006, QUE DISPÕE SOBRE O QUADRO PERMANENTE DE PESSOAL E O PLANO DE CARGOS E REMUNERAÇÃO, DOS SERVIDORES DA AGÊNCIA GOIANA DO MEIO AMBIENTE, E A LEI Nº 19.633, DE 28 DE ABRIL DE 2017, QUE DISPÕE SOBRE O PLANO DE CARGOS E REMUNERAÇÃO DO PESSOAL PERTENCENTE AOS GRUPOS OCUPACIONAIS TÉCNICO AMBIENTAL E ANALISTA AMBIENTAL.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 24 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39584 · 18ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-02:39572",
+      "type": "votacao_nominal",
+      "date": "2026-07-02",
+      "priority": 90,
+      "title": "ALTERA A LEI Nº 15.680, DE 2 DE JUNHO DE 2006, QUE DISPÕE SOBRE O QUADRO PERMANENTE DE PESSOAL E O PLANO DE CARGOS E REMUNERAÇÃO, DOS SERVIDORES DA AGÊNCIA GOIANA DO MEIO AMBIENTE, E A LEI Nº 19.633, DE 28 DE ABRIL DE 2017, QUE DISPÕE SOBRE O PLANO DE CARGOS E REMUNERAÇÃO DO PESSOAL PERTENCENTE AOS GRUPOS OCUPACIONAIS TÉCNICO AMBIENTAL E ANALISTA AMBIENTAL.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 23 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39572 · 17ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-07-01:39418",
+      "type": "votacao_nominal",
+      "date": "2026-07-01",
+      "priority": 90,
+      "title": "DISPÕE SOBRE A MELHORIA DO ACESSO E TRANSPARÊNCIA NOS SERVIÇOS DE SAÚDE NO ESTADO DE GOIÁS E DÁ OUTRAS PROVIDÊNCIAS.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39418 · 52ª SESSÃO ORDINARIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-25:39076",
+      "type": "votacao_nominal",
+      "date": "2026-06-25",
+      "priority": 90,
+      "title": "ALTERA A LEI COMPLEMENTAR Nº 161, DE 30 DE DEZEMBRO DE 2020, QUE DISPÕE SOBRE O REGIME PRÓPRIO DE PREVIDÊNCIA SOCIAL DO ESTADO DE GOIÁS RPPS/GO.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39076 · 15ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-25:39040",
+      "type": "votacao_nominal",
+      "date": "2026-06-25",
+      "priority": 90,
+      "title": "ALTERA A LEI COMPLEMENTAR Nº 161, DE 30 DE DEZEMBRO DE 2020, QUE DISPÕE SOBRE O REGIME PRÓPRIO DE PREVIDÊNCIA SOCIAL DO ESTADO DE GOIÁS RPPS/GO.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 39040 · 50ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-24:38681",
+      "type": "votacao_nominal",
+      "date": "2026-06-24",
+      "priority": 90,
+      "title": "ALTERA A LEI N° 20.756, DE 28 DE JANEIRO DE 2020, QUE DISPÕE SOBRE O REGIME JURÍDICO DOS SERVIDORES PÚBLICOS CIVIS DO ESTADO DE GOIÁS, DAS AUTARQUIAS E FUNDAÇÕES PÚBLICAS ESTADUAIS, E DÁ OUTRAS PROVIDÊNCIAS, E A LEI N° 18.456, DE 30 DE ABRIL DE 2014, QUE DISPÕE SOBRE A PREVENÇÃO E A PUNIÇÃO DE ASSÉDIO MORAL NO ÂMBITO DA ADMINISTRAÇÃO ESTADUAL E DÁ OUTRAS PROVIDÊNCIAS.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 38681 · 49ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-18:38502",
+      "type": "votacao_nominal",
+      "date": "2026-06-18",
+      "priority": 90,
+      "title": "ALTERA A LEI N° 21.880, DE 20 DE ABRIL DE 2023, QUE AUTORIZA O PODER EXECUTIVO A INSTITUIR O SERVIÇO SOCIAL AUTÔNOMO DE ASSISTÊNCIA À SAÚDE DOS SERVIDORES PÚBLICOS E MILITARES DO ESTADO DE GOIÁS —IPASGO SAÚDE.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 20 sim, 1 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 38502 · 14ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-18:38501",
+      "type": "votacao_nominal",
+      "date": "2026-06-18",
+      "priority": 90,
+      "title": "ALTERA A LEI N° 11.651, DE 26 DE DEZEMBRO DE 1991, QUE INSTITUI O CÓDIGO TRIBUTÁRIO DO ESTADO DE GOIÁS — CTE, E REVOGA DISPOSITIVO DA LEI N° 16.469, DE 19 DE JANEIRO DE 2009, QUE REGULA O PROCESSO ADMINISTRATIVO TRIBUTÁRIO E DISPÕE SOBRE OS ÓRGÃOS VINCULADOS AO JULGAMENTO ADMINISTRATIVO DE QUESTÕES DE NATUREZA TRIBUTÁRIA.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 21 sim, 1 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 38501 · 14ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-18:38488",
+      "type": "votacao_nominal",
+      "date": "2026-06-18",
+      "priority": 90,
+      "title": "ALTERA A LEI N° 11.651, DE 26 DE DEZEMBRO DE 1991, QUE INSTITUI O CÓDIGO TRIBUTÁRIO DO ESTADO DE GOIÁS — CTE, E REVOGA DISPOSITIVO DA LEI N° 16.469, DE 19 DE JANEIRO DE 2009, QUE REGULA O PROCESSO ADMINISTRATIVO TRIBUTÁRIO E DISPÕE SOBRE OS ÓRGÃOS VINCULADOS AO JULGAMENTO ADMINISTRATIVO DE QUESTÕES DE NATUREZA TRIBUTÁRIA.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 38488 · 47ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-18:38486",
+      "type": "votacao_nominal",
+      "date": "2026-06-18",
+      "priority": 90,
+      "title": "ALTERA A LEI N° 21.880, DE 20 DE ABRIL DE 2023, QUE AUTORIZA O PODER EXECUTIVO A INSTITUIR O SERVIÇO SOCIAL AUTÔNOMO DE ASSISTÊNCIA À SAÚDE DOS SERVIDORES PÚBLICOS E MILITARES DO ESTADO DE GOIÁS —IPASGO SAÚDE.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 24 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 38486 · 47ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-17:38320",
+      "type": "votacao_nominal",
+      "date": "2026-06-17",
+      "priority": 90,
+      "title": "ALTERA A LEI N° 20.756, DE 28 DE JANEIRO DE 2020, QUE DISPÕE SOBRE O REGIME JURÍDICO DOS SERVIDORES PÚBLICOS CIVIS DO ESTADO DE GOIÁS, DAS AUTARQUIAS E FUNDAÇÕES PÚBLICAS ESTADUAIS, E DÁ OUTRAS PROVIDÊNCIAS, E A LEI N° 18.456, DE 30 DE ABRIL DE 2014, QUE DISPÕE SOBRE A PREVENÇÃO E A PUNIÇÃO DE ASSÉDIO MORAL NO ÂMBITO DA ADMINISTRAÇÃO ESTADUAL E DÁ OUTRAS PROVIDÊNCIAS.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 23 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 38320 · 12ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-02:37335",
+      "type": "votacao_nominal",
+      "date": "2026-06-02",
+      "priority": 90,
+      "title": "DISPÕE SOBRE A CRIAÇÃO DO CADASTRO DE OBESIDADE INFANTO-JUVENIL NAS ESCOLAS DE ENSINO FUNDAMENTAL E MÉDIO NA REDE ESTADUAL DE EDUCAÇÃO DO ESTADO DE GOIÁS.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO. À 2ª DISCUSSÃO E VOTAÇÃO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 37335 · 41ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-01:37220",
+      "type": "votacao_nominal",
+      "date": "2026-06-01",
+      "priority": 90,
+      "title": "INSTITUI A CAMPANHA “SAÚDE RENAL PARA TODOS” NAS ESCOLAS PÚBLICAS E PRIVADAS DO ESTADO DE GOIÁS E DÁ OUTRAS PROVIDÊNCIAS.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 37220 · 40ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-06-01:37214",
+      "type": "votacao_nominal",
+      "date": "2026-06-01",
+      "priority": 90,
+      "title": "ALTERA A LEI N° 20.756, DE 28 DE JANEIRO DE 2020, QUE DISPÕE SOBRE O REGIME JURÍDICO DOS SERVIDORES PÚBLICOS CIVIS DO ESTADO DE GOIÁS, DAS AUTARQUIAS E FUNDAÇÕES PÚBLICAS ESTADUAIS.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 37214 · 40ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-contrato:650",
+      "type": "contrato",
+      "date": "2025-04-03",
+      "priority": 86,
+      "title": "Contrato 11/2025 — COMFORTSTAR SISTEMA DE AR CONDICIONADO LTDA.",
+      "why": "R$ 4.155.000,00 como maior valor informado entre empenhado e pago. Contratação de empresa para prestação de serviços continuados de manutenção preventiva e corretiva dos sistemas centrais de ar-condicionado com Chillers a ar, Fan Coils, Fancoletes, Dualfluid, Splitão, VRF ( Variable Ref",
+      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/R28VJHyoQ7IFZmVgRYqD_w==/contrato-alego-650",
+      "document_reference": "Processo 14874/2024"
+    },
+    {
+      "id": "alego-contrato:641",
+      "type": "contrato",
+      "date": "2025-02-05",
+      "priority": 84,
+      "title": "Contrato 05/2025 — GLOBAL SEC. TECNOLOGIA & INFORMAÇÃO LTDA",
+      "why": "R$ 2.733.424,00 como maior valor informado entre empenhado e pago. O objeto do presente instrumento é a PRESTAÇÃO DE SERVIÇO DE FORNECIMENTO DE EXPANSÃO DE SOLUÇÃO HIPERCONVERGENTE PARA DATA CENTER, INCLUINDO SOFTWARE DE GERENCIAMENTO E VIRTUALIZAÇÃO, IMPLANTAÇÃO, GARANTIA, ATUALIZAÇÃO ",
+      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/TSBceAFd8C7YmDOD4cwgdA==/contrato-alego-641",
+      "document_reference": "Processo 18130/2024"
+    },
+    {
+      "id": "alego-contrato:737",
+      "type": "contrato",
+      "date": "2025-07-03",
+      "priority": 83,
+      "title": "Contrato 029/2025 — LEGIX SOLUÇÕES EM AUTOMAÇÃO LTDA",
+      "why": "R$ 1.840.000,00 como maior valor informado entre empenhado e pago. 1.1.0 objeto do presente instrumento é a Contratação de Solução Integrada de Software de Gestão de Pessoas, Folha de Pagamento, Sáude/SESMT e eSocial com fornecimento de licença de uso, contemplando os serviços de migraç",
+      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/a8YvX5AnofWNk29Zsal16A==/contrato-alego-737",
+      "document_reference": "Processo 4738/2025"
+    },
+    {
+      "id": "alego-contrato:591",
+      "type": "contrato",
+      "date": "2024-01-24",
+      "priority": 83,
+      "title": "Contrato 01/2024 — TELEFONICA CLOUD E TECNOLOGIA DO BRASIL S.A.",
+      "why": "R$ 1.929.997,32 como maior valor informado entre empenhado e pago. 0 objeto do presente instrumento é a contratação de empresa especializada no fornecimento de SUBSCRIÇÃO DE LICENÇAS DE USO DE SOFTWARE MICROSOFT OFFICE NA MODALIDADE SOFTWARE AS A SERVICE — SAAS, UML EA - ENTERPRISE AGRE",
+      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/QfW-l0sN1Z5A2hZ-RdL_hQ==/contrato-alego-591",
+      "document_reference": "Processo 7448/2023"
+    },
+    {
+      "id": "alego-contrato:539",
+      "type": "contrato",
+      "date": "2022-11-09",
+      "priority": 83,
+      "title": "Contrato 053/2022 — ÁGAPE ASSESSORIA E CONSULTORIA LTDA",
+      "why": "R$ 1.828.967,86 como maior valor informado entre empenhado e pago. O objeto do presente contrato é o FORNECIMENTO DE LICENÇAS (PERPÉTUAS) DE USO DE SOFTWARE PARA VIRTUALIZAÇÃO DESTE PODER LEGISLATIVO, INCLUINDO SUSTENTAÇÃO, MANUTENÇÃO, HOSPEDAGEM NA MODALIDADE SOFTWARE AS A SERVICE – SA",
+      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/un8Z5KB08MCHDhJsZ-kZTg==/contrato-alego-539",
+      "document_reference": "Processo 2021006729"
+    },
+    {
+      "id": "alego-contrato:829",
+      "type": "contrato",
+      "date": "2026-06-19",
+      "priority": 80,
+      "title": "Contrato 066/2026 — AGAPE ASSESSORIA E CONSULTORIA LTDA",
+      "why": "R$ 924.000,00 como maior valor informado entre empenhado e pago. Contratação dos serviços de atualização de versão de software de virtualização, treinamento, suporte técnico, operação assistida, hospedagem e consultoria técnica para modelagem e automação de processos, para atender às ",
+      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/fxpAfvQPhQx0xmkD2k1dhg==/contrato-alego-829",
+      "document_reference": "Processo 32168/2025"
+    },
+    {
+      "id": "alego-contrato:459",
+      "type": "contrato",
+      "date": "2021-12-22",
+      "priority": 79,
+      "title": "Contrato sem numero — FLEXFORM INDÚSTRIA E COMÉRCIO DE MÓVEIS LTDA",
+      "why": "R$ 763.110,00 como maior valor informado entre empenhado e pago. aquisição de CADEIRA FIXA, POLTRONAS GIRATÓRIAS E LONGARINAS DE 2 E 3 LUGARES, incluindo montagem e alocação, destinados a atender as demandas da Assembleia Legislativa do Estado de Goiás.",
+      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/A6oADUfT_q-Mon8v044Mwg==/contrato-alego-459",
+      "document_reference": "Processo 2021009306"
+    },
+    {
+      "id": "alego-contrato:662",
+      "type": "contrato",
+      "date": "2027-06-09",
+      "priority": 77,
+      "title": "Contrato 23/2025 — VÓLUS INSTITUIÇÃO DE PAGAMENTO LTDA",
+      "why": "R$ 528.989,18 como maior valor informado entre empenhado e pago. GERENCIAMENTO E CONTROLE DE FORNECIMENTO DE COMBUSTÍVEL AERONÁUTICO - GASOLINA DE AVIAÇÃO (AVGAS), EM REDE DE POSTOS CREDENCIADOS EM AEROPORTOS, COM PAGAMENTO POR MEIO DE CARTÃO COM SISTEMA DE PAGAMENTO ELETRÔNICO, PARA ",
+      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/FVglKnFNDPmQvupPXTyq2Q==/contrato-alego-662",
+      "document_reference": "Processo 9602/2025"
+    }
+  ]
+}

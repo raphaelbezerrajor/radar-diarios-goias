@@ -1620,6 +1620,47 @@ a.module-card:hover {
   padding: 0.65rem 0.75rem;
 }
 
+.alego-queue {
+  border-top: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+.alego-queue-head {
+  max-width: 760px;
+}
+
+.alego-queue-head h2 {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(1.65rem, 3vw, 2.55rem);
+  line-height: 1.05;
+  margin: 0.25rem 0 0.65rem;
+}
+
+.alego-queue-head > p:last-child {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.alego-queue-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.25rem;
+}
+
+.alego-queue-card h3 {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.04rem;
+  line-height: 1.28;
+  margin: 0.35rem 0;
+}
+
+.alego-queue-card .source-card-top span:first-child {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 720px) {
   .municipal-stats {
     grid-template-columns: 1fr;
@@ -1628,5 +1669,9 @@ a.module-card:hover {
   .source-card-footer {
     align-items: start;
     flex-direction: column;
+  }
+
+  .alego-queue-list {
+    grid-template-columns: 1fr;
   }
 }
