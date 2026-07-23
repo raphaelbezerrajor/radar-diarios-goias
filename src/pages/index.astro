@@ -8,6 +8,7 @@ import { compactNumber, formatDate, withBase } from "../lib/format.js";
 
 const hero = siteData.leadStory;
 const heroImage = withBase(hero.image?.src);
+const heroLead = hero.paragraphs?.[0] || hero.summary;
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const yearCards = siteData.yearSnapshots.slice(0, 6);
 const stateFeatured = siteData.stateFront.slice(0, 2);
@@ -65,7 +66,7 @@ const metrics = [
           <p class="section-kicker">Em destaque</p>
           <h2>{hero.title}</h2>
           <p class="hero-deck">{hero.deck}</p>
-          <p class="hero-summary">{hero.summary}</p>
+          {heroLead && <p class="hero-summary">{heroLead}</p>}
           <div class="hero-meta">
             <span>{hero.sourceFamily}</span>
             <span>{hero.city}</span>

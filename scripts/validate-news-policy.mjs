@@ -27,6 +27,8 @@ assert(julyIndex.records.every((item, index, items) => index === 0 || items[inde
 assert(site.timeline.year === site.metrics.currentYear, "A linha do tempo não usa o ano editorial corrente.");
 assert(site.timeline.stories.every((item) => Number(item.year) === site.timeline.year), "A linha do tempo mistura fatos históricos com o ano corrente.");
 assert(site.leadStory.year === site.timeline.year, "A manchete principal não pertence ao ano corrente.");
+assert(site.leadStory.publicationMode === "curated_document_news", "A manchete principal não passou pela curadoria editorial.");
+assert(!/\bpublica\s+(?:extrato|portaria|termo)\b/i.test(site.leadStory.title), "A manchete principal ainda reproduz o cabeçalho burocrático do ato.");
 assert(curationQueue.candidates.length >= 150, "A fila de curadoria perdeu pautas relevantes.");
 assert(curationQueue.summary.candidates === curationQueue.candidates.length, "O resumo da fila de curadoria diverge dos candidatos.");
 assert(curationQueue.candidates.every((item, index, items) =>

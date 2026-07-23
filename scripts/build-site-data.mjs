@@ -475,8 +475,11 @@ function sortForSearch(items) {
 function pickLead(items) {
   return [...items]
     .sort((a, b) => {
-      const byDate = compareByDateDesc(a, b);
+      const byDate = String(b.date || "").localeCompare(String(a.date || ""));
       if (byDate !== 0) return byDate;
+      const editorialWeightA = a.publicationMode === "curated_document_news" ? 2 : a.publicationMode !== "automatic_document_news" ? 1 : 0;
+      const editorialWeightB = b.publicationMode === "curated_document_news" ? 2 : b.publicationMode !== "automatic_document_news" ? 1 : 0;
+      if (editorialWeightB !== editorialWeightA) return editorialWeightB - editorialWeightA;
       const imageWeightA = a.image?.src ? 4 : 0;
       const imageWeightB = b.image?.src ? 4 : 0;
       if (imageWeightB !== imageWeightA) return imageWeightB - imageWeightA;

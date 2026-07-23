@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-07-23T12:00:00-03:00",
+  "updatedAt": "2026-07-23T16:50:00-03:00",
   "briefs": [
     {
       "id": "jul26-agm-114590-608B28AC-243",
@@ -294,7 +294,7 @@
     },
     {
       "id": "jul26-agm-114590-A98C582C-224",
-      "status": "draft",
+      "status": "approved",
       "promptVersion": "pauteiro-curadoria-v1",
       "model": "ChatGPT",
       "createdAt": "2026-07-23T12:00:00-03:00",
@@ -306,7 +306,7 @@
         "mainAngle": "A Saúde de Trindade alugou por R$ 216 mil um imóvel de 1.080 m² para funcionar como almoxarifado; a pauta deve mostrar o custo mensal, a duração, a localização e por que a rede precisa do espaço.",
         "whyItMatters": "O almoxarifado concentra insumos da saúde e a locação cria uma despesa recorrente de R$ 18 mil por mês, com impacto operacional e financeiro.",
         "headlineOptions": [
-          "Saúde de Trindade aluga imóvel por R$ 18 mil mensais para almoxarifado",
+          "Saúde de Trindade aluga imóvel por R$ 216 mil para almoxarifado",
           "Contrato de R$ 216 mil garante novo almoxarifado para a Saúde de Trindade",
           "Trindade destina R$ 216 mil à locação de imóvel para estoque da Saúde"
         ],
@@ -326,7 +326,6 @@
           "Os valores extraídos são R$ 18.000,00 e R$ 216.000,00."
         ],
         "contextToFind": [
-          "Prazo exato da locação",
           "Laudo de avaliação e pesquisa de mercado",
           "Situação do almoxarifado utilizado anteriormente",
           "Adequações, segurança, climatização e custo de mudança"
@@ -355,15 +354,18 @@
           "Não sugerir favorecimento ou sobrepreço sem comparação de mercado e outras evidências."
         ],
         "publication": {
-          "title": "",
-          "deck": "",
-          "paragraphs": []
+          "title": "Saúde de Trindade aluga imóvel por R$ 216 mil para almoxarifado",
+          "deck": "Contrato prevê aluguel mensal de R$ 18 mil por 12 meses para um imóvel de 1.080 m² no Setor Cristina II, destinado a armazenar insumos da rede municipal.",
+          "paragraphs": [
+            "O Fundo Municipal de Saúde de Trindade assinou um contrato de R$ 216 mil para alugar, por 12 meses, um imóvel de 1.080 metros quadrados destinado ao funcionamento do almoxarifado da Saúde. O aluguel mensal é de R$ 18 mil, segundo extrato publicado na edição nº 3666 do Diário Municipal de Goiás, em 23 de julho de 2026.",
+            "O imóvel fica na Avenida Marinho de Melo Filho, no Setor Cristina II. A contratação foi feita por inexigibilidade de licitação, no processo nº 21848/2026, com fundamento na hipótese legal de escolha de imóvel por suas características e localização. O contrato informa o valor e o prazo, mas não comprova que os R$ 216 mil já tenham sido pagos."
+          ]
         }
       },
       "humanReview": {
-        "approvedBy": null,
-        "approvedAt": null,
-        "notes": ""
+        "approvedBy": "Raphael Bezerra — orientação editorial no Codex",
+        "approvedAt": "2026-07-23T16:50:00-03:00",
+        "notes": "Título e texto reescritos após conferência visual da página 61 da edição nº 3666. Mantida a ressalva de que valor contratual não equivale a pagamento."
       }
     }
   ]
