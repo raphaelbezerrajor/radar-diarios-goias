@@ -1,0 +1,43 @@
+---
+import siteData from "../../generated/site-data.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import { compactNumber, formatDate } from "../../lib/format.js";
+
+const groups = Object.entries(
+  siteData.timeline.stories.reduce((result, story) => {
+    (result[story.date] ||= []).push(story);
+    return result;
+  }, {})
+).sort(([left], [right]) => right.localeCompare(left));
+---
+
+<BaseLayout title={`Últimas notícias de ${siteData.timeline.year} | Pauteiro`} description={`Linha do tempo de ${siteData.timeline.total} notícias produzidas a partir de atos oficiais em ${siteData.timeline.year}.`}>
+  <section class="section-band">
+    <div class="shell page-intro">
+      <p class="section-kicker">Linha do tempo · {siteData.timeline.year}</p>
+      <h1>O que o poder público publicou neste ano.</h1>
+      <p class="page-summary">Esta linha reúne somente fatos de {siteData.timeline.year}. O acervo dos anos anteriores continua disponível na busca, separado do noticiário atual.</p>
+      <div class="hero-actions">
+        <a class="button-primary" href="../busca/?year=2026">Pesquisar todo o ano</a>
+        <span class="timeline-count">{compactNumber(siteData.timeline.total)} notícias em {siteData.timeline.year}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band section-band-newsprint content-auto">
+    <div class="shell timeline-shell">
+      {groups.map(([date, stories]) => (
+        <section class="timeline-day" aria-labelledby={`data-${date}`}>
+          <header class="timeline-date">
+            <time id={`data-${date}`} datetime={date}>{formatDate(date)}</time>
+            <span>{stories.length} {stories.length === 1 ? "notícia" : "notícias"}</span>
+          </header>
+          <div class="timeline-stories">
+            {stories.map((record) => <StoryCard record={record} compact={true} imageMode="auto" />)}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

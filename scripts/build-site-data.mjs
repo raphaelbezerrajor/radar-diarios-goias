@@ -2,6 +2,13 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
 import { createTrindadeJsonProvider, isPublicDocumentUrl } from "../src/lib/municipal/trindade-json-provider.mjs";
+import {
+  buildActNews,
+  buildStateNews,
+  buildTcmNews,
+  hasPrimarySource,
+  isPrimaryOfficialSource
+} from "../src/lib/editorial/document-news.mjs";
 
 const root = process.cwd();
 const generatedDir = path.join(root, "src", "generated");
@@ -125,6 +132,15 @@ async function readJson(...parts) {
   return JSON.parse(await fs.readFile(path.join(root, ...parts), "utf8"));
 }
 
+async function readJsonOptional(fallback, ...parts) {
+  try {
+    return await readJson(...parts);
+  } catch (error) {
+    if (error.code === "ENOENT") return fallback;
+    throw error;
+  }
+}
+
 async function readWindowObject(fileName, key) {
   const code = await fs.readFile(path.join(root, fileName), "utf8");
   const sandbox = { window: {} };
@@ -154,9 +170,8 @@ function resolveSourceFamily(city, sourceBucket, sourceLabel, municipalityByName
 function normalizeStateEntry(entry, context) {
   const city = entry.city || context.city || "Goias";
   const date = entry.date;
-  const title = entry.title;
-  const line = entry.line || entry.deck || entry.summary || "";
-  const summary = entry.summary || line;
+  const article = buildStateNews(entry);
+  const title = article.title;
   const sourceLabel = entry.source_label || context.label || "Fonte oficial";
   const sourceFamily = resolveSourceFamily(
     city,
@@ -165,12 +180,13 @@ function normalizeStateEntry(entry, context) {
     context.municipalityByName,
     context.sourceLibrary
   );
-  const image = entry.image_url
+  const image = entry.source_image?.src
     ? {
-        src: entry.image_url,
-        alt: title,
-        credit: entry.image_credit || sourceLabel,
-        kind: "remote"
+        src: entry.source_image.src,
+        alt: entry.source_image.alt || `Página do documento que originou a matéria: ${title}`,
+        credit: entry.source_image.credit || sourceLabel,
+        caption: entry.source_image.caption || entry.page_marker || entry.source_note,
+        kind: "source-page"
       }
     : {
         src: "/assets/trindade/og.png",
@@ -191,8 +207,8 @@ function normalizeStateEntry(entry, context) {
     kind: "pauta",
     type: entry.tag || "Pauta",
     title,
-    deck: line,
-    summary,
+    deck: article.deck,
+    summary: article.summary,
     editoria: entry.editoria || context.editoria || "Atos publicos",
     sourceFamily,
     sourceLabel,
@@ -204,7 +220,12 @@ function normalizeStateEntry(entry, context) {
     marker: entry.source_note || "",
     importance: 60 + (Number(entry.highlight_score) || 0) * 5,
     hasOriginalSource: Boolean(entry.source_url),
-    recordType: "story"
+    recordType: "story",
+    sourceType: "official_document",
+    publicationMode: "automatic_document_news",
+    editorialStatus: "published",
+    paragraphs: article.paragraphs,
+    documentReference: entry.page_marker || entry.source_note || ""
   };
 }
 
@@ -241,12 +262,16 @@ function normalizeTrindadeNews(item) {
     importance: 90,
     hasOriginalSource: Boolean(item.sources?.[0]?.url),
     recordType: "story",
+    sourceType: "official_document",
+    publicationMode: "edited_document_news",
+    editorialStatus: "published",
     paragraphs: item.paragraphs || []
   };
 }
 
-function normalizeTrindadeAct(item) {
-  const totalValue = sumValues(item.values);
+function normalizeTrindadeAct(item, preview) {
+  const article = buildActNews(item);
+  const totalValue = article.valueTotal;
   const actType = item.act_type || "ato";
   const slug = `trindade-ato-${slugify(item.id)}`;
   const pageLabel = item.page_start
@@ -266,9 +291,10 @@ function normalizeTrindadeAct(item) {
     kind: "ato",
     actCode: actType,
     type: titleCase(actType),
-    title: item.title,
-    deck: item.summary,
-    summary: item.summary,
+    title: article.title,
+    officialTitle: article.officialTitle,
+    deck: article.deck,
+    summary: article.summary,
     editoria: item.public_body || "Trindade",
     sourceFamily: "Trindade | Diario Oficial",
     sourceLabel: item.public_body || "Prefeitura de Trindade",
@@ -276,19 +302,78 @@ function normalizeTrindadeAct(item) {
     sourceNote: `Edicao ${item.edition_number}${pageLabel ? ` · ${pageLabel}` : ""}`,
     scope: "Municipal",
     tags: [actType, item.public_body, ...(item.reference_numbers || [])].filter(Boolean),
-    image: {
+    image: preview ? {
+      src: preview.src,
+      alt: `Página ${preview.page} do Diário Oficial com ${article.officialTitle}`,
+      credit: "Diário Municipal de Goiás · recorte documental do Pauteiro",
+      caption: `Edição ${item.edition_number}, página ${preview.page}. Imagem comprimida sem alteração do conteúdo do documento.`,
+      kind: "source-page"
+    } : {
       src: "/assets/trindade/og.png",
-      alt: item.title,
+      alt: article.officialTitle,
       credit: "Trindade em Dados",
       kind: "fallback"
     },
     marker: `Ed. ${item.edition_number}${pageLabel ? ` · ${pageLabel}` : ""}`,
     importance: 35 + (importantActTypes.get(actType) || 1) + scoreByValue(totalValue),
     hasOriginalSource: Boolean(item.source_url),
-    recordType: "act_news",
+    recordType: "story",
+    sourceType: "official_document",
+    publicationMode: "automatic_document_news",
+    editorialStatus: "published",
+    paragraphs: article.paragraphs,
     valueTotal: totalValue,
-    pageStart: item.page_start || null,
-    pageEnd: item.page_end || null
+    pageStart: article.pageStart,
+    pageEnd: article.pageEnd,
+    documentReference: `Edição ${item.edition_number}${pageLabel ? ` · ${pageLabel}` : ""}`,
+    sourceHash: preview?.source_sha256 || null
+  };
+}
+
+function normalizeTcmDossier(dossier) {
+  const article = buildTcmNews(dossier);
+  const latest = article.latest;
+  const slug = `trindade-tcm-processo-${slugify(dossier.normalized_process_number || dossier.process_number)}`;
+  const pages = latest.source?.pages || [];
+  const pageLabel = pages.length ? `p. ${pages.join(", ")}` : "páginas não informadas";
+  return {
+    id: `tcm-${dossier.normalized_process_number || slugify(dossier.process_number)}`,
+    slug,
+    path: `/base/${slug}/`,
+    cluster: "trindade",
+    city: "Trindade",
+    date: dossier.last_publication,
+    year: Number(String(dossier.last_publication).slice(0, 4)),
+    month: String(dossier.last_publication).slice(0, 7),
+    kind: "tcm_process",
+    type: "TCM-GO",
+    title: article.title,
+    deck: article.deck,
+    summary: article.summary,
+    paragraphs: article.paragraphs,
+    editoria: "Controle externo",
+    sourceFamily: "TCM-GO | Diário Oficial de Contas",
+    sourceLabel: [latest.decision_type, latest.decision_number].filter(Boolean).join(" ") || `Processo ${dossier.process_number}`,
+    sourceUrl: isPublicDocumentUrl(latest.source?.official_url) ? latest.source.official_url : "https://www.tcmgo.tc.br/doc/index.jsf",
+    sourceNote: `Processo ${dossier.process_number} · ${pageLabel}`,
+    scope: "Municipal",
+    tags: ["TCM-GO", article.result, ...(dossier.natures || []), ...(dossier.bodies || [])].filter(Boolean),
+    image: {
+      src: "/assets/trindade/og.png",
+      alt: `Documento do TCM-GO referente ao processo ${dossier.process_number}`,
+      credit: "TCM-GO",
+      kind: "fallback"
+    },
+    marker: dossier.priority ? `Prioridade documental: ${dossier.priority}` : `Processo ${dossier.process_number}`,
+    importance: 48 + Math.min(30, Number(dossier.priority_score) || 0),
+    hasOriginalSource: true,
+    recordType: "story",
+    sourceType: "official_document",
+    publicationMode: "automatic_document_news",
+    editorialStatus: "published",
+    documentReference: `Processo ${dossier.process_number} · ${pageLabel}`,
+    sourceHash: latest.source?.pdf_sha256 || null,
+    confidence: dossier.confidence || latest.confidence || null
   };
 }
 
@@ -386,7 +471,8 @@ async function main() {
     trindadeUnifiedRecords,
     trindadeCamara,
     trindadeLegislative,
-    tcmDecisions
+    tcmDossiers,
+    sourcePreviews
   ] = await Promise.all([
     trindadeProvider.buscarAtos(),
     trindadeProvider.obterAnalise(),
@@ -396,7 +482,8 @@ async function main() {
     trindadeProvider.buscarRegistros(),
     trindadeProvider.obterCamara(),
     trindadeProvider.obterLegislativo(),
-    trindadeProvider.readDataset("processosTCM")
+    trindadeProvider.obterDossiesTCM(),
+    readJsonOptional({ items: [] }, "data", "trindade", "source-previews.json")
   ]);
 
   const municipalityByName = new Map(
@@ -409,7 +496,7 @@ async function main() {
     for (const source of Object.values(yearBucket.sources || {})) {
       if (!source?.manifest) continue;
       const sourceData = await readJson(...String(source.manifest).split("/"));
-      for (const entry of sourceData.highlight_entries || []) {
+      for (const entry of (sourceData.highlight_entries || []).filter(isPrimaryOfficialSource)) {
         archiveHighlights.push(
           normalizeStateEntry(entry, {
             label: sourceData.label,
@@ -425,7 +512,7 @@ async function main() {
   }
 
   const stateRecords = dedupeById(
-    (radar.entries || []).map((entry) =>
+    (radar.entries || []).filter(isPrimaryOfficialSource).map((entry) =>
       normalizeStateEntry(entry, {
         municipalityByName,
         sourceLibrary,
@@ -436,8 +523,17 @@ async function main() {
     ).concat(archiveHighlights)
   );
 
-  const normalizedTrindadeNews = trindadeNews.map(normalizeTrindadeNews);
-  const normalizedTrindadeActs = trindadeActs.map(normalizeTrindadeAct);
+  const previewByRecord = new Map((sourcePreviews.items || []).map((item) => [item.record_id, item]));
+  const normalizedTrindadeNews = trindadeNews.filter(hasPrimarySource).map(normalizeTrindadeNews);
+  const normalizedTrindadeActs = trindadeActs.map((item) => normalizeTrindadeAct(item, previewByRecord.get(item.id)));
+  const normalizedTcmNews = (tcmDossiers.dossiers || [])
+    .filter((item) => item.scope_status === "trindade_confirmado")
+    .map(normalizeTcmDossier);
+  const editorialYear = Number(String(radar.cutoff_date || radar.updated_at).slice(0, 4));
+  const editorialPublicationDate = radar.updated_at || radar.cutoff_date;
+  const addPublicationMetadata = (item) => item.recordType === "story"
+    ? { ...item, publishedAt: item.publishedAt || editorialPublicationDate }
+    : item;
   const trindadeActIds = new Set(normalizedTrindadeActs.map((item) => item.id));
   const residualUnified = trindadeUnifiedRecords
     .filter((item) => item.type !== "ato" && item.type !== "noticia" && !trindadeActIds.has(item.id))
@@ -448,20 +544,28 @@ async function main() {
       stateRecords
         .concat(normalizedTrindadeNews)
         .concat(normalizedTrindadeActs)
+        .concat(normalizedTcmNews)
         .concat(residualUnified)
+        .map(addPublicationMetadata)
         .map(attachSearch)
     )
   );
 
-  const leadStory = pickLead(stateRecords.concat(normalizedTrindadeNews));
+  const publishedNews = stateRecords
+    .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedTcmNews)
+    .map(addPublicationMetadata);
+  const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
+  const leadStory = pickLead(timelineNews);
   const heroSidebar = sortForSearch(
-    stateRecords.concat(normalizedTrindadeNews).filter((item) => item.id !== leadStory?.id)
+    timelineNews.filter((item) => item.id !== leadStory?.id)
   ).slice(0, 3);
 
-  const stateFront = sortForSearch(stateRecords).slice(0, 8);
-  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs)).slice(0, 8);
+  const stateFront = sortForSearch(stateRecords.filter((item) => Number(item.year) === editorialYear)).slice(0, 8);
+  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs)
+    .filter((item) => Number(item.year) === editorialYear)).slice(0, 8);
   const actsFront = sortForSearch(
-    normalizedTrindadeActs.filter((item) => (importantActTypes.get(item.actCode) || 0) >= 4 || item.valueTotal > 0)
+    normalizedTrindadeActs.filter((item) => Number(item.year) === editorialYear
+      && ((importantActTypes.get(item.actCode) || 0) >= 4 || item.valueTotal > 0))
   ).slice(0, 8);
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>
@@ -553,8 +657,14 @@ async function main() {
     },
     metrics: {
       records: allRecords.length,
-      curatedStories: stateRecords.length + normalizedTrindadeNews.length,
+      curatedStories: publishedNews.length,
+      publishedOfficialStories: publishedNews.length,
+      currentYearStories: timelineNews.length,
+      currentYear: editorialYear,
+      excludedInstitutionalNews: (radar.entries || []).filter((item) => !isPrimaryOfficialSource(item)).length
+        + trindadeNews.filter((item) => !hasPrimarySource(item)).length,
       trindadeActs: normalizedTrindadeActs.length,
+      tcmStories: normalizedTcmNews.length,
       consultedSources: sourceCards.length,
       pagesReviewed: trindadeCoverage.pages || 0,
       municipalities: coverage.summary?.municipalities_total || radar.coverage_goal?.municipalities_total || 0,
@@ -564,6 +674,11 @@ async function main() {
     },
     leadStory,
     heroSidebar,
+    timeline: {
+      year: editorialYear,
+      total: timelineNews.length,
+      stories: timelineNews.slice(0, 60)
+    },
     stateFront,
     trindadeFront,
     actsFront,
@@ -600,7 +715,7 @@ async function main() {
         .slice(0, 8),
       chamberSummary: trindadeCamara.summary || {},
       legislativeSummary: trindadeLegislative.summary || {},
-      tcmTotal: tcmDecisions.total || 0
+      tcmTotal: normalizedTcmNews.length
     },
     municipalitySummary: coverage.summary || {},
     priorityMunicipalities: (coverage.municipality_catalog || []).filter((item) => item.priority).slice(0, 12)

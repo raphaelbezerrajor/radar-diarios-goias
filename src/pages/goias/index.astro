@@ -10,8 +10,8 @@ import { compactNumber } from "../../lib/format.js";
   <section class="section-band">
     <div class="shell page-intro">
       <p class="section-kicker">Edição estadual</p>
-      <h1>Nomeações, contratos, MPGO, Estado e municípios na mesma prateleira de pauta.</h1>
-      <p class="page-summary">A cobertura estadual segue em modo curado, com prioridade para atos que abrem apuração em saúde, gestão, compras, urbanismo, justiça e controle. O painel diferencia claramente o escopo desejado do material já carregado.</p>
+      <h1>Nomeações, contratos, decisões e gastos públicos viram notícia.</h1>
+      <p class="page-summary">O caderno Goiás publica matérias produzidas a partir do DOE, TCE-GO e Diários municipais. Reportagens já publicadas em outros sites não entram nessa coleta.</p>
     </div>
   </section>
 
@@ -20,7 +20,7 @@ import { compactNumber } from "../../lib/format.js";
       <div class="stats-column">
         <article class="hero-panel">
           <strong>{compactNumber(siteData.metrics.curatedStories)}</strong>
-          <span>pautas editoriais já organizadas</span>
+          <span>matérias documentais publicadas</span>
         </article>
         <article class="hero-panel">
           <strong>{compactNumber(siteData.metrics.evaluatedUnits)}</strong>
@@ -57,9 +57,9 @@ import { compactNumber } from "../../lib/format.js";
   <section class="section-band">
     <div class="shell">
       <SectionHeader
-        kicker="Ultimas pautas"
-        title="Leitura curada por editoria e recencia"
-        intro="Cada item segura link de origem, marcador e linha de apuracao para a redacao."
+          kicker="Últimas notícias"
+        title="Matérias produzidas a partir de fontes oficiais"
+        intro="Cada notícia traz o fato principal, o contexto necessário e o link para a fonte primária."
       />
       <div class="story-grid">
         {siteData.stateFront.map((record) => <StoryCard record={record} compact={true} />)}

@@ -10,19 +10,19 @@ const portalTrindade = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
 const modules = [
   { title: "Coleta", text: "Fontes públicas, inventário e snapshots com baseline.", status: "Preparado" },
   { title: "Processamento documental", text: "Hash, extração, normalização e classificação com proveniência.", status: "Em evolução" },
-  { title: "Radar de pautas", text: "Comparação histórica e sinais que merecem apuração.", status: "Ativo", href: `${baseHref}goias/` },
+  { title: "Radar de notícias", text: "Comparação histórica e fatos documentais que merecem publicação.", status: "Ativo", href: `${baseHref}goias/` },
   { title: "Apuração", text: "Hipóteses, perguntas, documentos e contraditório.", status: "Preparado" },
-  { title: "Produção assistida", text: "Minutas com trechos de IA identificados.", status: "Preparado" },
-  { title: "Edição e aprovação", text: "Revisão humana, pendências e histórico de versões.", status: "Protegido" },
+  { title: "Produção jornalística", text: "Título, olho, lead, detalhamento, contexto e fonte.", status: "Ativo" },
+  { title: "Validação", text: "Nomes, datas, valores e páginas conferidos contra o documento.", status: "Protegido" },
   { title: "Bases municipais", text: "Trindade entra como primeiro módulo municipal completo.", status: "Ativo", href: `${baseHref}trindade/` },
   { title: "Monitoramento", text: "Cobertura, lacunas, regressões e qualidade da base.", status: "Ativo", href: `${portalTrindade}/qualidade` },
-  { title: "Publicação", text: "Interface futura, sem WordPress, CMS ou disparo automático.", status: "Desativada", disabled: true }
+  { title: "Publicação", text: "Matérias documentais verificadas entram diariamente no Pauteiro.", status: "Ativa" }
 ];
 const metrics = [
-  { label: "Registros integrados", value: compactNumber(siteData.metrics.records), note: "com origem" },
-  { label: "Atos estruturados", value: compactNumber(siteData.metrics.trindadeActs), note: "Trindade" },
-  { label: "Cidades carregadas", value: compactNumber(siteData.metrics.loadedCities), note: "cobertura atual" },
-  { label: "Estados editoriais", value: "10", note: "sem publicada" }
+  { label: "Matérias publicadas", value: compactNumber(siteData.metrics.publishedOfficialStories), note: "com fonte oficial" },
+  { label: "Atos de Trindade", value: compactNumber(siteData.metrics.trindadeActs), note: "em formato jornalístico" },
+  { label: "Processos do TCM", value: compactNumber(siteData.metrics.tcmStories), note: "em notícia" },
+  { label: "Atualização", value: "Diária", note: "novos PDFs e atos" }
 ];
 ---
 
@@ -31,8 +31,8 @@ const metrics = [
     <div class="shell opening-grid">
       <div class="opening-copy">
         <p class="section-kicker section-kicker-light">Plataforma editorial modular</p>
-        <h1>Do documento público à pauta pronta para apuração.</h1>
-        <p class="page-summary">O Pauteiro centraliza coleta, leitura documental, comparação histórica e produção assistida. A decisão editorial continua humana — e a publicação automática está desligada.</p>
+        <h1>Do documento público à matéria pronta para o leitor.</h1>
+        <p class="page-summary">O Pauteiro centraliza coleta, leitura documental, redação e publicação. O conteúdo nasce do ato oficial, ganha contexto jornalístico e mantém a prova ao alcance de um clique.</p>
         <div class="hero-actions">
           <a class="button-primary" href={`${baseHref}busca/`}>Pesquisar documentos</a>
           <a class="button-secondary button-on-dark" href={`${baseHref}trindade/`}>Abrir base Trindade</a>
@@ -40,8 +40,8 @@ const metrics = [
       </div>
       <aside class="opening-side">
         <p>Regra editorial</p>
-        <strong>IA propõe. Gente decide.</strong>
-        <span>Fontes, documentos, autoria, revisão, contraditório e versões antes da aprovação.</span>
+        <strong>Documento primeiro. Notícia depois.</strong>
+        <span>Sem copiar reportagens: a pauta nasce de Diários, atos públicos e decisões oficiais.</span>
       </aside>
     </div>
   </section>
@@ -82,8 +82,8 @@ const metrics = [
     <div class="shell">
       <SectionHeader
         kicker="Fluxo"
-        title="Treze passos, com trava antes da aprovação"
-        intro="O processo preserva o original, detecta duplicidade e transforma sinais em pauta. Produção assistida gera minuta, nunca publicação."
+        title="Treze passos até a notícia publicada"
+        intro="O processo preserva o original, evita duplicidade, produz a matéria e mantém a página usada como fonte disponível ao leitor."
       />
       <ol class="workflow-board">
         {[
@@ -94,12 +94,12 @@ const metrics = [
           "Classificar município, órgão, tema e tipo",
           "Extrair pessoas, empresas, CNPJs, valores e datas",
           "Comparar com o histórico",
-          "Sugerir pautas relevantes",
-          "Anexar contexto, hipóteses e perguntas",
-          "Mover para apuração",
-          "Gerar somente uma minuta",
-          "Editar e aprovar humanamente",
-          "Preparar publicação futura, sem publicar"
+          "Selecionar o fato noticiável",
+          "Isolar a página usada como fonte",
+          "Gerar imagem leve da página",
+          "Escrever título, olho, lead e contexto",
+          "Conferir nomes, números, datas e valores",
+          "Publicar e manter o link para o original"
         ].map((step, index) => <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{step}</strong></li>)}
       </ol>
     </div>
@@ -119,9 +119,9 @@ const metrics = [
         </div>
       </div>
       <aside class="coverage-card">
-        <p class="section-kicker">Limite atual</p>
-        <h2>Inventário de oito anos; leitura ato a ato no recorte anual mais recente.</h2>
-        <p class="coverage-note">O Pauteiro mostra a diferença entre documento catalogado, registro estruturado e pauta editada. Volume não vira cobertura pronta por decreto.</p>
+        <p class="section-kicker">Linha de publicação</p>
+        <h2>O acervo verificado vira notícia em escala.</h2>
+        <p class="coverage-note">O Pauteiro publica o que está sustentado por fonte primária e identifica com clareza a origem, a data e o alcance de cada ato.</p>
       </aside>
     </div>
   </section>

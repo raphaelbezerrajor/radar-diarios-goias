@@ -2,56 +2,51 @@
 
 ## Objetivo
 
-Transformar cada ato estruturado em uma unidade editorial legível, pesquisável e auditável, sem confundir geração automática de registro com publicação jornalística aprovada.
+Transformar cada ato oficial verificado em notícia legível, pesquisável e auditável. O Pauteiro é a linha publicada; o Trindade Aberta preserva documentos, coletores e dados municipais.
 
-O corpus estável atual possui 2.919 atos. A meta operacional é manter a relação `1 ato = 1 registro-notícia + 1 StoryLead`, permitindo agrupamentos posteriores quando vários atos formarem uma única pauta.
+O corpus atual possui 2.919 atos estruturados. A regra é `1 ato = 1 matéria documental`, com possibilidade de uma reportagem posterior reunir vários atos relacionados.
 
-## Duas camadas
+## O que é publicado
 
-### Registro-notícia
+Cada matéria documental contém:
 
-Gerado de forma determinística a partir do ato estruturado. Deve conter:
-
-- identificador e vínculo permanente com o ato;
-- título factual;
+- título jornalístico factual;
 - olho;
-- resumo de um parágrafo ou nota curta quando o ato não justificar texto maior;
-- data, órgão, unidade, tipo e referência;
-- valores, CNPJs, pessoas e empresas já extraídos, sem inferir relações ausentes;
-- página, edição e URL do documento original;
-- nível de confiança e avisos de revisão;
-- estado inicial `detectada`.
+- lead com órgão, ato e data;
+- parágrafo de detalhamento com edição, página, referências, nomes e valores disponíveis;
+- parágrafo de contexto que explica o estágio administrativo sem extrapolar o documento;
+- data do ato separada da data de publicação no Pauteiro;
+- URL do PDF original;
+- imagem WebP da página usada como fonte, com hash do PDF e da imagem.
 
-Essa camada pode ser exibida no arquivo e na busca como leitura do ato, mas não recebe o selo de matéria apurada.
+Reportagens já publicadas por prefeituras, tribunais, câmaras e assessorias não entram na coleta automática. A origem deve ser Diário Oficial, ato legislativo, decisão de tribunal de contas ou outro documento público primário.
 
-### Notícia editada
+## Linha do tempo e arquivo
 
-Surge depois de triagem, apuração e revisão humana. Pode reunir um ou vários registros-notícia. Exige autoria, editor, fontes, documentos relacionados, histórico de versões, registro de assistência por IA e contraditório quando aplicável.
+A linha do tempo pública mostra somente o ano corrente. Em 2026, fatos de 2018 a 2025 permanecem no arquivo e na busca histórica; não aparecem misturados às últimas notícias.
 
-## Fluxo
+## Fluxo diário
 
-1. Receber somente atos vindos do `MunicipalDataProvider`.
-2. Deduplicar por identificador, URL e hash do documento.
-3. Preservar a fonte e os campos originais.
-4. Gerar título, olho e nota factual sem acrescentar informação externa.
-5. Classificar relevância, urgência e risco editorial.
-6. Criar `StoryLead` no estado `detectada`.
-7. Marcar revisão humana obrigatória para conteúdo sensível.
-8. Permitir agrupamento por contrato, empresa, pessoa, órgão, assunto ou sequência temporal.
-9. Mover somente itens selecionados para apuração e redação.
-10. Manter a publicação automática desativada.
+1. Consultar fontes oficiais.
+2. Baixar e preservar os novos documentos.
+3. Deduplicar por identificador, URL e hash.
+4. Extrair e normalizar o texto.
+5. Classificar município, órgão, tema e tipo.
+6. Extrair nomes, empresas, CNPJs, valores, datas e referências.
+7. Isolar a página usada como fonte e gerar WebP leve.
+8. Produzir título, olho, lead, detalhamento e contexto.
+9. Conferir os campos sensíveis contra a página original.
+10. Publicar no Pauteiro e atualizar a busca.
 
 ## Regras de linguagem
 
-- Use “publicou”, “registrou”, “autorizou”, “designou”, “contratou” ou “abriu”, somente quando o verbo estiver sustentado pelo ato.
-- Não trate valor contratado como pago.
-- Não trate abertura de licitação como contratação concluída.
-- Não trate requerimento ou projeto como política executada.
-- Não conclua irregularidade a partir de alerta, multa, correção ou processo sem indicar o estágio e a autoridade responsável.
-- Quando o resumo oficial for insuficiente, produza uma nota curta e encaminhe para revisão em vez de completar lacunas.
+- Contrato não equivale a pagamento.
+- Abertura de licitação não equivale a contratação concluída.
+- Proposição legislativa não equivale a política executada.
+- Alerta, multa, correção ou processo deve indicar a decisão, o estágio e a autoridade responsável.
+- Nomes, datas, números e valores devem permanecer iguais ao documento.
+- Informação ausente não é completada por inferência.
 
 ## Implementação atual
 
-Os 2.919 atos estáveis já são consumidos pelo `MunicipalDataProvider` e apresentados no Pauteiro como registros-notícia individuais. Cada página usa título oficial, olho, resumo curto, edição, página, órgão, valor quando identificado e PDF original. O item mantém o estado `detectada · aguardando triagem` e não recebe schema de notícia apurada.
-
-A etapa seguinte é persistir a promoção editorial na redação: agrupamento de atos relacionados, apuração, autoria, editor, versões, contraditório e registro de trechos assistidos por IA.
+Os 2.919 atos de Trindade e 445 dossiês confirmados do TCM-GO já geram páginas jornalísticas individuais. O filtro bloqueia notícias institucionais, a capa usa apenas fatos de 2026 e a busca preserva o acervo histórico.

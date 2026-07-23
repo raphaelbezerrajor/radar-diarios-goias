@@ -11,11 +11,7 @@ const shouldShowImage = imageMode === "show"
     : hasUsefulImage;
 const imageSrc = shouldShowImage ? withBase(record.image?.src) : "";
 const storyHref = withBase(record.path);
-const actionLabel = record.recordType === "story"
-  ? "Ler notícia"
-  : record.recordType === "act_news"
-    ? "Ler nota do ato"
-    : "Ler registro";
+const actionLabel = record.recordType === "story" ? "Ler matéria" : "Ler registro";
 ---
 
 <article class:list={["story-card", compact && "is-compact", !shouldShowImage && "is-text-only"]}>

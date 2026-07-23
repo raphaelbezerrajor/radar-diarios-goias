@@ -23,10 +23,10 @@ const quickTopics = ["contrato", "nomeação", "edital", "processo TCM"].map((la
   href: `${baseHref}busca/?q=${encodeURIComponent(label)}&year=all`
 }));
 const metrics = [
-  { label: "Registros pesquisáveis", value: compactNumber(siteData.metrics.records), note: "base integrada" },
-  { label: "Atos em notícia", value: compactNumber(siteData.metrics.trindadeActs), note: "nota factual ato a ato" },
-  { label: "Cidades com registros", value: compactNumber(siteData.metrics.loadedCities), note: "carga já disponível" },
-  { label: "Anos consultáveis", value: compactNumber(siteData.searchFilters.years.length), note: "2018 a 2026" }
+  { label: `Notícias em ${siteData.metrics.currentYear}`, value: compactNumber(siteData.metrics.currentYearStories), note: "linha do tempo atual" },
+  { label: "Atos de Trindade", value: compactNumber(siteData.metrics.trindadeActs), note: "convertidos em notícia" },
+  { label: "Processos do TCM-GO", value: compactNumber(siteData.metrics.tcmStories), note: "noticiados individualmente" },
+  { label: "Anos consultáveis", value: compactNumber(siteData.searchFilters.years.length), note: "arquivo pesquisável" }
 ];
 ---
 
@@ -34,9 +34,9 @@ const metrics = [
   <section class="opening-band">
     <div class="shell opening-grid">
       <div class="opening-copy">
-        <p class="section-kicker section-kicker-light">Radar de pautas · Trindade + Goiás</p>
-        <h1>O poder público, documento por documento.</h1>
-        <p class="page-summary">O Pauteiro reúne Diários, contratos, Câmara, TCM e cobertura estadual para transformar documento público em pauta verificável — sem publicação automática.</p>
+        <p class="section-kicker section-kicker-light">Notícias públicas · Trindade + Goiás</p>
+        <h1>Notícia pública, documento por documento.</h1>
+        <p class="page-summary">O Pauteiro lê Diários, contratos, atos da Câmara e decisões dos tribunais de contas para publicar matérias claras, contextualizadas e ligadas à fonte oficial.</p>
         <form class="quick-search" action={`${baseHref}busca/`} method="get">
           <label class="sr-only" for="home-search">Buscar na base pública</label>
           <input id="home-search" type="search" name="q" placeholder="Busque empresa, contrato, pessoa ou assunto" />
@@ -50,8 +50,8 @@ const metrics = [
       <aside class="opening-side" aria-label="Situação da base">
         <p>Estado do Pauteiro</p>
         <strong>{formatDate(siteData.metadata.updatedAt)}</strong>
-        <span>{compactNumber(siteData.metrics.records)} registros com origem identificada</span>
-        <a href={`${baseHref}pauteiro/`}>Conhecer os módulos <span aria-hidden="true">→</span></a>
+        <span>{compactNumber(siteData.metrics.currentYearStories)} notícias na linha do tempo de {siteData.metrics.currentYear}</span>
+        <a href={`${baseHref}pauteiro/`}>Entender a redação <span aria-hidden="true">→</span></a>
       </aside>
     </div>
   </section>
@@ -73,8 +73,8 @@ const metrics = [
             <span>{formatDate(hero.date)}</span>
           </div>
           <div class="hero-actions">
-            <a class="button-primary" href={withBase(hero.path)}>Ler com contexto</a>
-            <a class="button-secondary" href={portalTrindade}>Portal Trindade ↗</a>
+            <a class="button-primary" href={withBase(hero.path)}>Ler matéria</a>
+            <a class="button-secondary" href={`${baseHref}linha-do-tempo/`}>Ver últimas notícias</a>
           </div>
         </div>
       </article>
@@ -102,12 +102,12 @@ const metrics = [
     <div class="shell platform-callout">
       <div>
         <p class="section-kicker">Nova dinâmica editorial</p>
-        <h2>Coletar, comparar, pautar, apurar e editar.</h2>
-        <p>O material que já estava publicado entra agora como acervo verificado: preserva fatos e fontes, ganha contexto documental e passa a conversar com o fluxo editorial do Pauteiro.</p>
+        <h2>O documento oficial entra como notícia.</h2>
+        <p>Cada matéria recebe título, olho, lead, explicação do ato e contexto. Datas, números, nomes, página e documento original continuam disponíveis para conferência.</p>
       </div>
       <div class="platform-actions">
         <a class="button-primary" href={`${baseHref}pauteiro/`}>Ver a plataforma</a>
-        <span>Publicação automática desativada</span>
+        <span>Publicação documental em escala</span>
       </div>
     </div>
   </section>
@@ -117,25 +117,25 @@ const metrics = [
       <div>
         <SectionHeader
           kicker="Atos públicos"
-          title="Cada ato de Trindade já tem uma nota factual"
-          intro="Os 2.919 editais, dispensas, decretos, contratos, portarias e nomeações ganham olho e resumo curto, sempre com edição, página e documento de origem."
+          title="Cada ato de Trindade já é uma matéria"
+          intro="Os 2.919 editais, dispensas, decretos, contratos, portarias e nomeações ganham lead e contexto, sempre com edição, página e documento de origem."
           actionHref={`${baseHref}busca/?city=Trindade&year=all`}
           actionLabel="Ver todos os atos"
         />
         <div class="brief-list">
-          {actsBriefs.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="hide" />)}
+          {actsBriefs.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}
         </div>
       </div>
       <aside class="coverage-card">
         <p class="section-kicker">O que já temos</p>
-        <h2>Oito anos catalogados, com a leitura detalhada avançando por camadas.</h2>
+        <h2>Oito anos catalogados e o acervo estruturado entrando em publicação.</h2>
         <dl class="coverage-list">
           <div><dt>Edições catalogadas</dt><dd>{compactNumber(siteData.trindadeStats.status.coverage[0].available)}</dd></div>
           <div><dt>Atos estruturados</dt><dd>{compactNumber(siteData.trindadeStats.analysis.acts)}</dd></div>
           <div><dt>Contratos da Câmara</dt><dd>{compactNumber(siteData.trindadeStats.chamberSummary.contracts)}</dd></div>
-          <div><dt>Processos do TCM</dt><dd>{compactNumber(siteData.trindadeStats.status.source_counts.tcm_confirmed)}</dd></div>
+          <div><dt>Matérias do TCM</dt><dd>{compactNumber(siteData.metrics.tcmStories)}</dd></div>
         </dl>
-        <p class="coverage-note">O inventário cobre oito anos. A leitura ato a ato do Diário ainda está concentrada no recorte anual indicado em cada registro.</p>
+        <p class="coverage-note">O inventário cobre oito anos. A publicação ato a ato começa pelo período já extraído e verificado e avança com a atualização diária.</p>
         <a class="button-secondary" href={`${baseHref}trindade/`}>Entender a cobertura</a>
       </aside>
     </div>
@@ -145,8 +145,8 @@ const metrics = [
     <div class="shell">
       <SectionHeader
         kicker="Cobertura estadual"
-        title="Goiás entra em modo de pauta, sem misturar volume com cobertura pronta"
-        intro={`${compactNumber(siteData.metrics.stateCities)} cidades já têm registros no painel; o escopo de monitoramento permanece aberto para os 246 municípios.`}
+        title="Goiás entra no noticiário a partir dos documentos oficiais"
+        intro={`O caderno reúne matérias geradas a partir de Diários e atos públicos já carregados, sem reaproveitar reportagens de outros sites.`}
         actionHref={`${baseHref}goias/`}
         actionLabel="Abrir caderno Goiás"
       />

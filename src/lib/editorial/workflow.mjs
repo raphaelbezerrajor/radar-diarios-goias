@@ -8,13 +8,15 @@ export const EDITORIAL_STATES = Object.freeze([
   "em_edicao",
   "pendencia_editorial",
   "aprovada",
+  "publicada",
   "arquivada"
 ]);
 
 export const PUBLICATION_ADAPTER = Object.freeze({
-  status: "disabled",
-  automaticPublishing: false,
-  supportedTargets: []
+  status: "active",
+  automaticPublishing: true,
+  supportedTargets: ["github_pages"],
+  automaticSourceTypes: ["official_document"]
 });
 
 const sensitivePattern = /acusa|investiga|crime|fraude|corrup|irregular|punic|multa|sanc|controvers|pessoa identific/i;
@@ -44,10 +46,29 @@ export function validateApprovalGate({ story = {}, review = {} } = {}) {
   return { allowed: issues.length === 0, issues };
 }
 
+export function validateAutomaticDocumentNews(story = {}) {
+  const issues = [];
+  if (story.publicationMode !== "automatic_document_news") issues.push("modo_documental_automatico");
+  if (story.sourceType !== "official_document") issues.push("fonte_primaria_oficial");
+  if (!/^https?:\/\//i.test(story.sourceUrl || "")) issues.push("url_da_fonte_oficial");
+  if (!story.title && !story.tituloEditorial) issues.push("titulo");
+  if (!story.deck && !story.linhaFina) issues.push("olho");
+  if (!Array.isArray(story.paragraphs) || story.paragraphs.length < 2) issues.push("texto_jornalistico");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(story.date || "")) issues.push("data_do_ato");
+  if (/\/(?:noticia|noticias|news|imprensa|agencia-de-noticias)(?:\/|\?|$)/i.test(story.sourceUrl || "")) {
+    issues.push("reportagem_institucional_bloqueada");
+  }
+  return { allowed: issues.length === 0, issues };
+}
+
 export function canTransition({ from, to, story, review } = {}) {
   if (!EDITORIAL_STATES.includes(from) || !EDITORIAL_STATES.includes(to)) {
     return { allowed: false, issues: ["estado_editorial_invalido"] };
   }
+  if (to === "publicada" && story?.publicationMode === "automatic_document_news") {
+    return validateAutomaticDocumentNews(story);
+  }
+  if (to === "publicada" && from !== "aprovada") return { allowed: false, issues: ["aprovacao_editorial"] };
   if (to === "aprovada") return validateApprovalGate({ story, review });
   return { allowed: true, issues: [] };
 }
