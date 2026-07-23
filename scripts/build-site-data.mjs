@@ -778,8 +778,8 @@ async function main() {
       pdfs: Number(julyDocumentNews.summary?.pdfs || 0),
       pages: Number(julyDocumentNews.summary?.pages || 0),
       bySource: countBy(julyPublishedNews, (item) => item.sourceFamily),
-      byCity: countBy(julyPublishedNews, (item) => item.city).slice(0, 24),
-      byType: countBy(julyPublishedNews, (item) => item.type).slice(0, 24),
+      byCity: countBy(julyPublishedNews, (item) => item.city),
+      byType: countBy(julyPublishedNews, (item) => item.type),
       stories: julyPublishedNews.slice(0, 36)
     },
     stateFront,
