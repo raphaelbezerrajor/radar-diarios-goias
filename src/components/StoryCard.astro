@@ -32,6 +32,6 @@ const storyHref = withBase(record.path);
       <span>{record.sourceFamily}</span>
       {record.valueTotal ? <span>{formatCurrency(record.valueTotal)}</span> : <span>{record.marker || record.sourceNote}</span>}
     </div>
-    <a class="card-action" href={storyHref}>Ler registro <span aria-hidden="true">→</span></a>
+    <a class="card-action" href={storyHref}>{record.recordType === "story" ? "Ler notícia" : "Ler registro"} <span aria-hidden="true">→</span></a>
   </div>
 </article>

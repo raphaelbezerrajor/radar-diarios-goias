@@ -1,0 +1,129 @@
+---
+import siteData from "../../generated/site-data.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MetricStrip from "../../components/MetricStrip.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import { compactNumber } from "../../lib/format.js";
+
+const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const portalTrindade = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
+const modules = [
+  { title: "Coleta", text: "Fontes públicas, inventário e snapshots com baseline.", status: "Preparado" },
+  { title: "Processamento documental", text: "Hash, extração, normalização e classificação com proveniência.", status: "Em evolução" },
+  { title: "Radar de pautas", text: "Comparação histórica e sinais que merecem apuração.", status: "Ativo", href: `${baseHref}goias/` },
+  { title: "Apuração", text: "Hipóteses, perguntas, documentos e contraditório.", status: "Preparado" },
+  { title: "Produção assistida", text: "Minutas com trechos de IA identificados.", status: "Preparado" },
+  { title: "Edição e aprovação", text: "Revisão humana, pendências e histórico de versões.", status: "Protegido" },
+  { title: "Bases municipais", text: "Trindade entra como primeiro módulo municipal completo.", status: "Ativo", href: `${baseHref}trindade/` },
+  { title: "Monitoramento", text: "Cobertura, lacunas, regressões e qualidade da base.", status: "Ativo", href: `${portalTrindade}/qualidade` },
+  { title: "Publicação", text: "Interface futura, sem WordPress, CMS ou disparo automático.", status: "Desativada", disabled: true }
+];
+const metrics = [
+  { label: "Registros integrados", value: compactNumber(siteData.metrics.records), note: "com origem" },
+  { label: "Atos estruturados", value: compactNumber(siteData.metrics.trindadeActs), note: "Trindade" },
+  { label: "Cidades carregadas", value: compactNumber(siteData.metrics.loadedCities), note: "cobertura atual" },
+  { label: "Estados editoriais", value: "10", note: "sem publicada" }
+];
+---
+
+<BaseLayout title="Pauteiro | Plataforma editorial modular" description="Coleta, análise documental, radar de pautas, apuração, produção assistida e edição humana em uma plataforma modular.">
+  <section class="opening-band">
+    <div class="shell opening-grid">
+      <div class="opening-copy">
+        <p class="section-kicker section-kicker-light">Plataforma editorial modular</p>
+        <h1>Do documento público à pauta pronta para apuração.</h1>
+        <p class="page-summary">O Pauteiro centraliza coleta, leitura documental, comparação histórica e produção assistida. A decisão editorial continua humana — e a publicação automática está desligada.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href={`${baseHref}busca/`}>Pesquisar documentos</a>
+          <a class="button-secondary button-on-dark" href={`${baseHref}trindade/`}>Abrir base Trindade</a>
+        </div>
+      </div>
+      <aside class="opening-side">
+        <p>Regra editorial</p>
+        <strong>IA propõe. Gente decide.</strong>
+        <span>Fontes, documentos, autoria, revisão, contraditório e versões antes da aprovação.</span>
+      </aside>
+    </div>
+  </section>
+
+  <MetricStrip items={metrics} />
+
+  <section class="section-band content-auto">
+    <div class="shell">
+      <SectionHeader
+        kicker="Módulos"
+        title="Uma redação organizada em nove partes"
+        intro="Cada módulo tem uma responsabilidade clara. Os dados municipais entram por uma interface estável e podem migrar de JSON para banco sem reescrever as páginas."
+      />
+      <div class="module-grid">
+        {modules.map((module, index) => (
+          module.href ? (
+            <a class="module-card" href={module.href}>
+              <span class="module-number">{String(index + 1).padStart(2, "0")}</span>
+              <span class:list={["status-badge", module.disabled && "is-disabled"]}>{module.status}</span>
+              <strong>{module.title}</strong>
+              <p>{module.text}</p>
+              <small>Abrir módulo →</small>
+            </a>
+          ) : (
+            <article class:list={["module-card", module.disabled && "is-disabled"]}>
+              <span class="module-number">{String(index + 1).padStart(2, "0")}</span>
+              <span class:list={["status-badge", module.disabled && "is-disabled"]}>{module.status}</span>
+              <strong>{module.title}</strong>
+              <p>{module.text}</p>
+            </article>
+          )
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band section-band-newsprint content-auto" id="fluxo">
+    <div class="shell">
+      <SectionHeader
+        kicker="Fluxo"
+        title="Treze passos, com trava antes da aprovação"
+        intro="O processo preserva o original, detecta duplicidade e transforma sinais em pauta. Produção assistida gera minuta, nunca publicação."
+      />
+      <ol class="workflow-board">
+        {[
+          "Coletar novos documentos",
+          "Detectar duplicidade por URL, identificador e hash",
+          "Preservar o original",
+          "Extrair e normalizar o texto",
+          "Classificar município, órgão, tema e tipo",
+          "Extrair pessoas, empresas, CNPJs, valores e datas",
+          "Comparar com o histórico",
+          "Sugerir pautas relevantes",
+          "Anexar contexto, hipóteses e perguntas",
+          "Mover para apuração",
+          "Gerar somente uma minuta",
+          "Editar e aprovar humanamente",
+          "Preparar publicação futura, sem publicar"
+        ].map((step, index) => <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{step}</strong></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section-band section-band-contrast content-auto">
+    <div class="shell split-grid">
+      <div>
+        <SectionHeader
+          kicker="Primeira base municipal"
+          title="Trindade entra inteira, sem perder o portal próprio"
+          intro="Diário, atos, Câmara, orçamento, TCM, notícias, busca e qualidade continuam disponíveis no endereço municipal e passam a integrar o radar estadual."
+        />
+        <div class="hero-actions">
+          <a class="button-primary" href={`${baseHref}trindade/`}>Ver Trindade no Pauteiro</a>
+          <a class="button-secondary" href={portalTrindade}>Abrir portal municipal ↗</a>
+        </div>
+      </div>
+      <aside class="coverage-card">
+        <p class="section-kicker">Limite atual</p>
+        <h2>Inventário de oito anos; leitura ato a ato no recorte anual mais recente.</h2>
+        <p class="coverage-note">O Pauteiro mostra a diferença entre documento catalogado, registro estruturado e pauta editada. Volume não vira cobertura pronta por decreto.</p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+

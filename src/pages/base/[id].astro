@@ -2,6 +2,7 @@
 import records from "../../generated/site-records.json";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatCurrency, formatDate, withBase } from "../../lib/format.js";
+import { buildBreadcrumbSchema, buildNewsArticleSchema } from "../../lib/editorial/seo.mjs";
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
 export function getStaticPaths() {
@@ -14,29 +15,80 @@ export function getStaticPaths() {
 const { record } = Astro.props;
 const imageSrc = withBase(record.image?.src);
 const hasUsefulImage = Boolean(imageSrc && record.image?.kind !== "fallback");
+const isStory = record.recordType === "story";
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const homeUrl = new URL(baseHref, Astro.site).toString();
+const searchUrl = new URL(`${baseHref}busca/`, Astro.site).toString();
+const schemas = [buildBreadcrumbSchema([
+  { name: "Pauteiro", url: homeUrl },
+  { name: "Busca", url: searchUrl },
+  { name: record.title, url: canonical }
+])];
+if (isStory) {
+  schemas.push(buildNewsArticleSchema({
+    canonical,
+    story: {
+      tituloEditorial: record.title,
+      metadescricao: record.deck || record.summary,
+      linhaFina: record.deck,
+      dataPublicacao: record.date,
+      dataAtualizacao: record.date,
+      autor: "Pauteiro",
+      imagem: hasUsefulImage ? {
+        url: new URL(imageSrc, Astro.site).toString(),
+        alt: record.image?.alt,
+        credito: record.image?.credit
+      } : null,
+      fontes: record.sourceUrl ? [{ url: record.sourceUrl }] : []
+    }
+  }));
+}
 ---
 
-<BaseLayout title={`Painel Diário | ${record.title}`} description={record.deck || record.summary || record.title}>
+<BaseLayout title={`Pauteiro | ${record.title}`} description={record.deck || record.summary || record.title} schemas={schemas}>
   <article class="detail-shell shell">
     <a class="back-link" href={`${baseHref}busca/`}>Voltar para a busca</a>
     <div class="detail-grid">
       <div class="detail-main">
-        <p class="section-kicker">{record.type} · {record.city}</p>
+        <div class="story-kickers">
+          <p class="section-kicker">{record.type} · {record.city}</p>
+          {isStory && <span class="archive-badge">Acervo editorial integrado</span>}
+        </div>
         <h1>{record.title}</h1>
         {record.deck && <p class="detail-deck">{record.deck}</p>}
-        {hasUsefulImage && <img class="detail-image" src={imageSrc} alt={record.image?.alt || record.title} decoding="async" />}
-        {record.summary && <p class="detail-summary">{record.summary}</p>}
+        {isStory && (
+          <div class="editorial-provenance">
+            <strong>Publicado pelo Pauteiro</strong>
+            <span>{formatDate(record.date)} · conteúdo já publicado, reapresentado no novo padrão editorial</span>
+          </div>
+        )}
+        {hasUsefulImage && (
+          <figure class="detail-figure">
+            <img class="detail-image" src={imageSrc} alt={record.image?.alt || record.title} decoding="async" />
+            {(record.image?.credit || record.image?.caption) && (
+              <figcaption>
+                {record.image?.caption && <span>{record.image.caption}</span>}
+                {record.image?.credit && <small>Crédito: {record.image.credit}</small>}
+              </figcaption>
+            )}
+          </figure>
+        )}
+        {record.summary && !record.paragraphs?.length && <p class="detail-summary">{record.summary}</p>}
         {record.paragraphs?.length ? (
           <div class="detail-copy">
             {record.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           </div>
         ) : null}
+        {isStory && (
+          <p class="editorial-note">Os fatos, números e links documentais foram preservados na migração. A fonte original deve ser consultada para conferência integral.</p>
+        )}
       </div>
       <aside class="detail-side">
         <div class="hero-panel">
           <strong>{record.sourceFamily}</strong>
           <span>{record.sourceLabel}</span>
           <small>{formatDate(record.date)}</small>
+          {isStory && <small>Autoria editorial: Pauteiro</small>}
         </div>
         {record.valueTotal ? (
           <div class="hero-panel">

@@ -1,11 +1,11 @@
-# Painel Diário
+# Pauteiro
 
-Base pública de atos e pautas para cobertura de Goiás, refeita em Astro e integrada ao acervo do Trindade Aberta.
+Plataforma editorial modular para coleta, análise documental, radar de pautas e bases municipais. O Painel Diário é o módulo público de cobertura; Trindade é a primeira base municipal integrada.
 
 ## O que entrou nesta fase
 
 - capa editorial responsiva, desenhada primeiro para celular;
-- rotas separadas para `Goiás`, `Trindade` e `Busca`;
+- rotas separadas para `Plataforma`, `Painel Diário`, `Trindade` e `Busca`;
 - busca publica por assunto, cidade, ano, tipo e frente de origem, com carga por ano para ficar mais leve no celular;
 - detalhe estatico para cada pauta, noticia ou registro integrado;
 - integracao do painel estadual com a base publica de Trindade;
@@ -15,8 +15,10 @@ Base pública de atos e pautas para cobertura de Goiás, refeita em Astro e inte
 ## Arquitetura
 
 - `src/`: paginas Astro, layout, componentes e estilos.
-- `scripts/build-site-data.mjs`: consolida o painel estadual, os manifests anuais e os dados de Trindade em uma base unica.
-- `scripts/sync-trindade-data.mjs`: atualiza o espelho municipal a partir da pasta principal no disco D.
+- `src/lib/municipal/`: contrato `MunicipalDataProvider` e adaptador JSON de Trindade.
+- `src/lib/editorial/`: fluxo editorial, trava de aprovação e validações de SEO.
+- `scripts/build-site-data.mjs`: consolida o painel estadual e consome Trindade pela camada municipal.
+- `scripts/sync-trindade-data.mjs`: atualiza o snapshot municipal a partir de uma origem configurada, com baseline e hashes.
 - `src/generated/`: saida gerada no build com resumo do site e registros detalhados.
 - `public/data/site-search-manifest.json`: manifesto da busca com filtros e shards anuais.
 - `public/data/search/year-*.json`: recortes anuais carregados sob demanda.
@@ -28,7 +30,8 @@ Base pública de atos e pautas para cobertura de Goiás, refeita em Astro e inte
 
 ```bash
 pnpm install
-pnpm sync:trindade
+TRINDADE_DATA_DIR=/caminho/para/Trindade-Aberta/data/public pnpm sync:trindade
+pnpm test
 pnpm build
 pnpm validate
 ```
@@ -46,4 +49,4 @@ Publicacao atual:
 
 ## Nota
 
-O acervo segue em expansao editorial. A camada atual privilegia desempenho e legibilidade sem perder a trilha de origem, os marcadores e o recorte por fonte.
+O acervo segue em expansão editorial. A produção assistida gera apenas minutas e a publicação automática permanece desativada. Consulte `docs/AUDITORIA_INTEGRACAO.md` para riscos, limites de cobertura e plano de migração.
