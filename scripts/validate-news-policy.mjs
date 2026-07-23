@@ -1,5 +1,6 @@
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
+import { validateEditorialBrief } from "../src/lib/editorial/curation.mjs";
 
 const root = process.cwd();
 const readJson = async (...parts) => JSON.parse(await readFile(path.join(root, ...parts), "utf8"));
@@ -11,6 +12,8 @@ const records = await readJson("src", "generated", "site-records.json");
 const site = await readJson("src", "generated", "site-data.json");
 const julyIndex = await readJson("public", "data", "july-news-index.json");
 const previews = await readJson("data", "trindade", "source-previews.json");
+const curationQueue = await readJson("data", "editorial", "curation-queue.json");
+const curatedBriefs = await readJson("data", "editorial", "curated-briefs.json");
 const automatic = records.filter((item) => item.publicationMode === "automatic_document_news");
 const institutionalPattern = /\/(?:noticia|noticias|news|imprensa|agencia-de-noticias)(?:\/|\?|$)/i;
 
@@ -24,6 +27,30 @@ assert(julyIndex.records.every((item, index, items) => index === 0 || items[inde
 assert(site.timeline.year === site.metrics.currentYear, "A linha do tempo não usa o ano editorial corrente.");
 assert(site.timeline.stories.every((item) => Number(item.year) === site.timeline.year), "A linha do tempo mistura fatos históricos com o ano corrente.");
 assert(site.leadStory.year === site.timeline.year, "A manchete principal não pertence ao ano corrente.");
+assert(curationQueue.candidates.length >= 150, "A fila de curadoria perdeu pautas relevantes.");
+assert(curationQueue.summary.candidates === curationQueue.candidates.length, "O resumo da fila de curadoria diverge dos candidatos.");
+assert(curationQueue.candidates.every((item, index, items) =>
+  index === 0
+  || items[index - 1].date > item.date
+  || (items[index - 1].date === item.date && items[index - 1].priority >= item.priority)
+), "A fila de curadoria não está em ordem editorial.");
+
+for (const candidate of curationQueue.candidates) {
+  assert(["pending", "brief_exists"].includes(candidate.status), `Estado inválido na fila: ${candidate.id}.`);
+  assert(/^https?:\/\//i.test(candidate.source?.url || ""), `Candidato sem fonte oficial: ${candidate.id}.`);
+  assert(candidate.requestedOutput?.publishAutomatically === false, `Candidato autorizou publicação automática: ${candidate.id}.`);
+}
+
+for (const brief of curatedBriefs.briefs || []) {
+  const validation = validateEditorialBrief(brief);
+  assert(validation.valid, `Brief inválido ${brief.id}: ${validation.issues.join(", ")}.`);
+  const record = records.find((item) => item.id === brief.id);
+  if (brief.status === "approved") {
+    assert(record?.publicationMode === "curated_document_news", `Brief aprovado não foi aplicado: ${brief.id}.`);
+  } else {
+    assert(record?.publicationMode !== "curated_document_news", `Rascunho alterou a publicação: ${brief.id}.`);
+  }
+}
 
 for (const item of automatic) {
   assert(item.sourceType === "official_document", `Fonte não oficial em publicação automática: ${item.id}.`);
@@ -53,5 +80,8 @@ console.log(JSON.stringify({
   currentTimeline: site.timeline.total,
   institutionalNewsExcluded: site.metrics.excludedInstitutionalNews,
   sourcePagePreviews: previews.items?.length || 0,
+  curationCandidates: curationQueue.candidates.length,
+  curationBriefs: curatedBriefs.briefs?.length || 0,
+  curationApproved: (curatedBriefs.briefs || []).filter((brief) => brief.status === "approved").length,
   status: "ok"
 }, null, 2));

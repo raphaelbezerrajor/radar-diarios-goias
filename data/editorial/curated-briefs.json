@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": "pauteiro-curadoria-v1",
+  "updatedAt": "2026-07-23T12:00:00-03:00",
+  "briefs": [
+    {
+      "id": "jul26-agm-114590-608B28AC-243",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-07-23T12:00:00-03:00",
+      "source": {
+        "documentSha256": "a36189dccf99be778a64c5a260e2d37b4b30407a7892136559a492885ba9440e",
+        "documentReference": "Edição 3666 · páginas 85 a 86"
+      },
+      "editorial": {
+        "mainAngle": "O Fundo Municipal de Saúde de Goiatuba contratou uma empresa de engenharia por R$ 315 mil; a matéria precisa explicar qual estrutura de saúde será construída, em que prazo e para atender qual demanda.",
+        "whyItMatters": "Obras na saúde têm efeito direto sobre atendimento, acesso e capacidade da rede municipal, além de mobilizarem recurso público relevante.",
+        "headlineOptions": [
+          "Goiatuba firma contrato de R$ 315 mil para obra na rede municipal de saúde",
+          "Contrato de engenharia da saúde em Goiatuba prevê R$ 315 mil",
+          "Nova obra da saúde em Goiatuba: contrato define empresa e valor"
+        ],
+        "leadDirection": "Abrir com o objeto exato da obra, o valor de R$ 315.043,82, a empresa contratada e o prazo de execução; se o objeto completo não estiver na página seguinte, não publicar a descrição da estrutura.",
+        "storyStructure": [
+          "O que será construído, onde e por quanto",
+          "Empresa contratada, concorrência e prazo",
+          "Origem do recurso e necessidade atendida",
+          "Cronograma de fiscalização, medições e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O contrato administrativo é o nº 180/2026.",
+          "O processo administrativo informado é o nº 2026017830.",
+          "A modalidade indicada é Concorrência Eletrônica nº 001/2026.",
+          "O contratante é o Fundo Municipal de Saúde de Goiatuba.",
+          "A contratada indicada é LM Construtora Meia Ponte Goiana Ltda.",
+          "O valor extraído do ato é R$ 315.043,82."
+        ],
+        "contextToFind": [
+          "Objeto integral, endereço da obra e unidade beneficiada",
+          "Prazo de execução e data de início",
+          "Dotação, fonte do recurso e eventual convênio ou emenda",
+          "Quantidade de concorrentes e desconto em relação ao orçamento estimado"
+        ],
+        "reportingQuestions": [
+          "Qual estrutura da saúde será construída e qual demanda ela deverá atender?",
+          "Quando a obra começa e qual é o prazo contratual?",
+          "O recurso é próprio, estadual, federal ou proveniente de emenda?",
+          "Quem fiscalizará o contrato e onde serão publicadas as medições?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Goiatuba",
+          "Setor municipal de engenharia ou fiscalização",
+          "LM Construtora Meia Ponte Goiana Ltda.",
+          "Conselho Municipal de Saúde"
+        ],
+        "dataCrossChecks": [
+          "Edital e resultado da Concorrência Eletrônica nº 001/2026",
+          "Empenhos, liquidações e pagamentos do contrato nº 180/2026",
+          "Cadastro da empresa e contratos anteriores com municípios goianos"
+        ],
+        "doNotState": [
+          "Não afirmar que o valor já foi pago.",
+          "Não dizer que a obra começou ou foi concluída sem registro específico.",
+          "Não inferir irregularidade apenas pelo valor ou pela contratação."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114590-CA49A015-43",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-07-23T12:00:00-03:00",
+      "source": {
+        "documentSha256": "a36189dccf99be778a64c5a260e2d37b4b30407a7892136559a492885ba9440e",
+        "documentReference": "Edição 3666 · páginas 11 a 13"
+      },
+      "editorial": {
+        "mainAngle": "Alvorada do Norte alterou a planilha do contrato nº 083/2025 com acréscimos e supressões; a pauta deve revelar o impacto líquido no custo e quais serviços mudaram.",
+        "whyItMatters": "Aditivos de obra podem alterar preço, quantidade e escopo. O leitor precisa saber o que aumentou, o que foi retirado e por que a mudança foi necessária.",
+        "headlineOptions": [
+          "Aditivo muda custo e planilha de contrato em Alvorada do Norte",
+          "Contrato nº 083/2025 ganha acréscimos e supressões em Alvorada do Norte",
+          "Alvorada do Norte reformula planilha de contrato: veja o que precisa ser apurado"
+        ],
+        "leadDirection": "Só escrever o lead depois de conferir na íntegra o valor original, o acréscimo, a supressão e o novo total. A extração apresenta números conflitantes e não permite calcular com segurança o efeito líquido.",
+        "storyStructure": [
+          "Valor original, acréscimo, supressão e novo total",
+          "Itens incluídos e retirados da planilha",
+          "Justificativa técnica e impacto no cronograma",
+          "Histórico do contrato e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O ato trata do primeiro termo aditivo do contrato nº 083/2025.",
+          "A origem informada é a Concorrência Presencial nº 003/2025.",
+          "O aditivo menciona acréscimos e supressões quantitativas e qualitativas.",
+          "O documento está nas páginas 11 a 13 da edição 3666."
+        ],
+        "contextToFind": [
+          "Objeto original do contrato",
+          "Planilha anterior e planilha reprogramada",
+          "Percentuais de acréscimo e supressão",
+          "Parecer técnico que justificou a alteração"
+        ],
+        "reportingQuestions": [
+          "Qual é o impacto financeiro líquido do aditivo?",
+          "Que serviços ou materiais foram acrescentados e retirados?",
+          "A alteração muda o prazo de entrega?",
+          "Houve erro de projeto, fato superveniente ou mudança de necessidade?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Administração de Alvorada do Norte",
+          "Fiscal e gestor do contrato nº 083/2025",
+          "Empresa contratada",
+          "Responsável técnico pela planilha reprogramada"
+        ],
+        "dataCrossChecks": [
+          "Contrato nº 083/2025 e anexos originais",
+          "Planilhas orçamentárias antes e depois do aditivo",
+          "Empenhos, medições, liquidações e pagamentos",
+          "Portal de licitações e eventual publicação no TCM-GO"
+        ],
+        "doNotState": [
+          "Não somar automaticamente todos os valores capturados no PDF.",
+          "Não chamar o aditivo de sobrepreço ou irregularidade sem evidência.",
+          "Não apresentar valor final antes de conferir a fórmula do termo."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Conferir os valores diretamente nas páginas 11 a 13 antes de redigir."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-649-649f4ab9a7ff-5",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-07-23T12:00:00-03:00",
+      "source": {
+        "documentSha256": "7e905e63894e834debbe8d8566583e4c5c5ed0798b592b787c3a2871c2f5f847",
+        "documentReference": "Edição 453 · páginas 4 a 5"
+      },
+      "editorial": {
+        "mainAngle": "O Pregão Eletrônico nº 024/2026 parece ter originado vários contratos para locação de máquinas pesadas em Senador Canedo; a reportagem deve reconstruir o lote completo, separar cada empresa e calcular o valor apenas depois da conferência.",
+        "whyItMatters": "A contratação envolve máquinas e serviços usados em infraestrutura urbana, com valores expressivos e vários fornecedores derivados do mesmo processo.",
+        "headlineOptions": [
+          "Pregão de máquinas pesadas gera série de contratos em Senador Canedo",
+          "Senador Canedo distribui contratos de máquinas entre empresas após pregão",
+          "Quanto custará a locação de máquinas pesadas em Senador Canedo?"
+        ],
+        "leadDirection": "Não usar como lead o valor extraído deste segmento. As páginas 4 e 5 misturam o fim de um contrato e o início de outro; primeiro montar uma tabela com número, empresa, item e valor de cada instrumento do processo 7.582/2026.",
+        "storyStructure": [
+          "Visão geral do pregão e finalidade das máquinas",
+          "Tabela com cada contrato, empresa, item, prazo e valor",
+          "Critério de divisão dos lotes",
+          "Fiscalização, uso efetivo e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O processo 1Doc informado é o nº 7.582/2026.",
+          "A modalidade indicada é o Pregão Eletrônico nº 024/2026.",
+          "O trecho contém mais de um número de contrato administrativo.",
+          "A publicação está nas páginas 4 e 5 da edição 453."
+        ],
+        "contextToFind": [
+          "Edital, ata e adjudicação do Pregão Eletrônico nº 024/2026",
+          "Relação completa dos contratos derivados do processo",
+          "Máquinas, quantidades, horas previstas e secretarias usuárias",
+          "Valores por lote e prazo de vigência"
+        ],
+        "reportingQuestions": [
+          "Quantos contratos foram assinados a partir do pregão?",
+          "Qual é o valor de cada contrato e o total máximo do conjunto?",
+          "Como será comprovado o uso das máquinas e das horas contratadas?",
+          "Quais empresas venceram cada lote e quantos concorrentes participaram?"
+        ],
+        "peopleToHear": [
+          "Secretaria de Infraestrutura, Serviços e Mobilidade Urbana de Senador Canedo",
+          "Pregoeiro ou agente de contratação",
+          "Gestores e fiscais dos contratos",
+          "Empresas vencedoras dos lotes"
+        ],
+        "dataCrossChecks": [
+          "Ata e resultado do Pregão Eletrônico nº 024/2026",
+          "Contratos vinculados ao processo 1Doc nº 7.582/2026",
+          "Empenhos e pagamentos por CNPJ",
+          "Frota própria e contratos anteriores de locação de máquinas"
+        ],
+        "doNotState": [
+          "Não atribuir um valor a uma empresa antes de separar os contratos.",
+          "Não somar valores de páginas contíguas sem identificar o instrumento.",
+          "Não afirmar pagamento, uso ou irregularidade sem documentação adicional."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Segmento do PDF mistura atos contíguos; exige reconstrução do processo antes da redação."
+      }
+    },
+    {
+      "id": "jul26-agm-114590-F7688EDE-216",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-07-23T12:00:00-03:00",
+      "source": {
+        "documentSha256": "a36189dccf99be778a64c5a260e2d37b4b30407a7892136559a492885ba9440e",
+        "documentReference": "Edição 3666 · páginas 58 a 59"
+      },
+      "editorial": {
+        "mainAngle": "A Secretaria de Educação de Piranhas contratou assessoria e consultoria jurídica por dispensa; a pauta deve explicar a necessidade do serviço, o fornecedor, o prazo e a distinção em relação às atribuições da procuradoria municipal.",
+        "whyItMatters": "Consultorias jurídicas pagas com recurso da educação precisam ter objeto delimitado, justificativa de preço e entrega verificável.",
+        "headlineOptions": [
+          "Educação de Piranhas contrata consultoria jurídica por dispensa",
+          "Dispensa prevê R$ 60 mil para assessoria jurídica à Educação de Piranhas",
+          "Piranhas contrata apoio jurídico para a Educação: veja o que falta esclarecer"
+        ],
+        "leadDirection": "Informar que o ato declara dispensável a licitação para serviços jurídicos da Secretaria de Educação e apresentar o valor global somente após confirmar no termo a duração e a forma de pagamento.",
+        "storyStructure": [
+          "Serviço contratado e valor",
+          "Fundamento da contratação direta",
+          "Fornecedor, experiência e entregas previstas",
+          "Relação com a procuradoria e fiscalização"
+        ],
+        "verifiedFacts": [
+          "O ato declaratório é a Dispensa Licitatória nº 034/2026.",
+          "O objeto envolve assessoria e consultoria jurídica para a Secretaria Municipal de Educação.",
+          "A extração identificou os valores de R$ 60.000,00 e R$ 5.000,00.",
+          "O ato foi publicado nas páginas 58 e 59 da edição 3666."
+        ],
+        "contextToFind": [
+          "Nome e CNPJ do contratado",
+          "Prazo do contrato e forma de pagamento",
+          "Escopo detalhado, produtos e carga estimada",
+          "Razão para a contratação fora da estrutura jurídica municipal"
+        ],
+        "reportingQuestions": [
+          "Quais entregas mensais estão previstas no contrato?",
+          "Por que a Secretaria de Educação necessita de assessoria externa?",
+          "Como o preço foi justificado e comparado?",
+          "Quem será o gestor e o fiscal do contrato?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Educação de Piranhas",
+          "Procuradoria do Município",
+          "Profissional ou empresa contratada",
+          "Conselho de acompanhamento dos recursos da educação, se houver verba vinculada"
+        ],
+        "dataCrossChecks": [
+          "Termo da Dispensa nº 034/2026 e contrato decorrente",
+          "Justificativa de preço e razão da escolha do fornecedor",
+          "Empenhos e pagamentos",
+          "Outros contratos jurídicos vigentes no município"
+        ],
+        "doNotState": [
+          "Não afirmar que a contratação substitui a procuradoria sem comparar atribuições.",
+          "Não tratar dispensa como sinônimo de ilegalidade.",
+          "Não dizer que R$ 60 mil foram pagos sem conferir a execução financeira."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114590-A98C582C-224",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-07-23T12:00:00-03:00",
+      "source": {
+        "documentSha256": "a36189dccf99be778a64c5a260e2d37b4b30407a7892136559a492885ba9440e",
+        "documentReference": "Edição 3666 · página 61"
+      },
+      "editorial": {
+        "mainAngle": "A Saúde de Trindade alugou por R$ 216 mil um imóvel de 1.080 m² para funcionar como almoxarifado; a pauta deve mostrar o custo mensal, a duração, a localização e por que a rede precisa do espaço.",
+        "whyItMatters": "O almoxarifado concentra insumos da saúde e a locação cria uma despesa recorrente de R$ 18 mil por mês, com impacto operacional e financeiro.",
+        "headlineOptions": [
+          "Saúde de Trindade aluga imóvel por R$ 18 mil mensais para almoxarifado",
+          "Contrato de R$ 216 mil garante novo almoxarifado para a Saúde de Trindade",
+          "Trindade destina R$ 216 mil à locação de imóvel para estoque da Saúde"
+        ],
+        "leadDirection": "Abrir com o valor global de R$ 216 mil, equivalente a R$ 18 mil mensais, a área de 1.080 m² e a finalidade de almoxarifado da Saúde; deixar claro que o contrato não comprova pagamentos já realizados.",
+        "storyStructure": [
+          "Valor, prazo, endereço e finalidade da locação",
+          "Necessidade operacional do novo almoxarifado",
+          "Critérios de escolha e avaliação do imóvel",
+          "Fiscalização, adequações e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O contrato administrativo é o nº 1234/2026.",
+          "A contratação decorre da Inexigibilidade nº 049/2026 e do processo nº 21848/2026.",
+          "O locatário é o Fundo Municipal de Saúde.",
+          "O imóvel tem área total informada de 1.080 m².",
+          "A finalidade indicada é o funcionamento do almoxarifado da Saúde.",
+          "Os valores extraídos são R$ 18.000,00 e R$ 216.000,00."
+        ],
+        "contextToFind": [
+          "Prazo exato da locação",
+          "Laudo de avaliação e pesquisa de mercado",
+          "Situação do almoxarifado utilizado anteriormente",
+          "Adequações, segurança, climatização e custo de mudança"
+        ],
+        "reportingQuestions": [
+          "Por que a Saúde precisa de um novo imóvel para o almoxarifado?",
+          "Como foi definido o aluguel mensal de R$ 18 mil?",
+          "O município avaliou imóveis próprios antes da locação?",
+          "Quais insumos serão armazenados e quando o espaço começa a operar?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Trindade",
+          "Departamento de Patrimônio e Almoxarifado",
+          "Gestor e fiscal do contrato nº 1234/2026",
+          "Proprietário do imóvel, para confirmação das condições contratuais"
+        ],
+        "dataCrossChecks": [
+          "Processo nº 21848/2026 e laudo de avaliação do imóvel",
+          "Empenhos e pagamentos do contrato nº 1234/2026",
+          "Locações vigentes do Fundo Municipal de Saúde",
+          "Cadastro imobiliário e eventuais custos de adaptação"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 216 mil já foram pagos.",
+          "Não identificar o proprietário por dado pessoal além do que for necessário e legalmente publicável.",
+          "Não sugerir favorecimento ou sobrepreço sem comparação de mercado e outras evidências."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    }
+  ]
+}
