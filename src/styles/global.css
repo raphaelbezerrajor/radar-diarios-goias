@@ -1675,3 +1675,176 @@ a.module-card:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.july-opening .opening-side small {
+  color: color-mix(in srgb, white 72%, transparent);
+  font-size: 0.78rem;
+}
+
+.july-dashboard {
+  padding-bottom: 0;
+}
+
+.july-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  background: var(--paper);
+}
+
+.july-stat-grid > div {
+  display: grid;
+  gap: 0.2rem;
+  padding: clamp(1rem, 3vw, 1.55rem);
+}
+
+.july-stat-grid > div + div {
+  border-left: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+}
+
+.july-stat-grid strong {
+  color: var(--ink);
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  line-height: 1;
+}
+
+.july-stat-grid span,
+.july-heading > div > p:last-child,
+.july-result-count {
+  color: var(--muted);
+}
+
+.july-heading {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.35rem;
+}
+
+.july-heading h2 {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.02;
+  margin: 0.2rem 0 0.55rem;
+}
+
+.july-heading > div > p:last-child {
+  line-height: 1.55;
+  margin: 0;
+  max-width: 760px;
+}
+
+.july-filters {
+  background: #edf3ef;
+  border-top: 4px solid var(--ink);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(14rem, 1.25fr);
+  gap: 0.8rem;
+  padding: clamp(0.9rem, 3vw, 1.2rem);
+}
+
+.july-filters label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.july-filters label > span {
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.july-filters select,
+.july-filters input {
+  appearance: none;
+  background: white;
+  border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
+  border-radius: 0;
+  color: var(--ink);
+  font: inherit;
+  min-height: 46px;
+  padding: 0.72rem 0.8rem;
+  width: 100%;
+}
+
+.july-filters select:focus,
+.july-filters input:focus {
+  border-color: var(--accent);
+  outline: 3px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  outline-offset: 1px;
+}
+
+.july-result-count {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin: 1rem 0 0.7rem;
+  text-transform: uppercase;
+}
+
+.july-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.july-list .story-card {
+  min-width: 0;
+}
+
+.july-load {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.july-load [hidden] {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .july-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .july-stat-grid > div:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  }
+
+  .july-stat-grid > div:nth-child(4) {
+    border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  }
+
+  .july-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .july-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .july-heading .button-secondary {
+    width: 100%;
+  }
+
+  .july-filters,
+  .july-list {
+    grid-template-columns: 1fr;
+  }
+
+  .july-stat-grid strong {
+    font-size: 1.6rem;
+  }
+
+  .july-stat-grid span {
+    font-size: 0.78rem;
+  }
+}

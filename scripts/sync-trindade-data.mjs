@@ -31,6 +31,7 @@ const files = [
   "camara-legislative-index.json",
   "company-profiles.json",
   "data-status.json",
+  "july-document-news-2026.json",
   "municipal-diaries-2026.json",
   "news-2026.json",
   "tcmgo-trindade-checked-summary.json",
@@ -50,6 +51,7 @@ const baselines = {
   "camara-index.json": ["contracts", 88],
   "camara-legislative-index.json": ["propositions", 455],
   "company-profiles.json": ["profiles", 551],
+  "july-document-news-2026.json": ["items", 500],
   "news-2026.json": ["items", 12],
   "tcmgo-trindade-decisions.json": ["decisions", 1097],
   "unified-search-index.json": ["records", 4621]
