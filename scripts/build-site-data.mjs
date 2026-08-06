@@ -473,7 +473,10 @@ function sortForSearch(items) {
 }
 
 function pickLead(items) {
-  return [...items]
+  const curatedItems = items.filter((item) => item.publicationMode === "curated_document_news");
+  const eligibleItems = curatedItems.length ? curatedItems : items;
+
+  return [...eligibleItems]
     .sort((a, b) => {
       const byDate = String(b.date || "").localeCompare(String(a.date || ""));
       if (byDate !== 0) return byDate;
