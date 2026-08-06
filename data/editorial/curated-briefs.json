@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-07-23T16:50:00-03:00",
+  "updatedAt": "2026-08-06T08:58:00-03:00",
   "briefs": [
     {
       "id": "jul26-agm-114590-608B28AC-243",
@@ -366,6 +366,832 @@
         "approvedBy": "Raphael Bezerra — orientação editorial no Codex",
         "approvedAt": "2026-07-23T16:50:00-03:00",
         "notes": "Título e texto reescritos após conferência visual da página 61 da edição nº 3666. Mantida a ressalva de que valor contratual não equivale a pagamento."
+      }
+    },
+    {
+      "id": "jul26-agm-114600-F7ACE95E-193",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
+        "documentReference": "Edição 3676 · páginas 50 a 51"
+      },
+      "editorial": {
+        "mainAngle": "Palmeiras de Goiás contratou a Brava Forte Comercial por R$ 183,9 mil para fornecer mochilas e estojos aos alunos da rede municipal no ano letivo de 2027.",
+        "whyItMatters": "A compra antecipa material escolar do próximo ano e permite acompanhar quantidade, preço unitário, cronograma de entrega e alcance entre os estudantes.",
+        "headlineOptions": [
+          "Palmeiras contrata mochilas e estojos por R$ 183,9 mil para 2027",
+          "Rede municipal de Palmeiras terá compra de R$ 183,9 mil em kits escolares",
+          "Contrato prevê mochilas e estojos para alunos de Palmeiras em 2027"
+        ],
+        "leadDirection": "Abrir com o objeto, o valor total, a empresa e a destinação aos alunos; informar que se trata de valor contratual, não de pagamento realizado.",
+        "storyStructure": [
+          "O que foi contratado e para qual público",
+          "Valor, empresa, pregão e prazo",
+          "Quantidades, especificações e preço por item",
+          "Cronograma de entrega e fiscalização"
+        ],
+        "verifiedFacts": [
+          "O contrato de aquisição é o nº 77/2026.",
+          "O processo administrativo é o nº 4714/2026 e o Pregão Eletrônico é o nº 62/2026.",
+          "A contratada é Brava Forte Comercial Ltda.",
+          "O objeto é a aquisição de mochilas e estojos para alunos da rede municipal no ano letivo de 2027.",
+          "O valor contratual informado é R$ 183.900,00 e a vigência é de 12 meses."
+        ],
+        "contextToFind": [
+          "Quantidade de mochilas e estojos e número de alunos atendidos",
+          "Preço unitário e especificações dos itens",
+          "Data prevista para entrega antes do início das aulas"
+        ],
+        "reportingQuestions": [
+          "Quantos estudantes receberão os materiais?",
+          "Qual foi o desconto obtido no pregão em relação ao orçamento estimado?",
+          "Quando os produtos deverão ser entregues e quem verificará a qualidade?"
+        ],
+        "peopleToHear": [
+          "Fundo Municipal de Educação Básica de Palmeiras de Goiás",
+          "Gestor e fiscal do contrato nº 77/2026",
+          "Brava Forte Comercial Ltda."
+        ],
+        "dataCrossChecks": [
+          "Edital, ata e resultado do Pregão Eletrônico nº 62/2026",
+          "Empenhos, liquidações e pagamentos do contrato",
+          "Matrículas da rede municipal para o ano letivo de 2027"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 183.900,00 já foram pagos.",
+          "Não informar quantidade ou preço unitário sem consultar a planilha do pregão.",
+          "Não inferir entrega ou qualidade antes do recebimento."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-659-839a04c32197-7",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "62a9e4eda5f3c2ce690a4b7038d8d609ad297bad260983ac201525bae3a285f4",
+        "documentReference": "Edição 463 · páginas 9 a 18"
+      },
+      "editorial": {
+        "mainAngle": "Senador Canedo abriu crédito suplementar de R$ 2,61 milhões, financiado por R$ 420 mil de superávit financeiro e R$ 2,19 milhões retirados de outras dotações.",
+        "whyItMatters": "A mudança desloca prioridades dentro do orçamento e adiciona recursos de saldo financeiro; o leitor precisa saber quais áreas ganharam e quais perderam dotações.",
+        "headlineOptions": [
+          "Senador Canedo remaneja R$ 2,61 milhões no orçamento",
+          "Decreto usa superávit e cortes em dotações para suplementar R$ 2,61 milhões",
+          "Orçamento de Senador Canedo recebe crédito suplementar de R$ 2,61 milhões"
+        ],
+        "leadDirection": "Apresentar o valor total e sua composição, sem tratá-lo como nova despesa ou pagamento; só destacar uma secretaria depois de somar a tabela completa por órgão.",
+        "storyStructure": [
+          "Valor e fontes de cobertura do crédito",
+          "Órgãos e ações que receberam recursos",
+          "Dotações anuladas e impacto líquido por área",
+          "Execução posterior e justificativa administrativa"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 119 é datado de 27 de julho de 2026 e foi publicado em 6 de agosto.",
+          "O crédito suplementar totaliza R$ 2.612.179,88.",
+          "A cobertura indicada combina R$ 420.000,00 de superávit financeiro e R$ 2.192.179,88 de anulações.",
+          "A autorização orçamentária citada é a Lei nº 3.015, de 18 de dezembro de 2025."
+        ],
+        "contextToFind": [
+          "Tabela consolidada do ganho e da perda por secretaria e programa",
+          "Saldo atualizado das dotações anuladas",
+          "Justificativa para o remanejamento e execução até a publicação"
+        ],
+        "reportingQuestions": [
+          "Quais políticas receberam os maiores reforços?",
+          "Quais ações perderam recursos e terão entregas afetadas?",
+          "Qual é a origem do superávit financeiro de R$ 420 mil?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Fazenda e Finanças de Senador Canedo",
+          "Secretarias com maiores suplementações e anulações",
+          "Controladoria e Câmara Municipal"
+        ],
+        "dataCrossChecks": [
+          "LOA 2026 e balancete da execução orçamentária",
+          "Anexo integral do Decreto nº 119",
+          "Empenhos posteriores nas dotações suplementadas"
+        ],
+        "doNotState": [
+          "Não chamar o crédito de gasto ou pagamento já realizado.",
+          "Não somar suplementação e anulação como se fossem dois gastos.",
+          "Não atribuir todo o valor a uma única secretaria."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "As páginas distribuem valores por diversos órgãos; consolidar a tabela antes de qualquer publicação."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-659-e40d631742f1-8",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "62a9e4eda5f3c2ce690a4b7038d8d609ad297bad260983ac201525bae3a285f4",
+        "documentReference": "Edição 463 · páginas 18 a 32"
+      },
+      "editorial": {
+        "mainAngle": "Outro decreto de Senador Canedo suplementou R$ 4,41 milhões, cobertos principalmente por R$ 4,20 milhões em anulações, além de excesso de arrecadação e superávit.",
+        "whyItMatters": "O remanejamento é amplo e pode alterar a capacidade de execução de vários programas municipais.",
+        "headlineOptions": [
+          "Senador Canedo redistribui R$ 4,41 milhões entre dotações",
+          "Decreto remaneja R$ 4,2 milhões e abre crédito total de R$ 4,41 milhões",
+          "Crédito suplementar de R$ 4,41 milhões muda orçamento de Senador Canedo"
+        ],
+        "leadDirection": "Explicar que o crédito reorganiza dotações e detalhar a composição da cobertura; não usar o total como sinônimo de dinheiro novo.",
+        "storyStructure": [
+          "Total suplementado e fontes de cobertura",
+          "Destinos do reforço orçamentário",
+          "Programas atingidos pelas anulações",
+          "Motivo e efeitos na execução de 2026"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 120 é datado de 29 de julho de 2026.",
+          "O crédito suplementar informado é R$ 4.405.087,42.",
+          "A cobertura inclui R$ 129.051,00 de excesso de arrecadação, R$ 79.527,55 de superávit financeiro e R$ 4.196.508,87 de anulações.",
+          "O decreto foi publicado na edição nº 463, de 6 de agosto de 2026."
+        ],
+        "contextToFind": [
+          "Saldo e execução das dotações antes e depois do decreto",
+          "Maiores ganhadores e perdedores por secretaria",
+          "Origem do excesso de arrecadação e do superávit"
+        ],
+        "reportingQuestions": [
+          "Quais despesas justificaram o remanejamento?",
+          "Alguma entrega prevista perdeu dotação?",
+          "Os recursos suplementados já foram empenhados?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Fazenda e Finanças de Senador Canedo",
+          "Secretarias afetadas pelo remanejamento",
+          "Comissão de orçamento da Câmara Municipal"
+        ],
+        "dataCrossChecks": [
+          "LOA 2026 e balancetes de julho e agosto",
+          "Anexo integral do Decreto nº 120",
+          "Empenhos nas fichas orçamentárias alteradas"
+        ],
+        "doNotState": [
+          "Não dizer que R$ 4,41 milhões foram gastos ou pagos.",
+          "Não descrever todo o valor como aumento real do orçamento.",
+          "Não apontar prejuízo a uma política sem verificar o saldo remanescente."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Exige consolidação das páginas 18 a 32 por órgão e programa."
+      }
+    },
+    {
+      "id": "jul26-agm-114600-35C0E668-81",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
+        "documentReference": "Edição 3676 · páginas 23 a 24"
+      },
+      "editorial": {
+        "mainAngle": "Campo Alegre de Goiás contratou a construção de um Centro de Reabilitação Infantil por R$ 1,36 milhão, com execução prevista no Bairro Santa Catarina.",
+        "whyItMatters": "A obra pode ampliar a estrutura de atendimento infantil e envolve investimento relevante do orçamento da saúde.",
+        "headlineOptions": [
+          "Campo Alegre contrata Centro de Reabilitação Infantil por R$ 1,36 milhão",
+          "Obra de centro infantil de saúde custará R$ 1,36 milhão em Campo Alegre",
+          "Contrato prevê novo Centro de Reabilitação Infantil no Bairro Santa Catarina"
+        ],
+        "leadDirection": "Abrir com a obra, o valor, a empresa M&M Empreiteira e o local; separar vigência contratual de prazo físico da construção.",
+        "storyStructure": [
+          "Obra, endereço e valor contratado",
+          "Empresa, concorrência e vigência",
+          "Serviços e capacidade prevista do centro",
+          "Fonte do recurso, cronograma e fiscalização"
+        ],
+        "verifiedFacts": [
+          "O contrato é o nº 213/2026, decorrente da Concorrência Eletrônica nº 005/2026 e do processo nº 006669/2026.",
+          "A contratada é M&M Empreiteira Ltda.",
+          "O objeto é a construção de Centro de Reabilitação Infantil na Rua Aquário, lotes 9, 10 e 11, quadra 59, Bairro Santa Catarina.",
+          "O valor global é R$ 1.360.363,96.",
+          "A vigência informada vai de 4 de agosto de 2026 a 4 de março de 2027."
+        ],
+        "contextToFind": [
+          "Prazo físico da obra e data da ordem de serviço",
+          "Capacidade, serviços e público atendido",
+          "Fonte detalhada do financiamento"
+        ],
+        "reportingQuestions": [
+          "Quando a obra começa e qual é o cronograma por etapa?",
+          "Quais terapias e atendimentos serão oferecidos?",
+          "Quantas crianças o centro poderá atender?"
+        ],
+        "peopleToHear": [
+          "Secretaria de Saúde e Saneamento Básico de Campo Alegre de Goiás",
+          "Fiscal do contrato nº 213/2026",
+          "M&M Empreiteira Ltda.",
+          "Conselho Municipal de Saúde"
+        ],
+        "dataCrossChecks": [
+          "Edital, projeto, planilha e cronograma da Concorrência nº 005/2026",
+          "Empenhos, medições e pagamentos",
+          "Plano Municipal de Saúde e demanda reprimida por reabilitação infantil"
+        ],
+        "doNotState": [
+          "Não afirmar que a obra começou ou que o valor foi pago.",
+          "Não confundir vigência contratual com prazo de execução física.",
+          "Não estimar capacidade de atendimento sem projeto ou informação da Saúde."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114600-58950BBA-171",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
+        "documentReference": "Edição 3676 · página 46"
+      },
+      "editorial": {
+        "mainAngle": "A Saúde de Montividiu prorrogou por um ano o contrato de manutenção de veículos e máquinas com a GYN Comercial, cujo extrato informa valor de R$ 2,09 milhões.",
+        "whyItMatters": "A renovação envolve valor elevado e combina mão de obra mecânica com fornecimento de peças, exigindo clareza sobre o teto efetivamente renovado e o consumo realizado.",
+        "headlineOptions": [
+          "Saúde de Montividiu prorroga contrato de manutenção de até R$ 2,09 milhões",
+          "Aditivo renova por um ano manutenção de veículos da Saúde de Montividiu",
+          "Contrato de peças e serviços mecânicos da Saúde é prorrogado em Montividiu"
+        ],
+        "leadDirection": "Usar o valor apenas como informado no extrato e confirmar no aditivo se ele representa teto do novo período, saldo ou valor original; não apresentar como pagamento.",
+        "storyStructure": [
+          "Prazo prorrogado, empresa e objeto",
+          "Natureza e composição do valor informado",
+          "Frota atendida, preços e consumo anterior",
+          "Fiscalização e pagamentos do novo período"
+        ],
+        "verifiedFacts": [
+          "O ato é o primeiro termo aditivo ao contrato nº 163/2025.",
+          "A contratada é GYN Comercial e Atacadista Ltda., CNPJ 14.286.856/0001-80.",
+          "O objeto envolve manutenção preventiva e corretiva de veículos e máquinas pesadas, com peças e acessórios.",
+          "O extrato classifica o aditivo como prorrogação de prazo, de 23 de julho de 2026 a 23 de julho de 2027.",
+          "O valor exibido no extrato é R$ 2.085.710,40."
+        ],
+        "contextToFind": [
+          "Valor original, saldo executado e teto específico da prorrogação",
+          "Relação da frota e preços unitários de serviços e peças",
+          "Justificativa de vantajosidade da renovação"
+        ],
+        "reportingQuestions": [
+          "Os R$ 2,09 milhões correspondem integralmente ao novo período?",
+          "Quanto foi efetivamente gasto no primeiro ano?",
+          "Quais veículos e máquinas estão cobertos?"
+        ],
+        "peopleToHear": [
+          "Fundo Municipal de Saúde de Montividiu",
+          "Gestor e fiscal do contrato nº 163/2025",
+          "GYN Comercial e Atacadista Ltda."
+        ],
+        "dataCrossChecks": [
+          "Contrato original e termo aditivo integral",
+          "Empenhos, liquidações e pagamentos por peça e serviço",
+          "Inventário da frota e ordens de manutenção"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 2.085.710,40 foram pagos ou acrescidos.",
+          "Não chamar a prorrogação de novo contrato.",
+          "Não presumir que todo o teto será executado."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Conferir o termo integral para definir a natureza exata do valor de R$ 2.085.710,40."
+      }
+    },
+    {
+      "id": "jul26-agm-114600-DBEDFED6-220",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
+        "documentReference": "Edição 3676 · páginas 59 a 60"
+      },
+      "editorial": {
+        "mainAngle": "Santa Rita do Araguaia prorrogou até julho de 2027 dois contratos de material de higiene e limpeza com a Dicasa, mas o extrato apresenta um único valor de R$ 19,4 mil para os instrumentos 081 e 082/2025.",
+        "whyItMatters": "A publicação agrupa dois contratos e não deixa claro se o valor é conjunto ou individual, ponto essencial para dimensionar a renovação.",
+        "headlineOptions": [
+          "Santa Rita prorroga dois contratos de limpeza e precisa esclarecer valor conjunto",
+          "Aditivo estende contratos 081 e 082/2025 com fornecedora de limpeza",
+          "Dois contratos de material de limpeza são prorrogados até 2027 em Santa Rita"
+        ],
+        "leadDirection": "Só publicar valor depois de consultar os dois contratos e o aditivo integral; o quadro da página 59 agrupa instrumentos e exibe um único total.",
+        "storyStructure": [
+          "Quais contratos foram prorrogados",
+          "Empresa, objeto e nova vigência",
+          "Valor de cada instrumento e execução anterior",
+          "Motivo da prorrogação e consumo previsto"
+        ],
+        "verifiedFacts": [
+          "O ato trata do primeiro termo aditivo de prazo aos contratos nº 081 e 082/2025.",
+          "A contratada é Dicasa Comércio Atacadista de Produtos de Limpeza Ltda. - ME, CNPJ 34.997.458/0001-89.",
+          "O objeto é o fornecimento de material de higiene e limpeza.",
+          "A nova vigência informada vai de 1º de julho de 2026 a 1º de julho de 2027.",
+          "O quadro do extrato exibe o valor de R$ 19.401,27 sem separação clara entre os dois contratos."
+        ],
+        "contextToFind": [
+          "Objeto e valor individual dos contratos 081 e 082/2025",
+          "Saldo consumido no período anterior",
+          "Justificativa e demonstração de vantajosidade"
+        ],
+        "reportingQuestions": [
+          "R$ 19.401,27 é o valor conjunto ou de apenas um contrato?",
+          "Quais órgãos e itens estão vinculados a cada instrumento?",
+          "Quanto foi entregue e pago no período original?"
+        ],
+        "peopleToHear": [
+          "Secretaria de Administração de Santa Rita do Araguaia",
+          "Gestores dos contratos 081 e 082/2025",
+          "Dicasa Comércio Atacadista de Produtos de Limpeza Ltda."
+        ],
+        "dataCrossChecks": [
+          "Contratos 081 e 082/2025 e primeiro termo aditivo integral",
+          "Empenhos, liquidações e pagamentos por contrato",
+          "Pregão Presencial nº 005/2024"
+        ],
+        "doNotState": [
+          "Não atribuir R$ 19.401,27 a cada contrato.",
+          "Não afirmar pagamento ou nova compra já realizada.",
+          "Não somar os dois instrumentos sem valores individualizados."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "O extrato mistura dois contratos e um valor; revisão humana obrigatória."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-659-a35d3a303820-10",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "62a9e4eda5f3c2ce690a4b7038d8d609ad297bad260983ac201525bae3a285f4",
+        "documentReference": "Edição 463 · páginas 34 a 39"
+      },
+      "editorial": {
+        "mainAngle": "Senador Canedo abriu crédito suplementar de R$ 390,5 mil, com R$ 99,9 mil de excesso de arrecadação e R$ 290,6 mil remanejados de outras dotações.",
+        "whyItMatters": "A alteração muda a distribuição do orçamento entre diferentes órgãos; a classificação automática como ato da Educação não corresponde ao conjunto das páginas.",
+        "headlineOptions": [
+          "Senador Canedo remaneja R$ 390,5 mil entre dotações",
+          "Crédito de R$ 390,5 mil combina arrecadação e cortes orçamentários",
+          "Decreto muda distribuição de R$ 390,5 mil no orçamento de Senador Canedo"
+        ],
+        "leadDirection": "Descrever o crédito como alteração orçamentária multissetorial; não atribuir o total à Educação ou à Administração sem consolidar todas as fichas.",
+        "storyStructure": [
+          "Valor total e composição da cobertura",
+          "Distribuição por órgão e ação",
+          "Dotações anuladas",
+          "Justificativa e execução posterior"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 122 é datado de 3 de agosto de 2026.",
+          "O crédito suplementar totaliza R$ 390.544,39.",
+          "A cobertura informada é R$ 99.982,10 de excesso de arrecadação e R$ 290.562,29 de anulações.",
+          "A primeira dotação suplementada mostrada pertence à Secretaria Municipal de Administração."
+        ],
+        "contextToFind": [
+          "Consolidação dos valores por secretaria",
+          "Origem do excesso de arrecadação",
+          "Saldo das dotações anuladas"
+        ],
+        "reportingQuestions": [
+          "Quais áreas receberam e perderam mais recursos?",
+          "Que receita superou a previsão em R$ 99.982,10?",
+          "O remanejamento altera entregas previstas para 2026?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Fazenda e Finanças",
+          "Secretarias com dotações alteradas",
+          "Câmara Municipal de Senador Canedo"
+        ],
+        "dataCrossChecks": [
+          "Anexo integral do Decreto nº 122",
+          "LOA e balancete de agosto de 2026",
+          "Empenhos posteriores nas fichas suplementadas"
+        ],
+        "doNotState": [
+          "Não atribuir os R$ 390.544,39 apenas à Educação.",
+          "Não tratar suplementação como pagamento.",
+          "Não apresentar anulação como corte efetivo de serviço sem conferir o saldo."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "O rótulo automático do órgão está incorreto para o conjunto do decreto; exige revisão multissetorial."
+      }
+    },
+    {
+      "id": "jul26-agm-114600-53F772D3-101",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
+        "documentReference": "Edição 3676 · página 29"
+      },
+      "editorial": {
+        "mainAngle": "A Saúde de Hidrolândia contratou por R$ 108 mil a manutenção de equipamentos odontológicos, com peças e insumos incluídos.",
+        "whyItMatters": "A manutenção afeta a continuidade do atendimento odontológico e cria uma despesa mensal de R$ 9 mil por um ano.",
+        "headlineOptions": [
+          "Hidrolândia contrata manutenção odontológica por R$ 108 mil",
+          "Saúde pagará até R$ 9 mil por mês por manutenção de equipamentos odontológicos",
+          "Contrato de um ano cobre peças e manutenção odontológica em Hidrolândia"
+        ],
+        "leadDirection": "Informar valor mensal e global, objeto e empresa; esclarecer que o contrato prevê a despesa, mas não comprova pagamentos.",
+        "storyStructure": [
+          "Serviço contratado e valores mensal e anual",
+          "Equipamentos e unidades atendidas",
+          "Empresa, pregão e vigência",
+          "Chamados, peças, fiscalização e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O contrato é o nº 290/2026 e decorre do Pregão Eletrônico nº 025/2026.",
+          "A contratada é Medplus Hospitalar Comércio e Serviços Ltda.",
+          "O objeto inclui manutenção preventiva e corretiva, peças, componentes, insumos e acessórios para equipamentos odontológicos.",
+          "O valor mensal é R$ 9.000,00 e o total é R$ 108.000,00.",
+          "A vigência vai de 3 de agosto de 2026 a 3 de agosto de 2027."
+        ],
+        "contextToFind": [
+          "Relação de equipamentos e unidades beneficiadas",
+          "Prazo de atendimento e cobertura de peças",
+          "Histórico de falhas e gastos anteriores"
+        ],
+        "reportingQuestions": [
+          "Quantos equipamentos estão cobertos?",
+          "Quais peças estão incluídas sem custo adicional?",
+          "Como será medido o cumprimento mensal?"
+        ],
+        "peopleToHear": [
+          "Fundo Municipal de Saúde de Hidrolândia",
+          "Coordenação municipal de saúde bucal",
+          "Medplus Hospitalar Comércio e Serviços Ltda."
+        ],
+        "dataCrossChecks": [
+          "Termo de referência e resultado do Pregão nº 025/2026",
+          "Inventário dos equipamentos odontológicos",
+          "Empenhos, ordens de serviço e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar que o total já foi pago.",
+          "Não dizer que todos os equipamentos estão funcionando.",
+          "Não confundir valor mensal máximo com execução automática."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114600-A1DA58AE-98",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
+        "documentReference": "Edição 3676 · página 28"
+      },
+      "editorial": {
+        "mainAngle": "Goiatuba prorrogou por 12 meses o credenciamento da Novaclínica para exames de imagem, mantendo valor estimado de R$ 120 mil e sem reajuste.",
+        "whyItMatters": "O serviço apoia diagnósticos da rede municipal e a renovação define a continuidade do atendimento até agosto de 2027.",
+        "headlineOptions": [
+          "Goiatuba renova exames de imagem por mais 12 meses",
+          "Saúde de Goiatuba mantém credenciamento de R$ 120 mil para exames",
+          "Aditivo prorroga serviços de diagnóstico por imagem em Goiatuba"
+        ],
+        "leadDirection": "Destacar continuidade, prazo e valor estimado mantido; não apresentar o teto como pagamento garantido à clínica.",
+        "storyStructure": [
+          "Serviço prorrogado e período",
+          "Clínica credenciada e valor estimado",
+          "Exames cobertos e demanda da rede",
+          "Produção, faturamento e fiscalização"
+        ],
+        "verifiedFacts": [
+          "O ato é o primeiro termo aditivo ao contrato nº 367/2025, vinculado ao Edital de Credenciamento nº 05/2025.",
+          "A credenciada é Novaclínica Limitada - EPP.",
+          "O objeto é a realização de exames de imagem para apoio ao diagnóstico clínico.",
+          "A vigência foi prorrogada de 8 de agosto de 2026 a 8 de agosto de 2027.",
+          "O valor estimado foi mantido em R$ 120.000,00, sem reajuste."
+        ],
+        "contextToFind": [
+          "Lista e preço de cada exame",
+          "Produção e pagamentos do primeiro período",
+          "Fila e tempo de espera por diagnóstico"
+        ],
+        "reportingQuestions": [
+          "Quais exames estão incluídos e quantos foram realizados no período anterior?",
+          "Há outros prestadores credenciados?",
+          "Qual é o tempo médio de espera dos pacientes?"
+        ],
+        "peopleToHear": [
+          "Fundo Municipal de Saúde de Goiatuba",
+          "Novaclínica Limitada - EPP",
+          "Conselho Municipal de Saúde"
+        ],
+        "dataCrossChecks": [
+          "Contrato nº 367/2025 e tabela do credenciamento",
+          "Relatórios mensais de produção",
+          "Empenhos, liquidações e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 120 mil serão integralmente pagos.",
+          "Não chamar credenciamento de exclusividade.",
+          "Não inferir volume de exames sem relatório de produção."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114600-B2CB9A8A-186",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
+        "documentReference": "Edição 3676 · página 49"
+      },
+      "editorial": {
+        "mainAngle": "A Saúde de Nazário prorrogou por um ano o serviço de telefonia fixa com a Infortel, por valor total informado de R$ 1.548.",
+        "whyItMatters": "Embora de baixo valor, o ato permite acompanhar custo e continuidade de um serviço básico da administração da saúde.",
+        "headlineOptions": [
+          "Saúde de Nazário prorroga telefonia fixa por R$ 1.548",
+          "Contrato de telefonia da Saúde de Nazário segue até julho de 2027",
+          "Aditivo mantém serviço de telefonia fixa na Saúde de Nazário"
+        ],
+        "leadDirection": "Informar a prorrogação, a empresa e o valor total do período, sem ampliar o alcance jornalístico além do ato.",
+        "storyStructure": [
+          "Prazo, empresa e serviço",
+          "Valor e forma de cobrança",
+          "Linhas e unidades atendidas"
+        ],
+        "verifiedFacts": [
+          "O ato é o primeiro termo aditivo ao contrato nº 121/2025.",
+          "A contratada é Infortel Soluções em Informática Ltda., CNPJ 14.376.757/0001-99.",
+          "O objeto é telefonia fixa local e de longa distância para a Secretaria Municipal de Saúde.",
+          "O valor total informado é R$ 1.548,00.",
+          "A vigência vai de 28 de julho de 2026 a 28 de julho de 2027."
+        ],
+        "contextToFind": [
+          "Quantidade de linhas e unidades atendidas",
+          "Execução e pagamentos do período anterior",
+          "Justificativa de vantajosidade"
+        ],
+        "reportingQuestions": [
+          "Quantas linhas estão cobertas pelo contrato?",
+          "O preço foi mantido ou reajustado?",
+          "Quanto foi efetivamente consumido no primeiro período?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Nazário",
+          "Fiscal do contrato nº 121/2025",
+          "Infortel Soluções em Informática Ltda."
+        ],
+        "dataCrossChecks": [
+          "Contrato e termo aditivo integrais",
+          "Faturas e pagamentos do serviço",
+          "Inventário de linhas telefônicas da Saúde"
+        ],
+        "doNotState": [
+          "Não afirmar pagamento antecipado do valor total.",
+          "Não tratar a prorrogação como nova licitação.",
+          "Não sugerir economia sem comparação com o período anterior."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114599-CCBACC9D-127",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "10f949d8069c20ce356d8f5c75300b7c3bde8b7b866960c4d12634a3d7907025",
+        "documentReference": "Edição 3675 · página 34"
+      },
+      "editorial": {
+        "mainAngle": "Indiara contratou por R$ 547,6 mil a construção de um espaço multiuso para eventos, financiado principalmente por emenda parlamentar federal.",
+        "whyItMatters": "A obra mobiliza R$ 495 mil de transferência federal e R$ 52,6 mil de contrapartida municipal para um equipamento turístico e cultural.",
+        "headlineOptions": [
+          "Indiara contrata espaço multiuso por R$ 547,6 mil",
+          "Emenda de R$ 495 mil financia espaço para eventos em Indiara",
+          "Obra no Parque de Exposição custará R$ 547,6 mil em Indiara"
+        ],
+        "leadDirection": "Abrir com o objeto, valor global e composição federal-municipal; mencionar empresa e local sem dizer que a obra já começou.",
+        "storyStructure": [
+          "Obra, local e valor",
+          "Emenda federal e contrapartida municipal",
+          "Empresa, concorrência e vigência",
+          "Projeto, cronograma e fiscalização"
+        ],
+        "verifiedFacts": [
+          "O contrato de obra pública é o nº 456/2026.",
+          "A contratada é Borges Engenharia e Construções Ltda., CNPJ 10.540.335/0001-56.",
+          "O objeto é a construção de espaço multiuso para eventos turísticos e culturais no Parque de Exposição Agropecuária.",
+          "O valor global é R$ 547.641,51.",
+          "O financiamento informado combina R$ 495.000,00 da Emenda Parlamentar nº 202544240008 e R$ 52.641,51 de contrapartida municipal.",
+          "A vigência vai até 31 de dezembro de 2026."
+        ],
+        "contextToFind": [
+          "Autor e instrumento de transferência da emenda",
+          "Projeto, área construída e capacidade do espaço",
+          "Prazo físico e ordem de serviço"
+        ],
+        "reportingQuestions": [
+          "Quem destinou a emenda e quais condições ela estabelece?",
+          "Quando a obra começa e qual o cronograma?",
+          "Como o espaço será utilizado fora de grandes eventos?"
+        ],
+        "peopleToHear": [
+          "Prefeitura de Indiara",
+          "Gestor e fiscal do contrato nº 456/2026",
+          "Borges Engenharia e Construções Ltda.",
+          "Autor da emenda parlamentar"
+        ],
+        "dataCrossChecks": [
+          "Processo nº 2553/2026 e Concorrência nº 005/2026",
+          "Plataforma de transferências e identificação da emenda",
+          "Empenhos, medições e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar que a emenda ou o contrato já foram integralmente pagos.",
+          "Não dizer que a obra começou sem ordem de serviço.",
+          "Não atribuir autoria da emenda sem documento federal."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-26db68087fe6-7",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-06T08:58:00-03:00",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 31 a 38"
+      },
+      "editorial": {
+        "mainAngle": "Decreto de Senador Canedo abriu crédito suplementar de R$ 1,82 milhão, combinando excesso de arrecadação, superávit e anulações de outras dotações.",
+        "whyItMatters": "O ato altera a distribuição do orçamento entre áreas e foi publicado três semanas depois da data do decreto, o que merece contextualização temporal.",
+        "headlineOptions": [
+          "Senador Canedo redistribui R$ 1,82 milhão no orçamento",
+          "Crédito de R$ 1,82 milhão combina receita extra, superávit e anulações",
+          "Decreto de julho muda dotações de Senador Canedo e é publicado em agosto"
+        ],
+        "leadDirection": "Separar data do decreto e data de publicação; explicar a composição do crédito e não atribuir o total apenas à Educação, apesar do rótulo automático.",
+        "storyStructure": [
+          "Valor, data e fontes de cobertura",
+          "Destinos das suplementações",
+          "Origem das anulações",
+          "Defasagem de publicação e execução"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 113 é datado de 14 de julho de 2026 e foi publicado em 5 de agosto.",
+          "O crédito suplementar totaliza R$ 1.822.908,25.",
+          "A cobertura inclui R$ 48.088,11 de excesso de arrecadação, R$ 812.331,06 de superávit financeiro e R$ 962.489,08 de anulações.",
+          "As páginas mostram dotações de diferentes órgãos, incluindo Infraestrutura e Educação."
+        ],
+        "contextToFind": [
+          "Consolidação por secretaria e programa",
+          "Motivo da diferença entre assinatura e publicação",
+          "Empenhos realizados antes e depois da publicação"
+        ],
+        "reportingQuestions": [
+          "Quais áreas receberam e perderam mais recursos?",
+          "Por que o decreto de 14 de julho foi publicado apenas em 5 de agosto?",
+          "Houve execução das fichas antes da publicação?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Fazenda e Finanças",
+          "Controladoria de Senador Canedo",
+          "Secretarias com maiores alterações"
+        ],
+        "dataCrossChecks": [
+          "Anexo integral do Decreto nº 113",
+          "LOA, balancetes e empenhos de julho e agosto",
+          "Registro de publicação e vigência do decreto"
+        ],
+        "doNotState": [
+          "Não dizer que R$ 1,82 milhão foram pagos.",
+          "Não atribuir o total a uma única secretaria.",
+          "Não chamar a defasagem de irregularidade sem verificar as regras de eficácia e publicação."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Conferência das páginas confirmou composição multissetorial e diferença entre a data do decreto e a publicação."
       }
     }
   ]
