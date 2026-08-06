@@ -11,13 +11,13 @@ const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
 ---
 
 <BaseLayout
-  title="Notícias dos diários de julho de 2026 | Pauteiro"
-  description={`Consulte ${july.total} notícias factuais extraídas dos atos publicados nos diários oficiais de julho de 2026.`}
+  title="Notícias dos diários oficiais de 2026 | Pauteiro"
+  description={`Consulte ${july.total} notícias factuais extraídas dos atos publicados nos diários oficiais de 2026, atualizadas até ${formatDate(july.through)}.`}
 >
   <section class="opening-band july-opening">
     <div class="shell opening-grid">
       <div class="opening-copy">
-        <p class="section-kicker section-kicker-light">Julho de 2026 · publicação ato a ato</p>
+        <p class="section-kicker section-kicker-light">Cobertura de 2026 · publicação ato a ato</p>
         <h1>O mais recente sempre vem primeiro.</h1>
         <p class="page-summary">Cada ato segmentado nos PDFs oficiais vira uma notícia factual com edição, página e fonte. A relevância define o destaque visual; nenhum item deixa de ser publicado por ser burocrático.</p>
       </div>
@@ -32,7 +32,7 @@ const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
 
   <section class="section-band july-dashboard">
     <div class="shell">
-      <div class="july-stat-grid" aria-label="Resumo da cobertura de julho">
+      <div class="july-stat-grid" aria-label="Resumo da cobertura dos diários">
         <div><strong>{compactNumber(july.total)}</strong><span>notícias publicadas</span></div>
         <div><strong>{compactNumber(july.byCity.length)}</strong><span>localidades identificadas</span></div>
         <div><strong>{compactNumber(july.bySource.length)}</strong><span>famílias de fontes</span></div>
