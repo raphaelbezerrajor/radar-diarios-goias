@@ -23,8 +23,8 @@ const quickTopics = ["contrato", "nomeação", "edital", "processo TCM"].map((la
   href: `${baseHref}busca/?q=${encodeURIComponent(label)}&year=all`
 }));
 const metrics = [
-  { label: "Notícias de julho", value: compactNumber(siteData.metrics.julyStories), note: "todo ato segmentado é publicado" },
-  { label: "PDFs de julho", value: compactNumber(siteData.metrics.julyPdfs), note: `${compactNumber(siteData.metrics.julyPages)} páginas processadas` },
+  { label: "Notícias documentais", value: compactNumber(siteData.metrics.julyStories), note: "todo ato segmentado é publicado" },
+  { label: "PDFs processados", value: compactNumber(siteData.metrics.julyPdfs), note: `${compactNumber(siteData.metrics.julyPages)} páginas processadas` },
   { label: "Processos relevantes do TCM", value: compactNumber(siteData.metrics.tcmStories), note: "controle e responsabilização" },
   { label: "Documentos pesquisáveis", value: compactNumber(siteData.metrics.repositoryRecords), note: "fonte e página preservadas" }
 ];
@@ -50,7 +50,7 @@ const metrics = [
       <aside class="opening-side" aria-label="Situação da base">
         <p>Estado do Pauteiro</p>
         <strong>{formatDate(siteData.metadata.updatedAt)}</strong>
-        <span>{compactNumber(siteData.metrics.julyStories)} notícias documentais de julho, com as mais recentes no topo</span>
+        <span>{compactNumber(siteData.metrics.julyStories)} notícias documentais publicadas, com as mais recentes no topo</span>
         <a href={`${baseHref}pauteiro/`}>Entender a redação <span aria-hidden="true">→</span></a>
       </aside>
     </div>
@@ -101,12 +101,12 @@ const metrics = [
   <section class="section-band platform-band content-auto">
     <div class="shell platform-callout">
       <div>
-        <p class="section-kicker">Julho ato a ato</p>
+        <p class="section-kicker">Diários ato a ato</p>
         <h2>Tudo publicado, destaque com critério.</h2>
         <p>Cada ato extraído vira notícia e pode ser conferido na página e edição de origem. Valor-notícia define o tamanho do destaque; a data mais recente define a ordem.</p>
       </div>
       <div class="platform-actions">
-        <a class="button-primary" href={`${baseHref}julho/`}>Abrir notícias de julho</a>
+        <a class="button-primary" href={`${baseHref}julho/`}>Abrir cobertura dos diários</a>
         <span>{compactNumber(siteData.metrics.julyStories)} matérias em ordem cronológica</span>
       </div>
     </div>
