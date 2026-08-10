@@ -36,7 +36,7 @@ if (isStory) {
       metadescricao: record.deck || record.summary,
       linhaFina: record.deck,
       dataPublicacao: record.publishedAt || record.date,
-      dataAtualizacao: record.publishedAt || record.date,
+      dataAtualizacao: record.updatedAt || record.publishedAt || record.date,
       autor: "Pauteiro",
       imagem: hasUsefulImage ? {
         url: new URL(imageSrc, Astro.site).toString(),
@@ -68,6 +68,7 @@ if (isStory) {
           <div class="editorial-provenance">
             <strong>Publicado pelo Pauteiro</strong>
             <span>Matéria publicada em {formatDate(record.publishedAt || siteData.metadata.updatedAt)} · ato de {formatDate(record.date)}</span>
+            {record.updatedAt && record.updatedAt !== record.publishedAt && <span>Análise atualizada em {formatDate(record.updatedAt)}</span>}
           </div>
         )}
         {hasUsefulImage && (
@@ -82,10 +83,36 @@ if (isStory) {
           </figure>
         )}
         {record.summary && !record.paragraphs?.length && <p class="detail-summary">{record.summary}</p>}
+        {record.keyFindings?.length ? (
+          <section class="analysis-facts" aria-labelledby="analysis-facts-title">
+            <h2 id="analysis-facts-title">O que o processo permite afirmar</h2>
+            <dl>
+              {record.keyFindings.map((fact) => (
+                <div>
+                  <dt>{fact.label}</dt>
+                  <dd>{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        ) : null}
         {record.paragraphs?.length ? (
           <div class="detail-copy">
             {record.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           </div>
+        ) : null}
+        {record.processTimeline?.length ? (
+          <section class="analysis-timeline" aria-labelledby="process-timeline-title">
+            <h2 id="process-timeline-title">Como o processo avançou</h2>
+            <ol>
+              {record.processTimeline.map((event) => (
+                <li>
+                  <time datetime={event.date}>{formatDate(event.date)}</time>
+                  <span>{event.label}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
         ) : null}
         {isStory && record.newsValue?.reasons?.length ? (
           <aside class="news-value-box">
@@ -110,6 +137,7 @@ if (isStory) {
           {isStory && <small>Publicação no Pauteiro: {formatDate(record.publishedAt || siteData.metadata.updatedAt)}</small>}
           {isStory && <small>Autoria editorial: Redação Pauteiro</small>}
           {isStory && <small>Estado editorial: publicada · fonte oficial</small>}
+          {record.processNumber && <small>Processo: {record.processNumber}</small>}
           {isRepositoryDocument && <small>Estado editorial: repositório · sem destaque noticioso</small>}
         </div>
         {record.valueTotal ? (
@@ -127,6 +155,9 @@ if (isStory) {
         <div class="detail-actions">
           {record.sourceUrl && (
             <a class="button-primary" href={record.sourceUrl} target="_blank" rel="noreferrer">{record.sourceActionLabel || "Abrir fonte original"} ↗</a>
+          )}
+          {record.processUrl && (
+            <a class="button-secondary" href={record.processUrl} target="_blank" rel="noreferrer">Consultar processo completo ↗</a>
           )}
           <a class="button-secondary" href={`${baseHref}busca/?city=${encodeURIComponent(record.city || "")}&q=${encodeURIComponent(record.title)}`}>Buscar relacionados</a>
         </div>

@@ -320,10 +320,15 @@ function normalizeJulyDocumentNews(item, preview) {
     deck: item.deck,
     summary: item.summary,
     paragraphs: item.paragraphs || [],
+    keyFindings: item.key_findings || [],
+    processTimeline: item.process_timeline || [],
     editoria: item.public_body || "Atos públicos",
     sourceFamily: item.source_name || "Documento oficial",
     sourceLabel: item.source_label || item.public_body || "Fonte oficial",
     sourceUrl: item.official_url || item.source_landing_url || null,
+    sourceActionLabel: item.source_action_label || null,
+    processNumber: item.process_number || null,
+    processUrl: item.process_url || null,
     sourceNote: item.document_reference || "",
     scope: item.scope || "Municipal",
     tags: [
@@ -360,7 +365,8 @@ function normalizeJulyDocumentNews(item, preview) {
     sourceHash: item.document_sha256 || null,
     actHash: item.act_sha256 || null,
     confidence: item.confidence || null,
-    externalIdentifier: item.external_identifier || null
+    externalIdentifier: item.external_identifier || null,
+    updatedAt: item.updated_at || item.published_at || item.date
   };
 }
 
