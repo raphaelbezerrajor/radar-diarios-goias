@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-08-10T08:25:00-03:00",
+  "updatedAt": "2026-08-10T11:57:12.747Z",
   "briefs": [
     {
       "id": "jul26-agm-114590-608B28AC-243",
@@ -2947,6 +2947,901 @@
         "approvedBy": null,
         "approvedAt": null,
         "notes": "Há erros objetivos de leitura monetária no pacote automático. Confirmar o total no processo do pregão antes da publicação final."
+      }
+    },
+    {
+      "id": "jul26-aparecida-3020-3897f3edc8ba-4",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "8dfe38b063f6510ddcdae2a763e5c1425e3f4612af4c922718d75cb3b566a9d3",
+        "documentReference": "Edição 2908 · páginas 5 a 6"
+      },
+      "editorial": {
+        "mainAngle": "Aparecida de Goiânia acrescentou R$ 3.242.061,00 ao contrato de mobiliário escolar com a Maqmóveis, elevando o valor global para R$ 16.216.656,00.",
+        "whyItMatters": "O aditivo amplia em 24,9878% uma contratação voltada às escolas e é justificado pela prefeitura pela reforma e modernização de unidades da rede municipal.",
+        "headlineOptions": [
+          "Aparecida amplia contrato de móveis escolares em R$ 3,24 milhões",
+          "Contrato de mobiliário escolar chega a R$ 16,2 milhões em Aparecida",
+          "Aditivo acrescenta quase 25% a contrato de móveis para escolas"
+        ],
+        "leadDirection": "Abrir com o acréscimo de R$ 3,24 milhões, o novo valor global, a empresa e a finalidade escolar; indicar que o percentual exato impresso é 24,9878%.",
+        "storyStructure": [
+          "Valor e objeto do aditivo",
+          "Justificativa ligada às reformas escolares",
+          "Empresa, contrato e processo",
+          "Itens, escolas atendidas e execução"
+        ],
+        "verifiedFacts": [
+          "O Termo de Aditamento nº 404/2026 altera o Contrato nº 1.482/2025-SEL.",
+          "O acréscimo é de R$ 3.242.061,00, equivalente a 24,9878% do valor inicial.",
+          "O valor global passa de R$ 12.974.595,00 para R$ 16.216.656,00.",
+          "A contratada é Maqmóveis Indústria e Comércio de Móveis Ltda., CNPJ 54.826.367/0004-30.",
+          "O objeto é o fornecimento de mobiliários escolares; o processo administrativo citado é o nº 2026.132.932."
+        ],
+        "contextToFind": [
+          "Relação de escolas reformadas",
+          "Itens e quantidades acrescidos",
+          "Pregão e preços unitários do contrato original",
+          "Empenhos, entregas e pagamentos já realizados"
+        ],
+        "reportingQuestions": [
+          "Quais unidades receberão o mobiliário adicional?",
+          "Quantas carteiras, mesas, cadeiras e armários foram acrescentados?",
+          "Os preços unitários permanecem iguais aos originais?",
+          "Quanto do contrato já foi entregue e pago?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Educação de Aparecida de Goiânia",
+          "Maqmóveis Indústria e Comércio de Móveis Ltda.",
+          "Fiscais do Contrato nº 1.482/2025-SEL",
+          "Conselho Municipal de Educação"
+        ],
+        "dataCrossChecks": [
+          "Processo nº 2026.132.932",
+          "Contrato nº 1.482/2025-SEL e planilha original",
+          "Medições, notas fiscais e pagamentos",
+          "Censo e obras das escolas beneficiadas"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 16,2 milhões foram pagos.",
+          "Não arredondar o acréscimo exato para 25% sem registrar 24,9878%.",
+          "Não associar ao contrato os três CNPJs de licenças ambientais impressos na página seguinte.",
+          "Não repetir como certo o número 1.482/2026 que aparece uma vez no campo do objeto; o cabeçalho e as demais cláusulas usam 1.482/2025-SEL."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-9359a2b98c70-9",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 40 a 46"
+      },
+      "editorial": {
+        "mainAngle": "O Decreto nº 115 deslocou R$ 1,26 milhão, com R$ 945 mil destinados à assistência à saúde e R$ 306,9 mil ao apoio administrativo ligado à agricultura.",
+        "whyItMatters": "O decreto muda a distribuição do orçamento municipal. A leitura conjunta dos oito atos mostra para onde foram deslocados R$ 6.219.647,59, sem tratar suplementação como gasto novo.",
+        "headlineOptions": [
+          "Senador Canedo remaneja R$ 1,26 milhão e concentra crédito na saúde",
+          "Decreto abre R$ 1,26 milhão para saúde e apoio administrativo",
+          "Saúde recebe a maior parcela de crédito suplementar em Senador Canedo"
+        ],
+        "leadDirection": "Informar que o Decreto nº 115, datado de 16 de julho de 2026 e publicado em 5 de agosto, abriu R$ 1.264.124,81 em crédito suplementar; explicar os principais destinos e a origem da cobertura.",
+        "storyStructure": [
+          "Total do decreto e data do ato",
+          "Dotações que receberam recursos",
+          "Anulações, excesso de arrecadação e superávit usados como cobertura",
+          "Quadro consolidado dos oito decretos"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 115 abriu crédito suplementar de R$ 1.264.124,81.",
+          "O ato foi assinado em 16 de julho de 2026 e publicado na edição nº 462 em 5 de agosto de 2026.",
+          "As duas maiores dotações de assistência à saúde são R$ 584.853,78 e R$ 350.000,00.",
+          "A cobertura combina R$ 1.224.736,68 em anulações e R$ 39.388,13 de superávit financeiro.",
+          "Os oito decretos selecionados da mesma edição somam R$ 6.219.647,59 em suplementações."
+        ],
+        "contextToFind": [
+          "Execução das dotações antes e depois do remanejamento",
+          "Justificativa administrativa de cada secretaria",
+          "Saldo das rubricas anuladas",
+          "Empenhos emitidos após os decretos"
+        ],
+        "reportingQuestions": [
+          "Quais despesas concretas motivaram a suplementação?",
+          "As rubricas reduzidas tinham execução ou compromissos pendentes?",
+          "Quanto do crédito já foi empenhado, liquidado e pago?",
+          "O conjunto altera metas da LOA e do planejamento municipal?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal da Fazenda de Senador Canedo",
+          "Controladoria-Geral do Município",
+          "Secretarias e autarquias alcançadas pelas dotações",
+          "Câmara Municipal de Senador Canedo"
+        ],
+        "dataCrossChecks": [
+          "Decretos suplementares nº 108, 110, 111, 112, 115, 116, 117 e 118",
+          "LOA 2026 e Lei municipal nº 3.015",
+          "Balancetes e execução orçamentária por ficha",
+          "Empenhos, liquidações e pagamentos posteriores"
+        ],
+        "doNotState": [
+          "Não afirmar que o valor suplementado é despesa nova ou aumento do orçamento total.",
+          "Não apresentar crédito orçamentário como valor já gasto ou pago.",
+          "Não somar novamente as fontes de cobertura ao valor do crédito.",
+          "Não atribuir irregularidade sem análise da LOA, das anulações e da execução."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Consolidar os oito decretos em uma reportagem-mãe; conferir o quadro completo e evitar oito matérias repetitivas."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-b1fe5f841dde-10",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 46 a 48"
+      },
+      "editorial": {
+        "mainAngle": "Senador Canedo abriu R$ 1,14 milhão, dos quais R$ 1.030.637,34 vão para obras do programa Cidade Moderna.",
+        "whyItMatters": "O decreto muda a distribuição do orçamento municipal. A leitura conjunta dos oito atos mostra para onde foram deslocados R$ 6.219.647,59, sem tratar suplementação como gasto novo.",
+        "headlineOptions": [
+          "Cidade Moderna recebe R$ 1,03 milhão em crédito suplementar",
+          "Senador Canedo abre R$ 1,14 milhão para obras e Sanesc",
+          "Excesso de arrecadação cobre crédito de R$ 1,03 milhão para obras"
+        ],
+        "leadDirection": "Informar que o Decreto nº 116, datado de 21 de julho de 2026 e publicado em 5 de agosto, abriu R$ 1.138.190,62 em crédito suplementar; explicar os principais destinos e a origem da cobertura.",
+        "storyStructure": [
+          "Total do decreto e data do ato",
+          "Dotações que receberam recursos",
+          "Anulações, excesso de arrecadação e superávit usados como cobertura",
+          "Quadro consolidado dos oito decretos"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 116 abriu crédito suplementar de R$ 1.138.190,62.",
+          "O ato foi assinado em 21 de julho de 2026 e publicado na edição nº 462 em 5 de agosto de 2026.",
+          "O programa Cidade Moderna recebe R$ 1.030.637,34 em obras e instalações.",
+          "A Sanesc recebe R$ 107.553,28 para apoio administrativo.",
+          "A cobertura usa R$ 1.030.637,34 de excesso de arrecadação e R$ 107.553,28 anulados de equipamentos da Sanesc.",
+          "Os oito decretos selecionados da mesma edição somam R$ 6.219.647,59 em suplementações."
+        ],
+        "contextToFind": [
+          "Execução das dotações antes e depois do remanejamento",
+          "Justificativa administrativa de cada secretaria",
+          "Saldo das rubricas anuladas",
+          "Empenhos emitidos após os decretos"
+        ],
+        "reportingQuestions": [
+          "Quais despesas concretas motivaram a suplementação?",
+          "As rubricas reduzidas tinham execução ou compromissos pendentes?",
+          "Quanto do crédito já foi empenhado, liquidado e pago?",
+          "O conjunto altera metas da LOA e do planejamento municipal?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal da Fazenda de Senador Canedo",
+          "Controladoria-Geral do Município",
+          "Secretarias e autarquias alcançadas pelas dotações",
+          "Câmara Municipal de Senador Canedo"
+        ],
+        "dataCrossChecks": [
+          "Decretos suplementares nº 108, 110, 111, 112, 115, 116, 117 e 118",
+          "LOA 2026 e Lei municipal nº 3.015",
+          "Balancetes e execução orçamentária por ficha",
+          "Empenhos, liquidações e pagamentos posteriores"
+        ],
+        "doNotState": [
+          "Não afirmar que o valor suplementado é despesa nova ou aumento do orçamento total.",
+          "Não apresentar crédito orçamentário como valor já gasto ou pago.",
+          "Não somar novamente as fontes de cobertura ao valor do crédito.",
+          "Não atribuir irregularidade sem análise da LOA, das anulações e da execução."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Consolidar os oito decretos em uma reportagem-mãe; conferir o quadro completo e evitar oito matérias repetitivas."
+      }
+    },
+    {
+      "id": "jul26-agm-114599-32D143A9-124",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "10f949d8069c20ce356d8f5c75300b7c3bde8b7b866960c4d12634a3d7907025",
+        "documentReference": "Edição 3675 · página 33"
+      },
+      "editorial": {
+        "mainAngle": "Indiara dispensou licitação para comprar por R$ 1.199,00 um carrinho de bebê destinado a sorteio da campanha Agosto Dourado.",
+        "whyItMatters": "O ato usa recurso da Saúde em uma ação de incentivo ao aleitamento materno, mas a extração confundiu o limite legal de dispensa, R$ 65.492,11, com o preço da compra.",
+        "headlineOptions": [
+          "Indiara compra carrinho de bebê por R$ 1,2 mil para campanha de amamentação",
+          "Agosto Dourado terá sorteio de carrinho de bebê em Indiara",
+          "Saúde de Indiara usa dispensa para prêmio de campanha materno-infantil"
+        ],
+        "leadDirection": "Usar R$ 1.199,00 como valor da compra, explicar a finalidade do sorteio e registrar que R$ 65.492,11 é apenas o teto legal citado no texto.",
+        "storyStructure": [
+          "Compra, valor e finalidade",
+          "Campanha Agosto Dourado",
+          "Fornecedor e dispensa",
+          "Critérios do sorteio e alcance da ação"
+        ],
+        "verifiedFacts": [
+          "A Dispensa de Licitação nº 201/2026 autoriza a compra de um carrinho de bebê por R$ 1.199,00.",
+          "O item será sorteado durante evento do Agosto Dourado.",
+          "A fornecedora é Vilmar Pereira da Silva - Móveis e Eletrodomésticos, CNPJ 28.498.214/0001-59.",
+          "O ato foi assinado em 4 de agosto de 2026 e publicado no dia seguinte.",
+          "R$ 65.492,11 aparece no documento como limite legal da dispensa, não como valor contratado."
+        ],
+        "contextToFind": [
+          "Regulamento e público elegível ao sorteio",
+          "Fonte orçamentária",
+          "Programação completa do Agosto Dourado",
+          "Número de gestantes e puérperas atendidas"
+        ],
+        "reportingQuestions": [
+          "Quem pode participar do sorteio?",
+          "Qual é o critério de seleção?",
+          "A compra já foi entregue e paga?",
+          "Que outras ações integram a campanha?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Indiara",
+          "Coordenação da Atenção Básica",
+          "Fornecedor contratado",
+          "Conselho Municipal de Saúde"
+        ],
+        "dataCrossChecks": [
+          "Processo da Dispensa nº 201/2026",
+          "Termo de referência e propostas",
+          "Empenho, nota fiscal e pagamento",
+          "Regulamento do evento Agosto Dourado"
+        ],
+        "doNotState": [
+          "Não dizer que a compra custou R$ 65.492,11.",
+          "Não afirmar que o carrinho já foi entregue ou pago.",
+          "Não apresentar o sorteio como política permanente.",
+          "Não identificar beneficiária antes do resultado oficial."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "O pacote automático elevou o teto legal a valor do contrato; manter em revisão até corrigir o dado na matéria."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-1483a574f78a-6",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 22 a 31"
+      },
+      "editorial": {
+        "mainAngle": "O Decreto nº 112 redirecionou R$ 848,7 mil, com R$ 500 mil para inovação tecnológica e R$ 250 mil para apoio administrativo da Sanesc.",
+        "whyItMatters": "O decreto muda a distribuição do orçamento municipal. A leitura conjunta dos oito atos mostra para onde foram deslocados R$ 6.219.647,59, sem tratar suplementação como gasto novo.",
+        "headlineOptions": [
+          "Inovação recebe R$ 500 mil em remanejamento de Senador Canedo",
+          "Crédito de R$ 848,7 mil reforça tecnologia e Sanesc",
+          "Senador Canedo desloca orçamento para tecnologia, saneamento e saúde"
+        ],
+        "leadDirection": "Informar que o Decreto nº 112, datado de 10 de julho de 2026 e publicado em 5 de agosto, abriu R$ 848.741,20 em crédito suplementar; explicar os principais destinos e a origem da cobertura.",
+        "storyStructure": [
+          "Total do decreto e data do ato",
+          "Dotações que receberam recursos",
+          "Anulações, excesso de arrecadação e superávit usados como cobertura",
+          "Quadro consolidado dos oito decretos"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 112 abriu crédito suplementar de R$ 848.741,20.",
+          "O ato foi assinado em 10 de julho de 2026 e publicado na edição nº 462 em 5 de agosto de 2026.",
+          "A Secretaria de Inovação Tecnológica recebe R$ 500.000,00.",
+          "A Sanesc recebe R$ 250.000,00 e o Instituto de Assistência à Saúde do Servidor recebe R$ 91.000,00.",
+          "A cobertura é feita por anulações de igual valor em outras dotações.",
+          "Os oito decretos selecionados da mesma edição somam R$ 6.219.647,59 em suplementações."
+        ],
+        "contextToFind": [
+          "Execução das dotações antes e depois do remanejamento",
+          "Justificativa administrativa de cada secretaria",
+          "Saldo das rubricas anuladas",
+          "Empenhos emitidos após os decretos"
+        ],
+        "reportingQuestions": [
+          "Quais despesas concretas motivaram a suplementação?",
+          "As rubricas reduzidas tinham execução ou compromissos pendentes?",
+          "Quanto do crédito já foi empenhado, liquidado e pago?",
+          "O conjunto altera metas da LOA e do planejamento municipal?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal da Fazenda de Senador Canedo",
+          "Controladoria-Geral do Município",
+          "Secretarias e autarquias alcançadas pelas dotações",
+          "Câmara Municipal de Senador Canedo"
+        ],
+        "dataCrossChecks": [
+          "Decretos suplementares nº 108, 110, 111, 112, 115, 116, 117 e 118",
+          "LOA 2026 e Lei municipal nº 3.015",
+          "Balancetes e execução orçamentária por ficha",
+          "Empenhos, liquidações e pagamentos posteriores"
+        ],
+        "doNotState": [
+          "Não afirmar que o valor suplementado é despesa nova ou aumento do orçamento total.",
+          "Não apresentar crédito orçamentário como valor já gasto ou pago.",
+          "Não somar novamente as fontes de cobertura ao valor do crédito.",
+          "Não atribuir irregularidade sem análise da LOA, das anulações e da execução."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Consolidar os oito decretos em uma reportagem-mãe; conferir o quadro completo e evitar oito matérias repetitivas."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-1e6b643c7727-5",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 14 a 22"
+      },
+      "editorial": {
+        "mainAngle": "O Decreto nº 111 distribuiu R$ 576,7 mil entre Fazenda, Educação, Saúde e outras áreas, com R$ 198,4 mil na maior dotação.",
+        "whyItMatters": "O decreto muda a distribuição do orçamento municipal. A leitura conjunta dos oito atos mostra para onde foram deslocados R$ 6.219.647,59, sem tratar suplementação como gasto novo.",
+        "headlineOptions": [
+          "Senador Canedo remaneja R$ 576,7 mil entre Fazenda, Educação e Saúde",
+          "Crédito suplementar reforça áreas administrativas e serviços públicos",
+          "Decreto nº 111 redistribui R$ 576,7 mil do orçamento municipal"
+        ],
+        "leadDirection": "Informar que o Decreto nº 111, datado de 9 de julho de 2026 e publicado em 5 de agosto, abriu R$ 576.687,70 em crédito suplementar; explicar os principais destinos e a origem da cobertura.",
+        "storyStructure": [
+          "Total do decreto e data do ato",
+          "Dotações que receberam recursos",
+          "Anulações, excesso de arrecadação e superávit usados como cobertura",
+          "Quadro consolidado dos oito decretos"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 111 abriu crédito suplementar de R$ 576.687,70.",
+          "O ato foi assinado em 9 de julho de 2026 e publicado na edição nº 462 em 5 de agosto de 2026.",
+          "A maior dotação individual é de R$ 198.364,16 para apoio administrativo da Fazenda.",
+          "Há créditos de R$ 91.000,00 na Educação e de R$ 200.000,00 distribuídos em dotações da Saúde.",
+          "A cobertura reúne R$ 561.090,41 em anulações, R$ 702,97 de excesso e R$ 14.894,32 de superávit financeiro.",
+          "Os oito decretos selecionados da mesma edição somam R$ 6.219.647,59 em suplementações."
+        ],
+        "contextToFind": [
+          "Execução das dotações antes e depois do remanejamento",
+          "Justificativa administrativa de cada secretaria",
+          "Saldo das rubricas anuladas",
+          "Empenhos emitidos após os decretos"
+        ],
+        "reportingQuestions": [
+          "Quais despesas concretas motivaram a suplementação?",
+          "As rubricas reduzidas tinham execução ou compromissos pendentes?",
+          "Quanto do crédito já foi empenhado, liquidado e pago?",
+          "O conjunto altera metas da LOA e do planejamento municipal?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal da Fazenda de Senador Canedo",
+          "Controladoria-Geral do Município",
+          "Secretarias e autarquias alcançadas pelas dotações",
+          "Câmara Municipal de Senador Canedo"
+        ],
+        "dataCrossChecks": [
+          "Decretos suplementares nº 108, 110, 111, 112, 115, 116, 117 e 118",
+          "LOA 2026 e Lei municipal nº 3.015",
+          "Balancetes e execução orçamentária por ficha",
+          "Empenhos, liquidações e pagamentos posteriores"
+        ],
+        "doNotState": [
+          "Não afirmar que o valor suplementado é despesa nova ou aumento do orçamento total.",
+          "Não apresentar crédito orçamentário como valor já gasto ou pago.",
+          "Não somar novamente as fontes de cobertura ao valor do crédito.",
+          "Não atribuir irregularidade sem análise da LOA, das anulações e da execução."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Consolidar os oito decretos em uma reportagem-mãe; conferir o quadro completo e evitar oito matérias repetitivas."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-23aebf896d1e-2",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 2 a 4"
+      },
+      "editorial": {
+        "mainAngle": "Senador Canedo transferiu R$ 120 mil para manutenção da educação básica e R$ 29,4 mil para apoio à inovação tecnológica.",
+        "whyItMatters": "O decreto muda a distribuição do orçamento municipal. A leitura conjunta dos oito atos mostra para onde foram deslocados R$ 6.219.647,59, sem tratar suplementação como gasto novo.",
+        "headlineOptions": [
+          "Educação recebe R$ 120 mil em remanejamento de Senador Canedo",
+          "Decreto desloca R$ 149,4 mil para educação e tecnologia",
+          "Crédito suplementar reforça educação básica e inovação"
+        ],
+        "leadDirection": "Informar que o Decreto nº 108, datado de 6 de julho de 2026 e publicado em 5 de agosto, abriu R$ 149.439,25 em crédito suplementar; explicar os principais destinos e a origem da cobertura.",
+        "storyStructure": [
+          "Total do decreto e data do ato",
+          "Dotações que receberam recursos",
+          "Anulações, excesso de arrecadação e superávit usados como cobertura",
+          "Quadro consolidado dos oito decretos"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 108 abriu crédito suplementar de R$ 149.439,25.",
+          "O ato foi assinado em 6 de julho de 2026 e publicado na edição nº 462 em 5 de agosto de 2026.",
+          "A Educação recebe R$ 100.000,00 para ensino fundamental e R$ 20.000,00 para educação infantil.",
+          "A Secretaria de Inovação Tecnológica recebe R$ 29.439,25.",
+          "A cobertura vem da anulação de R$ 120.000,00 na própria Educação e R$ 29.439,25 na Secretaria de Atendimento ao Cidadão.",
+          "Os oito decretos selecionados da mesma edição somam R$ 6.219.647,59 em suplementações."
+        ],
+        "contextToFind": [
+          "Execução das dotações antes e depois do remanejamento",
+          "Justificativa administrativa de cada secretaria",
+          "Saldo das rubricas anuladas",
+          "Empenhos emitidos após os decretos"
+        ],
+        "reportingQuestions": [
+          "Quais despesas concretas motivaram a suplementação?",
+          "As rubricas reduzidas tinham execução ou compromissos pendentes?",
+          "Quanto do crédito já foi empenhado, liquidado e pago?",
+          "O conjunto altera metas da LOA e do planejamento municipal?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal da Fazenda de Senador Canedo",
+          "Controladoria-Geral do Município",
+          "Secretarias e autarquias alcançadas pelas dotações",
+          "Câmara Municipal de Senador Canedo"
+        ],
+        "dataCrossChecks": [
+          "Decretos suplementares nº 108, 110, 111, 112, 115, 116, 117 e 118",
+          "LOA 2026 e Lei municipal nº 3.015",
+          "Balancetes e execução orçamentária por ficha",
+          "Empenhos, liquidações e pagamentos posteriores"
+        ],
+        "doNotState": [
+          "Não afirmar que o valor suplementado é despesa nova ou aumento do orçamento total.",
+          "Não apresentar crédito orçamentário como valor já gasto ou pago.",
+          "Não somar novamente as fontes de cobertura ao valor do crédito.",
+          "Não atribuir irregularidade sem análise da LOA, das anulações e da execução."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Consolidar os oito decretos em uma reportagem-mãe; conferir o quadro completo e evitar oito matérias repetitivas."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-53ca6cf98cf6-12",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 55 a 58"
+      },
+      "editorial": {
+        "mainAngle": "O Decreto nº 118 destinou R$ 449,3 mil ao programa Moradia Digna e R$ 350 mil à universalização do acesso à educação básica.",
+        "whyItMatters": "O decreto muda a distribuição do orçamento municipal. A leitura conjunta dos oito atos mostra para onde foram deslocados R$ 6.219.647,59, sem tratar suplementação como gasto novo.",
+        "headlineOptions": [
+          "Moradia e educação recebem R$ 799,3 mil em Senador Canedo",
+          "Crédito destina R$ 449 mil à Moradia Digna e R$ 350 mil à educação",
+          "Decreto desloca recursos para habitação e acesso à escola"
+        ],
+        "leadDirection": "Informar que o Decreto nº 118, datado de 24 de julho de 2026 e publicado em 5 de agosto, abriu R$ 799.304,55 em crédito suplementar; explicar os principais destinos e a origem da cobertura.",
+        "storyStructure": [
+          "Total do decreto e data do ato",
+          "Dotações que receberam recursos",
+          "Anulações, excesso de arrecadação e superávit usados como cobertura",
+          "Quadro consolidado dos oito decretos"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 118 abriu crédito suplementar de R$ 799.304,55.",
+          "O ato foi assinado em 24 de julho de 2026 e publicado na edição nº 462 em 5 de agosto de 2026.",
+          "O programa Moradia Digna recebe R$ 449.304,49.",
+          "A universalização do acesso à educação básica recebe R$ 350.000,06.",
+          "A cobertura vem de anulações na Fazenda e em dotações da Educação que somam R$ 799.304,55.",
+          "Os oito decretos selecionados da mesma edição somam R$ 6.219.647,59 em suplementações."
+        ],
+        "contextToFind": [
+          "Execução das dotações antes e depois do remanejamento",
+          "Justificativa administrativa de cada secretaria",
+          "Saldo das rubricas anuladas",
+          "Empenhos emitidos após os decretos"
+        ],
+        "reportingQuestions": [
+          "Quais despesas concretas motivaram a suplementação?",
+          "As rubricas reduzidas tinham execução ou compromissos pendentes?",
+          "Quanto do crédito já foi empenhado, liquidado e pago?",
+          "O conjunto altera metas da LOA e do planejamento municipal?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal da Fazenda de Senador Canedo",
+          "Controladoria-Geral do Município",
+          "Secretarias e autarquias alcançadas pelas dotações",
+          "Câmara Municipal de Senador Canedo"
+        ],
+        "dataCrossChecks": [
+          "Decretos suplementares nº 108, 110, 111, 112, 115, 116, 117 e 118",
+          "LOA 2026 e Lei municipal nº 3.015",
+          "Balancetes e execução orçamentária por ficha",
+          "Empenhos, liquidações e pagamentos posteriores"
+        ],
+        "doNotState": [
+          "Não afirmar que o valor suplementado é despesa nova ou aumento do orçamento total.",
+          "Não apresentar crédito orçamentário como valor já gasto ou pago.",
+          "Não somar novamente as fontes de cobertura ao valor do crédito.",
+          "Não atribuir irregularidade sem análise da LOA, das anulações e da execução."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Consolidar os oito decretos em uma reportagem-mãe; conferir o quadro completo e evitar oito matérias repetitivas."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-79c9ae8a064f-4",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 6 a 14"
+      },
+      "editorial": {
+        "mainAngle": "O Decreto nº 110 abriu R$ 808,8 mil e concentrou R$ 600 mil em saneamento básico da Sanesc.",
+        "whyItMatters": "O decreto muda a distribuição do orçamento municipal. A leitura conjunta dos oito atos mostra para onde foram deslocados R$ 6.219.647,59, sem tratar suplementação como gasto novo.",
+        "headlineOptions": [
+          "Sanesc recebe R$ 600 mil em remanejamento de Senador Canedo",
+          "Crédito de R$ 808,8 mil concentra recursos em saneamento",
+          "Senador Canedo redistribui orçamento para saneamento, saúde e administração"
+        ],
+        "leadDirection": "Informar que o Decreto nº 110, datado de 8 de julho de 2026 e publicado em 5 de agosto, abriu R$ 808.831,97 em crédito suplementar; explicar os principais destinos e a origem da cobertura.",
+        "storyStructure": [
+          "Total do decreto e data do ato",
+          "Dotações que receberam recursos",
+          "Anulações, excesso de arrecadação e superávit usados como cobertura",
+          "Quadro consolidado dos oito decretos"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 110 abriu crédito suplementar de R$ 808.831,97.",
+          "O ato foi assinado em 8 de julho de 2026 e publicado na edição nº 462 em 5 de agosto de 2026.",
+          "A maior dotação é de R$ 600.000,00 para saneamento básico da Sanesc.",
+          "A Saúde recebe pelo menos R$ 112.802,00 em dotações de assistência e vigilância.",
+          "A cobertura combina R$ 808.243,97 em anulações, R$ 150,00 de excesso e R$ 438,00 de superávit financeiro.",
+          "Os oito decretos selecionados da mesma edição somam R$ 6.219.647,59 em suplementações."
+        ],
+        "contextToFind": [
+          "Execução das dotações antes e depois do remanejamento",
+          "Justificativa administrativa de cada secretaria",
+          "Saldo das rubricas anuladas",
+          "Empenhos emitidos após os decretos"
+        ],
+        "reportingQuestions": [
+          "Quais despesas concretas motivaram a suplementação?",
+          "As rubricas reduzidas tinham execução ou compromissos pendentes?",
+          "Quanto do crédito já foi empenhado, liquidado e pago?",
+          "O conjunto altera metas da LOA e do planejamento municipal?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal da Fazenda de Senador Canedo",
+          "Controladoria-Geral do Município",
+          "Secretarias e autarquias alcançadas pelas dotações",
+          "Câmara Municipal de Senador Canedo"
+        ],
+        "dataCrossChecks": [
+          "Decretos suplementares nº 108, 110, 111, 112, 115, 116, 117 e 118",
+          "LOA 2026 e Lei municipal nº 3.015",
+          "Balancetes e execução orçamentária por ficha",
+          "Empenhos, liquidações e pagamentos posteriores"
+        ],
+        "doNotState": [
+          "Não afirmar que o valor suplementado é despesa nova ou aumento do orçamento total.",
+          "Não apresentar crédito orçamentário como valor já gasto ou pago.",
+          "Não somar novamente as fontes de cobertura ao valor do crédito.",
+          "Não atribuir irregularidade sem análise da LOA, das anulações e da execução."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Consolidar os oito decretos em uma reportagem-mãe; conferir o quadro completo e evitar oito matérias repetitivas."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-b87a7b8df357-11",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 48 a 55"
+      },
+      "editorial": {
+        "mainAngle": "O Decreto nº 117 distribuiu R$ 634,3 mil, com R$ 300 mil para apoio administrativo e R$ 200 mil para saneamento básico.",
+        "whyItMatters": "O decreto muda a distribuição do orçamento municipal. A leitura conjunta dos oito atos mostra para onde foram deslocados R$ 6.219.647,59, sem tratar suplementação como gasto novo.",
+        "headlineOptions": [
+          "Senador Canedo abre R$ 634 mil para administração e saneamento",
+          "Saneamento recebe R$ 200 mil em novo remanejamento",
+          "Decreto nº 117 redistribui R$ 634,3 mil do orçamento"
+        ],
+        "leadDirection": "Informar que o Decreto nº 117, datado de 22 de julho de 2026 e publicado em 5 de agosto, abriu R$ 634.327,49 em crédito suplementar; explicar os principais destinos e a origem da cobertura.",
+        "storyStructure": [
+          "Total do decreto e data do ato",
+          "Dotações que receberam recursos",
+          "Anulações, excesso de arrecadação e superávit usados como cobertura",
+          "Quadro consolidado dos oito decretos"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 117 abriu crédito suplementar de R$ 634.327,49.",
+          "O ato foi assinado em 22 de julho de 2026 e publicado na edição nº 462 em 5 de agosto de 2026.",
+          "Uma dotação de apoio administrativo recebe R$ 300.000,00 e o saneamento básico da Sanesc recebe R$ 200.000,00.",
+          "Também há créditos para Saúde, Educação e apoio administrativo.",
+          "A cobertura usa R$ 300.000,00 de excesso de arrecadação e R$ 334.327,49 em anulações.",
+          "Os oito decretos selecionados da mesma edição somam R$ 6.219.647,59 em suplementações."
+        ],
+        "contextToFind": [
+          "Execução das dotações antes e depois do remanejamento",
+          "Justificativa administrativa de cada secretaria",
+          "Saldo das rubricas anuladas",
+          "Empenhos emitidos após os decretos"
+        ],
+        "reportingQuestions": [
+          "Quais despesas concretas motivaram a suplementação?",
+          "As rubricas reduzidas tinham execução ou compromissos pendentes?",
+          "Quanto do crédito já foi empenhado, liquidado e pago?",
+          "O conjunto altera metas da LOA e do planejamento municipal?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal da Fazenda de Senador Canedo",
+          "Controladoria-Geral do Município",
+          "Secretarias e autarquias alcançadas pelas dotações",
+          "Câmara Municipal de Senador Canedo"
+        ],
+        "dataCrossChecks": [
+          "Decretos suplementares nº 108, 110, 111, 112, 115, 116, 117 e 118",
+          "LOA 2026 e Lei municipal nº 3.015",
+          "Balancetes e execução orçamentária por ficha",
+          "Empenhos, liquidações e pagamentos posteriores"
+        ],
+        "doNotState": [
+          "Não afirmar que o valor suplementado é despesa nova ou aumento do orçamento total.",
+          "Não apresentar crédito orçamentário como valor já gasto ou pago.",
+          "Não somar novamente as fontes de cobertura ao valor do crédito.",
+          "Não atribuir irregularidade sem análise da LOA, das anulações e da execução."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Consolidar os oito decretos em uma reportagem-mãe; conferir o quadro completo e evitar oito matérias repetitivas."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-658-9a577270c7ec-1",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
+        "documentReference": "Edição 462 · páginas 1 a 2"
+      },
+      "editorial": {
+        "mainAngle": "Senador Canedo prorrogou até 5 de outubro de 2026 o prazo do Refis municipal para negociação de débitos tributários e não tributários.",
+        "whyItMatters": "A prorrogação muda o prazo disponível para contribuintes regularizarem dívidas, mas o pacote automático misturou o sumário da edição com atos da Educação.",
+        "headlineOptions": [
+          "Senador Canedo prorroga Refis até 5 de outubro",
+          "Contribuintes ganham novo prazo para aderir ao Refis 2026",
+          "Prazo para negociar dívidas municipais vai até outubro em Senador Canedo"
+        ],
+        "leadDirection": "Abrir com a nova data-limite, quem pode ser alcançado e a referência à Lei nº 3.043; não usar o título automático sobre servidores da Educação.",
+        "storyStructure": [
+          "Novo prazo do Refis",
+          "Débitos abrangidos",
+          "Regras, descontos e canais de adesão",
+          "Arrecadação esperada e adesões"
+        ],
+        "verifiedFacts": [
+          "O prazo previsto no artigo 1º da Lei nº 3.043, de 5 de maio de 2026, foi prorrogado até 5 de outubro de 2026.",
+          "O texto menciona negociação de débitos vencidos tributários e não tributários.",
+          "O ato foi assinado em 3 de agosto de 2026 pelo secretário Alessandro Rodrigues de Sousa.",
+          "A publicação ocorreu na edição nº 462, em 5 de agosto de 2026.",
+          "A página 1 contém o ato do Refis; a página 2 já inicia o Decreto Suplementar nº 108."
+        ],
+        "contextToFind": [
+          "Descontos e parcelamentos previstos na Lei nº 3.043",
+          "Canais e documentos para adesão",
+          "Valor da dívida ativa elegível",
+          "Adesões e arrecadação desde maio"
+        ],
+        "reportingQuestions": [
+          "Quem pode aderir e quais dívidas entram?",
+          "Quais descontos e número máximo de parcelas?",
+          "Por que o prazo foi prorrogado?",
+          "Qual o resultado parcial do programa?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal da Fazenda de Senador Canedo",
+          "Procuradoria-Geral do Município",
+          "Contribuintes e entidades empresariais",
+          "Câmara Municipal"
+        ],
+        "dataCrossChecks": [
+          "Lei municipal nº 3.043/2026",
+          "Regulamento e portal de adesão ao Refis",
+          "Estoque da dívida ativa",
+          "Arrecadação do programa"
+        ],
+        "doNotState": [
+          "Não atribuir o ato à Secretaria de Educação.",
+          "Não afirmar descontos ou condições que não aparecem nesta página.",
+          "Não dizer que a dívida foi perdoada.",
+          "Não misturar o Refis com os decretos orçamentários iniciados na página 2."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "A segmentação juntou o sumário, o Refis e o início de outro ato; publicar somente após corrigir título e recorte da fonte."
+      }
+    },
+    {
+      "id": "jul26-aparecida-3018-046c14f869ce-17",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T11:57:12.747Z",
+      "source": {
+        "documentSha256": "6d19bfb9f8fd6976f70a7d5f077959960f7d249f494e01118bd27b11408d3d1e",
+        "documentReference": "Edição 2906 · páginas 8 a 9"
+      },
+      "editorial": {
+        "mainAngle": "Aparecida prorrogou por 12 meses o contrato de serviços terceirizados do Fundo de Saúde e elevou o valor global acumulado de R$ 14,23 milhões para R$ 22,66 milhões.",
+        "whyItMatters": "O aditivo mantém 84 postos de merendeiro, atualiza custos por IPCA e convenção coletiva e prevê efeitos financeiros retroativos a janeiro de 2026.",
+        "headlineOptions": [
+          "Aparecida prorroga terceirização da Saúde e contrato chega a R$ 22,7 milhões",
+          "Aditivo mantém 84 postos e acrescenta R$ 8,43 milhões a contrato da Saúde",
+          "Contrato de mão de obra da Saúde é prorrogado até agosto de 2027"
+        ],
+        "leadDirection": "Distinguir o valor global acumulado, o acréscimo correspondente aos 12 meses, o custo mensal e a retroatividade da repactuação; não apresentar R$ 22,66 milhões como gasto novo do aditivo.",
+        "storyStructure": [
+          "Prorrogação e valor incremental",
+          "84 postos e custo mensal",
+          "IPCA, convenção coletiva e retroatividade",
+          "Execução, diferenças e fiscalização"
+        ],
+        "verifiedFacts": [
+          "O segundo aditivo prorroga o Contrato nº 1.352/2024 de 30 de agosto de 2026 a 30 de agosto de 2027.",
+          "A contratada é Buriti Serviços Empresariais S/A, CNPJ 02.011.310/0001-37.",
+          "O valor global acumulado passa de R$ 14.229.109,44 para R$ 22.656.765,60; a diferença é R$ 8.427.656,16.",
+          "O novo valor mensal é R$ 702.304,68 para 84 postos, com custo unitário de R$ 8.360,77.",
+          "A repactuação da mão de obra produz efeitos desde 1º de janeiro de 2026; o pagamento das diferenças depende de comprovação e disponibilidade orçamentária."
+        ],
+        "contextToFind": [
+          "Locais de lotação dos 84 postos",
+          "Composição do custo unitário",
+          "Valor exato das diferenças retroativas",
+          "Histórico de pagamentos, fiscalização e cumprimento trabalhista"
+        ],
+        "reportingQuestions": [
+          "Por que o Fundo de Saúde mantém postos de merendeiro?",
+          "Quanto será devido retroativamente?",
+          "Todos os 84 postos estão ocupados?",
+          "Que indicadores sustentaram a renovação?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Aparecida de Goiânia",
+          "Buriti Serviços Empresariais S/A",
+          "Secretaria de Transparência, Fiscalização e Controle",
+          "Trabalhadores e sindicato da categoria"
+        ],
+        "dataCrossChecks": [
+          "Contrato nº 1.352/2024 e aditivos anteriores",
+          "Processo nº 2026.025.715",
+          "Planilha de custos e CCT 2026/2027",
+          "Empenhos, liquidações, pagamentos e folha dos postos"
+        ],
+        "doNotState": [
+          "Não dizer que R$ 22,66 milhões são o custo isolado dos próximos 12 meses.",
+          "Não afirmar que diferenças retroativas já foram pagas.",
+          "Não confundir repactuação contratual com aumento líquido de salário recebido por cada trabalhador.",
+          "Não presumir que os 84 postos estão todos ocupados sem verificar a execução."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Revisar a semântica dos valores: R$ 22,66 milhões é o global acumulado; o incremento aritmético dos 12 meses é R$ 8.427.656,16."
       }
     }
   ]
