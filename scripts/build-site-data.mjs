@@ -68,10 +68,9 @@ function buildSearchRecord(item) {
     year: item.year,
     type: item.type,
     title: item.title,
-    deck: trimText(item.deck, 88),
+    deck: trimText(item.deck, 84),
     sourceFamily: item.sourceFamily,
-    marker: trimText(item.marker || item.sourceNote || "", 42),
-    importance: item.importance,
+    marker: trimText(item.marker || item.sourceNote || "", 36),
     recordType: item.recordType,
     search: item.search
   };
