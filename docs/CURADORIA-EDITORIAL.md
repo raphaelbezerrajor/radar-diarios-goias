@@ -2,7 +2,8 @@
 
 O documento oficial continua sendo publicado como registro factual. A promoção
 para matéria jornalística depende de uma segunda camada: seleção por
-valor-notícia, diretriz do ChatGPT e aprovação editorial humana.
+valor-notícia e diretriz factual do ChatGPT. Como o painel editorial é de uso
+individual, não existe uma aprovação redundante para a curadoria comum.
 
 ## Fluxo
 
@@ -12,10 +13,11 @@ valor-notícia, diretriz do ChatGPT e aprovação editorial humana.
    grava `data/editorial/curation-queue.json`.
 3. O ChatGPT lê somente os candidatos com `status: "pending"`, confere o pacote
    factual e, quando necessário, as páginas indicadas no PDF.
-4. A resposta é gravada em `data/editorial/curated-briefs.json` como `draft`.
-5. Um editor verifica fatos, contexto, contraditório e linguagem. Somente o
-   status `approved`, com nome e data do aprovador, permite substituir o texto
-   factual no portal.
+4. A resposta é gravada em `data/editorial/curated-briefs.json` como `draft` e
+   passa a orientar título e olho na próxima geração do portal.
+5. Casos com conflito de valores, mistura de atos, sanção, responsabilização ou
+   risco reputacional recebem `needs_review` e não alteram a publicação até que
+   a pendência factual seja resolvida.
 
 ## Diretriz para o ChatGPT
 
@@ -78,6 +80,9 @@ Cada item de `briefs` deve ter:
 }
 ```
 
-Enquanto o brief for `draft`, os campos de `publication` podem ficar vazios e
-nenhuma mudança pública é feita. A automação nunca pode mudar sozinha o status
-para `approved`.
+Enquanto o brief for `draft`, os campos de `publication` podem ficar vazios. O
+portal usa a primeira opção de título, o ângulo principal como olho e preserva
+os parágrafos factuais já extraídos. Se houver título, olho e texto completos no
+bloco `publication`, eles prevalecem. `needs_review` continua bloqueado até a
+correção da pendência; o status `approved` permanece apenas por compatibilidade
+com briefs antigos e não é mais necessário.

@@ -18,9 +18,9 @@ export const CURATION_POLICY = Object.freeze({
   maximumPerDate: 12,
   maximumPerRun: 240,
   automationBatchSize: 12,
-  approvedStatuses: ["approved"],
-  draftStatuses: ["draft", "needs_review"],
-  modelRole: "ChatGPT produz diretrizes; a aprovação editorial continua humana"
+  publishableStatuses: ["draft", "approved"],
+  reviewStatuses: ["needs_review"],
+  modelRole: "ChatGPT produz e aplica a curadoria factual; casos sensíveis ficam em needs_review"
 });
 
 export function evaluateCurationCandidate(item = {}, policy = CURATION_POLICY) {
@@ -108,7 +108,7 @@ export function buildCurationCandidate(item = {}, existingBrief = null, policy =
     requestedOutput: {
       kind: "editorial_brief",
       promptVersion: policy.promptVersion,
-      publishAutomatically: false
+      publishAutomatically: !assessment.mandatoryHumanReview
     }
   };
 }
@@ -154,42 +154,46 @@ export function validateEditorialBrief(brief = {}) {
     issues.push("fatos_confirmados");
   }
   if (!Array.isArray(brief.editorial?.doNotState)) issues.push("limites_editoriais");
-  if (brief.status === "approved") {
-    if (!clean(brief.humanReview?.approvedBy)) issues.push("aprovador_humano");
-    if (!/^\d{4}-\d{2}-\d{2}/.test(clean(brief.humanReview?.approvedAt))) issues.push("data_de_aprovacao");
-    if (!clean(brief.editorial?.publication?.title)) issues.push("titulo_publicavel");
-    if (!clean(brief.editorial?.publication?.deck)) issues.push("olho_publicavel");
-    if (!Array.isArray(brief.editorial?.publication?.paragraphs)
-      || brief.editorial.publication.paragraphs.length < 2) {
-      issues.push("texto_publicavel");
-    }
-  }
   return { valid: issues.length === 0, issues };
 }
 
-export function applyApprovedCuration(record = {}, brief = null) {
-  if (!brief || brief.status !== "approved") return record;
+export function applyCuration(record = {}, brief = null) {
+  if (!brief || !CURATION_POLICY.publishableStatuses.includes(brief.status)) return record;
   const validation = validateEditorialBrief(brief);
   const sourceHashMatches = !brief.source?.documentSha256
     || !record.sourceHash
     || brief.source.documentSha256 === record.sourceHash;
   if (!validation.valid || !sourceHashMatches) return record;
 
-  const publication = brief.editorial.publication;
+  const publication = brief.editorial.publication || {};
+  const curatedTitle = clean(publication.title)
+    || clean(brief.editorial.headlineOptions?.[0])
+    || clean(record.title);
+  const curatedDeck = clean(publication.deck)
+    || clean(brief.editorial.mainAngle)
+    || clean(record.deck);
+  const curatedParagraphs = Array.isArray(publication.paragraphs)
+    ? publication.paragraphs.map(clean).filter(Boolean)
+    : [];
+  const hasPublicationText = curatedParagraphs.length >= 2;
+
   return {
     ...record,
-    title: clean(publication.title),
-    deck: clean(publication.deck),
-    summary: publication.paragraphs.map(clean).filter(Boolean).join(" "),
-    paragraphs: publication.paragraphs.map(clean).filter(Boolean),
+    title: curatedTitle,
+    deck: curatedDeck,
+    summary: hasPublicationText ? curatedParagraphs.join(" ") : record.summary,
+    paragraphs: hasPublicationText ? curatedParagraphs : record.paragraphs,
     publicationMode: "curated_document_news",
     editorialStatus: "published",
     curation: {
-      status: "approved",
+      status: brief.status,
       promptVersion: brief.promptVersion || CURATION_POLICY.promptVersion,
-      approvedBy: brief.humanReview.approvedBy,
-      approvedAt: brief.humanReview.approvedAt,
+      appliedAutomatically: brief.status === "draft",
+      approvedBy: clean(brief.humanReview?.approvedBy) || null,
+      approvedAt: clean(brief.humanReview?.approvedAt) || null,
       mainAngle: clean(brief.editorial.mainAngle)
     }
   };
 }
+
+export const applyApprovedCuration = applyCuration;

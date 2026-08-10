@@ -11,7 +11,7 @@ import {
   hasPrimarySource,
   isPrimaryOfficialSource
 } from "../src/lib/editorial/document-news.mjs";
-import { applyApprovedCuration } from "../src/lib/editorial/curation.mjs";
+import { applyCuration } from "../src/lib/editorial/curation.mjs";
 import { buildFrontPagePackage, rankFrontPageStories } from "../src/lib/editorial/front-page.mjs";
 
 const root = process.cwd();
@@ -578,7 +578,7 @@ async function main() {
     .filter((item) => item.scope_status === "trindade_confirmado")
     .map(normalizeTcmDossier);
   const curatedBriefById = new Map((curatedBriefs.briefs || []).map((brief) => [brief.id, brief]));
-  const applyCuration = (item) => applyApprovedCuration(item, curatedBriefById.get(item.id));
+  const applyEditorialCuration = (item) => applyCuration(item, curatedBriefById.get(item.id));
   const editorialYear = Number(String(radar.cutoff_date || radar.updated_at).slice(0, 4));
   const editorialPublicationDate = [
     radar.updated_at,
@@ -602,7 +602,7 @@ async function main() {
         .concat(normalizedJulyDocumentNews)
         .concat(normalizedTcmNews)
         .concat(residualUnified)
-        .map(applyCuration)
+        .map(applyEditorialCuration)
         .map(addPublicationMetadata)
         .map(attachSearch)
     )
@@ -611,21 +611,21 @@ async function main() {
   const publishedNews = stateRecords
     .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedTcmNews)
     .filter((item) => item.recordType === "story")
-    .map(applyCuration)
+    .map(applyEditorialCuration)
     .map(addPublicationMetadata);
   const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
   const frontPage = buildFrontPagePackage(timelineNews);
   const leadStory = frontPage.lead;
   const heroSidebar = frontPage.sidebar;
 
-  const stateFront = sortForSearch(stateRecords.map(applyCuration)
+  const stateFront = sortForSearch(stateRecords.map(applyEditorialCuration)
     .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
-  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs).map(applyCuration)
+  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs).map(applyEditorialCuration)
     .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
   const actsFront = sortForSearch(
     normalizedTrindadeActs
       .concat(normalizedJulyDocumentNews)
-      .map(applyCuration)
+      .map(applyEditorialCuration)
       .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)
   ).slice(0, 8);
   const julyPublishedNews = sortForSearch(
@@ -633,7 +633,7 @@ async function main() {
       normalizedJulyDocumentNews.concat(
         normalizedTrindadeActs.filter((item) => item.month === "2026-07" && item.recordType === "story")
       )
-    ).map(applyCuration)
+    ).map(applyEditorialCuration)
   );
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>

@@ -4,7 +4,7 @@ import { EDITORIAL_STATES, PUBLICATION_ADAPTER, canTransition, requiresMandatory
 import { buildBreadcrumbSchema, buildNewsArticleSchema, validateJsonLdSchema, validateStorySeo } from "../src/lib/editorial/seo.mjs";
 import { assessActNewsValue, assessTcmNewsValue } from "../src/lib/editorial/document-news.mjs";
 import {
-  applyApprovedCuration,
+  applyCuration,
   evaluateCurationCandidate,
   selectCurationCandidates,
   validateEditorialBrief
@@ -229,7 +229,7 @@ test("fila de curadoria respeita data, prioridade e limite diário", () => {
   assert.ok(queue.every((item) => item.status === "pending"));
 });
 
-test("curadoria só altera matéria depois de aprovação humana registrada", () => {
+test("curadoria factual em rascunho entra na publicação sem aprovação redundante", () => {
   const record = {
     id: "ato-1",
     title: "Título burocrático",
@@ -250,7 +250,13 @@ test("curadoria só altera matéria depois de aprovação humana registrada", ()
       publication: { title: "Novo título", deck: "Novo olho.", paragraphs: ["Lead.", "Contexto."] }
     }
   };
-  assert.equal(applyApprovedCuration(record, draft).title, "Título burocrático");
+  const curatedDraft = applyCuration(record, draft);
+  assert.equal(curatedDraft.title, "Novo título");
+  assert.equal(curatedDraft.publicationMode, "curated_document_news");
+  assert.equal(curatedDraft.curation.appliedAutomatically, true);
+
+  const blocked = applyCuration(record, { ...draft, status: "needs_review" });
+  assert.equal(blocked.title, "Título burocrático");
 
   const approved = {
     ...draft,
@@ -260,5 +266,35 @@ test("curadoria só altera matéria depois de aprovação humana registrada", ()
   };
   const validation = validateEditorialBrief(approved);
   assert.equal(validation.valid, true);
-  assert.equal(applyApprovedCuration(record, approved).title, "Novo título");
+  assert.equal(applyCuration(record, approved).title, "Novo título");
+});
+
+test("curadoria usa a primeira manchete e o ângulo quando o bloco publicável está vazio", () => {
+  const record = {
+    id: "ato-2",
+    title: "Município publica EXTRATO DE CONTRATO",
+    deck: "Texto burocrático.",
+    summary: "Resumo factual.",
+    paragraphs: ["Fato um.", "Fato dois."],
+    sourceHash: "abc"
+  };
+  const brief = {
+    id: "ato-2",
+    status: "draft",
+    source: { documentSha256: "abc" },
+    editorial: {
+      mainAngle: "Contrato destina R$ 920 mil à reforma do parque.",
+      whyItMatters: "A obra usa recurso municipal.",
+      headlineOptions: ["Município contrata reforma por R$ 920 mil", "Obra terá contrato de R$ 920 mil"],
+      reportingQuestions: ["Quando começa?", "Quem fiscaliza?"],
+      verifiedFacts: ["O contrato foi publicado."],
+      doNotState: ["Não afirmar pagamento."],
+      publication: { title: "", deck: "", paragraphs: [] }
+    }
+  };
+
+  const curated = applyCuration(record, brief);
+  assert.equal(curated.title, "Município contrata reforma por R$ 920 mil");
+  assert.equal(curated.deck, "Contrato destina R$ 920 mil à reforma do parque.");
+  assert.deepEqual(curated.paragraphs, ["Fato um.", "Fato dois."]);
 });
