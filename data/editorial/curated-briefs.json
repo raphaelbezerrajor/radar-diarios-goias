@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-08-10T00:38:00-03:00",
+  "updatedAt": "2026-08-10T08:25:00-03:00",
   "briefs": [
     {
       "id": "jul26-agm-114590-608B28AC-243",
@@ -2064,6 +2064,889 @@
         "approvedBy": null,
         "approvedAt": null,
         "notes": "A página reúne homologação e extratos; conferir a tabela completa dos sete contratos antes da redação final."
+      }
+    },
+    {
+      "id": "jul26-agm-114602-13E4D00F-196",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · página 55"
+      },
+      "editorial": {
+        "mainAngle": "Palmeiras de Goiás contratou por R$ 920 mil a reforma e ampliação do Parque de Exposições Agropecuárias, com prazo de seis meses para execução.",
+        "whyItMatters": "A obra altera um equipamento usado em eventos públicos e mobiliza recurso municipal relevante, com pagamentos condicionados a medições.",
+        "headlineOptions": [
+          "Palmeiras contrata reforma do Parque de Exposições por R$ 920 mil",
+          "Obra de R$ 920 mil ampliará Parque de Exposições de Palmeiras",
+          "Contrato prevê seis meses para reforma do parque agropecuário"
+        ],
+        "leadDirection": "Abrir com o objeto, o valor de R$ 920 mil, a Primal Construtora e o prazo de seis meses; não afirmar que a obra começou ou que o valor foi pago.",
+        "storyStructure": [
+          "Obra, local e valor",
+          "Empresa, concorrência e prazo",
+          "Projeto e serviços previstos",
+          "Medições, fiscalização e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O contrato é o nº 155/2026, vinculado ao processo nº 5.811/2026 e à Concorrência Eletrônica nº 12/2026.",
+          "A contratada é Primal Construtora e Incorporadora Ltda.",
+          "O objeto é a reforma e ampliação do Parque de Exposições Agropecuárias de Palmeiras de Goiás.",
+          "O valor contratual é R$ 920.000,00.",
+          "A vigência prevista é de seis meses a partir da assinatura."
+        ],
+        "contextToFind": [
+          "Projeto arquitetônico e área ampliada",
+          "Cronograma físico-financeiro",
+          "Data da ordem de serviço",
+          "Histórico de gastos no parque"
+        ],
+        "reportingQuestions": [
+          "Quais estruturas serão reformadas ou construídas?",
+          "Quando a obra começa?",
+          "O parque ficará fechado durante os serviços?",
+          "Quem fiscalizará as medições?"
+        ],
+        "peopleToHear": [
+          "Prefeitura de Palmeiras de Goiás",
+          "Fiscal do contrato nº 155/2026",
+          "Primal Construtora e Incorporadora Ltda.",
+          "Usuários e organizadores de eventos do parque"
+        ],
+        "dataCrossChecks": [
+          "Processo nº 5.811/2026",
+          "Edital e resultado da Concorrência nº 12/2026",
+          "Projeto, planilha e cronograma",
+          "Empenhos, medições e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 920 mil já foram pagos.",
+          "Não dizer que a obra começou sem ordem de serviço.",
+          "Não inferir sobrepreço sem comparar projeto, planilha e mercado."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114602-DF6A1BF7-52",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · página 14"
+      },
+      "editorial": {
+        "mainAngle": "Campo Limpo de Goiás registrou preços de até R$ 1,02 milhão para medicamentos destinados à doação, distribuídos entre 12 fornecedores.",
+        "whyItMatters": "A ata pode sustentar o fornecimento de medicamentos à população, mas o valor é um teto de compras futuras e precisa ser acompanhado por fornecedor, item e entrega.",
+        "headlineOptions": [
+          "Campo Limpo registra R$ 1,02 milhão em medicamentos para doação",
+          "Ata de medicamentos para doação reúne 12 fornecedores",
+          "Saúde de Campo Limpo poderá comprar até R$ 1,02 milhão em medicamentos"
+        ],
+        "leadDirection": "Informar que a Ata do Pregão nº 005/2026 totaliza R$ 1.022.734,44 e reúne 12 fornecedores; esclarecer que registro de preços não equivale a compra ou pagamento imediato.",
+        "storyStructure": [
+          "Finalidade e teto da ata",
+          "Fornecedores e valores",
+          "Medicamentos e critérios de doação",
+          "Ordens de fornecimento, entregas e pagamentos"
+        ],
+        "verifiedFacts": [
+          "A ata decorre do Pregão Eletrônico nº 005/2026 e do processo nº 1.349/2026.",
+          "O objeto é a aquisição futura e eventual de medicamentos farmacológicos destinados à doação.",
+          "O valor total publicado é R$ 1.022.734,44.",
+          "A publicação lista 12 fornecedores e vigência de 12 meses.",
+          "A ata foi assinada em 22 de junho de 2026 e publicada na edição de 10 de agosto."
+        ],
+        "contextToFind": [
+          "Itens e quantidades por fornecedor",
+          "Critérios e público da doação",
+          "Histórico de demanda e estoque",
+          "Ordens de fornecimento emitidas"
+        ],
+        "reportingQuestions": [
+          "Quais medicamentos concentram os maiores valores?",
+          "Quem pode receber os itens e como solicita?",
+          "Quanto já foi requisitado em cada ata?",
+          "Como a Saúde acompanha entregas e estoque?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Campo Limpo de Goiás",
+          "Pregoeira e fiscais da ata",
+          "Fornecedores registrados",
+          "Conselho Municipal de Saúde"
+        ],
+        "dataCrossChecks": [
+          "Pregão nº 005/2026 e planilha de itens",
+          "Atas e ordens de fornecimento",
+          "Empenhos, liquidações e pagamentos por CNPJ",
+          "Relatórios de estoque e dispensação"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 1,02 milhão já foi gasto ou pago.",
+          "Não tratar o teto da ata como obrigação de compra.",
+          "Não atribuir o valor total a um único fornecedor.",
+          "Não somar novamente o total aos valores individuais."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "A página reúne o fim de outra ata e 12 fornecedores desta. Usar o total expresso no documento e conferir a planilha antes da redação final."
+      }
+    },
+    {
+      "id": "jul26-agm-114602-08BE6CBE-75",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · página 21"
+      },
+      "editorial": {
+        "mainAngle": "Formoso homologou uma ata de até R$ 1,44 milhão para material de expediente e papelaria, dividida entre três empresas.",
+        "whyItMatters": "A compra atende várias secretarias e tem valor elevado para materiais de rotina; o leitor precisa saber quais itens e quantidades justificam o total.",
+        "headlineOptions": [
+          "Formoso homologa R$ 1,44 milhão em material de expediente",
+          "Três empresas vencem pregão de papelaria em Formoso",
+          "Ata de expediente para secretarias de Formoso chega a R$ 1,44 milhão"
+        ],
+        "leadDirection": "Abrir com o total de R$ 1.439.431,20, a finalidade e a divisão entre Comercial Oeste, Triunfo Comercial e Comercial Melzi; tratar os valores como adjudicados, não pagos.",
+        "storyStructure": [
+          "Valor total e objeto",
+          "Divisão entre as três empresas",
+          "Itens, quantidades e secretarias",
+          "Requisições, fiscalização e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O Pregão Presencial é o nº 006/2026 e o processo administrativo é o nº 2.960/2026.",
+          "O objeto é a aquisição futura e parcelada de material de expediente, papelaria e congêneres para secretarias municipais.",
+          "Comercial Oeste Ltda. ficou com R$ 433.811,60.",
+          "Triunfo Comercial Ltda. ficou com R$ 271.317,70.",
+          "Comercial Melzi Ltda. ficou com R$ 734.301,90.",
+          "Os três valores somam R$ 1.439.431,20."
+        ],
+        "contextToFind": [
+          "Itens e quantidades de cada lote",
+          "Secretarias participantes",
+          "Estimativa de consumo e gasto anterior",
+          "Quantidade de concorrentes e descontos"
+        ],
+        "reportingQuestions": [
+          "Quais itens concentram os R$ 1,44 milhão?",
+          "Qual o prazo e a forma de fornecimento parcelado?",
+          "Quanto foi gasto com papelaria no ano anterior?",
+          "Como cada secretaria requisitará os materiais?"
+        ],
+        "peopleToHear": [
+          "Prefeitura de Formoso",
+          "Pregoeira e fiscais da ata",
+          "Três empresas vencedoras",
+          "Controladoria do Município"
+        ],
+        "dataCrossChecks": [
+          "Edital e resultado do Pregão nº 006/2026",
+          "Planilha de lotes e preços unitários",
+          "Atas, empenhos e ordens de fornecimento",
+          "Pagamentos por fornecedor"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 1,44 milhão já foi gasto ou pago.",
+          "Não chamar o valor homologado de economia sem orçamento comparativo.",
+          "Não presumir irregularidade pelo volume da compra."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "A homologação distribui o valor entre três fornecedores e exige conferência da planilha de itens antes da matéria final."
+      }
+    },
+    {
+      "id": "jul26-agm-114602-026517D5-81",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · páginas 22 a 23"
+      },
+      "editorial": {
+        "mainAngle": "A Saúde de Goiatuba contratou por inexigibilidade assessoria e consultoria em saúde pública por R$ 105 mil, equivalentes a R$ 8,75 mil mensais por um ano.",
+        "whyItMatters": "A consultoria alcança diferentes departamentos da Saúde e cria despesa recorrente; escopo, entregas e justificativa de especialização precisam ser claros.",
+        "headlineOptions": [
+          "Saúde de Goiatuba contrata consultoria por R$ 105 mil",
+          "Assessoria em saúde pública custará R$ 8,75 mil por mês em Goiatuba",
+          "Inexigibilidade prevê consultoria de um ano para a Saúde de Goiatuba"
+        ],
+        "leadDirection": "Informar fornecedor, valor mensal e global, duração e objeto; distinguir a data do ato, 13 de julho, da publicação em 10 de agosto.",
+        "storyStructure": [
+          "Serviço, fornecedor e valores",
+          "Fundamento da inexigibilidade",
+          "Escopo por departamento",
+          "Entregas, fiscalização e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O ato é a Inexigibilidade nº 022/2026, vinculada ao processo nº 2026018744.",
+          "A contratada é Audo Cesar Ferreira Correa - ME, CNPJ 13.078.601/0001-69.",
+          "O valor mensal é R$ 8.750,00 e o global é R$ 105.000,00.",
+          "A vigência informada é de 12 meses.",
+          "O ato é datado de 13 de julho de 2026 e foi publicado na edição de 10 de agosto."
+        ],
+        "contextToFind": [
+          "Produtos e entregas mensais",
+          "Atestado de capacidade e justificativa de preço",
+          "Estrutura técnica própria da Secretaria",
+          "Outras consultorias vigentes"
+        ],
+        "reportingQuestions": [
+          "Quais departamentos serão atendidos?",
+          "Que entregas comprovam cada parcela mensal?",
+          "Por que o serviço foi considerado singular?",
+          "Quem fiscalizará o contrato?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Goiatuba",
+          "Fiscal do contrato nº 174/2026",
+          "Audo Cesar Ferreira Correa - ME",
+          "Controladoria do Município"
+        ],
+        "dataCrossChecks": [
+          "Processo nº 2026018744",
+          "Contrato administrativo nº 174/2026",
+          "Justificativa de preço e atestado técnico",
+          "Empenhos, relatórios e pagamentos"
+        ],
+        "doNotState": [
+          "Não tratar inexigibilidade como irregularidade.",
+          "Não afirmar que R$ 105 mil já foram pagos.",
+          "Não confundir a data do ato com a data de publicação.",
+          "Não dizer que a consultoria substitui servidores sem comparar atribuições."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114602-087FD363-109",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · página 29"
+      },
+      "editorial": {
+        "mainAngle": "A Saúde de Inhumas firmou contratos que somam R$ 303,4 mil para aparelhos de ar-condicionado financiados por emenda do deputado estadual Lucas Calil.",
+        "whyItMatters": "Os equipamentos serão comprados com recurso de emenda, mas a página reúne três empresas sem individualizar quanto cabe a cada contrato.",
+        "headlineOptions": [
+          "Emenda financia R$ 303,4 mil em ar-condicionado para a Saúde de Inhumas",
+          "Saúde de Inhumas contrata três fornecedores de ar-condicionado",
+          "Contratos de aparelhos de ar somam R$ 303,4 mil em Inhumas"
+        ],
+        "leadDirection": "Abrir com o objeto, o total de R$ 303.436,80 e a emenda nº 202600005002469; citar as três empresas e deixar pendente a divisão individual dos valores.",
+        "storyStructure": [
+          "Equipamentos, total e fonte do recurso",
+          "Três empresas contratadas",
+          "Unidades e quantidades",
+          "Entrega, instalação, garantia e pagamentos"
+        ],
+        "verifiedFacts": [
+          "Os contratos decorrem do Pregão nº 44/2026.",
+          "O objeto é o fornecimento de aparelhos de ar-condicionado para a Saúde.",
+          "O ato cita a Emenda Parlamentar nº 202600005002469 do deputado estadual Lucas Calil.",
+          "As empresas listadas são G7 Distribuição Ltda., JHP Ar Condicionado Ltda. e R L Eletro Comércio de Eletrodoméstico Ltda.",
+          "O valor total publicado é R$ 303.436,80."
+        ],
+        "contextToFind": [
+          "Número e valor de cada contrato",
+          "Quantidade, capacidade e unidades destinatárias",
+          "Valor transferido pela emenda e contrapartida",
+          "Instalação, garantia e manutenção"
+        ],
+        "reportingQuestions": [
+          "Quantos aparelhos serão comprados e para quais unidades?",
+          "Quanto cabe a cada fornecedor?",
+          "A instalação está incluída?",
+          "Quando os equipamentos serão entregues?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Inhumas",
+          "Fiscal e gestor dos contratos",
+          "Três empresas contratadas",
+          "Gabinete do deputado Lucas Calil"
+        ],
+        "dataCrossChecks": [
+          "Pregão nº 44/2026 e contratos decorrentes",
+          "Cadastro e transferência da emenda",
+          "Planilha de aparelhos e unidades",
+          "Empenhos, entregas e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar que os R$ 303,4 mil já foram pagos.",
+          "Não dividir o total igualmente entre as empresas.",
+          "Não atribuir valor individual sem os contratos.",
+          "Não dizer que os equipamentos já foram instalados."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "O extrato agrega três contratos e apresenta apenas um total. Localizar a divisão por empresa antes da matéria final."
+      }
+    },
+    {
+      "id": "jul26-agm-114602-4D167567-180",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · página 48"
+      },
+      "editorial": {
+        "mainAngle": "Montividiu contratou por R$ 778,9 mil a construção de uma unidade do CREAS, com prazo estimado de cinco meses.",
+        "whyItMatters": "O novo equipamento deve ampliar o atendimento especializado da assistência social e terá pagamentos vinculados às medições da obra.",
+        "headlineOptions": [
+          "Montividiu contrata construção do CREAS por R$ 778,9 mil",
+          "Nova unidade do CREAS terá obra de cinco meses em Montividiu",
+          "Contrato de R$ 778,9 mil prevê centro de assistência social"
+        ],
+        "leadDirection": "Abrir com o valor, o endereço, a Renovar Ltda. e o prazo de cinco meses; explicar que pagamento dependerá de medições e não está comprovado pelo extrato.",
+        "storyStructure": [
+          "Obra, local e valor",
+          "Empresa, concorrência e prazo",
+          "Estrutura e serviços do CREAS",
+          "Cronograma, medições e fiscalização"
+        ],
+        "verifiedFacts": [
+          "O contrato é o nº 248/2026, vinculado ao processo nº 8.252/2026 e à Concorrência Eletrônica nº 003/2026.",
+          "A contratada é Construtora Renovar Ltda., CNPJ 24.672.954/0001-09.",
+          "O objeto é a construção do Centro de Referência Especializado de Assistência Social na Rua Rita Cândida, próximo à ESF 305.",
+          "O valor global é R$ 778.891,52.",
+          "A vigência estimada é de cinco meses e a assinatura ocorreu em 6 de agosto de 2026.",
+          "O extrato prevê pagamento após medições periódicas e final."
+        ],
+        "contextToFind": [
+          "Área construída e capacidade de atendimento",
+          "Projeto e cronograma físico-financeiro",
+          "Fonte dos recursos",
+          "Ordem de serviço e fiscalização"
+        ],
+        "reportingQuestions": [
+          "Quando a obra começa?",
+          "Quais serviços funcionarão no novo CREAS?",
+          "Qual a capacidade prevista?",
+          "Como serão divulgadas as medições?"
+        ],
+        "peopleToHear": [
+          "Fundo Municipal de Desenvolvimento Social de Montividiu",
+          "Fiscal do contrato nº 248/2026",
+          "Construtora Renovar Ltda.",
+          "Conselho Municipal de Assistência Social"
+        ],
+        "dataCrossChecks": [
+          "Processo nº 8.252/2026",
+          "Edital e resultado da Concorrência nº 003/2026",
+          "Projeto, planilha e cronograma",
+          "Empenhos, medições e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 778,9 mil já foram pagos.",
+          "Não dizer que a obra começou sem ordem de serviço.",
+          "Não prometer data de inauguração sem cronograma confirmado."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114602-6BEFC576-9",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · páginas 2 a 3"
+      },
+      "editorial": {
+        "mainAngle": "Uma das cinco atas de alimentos de Alexânia prevê até R$ 103,4 mil com a MS Serviços; o conjunto do mesmo pregão soma R$ 357,2 mil e deve ser tratado como uma única pauta.",
+        "whyItMatters": "O recorte automático mostra apenas uma parte de uma contratação dividida entre cinco fornecedores para secretarias, fundo ambiental e autarquia de trânsito.",
+        "headlineOptions": [
+          "Cinco atas de alimentos somam R$ 357,2 mil em Alexânia",
+          "Alexânia divide registro de alimentos entre cinco fornecedores",
+          "Pregão prevê até R$ 357,2 mil em gêneros alimentícios"
+        ],
+        "leadDirection": "Usar esta ata como parte da pauta consolidada do Pregão nº 028/2026; informar que a MS Serviços ficou com teto de R$ 103.383,20 e que as cinco atas somam R$ 357.233,65.",
+        "storyStructure": [
+          "Visão geral das cinco atas",
+          "Fornecedores e valores",
+          "Itens e órgãos participantes",
+          "Requisições, entregas e pagamentos"
+        ],
+        "verifiedFacts": [
+          "A Ata nº 003 decorre do Pregão Eletrônico nº 028/2026 e do processo nº 4.571/2026.",
+          "A fornecedora desta ata é MS Serviços e Consultoria Ltda., CNPJ 11.848.351/0001-73.",
+          "O valor total da Ata nº 003 é R$ 103.383,20.",
+          "O objeto inclui itens não perecíveis, padaria, açougue e hortifrúti.",
+          "As cinco atas do mesmo pregão publicadas nas páginas 2 e 3 somam R$ 357.233,65."
+        ],
+        "contextToFind": [
+          "Itens e quantidades de cada ata",
+          "Secretarias e órgãos que poderão requisitar",
+          "Critério de divisão dos lotes",
+          "Histórico de consumo e fornecedores"
+        ],
+        "reportingQuestions": [
+          "Quanto cabe a cada grupo de alimentos?",
+          "Quais órgãos usarão as atas?",
+          "Como será controlada a qualidade dos perecíveis?",
+          "Quanto será efetivamente requisitado?"
+        ],
+        "peopleToHear": [
+          "Prefeitura de Alexânia",
+          "Fundo Municipal de Meio Ambiente",
+          "AMTTM",
+          "Cinco fornecedores registrados"
+        ],
+        "dataCrossChecks": [
+          "Pregão nº 028/2026",
+          "Atas nº 001 a 005",
+          "Planilhas de itens e preços",
+          "Ordens de fornecimento, notas fiscais e pagamentos"
+        ],
+        "doNotState": [
+          "Não tratar R$ 357,2 mil como compra ou pagamento realizado.",
+          "Não publicar a Ata nº 003 como se fosse o pregão inteiro.",
+          "Não duplicar o valor da Ata nº 003 na soma consolidada."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Recomendada a fusão com as outras quatro atas do Pregão nº 028/2026; evitar duas matérias duplicadas."
+      }
+    },
+    {
+      "id": "jul26-agm-114602-6BF9BA67-49",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · página 13"
+      },
+      "editorial": {
+        "mainAngle": "Campo Limpo de Goiás registrou até R$ 1,09 milhão para leite especial e fórmulas nutricionais destinados a pacientes da rede municipal de saúde.",
+        "whyItMatters": "Os produtos atendem necessidades alimentares específicas e têm alto custo; a execução deve ser acompanhada por beneficiários, fórmulas, quantidades e fornecedores.",
+        "headlineOptions": [
+          "Campo Limpo registra R$ 1,09 milhão para fórmulas nutricionais",
+          "Ata de leite especial reúne sete fornecedores em Campo Limpo",
+          "Saúde poderá comprar até R$ 1,09 milhão em nutrição especializada"
+        ],
+        "leadDirection": "Informar que os sete valores publicados somam R$ 1.085.845,80 e que se trata de registro para compras futuras, não de pagamento imediato.",
+        "storyStructure": [
+          "Finalidade e valor máximo",
+          "Sete fornecedores e lotes",
+          "Beneficiários, prescrições e quantidades",
+          "Entregas, estoque e pagamentos"
+        ],
+        "verifiedFacts": [
+          "A Ata decorre do Pregão Eletrônico nº 002/2026 e do processo nº 1.346/2026.",
+          "O objeto é a aquisição futura e eventual de leite especial e fórmulas nutricionais.",
+          "A publicação lista sete valores que somam R$ 1.085.845,80.",
+          "A vigência é de 12 meses e a assinatura ocorreu em 22 de junho de 2026."
+        ],
+        "contextToFind": [
+          "Produtos, marcas de referência e quantidades",
+          "Número de pacientes atendidos",
+          "Critérios de entrega e dispensação",
+          "Ordens de fornecimento já emitidas"
+        ],
+        "reportingQuestions": [
+          "Quantos pacientes dependem das fórmulas?",
+          "Quais itens concentram o maior valor?",
+          "Há fornecimento por decisão judicial?",
+          "Como será evitada falta de estoque?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Campo Limpo de Goiás",
+          "Equipe de nutrição e assistência farmacêutica",
+          "Fornecedores registrados",
+          "Conselho Municipal de Saúde"
+        ],
+        "dataCrossChecks": [
+          "Pregão nº 002/2026 e planilha",
+          "Prescrições e relatórios anonimizados de demanda",
+          "Ordens de fornecimento e estoque",
+          "Empenhos e pagamentos por fornecedor"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 1,09 milhão já foi gasto.",
+          "Não identificar pacientes.",
+          "Não tratar a soma como obrigação de compra.",
+          "Não confundir esta ata com as outras três atas publicadas nas mesmas páginas."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Sete fornecedores e outros pregões contíguos na mesma página; conferir a planilha antes da matéria final."
+      }
+    },
+    {
+      "id": "jul26-agm-114602-8E820925-147",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · página 40"
+      },
+      "editorial": {
+        "mainAngle": "Itauçu registrou R$ 164,5 mil para aquisição parcelada de insulinas destinadas a pacientes hipossuficientes e pessoas atendidas por mandados judiciais.",
+        "whyItMatters": "O fornecimento atende pacientes que dependem de tratamento contínuo e combina demanda regular da rede com cumprimento de decisões judiciais.",
+        "headlineOptions": [
+          "Itauçu registra R$ 164,5 mil para compra de insulinas",
+          "Ata garante fornecimento parcelado de insulina por 12 meses em Itauçu",
+          "Saúde de Itauçu contrata duas empresas para fornecer insulina"
+        ],
+        "leadDirection": "Abrir com o total de R$ 164.506,08, o público atendido, as duas empresas e a vigência; não apresentar o total como gasto realizado.",
+        "storyStructure": [
+          "Objeto, valor e beneficiários",
+          "Fornecedores e vigência",
+          "Tipos e quantidades de insulina",
+          "Estoque, dispensação e pagamentos"
+        ],
+        "verifiedFacts": [
+          "A ata decorre do Pregão Eletrônico nº 04/2026 e do processo nº 2.762/2026.",
+          "As contratadas são Drogaria Olímpica Ltda. - ME e Uni Hospitalar Ceará Ltda.",
+          "O valor total do certame é R$ 164.506,08.",
+          "O objeto é a aquisição parcelada de insulinas para pacientes hipossuficientes cadastrados no SUS e beneficiários de mandado de segurança.",
+          "A vigência vai de 3 de julho de 2026 a 3 de julho de 2027."
+        ],
+        "contextToFind": [
+          "Tipos, quantidades e preços das insulinas",
+          "Número de pacientes atendidos",
+          "Divisão do valor entre fornecedores",
+          "Consumo e estoque da rede"
+        ],
+        "reportingQuestions": [
+          "Quantos pacientes serão atendidos?",
+          "Quais insulinas integram a ata?",
+          "Quanto cabe a cada empresa?",
+          "Qual o protocolo para evitar interrupção do tratamento?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Itauçu",
+          "Assistência farmacêutica municipal",
+          "Drogaria Olímpica",
+          "Uni Hospitalar Ceará"
+        ],
+        "dataCrossChecks": [
+          "Pregão nº 04/2026 e planilha de itens",
+          "Atas e ordens de fornecimento",
+          "Relatórios de dispensação anonimizados",
+          "Empenhos e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 164,5 mil já foram pagos.",
+          "Não identificar pacientes ou processos médicos individuais.",
+          "Não dividir o total entre as empresas sem a planilha."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114602-9AF980C3-51",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · página 14"
+      },
+      "editorial": {
+        "mainAngle": "Campo Limpo de Goiás registrou até R$ 769,7 mil para medicamentos e insumos farmacológicos, distribuídos entre dez fornecedores.",
+        "whyItMatters": "A ata abastece a rede municipal de saúde e reúne vários lotes; o acompanhamento deve separar teto registrado, requisições, entregas e pagamentos.",
+        "headlineOptions": [
+          "Campo Limpo registra R$ 769,7 mil em medicamentos e insumos",
+          "Dez fornecedores integram ata farmacológica de Campo Limpo",
+          "Saúde poderá adquirir até R$ 769,7 mil em material farmacológico"
+        ],
+        "leadDirection": "Informar que os dez valores publicados somam R$ 769.746,80 e que o registro não comprova compra imediata; corrigir a mistura de valores do pacote automático pela leitura da página.",
+        "storyStructure": [
+          "Objeto e teto calculado",
+          "Fornecedores e lotes",
+          "Medicamentos, insumos e demanda",
+          "Ordens, entregas e pagamentos"
+        ],
+        "verifiedFacts": [
+          "A ata decorre do Pregão Eletrônico nº 004/2026 e do processo nº 1.348/2026.",
+          "O objeto é a aquisição futura e eventual de medicamentos e insumos farmacológicos.",
+          "A página lista dez valores que somam R$ 769.746,80.",
+          "A vigência é de 12 meses e a assinatura ocorreu em 22 de junho de 2026."
+        ],
+        "contextToFind": [
+          "Tabela de itens e preços por fornecedor",
+          "Quantidade prevista e estoque atual",
+          "Ordens já emitidas",
+          "Comparação com aquisições anteriores"
+        ],
+        "reportingQuestions": [
+          "Quais itens têm maior peso no total?",
+          "Quanto será requisitado no primeiro semestre da ata?",
+          "Houve itens sem proposta?",
+          "Como será controlado o abastecimento?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Campo Limpo de Goiás",
+          "Pregoeira e fiscais da ata",
+          "Fornecedores registrados",
+          "Conselho Municipal de Saúde"
+        ],
+        "dataCrossChecks": [
+          "Pregão nº 004/2026 e planilha",
+          "Atas, ordens de fornecimento e notas fiscais",
+          "Empenhos e pagamentos por CNPJ",
+          "Estoque e consumo da assistência farmacêutica"
+        ],
+        "doNotState": [
+          "Não usar os valores automáticos sem a correção feita na página oficial.",
+          "Não afirmar que R$ 769,7 mil já foram pagos.",
+          "Não somar valores de outras atas publicadas na mesma página.",
+          "Não tratar teto registrado como compra obrigatória."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "A extração automática misturou valores da ata anterior. O total de R$ 769.746,80 foi reconstituído diretamente da página 14 e exige revisão humana."
+      }
+    },
+    {
+      "id": "jul26-agm-114602-B08BDE0A-10",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · página 3"
+      },
+      "editorial": {
+        "mainAngle": "A Ata nº 004 de Alexânia reserva até R$ 117,4 mil à Profi Comércio de Alimentos; ela integra um conjunto de cinco atas que soma R$ 357,2 mil.",
+        "whyItMatters": "A publicação dividiu a mesma compra de alimentos entre cinco fornecedores. A cobertura consolidada mostra o custo total e evita duplicação de pauta.",
+        "headlineOptions": [
+          "Cinco atas de alimentos somam R$ 357,2 mil em Alexânia",
+          "Profi integra registro de gêneros alimentícios de Alexânia",
+          "Pregão de alimentos é dividido entre cinco empresas em Alexânia"
+        ],
+        "leadDirection": "Incorporar a Ata nº 004 à pauta consolidada do Pregão nº 028/2026; informar o teto individual de R$ 117.369,00 e o total de R$ 357.233,65 das cinco atas.",
+        "storyStructure": [
+          "Total e finalidade do pregão",
+          "Cinco atas, fornecedores e valores",
+          "Itens e órgãos participantes",
+          "Entregas e execução financeira"
+        ],
+        "verifiedFacts": [
+          "A Ata nº 004 decorre do Pregão Eletrônico nº 028/2026 e do processo nº 4.571/2026.",
+          "A fornecedora é Profi Comércio de Alimentos Ltda., CNPJ 52.139.016/0001-83.",
+          "O valor total da Ata nº 004 é R$ 117.369,00.",
+          "A vigência é de 12 meses.",
+          "As cinco atas publicadas do mesmo pregão somam R$ 357.233,65."
+        ],
+        "contextToFind": [
+          "Itens e quantidades destinados à Profi",
+          "Órgãos que requisitarão cada lote",
+          "Critérios de qualidade e entrega",
+          "Execução por fornecedor"
+        ],
+        "reportingQuestions": [
+          "Que alimentos cabem à Ata nº 004?",
+          "Quais órgãos usarão os lotes?",
+          "Quanto já foi requisitado?",
+          "Como serão fiscalizados perecíveis e carnes?"
+        ],
+        "peopleToHear": [
+          "Prefeitura de Alexânia",
+          "Profi Comércio de Alimentos Ltda.",
+          "Gestores do Fundo Ambiental e da AMTTM",
+          "Fiscais das atas"
+        ],
+        "dataCrossChecks": [
+          "Pregão nº 028/2026",
+          "Atas nº 001 a 005",
+          "Planilha de lotes",
+          "Ordens, notas fiscais e pagamentos"
+        ],
+        "doNotState": [
+          "Não publicar esta ata como uma contratação isolada do pregão.",
+          "Não afirmar que R$ 117,4 mil foram pagos.",
+          "Não duplicar o valor na soma consolidada.",
+          "Não presumir entrega integral."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Fundir com o brief da Ata nº 003 e cobrir o conjunto das cinco atas em uma única matéria."
+      }
+    },
+    {
+      "id": "jul26-agm-114602-E3E95AB5-50",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T08:25:00-03:00",
+      "source": {
+        "documentSha256": "fb87c7c331e02e700a1f071a4badaeba06c1bea449022310b65469ccfefe18db",
+        "documentReference": "Edição 3678 · páginas 13 a 14"
+      },
+      "editorial": {
+        "mainAngle": "Campo Limpo de Goiás registrou até R$ 1,26 milhão para materiais hospitalares, distribuídos entre 12 fornecedores.",
+        "whyItMatters": "A ata envolve itens usados diretamente no atendimento e tem o maior valor entre os quatro registros da Saúde publicados em sequência.",
+        "headlineOptions": [
+          "Campo Limpo registra R$ 1,26 milhão em material hospitalar",
+          "Doze empresas integram ata hospitalar da Saúde de Campo Limpo",
+          "Ata de materiais hospitalares chega a R$ 1,26 milhão"
+        ],
+        "leadDirection": "Usar o total reconstituído de R$ 1.257.554,97 a partir dos 12 valores impressos e explicar que a extração automática leu três cifras de forma incorreta; não publicar sem revisão da planilha.",
+        "storyStructure": [
+          "Objeto e teto reconstituído",
+          "Doze fornecedores e valores",
+          "Itens e demanda da rede",
+          "Ordens, entregas e pagamentos"
+        ],
+        "verifiedFacts": [
+          "A ata decorre do Pregão Eletrônico nº 003/2026 e do processo nº 1.347/2026.",
+          "O objeto é a aquisição futura e eventual de material hospitalar.",
+          "A página lista 12 fornecedores e 12 valores que somam R$ 1.257.554,97.",
+          "Entre os valores impressos estão R$ 706.933,69 para Realmed, R$ 10.740,00 para Signaz e R$ 864,00 para Apamed, cifras que foram mal interpretadas pela extração automática.",
+          "A vigência é de 12 meses e a assinatura ocorreu em 22 de junho de 2026."
+        ],
+        "contextToFind": [
+          "Planilha de itens, quantidades e preços",
+          "Valor total formal da ata no processo",
+          "Unidades beneficiadas e estoque atual",
+          "Ordens de fornecimento emitidas"
+        ],
+        "reportingQuestions": [
+          "Quais materiais concentram a maior parte do valor?",
+          "O total reconstituído coincide com o processo eletrônico?",
+          "Quanto já foi requisitado?",
+          "Há itens fracassados ou sem fornecedor?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Campo Limpo de Goiás",
+          "Pregoeira e fiscais da ata",
+          "Fornecedores registrados",
+          "Conselho Municipal de Saúde"
+        ],
+        "dataCrossChecks": [
+          "Pregão nº 003/2026 e planilha oficial",
+          "Ata integral no portal municipal",
+          "Ordens de fornecimento e notas fiscais",
+          "Empenhos e pagamentos por CNPJ"
+        ],
+        "doNotState": [
+          "Não usar R$ 299.436,96 como total da ata; ele é o valor de um fornecedor.",
+          "Não afirmar que R$ 1,26 milhão já foi gasto ou pago.",
+          "Não confiar nas três cifras mal formatadas da extração automática.",
+          "Não somar valores de outras atas contíguas."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Há erros objetivos de leitura monetária no pacote automático. Confirmar o total no processo do pregão antes da publicação final."
       }
     }
   ]
