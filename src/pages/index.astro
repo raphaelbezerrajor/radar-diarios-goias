@@ -30,11 +30,11 @@ const metrics = [
 ];
 ---
 
-<BaseLayout title="Pauteiro | Documentos públicos, pautas e bases municipais" description="Consulte atos públicos, contratos, Diário Oficial, Câmara e TCM de Trindade junto da cobertura estadual de Goiás.">
+<BaseLayout title="Pauteiro | Notícias e documentos públicos de Goiás" description="Notícias extraídas de atos públicos, contratos, diários oficiais e órgãos de controle de Goiás e seus municípios, com a fonte original preservada.">
   <section class="opening-band">
     <div class="shell opening-grid">
       <div class="opening-copy">
-        <p class="section-kicker section-kicker-light">Notícias públicas · Trindade + Goiás</p>
+        <p class="section-kicker section-kicker-light">Notícias públicas · Goiás e seus municípios</p>
         <h1>Notícia pública, documento por documento.</h1>
         <p class="page-summary">O Pauteiro procura o que importa nos documentos públicos: dinheiro, contratos, decisões, mudanças e efeitos sobre a vida da cidade. A burocracia continua pesquisável, mas não ocupa a capa.</p>
         <form class="quick-search" action={`${baseHref}busca/`} method="get">
@@ -116,18 +116,18 @@ const metrics = [
     <div class="shell split-grid acts-package">
       <div>
         <SectionHeader
-          kicker="Atos públicos"
-          title="O que merece atenção em Trindade"
-          intro="Esta seleção privilegia dinheiro público, contratações, políticas, obras, serviços e decisões com impacto. Os demais atos continuam disponíveis na busca documental."
-          actionHref={`${baseHref}busca/?city=Trindade&year=all`}
-          actionLabel="Consultar o repositório"
+          kicker="Cobertura municipal"
+          title="O que merece atenção em Goiás"
+          intro="Esta seleção reúne dinheiro público, contratações, políticas, obras, serviços e decisões com impacto, independentemente do município de origem. Os demais atos continuam disponíveis na busca documental."
+          actionHref={`${baseHref}busca/?year=${encodeURIComponent(siteData.latestYear || "all")}`}
+          actionLabel="Ver todos os atos"
         />
         <div class="brief-list">
           {actsBriefs.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}
         </div>
       </div>
       <aside class="coverage-card">
-        <p class="section-kicker">O que já temos</p>
+        <p class="section-kicker">Base local em destaque</p>
         <h2>Oito anos catalogados e o acervo estruturado entrando em publicação.</h2>
         <dl class="coverage-list">
           <div><dt>Edições catalogadas</dt><dd>{compactNumber(siteData.trindadeStats.status.coverage[0].available)}</dd></div>

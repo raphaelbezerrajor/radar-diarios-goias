@@ -12,6 +12,7 @@ import {
   isPrimaryOfficialSource
 } from "../src/lib/editorial/document-news.mjs";
 import { applyApprovedCuration } from "../src/lib/editorial/curation.mjs";
+import { buildFrontPagePackage, rankFrontPageStories } from "../src/lib/editorial/front-page.mjs";
 
 const root = process.cwd();
 const generatedDir = path.join(root, "src", "generated");
@@ -471,25 +472,6 @@ function sortForSearch(items) {
   });
 }
 
-function pickLead(items) {
-  const curatedItems = items.filter((item) => item.publicationMode === "curated_document_news");
-  const eligibleItems = curatedItems.length ? curatedItems : items;
-
-  return [...eligibleItems]
-    .sort((a, b) => {
-      const byDate = String(b.date || "").localeCompare(String(a.date || ""));
-      if (byDate !== 0) return byDate;
-      const editorialWeightA = a.publicationMode === "curated_document_news" ? 2 : a.publicationMode !== "automatic_document_news" ? 1 : 0;
-      const editorialWeightB = b.publicationMode === "curated_document_news" ? 2 : b.publicationMode !== "automatic_document_news" ? 1 : 0;
-      if (editorialWeightB !== editorialWeightA) return editorialWeightB - editorialWeightA;
-      const imageWeightA = a.image?.src ? 4 : 0;
-      const imageWeightB = b.image?.src ? 4 : 0;
-      if (imageWeightB !== imageWeightA) return imageWeightB - imageWeightA;
-      return (b.importance || 0) - (a.importance || 0);
-    })
-    .at(0);
-}
-
 function sourceCardFromLibrary(entry, stateCount) {
   return {
     id: entry.id,
@@ -632,10 +614,9 @@ async function main() {
     .map(applyCuration)
     .map(addPublicationMetadata);
   const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
-  const leadStory = pickLead(timelineNews);
-  const heroSidebar = sortForSearch(
-    timelineNews.filter((item) => item.id !== leadStory?.id)
-  ).slice(0, 3);
+  const frontPage = buildFrontPagePackage(timelineNews);
+  const leadStory = frontPage.lead;
+  const heroSidebar = frontPage.sidebar;
 
   const stateFront = sortForSearch(stateRecords.map(applyCuration)
     .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
@@ -714,7 +695,7 @@ async function main() {
       year: bucket.label,
       count: bucket.count,
       href: `/busca/?year=${bucket.label}`,
-      lead: pickLead(items.filter((item) => item.recordType === "story")) || pickLead(items),
+      lead: rankFrontPageStories(items.filter((item) => item.recordType === "story")).at(0) || null,
       cities: countBy(items.filter((item) => item.city), (item) => item.city).slice(0, 3)
     };
   });
