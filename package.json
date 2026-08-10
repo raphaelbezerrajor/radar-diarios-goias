@@ -8,6 +8,7 @@
     "sync:trindade": "node scripts/sync-trindade-data.mjs",
     "news:previews": "python scripts/render-source-previews.py --limit 24",
     "news:july-previews": "python scripts/render-july-previews.py --limit 24",
+    "news:control-previews": "python scripts/render-control-previews.py",
     "editorial:queue": "node scripts/build-curation-queue.mjs",
     "build:data": "node scripts/build-site-data.mjs",
     "build": "node scripts/build-site-data.mjs && astro build",

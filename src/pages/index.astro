@@ -14,6 +14,8 @@ const yearCards = siteData.yearSnapshots.slice(0, 6);
 const stateFeatured = siteData.stateFront.slice(0, 2);
 const stateBriefs = siteData.stateFront.slice(2, 6);
 const actsBriefs = siteData.actsFront.slice(0, 6);
+const controlFeatured = siteData.controlFront.slice(0, 2);
+const controlBriefs = siteData.controlFront.slice(2, 8);
 const quickCities = siteData.priorityMunicipalities.slice(0, 6).map((item) => ({
   label: item.name,
   href: `${baseHref}busca/?city=${encodeURIComponent(item.name)}&year=${encodeURIComponent(siteData.latestYear || "")}`
@@ -97,6 +99,26 @@ const metrics = [
   </section>
 
   <MetricStrip items={metrics} />
+
+  <section class="section-band section-band-newsprint content-auto">
+    <div class="shell">
+      <SectionHeader
+        kicker="Fiscalização e decisões"
+        title="O que TCM e TCE decidiram nesta semana"
+        intro="Multas, cautelares, correções e cobranças entram aqui pelo efeito real da decisão. Apuração preliminar é identificada como apuração; contrato, débito e pagamento não são tratados como a mesma coisa."
+        actionHref={`${baseHref}busca/?q=${encodeURIComponent("TCM TCE")}&year=2026`}
+        actionLabel="Pesquisar órgãos de controle"
+      />
+      <div class="headline-package">
+        <div class="story-grid story-grid-featured">
+          {controlFeatured.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}
+        </div>
+        <div class="brief-list">
+          {controlBriefs.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="hide" />)}
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section-band platform-band content-auto">
     <div class="shell platform-callout">
