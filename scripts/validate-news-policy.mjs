@@ -1,6 +1,7 @@
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { validateEditorialBrief } from "../src/lib/editorial/curation.mjs";
+import { buildFrontPagePackage } from "../src/lib/editorial/front-page.mjs";
 
 const root = process.cwd();
 const readJson = async (...parts) => JSON.parse(await readFile(path.join(root, ...parts), "utf8"));
@@ -27,8 +28,16 @@ assert(julyIndex.records.every((item, index, items) => index === 0 || items[inde
 assert(site.timeline.year === site.metrics.currentYear, "A linha do tempo não usa o ano editorial corrente.");
 assert(site.timeline.stories.every((item) => Number(item.year) === site.timeline.year), "A linha do tempo mistura fatos históricos com o ano corrente.");
 assert(site.leadStory.year === site.timeline.year, "A manchete principal não pertence ao ano corrente.");
-assert(site.leadStory.publicationMode === "curated_document_news", "A manchete principal não passou pela curadoria editorial.");
-assert(!/\bpublica\s+(?:extrato|portaria|termo)\b/i.test(site.leadStory.title), "A manchete principal ainda reproduz o cabeçalho burocrático do ato.");
+const expectedFrontPage = buildFrontPagePackage(records.filter(
+  (item) => item.recordType === "story" && Number(item.year) === site.timeline.year
+));
+assert(site.leadStory.id === expectedFrontPage.lead?.id, "A manchete principal não é a pauta de maior força editorial.");
+assert(site.leadStory.sourceType === "official_document", "A manchete principal não está apoiada em documento oficial.");
+assert(Number(site.leadStory.importance) > 0, "A manchete principal não possui valor-notícia calculado.");
+assert(
+  site.heroSidebar.every((item) => item.id !== site.leadStory.id),
+  "A manchete principal foi repetida nos destaques laterais."
+);
 assert(curationQueue.candidates.length >= 150, "A fila de curadoria perdeu pautas relevantes.");
 assert(curationQueue.summary.candidates === curationQueue.candidates.length, "O resumo da fila de curadoria diverge dos candidatos.");
 assert(curationQueue.candidates.every((item, index, items) =>

@@ -9,6 +9,54 @@ import {
   selectCurationCandidates,
   validateEditorialBrief
 } from "../src/lib/editorial/curation.mjs";
+import { buildFrontPagePackage, rankFrontPageStories } from "../src/lib/editorial/front-page.mjs";
+
+test("a manchete compete por força editorial sem reserva para uma cidade ou curadoria", () => {
+  const stories = [
+    {
+      id: "trindade-curada",
+      recordType: "story",
+      city: "Trindade",
+      date: "2026-07-23",
+      importance: 77,
+      prominence: "cover",
+      publicationMode: "curated_document_news"
+    },
+    {
+      id: "palmeiras-atual",
+      recordType: "story",
+      city: "Palmeiras",
+      date: "2026-08-10",
+      importance: 95,
+      prominence: "cover",
+      publicationMode: "automatic_document_news"
+    }
+  ];
+
+  assert.equal(rankFrontPageStories(stories).at(0).id, "palmeiras-atual");
+});
+
+test("uma pauta excepcional pode superar uma pauta ligeiramente mais recente", () => {
+  const ranked = rankFrontPageStories([
+    { id: "atual", recordType: "story", city: "A", date: "2026-08-10", importance: 95, prominence: "cover" },
+    { id: "forte", recordType: "story", city: "B", date: "2026-08-09", importance: 100, prominence: "cover" }
+  ]);
+
+  assert.equal(ranked.at(0).id, "forte");
+});
+
+test("os destaques laterais evitam repetir o município enquanto houver alternativa", () => {
+  const stories = [
+    { id: "a1", recordType: "story", city: "A", date: "2026-08-10", importance: 99 },
+    { id: "a2", recordType: "story", city: "A", date: "2026-08-10", importance: 98 },
+    { id: "b1", recordType: "story", city: "B", date: "2026-08-10", importance: 90 },
+    { id: "c1", recordType: "story", city: "C", date: "2026-08-10", importance: 80 },
+    { id: "d1", recordType: "story", city: "D", date: "2026-08-10", importance: 70 }
+  ];
+  const frontPage = buildFrontPagePackage(stories);
+
+  assert.deepEqual(frontPage.sidebar.map((item) => item.city), ["B", "C", "D"]);
+});
 
 test("separa valor-notícia de rotina burocrática", () => {
   const routine = assessActNewsValue({
