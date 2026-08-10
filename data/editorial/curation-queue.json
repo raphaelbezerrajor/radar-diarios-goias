@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-08-06T12:09:05.495733+00:00",
+  "generatedAt": "2026-08-10T00:28:30.794335+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 8,
     "from": "2026-07-01",
-    "to": "2026-08-06"
+    "to": "2026-08-07"
   },
   "policy": {
     "minimumScore": 85,
@@ -19,13 +19,804 @@
   },
   "summary": {
     "candidates": 240,
-    "pending": 223,
-    "withBrief": 17,
-    "existingBriefs": 17,
+    "pending": 211,
+    "withBrief": 29,
+    "existingBriefs": 29,
     "invalidBriefs": 0
   },
   "invalidBriefs": [],
   "candidates": [
+    {
+      "id": "jul26-senador-canedo-660-668c7550a872-5",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "actType": "pregao",
+      "typeLabel": "Pregão",
+      "priority": 100,
+      "importance": 100,
+      "curationReasons": [
+        "alto valor-notícia calculado"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "PREGÃO ELETRÔNICO Nº 042/2026. EXTRATO DA ATA REGISTRO DE PREÇO",
+        "extractedTitle": "Senador Canedo publica PREGÃO ELETRÔNICO Nº 042/2026. EXTRATO DA ATA REGISTRO DE PREÇO",
+        "extractedDeck": "Objeto: contratação de empresa especializada para AQUISIÇÃO DE ELETRODOMÉSTICOS, serviços contínuos de locação de software integrado de VISANDO ATENDER ÀS NECESSIDADES DA sistemas multi entidade de gestão pública, com módulos ADMINISTRAÇÃO, tendo como vencedor a integrados, para as diversas…",
+        "extractedParagraphs": [
+          "SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO PROCESSO 1DOC: 8.400/2026. publicou pregão na edição 464 de Diário Oficial de Senador Canedo, datada de 7 de agosto de 2026. Objeto: contratação de empresa especializada para AQUISIÇÃO DE ELETRODOMÉSTICOS, serviços contínuos de locação de software integrado de VISANDO ATENDER ÀS NECESSIDADES DA sistemas multi entidade de gestão pública, com módulos ADMINISTRAÇÃO, tendo como vencedor a integrados, para as diversas….",
+          "O maior valor monetário identificado no texto é R$ 1.884.461,00; o ato cita os CNPJs 01.258.027/0001-41, 25.107.525/0001-51, 29.391.887/0001-78, 40.050.950/0001-45; as referências documentais incluem 1DOC, 03.07.28.001-, 14.133/2021. A conferência deve ser feita no documento original, em páginas 11 a 12."
+        ],
+        "evidenceExcerpt": "EXTRATO SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO PROCESSO 1DOC: 8.400/2026. PREGÃO ELETRÔNICO Nº 042/2026. EXTRATO DA ATA REGISTRO DE PREÇO - PREGÃO ELETRONICO Nº064/2026 JULGAMENTO: MENOR PREÇO GLOBAL EXTRATO DA ATA REGISTRO DE PREÇO - CONTRATO ADMINISTRATIVO Nº.03.07.28.001- PREGÃO ELETRONICO Nº064/2026 2026. Contratantes: MUNICÍPIO DE SENADOR CANEDO, inscrito no CNPJ/MF nº. 25.107.525/0001- O MUNICIPIO DE SENADOR CANEDO, CNPJ/MF 51, por intermédio da Secretaria Municipal de Inovação nº. 25.107.525/0001-51, por…",
+        "publicBody": "SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO PROCESSO 1DOC: 8.400/2026.",
+        "values": [
+          {
+            "original": "R$ 13.150,00",
+            "value": 13150,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 2.045,97",
+            "value": 2045.97,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 60.424,97",
+            "value": 60424.97,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$1.884.461,00",
+            "value": 1884461,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$158.439,00",
+            "value": 158439,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "01.258.027/0001-41",
+          "25.107.525/0001-51",
+          "29.391.887/0001-78",
+          "40.050.950/0001-45",
+          "55.216.226/0001-16"
+        ],
+        "referenceNumbers": [
+          "1DOC",
+          "03.07.28.001-",
+          "14.133/2021"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial de Senador Canedo",
+        "label": "SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO PROCESSO 1DOC: 8.400/2026.",
+        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-08-2026",
+        "editionId": "senador-canedo:660",
+        "editionNumber": "464",
+        "pageStart": 11,
+        "pageEnd": 12,
+        "documentReference": "Edição 464 · páginas 11 a 12",
+        "documentSha256": "07fbfb0d262dd39dd9ee22af9b82956016db51d7742d91ae127b872fca1c7912",
+        "actSha256": "668c7550a87225fe26134dbe2c9fbd5a77af3767158116f5f5b90075f4d68821"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-agm-114601-E73C41D7-180",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Santa Rita do Araguaia",
+      "scope": "Municipal",
+      "actType": "pregao",
+      "typeLabel": "Pregão",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "PREGÃO PRESENCIAL sob o nº 004/2024, dos contratos de nº",
+        "extractedTitle": "Santa Rita do Araguaia publica PREGÃO PRESENCIAL sob o nº 004/2024, dos contratos de nº",
+        "extractedDeck": "SECRETARIA DE ADMINISTRAÇÃO PRIMEIRO TERMO ADITIVO DE PRAZO AOS CONTRATOS N° 070, 071, 072, 074 E 076/2025.",
+        "extractedParagraphs": [
+          "Município de Santa Rita do Araguaia – GO. publicou pregão na edição 3677 de Diário Municipal de Goiás — AGM, datada de 7 de agosto de 2026. SECRETARIA DE ADMINISTRAÇÃO PRIMEIRO TERMO ADITIVO DE PRAZO AOS CONTRATOS N° 070, 071, 072, 074 E 076/2025.",
+          "O maior valor monetário identificado no texto é R$ 563.542,48; o ato cita os CNPJs 17.560.071/0002-22, 35.398.112/0001-27; as referências documentais incluem 4172, 076/2025, 070. A conferência deve ser feita no documento original, em página 74."
+        ],
+        "evidenceExcerpt": "SECRETARIA DE ADMINISTRAÇÃO PRIMEIRO TERMO ADITIVO DE PRAZO AOS CONTRATOS N° 070, 071, 072, 074 E 076/2025. Processo Administrativo nº 4172, 4466, 4467, 4527, 4306/2026 Assunto: Primeiro Termo Aditivo de Prazo do processo licitatório PREGÃO PRESENCIAL sob o nº 004/2024, dos contratos de nº 070, 071, 072, 074/2025, referente a contratação da empresa FRUTARIA PAULISTA COMERCIO DE FRUTAS E LEGUMES LTDA CNPJ sob o n.º 17.560.071/0002-22 e do contrato n° 076/2025 SUPERMERCADO JM LTDA - CNPJ sob o n.º…",
+        "publicBody": "Município de Santa Rita do Araguaia – GO.",
+        "values": [
+          {
+            "original": "R$ 563.542,48",
+            "value": 563542.48,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 39.705,00",
+            "value": 39705,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "17.560.071/0002-22",
+          "35.398.112/0001-27"
+        ],
+        "referenceNumbers": [
+          "4172",
+          "076/2025",
+          "070"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Municipal de Goiás — AGM",
+        "label": "Município de Santa Rita do Araguaia – GO.",
+        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114601_2026-08-06_21059b506504e2199a06de63e5ce2bbb.pdf",
+        "editionId": "agm:114601",
+        "editionNumber": "3677",
+        "pageStart": 74,
+        "pageEnd": 74,
+        "documentReference": "Edição 3677 · página 74",
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "actSha256": "41b7e9f31c30d41165e21147b77d0a369b566ccb618d99e1bb6e039e62e2c5b1"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-agm-114601-F9D1DEB4-161",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Palmeiras",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº",
+        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº",
+        "extractedDeck": "81/2026 EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº.",
+        "extractedParagraphs": [
+          "Município de Palmeiras publicou contrato na edição 3677 de Diário Municipal de Goiás — AGM, datada de 7 de agosto de 2026. 81/2026 EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº.",
+          "O maior valor monetário identificado no texto é R$ 133.500,00; as referências documentais incluem 6195/2026. A conferência deve ser feita no documento original, em página 68."
+        ],
+        "evidenceExcerpt": "FMEB EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº. 81/2026 EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº. 81/2026, PROCESSO ADMINISTRATIVO N. 6195/2026 E PREGÃO ELETRONICO N. 91/2026, FUNDO MUNICIPAL DE EDUCAÇÃO BASICA- FMEB, DE NOME FANTASIA/COMERCIAL FUNDO MUNICIPAL DE EDUCAÇÃO BASICA- FMEB, NESTE ATO REPRESENTADO PELA SECRETÁRIA MUNICIPAL DE EDUCAÇÃO, A SRA. KATIA PEREIRA COELHO CAMARGO; E, DE OUTRO LADO, EBS EMPREENDIMENTOS LTDA; CLÁUSULA PRIMEIRA – DO OBJETO DO CONTRATO CONSTITUI O OBJETO DESTE INSTRUMENTO A…",
+        "publicBody": "Município de Palmeiras",
+        "values": [
+          {
+            "original": "R$ 133.500,00",
+            "value": 133500,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "6195/2026"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Municipal de Goiás — AGM",
+        "label": "Município de Palmeiras",
+        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114601_2026-08-06_21059b506504e2199a06de63e5ce2bbb.pdf",
+        "editionId": "agm:114601",
+        "editionNumber": "3677",
+        "pageStart": 68,
+        "pageEnd": 68,
+        "documentReference": "Edição 3677 · página 68",
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "actSha256": "26ea535a78e9019b35c00e0f9f5777d575c0748bf5f888450420b1eea80cdcc1"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-660-a2ef3d738e2d-7",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "actType": "pregao",
+      "typeLabel": "Pregão",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "PREGÃO ELETRÔNICO Nº 042/2026",
+        "extractedTitle": "Senador Canedo publica PREGÃO ELETRÔNICO Nº 042/2026",
+        "extractedDeck": "Objeto: contratação de empresa especializada para JULGAMENTO: MENOR PREÇO GLOBAL serviços contínuos de locação de software integrado de sistemas multi entidade de gestão pública, com módulos 12 Edição nº 464 Publicado em 07/08/2026 CONTRATO ADMINISTRATIVO Nº.07.07.28.001- 2026",
+        "extractedParagraphs": [
+          "município de Senador Canedo, incluso a prestação inscrito no CNPJ/MF nº. 09.097.711/0001-09, por publicou pregão na edição 464 de Diário Oficial de Senador Canedo, datada de 7 de agosto de 2026. Objeto: contratação de empresa especializada para JULGAMENTO: MENOR PREÇO GLOBAL serviços contínuos de locação de software integrado de sistemas multi entidade de gestão pública, com módulos 12 Edição nº 464 Publicado em 07/08/2026 CONTRATO ADMINISTRATIVO Nº.07.07.28.001- 2026.",
+          "O maior valor monetário identificado no texto é R$ 752.070,00; o ato cita os CNPJs 00.999.472/0001-08, 01.258.027/0001-41, 04.927.847/0001-77, 09.097.711/0001-09; as referências documentais incluem 05.07.28.001-, 07.07.28.001-2026, 1DOC, 07.07.28.001-, 09.07.28.001-2026. A conferência deve ser feita no documento original, em páginas 12 a 13."
+        ],
+        "evidenceExcerpt": "CONTRATO ADMINISTRATIVO Nº.05.07.28.001- 2026. CONTRATO Nº.07.07.28.001-2026 - PE.042/2026 - Contratantes: o INSTITUTO DE ASSISTÊNCIA A 1DOC 8.400/2026 - LOCAÇÃO DE SOFTWARE SAÚDE DO SERVIDOR PÚBLICO DE SENADOR INTEGRADO - IPM SISTEMAS LTD- SENAPREV CANEDO - IAMESC, inscrito no CNPJ/MF nº.00.999.472/0001-08. EXTRATO Contratada: IPM SISTEMAS LTDA, Sociedade PROCESSO 1DOC: 8.400/2026. Empresária Limitada, inscrita no CNPJ/MF nº.01.258.027/0001-41. PREGÃO ELETRÔNICO Nº 042/2026. Do Objeto: contratação de empresa…",
+        "publicBody": "município de Senador Canedo, incluso a prestação inscrito no CNPJ/MF nº. 09.097.711/0001-09, por",
+        "values": [
+          {
+            "original": "R$361.086,00",
+            "value": 361086,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$752.070,00",
+            "value": 752070,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "00.999.472/0001-08",
+          "01.258.027/0001-41",
+          "04.927.847/0001-77",
+          "09.097.711/0001-09"
+        ],
+        "referenceNumbers": [
+          "05.07.28.001-",
+          "07.07.28.001-2026",
+          "1DOC",
+          "07.07.28.001-",
+          "09.07.28.001-2026",
+          "09.07.28.001-",
+          "14.133/2021",
+          "002/202"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial de Senador Canedo",
+        "label": "município de Senador Canedo, incluso a prestação inscrito no CNPJ/MF nº. 09.097.711/0001-09, por",
+        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-08-2026",
+        "editionId": "senador-canedo:660",
+        "editionNumber": "464",
+        "pageStart": 12,
+        "pageEnd": 13,
+        "documentReference": "Edição 464 · páginas 12 a 13",
+        "documentSha256": "07fbfb0d262dd39dd9ee22af9b82956016db51d7742d91ae127b872fca1c7912",
+        "actSha256": "a2ef3d738e2d7aaca7f6225d87c1649fe826ee8db08559a78f41fd8b3c81f960"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-agm-114601-950F8931-13",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Alto Horizonte",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "EXTRATO DO CONTRATO Nº 09/2026",
+        "extractedTitle": "Alto Horizonte publica EXTRATO DO CONTRATO Nº 09/2026",
+        "extractedDeck": "OBJETO: CONTRATO PARA EXECUÇÃO DE OBRA/SERVIÇO DE REVITALIZAÇÃO DA PRAÇA DA BÍBLIA E REFORMA DA Goiás , 07 de Agosto de 2026 • Diario Municipal de Goiás • ANO XV | Nº 3677 www.diariomunicipal.com.br/agm 5 PRAÇA DA CASCATA, NO MUNICÍPIO DE ALTO HORIZONTE - GO, COM FORNECIMENTO DE MATERIAIS, MÃO DE…",
+        "extractedParagraphs": [
+          "MUNICÍPIO DE ALTO HORIZONTE publicou contrato na edição 3677 de Diário Municipal de Goiás — AGM, datada de 7 de agosto de 2026. OBJETO: CONTRATO PARA EXECUÇÃO DE OBRA/SERVIÇO DE REVITALIZAÇÃO DA PRAÇA DA BÍBLIA E REFORMA DA Goiás , 07 de Agosto de 2026 • Diario Municipal de Goiás • ANO XV | Nº 3677 www.diariomunicipal.com.br/agm 5 PRAÇA DA CASCATA, NO MUNICÍPIO DE ALTO HORIZONTE - GO, COM FORNECIMENTO DE MATERIAIS, MÃO DE….",
+          "O maior valor monetário identificado no texto é R$ 1.576.350,00; o ato cita os CNPJs 26.998.315/0001-63, 41.571.516/0001-73; as referências documentais incluem 09/2026, 2752/2026, 279/2025.. A conferência deve ser feita no documento original, em páginas 4 a 5."
+        ],
+        "evidenceExcerpt": "FMIN - FUNDO MUN DE INFRAESTRUTURA EXTRATO DO CONTRATO Nº 09/2026 EXTRATO DO CONTRATO Nº 09/2026 PROCESSO Nº 2752/2026 CONTRATANTE: FUNDO MUNICIPAL DE INFRAESTRUTURA DE ALTO HORIZONTE-GO – CNPJ Nº: 41.571.516/0001-73 CONTRATADA: K F P VIEIRA – SERVIÇOS LTDA - CNPJ N° 26.998.315/0001-63 OBJETO: CONTRATO PARA EXECUÇÃO DE OBRA/SERVIÇO DE REVITALIZAÇÃO DA PRAÇA DA BÍBLIA E REFORMA DA Goiás , 07 de Agosto de 2026 • Diario Municipal de Goiás • ANO XV | Nº 3677 www.diariomunicipal.com.br/agm 5 PRAÇA DA CASCATA, NO…",
+        "publicBody": "MUNICÍPIO DE ALTO HORIZONTE",
+        "values": [
+          {
+            "original": "R$ 1.576.350,00",
+            "value": 1576350,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "26.998.315/0001-63",
+          "41.571.516/0001-73"
+        ],
+        "referenceNumbers": [
+          "09/2026",
+          "2752/2026",
+          "279/2025."
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Municipal de Goiás — AGM",
+        "label": "MUNICÍPIO DE ALTO HORIZONTE",
+        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114601_2026-08-06_21059b506504e2199a06de63e5ce2bbb.pdf",
+        "editionId": "agm:114601",
+        "editionNumber": "3677",
+        "pageStart": 4,
+        "pageEnd": 5,
+        "documentReference": "Edição 3677 · páginas 4 a 5",
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "actSha256": "d3eea6164a44730bc0e221ba42694a89afcd24adeb04939561a86ae7ad10c272"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-agm-114601-42D08ED4-15",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Alto Horizonte",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 85,
+      "importance": 85,
+      "curationReasons": [
+        "alto valor-notícia calculado"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "EXTRATO DO CONTRATO ADMINISTRATIVO Nº 007/2026",
+        "extractedTitle": "Alto Horizonte publica EXTRATO DO CONTRATO ADMINISTRATIVO Nº 007/2026",
+        "extractedDeck": "Objeto: Contratação de serviços técnicos especializados de assessoria jurídica administrativa e consultiva, de natureza predominantemente intelectual, em caráter complementar, destinados ao atendimento das demandas do Fundo Municipal de Assistência Social, da Secretaria Municipal de Assistência…",
+        "extractedParagraphs": [
+          "Fundo Municipal de Assistência Social de Alto publicou contrato na edição 3677 de Diário Municipal de Goiás — AGM, datada de 7 de agosto de 2026. Objeto: Contratação de serviços técnicos especializados de assessoria jurídica administrativa e consultiva, de natureza predominantemente intelectual, em caráter complementar, destinados ao atendimento das demandas do Fundo Municipal de Assistência Social, da Secretaria Municipal de Assistência….",
+          "O maior valor monetário identificado no texto é R$ 164.400,00; o ato cita os CNPJs 11.154.801/0001-28, 46.381.843/0001-86; as referências documentais incluem 007/2026. A conferência deve ser feita no documento original, em página 5."
+        ],
+        "evidenceExcerpt": "SECRETARIA DE ASSISTENCIA SOCIAL EXTRATO DO CONTRATO ADMINISTRATIVO Nº 007/2026 EXTRATO DO CONTRATO ADMINISTRATIVO Nº 007/2026 Processo Administrativo nº: 14017/2026 Inexigibilidade de Licitação nº: 72/2026 Contratante: Fundo Municipal de Assistência Social de Alto Horizonte – GO, CNPJ nº 11.154.801/0001-28. Contratada: Eliana Rocha Lemos Sociedade Individual de Advocacia, CNPJ nº 46.381.843/0001-86. Objeto: Contratação de serviços técnicos especializados de assessoria jurídica administrativa e consultiva, de…",
+        "publicBody": "Fundo Municipal de Assistência Social de Alto",
+        "values": [
+          {
+            "original": "R$ 13.700,00",
+            "value": 13700,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 164.400,00",
+            "value": 164400,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "11.154.801/0001-28",
+          "46.381.843/0001-86"
+        ],
+        "referenceNumbers": [
+          "007/2026"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Municipal de Goiás — AGM",
+        "label": "Fundo Municipal de Assistência Social de Alto",
+        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114601_2026-08-06_21059b506504e2199a06de63e5ce2bbb.pdf",
+        "editionId": "agm:114601",
+        "editionNumber": "3677",
+        "pageStart": 5,
+        "pageEnd": 5,
+        "documentReference": "Edição 3677 · página 5",
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "actSha256": "68574b5ac8ec53998990de23952141afd2b62b274c12b1dcb7c509edd09eedf2"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-agm-114601-C22AE5B0-162",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Palmeiras",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 85,
+      "importance": 85,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº",
+        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº",
+        "extractedDeck": "82/2026 EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº.",
+        "extractedParagraphs": [
+          "Município de Palmeiras publicou contrato na edição 3677 de Diário Municipal de Goiás — AGM, datada de 7 de agosto de 2026. 82/2026 EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº.",
+          "O maior valor monetário identificado no texto é R$ 30.333,00; as referências documentais incluem 6195/2026. A conferência deve ser feita no documento original, em página 68."
+        ],
+        "evidenceExcerpt": "FMEB EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº. 82/2026 EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº. 82/2026, PROCESSO ADMINISTRATIVO N. 6195/2026 E PREGÃO ELETRONICO N. 91/2026, FUNDO MUNICIPAL DE EDUCAÇÃO BASICA- FMEB, DE NOME FANTASIA/COMERCIAL FUNDO MUNICIPAL DE EDUCAÇÃO BASICA- FMEB, NESTE ATO REPRESENTADO PELA SECRETÁRIA MUNICIPAL DE EDUCAÇÃO, A SRA. KATIA PEREIRA COELHO CAMARGO; E, DE OUTRO LADO, JOCELIO PIZZAS E SALGADOS LTDA; CLÁUSULA PRIMEIRA – DO OBJETO DO CONTRATO CONSTITUI O OBJETO DESTE…",
+        "publicBody": "Município de Palmeiras",
+        "values": [
+          {
+            "original": "R$ 30.333,00",
+            "value": 30333,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "6195/2026"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Municipal de Goiás — AGM",
+        "label": "Município de Palmeiras",
+        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114601_2026-08-06_21059b506504e2199a06de63e5ce2bbb.pdf",
+        "editionId": "agm:114601",
+        "editionNumber": "3677",
+        "pageStart": 68,
+        "pageEnd": 68,
+        "documentReference": "Edição 3677 · página 68",
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "actSha256": "7714a89fa86e3203a5ef9946bd06383866d987e5063063ec8293889bc53bf005"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-agm-114601-F1A56EC5-163",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Palmeiras",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 85,
+      "importance": 85,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº",
+        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº",
+        "extractedDeck": "83/2026 EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº.",
+        "extractedParagraphs": [
+          "Município de Palmeiras publicou contrato na edição 3677 de Diário Municipal de Goiás — AGM, datada de 7 de agosto de 2026. 83/2026 EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº.",
+          "O maior valor monetário identificado no texto é R$ 59.004,00; as referências documentais incluem 6195/2026. A conferência deve ser feita no documento original, em página 68."
+        ],
+        "evidenceExcerpt": "FMEB EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº. 83/2026 EXTRATO AO CONTRATO DE FORNECIMENTO FMEB Nº. 83/2026, PROCESSO ADMINISTRATIVO N. 6195/2026 E PREGÃO ELETRONICO N. 91/2026, FUNDO MUNICIPAL DE EDUCAÇÃO BASICA- FMEB, DE NOME FANTASIA/COMERCIAL FUNDO MUNICIPAL DE EDUCAÇÃO BASICA- FMEB, NESTE ATO REPRESENTADO PELA SECRETÁRIA MUNICIPAL DE EDUCAÇÃO, A SRA. KATIA PEREIRA COELHO CAMARGO; E, DE OUTRO LADO, ELIEZER MACEDO BATISTA; CLÁUSULA PRIMEIRA – DO OBJETO DO CONTRATO CONSTITUI O OBJETO DESTE INSTRUMENTO A…",
+        "publicBody": "Município de Palmeiras",
+        "values": [
+          {
+            "original": "R$ 59.004,00",
+            "value": 59004,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "6195/2026"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Municipal de Goiás — AGM",
+        "label": "Município de Palmeiras",
+        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114601_2026-08-06_21059b506504e2199a06de63e5ce2bbb.pdf",
+        "editionId": "agm:114601",
+        "editionNumber": "3677",
+        "pageStart": 68,
+        "pageEnd": 68,
+        "documentReference": "Edição 3677 · página 68",
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "actSha256": "d0bf7b73530d6354cc38d517c42a5b7e134b37af71a1fb88376a1b1fbd1d6817"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-anapolis-23134-b47e8dc194e6-22",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "actType": "dispensa",
+      "typeLabel": "Dispensa",
+      "priority": 85,
+      "importance": 81,
+      "curationReasons": [
+        "controle, correção ou responsabilização"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº rente ao Item 03 da Dispensa Eletrônica nº 030/2025;",
+        "extractedTitle": "Anápolis publica TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº rente ao Item 03 da Dispensa Eletrônica nº 030/2025;",
+        "extractedDeck": "APLICAR à empresa SALES FERREIRA SOLUÇÕES LTDA. multa compensatória correspondente a 10% (dez por cento) sobre o va‐ O Secretário Municipal de Administração, Gestão de Pessoas e Ino‐ lor do Item 03 inadimplido, determinando ao setor competente a apura‐ vação, com ful",
+        "extractedParagraphs": [
+          "Município de Anápolis publicou dispensa na edição 3.999/2026 de Diário Oficial de Anápolis, datada de 7 de agosto de 2026. APLICAR à empresa SALES FERREIRA SOLUÇÕES LTDA. multa compensatória correspondente a 10% (dez por cento) sobre o va‐ O Secretário Municipal de Administração, Gestão de Pessoas e Ino‐ lor do Item 03 inadimplido, determinando ao setor competente a apura‐ vação, com ful.",
+          "as referências documentais incluem 110/2026, 01123.00015819/2026-68, 2073/92.. A conferência deve ser feita no documento original, em páginas 4 a 5."
+        ],
+        "evidenceExcerpt": "TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº rente ao Item 03 da Dispensa Eletrônica nº 030/2025; 017/2025 – RETIFICAÇÃO IV – APLICAR à empresa SALES FERREIRA SOLUÇÕES LTDA. multa compensatória correspondente a 10% (dez por cento) sobre o va‐ O Secretário Municipal de Administração, Gestão de Pessoas e Ino‐ lor do Item 03 inadimplido, determinando ao setor competente a apura‐ vação, com fulcro no art. 2º do Decreto Municipal 51.848/2025, em ção do valor devido e a adoção das medidas administrativas necessárias face…",
+        "publicBody": "Município de Anápolis",
+        "values": [],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "110/2026",
+          "01123.00015819/2026-68",
+          "2073/92."
+        ],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Anápolis",
+        "label": "Município de Anápolis",
+        "url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/24388/ECmId2CpaHoKXPtiZsssYudKzuHe7eisCsm7DNvP.pdf",
+        "editionId": "anapolis:23134",
+        "editionNumber": "3.999/2026",
+        "pageStart": 4,
+        "pageEnd": 5,
+        "documentReference": "Edição 3.999/2026 · páginas 4 a 5",
+        "documentSha256": "555a5b6013a0fa53349a7d990b507d06f5c97c314ada6fa05c861176127da313",
+        "actSha256": "b47e8dc194e6db27bb8173888b35f625c426e55b2ca1d301f0a04a271dd0f45d"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-660-3f28f0c407fd-10",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "actType": "pregao",
+      "typeLabel": "Pregão",
+      "priority": 85,
+      "importance": 85,
+      "curationReasons": [
+        "alto valor-notícia calculado"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "PREGÃO ELETRÔNICO Nº 042/2026.dos serviços de instalação, implantação, migração de",
+        "extractedTitle": "Senador Canedo publica PREGÃO ELETRÔNICO Nº 042/2026.dos serviços de instalação, implantação, migração de",
+        "extractedDeck": "Objeto: contratação de empresa especializada para serviços contínuos de locação de software integrado de sistemas multi entidade de gestão pública, com módulos EXTRATO integrados, para as diversas secretarias, autarquias, PROCESSO 1DOC: 8.400/2026.fundos e câmara da administração municipal do…",
+        "extractedParagraphs": [
+          "município de Senador Canedo, incluso a prestação publicou pregão na edição 464 de Diário Oficial de Senador Canedo, datada de 7 de agosto de 2026. Objeto: contratação de empresa especializada para serviços contínuos de locação de software integrado de sistemas multi entidade de gestão pública, com módulos EXTRATO integrados, para as diversas secretarias, autarquias, PROCESSO 1DOC: 8.400/2026.fundos e câmara da administração municipal do….",
+          "O maior valor monetário identificado no texto é R$ 275.616,00; o ato cita os CNPJs 01.258.027/0001-41, 10.376.719/0001-85, 37.426.889/0001-83; as referências documentais incluem 18.07.28.001-2026, 1DOC, 14.133/2021, 18.07.28.001-, 19.07.28.001-. A conferência deve ser feita no documento original, em páginas 14 a 15."
+        ],
+        "evidenceExcerpt": "Contratada: IPM SISTEMAS LTDA, Sociedade Empresária Limitada, inscrita no CNPJ/MF CONTRATO Nº.18.07.28.001-2026 -PE 042/2026 - nº.01.258.027/0001-41. 1DOC 8.400/2026- LOCAÇÃO DE SOFTWARE INTEGRADO - IPM SISTEMAS LTDA - SANESCDo Objeto: contratação de empresa especializada para serviços contínuos de locação de software integrado de sistemas multi entidade de gestão pública, com módulos EXTRATO integrados, para as diversas secretarias, autarquias, PROCESSO 1DOC: 8.400/2026.fundos e câmara da administração municipal…",
+        "publicBody": "município de Senador Canedo, incluso a prestação",
+        "values": [
+          {
+            "original": "R$275.616,00",
+            "value": 275616,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$36.849,00",
+            "value": 36849,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "01.258.027/0001-41",
+          "10.376.719/0001-85",
+          "37.426.889/0001-83"
+        ],
+        "referenceNumbers": [
+          "18.07.28.001-2026",
+          "1DOC",
+          "14.133/2021",
+          "18.07.28.001-",
+          "19.07.28.001-",
+          "007/25"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial de Senador Canedo",
+        "label": "município de Senador Canedo, incluso a prestação",
+        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-08-2026",
+        "editionId": "senador-canedo:660",
+        "editionNumber": "464",
+        "pageStart": 14,
+        "pageEnd": 15,
+        "documentReference": "Edição 464 · páginas 14 a 15",
+        "documentSha256": "07fbfb0d262dd39dd9ee22af9b82956016db51d7742d91ae127b872fca1c7912",
+        "actSha256": "3f28f0c407fd6755bc1d352834398a49961f2988279aef61a26201da55bf4bab"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-660-40a479d145e4-40",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 85,
+      "importance": 85,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "DECRETO SUPLEMENTAR Nº 123",
+        "extractedTitle": "Senador Canedo publica DECRETO SUPLEMENTAR Nº 123",
+        "extractedDeck": "Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 543.289,00 distribuídos nas seguintes dotações: Suplementação ( + ) 543.289,00 01 03 04 SEC",
+        "extractedParagraphs": [
+          "SECRETARIA MUNICIPAL DE FAZENDA E FINANÇAS publicou decreto na edição 464 de Diário Oficial de Senador Canedo, datada de 7 de agosto de 2026. Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 543.289,00 distribuídos nas seguintes dotações: Suplementação ( + ) 543.289,00 01 03 04 SEC.",
+          "O maior valor monetário identificado no texto é R$ 543.289,00; as referências documentais incluem 123, 3015. A conferência deve ser feita no documento original, em páginas 35 a 42."
+        ],
+        "evidenceExcerpt": "Lucas Paulo Garcia Rodovalho SECRETARIA MUNICIPAL DE FAZENDA E FINANÇAS Secretário Municipal de Inovação Tecnológica PÚBLICAS DECRETO SUPLEMENTAR Nº 123 DECRETO Nº 123 DE 05 DE AGOSTO DE 2026 - LEI N.3015 Abre no orçamento vigente crédito adicional suplementar e da outras providências. O PREFEITO DE SENADOR CANEDO, no uso das atribuições que lhe confere, DECRETA: Artigo 1º Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 543.289,00 distribuídos nas seguintes dotações: Suplementação ( +…",
+        "publicBody": "SECRETARIA MUNICIPAL DE FAZENDA E FINANÇAS",
+        "values": [
+          {
+            "original": "R$ 543.289,00",
+            "value": 543289,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "123",
+          "3015"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial de Senador Canedo",
+        "label": "SECRETARIA MUNICIPAL DE FAZENDA E FINANÇAS",
+        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-08-2026",
+        "editionId": "senador-canedo:660",
+        "editionNumber": "464",
+        "pageStart": 35,
+        "pageEnd": 42,
+        "documentReference": "Edição 464 · páginas 35 a 42",
+        "documentSha256": "07fbfb0d262dd39dd9ee22af9b82956016db51d7742d91ae127b872fca1c7912",
+        "actSha256": "40a479d145e439d9a3b591686a00622d03ea70f5140420d28d32aa3513611a51"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-agm-114601-9A253F43-68",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Edéia",
+      "scope": "Municipal",
+      "actType": "homologacao",
+      "typeLabel": "Homologação",
+      "priority": 83,
+      "importance": 79,
+      "curationReasons": [
+        "controle, correção ou responsabilização",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "EXTRATO DE ADJUDICAÇÃO E HOMOLOGAÇÃO",
+        "extractedTitle": "Edéia publica EXTRATO DE ADJUDICAÇÃO E HOMOLOGAÇÃO",
+        "extractedDeck": "ARMAZEM DOS MEDICAMENTOS EIRELI ME, inscrita no CNPJ sob nº 27.718.661/0001-03, com os itens:",
+        "extractedParagraphs": [
+          "SECRETARIA MUNICIPAL DE SAÚDE publicou homologação na edição 3677 de Diário Municipal de Goiás — AGM, datada de 7 de agosto de 2026. ARMAZEM DOS MEDICAMENTOS EIRELI ME, inscrita no CNPJ sob nº 27.718.661/0001-03, com os itens:.",
+          "O maior valor monetário identificado no texto é R$ 114.739,00; o ato cita os CNPJs 08.033.825/0001-14, 26.457.348/0001-04, 27.718.661/0001-03, 32.321.488/0001-45; as referências documentais incluem 2.818/2026, 202600005001357. A conferência deve ser feita no documento original, em página 41."
+        ],
+        "evidenceExcerpt": "SECRETARIA MUNICIPAL DE SAÚDE EXTRATO DE ADJUDICAÇÃO E HOMOLOGAÇÃO — PREGÃO ELETRÔNICO Nº 014/2026 O Município de Edéia/GO e o Fundo Municipal de Saúde de Edéia/GO, inscrito no CNPJ sob nº 08.033.825/0001-14, tornam pública a ADJUDICAÇÃO e HOMOLOGAÇÃO do Processo Administrativo nº 2.818/2026, Processo Licitatório nº 014/2026, na modalidade Pregão Eletrônico nº 014/2026, cujo objeto é a AQUISIÇÃO DE MEDICAMENTOS DESTINADOS AO ATENDIMENTO DAS DEMANDAS DA SECRETARIA MUNICIPAL DE SAÚDE DE EDÉIA-GO, CONFORME ITENS,…",
+        "publicBody": "SECRETARIA MUNICIPAL DE SAÚDE",
+        "values": [
+          {
+            "original": "R$ 14.615,00",
+            "value": 14615,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 6.130,00",
+            "value": 6130,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 19.260,00",
+            "value": 19260,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 49.010,00",
+            "value": 49010,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 14.150,00",
+            "value": 14150,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 9.954,00",
+            "value": 9954,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 1.620,00",
+            "value": 1620,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 114.739,00",
+            "value": 114739,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "08.033.825/0001-14",
+          "26.457.348/0001-04",
+          "27.718.661/0001-03",
+          "32.321.488/0001-45",
+          "36.830.917/0001-60",
+          "42.092.374/0001-24",
+          "49.648.233/0001-94",
+          "61.853.683/0001-14"
+        ],
+        "referenceNumbers": [
+          "2.818/2026",
+          "202600005001357"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Municipal de Goiás — AGM",
+        "label": "SECRETARIA MUNICIPAL DE SAÚDE",
+        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114601_2026-08-06_21059b506504e2199a06de63e5ce2bbb.pdf",
+        "editionId": "agm:114601",
+        "editionNumber": "3677",
+        "pageStart": 41,
+        "pageEnd": 41,
+        "documentReference": "Edição 3677 · página 41",
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "actSha256": "6d46428a644ab2650cf7ce30e992ab2a16452e2b0ec0b25f2f467c9e93d4f960"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
     {
       "id": "jul26-agm-114600-F7ACE95E-193",
       "status": "brief_exists",
@@ -308,6 +1099,77 @@
         "documentReference": "Edição 3676 · página 46",
         "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
         "actSha256": "5609df691ae92957989fd07c76af824fd527d5c56fec46112846bb15efda8ba1"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-aparecida-3020-3897f3edc8ba-4",
+      "status": "pending",
+      "date": "2026-08-06",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "TERMO DE ADITAMENTO N° 404/2026 1.1- Fica alterada a Cláusula Quarta do Contrato nº 1.482/2025-SEL, em razão do acréscimo quantitativo correspondente a 24,9878% do valor inicial…",
+        "extractedTitle": "Aparecida de Goiânia publica TERMO DE ADITAMENTO N° 404/2026 1.1- Fica alterada a Cláusula Quarta do Contrato nº 1.482/2025-SEL, em razão do acréscimo…",
+        "extractedDeck": "torna público que requereu à secretaria municipal de meio ambiente de aparecida de goiânia a licença ambiental simplificada - las, para atividade comércio a varejo de peças e acessórios novos para veículos automotores / comercio a varejo de peças e acessórios usados para veículos automotores /…",
+        "extractedParagraphs": [
+          "MUNICÍPIO DE APARECIDA DE GOIÂNIA, pessoa ju Referência Objeto Valor do Acréscimo Valor Global publicou contrato na edição 2908 de Diário Oficial de Aparecida de Goiânia, datada de 6 de agosto de 2026. torna público que requereu à secretaria municipal de meio ambiente de aparecida de goiânia a licença ambiental simplificada - las, para atividade comércio a varejo de peças e acessórios novos para veículos automotores / comercio a varejo de peças e acessórios usados para veículos automotores /….",
+          "O maior valor monetário identificado no texto é R$ 16.216.656,00; o ato cita os CNPJs 26.431.267/0001-27, 54.826.367/0004-30, 65.151.048/0001-46, 67.735.766/0001-95; as referências documentais incluem 1.482/2025-SEL, 1.482/2025. A conferência deve ser feita no documento original, em páginas 5 a 6."
+        ],
+        "evidenceExcerpt": "TERMO DE ADITAMENTO N° 404/2026 1.1- Fica alterada a Cláusula Quarta do Contrato nº 1.482/2025-SEL, em razão do acréscimo quantitativo correspondente a 24,9878% do valor inicial do contrato, correspondente ao montante de R$ 3.242.061,00 (três milhões, duzentos e qua1° TERMO ADITIVO AO CONTRATO Nº 1.482/2025 CELEBRADO EN renta e dois mil e sessenta e um reais). Em decorrência da presente alteração, oTRE O MUNICÍPIO DE APARECIDA DE GOIÂNIA POR INTERMEDIO valor global do contrato passará de R$ 12.974.595,00 (doze…",
+        "publicBody": "MUNICÍPIO DE APARECIDA DE GOIÂNIA, pessoa ju Referência Objeto Valor do Acréscimo Valor Global",
+        "values": [
+          {
+            "original": "R$ 3.242.061,00",
+            "value": 3242061,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 12.974.595,00",
+            "value": 12974595,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 16.216.656,00",
+            "value": 16216656,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "26.431.267/0001-27",
+          "54.826.367/0004-30",
+          "65.151.048/0001-46",
+          "67.735.766/0001-95"
+        ],
+        "referenceNumbers": [
+          "1.482/2025-SEL",
+          "1.482/2025"
+        ],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Aparecida de Goiânia",
+        "label": "MUNICÍPIO DE APARECIDA DE GOIÂNIA, pessoa ju Referência Objeto Valor do Acréscimo Valor Global",
+        "url": "https://webio.aparecida.go.gov.br/diariooficial/download/2908",
+        "editionId": "aparecida:3020",
+        "editionNumber": "2908",
+        "pageStart": 5,
+        "pageEnd": 6,
+        "documentReference": "Edição 2908 · páginas 5 a 6",
+        "documentSha256": "8dfe38b063f6510ddcdae2a763e5c1425e3f4612af4c922718d75cb3b566a9d3",
+        "actSha256": "3897f3edc8ba9182f3f926dd8e049baad30e5efe98a9e2cc955cd828fe223dc1"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
@@ -14879,890 +15741,6 @@
         "documentReference": "Edição 8811 · página 191",
         "documentSha256": "c7b36ca75a8690504804d02bf399a2fb972f8884c974785f01fda4db3db679fe",
         "actSha256": "046ff953c99f59ada69fa99d81854f858be3d3dd7ae13c075585e259b95bc43b"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-goiania-do_20260702_000008811.pdf-90413d8bd283-63",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Goiânia",
-      "scope": "Municipal",
-      "actType": "decreto",
-      "typeLabel": "Decreto",
-      "priority": 95,
-      "importance": 95,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "Decreto Orçamentário nº 140/2026",
-        "extractedTitle": "Goiânia publica Decreto Orçamentário nº 140/2026",
-        "extractedDeck": "Ficam abertos à Secretaria Municipal de Saúde - Fundo Municipal de Saúde, dois créditos adicionais de natureza suplementar, no valor de R$ 2.412.735,80 (dois milhões, quatrocentos e doze mil, setecentos e trinta e cinco reais e oitenta centavos), destinados a atender às programações previstas no…",
-        "extractedParagraphs": [
-          "Prefeitura de Goiânia publicou decreto na edição 8811 de Diário Oficial do Município de Goiânia, datada de 2 de julho de 2026. Ficam abertos à Secretaria Municipal de Saúde - Fundo Municipal de Saúde, dois créditos adicionais de natureza suplementar, no valor de R$ 2.412.735,80 (dois milhões, quatrocentos e doze mil, setecentos e trinta e cinco reais e oitenta centavos), destinados a atender às programações previstas no….",
-          "O maior valor monetário identificado no texto é R$ 2.412.735,80; as referências documentais incluem 11.510, 11.590, 134, 11.419/2006., 26.29.000023079-0. A conferência deve ser feita no documento original, em páginas 74 a 77."
-        ],
-        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8811, de 02 de julho de 2026. Página 74 de 233 Prefeitura de Goiânia Gabinete do Prefeito DECRETO ORÇAMENTÁRIO Nº 140, DE 2026 Dispõe sobre a abertura de crédito suplementar, em favor da Secretaria Municipal de Saúde - Fundo Municipal de Saúde, no valor de R$ 2.412.735,80 (dois milhões, quatrocentos e doze mil, setecentos e trinta e cinco reais e oitenta centavos). O PREFEITO DE GOIÂNIA, no uso das atribuições que lhe confere o art. 141 da Lei Orgânica do Município de Goiânia, tendo em…",
-        "publicBody": "Prefeitura de Goiânia",
-        "values": [
-          {
-            "original": "R$ 2.412.735,80",
-            "value": 2412735.8,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 1.161.650,00",
-            "value": 1161650,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 1.251.085,80",
-            "value": 1251085.8,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "11.510",
-          "11.590",
-          "134",
-          "11.419/2006.",
-          "26.29.000023079-0"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Oficial do Município de Goiânia",
-        "label": "Prefeitura de Goiânia",
-        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260702_000008811.pdf",
-        "editionId": "goiania:do_20260702_000008811.pdf",
-        "editionNumber": "8811",
-        "pageStart": 74,
-        "pageEnd": 77,
-        "documentReference": "Edição 8811 · páginas 74 a 77",
-        "documentSha256": "c7b36ca75a8690504804d02bf399a2fb972f8884c974785f01fda4db3db679fe",
-        "actSha256": "90413d8bd2839f788a8a8b2fdd450f18cd01ca1421c2ccd9c46ee58da2e23fe1"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114575-69FEE2ED-229",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Nazário",
-      "scope": "Municipal",
-      "actType": "homologacao",
-      "typeLabel": "Homologação",
-      "priority": 93,
-      "importance": 89,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "controle, correção ou responsabilização",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": true,
-      "factPacket": {
-        "officialTitle": "AVISO DE RESULTADO DE HOMOLOGAÇÃO E",
-        "extractedTitle": "Nazário publica AVISO DE RESULTADO DE HOMOLOGAÇÃO E",
-        "extractedDeck": "SECRETARIA MUNICIPAL DE SAUDE ADJUDICAÇÃO AVISO DE RESULTADO DE HOMOLOGAÇÃO E ADJUDICAÇÃO Pregão Presencial n.º 14/2026 Objeto Registro de Preços para futura e eventual aquisição parcelada de leites remanescentes para cumprimento de ordem judicial (recomendacao ministerio publico, alto custo e…",
-        "extractedParagraphs": [
-          "SECRETARIA MUNICIPAL DE SAUDE publicou homologação na edição 3651 de Diário Municipal de Goiás — AGM, datada de 2 de julho de 2026. SECRETARIA MUNICIPAL DE SAUDE ADJUDICAÇÃO AVISO DE RESULTADO DE HOMOLOGAÇÃO E ADJUDICAÇÃO Pregão Presencial n.º 14/2026 Objeto Registro de Preços para futura e eventual aquisição parcelada de leites remanescentes para cumprimento de ordem judicial (recomendacao ministerio publico, alto custo e….",
-          "O maior valor monetário identificado no texto é R$ 1.081.817,60. A conferência deve ser feita no documento original, em página 56."
-        ],
-        "evidenceExcerpt": "SECRETARIA MUNICIPAL DE SAUDE AVISO DE RESULTADO DE HOMOLOGAÇÃO E ADJUDICAÇÃO AVISO DE RESULTADO DE HOMOLOGAÇÃO E ADJUDICAÇÃO Pregão Presencial n.º 14/2026 Objeto Registro de Preços para futura e eventual aquisição parcelada de leites remanescentes para cumprimento de ordem judicial (recomendacao ministerio publico, alto custo e doação, para atender a demanda da secretaria de saude do municipio de Nazário/GO. Torna publica que julgou adjudicou e homologou a licitação na modalidade Pregão Presencial n.º 14/2026,…",
-        "publicBody": "SECRETARIA MUNICIPAL DE SAUDE",
-        "values": [
-          {
-            "original": "R$ 557.751,00",
-            "value": 557751,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 409.246,50",
-            "value": 409246.5,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 114.820,10",
-            "value": 114820.1,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 1.081.817,60",
-            "value": 1081817.6,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "SECRETARIA MUNICIPAL DE SAUDE",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114575_2026-07-01_50a69441a59d8cad9426b15d996378c1.pdf",
-        "editionId": "agm:114575",
-        "editionNumber": "3651",
-        "pageStart": 56,
-        "pageEnd": 56,
-        "documentReference": "Edição 3651 · página 56",
-        "documentSha256": "d1534fddfb4467582c39d68c48b3df274732c755b6be8b627a89c6e25cedbee4",
-        "actSha256": "a83a29c97987f4e756b494094e83e88e98cb247bf1e85876bf116924c1cbbf08"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-alego-5743-d5a0006e8f99-22",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Goiás",
-      "scope": "Estadual",
-      "actType": "lei",
-      "typeLabel": "Lei",
-      "priority": 93,
-      "importance": 89,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "controle, correção ou responsabilização"
-      ],
-      "mandatoryHumanReview": true,
-      "factPacket": {
-        "officialTitle": "Lei nº 20.756, de 28 de janeiro de 2020, para",
-        "extractedTitle": "Goiás publica Lei nº 20.756, de 28 de janeiro de 2020, para",
-        "extractedDeck": "fica apreensivo, sem saber se vai aprovar ou se não vai aprovar",
-        "extractedParagraphs": [
-          "Assembleia Legislativa do Estado de Goiás publicou lei na edição 14870 de Diário da Assembleia Legislativa de Goiás, datada de 2 de julho de 2026. fica apreensivo, sem saber se vai aprovar ou se não vai aprovar.",
-          "O maior valor monetário identificado no texto é R$ 500,00; as referências documentais incluem 20.756, 13666/2026, 13713/2026, 13668/2026, 11.416. A conferência deve ser feita no documento original, em páginas 80 a 92."
-        ],
-        "evidenceExcerpt": "Lei nº 20.756, de 28 de janeiro de 2020, para instituir a preservação remuneratória restrita naO SR. DEPUTADO TALLES BARRRETO: - Questão licença para o desempenho de mandato classista.de ordem, Senhor Presidente. O SR. PRESIDENTE: - À Publicação e,O SR. PRESIDENTE: - Concedo questão de ordem posteriormente, encaminhe-se à Comissão depara o nobre Deputado Talles Barreto Constituição, Justiça e Redação. O SR. DEPUTADO TALLES BARRETO: - Senhor E, se possível, Líder do Governo, DeputadoPresidente em exercício,…",
-        "publicBody": "Assembleia Legislativa do Estado de Goiás",
-        "values": [
-          {
-            "original": "R$ 12",
-            "value": 12,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 7",
-            "value": 7,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 500",
-            "value": 500,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 1,2",
-            "value": 1.2,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 30",
-            "value": 30,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "20.756",
-          "13666/2026",
-          "13713/2026",
-          "13668/2026",
-          "11.416",
-          "202500010086602.",
-          "718",
-          "719",
-          "12867/2026",
-          "31305/2025",
-          "2982/2024",
-          "12868/2026"
-        ],
-        "confidence": 0.82
-      },
-      "source": {
-        "name": "Diário da Assembleia Legislativa de Goiás",
-        "label": "Assembleia Legislativa do Estado de Goiás",
-        "url": "https://saba.al.go.leg.br/v1/view/transparencia/public/vm949ft0XUrmjecX_dHnOQ==/diario-alego-2026-07-02.pdf",
-        "editionId": "alego-diario:5743",
-        "editionNumber": "14870",
-        "pageStart": 80,
-        "pageEnd": 92,
-        "documentReference": "Edição 14870 · páginas 80 a 92",
-        "documentSha256": "a760b3a82546aae79236ea42bcf3510d3d7d53b87d625c8a76b0a176971261ca",
-        "actSha256": "d5a0006e8f994d0e38b786d8ffd9cbb2e08f72c5bf97c4d84edab8c3a875350f"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114575-F66C9154-49",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Bom Jardim de Goiás",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 87,
-      "importance": 87,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO CONTRATO",
-        "extractedTitle": "Bom Jardim de Goiás publica EXTRATO CONTRATO",
-        "extractedDeck": "OBJETO: Contratação de empresa especializada na prestação de serviços contínuos de terceirização de mão de obra para manutenção, conservação e apoio à infraestrutura urbana do Município de Bom Jardim de Goiás/GO",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE BOM JARDIM DE GOIÁS publicou contrato na edição 3651 de Diário Municipal de Goiás — AGM, datada de 2 de julho de 2026. OBJETO: Contratação de empresa especializada na prestação de serviços contínuos de terceirização de mão de obra para manutenção, conservação e apoio à infraestrutura urbana do Município de Bom Jardim de Goiás/GO.",
-          "O maior valor monetário identificado no texto é R$ 1.720.000,00; o ato cita os CNPJs 27.188.483/0001-56, 29.403.472/0001-77; as referências documentais incluem 09/2026. A conferência deve ser feita no documento original, em página 13."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE BOM JARDIM DE GOIÁS GABINETE DO PREFEITO EXTRATO CONTRATO EXTRATO DO CONTRATO Nº 09/2026 PROCESSO ADMINISTRATIVO: Nº 1894/2026 MODALIDADE: Pregão Presencial nº 005/2026 AMPARO LEGAL: Lei Federal nº 14.133/2021 (Art. 92 e seguintes) CONTRATANTE: Fundo Municipal do Meio Ambiente de Bom Jardim de Goiás/GO CNPJ: 29.403.472/0001-77 CONTRATADA: Ecotrans Serviços Ltda CNPJ: 27.188.483/0001-56 OBJETO: Contratação de empresa especializada na prestação de serviços contínuos de terceirização de…",
-        "publicBody": "MUNICÍPIO DE BOM JARDIM DE GOIÁS",
-        "values": [
-          {
-            "original": "R$ 1.720.000,00",
-            "value": 1720000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 1.539.859,24",
-            "value": 1539859.24,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 128.321,60",
-            "value": 128321.6,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "27.188.483/0001-56",
-          "29.403.472/0001-77"
-        ],
-        "referenceNumbers": [
-          "09/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE BOM JARDIM DE GOIÁS",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114575_2026-07-01_50a69441a59d8cad9426b15d996378c1.pdf",
-        "editionId": "agm:114575",
-        "editionNumber": "3651",
-        "pageStart": 13,
-        "pageEnd": 13,
-        "documentReference": "Edição 3651 · página 13",
-        "documentSha256": "d1534fddfb4467582c39d68c48b3df274732c755b6be8b627a89c6e25cedbee4",
-        "actSha256": "ee5d0322cb082d7518bfc2e1d3a66f0093c0821f3b16aa18cb30f42388b1779f"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114575-30D9C56C-233",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Novo Brasil",
-      "scope": "Municipal",
-      "actType": "dispensa",
-      "typeLabel": "Dispensa",
-      "priority": 85,
-      "importance": 85,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DE DISPENSA DE LICITAÇÃO",
-        "extractedTitle": "Novo Brasil publica EXTRATO DE DISPENSA DE LICITAÇÃO",
-        "extractedDeck": "Fica ADJUDICADO e HOMOLOGADO o objeto da presente contratação à empresa RICARDO BICICLETAS LTDA, inscrita no CNPJ sob o nº 27.339.454/0001-48, vencedora do item licitado, pelo valor global de R$ 39.893,00 (trinta e nove mil, oitocentos e noventa e três reais)",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE NOVO BRASIL publicou dispensa na edição 3651 de Diário Municipal de Goiás — AGM, datada de 2 de julho de 2026. Fica ADJUDICADO e HOMOLOGADO o objeto da presente contratação à empresa RICARDO BICICLETAS LTDA, inscrita no CNPJ sob o nº 27.339.454/0001-48, vencedora do item licitado, pelo valor global de R$ 39.893,00 (trinta e nove mil, oitocentos e noventa e três reais).",
-          "O maior valor monetário identificado no texto é R$ 39.893,00; o ato cita o CNPJ 27.339.454/0001-48; as referências documentais incluem 4926/2026, 202500005013268. A conferência deve ser feita no documento original, em página 57."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE NOVO BRASIL FUNDO MUNICIPAL DE SAUDE DE NOVO BRASIL EXTRATO DE DISPENSA DE LICITAÇÃO EXTRATO DE PUBLICAÇÃO TERMO DE ADJUDICAÇÃO E HOMOLOGAÇÃO O FUNDO MUNICIPAL DE SAÚDE DE NOVO BRASIL – GO, por intermédio do Agente de Contratação, torna público, para conhecimento dos interessados, o resultado da Dispensa de Licitação nº 150/2026, referente ao Processo Administrativo nº 4926/2026, cujo objeto é a contratação de empresa especializada para fornecimento de bicicletas elétricas, destinadas…",
-        "publicBody": "MUNICÍPIO DE NOVO BRASIL",
-        "values": [
-          {
-            "original": "R$ 39.893,00",
-            "value": 39893,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "27.339.454/0001-48"
-        ],
-        "referenceNumbers": [
-          "4926/2026",
-          "202500005013268"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE NOVO BRASIL",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114575_2026-07-01_50a69441a59d8cad9426b15d996378c1.pdf",
-        "editionId": "agm:114575",
-        "editionNumber": "3651",
-        "pageStart": 57,
-        "pageEnd": 57,
-        "documentReference": "Edição 3651 · página 57",
-        "documentSha256": "d1534fddfb4467582c39d68c48b3df274732c755b6be8b627a89c6e25cedbee4",
-        "actSha256": "df3a118bd6a1fdf9a69891801f938de06509eb8c3a553a70b7334655134977bd"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114575-4168F2C6-242",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Palmeiras",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 85,
-      "importance": 85,
-      "curationReasons": [
-        "alto valor-notícia calculado"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO AO CONTRATO DE PRESTAÇÃO DE",
-        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE PRESTAÇÃO DE",
-        "extractedDeck": "PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS SERVIÇOS/FORNECIMENTO Nº.",
-        "extractedParagraphs": [
-          "PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS publicou contrato na edição 3651 de Diário Municipal de Goiás — AGM, datada de 2 de julho de 2026. PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS SERVIÇOS/FORNECIMENTO Nº.",
-          "O maior valor monetário identificado no texto é R$ 262.140,00. A conferência deve ser feita no documento original, em página 59."
-        ],
-        "evidenceExcerpt": "PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS/FORNECIMENTO Nº. 127/2026 EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS/FORNECIMENTO Nº. 127/2026 PROCESSO ADMINSITRATIVO N. 4337/2026, PREGÃO ELETRÔNICO N. 71/2026, MUNICÍPIO DE PALMEIRAS DE GOIÁS - GO, NESTE ATO REPRESENTADO PELO SECRETÁRIO MUNICIPAL DE ADMINISTRAÇÃO O SENHOR PAULO SILVA DE CAMARGO; E, DO OUTRO LADO, A EMPRESA PISO FACIL LTDA; CLÁUSULA PRIMEIRA – DO OBJETO DO/DESTE CONTRATO CONSTITUI O OBJETO DESTE…",
-        "publicBody": "PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS",
-        "values": [
-          {
-            "original": "R$ 262.140,00",
-            "value": 262140,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114575_2026-07-01_50a69441a59d8cad9426b15d996378c1.pdf",
-        "editionId": "agm:114575",
-        "editionNumber": "3651",
-        "pageStart": 59,
-        "pageEnd": 59,
-        "documentReference": "Edição 3651 · página 59",
-        "documentSha256": "d1534fddfb4467582c39d68c48b3df274732c755b6be8b627a89c6e25cedbee4",
-        "actSha256": "ab0aa712abb8503378ff2173a6dd8750fd8a7ff14b62dacf3a7a3802f3ff4d13"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114575-85DBB13A-52",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Buriti Alegre",
-      "scope": "Municipal",
-      "actType": "aditivo",
-      "typeLabel": "Termo aditivo",
-      "priority": 85,
-      "importance": 85,
-      "curationReasons": [
-        "alto valor-notícia calculado"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "TERMO ADITIVO N° 08/2026",
-        "extractedTitle": "Buriti Alegre publica TERMO ADITIVO N° 08/2026",
-        "extractedDeck": "tem por objeto a prorrogação de prazo e serviços, conforme justificativa em anexo no Processo Administrativo N° 3950/2026",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE BURITI ALEGRE publicou termo aditivo na edição 3651 de Diário Municipal de Goiás — AGM, datada de 2 de julho de 2026. tem por objeto a prorrogação de prazo e serviços, conforme justificativa em anexo no Processo Administrativo N° 3950/2026.",
-          "O maior valor monetário identificado no texto é R$ 187.943,88; o ato cita os CNPJs 01.345.909/0001-44, 10.656.845/0001-93; as referências documentais incluem 061/2022, 3950/2026., 14.133/21.. A conferência deve ser feita no documento original, em páginas 14 a 15."
-        ],
-        "evidenceExcerpt": "SECRETARIA DE ADMINISTRAÇAO OITAVO TERMO ADITIVO DO CONTRATO N° 061/2022 CELEBRADO ENTRE O MUNICÍPIO DE BURITI ALEGRE, ESTADO DE GOIÁS, E A EMPRESA: FERREIRA ASSESSORIA E CONSULTORIA CONTÁBIL - EIRELI. TERMO ADITIVO N° 08/2026. OITAVO TERMO ADITIVO DO CONTRATO N° 061/2022 CELEBRADO ENTRE O MUNICÍPIO DE BURITI ALEGRE, ESTADO DE GOIÁS, E A EMPRESA: FERREIRA ASSESSORIA E CONSULTORIA CONTÁBIL - EIRELI. PREÂMBULO: Pelo presente instrumento particular de Termo Aditivo do CONTRATO N.º 061/2022, de um lado o PREFEITURA…",
-        "publicBody": "MUNICÍPIO DE BURITI ALEGRE",
-        "values": [
-          {
-            "original": "R$ 187.943,88",
-            "value": 187943.88,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 15.661,99",
-            "value": 15661.99,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "01.345.909/0001-44",
-          "10.656.845/0001-93"
-        ],
-        "referenceNumbers": [
-          "061/2022",
-          "3950/2026.",
-          "14.133/21."
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE BURITI ALEGRE",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114575_2026-07-01_50a69441a59d8cad9426b15d996378c1.pdf",
-        "editionId": "agm:114575",
-        "editionNumber": "3651",
-        "pageStart": 14,
-        "pageEnd": 15,
-        "documentReference": "Edição 3651 · páginas 14 a 15",
-        "documentSha256": "d1534fddfb4467582c39d68c48b3df274732c755b6be8b627a89c6e25cedbee4",
-        "actSha256": "f4fdcf2e696b81e1a77cba52cdbf6978b0b6e4b41c9fc03b7263c97491d121ab"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114575-B14B2B38-237",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Palmeiras",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 85,
-      "importance": 85,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO AO CONTRATO DE LOCAÇÃO Nº. 61/2026",
-        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE LOCAÇÃO Nº. 61/2026",
-        "extractedDeck": "ESTADO DE GOIÁS MUNICÍPIO DE PALMEIRAS FMEB - FMEB EXTRATO AO CONTRATO DE LOCAÇÃO Nº.",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE PALMEIRAS publicou contrato na edição 3651 de Diário Municipal de Goiás — AGM, datada de 2 de julho de 2026. ESTADO DE GOIÁS MUNICÍPIO DE PALMEIRAS FMEB - FMEB EXTRATO AO CONTRATO DE LOCAÇÃO Nº.",
-          "O maior valor monetário identificado no texto é R$ 43.200,00; as referências documentais incluem 5618/2026. A conferência deve ser feita no documento original, em página 58."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE PALMEIRAS FMEB EXTRATO AO CONTRATO DE LOCAÇÃO Nº. 61/2026 - FMEB EXTRATO AO CONTRATO DE LOCAÇÃO Nº. 61/2026 PROCESSO ADMINISTRATIVO N. 5618/2026, PREGÃO ELETRÔNICO N. 73/2026, FUNDO MUNICIPAL DE EDUCAÇÃO BASICA- FMEB, DE NOME FANTASIA/COMERCIAL FUNDO MUNICIPAL DE EDUCAÇÃO BASICA- FMEB, NESTE ATO REPRESENTADO PELA SECRETÁRIA MUNICIPAL DE EDUCAÇÃO O SRA. KATIA PEREIRA COELHO CAMARGO; E, DO OUTRO LADO, TIC TAC LOCACOES LTDA; CLÁUSULA PRIMEIRA – DO OBJETO DO CONTRATO CONSTITUI O OBJETO…",
-        "publicBody": "MUNICÍPIO DE PALMEIRAS",
-        "values": [
-          {
-            "original": "R$ 43.200,00",
-            "value": 43200,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "5618/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE PALMEIRAS",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114575_2026-07-01_50a69441a59d8cad9426b15d996378c1.pdf",
-        "editionId": "agm:114575",
-        "editionNumber": "3651",
-        "pageStart": 58,
-        "pageEnd": 58,
-        "documentReference": "Edição 3651 · página 58",
-        "documentSha256": "d1534fddfb4467582c39d68c48b3df274732c755b6be8b627a89c6e25cedbee4",
-        "actSha256": "42ed22e45399966f034546570b9d6b55b788fb12ccab64aa646f338edda138d3"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114575-CDAABEE3-135",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Indiara",
-      "scope": "Municipal",
-      "actType": "dispensa",
-      "typeLabel": "Dispensa",
-      "priority": 85,
-      "importance": 85,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO",
-        "extractedTitle": "Indiara publica TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO",
-        "extractedDeck": "contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE INDIARA publicou dispensa na edição 3651 de Diário Municipal de Goiás — AGM, datada de 2 de julho de 2026. contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante.",
-          "O maior valor monetário identificado no texto é R$ 65.492,11; o ato cita o CNPJ 37.832.037/0001-96; as referências documentais incluem 14.133/21. A conferência deve ser feita no documento original, em página 32."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE INDIARA FUNDO MUNICIPAL DE EDUCAÇÃO BASICA TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO Nº 175/2026 TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO Nº 175/2026 “Dispõe sobre ato de ratificação dispensa de licitação e dá outras providências.” O PREFEITO DO MUNICÍPIO DE INDIARA-GO, no uso de suas atribuições legais, e, Considerando que fora demonstrado a real necessidade de se contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante; Considerando que fora…",
-        "publicBody": "MUNICÍPIO DE INDIARA",
-        "values": [
-          {
-            "original": "R$ 65.492,11",
-            "value": 65492.11,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 1.590,00",
-            "value": 1590,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "37.832.037/0001-96"
-        ],
-        "referenceNumbers": [
-          "14.133/21"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE INDIARA",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114575_2026-07-01_50a69441a59d8cad9426b15d996378c1.pdf",
-        "editionId": "agm:114575",
-        "editionNumber": "3651",
-        "pageStart": 32,
-        "pageEnd": 32,
-        "documentReference": "Edição 3651 · página 32",
-        "documentSha256": "d1534fddfb4467582c39d68c48b3df274732c755b6be8b627a89c6e25cedbee4",
-        "actSha256": "40d72008e5f43aeb5fef2630cbe1cd2f04cb99ebc1ea41b572305da2260f7bd5"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-aparecida-2995-062a19c4a210-19",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Aparecida de Goiânia",
-      "scope": "Municipal",
-      "actType": "decreto",
-      "typeLabel": "Decreto",
-      "priority": 85,
-      "importance": 85,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "DECRETO ORÇAMENTÁRIO Nº 004, 20262026 0505 05200520 1010 122302 00450049 20552059 319049335043 102102 2026115920261279 44 R$R$ 11.638.300,002.500.000,00",
-        "extractedTitle": "Aparecida de Goiânia publica DECRETO ORÇAMENTÁRIO Nº 004, 20262026 0505 05200520 1010 122302 00450049 20552059 319049335043 102102 2026115920261279 44…",
-        "extractedDeck": "2026 05 0520 10 302 0049 2059 339030 131 20261292 4 R$ 199.000,00 DE 2 DE FEVEREIRO DE 2026 2026 05 0520 10 305 0046 2056 339030 107 20261418 4 R$ 1.030.000,00 2026 07 0721 09 272 0050 2060 319096 177 20261468 4 R$ 5.000,00 Abre ao Orçamento Geral do Município um Crédito adicional suplementar no…",
-        "extractedParagraphs": [
-          "Município de Aparecida de Goiânia publicou decreto na edição 2883 de Diário Oficial de Aparecida de Goiânia, datada de 2 de julho de 2026. 2026 05 0520 10 302 0049 2059 339030 131 20261292 4 R$ 199.000,00 DE 2 DE FEVEREIRO DE 2026 2026 05 0520 10 305 0046 2056 339030 107 20261418 4 R$ 1.030.000,00 2026 07 0721 09 272 0050 2060 319096 177 20261468 4 R$ 5.000,00 Abre ao Orçamento Geral do Município um Crédito adicional suplementar no….",
-          "O maior valor monetário identificado no texto é R$ 11.638.300,00; as referências documentais incluem 3.867. A conferência deve ser feita no documento original, em página 29."
-        ],
-        "evidenceExcerpt": "DECRETO ORÇAMENTÁRIO Nº 004, 20262026 0505 05200520 1010 122302 00450049 20552059 319049335043 102102 2026115920261279 44 R$R$ 11.638.300,002.500.000,00 2026 05 0520 10 302 0049 2059 339030 131 20261292 4 R$ 199.000,00 DE 2 DE FEVEREIRO DE 2026 2026 05 0520 10 305 0046 2056 339030 107 20261418 4 R$ 1.030.000,00 2026 07 0721 09 272 0050 2060 319096 177 20261468 4 R$ 5.000,00 Abre ao Orçamento Geral do Município um Crédito adicional suplementar no valor que menciona, e dá outras providências. 2026 07 0721 09 272…",
-        "publicBody": "Município de Aparecida de Goiânia",
-        "values": [
-          {
-            "original": "R$ 11.638.300,00",
-            "value": 11638300,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 199.000,00",
-            "value": 199000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 1.030.000,00",
-            "value": 1030000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 5.000,00",
-            "value": 5000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 6.000,00",
-            "value": 6000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 608.000,00",
-            "value": 608000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 76.000,00",
-            "value": 76000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 679.000,00",
-            "value": 679000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 44.000,00",
-            "value": 44000,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "3.867"
-        ],
-        "confidence": 0.82
-      },
-      "source": {
-        "name": "Diário Oficial de Aparecida de Goiânia",
-        "label": "Município de Aparecida de Goiânia",
-        "url": "https://webio.aparecida.go.gov.br/diariooficial/download/2883",
-        "editionId": "aparecida:2995",
-        "editionNumber": "2883",
-        "pageStart": 29,
-        "pageEnd": 29,
-        "documentReference": "Edição 2883 · página 29",
-        "documentSha256": "42c1395c118ac19127ba3da4708163e0da8f8ff0674592777426ddca43478d2e",
-        "actSha256": "062a19c4a2102b63766c370e25ef34e0fcb5dd006d7db07e39aa5116f0c35acb"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-aparecida-2995-072a9866bdae-7",
-      "status": "pending",
-      "date": "2026-07-02",
-      "city": "Aparecida de Goiânia",
-      "scope": "Municipal",
-      "actType": "decreto",
-      "typeLabel": "Decreto",
-      "priority": 85,
-      "importance": 85,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "DECRETO ORÇAMENTÁRIO Nº 015, DECRETO ORÇAMENTÁRIO Nº 016,",
-        "extractedTitle": "Aparecida de Goiânia publica DECRETO ORÇAMENTÁRIO Nº 015, DECRETO ORÇAMENTÁRIO Nº 016,",
-        "extractedDeck": "Fica aberto, no corrente exercício financeiro, crédito adicional suplemen tar no valor total de R$ 19.437.441,88 (dezenove milhões, quatrocentos e trinta e 2025 03 0333 04 123 3008 2339 319011 100 20250662 17 - 23.878,73 2025 03 0333 04 123 3008 2339 319094 100 20250667 17 23.878,73 - sete mil,…",
-        "extractedParagraphs": [
-          "Município de Aparecida de Goiânia publicou decreto na edição 2883 de Diário Oficial de Aparecida de Goiânia, datada de 2 de julho de 2026. Fica aberto, no corrente exercício financeiro, crédito adicional suplemen tar no valor total de R$ 19.437.441,88 (dezenove milhões, quatrocentos e trinta e 2025 03 0333 04 123 3008 2339 319011 100 20250662 17 - 23.878,73 2025 03 0333 04 123 3008 2339 319094 100 20250667 17 23.878,73 - sete mil,….",
-          "O maior valor monetário identificado no texto é R$ 23.114.555,67; as referências documentais incluem 3.800, 1964, 2025.219.613, 2025.226.589, 2025. A conferência deve ser feita no documento original, em páginas 13 a 14."
-        ],
-        "evidenceExcerpt": "DECRETO ORÇAMENTÁRIO Nº 015, DECRETO ORÇAMENTÁRIO Nº 016, DE 17 DE JUNHO DE 2025 DE 1º DE JULHO DE 2025 Abre ao Orçamento Geral do Município um Crédito adicional suplementar Abre ao Orçamento Geral do Município um Crédito adicional suplementar no valor que menciona, e dá outras providências. no valor que menciona, e dá outras providências. O PREFEITO DE APARECIDA DE GOIÂNIA, no uso de suas atribuições O PREFEITO DE APARECIDA DE GOIÂNIA, no uso de suas atribuições legais, nos termos dos arts. 41 a 43, da Lei…",
-        "publicBody": "Município de Aparecida de Goiânia",
-        "values": [
-          {
-            "original": "R$ 14.745.498,12",
-            "value": 14745498.12,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 23.114.555,67",
-            "value": 23114555.67,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 19.437.441,88",
-            "value": 19437441.88,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "3.800",
-          "1964",
-          "2025.219.613",
-          "2025.226.589",
-          "2025"
-        ],
-        "confidence": 0.82
-      },
-      "source": {
-        "name": "Diário Oficial de Aparecida de Goiânia",
-        "label": "Município de Aparecida de Goiânia",
-        "url": "https://webio.aparecida.go.gov.br/diariooficial/download/2883",
-        "editionId": "aparecida:2995",
-        "editionNumber": "2883",
-        "pageStart": 13,
-        "pageEnd": 14,
-        "documentReference": "Edição 2883 · páginas 13 a 14",
-        "documentSha256": "42c1395c118ac19127ba3da4708163e0da8f8ff0674592777426ddca43478d2e",
-        "actSha256": "072a9866bdae7ac0a61461d9ad62ffd49509e47daf3e6c4fb4d23b9b6421c102"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114574-55A1B4C0-256",
-      "status": "pending",
-      "date": "2026-07-01",
-      "city": "Palmeiras",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 95,
-      "importance": 95,
-      "curationReasons": [
-        "alto valor-notícia calculado"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS",
-        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS",
-        "extractedDeck": "CONTRATAR EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS, EM REGIME DE DIÁRIAS, PARA A ROÇAGEM E MANUTENÇÃO DE PARQUES, JARDINS E VIAS PÚBLICAS DO MUNICÍPIO",
-        "extractedParagraphs": [
-          "PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS publicou contrato na edição 3650 de Diário Municipal de Goiás — AGM, datada de 1 de julho de 2026. CONTRATAR EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS, EM REGIME DE DIÁRIAS, PARA A ROÇAGEM E MANUTENÇÃO DE PARQUES, JARDINS E VIAS PÚBLICAS DO MUNICÍPIO.",
-          "O maior valor monetário identificado no texto é R$ 1.800.000,00; as referências documentais incluem 2651/2026. A conferência deve ser feita no documento original, em página 82."
-        ],
-        "evidenceExcerpt": "PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS Nº. 131/2026 EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS Nº. 131/2026, PROCESSO ADMINISTRATIVO N.2651/2026, PREGÃO ELETRÔNICO N. 22/2026, MUNICÍPIO DE PALMEIRAS DE GOIÁS - GO, NESTE ATO REPRESENTADO PELO SECRETÁRIO MUNICIPAL DE ADMINISTRAÇÃO O SENHOR PAULO SILVA DE CAMARGO; E, DO OUTRO LADO, A EMPRESA EBS EMPREENDIMENTOS LTDA; CLÁUSULA PRIMEIRA – DO OBJETO DO CONTRATO CONSTITUI O OBJETO DESTE INSTRUMENTO A CONTRATAR EMPRESA…",
-        "publicBody": "PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS",
-        "values": [
-          {
-            "original": "R$ 1.800.000,00",
-            "value": 1800000,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "2651/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "PREFEITURA MUNICIPAL DE PALMEIRAS DE GOIAS",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114574_2026-06-30_718ec7b960ea392dac8280c1cc537ff0.pdf",
-        "editionId": "agm:114574",
-        "editionNumber": "3650",
-        "pageStart": 82,
-        "pageEnd": 82,
-        "documentReference": "Edição 3650 · página 82",
-        "documentSha256": "ff222c6c05bfba83976af14b08d5bb92e340809305b22be48c505d1464802a82",
-        "actSha256": "1cb7648c6f8bd707a668fa75c6da8038793c5c4d2c0a0d8c3e863ce4715ab0ff"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114574-D16C0AA4-292",
-      "status": "pending",
-      "date": "2026-07-01",
-      "city": "Buriti Alegre",
-      "scope": "Municipal",
-      "actType": "aditivo",
-      "typeLabel": "Termo aditivo",
-      "priority": 95,
-      "importance": 95,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "TERMO ADITIVO N° 04/2026",
-        "extractedTitle": "Buriti Alegre publica TERMO ADITIVO N° 04/2026",
-        "extractedDeck": "tem por objeto o reajuste contratual, conforme justificativa e Planilhas anexas no Processo Administrativo nº 3397/2026",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE BURITI ALEGRE publicou termo aditivo na edição 3650 de Diário Municipal de Goiás — AGM, datada de 1 de julho de 2026. tem por objeto o reajuste contratual, conforme justificativa e Planilhas anexas no Processo Administrativo nº 3397/2026.",
-          "O maior valor monetário identificado no texto é R$ 112.141,31; o ato cita os CNPJs 01.345.909/0001-44, 39.860.260/0001-72; as referências documentais incluem 055/2024, 3397/2026., 14.133/21.. A conferência deve ser feita no documento original, em páginas 107 a 108."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE BURITI ALEGRE SECRETARIA MUNICIPAL DE DESENVOLVIMENTO RURAL E OBRAS QUARTO TERMO ADITIVO DO CONTRATO N° 055/2024 CELEBRADO ENTRE MUNICÍPIO DE BURITI ALEGRE, ESTADO DE GOIÁS, E A EMPRESA EMEC EMPRESA METROPOLITANA DE CONSTRUÇÃO LTDA. TERMO ADITIVO N° 04/2026. QUARTO TERMO ADITIVO DO CONTRATO N° 055/2024 CELEBRADO ENTRE MUNICÍPIO DE BURITI ALEGRE, ESTADO DE GOIÁS, E A EMPRESA EMEC EMPRESA METROPOLITANA DE CONSTRUÇÃO LTDA. PREÂMBULO: Pelo presente instrumento particular de contrato de…",
-        "publicBody": "MUNICÍPIO DE BURITI ALEGRE",
-        "values": [
-          {
-            "original": "R$ 112.141,31",
-            "value": 112141.31,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 28.683,16",
-            "value": 28683.16,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 83.458,15",
-            "value": 83458.15,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "01.345.909/0001-44",
-          "39.860.260/0001-72"
-        ],
-        "referenceNumbers": [
-          "055/2024",
-          "3397/2026.",
-          "14.133/21."
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE BURITI ALEGRE",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114574_2026-06-30_718ec7b960ea392dac8280c1cc537ff0.pdf",
-        "editionId": "agm:114574",
-        "editionNumber": "3650",
-        "pageStart": 107,
-        "pageEnd": 108,
-        "documentReference": "Edição 3650 · páginas 107 a 108",
-        "documentSha256": "ff222c6c05bfba83976af14b08d5bb92e340809305b22be48c505d1464802a82",
-        "actSha256": "0bb9444477bdc94751bec2d9dd0b99100c81e1185b03449b2dbe2606e863c910"
       },
       "requestedOutput": {
         "kind": "editorial_brief",

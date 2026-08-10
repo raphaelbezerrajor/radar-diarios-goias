@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-08-06T08:58:00-03:00",
+  "updatedAt": "2026-08-10T00:38:00-03:00",
   "briefs": [
     {
       "id": "jul26-agm-114590-608B28AC-243",
@@ -1192,6 +1192,878 @@
         "approvedBy": null,
         "approvedAt": null,
         "notes": "Conferência das páginas confirmou composição multissetorial e diferença entre a data do decreto e a publicação."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-660-668c7550a872-5",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "07fbfb0d262dd39dd9ee22af9b82956016db51d7742d91ae127b872fca1c7912",
+        "documentReference": "Edição 464 · páginas 11 a 12"
+      },
+      "editorial": {
+        "mainAngle": "A publicação reúne uma ata de R$ 103,9 mil para eletrodomésticos e o início de um pacote de sete contratos de software com a IPM, que soma R$ 3,55 milhões; são atos distintos e precisam virar pautas separadas.",
+        "whyItMatters": "O recorte automático mistura objetos, fornecedores e valores diferentes. A separação evita atribuir R$ 1,88 milhão à compra de aparelhos e permite explicar o custo do sistema de gestão por órgão municipal.",
+        "headlineOptions": [
+          "Senador Canedo firma sete contratos de software que somam R$ 3,55 milhões",
+          "Pacote de sistema de gestão alcança sete órgãos de Senador Canedo",
+          "Contratos com a IPM preveem R$ 3,55 milhões por software público"
+        ],
+        "leadDirection": "Abrir a pauta principal com os sete contratos da IPM e o total máximo de R$ 3.550.519; mencionar separadamente que as mesmas páginas trazem uma ata de R$ 103.889,94 para eletrodomésticos.",
+        "storyStructure": [
+          "Visão geral dos sete contratos de software",
+          "Valores e órgãos atendidos",
+          "Serviços, implantação e prazo",
+          "Ata independente de eletrodomésticos",
+          "Execução, fiscalização e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O Pregão Eletrônico nº 42/2026 está vinculado ao processo 1Doc nº 8.400/2026.",
+          "Sete instrumentos com a IPM Sistemas Ltda. somam R$ 3.550.519,00 e abrangem SITEC, IAMESC, SENAPREV, Saúde, Assistência Social, SANESC e AMMA.",
+          "O contrato da SITEC tem valor de R$ 1.884.461,00 e vigência de 12 meses.",
+          "A Ata de Registro de Preços do Pregão nº 64/2026 é outro ato e soma R$ 103.889,94 para futura aquisição de eletrodomésticos."
+        ],
+        "contextToFind": [
+          "Planilha de módulos e preços por órgão",
+          "Cronograma de implantação, migração e treinamento",
+          "Sistemas substituídos e custo anterior",
+          "Quantidades e itens da ata de eletrodomésticos"
+        ],
+        "reportingQuestions": [
+          "Quais módulos cada órgão receberá?",
+          "O município já utilizava a IPM ou outro fornecedor?",
+          "Como serão aferidos implantação, suporte e disponibilidade?",
+          "Que aparelhos integram a ata separada?"
+        ],
+        "peopleToHear": [
+          "Secretaria de Tecnologia e Inovação de Senador Canedo",
+          "Órgãos signatários dos sete contratos",
+          "IPM Sistemas Ltda.",
+          "Controladoria do Município"
+        ],
+        "dataCrossChecks": [
+          "Edital e resultado do Pregão nº 42/2026",
+          "Sete contratos do processo 1Doc nº 8.400/2026",
+          "Empenhos e pagamentos por órgão",
+          "Ata e itens do Pregão nº 64/2026"
+        ],
+        "doNotState": [
+          "Não somar a ata de eletrodomésticos ao pacote de software.",
+          "Não tratar os sete instrumentos como um único contrato.",
+          "Não afirmar que R$ 3,55 milhões já foram pagos.",
+          "Não sugerir irregularidade pela reunião dos atos na mesma página."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "O segmento mistura dois processos. Desmembrar a ata de eletrodomésticos da pauta dos sete contratos de software antes de qualquer publicação."
+      }
+    },
+    {
+      "id": "jul26-agm-114601-E73C41D7-180",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "documentReference": "Edição 3677 · página 74"
+      },
+      "editorial": {
+        "mainAngle": "Santa Rita do Araguaia prorrogou por um ano cinco contratos de gêneros alimentícios com duas empresas; os valores exibidos na tabela somam R$ 603,2 mil.",
+        "whyItMatters": "Os aditivos prolongam fornecimentos ligados a um pregão anterior e envolvem dois fornecedores. É preciso distinguir extensão de prazo, valor contratual e gasto efetivamente executado.",
+        "headlineOptions": [
+          "Santa Rita prorroga cinco contratos de alimentos que somam R$ 603,2 mil",
+          "Aditivos mantêm fornecedores de alimentos em Santa Rita até 2027",
+          "Cinco contratos de gêneros alimentícios são estendidos por um ano"
+        ],
+        "leadDirection": "Informar que se trata de aditivos de prazo dos contratos 070, 071, 072, 074 e 076/2025, válidos de 1º de julho de 2026 a 1º de julho de 2027; apresentar R$ 603.247,48 como soma dos valores indicados, não como pagamento.",
+        "storyStructure": [
+          "Contratos prorrogados e novo prazo",
+          "Empresas e valores indicados",
+          "Itens e órgãos atendidos",
+          "Execução do período anterior",
+          "Fiscalização e pagamentos"
+        ],
+        "verifiedFacts": [
+          "Os cinco instrumentos derivam do Pregão Presencial nº 004/2024.",
+          "Quatro contratos são com Frutaria Paulista Comércio de Frutas e Legumes Ltda., CNPJ 17.560.071/0002-22, com valor conjunto indicado de R$ 563.542,48.",
+          "O contrato nº 076/2025 é com Supermercado JM Ltda., CNPJ 35.398.112/0001-27, e traz R$ 39.705,00.",
+          "A vigência informada vai de 1º de julho de 2026 a 1º de julho de 2027."
+        ],
+        "contextToFind": [
+          "Valores individualizados dos quatro contratos da Frutaria Paulista",
+          "Itens e quantidades de cada contrato",
+          "Consumo e pagamentos do período anterior",
+          "Justificativa de vantajosidade da prorrogação"
+        ],
+        "reportingQuestions": [
+          "Quais secretarias e unidades recebem os alimentos?",
+          "Os preços foram mantidos ou reajustados?",
+          "Quanto foi efetivamente entregue e pago em 2025/2026?",
+          "Por que os contratos foram prorrogados por 12 meses?"
+        ],
+        "peopleToHear": [
+          "Prefeitura de Santa Rita do Araguaia",
+          "Gestores e fiscais dos cinco contratos",
+          "Frutaria Paulista",
+          "Supermercado JM"
+        ],
+        "dataCrossChecks": [
+          "Contratos 070, 071, 072, 074 e 076/2025",
+          "Primeiros termos aditivos integrais",
+          "Empenhos, liquidações e pagamentos por CNPJ",
+          "Pregão Presencial nº 004/2024"
+        ],
+        "doNotState": [
+          "Não chamar a prorrogação de nova compra.",
+          "Não afirmar que R$ 603,2 mil foram pagos.",
+          "Não atribuir o valor conjunto da Frutaria Paulista a cada contrato.",
+          "Não inferir sobrepreço sem comparação de itens e mercado."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Cinco contratos e dois fornecedores no mesmo extrato; conferir valores individualizados antes da redação final."
+      }
+    },
+    {
+      "id": "jul26-agm-114601-F9D1DEB4-161",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "documentReference": "Edição 3677 · página 68"
+      },
+      "editorial": {
+        "mainAngle": "Palmeiras de Goiás contratou a EBS Empreendimentos por R$ 133,5 mil para fornecer alimentos, bebidas, salgados e sobremesas em eventos da rede municipal de ensino.",
+        "whyItMatters": "A compra atende atividades com alunos e crianças de creches, incluindo festas juninas e formaturas, e deve ser acompanhada por item, quantidade e entrega.",
+        "headlineOptions": [
+          "Palmeiras contrata R$ 133,5 mil em alimentos para eventos escolares",
+          "Contrato prevê alimentos e bebidas para festas da rede de ensino",
+          "EBS fornecerá itens para eventos escolares de Palmeiras por oito meses"
+        ],
+        "leadDirection": "Abrir com o contrato nº 081/2026, a empresa, o valor de R$ 133.500,00 e a finalidade escolar; esclarecer que o valor é contratual.",
+        "storyStructure": [
+          "Objeto e valor do contrato",
+          "Eventos e público atendido",
+          "Itens, quantidades e preços",
+          "Entregas, fiscalização e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O contrato nº 081/2026 decorre do Pregão Eletrônico nº 091/2026 e do processo nº 6.195/2026.",
+          "A contratada é EBS Empreendimentos Ltda.",
+          "O valor informado é R$ 133.500,00.",
+          "A vigência é de oito meses."
+        ],
+        "contextToFind": [
+          "Planilha completa de itens e quantidades",
+          "Calendário e escolas beneficiadas",
+          "CNPJ e endereço da contratada",
+          "Critérios de recebimento e controle"
+        ],
+        "reportingQuestions": [
+          "Quais eventos e unidades serão atendidos?",
+          "Que itens concentram a maior parte do valor?",
+          "Como será comprovada cada entrega?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Educação de Palmeiras de Goiás",
+          "Fiscal do contrato nº 081/2026",
+          "EBS Empreendimentos Ltda."
+        ],
+        "dataCrossChecks": [
+          "Edital e resultado do Pregão nº 091/2026",
+          "Contrato nº 081/2026 e planilha de itens",
+          "Ordens de fornecimento, notas fiscais e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 133,5 mil já foram pagos.",
+          "Não somar automaticamente os três contratos publicados na página.",
+          "Não estimar número de alunos sem dado oficial."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-660-a2ef3d738e2d-7",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "07fbfb0d262dd39dd9ee22af9b82956016db51d7742d91ae127b872fca1c7912",
+        "documentReference": "Edição 464 · páginas 12 a 13"
+      },
+      "editorial": {
+        "mainAngle": "Três dos sete contratos de software de gestão firmados por Senador Canedo com a IPM somam R$ 1,27 milhão e atendem o IAMESC, o SENAPREV e o Fundo de Saúde.",
+        "whyItMatters": "O segmento faz parte de um pacote municipal maior. Publicá-lo isoladamente duplicaria a cobertura e esconderia o custo total de R$ 3,55 milhões.",
+        "headlineOptions": [
+          "Saúde, previdência e assistência ao servidor integram pacote de software",
+          "Três contratos com a IPM somam R$ 1,27 milhão em Senador Canedo",
+          "Pacote digital de Senador Canedo alcança saúde e previdência"
+        ],
+        "leadDirection": "Usar este recorte como bloco da pauta principal sobre os sete contratos da IPM, informando os valores de R$ 158.439, R$ 361.086 e R$ 752.070; não gerar matéria independente sem decisão editorial.",
+        "storyStructure": [
+          "Contexto do pacote de sete contratos",
+          "Valores de IAMESC, SENAPREV e Saúde",
+          "Módulos e serviços previstos",
+          "Implantação e pagamentos"
+        ],
+        "verifiedFacts": [
+          "Os três instrumentos decorrem do Pregão Eletrônico nº 42/2026 e do processo 1Doc nº 8.400/2026.",
+          "O IAMESC contratou R$ 158.439,00.",
+          "O SENAPREV contratou R$ 361.086,00.",
+          "O Fundo Municipal de Saúde contratou R$ 752.070,00.",
+          "A soma dos três valores é R$ 1.271.595,00."
+        ],
+        "contextToFind": [
+          "Números individuais dos contratos",
+          "Módulos destinados a cada órgão",
+          "Custo e fornecedor anteriores",
+          "Cronograma de migração"
+        ],
+        "reportingQuestions": [
+          "Que sistemas serão substituídos?",
+          "Como os dados sensíveis serão migrados e protegidos?",
+          "Quais entregas condicionam cada pagamento?"
+        ],
+        "peopleToHear": [
+          "IAMESC",
+          "SENAPREV",
+          "Secretaria Municipal de Saúde",
+          "IPM Sistemas Ltda."
+        ],
+        "dataCrossChecks": [
+          "Sete contratos do Pregão nº 42/2026",
+          "Empenhos por unidade gestora",
+          "Contratos anteriores de software",
+          "Relatórios de implantação"
+        ],
+        "doNotState": [
+          "Não tratar os três valores como pagamento realizado.",
+          "Não publicar o recorte como se fosse o pacote completo.",
+          "Não somar contratos sem identificar cada unidade gestora."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Recorte de um pacote de sete contratos. Recomendada a fusão com o brief principal do processo 1Doc nº 8.400/2026."
+      }
+    },
+    {
+      "id": "jul26-agm-114601-950F8931-13",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "documentReference": "Edição 3677 · páginas 4 a 5"
+      },
+      "editorial": {
+        "mainAngle": "Alto Horizonte contratou por R$ 1,58 milhão a revitalização da Praça da Bíblia e a reforma da Praça da Cascata, com recursos de emenda parlamentar especial e contrapartida municipal.",
+        "whyItMatters": "As duas obras alteram espaços públicos centrais e mobilizam valor elevado, com prazo contratual de um ano e combinação de recursos externos e próprios.",
+        "headlineOptions": [
+          "Alto Horizonte contrata obras em duas praças por R$ 1,58 milhão",
+          "Emenda financia revitalização de praças em Alto Horizonte",
+          "Praça da Bíblia e Praça da Cascata entram em contrato de R$ 1,58 milhão"
+        ],
+        "leadDirection": "Abrir com as duas praças, o valor de R$ 1.576.350,00, a empresa K F P Vieira Serviços e a fonte combinada; não dizer que a obra começou.",
+        "storyStructure": [
+          "Obras, locais e valor",
+          "Emenda e recursos próprios",
+          "Empresa, processo e vigência",
+          "Projetos, cronograma e fiscalização"
+        ],
+        "verifiedFacts": [
+          "O contrato é o nº 09/2026 e está vinculado ao processo nº 2.752/2026.",
+          "A contratada é K F P Vieira Serviços Ltda., CNPJ 26.998.315/0001-63.",
+          "O objeto é a revitalização da Praça da Bíblia e a reforma da Praça da Cascata.",
+          "O valor é R$ 1.576.350,00.",
+          "A vigência vai de 10 de agosto de 2026 a 10 de agosto de 2027.",
+          "O ato cita a emenda especial nº 202628330007, Plano de Ação nº 09032026, além de recursos próprios."
+        ],
+        "contextToFind": [
+          "Autor e valor exato da emenda",
+          "Projetos e planilhas de cada praça",
+          "Prazo físico e ordem de serviço",
+          "Contrapartida municipal individualizada"
+        ],
+        "reportingQuestions": [
+          "Quanto será gasto em cada praça?",
+          "Quem destinou a emenda?",
+          "Quando as obras começam e quais espaços ficarão interditados?",
+          "Como serão publicadas as medições?"
+        ],
+        "peopleToHear": [
+          "Prefeitura de Alto Horizonte",
+          "Fiscal do contrato nº 09/2026",
+          "K F P Vieira Serviços Ltda.",
+          "Autor da emenda parlamentar"
+        ],
+        "dataCrossChecks": [
+          "Processo nº 2.752/2026",
+          "Plano de Ação nº 09032026",
+          "Portal de transferências da emenda",
+          "Empenhos, medições e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 1,58 milhão já foram pagos.",
+          "Não atribuir autoria da emenda sem o documento de transferência.",
+          "Não dizer que as obras começaram sem ordem de serviço.",
+          "Não presumir divisão igual do valor entre as praças."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114601-42D08ED4-15",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "documentReference": "Edição 3677 · página 5"
+      },
+      "editorial": {
+        "mainAngle": "O Fundo de Assistência Social de Alto Horizonte contratou assessoria jurídica externa por R$ 164,4 mil para 12 meses, ao custo de R$ 13,7 mil mensais.",
+        "whyItMatters": "O serviço consultivo cria despesa recorrente e precisa ter escopo, entregas e relação com a estrutura jurídica municipal claramente definidos.",
+        "headlineOptions": [
+          "Assistência Social de Alto Horizonte contrata assessoria jurídica por R$ 164,4 mil",
+          "Contrato jurídico prevê R$ 13,7 mil por mês em Alto Horizonte",
+          "Fundo Social firma consultoria jurídica por 12 meses"
+        ],
+        "leadDirection": "Informar valor mensal e global, fornecedor, contratação por inexigibilidade e duração; não equiparar contrato a pagamento.",
+        "storyStructure": [
+          "Serviço, valores e prazo",
+          "Fundamento da inexigibilidade",
+          "Escopo e entregas",
+          "Relação com a procuradoria",
+          "Fiscalização e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O contrato é o nº 007/2026, vinculado ao processo nº 14.017/2026 e à Inexigibilidade nº 72/2026.",
+          "A contratada é Eliana Rocha Lemos Sociedade Individual de Advocacia, CNPJ 46.381.843/0001-86.",
+          "O valor mensal é R$ 13.700,00 e o global é R$ 164.400,00.",
+          "A vigência é de 12 meses a partir da assinatura, ocorrida em 3 de agosto de 2026."
+        ],
+        "contextToFind": [
+          "Termo de referência e entregas mensais",
+          "Justificativa da escolha e do preço",
+          "Corpo jurídico próprio disponível",
+          "Outros contratos jurídicos vigentes"
+        ],
+        "reportingQuestions": [
+          "Que demandas específicas serão atendidas?",
+          "Por que a estrutura municipal não absorve o serviço?",
+          "Como o preço foi comparado?",
+          "Quem fiscalizará as entregas?"
+        ],
+        "peopleToHear": [
+          "Fundo Municipal de Assistência Social de Alto Horizonte",
+          "Procuradoria do Município",
+          "Eliana Rocha Lemos Sociedade Individual de Advocacia",
+          "Fiscal do contrato"
+        ],
+        "dataCrossChecks": [
+          "Processo nº 14.017/2026",
+          "Parecer da Inexigibilidade nº 72/2026",
+          "Empenhos, relatórios e pagamentos",
+          "Contratos semelhantes de outros fundos"
+        ],
+        "doNotState": [
+          "Não tratar inexigibilidade como irregularidade.",
+          "Não afirmar que o valor global já foi pago.",
+          "Não dizer que o serviço substitui a procuradoria sem comparar atribuições."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114601-C22AE5B0-162",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "documentReference": "Edição 3677 · página 68"
+      },
+      "editorial": {
+        "mainAngle": "Palmeiras de Goiás contratou a Jocelio Pizzas e Salgados por R$ 30,3 mil para atender eventos e celebrações da rede municipal de ensino.",
+        "whyItMatters": "O contrato integra uma compra dividida entre três fornecedores para atividades com alunos e crianças; itens e entregas precisam ser acompanhados separadamente.",
+        "headlineOptions": [
+          "Palmeiras firma contrato de R$ 30,3 mil para lanches em eventos escolares",
+          "Rede de ensino contrata pizzas e salgados para celebrações",
+          "Contrato cobre alimentos para festas escolares em Palmeiras"
+        ],
+        "leadDirection": "Abrir com o contrato nº 082/2026, a empresa, o valor de R$ 30.333,00 e a vigência de oito meses; contextualizar que há outros dois contratos do mesmo pregão.",
+        "storyStructure": [
+          "Objeto e valor",
+          "Relação com o pregão e outros lotes",
+          "Eventos e itens atendidos",
+          "Entregas e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O contrato é o nº 082/2026.",
+          "A contratada é Jocelio Pizzas e Salgados Ltda.",
+          "O valor informado é R$ 30.333,00.",
+          "O instrumento decorre do Pregão Eletrônico nº 091/2026 e tem vigência de oito meses."
+        ],
+        "contextToFind": [
+          "Itens, quantidades e preços unitários",
+          "Calendário de eventos",
+          "CNPJ da empresa",
+          "Critérios de recebimento"
+        ],
+        "reportingQuestions": [
+          "Que itens serão fornecidos?",
+          "Quais unidades escolares serão atendidas?",
+          "Como as entregas serão registradas?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Educação de Palmeiras de Goiás",
+          "Fiscal do contrato nº 082/2026",
+          "Jocelio Pizzas e Salgados Ltda."
+        ],
+        "dataCrossChecks": [
+          "Pregão nº 091/2026",
+          "Contrato nº 082/2026",
+          "Ordens de fornecimento, notas fiscais e pagamentos"
+        ],
+        "doNotState": [
+          "Não dizer que R$ 30,3 mil já foram pagos.",
+          "Não atribuir a este contrato os valores dos outros lotes.",
+          "Não estimar consumo sem a planilha de itens."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-agm-114601-F1A56EC5-163",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "documentReference": "Edição 3677 · página 68"
+      },
+      "editorial": {
+        "mainAngle": "Palmeiras de Goiás contratou Eliezer Macedo Batista por R$ 59 mil para fornecer alimentos e bebidas em eventos da rede municipal de ensino.",
+        "whyItMatters": "O contrato é um dos três instrumentos do mesmo pregão e precisa ser lido por lote, com controle das quantidades entregues em festas e formaturas.",
+        "headlineOptions": [
+          "Palmeiras firma contrato de R$ 59 mil para alimentos em eventos escolares",
+          "Fornecedor atenderá celebrações da rede de ensino por oito meses",
+          "Contrato de R$ 59 mil integra compra para festas escolares"
+        ],
+        "leadDirection": "Informar contrato nº 083/2026, fornecedor, valor de R$ 59.004,00 e duração; explicar que o gasto efetivo depende das entregas e pagamentos.",
+        "storyStructure": [
+          "Objeto, fornecedor e valor",
+          "Lote no Pregão nº 091/2026",
+          "Eventos e público atendido",
+          "Fiscalização, entregas e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O contrato é o nº 083/2026.",
+          "O contratado é Eliezer Macedo Batista.",
+          "O valor informado é R$ 59.004,00.",
+          "A vigência é de oito meses e o processo é o nº 6.195/2026."
+        ],
+        "contextToFind": [
+          "CNPJ do fornecedor",
+          "Itens e quantidades contratados",
+          "Unidades e datas atendidas",
+          "Preço unitário e execução por ordem"
+        ],
+        "reportingQuestions": [
+          "Quais produtos compõem o lote?",
+          "Quanto do valor será requisitado em cada evento?",
+          "Quem confere quantidade e qualidade?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Educação de Palmeiras de Goiás",
+          "Fiscal do contrato nº 083/2026",
+          "Eliezer Macedo Batista"
+        ],
+        "dataCrossChecks": [
+          "Edital e adjudicação do Pregão nº 091/2026",
+          "Contrato nº 083/2026",
+          "Notas fiscais, ordens de fornecimento e pagamentos"
+        ],
+        "doNotState": [
+          "Não afirmar pagamento integral.",
+          "Não somar este valor aos demais sem explicar os três contratos.",
+          "Não tratar valor máximo como consumo garantido."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "jul26-anapolis-23134-b47e8dc194e6-22",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "555a5b6013a0fa53349a7d990b507d06f5c97c314ada6fa05c861176127da313",
+        "documentReference": "Edição 3.999/2026 · páginas 4 a 5"
+      },
+      "editorial": {
+        "mainAngle": "A Assistência Social de Anápolis declarou a inexecução total do item 3 de uma dispensa, extinguiu unilateralmente a contratação com a Sales Ferreira Soluções e aplicou multa de 10% sobre o valor inadimplido.",
+        "whyItMatters": "A decisão envolve responsabilização de fornecedor e possível cobrança pública, mas o extrato não informa o valor-base da multa nem o objeto do item 3.",
+        "headlineOptions": [
+          "Anápolis pune empresa por não entregar item de dispensa eletrônica",
+          "Assistência Social extingue contratação e aplica multa a fornecedor",
+          "Empresa recebe multa de 10% após inexecução total em Anápolis"
+        ],
+        "leadDirection": "Abrir com a decisão administrativa de 6 de agosto, identificando empresa, dispensa e sanções; deixar claro que a multa é de 10% sobre o item 3 e que o valor em reais ainda precisa ser apurado.",
+        "storyStructure": [
+          "Decisão e fundamento",
+          "Objeto e valor do item inadimplido",
+          "Defesa e relatório da comissão",
+          "Prazo de recurso",
+          "Cobrança e efeitos no cadastro de fornecedores"
+        ],
+        "verifiedFacts": [
+          "A decisão está no processo administrativo nº 01111.00000597/2026-72 e se refere ao processo originário nº 01111.00015253/2025-87.",
+          "A empresa é Sales Ferreira Soluções Ltda., CNPJ 53.680.201/0001-43.",
+          "O município reconheceu a não entrega do item 3 da Dispensa Eletrônica nº 030/2025 como inexecução total.",
+          "A decisão declarou a extinção unilateral da contratação formalizada pela Nota de Empenho nº E018473/2025.",
+          "Foi aplicada multa compensatória de 10% sobre o valor do item 3 inadimplido.",
+          "A empresa pode interpor recurso administrativo em 15 dias úteis contados da intimação."
+        ],
+        "contextToFind": [
+          "Descrição, quantidade e valor do item 3",
+          "Defesa apresentada pela empresa",
+          "Relatório final da comissão processante",
+          "Situação da cobrança e eventual recurso",
+          "Histórico contratual da empresa com Anápolis"
+        ],
+        "reportingQuestions": [
+          "O que deveria ter sido entregue e qual era o prazo?",
+          "Qual é o valor nominal da multa?",
+          "Que justificativa a empresa apresentou?",
+          "A decisão já foi intimada e houve recurso?",
+          "O item foi adquirido de outro fornecedor?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Assistência e Políticas Sociais de Anápolis",
+          "Comissão processante",
+          "Sales Ferreira Soluções Ltda.",
+          "Controladoria-Geral do Município"
+        ],
+        "dataCrossChecks": [
+          "Processos nº 01111.00000597/2026-72 e 01111.00015253/2025-87",
+          "Dispensa Eletrônica nº 030/2025",
+          "Nota de Empenho nº E018473/2025",
+          "Cadastro municipal e registros oficiais de sanções"
+        ],
+        "doNotState": [
+          "Não informar valor da multa sem localizar o valor do item 3.",
+          "Não dizer que a decisão é definitiva antes do fim do prazo recursal.",
+          "Não ampliar a sanção além do que consta no ato.",
+          "Não confundir nota de empenho com pagamento."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Há sanção e possibilidade de recurso; localizar o item 3 e acompanhar a intimação antes da publicação final."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-660-3f28f0c407fd-10",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "07fbfb0d262dd39dd9ee22af9b82956016db51d7742d91ae127b872fca1c7912",
+        "documentReference": "Edição 464 · páginas 14 a 15"
+      },
+      "editorial": {
+        "mainAngle": "Dois contratos do pacote de software de Senador Canedo destinam R$ 312,5 mil ao SANESC e à AMMA; o recorte deve ser incorporado à pauta consolidada dos sete instrumentos com a IPM.",
+        "whyItMatters": "Água, saneamento e meio ambiente entram no mesmo projeto digital, mas a publicação isolada duplicaria a cobertura e ocultaria o custo total do pacote.",
+        "headlineOptions": [
+          "Saneamento e meio ambiente entram no pacote de software de Senador Canedo",
+          "SANESC e AMMA firmam R$ 312,5 mil em contratos com a IPM",
+          "Pacote digital inclui autarquias de água e meio ambiente"
+        ],
+        "leadDirection": "Usar os valores de R$ 275.616,00 do SANESC e R$ 36.849,00 da AMMA dentro da matéria consolidada sobre os sete contratos; não publicar como pacote completo.",
+        "storyStructure": [
+          "Contexto dos sete contratos",
+          "Valores de SANESC e AMMA",
+          "Módulos e integração",
+          "Implantação, fiscalização e pagamentos"
+        ],
+        "verifiedFacts": [
+          "Os contratos decorrem do Pregão Eletrônico nº 42/2026 e do processo 1Doc nº 8.400/2026.",
+          "O contrato do SANESC tem valor de R$ 275.616,00.",
+          "O contrato da AMMA tem valor de R$ 36.849,00.",
+          "Os dois valores somam R$ 312.465,00 e têm vigência de 12 meses."
+        ],
+        "contextToFind": [
+          "Módulos específicos de saneamento e meio ambiente",
+          "Integração com os sistemas da prefeitura",
+          "Soluções substituídas",
+          "Cronograma e indicadores de serviço"
+        ],
+        "reportingQuestions": [
+          "Que processos serão digitalizados em cada autarquia?",
+          "Como os sistemas compartilharão dados?",
+          "Quais entregas autorizam pagamento?"
+        ],
+        "peopleToHear": [
+          "SANESC",
+          "AMMA",
+          "Secretaria de Tecnologia e Inovação",
+          "IPM Sistemas Ltda."
+        ],
+        "dataCrossChecks": [
+          "Contratos de SANESC e AMMA",
+          "Pacote completo do processo 1Doc nº 8.400/2026",
+          "Empenhos e pagamentos",
+          "Contratos anteriores de software"
+        ],
+        "doNotState": [
+          "Não afirmar pagamento dos R$ 312,5 mil.",
+          "Não apresentar dois instrumentos como o pacote municipal completo.",
+          "Não duplicar os valores na soma da pauta consolidada."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Recomendada a fusão com o brief principal dos sete contratos da IPM."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-660-40a479d145e4-40",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "07fbfb0d262dd39dd9ee22af9b82956016db51d7742d91ae127b872fca1c7912",
+        "documentReference": "Edição 464 · páginas 35 a 42"
+      },
+      "editorial": {
+        "mainAngle": "Senador Canedo abriu crédito suplementar de R$ 543,3 mil por anulação de dotações e redistribuiu recursos entre administração, infraestrutura, Corpo de Bombeiros e assistência social.",
+        "whyItMatters": "O decreto altera prioridades do orçamento em várias áreas. Como todo o crédito é coberto por anulações, ele representa remanejamento, não receita nova.",
+        "headlineOptions": [
+          "Senador Canedo remaneja R$ 543,3 mil entre áreas do orçamento",
+          "Decreto redistribui recursos para infraestrutura, Bombeiros e assistência",
+          "Crédito de R$ 543,3 mil é coberto por anulações em Senador Canedo"
+        ],
+        "leadDirection": "Informar o total de R$ 543.289,00 e explicar que a cobertura vem integralmente de anulações; apresentar destinos por órgão sem chamar a operação de gasto realizado.",
+        "storyStructure": [
+          "Valor e natureza do crédito",
+          "Dotações suplementadas por área",
+          "Dotações anuladas",
+          "Justificativas e impacto nas ações",
+          "Execução posterior"
+        ],
+        "verifiedFacts": [
+          "O Decreto nº 123 é datado de 5 de agosto de 2026 e foi publicado em 7 de agosto.",
+          "O crédito suplementar totaliza R$ 543.289,00.",
+          "As suplementações visíveis incluem R$ 87.515,00 para Administração, R$ 27.485,00 para Infraestrutura, R$ 390.200,00 ligados ao Corpo de Bombeiros e R$ 38.089,00 para Assistência Social.",
+          "A cobertura informada vem de anulações que também totalizam R$ 543.289,00."
+        ],
+        "contextToFind": [
+          "Consolidação de cada ficha anulada e suplementada",
+          "Motivo administrativo do remanejamento",
+          "Saldo restante das dotações reduzidas",
+          "Empenhos posteriores ao decreto"
+        ],
+        "reportingQuestions": [
+          "Quais ações perderam recursos?",
+          "Que despesas serão cobertas nas dotações suplementadas?",
+          "O remanejamento altera entregas previstas para 2026?",
+          "Quando os novos créditos serão empenhados?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Fazenda e Finanças",
+          "Secretarias e fundos afetados",
+          "Controladoria de Senador Canedo",
+          "Câmara Municipal"
+        ],
+        "dataCrossChecks": [
+          "Anexo integral do Decreto nº 123",
+          "LOA e balancete de agosto de 2026",
+          "Empenhos nas fichas suplementadas",
+          "Saldo das dotações anuladas"
+        ],
+        "doNotState": [
+          "Não tratar R$ 543,3 mil como dinheiro novo.",
+          "Não dizer que o valor já foi gasto ou pago.",
+          "Não atribuir o total a uma única secretaria.",
+          "Não chamar anulação de corte efetivo de serviço sem conferir execução e saldo."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Decreto multissetorial; exige consolidação de fichas e confirmação do impacto antes da redação final."
+      }
+    },
+    {
+      "id": "jul26-agm-114601-9A253F43-68",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-10T00:38:00-03:00",
+      "source": {
+        "documentSha256": "a9d922266ccaa316f505eee7e0b3b5598c21ffedde5ab46a769b5fdb0105cdce",
+        "documentReference": "Edição 3677 · página 41"
+      },
+      "editorial": {
+        "mainAngle": "Edéia homologou uma compra de medicamentos de R$ 114,7 mil distribuída entre sete fornecedores, com contratos individualizados para abastecer a rede municipal de saúde.",
+        "whyItMatters": "A compra abastece a rede municipal de saúde e foi dividida entre várias empresas. A conferência por fornecedor evita dupla contagem e permite acompanhar entrega e pagamento.",
+        "headlineOptions": [
+          "Edéia divide compra de R$ 114,7 mil em medicamentos entre sete empresas",
+          "Sete fornecedores vencem pregão de medicamentos em Edéia",
+          "Saúde de Edéia homologa contratos de medicamentos; veja valores"
+        ],
+        "leadDirection": "Apresentar a compra como resultado do Pregão Eletrônico nº 014/2026 e informar o total homologado de R$ 114.739,00; montar tabela contrato-empresa-valor usando as páginas 41 e 42.",
+        "storyStructure": [
+          "Valor total e finalidade",
+          "Tabela por fornecedor e contrato",
+          "Itens e critérios do pregão",
+          "Entrega, abastecimento e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O processo administrativo é o nº 2.818/2026 e a modalidade é o Pregão Eletrônico nº 014/2026.",
+          "O objeto é a aquisição de medicamentos para a Secretaria Municipal de Saúde de Edéia, com menção a plano de trabalho, fundo a fundo e emenda parlamentar estadual.",
+          "O valor total da licitação é R$ 114.739,00.",
+          "Os sete valores adjudicados são R$ 14.615,00; R$ 6.130,00; R$ 19.260,00; R$ 49.010,00; R$ 14.150,00; R$ 9.954,00; e R$ 1.620,00.",
+          "As vencedoras são Armazém dos Medicamentos, Boaz Saúde e Segurança, C.A. Distribuidora, C&C Hospitalar, Galli e Liotto, Play Pharma e SSZ Distribuidora."
+        ],
+        "contextToFind": [
+          "Tabela de itens, quantidades e preços",
+          "Valor e identificação da emenda",
+          "Prazos de entrega e estoque atual",
+          "Execução e pagamentos por contrato"
+        ],
+        "reportingQuestions": [
+          "Quais medicamentos concentram o maior valor?",
+          "Qual empresa recebeu cada lote?",
+          "Há itens fracassados ou desertos?",
+          "Como a Saúde acompanhará entregas e abastecimento?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Edéia",
+          "Pregoeiro e fiscais dos contratos",
+          "Fornecedores vencedores",
+          "Conselho Municipal de Saúde"
+        ],
+        "dataCrossChecks": [
+          "Adjudicação e homologação do Pregão nº 014/2026",
+          "Contratos nº 187 a 194/2026",
+          "Planilha de itens e ata da sessão",
+          "Empenhos, entregas e pagamentos"
+        ],
+        "doNotState": [
+          "Não somar R$ 114.739,00 novamente aos sete valores; ele já é o total da licitação.",
+          "Não afirmar que os valores já foram pagos.",
+          "Não atribuir todos os medicamentos a um único fornecedor.",
+          "Não tratar valor adjudicado como estoque já entregue."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "A página reúne homologação e extratos; conferir a tabela completa dos sete contratos antes da redação final."
       }
     }
   ]
