@@ -352,7 +352,7 @@ function normalizeJulyDocumentNews(item, preview) {
     hasOriginalSource: Boolean(item.official_url || item.source_landing_url),
     recordType: "story",
     sourceType: "official_document",
-    publicationMode: "automatic_document_news",
+    publicationMode: item.publication_mode || "automatic_document_news",
     editorialStatus: "published",
     pageStart: item.page_start,
     pageEnd: item.page_end,
@@ -502,6 +502,7 @@ async function main() {
     municipalDiaries,
     alegoMonitor,
     julyDocumentNews,
+    controlNews,
     curatedBriefs
   ] = await Promise.all([
     trindadeProvider.buscarAtos(),
@@ -517,6 +518,7 @@ async function main() {
     readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], range: {} }, "data", "trindade", "municipal-diaries-2026.json"),
     readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], analysis_queue: [], range: {} }, "data", "trindade", "alego-monitor-2026.json"),
     readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "july-document-news-2026.json"),
+    readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "control-news-2026.json"),
     readJsonOptional({ briefs: [] }, "data", "editorial", "curated-briefs.json")
   ]);
 
@@ -574,6 +576,8 @@ async function main() {
       return !externalId || !existingTrindadeActKeys.has(`${editionId}:${externalId}`);
     })
     .map((item) => normalizeJulyDocumentNews(item, previewByRecord.get(item.id)));
+  const normalizedControlNews = (controlNews.items || [])
+    .map((item) => normalizeJulyDocumentNews(item, previewByRecord.get(item.id)));
   const normalizedTcmNews = (tcmDossiers.dossiers || [])
     .filter((item) => item.scope_status === "trindade_confirmado")
     .map(normalizeTcmDossier);
@@ -600,6 +604,7 @@ async function main() {
         .concat(normalizedTrindadeNews)
         .concat(normalizedTrindadeActs)
         .concat(normalizedJulyDocumentNews)
+        .concat(normalizedControlNews)
         .concat(normalizedTcmNews)
         .concat(residualUnified)
         .map(applyEditorialCuration)
@@ -609,7 +614,7 @@ async function main() {
   );
 
   const publishedNews = stateRecords
-    .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedTcmNews)
+    .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedControlNews, normalizedTcmNews)
     .filter((item) => item.recordType === "story")
     .map(applyEditorialCuration)
     .map(addPublicationMetadata);
@@ -617,6 +622,9 @@ async function main() {
   const frontPage = buildFrontPagePackage(timelineNews);
   const leadStory = frontPage.lead;
   const heroSidebar = frontPage.sidebar;
+  const controlFront = rankFrontPageStories(
+    normalizedControlNews.filter((item) => /TC[EM]-GO/.test(item.sourceFamily || ""))
+  ).slice(0, 8);
 
   const stateFront = sortForSearch(stateRecords.map(applyEditorialCuration)
     .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
@@ -625,6 +633,7 @@ async function main() {
   const actsFront = sortForSearch(
     normalizedTrindadeActs
       .concat(normalizedJulyDocumentNews)
+      .concat(normalizedControlNews)
       .map(applyEditorialCuration)
       .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)
   ).slice(0, 8);
@@ -750,8 +759,11 @@ async function main() {
       excludedInstitutionalNews: (radar.entries || []).filter((item) => !isPrimaryOfficialSource(item)).length
         + trindadeNews.filter((item) => !hasPrimarySource(item)).length,
       trindadeActs: normalizedTrindadeActs.length,
-      tcmStories: normalizedTcmNews.filter((item) => item.recordType === "story").length,
+      tcmStories: normalizedTcmNews.filter((item) => item.recordType === "story").length
+        + normalizedControlNews.filter((item) => item.sourceFamily?.includes("TCM-GO")).length,
       tcmDocuments: normalizedTcmNews.length,
+      controlStories: normalizedControlNews.length,
+      tceStories: normalizedControlNews.filter((item) => item.sourceFamily?.includes("TCE-GO")).length,
       consultedSources: sourceCards.length,
       pagesReviewed: trindadeCoverage.pages || 0,
       municipalities: coverage.summary?.municipalities_total || radar.coverage_goal?.municipalities_total || 0,
@@ -761,6 +773,7 @@ async function main() {
     },
     leadStory,
     heroSidebar,
+    controlFront,
     timeline: {
       year: editorialYear,
       total: timelineNews.length,
