@@ -57,7 +57,7 @@ function buildSearchText(record) {
     record.type,
     record.sourceFamily,
     ...(record.tags || []).slice(0, 6)
-  ].join(" ")), 360);
+  ].join(" ")), 320);
 }
 
 function buildSearchRecord(item) {
@@ -69,7 +69,7 @@ function buildSearchRecord(item) {
     year: item.year,
     type: item.type,
     title: item.title,
-    deck: trimText(item.deck, 84),
+    deck: trimText(item.deck, 72),
     sourceFamily: item.sourceFamily,
     marker: trimText(item.marker || item.sourceNote || "", 36),
     recordType: item.recordType,

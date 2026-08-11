@@ -54,7 +54,7 @@ const baselines = {
   "company-profiles.json": ["profiles", 551],
   "july-document-news-2026.json": ["items", 500],
   "news-2026.json": ["items", 12],
-  "tcmgo-trindade-decisions.json": ["decisions", 1097],
+  "tcmgo-trindade-decisions.json": ["decisions", 1073, "id"],
   "unified-search-index.json": ["records", 4621]
 };
 
@@ -64,12 +64,27 @@ for (const file of files) {
   const source = path.join(sourceDir, file);
   await access(source, constants.R_OK);
   const contents = await readFile(source);
-  const [collection, minimum] = baselines[file] || [];
+  const [collection, minimum, uniqueKey] = baselines[file] || [];
   if (collection) {
     const parsed = JSON.parse(contents.toString("utf8"));
-    const count = Array.isArray(parsed?.[collection]) ? parsed[collection].length : 0;
-    if (count < minimum) {
-      throw new Error(`${file}: baseline recusado (${count} < ${minimum} em ${collection}).`);
+    const records = Array.isArray(parsed?.[collection]) ? parsed[collection] : [];
+    const count = uniqueKey
+      ? new Set(records.map((item) => item?.[uniqueKey]).filter(Boolean)).size
+      : records.length;
+    let required = minimum;
+    try {
+      const stable = JSON.parse(await readFile(path.join(targetDir, file), "utf8"));
+      const stableRecords = Array.isArray(stable?.[collection]) ? stable[collection] : [];
+      const stableCount = uniqueKey
+        ? new Set(stableRecords.map((item) => item?.[uniqueKey]).filter(Boolean)).size
+        : stableRecords.length;
+      required = Math.max(required, stableCount);
+    } catch {
+      // A linha de base fixa ainda protege a primeira sincronização.
+    }
+    if (count < required) {
+      const unit = uniqueKey ? `${collection} únicos por ${uniqueKey}` : collection;
+      throw new Error(`${file}: baseline recusado (${count} < ${required} em ${unit}).`);
     }
   }
   report.push({

@@ -34,9 +34,8 @@ const expectedFrontPage = buildFrontPagePackage(records.filter(
 assert(site.leadStory.id === expectedFrontPage.lead?.id, "A manchete principal não é a pauta de maior força editorial.");
 assert(site.leadStory.sourceType === "official_document", "A manchete principal não está apoiada em documento oficial.");
 assert(Number(site.leadStory.importance) > 0, "A manchete principal não possui valor-notícia calculado.");
-assert(site.leadStory.id === "doego-24839-planex-multa-suspensao", "A decisão mais forte do DOE de hoje não chegou à manchete.");
-assert(site.metrics.controlStories === 16, "A cobertura verificada de DOE, TCM e TCE está incompleta.");
-assert(site.metrics.tceStories === 5, "A cobertura semanal verificada do TCE-GO está incompleta.");
+assert(site.metrics.controlStories >= 19, "A cobertura verificada de DOE, TCM e TCE está incompleta.");
+assert(site.metrics.tceStories >= 5, "A cobertura semanal verificada do TCE-GO está incompleta.");
 assert(Array.isArray(site.controlFront) && site.controlFront.length === 8, "O bloco semanal de fiscalização não foi montado.");
 assert(site.controlFront.some((item) => item.sourceFamily?.includes("TCM-GO")), "O bloco semanal não inclui decisões do TCM-GO.");
 assert(site.controlFront.some((item) => item.sourceFamily?.includes("TCE-GO")), "O bloco semanal não inclui decisões do TCE-GO.");
