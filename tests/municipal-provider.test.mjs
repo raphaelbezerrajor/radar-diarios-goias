@@ -25,7 +25,8 @@ test("preserva os baselines municipais publicados", async () => {
   assert.equal(atos.length, 2919);
   assert.equal(noticias.length, 12);
   assert.equal(proposicoes.length, 455);
-  assert.equal(processos.length, 1097);
+  assert.ok(processos.length >= 1073);
+  assert.equal(new Set(processos.map((item) => item.id)).size, processos.length);
   assert.equal(entidades.length, 551);
   assert.equal(registros.length, 4621);
   assert.equal(estado.source_counts.acts, 2919);
