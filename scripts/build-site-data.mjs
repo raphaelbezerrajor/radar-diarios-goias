@@ -52,12 +52,12 @@ function trimText(value, maxLength = 220) {
 function buildSearchText(record) {
   return trimText(normalizeText([
     record.title,
-    trimText(record.deck, 96),
+    trimText(record.deck, 72),
     record.city,
     record.type,
     record.sourceFamily,
     ...(record.tags || []).slice(0, 6)
-  ].join(" ")), 320);
+  ].join(" ")), 280);
 }
 
 function buildSearchRecord(item) {
