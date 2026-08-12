@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Monitoramento documental, legislativo e financeiro da Assembleia Legislativa de Goias",
-  "generated_at": "2026-08-11T11:39:15.439Z",
+  "generated_at": "2026-08-12T11:02:37.498Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-08-11",
+    "to": "2026-08-12",
     "last_checked": {
-      "from": "2026-08-04",
-      "to": "2026-08-11"
+      "from": "2026-08-06",
+      "to": "2026-08-12"
     }
   },
   "summary": {
@@ -17,8 +17,8 @@
     "downloaded_diaries": 31,
     "failed_diary_downloads": 0,
     "extraction_pending": 31,
-    "vote_rows": 4450,
-    "roll_calls": 200,
+    "vote_rows": 4800,
+    "roll_calls": 216,
     "contracts": 84,
     "current_contracts": 73,
     "sanctions_registers": 1,
@@ -73,8 +73,8 @@
       "status": "checked",
       "collection_method": "api_publica_oficial",
       "summary": {
-        "rows": 4450,
-        "roll_calls": 200
+        "rows": 4800,
+        "roll_calls": 216
       }
     },
     {
@@ -100,6 +100,16 @@
     }
   ],
   "analysis_queue": [
+    {
+      "id": "alego-votacao:2026-08-11:40240",
+      "type": "votacao_nominal",
+      "date": "2026-08-11",
+      "priority": 90,
+      "title": "DISPÕE SOBRE A MELHORIA DO ACESSO E TRANSPARÊNCIA NOS SERVIÇOS DE SAÚDE NO ESTADO DE GOIÁS E DÁ OUTRAS PROVIDÊNCIAS.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 40240 · 58ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
     {
       "id": "alego-votacao:2026-07-07:39753",
       "type": "votacao_nominal",
@@ -389,16 +399,6 @@
       "why": "R$ 763.110,00 como maior valor informado entre empenhado e pago. aquisição de CADEIRA FIXA, POLTRONAS GIRATÓRIAS E LONGARINAS DE 2 E 3 LUGARES, incluindo montagem e alocação, destinados a atender as demandas da Assembleia Legislativa do Estado de Goiás.",
       "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/A6oADUfT_q-Mon8v044Mwg==/contrato-alego-459",
       "document_reference": "Processo 2021009306"
-    },
-    {
-      "id": "alego-contrato:662",
-      "type": "contrato",
-      "date": "2027-06-09",
-      "priority": 77,
-      "title": "Contrato 23/2025 — VÓLUS INSTITUIÇÃO DE PAGAMENTO LTDA",
-      "why": "R$ 528.989,18 como maior valor informado entre empenhado e pago. GERENCIAMENTO E CONTROLE DE FORNECIMENTO DE COMBUSTÍVEL AERONÁUTICO - GASOLINA DE AVIAÇÃO (AVGAS), EM REDE DE POSTOS CREDENCIADOS EM AEROPORTOS, COM PAGAMENTO POR MEIO DE CARTÃO COM SISTEMA DE PAGAMENTO ELETRÔNICO, PARA ",
-      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/FVglKnFNDPmQvupPXTyq2Q==/contrato-alego-662",
-      "document_reference": "Processo 9602/2025"
     }
   ]
 }
