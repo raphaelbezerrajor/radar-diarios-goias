@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Monitoramento documental, legislativo e financeiro da Assembleia Legislativa de Goias",
-  "generated_at": "2026-08-12T11:02:37.498Z",
+  "generated_at": "2026-08-13T14:08:30.082Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-08-12",
+    "to": "2026-08-13",
     "last_checked": {
-      "from": "2026-08-06",
-      "to": "2026-08-12"
+      "from": "2026-08-07",
+      "to": "2026-08-13"
     }
   },
   "summary": {
@@ -17,8 +17,8 @@
     "downloaded_diaries": 31,
     "failed_diary_downloads": 0,
     "extraction_pending": 31,
-    "vote_rows": 4800,
-    "roll_calls": 216,
+    "vote_rows": 4977,
+    "roll_calls": 224,
     "contracts": 84,
     "current_contracts": 73,
     "sanctions_registers": 1,
@@ -73,8 +73,8 @@
       "status": "checked",
       "collection_method": "api_publica_oficial",
       "summary": {
-        "rows": 4800,
-        "roll_calls": 216
+        "rows": 4977,
+        "roll_calls": 224
       }
     },
     {
@@ -100,6 +100,16 @@
     }
   ],
   "analysis_queue": [
+    {
+      "id": "alego-votacao:2026-08-12:40410",
+      "type": "votacao_nominal",
+      "date": "2026-08-12",
+      "priority": 90,
+      "title": "DISPÕE SOBRE A CRIAÇÃO DO CADASTRO DE OBESIDADE INFANTO-JUVENIL NAS ESCOLAS DE ENSINO FUNDAMENTAL E MÉDIO NA REDE ESTADUAL DE EDUCAÇÃO DO ESTADO DE GOIÁS.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 23 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 40410 · 59ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
     {
       "id": "alego-votacao:2026-08-11:40240",
       "type": "votacao_nominal",
@@ -389,16 +399,6 @@
       "why": "R$ 924.000,00 como maior valor informado entre empenhado e pago. Contratação dos serviços de atualização de versão de software de virtualização, treinamento, suporte técnico, operação assistida, hospedagem e consultoria técnica para modelagem e automação de processos, para atender às ",
       "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/fxpAfvQPhQx0xmkD2k1dhg==/contrato-alego-829",
       "document_reference": "Processo 32168/2025"
-    },
-    {
-      "id": "alego-contrato:459",
-      "type": "contrato",
-      "date": "2021-12-22",
-      "priority": 79,
-      "title": "Contrato sem numero — FLEXFORM INDÚSTRIA E COMÉRCIO DE MÓVEIS LTDA",
-      "why": "R$ 763.110,00 como maior valor informado entre empenhado e pago. aquisição de CADEIRA FIXA, POLTRONAS GIRATÓRIAS E LONGARINAS DE 2 E 3 LUGARES, incluindo montagem e alocação, destinados a atender as demandas da Assembleia Legislativa do Estado de Goiás.",
-      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/A6oADUfT_q-Mon8v044Mwg==/contrato-alego-459",
-      "document_reference": "Processo 2021009306"
     }
   ]
 }
