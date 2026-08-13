@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-08-10T11:57:12.747Z",
+  "updatedAt": "2026-08-13T14:57:56.089Z",
   "briefs": [
     {
       "id": "jul26-agm-114590-608B28AC-243",
@@ -3842,6 +3842,842 @@
         "approvedBy": null,
         "approvedAt": null,
         "notes": "Revisar a semântica dos valores: R$ 22,66 milhões é o global acumulado; o incremento aritmético dos 12 meses é R$ 8.427.656,16."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-AAF7E299-223",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · página 68"
+      },
+      "editorial": {
+        "mainAngle": "Trindade prorrogou até fevereiro de 2027 a locação de três tipos de máquinas pesadas para a Secretaria de Infraestrutura, com valor global de R$ 404,7 mil.",
+        "whyItMatters": "O aditivo mantém equipamentos usados em serviços de infraestrutura e revela o custo mensal da locação, permitindo acompanhar a execução do contrato iniciado em 2022.",
+        "headlineOptions": [
+          "Trindade prorroga por R$ 404,7 mil aluguel de máquinas pesadas",
+          "Aditivo mantém máquinas da Infraestrutura até fevereiro de 2027",
+          "Locação de caminhões e motoniveladora custa R$ 62,5 mil por mês em Trindade"
+        ],
+        "leadDirection": "Abrir com o valor global, o prazo e os equipamentos; identificar a Gran Fort e deixar claro que o aditivo não prova pagamento.",
+        "storyStructure": [
+          "Valor e prazo do sétimo aditivo",
+          "Máquinas e secretaria atendida",
+          "Histórico e execução financeira do Contrato nº 013/2022"
+        ],
+        "verifiedFacts": [
+          "O sétimo aditivo do Contrato nº 013/2022 foi assinado com a Gran Fort Sociedade Unipessoal Ltda., CNPJ 09.426.949/0001-22.",
+          "O objeto inclui caminhão basculante, caminhão-tanque e motoniveladora para a Secretaria Municipal de Infraestrutura.",
+          "A vigência vai de 31 de julho de 2026 a 8 de fevereiro de 2027.",
+          "O valor mensal é R$ 62.457,49 e o global do aditivo, R$ 404.744,95."
+        ],
+        "contextToFind": [
+          "Valores acumulados dos sete aditivos",
+          "Horas ou diárias efetivamente utilizadas",
+          "Empenhos, liquidações e pagamentos do contrato"
+        ],
+        "reportingQuestions": [
+          "Por que a locação foi prorrogada novamente?",
+          "Quais serviços e frentes de obra usam as máquinas?",
+          "Quanto já foi pago desde 2022?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Infraestrutura de Trindade",
+          "Secretaria Municipal de Gestão",
+          "Gran Fort Sociedade Unipessoal Ltda."
+        ],
+        "dataCrossChecks": [
+          "Contrato nº 013/2022 e seis aditivos anteriores",
+          "Portal da Transparência de Trindade",
+          "Ordens de serviço e registros de uso dos equipamentos"
+        ],
+        "doNotState": [
+          "Não tratar R$ 404.744,95 como valor já pago.",
+          "Não somar o valor mensal ao global.",
+          "Não presumir irregularidade pela quantidade de aditivos."
+        ],
+        "publication": {
+          "title": "Trindade prorroga por R$ 404,7 mil aluguel de máquinas pesadas",
+          "deck": "Sétimo aditivo mantém caminhões e motoniveladora à disposição da Infraestrutura até fevereiro de 2027.",
+          "paragraphs": [
+            "A Prefeitura de Trindade assinou o sétimo aditivo do Contrato nº 013/2022 com a Gran Fort Sociedade Unipessoal Ltda. para manter a locação de caminhão basculante, caminhão-tanque e motoniveladora destinados à Secretaria Municipal de Infraestrutura.",
+            "O ajuste estabelece valor mensal de R$ 62.457,49 e valor global de R$ 404.744,95, com vigência de 31 de julho de 2026 a 8 de fevereiro de 2027. A publicação informa o valor contratual do aditivo, não o montante já pago à empresa."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Páginas conferidas integralmente; pauta factual publicável."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-05047D77-178",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · páginas 50 a 51"
+      },
+      "editorial": {
+        "mainAngle": "O nono aditivo do Contrato nº 253/2023, de Palmeiras de Goiás, elevou em 8,06% o lote 2 e levou o valor global atualizado a R$ 10,2 milhões.",
+        "whyItMatters": "O acréscimo aumenta a parcela mensal em R$ 61,4 mil e amplia um contrato relevante, mas o extrato não repete o objeto original, que precisa ser recuperado para contextualização completa.",
+        "headlineOptions": [
+          "Palmeiras eleva contrato com a Ecobrooks a R$ 10,2 milhões",
+          "Nono aditivo acrescenta R$ 61,4 mil por mês a contrato de Palmeiras",
+          "Acréscimo de 8,06% leva contrato de Palmeiras a R$ 10,2 milhões"
+        ],
+        "leadDirection": "Informar o percentual, a variação mensal e o novo valor global, registrando que a página não reproduz o objeto original.",
+        "storyStructure": [
+          "Acréscimo e novo valor mensal",
+          "Valor global atualizado",
+          "Objeto original e execução financeira a localizar"
+        ],
+        "verifiedFacts": [
+          "O Município de Palmeiras de Goiás celebrou o nono aditivo do Contrato nº 253/2023 com a Ecobrooks Soluções Sustentáveis Ltda., CNPJ 71.777.700/0001-35.",
+          "O aditivo acrescenta 8,06% ao lote 2 por aumento da demanda operacional.",
+          "O valor mensal passa de R$ 871.005,66 para R$ 932.447,80, diferença de R$ 61.442,14.",
+          "O valor global atualizado informado é R$ 10.215.964,37."
+        ],
+        "contextToFind": [
+          "Objeto integral do Contrato nº 253/2023",
+          "Valores e justificativas dos oito aditivos anteriores",
+          "Medições e pagamentos realizados"
+        ],
+        "reportingQuestions": [
+          "Qual demanda operacional cresceu 8,06%?",
+          "O acréscimo altera quantitativos ou área atendida?",
+          "Quanto já foi executado e pago?"
+        ],
+        "peopleToHear": [
+          "Secretaria de Administração de Palmeiras de Goiás",
+          "Secretaria de Infraestrutura Urbana e Mobilidade",
+          "Ecobrooks Soluções Sustentáveis Ltda."
+        ],
+        "dataCrossChecks": [
+          "Contrato nº 253/2023",
+          "Processo Administrativo nº 3736/2023",
+          "Aditivos e medições no Portal da Transparência"
+        ],
+        "doNotState": [
+          "Não atribuir ao contrato objeto que não aparece nas páginas verificadas.",
+          "Não tratar R$ 10,2 milhões como valor já pago.",
+          "Não apresentar a soma da memória de cálculo como valores adicionais além do global."
+        ],
+        "publication": {
+          "title": "Palmeiras eleva contrato com a Ecobrooks a R$ 10,2 milhões",
+          "deck": "Nono aditivo acrescenta 8,06% ao lote 2 e aumenta a parcela mensal em R$ 61,4 mil; publicação não repete o objeto original.",
+          "paragraphs": [
+            "A Prefeitura de Palmeiras de Goiás assinou o nono aditivo do Contrato nº 253/2023 com a Ecobrooks Soluções Sustentáveis Ltda. O ajuste acrescenta 8,06% ao lote 2 por aumento da demanda operacional e eleva o valor mensal de R$ 871.005,66 para R$ 932.447,80.",
+            "Com a alteração, o valor global atualizado chega a R$ 10.215.964,37. As páginas publicadas não reapresentam o objeto do contrato original; por isso, a notícia não atribui uma finalidade ainda não confirmada. O montante é valor contratual atualizado, não comprovação de pagamento."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Páginas 50 e 51 conferidas; manter explícita a ausência do objeto original."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-C00B3CFB-61",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · páginas 23 a 24"
+      },
+      "editorial": {
+        "mainAngle": "Campestre de Goiás homologou R$ 1,97 milhão em medicamentos e insumos hospitalares e odontológicos, distribuídos entre fornecedores registrados no pregão.",
+        "whyItMatters": "A compra abastece a rede municipal de saúde e concentra R$ 1,74 milhão do valor homologado em uma única fornecedora, o que merece acompanhamento da execução.",
+        "headlineOptions": [
+          "Campestre homologa R$ 1,97 milhão em medicamentos e insumos de saúde",
+          "Neromed concentra R$ 1,74 milhão de pregão da Saúde de Campestre",
+          "Pregão de medicamentos e insumos chega a R$ 1,97 milhão em Campestre"
+        ],
+        "leadDirection": "Abrir com o total homologado, o objeto e a maior parcela; diferenciar homologação, contratação, compra e pagamento.",
+        "storyStructure": [
+          "Objeto e total do Pregão nº 004/2026",
+          "Distribuição entre fornecedores",
+          "Execução das atas e entregas à rede de saúde"
+        ],
+        "verifiedFacts": [
+          "O Pregão Eletrônico nº 004/2026 abrange medicamentos e materiais médico-hospitalares, odontológicos e correlatos.",
+          "O valor total homologado é R$ 1.969.990,05.",
+          "A maior parcela, R$ 1.743.339,30, foi atribuída à Neromed Hospitalar Ltda.",
+          "O ato de homologação é datado de 5 de agosto de 2026 e foi publicado em 13 de agosto."
+        ],
+        "contextToFind": [
+          "Itens e quantidades associados a cada fornecedor",
+          "Preços unitários e comparação com referências",
+          "Contratos, empenhos, entregas e pagamentos posteriores"
+        ],
+        "reportingQuestions": [
+          "Quais itens compõem a parcela da Neromed?",
+          "O pregão gerou ata de registro de preços ou compra imediata?",
+          "Qual o cronograma de fornecimento?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Campestre",
+          "Pregoeira e equipe de contratação",
+          "Neromed Hospitalar Ltda."
+        ],
+        "dataCrossChecks": [
+          "Edital e resultado do Pregão Eletrônico nº 004/2026",
+          "Atas de registro de preços",
+          "Empenhos, notas fiscais e liquidações"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 1,97 milhão já foi comprado ou pago.",
+          "Não chamar a homologação de contrato.",
+          "Não concluir sobre concentração ou sobrepreço sem os itens e referências."
+        ],
+        "publication": {
+          "title": "Campestre homologa R$ 1,97 milhão em medicamentos e insumos de saúde",
+          "deck": "Pregão eletrônico distribui o valor entre fornecedores; a Neromed ficou com a maior parcela, de R$ 1,74 milhão.",
+          "paragraphs": [
+            "A Prefeitura de Campestre de Goiás homologou o Pregão Eletrônico nº 004/2026 para aquisição de medicamentos e insumos hospitalares e odontológicos. O valor total registrado no resultado é de R$ 1.969.990,05, distribuído entre as empresas vencedoras.",
+            "A maior parcela, de R$ 1.743.339,30, ficou com a Neromed Hospitalar Ltda. A homologação confirma o resultado do certame e os valores registrados, mas não demonstra que todo o material já tenha sido contratado, entregue ou pago."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Páginas 23 e 24 conferidas; pauta factual publicável."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-664-a512578c9eae-11",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "10d4fa38fa4b1227b5c1323bfbbcc6b0d95c94e77539183c057680cb570dbb5e",
+        "documentReference": "Edição 468 · página 8"
+      },
+      "editorial": {
+        "mainAngle": "O Instituto de Assistência à Saúde do Servidor de Senador Canedo credenciou o Hospital São Francisco de Assis por seis meses, com teto estimado de R$ 1,32 milhão.",
+        "whyItMatters": "O credenciamento amplia a rede de assistência aos servidores e prevê até R$ 220 mil por mês, exigindo acompanhamento do volume efetivamente utilizado.",
+        "headlineOptions": [
+          "Instituto de Senador Canedo credencia hospital por até R$ 1,32 milhão",
+          "Iamesc prevê até R$ 220 mil por mês em serviços hospitalares",
+          "Hospital é credenciado por seis meses para atender servidores de Senador Canedo"
+        ],
+        "leadDirection": "Informar quem será atendido, o hospital, a duração e o teto; deixar claro que se trata de estimativa condicionada à demanda e ao orçamento.",
+        "storyStructure": [
+          "Credenciamento e público atendido",
+          "Teto mensal e global",
+          "Uso efetivo, procedimentos e fiscalização"
+        ],
+        "verifiedFacts": [
+          "O Termo de Credenciamento nº 05.07.31.004/2026 foi firmado entre o Iamesc e o Hospital São Francisco de Assis Ltda.",
+          "O objeto é a prestação de assistência à saúde aos beneficiários do instituto.",
+          "A vigência é de seis meses a partir da publicação no PNCP.",
+          "O valor estimado é de até R$ 220.000 por mês e R$ 1.320.000 no período."
+        ],
+        "contextToFind": [
+          "Tabela de procedimentos e preços",
+          "Demanda histórica dos beneficiários",
+          "Pagamentos mensais e indicadores assistenciais"
+        ],
+        "reportingQuestions": [
+          "Quais serviços hospitalares foram credenciados?",
+          "O teto foi calculado com base em qual demanda?",
+          "Como o Iamesc fiscalizará a execução?"
+        ],
+        "peopleToHear": [
+          "Instituto de Assistência à Saúde do Servidor de Senador Canedo",
+          "Hospital São Francisco de Assis Ltda.",
+          "Representantes dos beneficiários"
+        ],
+        "dataCrossChecks": [
+          "Processo 1Doc nº 29.967/2026",
+          "Edital e Anexo I do credenciamento",
+          "Empenhos, guias e pagamentos do Iamesc"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 1,32 milhão será integralmente gasto.",
+          "Não confundir teto estimado com pagamento.",
+          "Não dizer que o hospital é exclusivo sem verificar os demais credenciados."
+        ],
+        "publication": {
+          "title": "Instituto de Senador Canedo credencia hospital por até R$ 1,32 milhão",
+          "deck": "Acordo de seis meses prevê teto de R$ 220 mil por mês para assistência aos beneficiários do Iamesc.",
+          "paragraphs": [
+            "O Instituto de Assistência à Saúde do Servidor Público de Senador Canedo, o Iamesc, credenciou o Hospital São Francisco de Assis Ltda. para prestar assistência à saúde aos beneficiários do instituto.",
+            "O termo tem vigência de seis meses e estabelece valor estimado de até R$ 220 mil por mês, limitado a R$ 1,32 milhão no período. O documento condiciona a execução à demanda e à disponibilidade orçamentária; portanto, o teto não corresponde a pagamento já realizado."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Página 8 conferida integralmente; pauta factual publicável."
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-664-b6b1c2800fb2-10",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "10d4fa38fa4b1227b5c1323bfbbcc6b0d95c94e77539183c057680cb570dbb5e",
+        "documentReference": "Edição 468 · páginas 6 a 8"
+      },
+      "editorial": {
+        "mainAngle": "Senador Canedo declarou inexigível a licitação para serviços de água e esgoto em prédios de seis órgãos, com estimativa anual de R$ 896 mil.",
+        "whyItMatters": "O ato mostra quanto a administração estima gastar com saneamento e discrimina a previsão por secretaria, permitindo conferir os empenhos e consumos posteriores.",
+        "headlineOptions": [
+          "Senador Canedo prevê R$ 896 mil para água e esgoto de prédios públicos",
+          "Educação concentra R$ 400 mil da estimativa de água e esgoto em Senador Canedo",
+          "Contrato de saneamento para seis órgãos é estimado em R$ 896 mil"
+        ],
+        "leadDirection": "Abrir com o total, os órgãos atendidos e a contratação direta da Sanesc; distinguir estimativa, empenho e pagamento.",
+        "storyStructure": [
+          "Valor total e justificativa da inexigibilidade",
+          "Distribuição por órgão",
+          "Consumo, empenhos e execução ao longo do ano"
+        ],
+        "verifiedFacts": [
+          "O Ato Declaratório de Inexigibilidade nº 065/2026 abrange fornecimento de água potável e saneamento básico.",
+          "A contratada indicada é a Agência de Saneamento de Senador Canedo, Sanesc, CNPJ 37.426.889/0001-83.",
+          "O valor total estimado é R$ 896.020,02.",
+          "As previsões incluem R$ 400.000,02 para Educação, R$ 300.000 para Administração, R$ 150.000 para Saúde, R$ 30.000 para Assistência Social, R$ 12.000 para Previdência e R$ 4.020 para Meio Ambiente."
+        ],
+        "contextToFind": [
+          "Consumo histórico por prédio e secretaria",
+          "Quantidade de unidades atendidas",
+          "Empenhos e pagamentos emitidos após o ato"
+        ],
+        "reportingQuestions": [
+          "Quais prédios compõem cada estimativa?",
+          "Houve aumento em relação a 2025?",
+          "Existem ações para reduzir consumo e perdas?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Administração de Senador Canedo",
+          "Sanesc",
+          "Controladoria-Geral do Município"
+        ],
+        "dataCrossChecks": [
+          "Processo Administrativo nº 31.725/2026",
+          "Contas de consumo dos últimos três anos",
+          "Notas de empenho, liquidações e pagamentos"
+        ],
+        "doNotState": [
+          "Não apresentar R$ 896.020,02 como valor já pago.",
+          "Não confundir autorização de empenho com pagamento.",
+          "Não sugerir falta de competição sem explicar a natureza do fornecedor de saneamento."
+        ],
+        "publication": {
+          "title": "Senador Canedo prevê R$ 896 mil para água e esgoto de prédios públicos",
+          "deck": "Estimativa anual cobre seis órgãos; Educação concentra R$ 400 mil e Administração, R$ 300 mil.",
+          "paragraphs": [
+            "A Prefeitura de Senador Canedo declarou inexigível a licitação para contratar a Agência de Saneamento de Senador Canedo, a Sanesc, no fornecimento de água e serviços de esgoto a prédios de seis órgãos municipais. O valor total estimado é de R$ 896.020,02.",
+            "A previsão distribui R$ 400.000,02 para Educação, R$ 300 mil para Administração, R$ 150 mil para Saúde, R$ 30 mil para Assistência Social, R$ 12 mil para Previdência e R$ 4.020 para Meio Ambiente. O ato autoriza a emissão de empenhos, mas não comprova consumo nem pagamento desses valores."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Páginas 6 a 8 conferidas integralmente; pauta factual publicável."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-0E3A8BA7-190",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · páginas 57 a 58"
+      },
+      "editorial": {
+        "mainAngle": "Professor Jamil homologou R$ 134,3 mil em alimentos destinados à merenda escolar, divididos entre duas empresas.",
+        "whyItMatters": "O resultado afeta diretamente a alimentação dos alunos e permite acompanhar preços, entrega e qualidade dos produtos adquiridos.",
+        "headlineOptions": [
+          "Professor Jamil homologa R$ 134 mil em alimentos para merenda escolar",
+          "Duas empresas vencem pregão de R$ 134,3 mil para merenda em Professor Jamil",
+          "Compra de gêneros alimentícios para escolas soma R$ 134 mil"
+        ],
+        "leadDirection": "Abrir com objeto, total e vencedoras; explicar que homologação não equivale a entrega ou pagamento.",
+        "storyStructure": [
+          "Resultado do Pregão nº 09/2026",
+          "Valores por empresa",
+          "Itens, entregas e controle da merenda"
+        ],
+        "verifiedFacts": [
+          "O Pregão Eletrônico nº 09/2026, processo administrativo nº 930/2026, trata da aquisição de gêneros alimentícios para merenda escolar.",
+          "A MS Serviços e Consultoria Ltda. venceu R$ 116.513,61.",
+          "A Nettare Indústria, Comércio, Importação e Exportação de Alimentos Ltda. venceu R$ 17.820.",
+          "O total das duas parcelas é R$ 134.333,61."
+        ],
+        "contextToFind": [
+          "Lista de alimentos e quantidades",
+          "Número de escolas e estudantes atendidos",
+          "Cronograma de entrega e critérios de qualidade"
+        ],
+        "reportingQuestions": [
+          "Quais itens foram adjudicados a cada empresa?",
+          "Por quanto tempo os alimentos abastecerão a rede?",
+          "Como será fiscalizada a qualidade?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Educação de Professor Jamil",
+          "MS Serviços e Consultoria Ltda.",
+          "Nettare Indústria, Comércio, Importação e Exportação de Alimentos Ltda.",
+          "Conselho de Alimentação Escolar"
+        ],
+        "dataCrossChecks": [
+          "Edital e mapa de preços do Pregão nº 09/2026",
+          "Contratos ou atas decorrentes",
+          "Notas de entrega, empenhos e pagamentos"
+        ],
+        "doNotState": [
+          "Não dizer que R$ 134,3 mil já foram pagos.",
+          "Não confundir homologação com entrega dos alimentos.",
+          "Não avaliar preço sem comparar itens, marcas, unidades e quantidades."
+        ],
+        "publication": {
+          "title": "Professor Jamil homologa R$ 134 mil em alimentos para merenda escolar",
+          "deck": "MS Serviços e Consultoria ficou com R$ 116,5 mil; a Nettare, com R$ 17,8 mil do pregão.",
+          "paragraphs": [
+            "A Prefeitura de Professor Jamil homologou o Pregão Eletrônico nº 09/2026 para compra de gêneros alimentícios destinados à merenda escolar. O resultado soma R$ 134.333,61 e foi dividido entre duas empresas.",
+            "A MS Serviços e Consultoria Ltda. ficou com R$ 116.513,61, enquanto a Nettare Indústria, Comércio, Importação e Exportação de Alimentos Ltda. venceu R$ 17.820. A homologação confirma o resultado da disputa, mas não demonstra que os produtos já foram entregues ou pagos."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Páginas 57 e 58 conferidas; segmentação automática corrigida."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-C1571B6A-224",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · páginas 68 a 69"
+      },
+      "editorial": {
+        "mainAngle": "O Fundo Municipal de Saúde de Trindade prorrogou por um ano, ao custo de R$ 168,4 mil, o contrato de serviços com fornecimento de reagentes para um analisador hematológico.",
+        "whyItMatters": "O equipamento é usado em diagnósticos laboratoriais da rede municipal, e a continuidade do fornecimento afeta diretamente exames e atendimento nas unidades de saúde.",
+        "headlineOptions": [
+          "Trindade prorroga por R$ 168 mil serviço para analisador hematológico",
+          "Saúde de Trindade renova fornecimento de reagentes até junho de 2027",
+          "Aditivo mantém insumos de equipamento laboratorial por R$ 168,4 mil"
+        ],
+        "leadDirection": "Informar finalidade, empresa, valor e vigência; não tratar o valor do aditivo como pagamento realizado.",
+        "storyStructure": [
+          "Serviço e equipamento atendido",
+          "Valor e vigência do aditivo",
+          "Volume de exames, entregas e execução financeira"
+        ],
+        "verifiedFacts": [
+          "O primeiro aditivo do Contrato nº 824/2025 foi firmado pelo Fundo Municipal de Saúde com a HABX Comércio e Prestação de Serviços em Equipamentos de Hospitais e Laboratórios Ltda.",
+          "O objeto inclui serviço especializado e fornecimento de reagentes para o analisador hematológico Maxcel 500D.",
+          "A vigência indicada vai de 26 de junho de 2026 a 26 de junho de 2027.",
+          "O valor global do aditivo é R$ 168.430,83."
+        ],
+        "contextToFind": [
+          "Quantidade e tipos de reagentes",
+          "Unidades que utilizam o equipamento",
+          "Número de exames realizados e histórico de manutenção"
+        ],
+        "reportingQuestions": [
+          "Quantos exames mensais dependem do Maxcel 500D?",
+          "O contrato inclui manutenção e assistência técnica?",
+          "Quanto já foi executado desde 2025?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Trindade",
+          "HABX Comércio e Prestação de Serviços",
+          "Coordenação do laboratório municipal"
+        ],
+        "dataCrossChecks": [
+          "Contrato nº 824/2025",
+          "Termo de referência e ordens de fornecimento",
+          "Empenhos, liquidações, pagamentos e produção laboratorial"
+        ],
+        "doNotState": [
+          "Não afirmar que R$ 168.430,83 já foram pagos.",
+          "Não prometer quantidade de exames sem o termo de referência.",
+          "Não confundir reagentes fornecidos com compra do equipamento."
+        ],
+        "publication": {
+          "title": "Trindade prorroga por R$ 168 mil serviço para analisador hematológico",
+          "deck": "Aditivo com a HABX mantém o fornecimento de reagentes para equipamento da rede municipal até junho de 2027.",
+          "paragraphs": [
+            "O Fundo Municipal de Saúde de Trindade prorrogou o Contrato nº 824/2025 com a HABX Comércio e Prestação de Serviços em Equipamentos de Hospitais e Laboratórios Ltda. O serviço inclui o fornecimento de reagentes para o analisador hematológico Maxcel 500D, usado no atendimento da rede municipal.",
+            "O primeiro aditivo estabelece valor global de R$ 168.430,83 e vigência de 26 de junho de 2026 a 26 de junho de 2027. O documento registra o valor contratual do período, sem indicar que o montante tenha sido integralmente pago."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Páginas 68 e 69 conferidas; título e texto automáticos substituídos."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-0FB6D5FC-185",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · páginas 55 a 56"
+      },
+      "editorial": {
+        "mainAngle": "O Fundo Municipal de Educação de Piranhas prorrogou por 12 meses um contrato de gestão integrada da frota, com valor estimado de R$ 500 mil.",
+        "whyItMatters": "O serviço reúne rastreamento, combustível e intermediação de peças e manutenção, concentrando em uma contratada parte relevante da operação da frota da Educação.",
+        "headlineOptions": [
+          "Piranhas prorroga por R$ 500 mil gestão da frota da Educação",
+          "Contrato de rastreamento, combustível e manutenção é renovado em Piranhas",
+          "Educação de Piranhas reserva R$ 500 mil para gestão de veículos"
+        ],
+        "leadDirection": "Corrigir a cidade e o tipo do ato, informar escopo, valor estimado e novo prazo; não chamar o aditivo de pregão novo.",
+        "storyStructure": [
+          "Prorrogação do Contrato nº 409/2025",
+          "Serviços incluídos na gestão da frota",
+          "Execução por combustível, peças e manutenção"
+        ],
+        "verifiedFacts": [
+          "O ato é o segundo aditivo do Contrato nº 409/2025 do Fundo Municipal de Educação de Piranhas.",
+          "A contratada é Centro América Comércio, Serviço, Gestão Tecnológica Ltda., CNPJ 09.179.444/0001-00.",
+          "O objeto inclui rastreamento veicular, controle de abastecimento e intermediação de peças e manutenção.",
+          "A vigência vai de 26 de agosto de 2026 a 26 de agosto de 2027, com valor estimado de R$ 500.000."
+        ],
+        "contextToFind": [
+          "Frota atendida e quantidade de veículos",
+          "Taxa de administração e rede credenciada",
+          "Consumo de combustível e manutenção por veículo"
+        ],
+        "reportingQuestions": [
+          "Quantos veículos da Educação usam o sistema?",
+          "Qual foi a execução do primeiro período?",
+          "Como são auditados abastecimentos e manutenções?"
+        ],
+        "peopleToHear": [
+          "Fundo Municipal de Educação de Piranhas",
+          "Centro América Comércio, Serviço, Gestão Tecnológica Ltda.",
+          "Controladoria do Município"
+        ],
+        "dataCrossChecks": [
+          "Contrato nº 409/2025 e primeiro aditivo",
+          "Processo nº 5404/2025",
+          "Relatórios de abastecimento, manutenção, empenhos e pagamentos"
+        ],
+        "doNotState": [
+          "Não atribuir o ato a um município genérico; trata-se de Piranhas.",
+          "Não chamar o documento de novo Pregão nº 021/2025.",
+          "Não tratar R$ 500 mil como pagamento já feito."
+        ],
+        "publication": {
+          "title": "Piranhas prorroga por R$ 500 mil gestão da frota da Educação",
+          "deck": "Aditivo mantém por mais um ano rastreamento, controle de combustível e intermediação de manutenção dos veículos.",
+          "paragraphs": [
+            "O Fundo Municipal de Educação de Piranhas prorrogou por 12 meses o Contrato nº 409/2025 com a Centro América Comércio, Serviço, Gestão Tecnológica Ltda. O serviço reúne rastreamento de veículos, controle de abastecimento e intermediação para aquisição de peças e manutenção da frota.",
+            "O novo período vai de 26 de agosto de 2026 a 26 de agosto de 2027 e tem valor estimado de R$ 500 mil. O aditivo renova o saldo contratual; o montante não representa pagamento já realizado."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Páginas 55 e 56 conferidas; o classificador errou cidade e natureza do ato."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-8013B823-3",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · páginas 2 a 5"
+      },
+      "editorial": {
+        "mainAngle": "Abadia de Goiás embargou atividades na Fazenda Poções, apreendeu cautelarmente duas máquinas e publicou três autos ambientais cujas penalidades somam R$ 625 mil.",
+        "whyItMatters": "O caso envolve deposição de cerca de 3.675 m³ de resíduos, supressão de vegetação em área de preservação e operação sem licença, mas ainda admite defesa e contém prazos divergentes nos próprios documentos.",
+        "headlineOptions": [
+          "Abadia embarga área e autos ambientais somam R$ 625 mil",
+          "Prefeitura apreende máquinas e autua operação na Fazenda Poções",
+          "Autos citam resíduos, corte de vegetação e atividade sem licença em Abadia"
+        ],
+        "leadDirection": "Tratar os quatro registros como um único episódio; informar que são autos administrativos sujeitos a defesa e expor a divergência de 20 e 15 dias antes de qualquer publicação.",
+        "storyStructure": [
+          "Fiscalização, local e medidas cautelares",
+          "Três infrações e composição dos R$ 625 mil",
+          "Defesa administrativa e divergência de prazos",
+          "Providências de recuperação e próximos passos"
+        ],
+        "verifiedFacts": [
+          "A fiscalização ocorreu em 20 de julho de 2026 na Fazenda Poções, Gleba 03, em Abadia de Goiás, sob a Ordem de Serviço SEMMA nº 3783/2026.",
+          "O auto consolidado descreve deposição irregular de aproximadamente 3.675 m³ de resíduos, supressão de 12 árvores nativas em APP e operação de atividade potencialmente poluidora sem licença.",
+          "Os três autos individuais indicam penalidades de R$ 500.000, R$ 25.000 e R$ 100.000, total de R$ 625.000.",
+          "Foram determinados embargo imediato, apreensão cautelar de uma pá-carregadeira Komatsu WA180 e uma miniescavadeira Volvo EC55B Pro, retirada dos resíduos e apresentação de PRAD.",
+          "O auto de embargo e o auto de apreensão mencionam defesa em 20 dias; os três autos individuais mencionam 15 dias."
+        ],
+        "contextToFind": [
+          "Inteiro teor do Processo Administrativo nº 3783/2026",
+          "Comprovantes de ciência de cada auto",
+          "Regra municipal que define o prazo aplicável",
+          "Situação atual do embargo, das máquinas e da recuperação da área"
+        ],
+        "reportingQuestions": [
+          "Qual prazo de defesa prevalece e por quê?",
+          "As penalidades foram julgadas ou ainda estão em fase de defesa?",
+          "Quem é o proprietário da área e quem operava a atividade?",
+          "Os resíduos foram retirados e o PRAD foi apresentado?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Meio Ambiente de Abadia de Goiás",
+          "Tarcísio Rodrigues Fernandes, autuado indicado nos documentos",
+          "Responsável ou proprietário da Fazenda Poções",
+          "Ministério Público de Goiás, se houver procedimento relacionado"
+        ],
+        "dataCrossChecks": [
+          "Processo Administrativo nº 3783/2026",
+          "Autos identificados pelos códigos 8013B823, BC3C3F76, 723ACCE2 e 77D35A66",
+          "Licenças ambientais, cadastro da área e imagens de fiscalização",
+          "Decisão final, inscrição em dívida ativa e eventual recurso"
+        ],
+        "doNotState": [
+          "Não somar o auto consolidado aos três autos individuais; isso duplicaria R$ 625 mil e produziria R$ 1,25 milhão indevido.",
+          "Não apresentar as penalidades como condenação definitiva enquanto houver defesa.",
+          "Não afirmar quem é dono da fazenda sem documento cadastral.",
+          "Não omitir a divergência entre os prazos de 20 e 15 dias."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Reportagem-mãe do caso. Bloqueada até a Prefeitura esclarecer por escrito qual prazo de defesa prevalece e a fase do processo."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-BC3C3F76-4",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · páginas 3 a 4"
+      },
+      "editorial": {
+        "mainAngle": "Este registro é o componente de R$ 100 mil do caso da Fazenda Poções e não deve virar matéria independente.",
+        "whyItMatters": "Separá-lo do auto consolidado duplicaria o episódio e esconderia que a autuação por atividade sem licença integra um conjunto de três infrações.",
+        "headlineOptions": [
+          "Auto de R$ 100 mil integra caso ambiental da Fazenda Poções",
+          "Atividade sem licença compõe autuação ambiental em Abadia",
+          "Registro de R$ 100 mil deve ser lido com outros autos do mesmo processo"
+        ],
+        "leadDirection": "Usar apenas como bloco da reportagem-mãe e registrar que o auto individual prevê 15 dias de defesa.",
+        "storyStructure": [
+          "Infração por atividade sem licença",
+          "Medidas de embargo e apreensão",
+          "Integração ao total de R$ 625 mil e direito de defesa"
+        ],
+        "verifiedFacts": [
+          "O auto integra o Processo Administrativo nº 3783/2026.",
+          "A infração descrita é operação contínua de aterro, disposição de resíduos e movimentação de terra sem licenciamento ambiental.",
+          "A penalidade pecuniária indicada é R$ 100.000.",
+          "O documento fixa prazo de 15 dias para defesa."
+        ],
+        "contextToFind": [
+          "Licença ambiental existente ou requerida",
+          "Defesa apresentada",
+          "Decisão administrativa posterior"
+        ],
+        "reportingQuestions": [
+          "Havia pedido de licença em andamento?",
+          "O auto já foi julgado?",
+          "Qual prazo de defesa a Prefeitura considera válido?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Meio Ambiente de Abadia de Goiás",
+          "Autuado indicado no processo"
+        ],
+        "dataCrossChecks": [
+          "Auto consolidado 8013B823",
+          "Processo nº 3783/2026",
+          "Cadastro de licenciamento ambiental"
+        ],
+        "doNotState": [
+          "Não publicar como caso separado.",
+          "Não somar R$ 100 mil novamente ao total consolidado.",
+          "Não chamar a penalidade de multa definitiva."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Componente duplicado; incorporar somente à reportagem-mãe 8013B823."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-723ACCE2-5",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · página 4"
+      },
+      "editorial": {
+        "mainAngle": "Este registro é o componente de R$ 500 mil por deposição irregular de resíduos no caso da Fazenda Poções e não deve ser publicado isoladamente.",
+        "whyItMatters": "É a maior parcela dos R$ 625 mil indicados nos autos e descreve cerca de 3.675 m³ de resíduos, mas continua sujeita a defesa administrativa.",
+        "headlineOptions": [
+          "Auto de R$ 500 mil cita 3.675 m³ de resíduos em Abadia",
+          "Deposição de resíduos é a maior parcela de autuação na Fazenda Poções",
+          "Registro de R$ 500 mil integra caso ambiental em Abadia"
+        ],
+        "leadDirection": "Incorporar à reportagem-mãe, sem duplicar o valor consolidado e sem tratar a penalidade como definitiva.",
+        "storyStructure": [
+          "Volume e tipos de resíduos descritos",
+          "Penalidade e medidas cautelares",
+          "Defesa e recuperação da área"
+        ],
+        "verifiedFacts": [
+          "O auto integra o Processo Administrativo nº 3783/2026.",
+          "O documento descreve aproximadamente 3.675 m³ de resíduos da construção civil, resíduos urbanos e metais depositados sem impermeabilização ou controle de lixiviados.",
+          "A penalidade indicada é R$ 500.000.",
+          "O auto individual prevê 15 dias de defesa."
+        ],
+        "contextToFind": [
+          "Laudo de medição dos resíduos",
+          "Origem e responsáveis pelo material",
+          "Destino dado aos resíduos após a fiscalização"
+        ],
+        "reportingQuestions": [
+          "Como foi calculado o volume de 3.675 m³?",
+          "Quem gerou e transportou os resíduos?",
+          "A remoção de 90 dias foi cumprida?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Meio Ambiente de Abadia de Goiás",
+          "Autuado indicado no processo",
+          "Responsáveis pela área e pelo transporte dos resíduos"
+        ],
+        "dataCrossChecks": [
+          "Auto consolidado 8013B823",
+          "Manifestos de Transporte de Resíduos",
+          "Notas fiscais de terraplenagem e destinação final"
+        ],
+        "doNotState": [
+          "Não publicar como caso independente.",
+          "Não somar R$ 500 mil novamente ao total consolidado.",
+          "Não afirmar dano quantificado ou multa definitiva sem decisão."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Componente duplicado; incorporar somente à reportagem-mãe 8013B823."
+      }
+    },
+    {
+      "id": "jul26-agm-114605-77D35A66-6",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-08-13T15:00:00.000Z",
+      "source": {
+        "documentSha256": "c36d0cf8632884b81df786a970101e9b8871777f85a71c607532360b482f3fc3",
+        "documentReference": "Edição 3681 · páginas 4 a 5"
+      },
+      "editorial": {
+        "mainAngle": "Este registro é o componente de R$ 25 mil por supressão de 12 árvores nativas em área de preservação no caso da Fazenda Poções.",
+        "whyItMatters": "O auto determina plantio compensatório e PRAD, mas deve ser lido junto com os demais registros do mesmo processo para evitar duplicidade e conclusões definitivas.",
+        "headlineOptions": [
+          "Auto cita corte de 12 árvores em área de preservação em Abadia",
+          "Supressão de vegetação integra caso ambiental da Fazenda Poções",
+          "Registro de R$ 25 mil prevê plantio compensatório em Abadia"
+        ],
+        "leadDirection": "Usar como parte da reportagem-mãe, informar medidas de recuperação e ressalvar a fase de defesa.",
+        "storyStructure": [
+          "Supressão de vegetação descrita",
+          "Plantio compensatório e PRAD",
+          "Integração ao processo e direito de defesa"
+        ],
+        "verifiedFacts": [
+          "O auto integra o Processo Administrativo nº 3783/2026.",
+          "O documento descreve supressão de 12 árvores nativas do Cerrado em área caracterizada como APP, sem autorização.",
+          "A penalidade indicada é R$ 25.000.",
+          "O ato determina plantio mínimo de três mudas por árvore suprimida em 90 dias e apresentação de PRAD em 60 dias.",
+          "O auto individual prevê 15 dias de defesa."
+        ],
+        "contextToFind": [
+          "Identificação das espécies suprimidas",
+          "Laudo e imagens da área",
+          "Comprovação do plantio e protocolo do PRAD"
+        ],
+        "reportingQuestions": [
+          "Quais espécies foram cortadas?",
+          "O PRAD foi apresentado?",
+          "A recomposição já começou?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Meio Ambiente de Abadia de Goiás",
+          "Autuado indicado no processo",
+          "Profissional responsável pelo PRAD"
+        ],
+        "dataCrossChecks": [
+          "Auto consolidado 8013B823",
+          "PRAD e respectiva ART",
+          "Relatórios fotográficos e vistorias posteriores"
+        ],
+        "doNotState": [
+          "Não publicar como caso separado.",
+          "Não somar R$ 25 mil novamente ao total consolidado.",
+          "Não afirmar recuperação concluída ou penalidade definitiva."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Componente duplicado; incorporar somente à reportagem-mãe 8013B823."
       }
     }
   ]
