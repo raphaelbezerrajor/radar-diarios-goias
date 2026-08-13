@@ -57,7 +57,7 @@ function buildSearchText(record) {
     record.type,
     record.sourceFamily,
     ...(record.tags || []).slice(0, 6)
-  ].join(" ")), 280);
+  ].join(" ")), 220);
 }
 
 function buildSearchRecord(item) {
@@ -575,6 +575,7 @@ async function main() {
       .map((match) => `${match[1]}:${match[2].toUpperCase()}`)
   );
   const normalizedJulyDocumentNews = (julyDocumentNews.items || [])
+    .filter((item) => item.editorial_status !== "needs_review")
     .filter((item) => {
       if (normalizeText(item.city) !== "trindade" || item.source_id !== "agm") return true;
       const editionId = String(item.edition_id || "").split(":").at(-1);
@@ -583,6 +584,7 @@ async function main() {
     })
     .map((item) => normalizeJulyDocumentNews(item, previewByRecord.get(item.id)));
   const normalizedControlNews = (controlNews.items || [])
+    .filter((item) => item.editorial_status !== "needs_review")
     .map((item) => normalizeJulyDocumentNews(item, previewByRecord.get(item.id)));
   const normalizedTcmNews = (tcmDossiers.dossiers || [])
     .filter((item) => item.scope_status === "trindade_confirmado")
