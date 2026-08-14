@@ -68,6 +68,7 @@ def main() -> None:
     parser.add_argument("--source-root", type=Path, default=ROOT.parent / "trindade-aberta")
     parser.add_argument("--limit", type=int, default=24)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--record-id", action="append", default=[])
     args = parser.parse_args()
 
     source_root = args.source_root.resolve()
@@ -76,11 +77,13 @@ def main() -> None:
     manifest = load_json(MANIFEST_PATH) if MANIFEST_PATH.exists() else {"schema_version": 1, "items": [], "failures": []}
     by_record = {item["record_id"]: item for item in manifest.get("items", [])}
 
+    selected_ids = set(args.record_id)
     candidates = sorted(
         (
             item
             for item in payload.get("items", [])
-            if item.get("prominence") in {"cover", "section"}
+            if (item.get("prominence") in {"cover", "section"} or item.get("id") in selected_ids)
+            and (not selected_ids or item.get("id") in selected_ids)
             and item.get("page_start")
             and item.get("edition_id") in editions
         ),

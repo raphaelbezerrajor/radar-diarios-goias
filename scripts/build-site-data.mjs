@@ -57,7 +57,7 @@ function buildSearchText(record) {
     record.type,
     record.sourceFamily,
     ...(record.tags || []).slice(0, 6)
-  ].join(" ")), 220);
+  ].join(" ")), 180);
 }
 
 function buildSearchRecord(item) {
@@ -73,7 +73,7 @@ function buildSearchRecord(item) {
     sourceFamily: item.sourceFamily,
     marker: trimText(item.marker || item.sourceNote || "", 36),
     recordType: item.recordType,
-    search: item.search
+    search: buildSearchText(item)
   };
 }
 
@@ -630,9 +630,19 @@ async function main() {
   const frontPage = buildFrontPagePackage(timelineNews);
   const leadStory = frontPage.lead;
   const heroSidebar = frontPage.sidebar;
-  const controlFront = rankFrontPageStories(
+  const rankedControlNews = rankFrontPageStories(
     normalizedControlNews.filter((item) => /TC[EM]-GO/.test(item.sourceFamily || ""))
-  ).slice(0, 8);
+  );
+  const controlFront = rankedControlNews.slice(0, 8);
+  for (const requiredSource of ["TCM-GO", "TCE-GO"]) {
+    if (controlFront.some((item) => item.sourceFamily?.includes(requiredSource))) continue;
+    const candidate = rankedControlNews.find((item) => item.sourceFamily?.includes(requiredSource));
+    if (!candidate) continue;
+    const replacementIndex = controlFront.findLastIndex((item) =>
+      !["TCM-GO", "TCE-GO"].some((source) => item.sourceFamily?.includes(source))
+    );
+    controlFront.splice(replacementIndex >= 0 ? replacementIndex : controlFront.length - 1, 1, candidate);
+  }
 
   const stateFront = sortForSearch(stateRecords.map(applyEditorialCuration)
     .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
