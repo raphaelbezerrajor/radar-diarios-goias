@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-14T12:52:00-03:00",
+  "generated_at": "2026-08-15T15:30:25-03:00",
   "period": {
     "from": "2026-08-04",
     "to": "2026-08-14"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
-    "doego_editions": 17,
+    "doego_editions": 18,
     "tcmgo_editions": 8,
-    "tcego_editions": 7,
-    "published_stories": 49
+    "tcego_editions": 8,
+    "published_stories": 51
   },
   "items": [
     {
@@ -45,9 +45,20 @@
       "public_body": "Prefeitura de Goiânia e Secretaria Municipal de Saúde",
       "values": [],
       "value_highest": 0,
-      "reference_numbers": ["05713/2026", "05927/2026", "26.29.000025402-9"],
+      "reference_numbers": [
+        "05713/2026",
+        "05927/2026",
+        "26.29.000025402-9"
+      ],
       "importance": 100,
-      "news_value": { "score": 100, "reasons": ["continuidade de tratamento de diabetes tipo 1", "ordem de restabelecimento imediato", "impacto direto sobre pacientes"] },
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "continuidade de tratamento de diabetes tipo 1",
+          "ordem de restabelecimento imediato",
+          "impacto direto sobre pacientes"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -87,9 +98,20 @@
       "public_body": "Saneamento de Goiás S.A. — Saneago",
       "values": [],
       "value_highest": 0,
-      "reference_numbers": ["01/2025", "49/2026", "202300052000096"],
+      "reference_numbers": [
+        "01/2025",
+        "49/2026",
+        "202300052000096"
+      ],
       "importance": 99,
-      "news_value": { "score": 99, "reasons": ["saneamento básico", "abrangência de 216 municípios", "revogação definitiva de PPP"] },
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "saneamento básico",
+          "abrangência de 216 municípios",
+          "revogação definitiva de PPP"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -129,9 +151,20 @@
       "public_body": "Prefeitura de Goiânia e Secretaria Municipal de Administração",
       "values": [],
       "value_highest": 0,
-      "reference_numbers": ["05477/2026", "05926/2026", "001/2020"],
+      "reference_numbers": [
+        "05477/2026",
+        "05926/2026",
+        "001/2020"
+      ],
       "importance": 98,
-      "news_value": { "score": 98, "reasons": ["concurso público", "política de cotas", "suspensão cautelar de nomeações"] },
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "concurso público",
+          "política de cotas",
+          "suspensão cautelar de nomeações"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -171,9 +204,19 @@
       "public_body": "Prefeitura de Goiânia e Câmara Municipal de Goiânia",
       "values": [],
       "value_highest": 0,
-      "reference_numbers": ["04087/2026", "05924/2026"],
+      "reference_numbers": [
+        "04087/2026",
+        "05924/2026"
+      ],
       "importance": 97,
-      "news_value": { "score": 97, "reasons": ["repasses a clubes profissionais", "cobrança de documentos e valores", "apuração por órgão de controle"] },
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "repasses a clubes profissionais",
+          "cobrança de documentos e valores",
+          "apuração por órgão de controle"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -213,9 +256,21 @@
       "public_body": "Secretaria Municipal de Cultura de Goiânia",
       "values": [],
       "value_highest": 0,
-      "reference_numbers": ["04305/2026", "05925/2026", "49/2026", "84/2026"],
+      "reference_numbers": [
+        "04305/2026",
+        "05925/2026",
+        "49/2026",
+        "84/2026"
+      ],
       "importance": 96,
-      "news_value": { "score": 96, "reasons": ["transparência contratual", "contratações artísticas por inexigibilidade", "dez contratos sob verificação"] },
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "transparência contratual",
+          "contratações artísticas por inexigibilidade",
+          "dez contratos sob verificação"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -255,9 +310,20 @@
       "public_body": "Prefeitura de Aragarças",
       "values": [],
       "value_highest": 0,
-      "reference_numbers": ["04322/2026", "05958/2026", "001/2025"],
+      "reference_numbers": [
+        "04322/2026",
+        "05958/2026",
+        "001/2025"
+      ],
       "importance": 94,
-      "news_value": { "score": 94, "reasons": ["direito de concursados", "contratação temporária de professores", "ordem cautelar imediata"] },
+      "news_value": {
+        "score": 94,
+        "reasons": [
+          "direito de concursados",
+          "contratação temporária de professores",
+          "ordem cautelar imediata"
+        ]
+      },
       "prominence": "feed",
       "record_type": "story",
       "editorial_status": "published",
@@ -297,9 +363,20 @@
       "public_body": "Prefeitura de Cabeceiras",
       "values": [],
       "value_highest": 0,
-      "reference_numbers": ["05773/2026", "05967/2026", "001/2026"],
+      "reference_numbers": [
+        "05773/2026",
+        "05967/2026",
+        "001/2026"
+      ],
       "importance": 92,
-      "news_value": { "score": 92, "reasons": ["suspensão de seleção pública", "serviço de ambulância", "indício preliminar de transposição funcional"] },
+      "news_value": {
+        "score": 92,
+        "reasons": [
+          "suspensão de seleção pública",
+          "serviço de ambulância",
+          "indício preliminar de transposição funcional"
+        ]
+      },
       "prominence": "feed",
       "record_type": "story",
       "editorial_status": "published",
@@ -337,11 +414,27 @@
         "O extrato informa que os recursos virão de fontes de receitas ordinárias e que o aditivo foi assinado em 12 de agosto. A publicação formaliza a alteração contratual; ela não detalha quantidades adicionais de refeições e, isoladamente, não comprova que o valor já tenha sido pago."
       ],
       "public_body": "Diretoria-Geral de Polícia Penal",
-      "values": [{ "original": "R$ 11.322.119,70", "value": 11322119.70, "currency": "BRL" }],
-      "value_highest": 11322119.70,
-      "reference_numbers": ["025/2023", "202316448001834"],
+      "values": [
+        {
+          "original": "R$ 11.322.119,70",
+          "value": 11322119.7,
+          "currency": "BRL"
+        }
+      ],
+      "value_highest": 11322119.7,
+      "reference_numbers": [
+        "025/2023",
+        "202316448001834"
+      ],
       "importance": 91,
-      "news_value": { "score": 91, "reasons": ["contrato de alimentação prisional", "acréscimo de 25%", "valor superior a R$ 11 milhões"] },
+      "news_value": {
+        "score": 91,
+        "reasons": [
+          "contrato de alimentação prisional",
+          "acréscimo de 25%",
+          "valor superior a R$ 11 milhões"
+        ]
+      },
       "prominence": "feed",
       "record_type": "story",
       "editorial_status": "published",
@@ -379,11 +472,27 @@
         "Segundo o acórdão, ainda faltavam sinalizações sonora, visual e tátil, tampas em vasos sanitários e botão de pânico, além de explicação adequada sobre a paralisação de obra na quadra. A decisão encerra este ciclo de monitoramento, sem transformar automaticamente todas as pendências descritas em dano ao erário."
       ],
       "public_body": "Secretaria Municipal de Educação de Caturaí",
-      "values": [{ "original": "R$ 2.071,30", "value": 2071.30, "currency": "BRL" }],
-      "value_highest": 2071.30,
-      "reference_numbers": ["04166/2024", "05938/2026"],
+      "values": [
+        {
+          "original": "R$ 2.071,30",
+          "value": 2071.3,
+          "currency": "BRL"
+        }
+      ],
+      "value_highest": 2071.3,
+      "reference_numbers": [
+        "04166/2024",
+        "05938/2026"
+      ],
       "importance": 90,
-      "news_value": { "score": 90, "reasons": ["acessibilidade de escola", "descumprimento de decisão", "multa aplicada"] },
+      "news_value": {
+        "score": 90,
+        "reasons": [
+          "acessibilidade de escola",
+          "descumprimento de decisão",
+          "multa aplicada"
+        ]
+      },
       "prominence": "feed",
       "record_type": "story",
       "editorial_status": "published",
@@ -421,11 +530,28 @@
         "O projeto inclui oito salas, passarela, pátio coberto, refeitório com cozinha, sanitários, acessibilidade, drenagem, instalações elétricas e hidrossanitárias, prevenção de incêndio e central de gás. O aviso é resultado de licitação: não comprova, sozinho, assinatura do contrato, início da obra ou pagamento."
       ],
       "public_body": "Coordenação Regional de Educação de Trindade",
-      "values": [{ "original": "R$ 4.275.460,03", "value": 4275460.03, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 4.275.460,03",
+          "value": 4275460.03,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 4275460.03,
-      "reference_numbers": ["001/2025", "106336", "202400005019732"],
+      "reference_numbers": [
+        "001/2025",
+        "106336",
+        "202400005019732"
+      ],
       "importance": 89,
-      "news_value": { "score": 89, "reasons": ["obra escolar", "impacto local em Trindade", "resultado de licitação milionária"] },
+      "news_value": {
+        "score": 89,
+        "reasons": [
+          "obra escolar",
+          "impacto local em Trindade",
+          "resultado de licitação milionária"
+        ]
+      },
       "prominence": "feed",
       "record_type": "story",
       "editorial_status": "published",
@@ -465,9 +591,19 @@
       "public_body": "Controladoria-Geral do Estado",
       "values": [],
       "value_highest": 0,
-      "reference_numbers": ["05/2026", "2026118670001587"],
+      "reference_numbers": [
+        "05/2026",
+        "2026118670001587"
+      ],
       "importance": 88,
-      "news_value": { "score": 88, "reasons": ["ampliação do controle preventivo", "alcance sobre estatais e terceiro setor", "cruzamento de dados contratuais"] },
+      "news_value": {
+        "score": 88,
+        "reasons": [
+          "ampliação do controle preventivo",
+          "alcance sobre estatais e terceiro setor",
+          "cruzamento de dados contratuais"
+        ]
+      },
       "prominence": "feed",
       "record_type": "story",
       "editorial_status": "published",
@@ -505,11 +641,27 @@
         "A contratação foi feita por inexigibilidade de licitação e será paga com recursos do orçamento do Tribunal. O extrato publicado no Diário Eletrônico nº 145 não informa a quantidade de participantes, a carga horária ou o cronograma do curso."
       ],
       "public_body": "Tribunal de Contas do Estado de Goiás",
-      "values": [{ "original": "R$ 144.500,00", "value": 144500, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 144.500,00",
+          "value": 144500,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 144500,
-      "reference_numbers": ["36/2026", "202600047002178"],
+      "reference_numbers": [
+        "36/2026",
+        "202600047002178"
+      ],
       "importance": 82,
-      "news_value": { "score": 82, "reasons": ["uso de inteligência artificial no controle externo", "contratação por inexigibilidade", "valor e escopo público"] },
+      "news_value": {
+        "score": 82,
+        "reasons": [
+          "uso de inteligência artificial no controle externo",
+          "contratação por inexigibilidade",
+          "valor e escopo público"
+        ]
+      },
       "prominence": "feed",
       "record_type": "story",
       "editorial_status": "published",
@@ -549,9 +701,21 @@
       "public_body": "TCM-GO",
       "values": [],
       "value_highest": 0,
-      "reference_numbers": ["00406/2026", "15.326/2026", "9.394/1996", "11.738/2008"],
+      "reference_numbers": [
+        "00406/2026",
+        "15.326/2026",
+        "9.394/1996",
+        "11.738/2008"
+      ],
       "importance": 100,
-      "news_value": { "score": 100, "reasons": ["direitos dos profissionais da educação infantil", "efeito orientador para os 246 municípios", "decisão colegiada do TCM-GO"] },
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "direitos dos profissionais da educação infantil",
+          "efeito orientador para os 246 municípios",
+          "decisão colegiada do TCM-GO"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -589,11 +753,28 @@
         "A sessão eletrônica está marcada para 31 de agosto, às 9 horas. O processo de contratação é o nº 118787 e o processo administrativo, nº 202600005006767. Por se tratar de uma licitação ainda aberta, o valor publicado é uma estimativa máxima e não representa contrato assinado, aquisição efetiva ou pagamento."
       ],
       "public_body": "Secretaria de Estado da Educação",
-      "values": [{ "original": "R$ 54.897.079,68", "value": 54897079.68, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 54.897.079,68",
+          "value": 54897079.68,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 54897079.68,
-      "reference_numbers": ["014/2026", "118787", "202600005006767"],
+      "reference_numbers": [
+        "014/2026",
+        "118787",
+        "202600005006767"
+      ],
       "importance": 99,
-      "news_value": { "score": 99, "reasons": ["educação pública", "licitação de alto valor", "política de diversidade racial"] },
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "educação pública",
+          "licitação de alto valor",
+          "política de diversidade racial"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -631,11 +812,28 @@
         "O Acórdão nº 05919/2026 autoriza a abertura de um processo separado para cada contrato e prevê contato direto com as prefeituras. Se houver atraso injustificado, o TCM poderá pedir replanejamento, novo cronograma e termo aditivo. A seleção não é acusação de irregularidade: o próprio acórdão diz que esse acompanhamento não abrangerá, nesta etapa, a verificação de valores ou quantitativos."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "Soma dos 26 valores: R$ 78.415.531,19", "value": 78415531.19, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "Soma dos 26 valores: R$ 78.415.531,19",
+          "value": 78415531.19,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 78415531.19,
-      "reference_numbers": ["03322/2026", "05919/2026", "PACE 2026"],
+      "reference_numbers": [
+        "03322/2026",
+        "05919/2026",
+        "PACE 2026"
+      ],
       "importance": 98,
-      "news_value": { "score": 98, "reasons": ["26 obras municipais", "R$ 78,4 milhões em contratos", "acompanhamento preventivo do TCM-GO"] },
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "26 obras municipais",
+          "R$ 78,4 milhões em contratos",
+          "acompanhamento preventivo do TCM-GO"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -673,12 +871,31 @@
         "A vencedora é a Edeconsil Construções e Locações Ltda., inscrita no CNPJ 07.073.042/0001-00. O termo registra o encerramento das fases de julgamento, habilitação e recurso e a adjudicação do objeto. O valor homologado é o resultado da licitação; o documento ainda não comprova assinatura de contrato nem pagamento."
       ],
       "public_body": "Agência Goiana de Infraestrutura e Transportes",
-      "values": [{ "original": "R$ 40.924.162,64", "value": 40924162.64, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 40.924.162,64",
+          "value": 40924162.64,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 40924162.64,
-      "cnpjs": ["07.073.042/0001-00"],
-      "reference_numbers": ["53/2026", "118838", "202600005007319"],
+      "cnpjs": [
+        "07.073.042/0001-00"
+      ],
+      "reference_numbers": [
+        "53/2026",
+        "118838",
+        "202600005007319"
+      ],
       "importance": 97,
-      "news_value": { "score": 97, "reasons": ["obra rodoviária", "licitação de alto valor", "22 quilômetros de implantação"] },
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "obra rodoviária",
+          "licitação de alto valor",
+          "22 quilômetros de implantação"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -716,11 +933,28 @@
         "O recebimento das propostas começa em 14 de agosto, às 8 horas, e a sessão está marcada para 31 de agosto, às 9 horas. A cifra é estimativa da licitação e não representa contrato assinado, compra realizada ou pagamento."
       ],
       "public_body": "Secretaria de Estado da Saúde",
-      "values": [{ "original": "R$ 8.424.907,20", "value": 8424907.20, "currency": "BRL" }],
-      "value_highest": 8424907.20,
-      "reference_numbers": ["164/2026", "119715", "202600005013524"],
+      "values": [
+        {
+          "original": "R$ 8.424.907,20",
+          "value": 8424907.2,
+          "currency": "BRL"
+        }
+      ],
+      "value_highest": 8424907.2,
+      "reference_numbers": [
+        "164/2026",
+        "119715",
+        "202600005013524"
+      ],
       "importance": 96,
-      "news_value": { "score": 96, "reasons": ["medicamentos", "judicialização da saúde", "licitação de alto valor"] },
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "medicamentos",
+          "judicialização da saúde",
+          "licitação de alto valor"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -758,12 +992,31 @@
         "O Contrato nº 001/2026 foi assinado com a AF Construtora & Engenharia Ltda., CNPJ 51.955.047/0001-40, vencedora da Concorrência Eletrônica nº 001/2026 com desconto de 11,15%. O documento registra o valor contratado, não o pagamento da obra."
       ],
       "public_body": "Secretaria de Estado da Educação",
-      "values": [{ "original": "R$ 2.662.256,04", "value": 2662256.04, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 2.662.256,04",
+          "value": 2662256.04,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 2662256.04,
-      "cnpjs": ["51.955.047/0001-40"],
-      "reference_numbers": ["001/2026", "119435", "202600005011825"],
+      "cnpjs": [
+        "51.955.047/0001-40"
+      ],
+      "reference_numbers": [
+        "001/2026",
+        "119435",
+        "202600005011825"
+      ],
       "importance": 95,
-      "news_value": { "score": 95, "reasons": ["obra escolar", "contrato assinado", "impacto local"] },
+      "news_value": {
+        "score": 95,
+        "reasons": [
+          "obra escolar",
+          "contrato assinado",
+          "impacto local"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -801,11 +1054,29 @@
         "O Contrato nº 155/2026 foi firmado com o Consórcio Caiapó/Engenho-GO-220, formado pela Construtora Caiapó Ltda., líder do grupo, e pela Engenho Projetos e Construções Ltda. O prazo de execução é de 18 meses, entre o segundo e o décimo nono mês do cronograma; a vigência será de 25 meses contados do primeiro dia útil após a divulgação no Portal Nacional de Contratações Públicas. O extrato registra empenhos emitidos em 24 de julho, mas o valor contratado não deve ser confundido com pagamento já realizado."
       ],
       "public_body": "Agência Goiana de Infraestrutura e Transportes",
-      "values": [{ "original": "R$ 118.232.957,17", "value": 118232957.17, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 118.232.957,17",
+          "value": 118232957.17,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 118232957.17,
-      "reference_numbers": ["155/2026-GOINFRA", "202600036012087", "2026.4350.022.00006", "2026.4350.022.00007"],
+      "reference_numbers": [
+        "155/2026-GOINFRA",
+        "202600036012087",
+        "2026.4350.022.00006",
+        "2026.4350.022.00007"
+      ],
       "importance": 100,
-      "news_value": { "score": 100, "reasons": ["obra rodoviária de grande valor", "impacto regional", "contrato com prazo e extensão definidos"] },
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "obra rodoviária de grande valor",
+          "impacto regional",
+          "contrato com prazo e extensão definidos"
+        ]
+      },
       "prominence": "headline",
       "record_type": "story",
       "editorial_status": "published",
@@ -843,12 +1114,30 @@
         "O documento foi assinado em 10 de agosto e indica recursos ordinários como fonte. O extrato publicado não reapresenta o objeto do contrato original; por isso, o valor deve ser lido como o montante informado para o ajuste, e não como comprovação de pagamento já efetuado."
       ],
       "public_body": "Diretoria-Geral de Polícia Penal",
-      "values": [{ "original": "R$ 31.988.955,60", "value": 31988955.60, "currency": "BRL" }],
-      "value_highest": 31988955.60,
-      "cnpjs": ["04.675.771/0001-30"],
-      "reference_numbers": ["030/2023", "202316448001829"],
+      "values": [
+        {
+          "original": "R$ 31.988.955,60",
+          "value": 31988955.6,
+          "currency": "BRL"
+        }
+      ],
+      "value_highest": 31988955.6,
+      "cnpjs": [
+        "04.675.771/0001-30"
+      ],
+      "reference_numbers": [
+        "030/2023",
+        "202316448001829"
+      ],
       "importance": 98,
-      "news_value": { "score": 98, "reasons": ["prorrogação contratual de alto valor", "segurança pública", "vigência até 2028"] },
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "prorrogação contratual de alto valor",
+          "segurança pública",
+          "vigência até 2028"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -886,11 +1175,28 @@
         "O recebimento de propostas começa em 13 de agosto, às 8 horas, e a sessão pública está marcada para 26 de agosto, no mesmo horário. Como se trata de uma licitação para registro de preços, a cifra publicada é uma estimativa máxima e não representa contrato assinado, compra efetiva ou pagamento."
       ],
       "public_body": "Secretaria de Estado da Saúde",
-      "values": [{ "original": "R$ 28.169.975,88", "value": 28169975.88, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 28.169.975,88",
+          "value": 28169975.88,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 28169975.88,
-      "reference_numbers": ["163/2026-SES", "202600005012987", "119572"],
+      "reference_numbers": [
+        "163/2026-SES",
+        "202600005012987",
+        "119572"
+      ],
       "importance": 97,
-      "news_value": { "score": 97, "reasons": ["medicamentos", "licitação de alto valor", "alcance estadual"] },
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "medicamentos",
+          "licitação de alto valor",
+          "alcance estadual"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -928,11 +1234,29 @@
         "O Contrato nº 188/2026 foi assinado em 4 de agosto e tem vigência até 31 de dezembro de 2026. A contratação ocorreu por adesão à Ata de Registro de Preços ARP26CIN000003, vinculada ao Pregão Eletrônico nº 0023/2025. O extrato informa o valor contratado, sem demonstrar pagamentos."
       ],
       "public_body": "Fundo Municipal de Educação de Rio Verde",
-      "values": [{ "original": "R$ 12.458.875,00", "value": 12458875.00, "currency": "BRL" }],
-      "value_highest": 12458875.00,
-      "reference_numbers": ["188/2026", "ARP26CIN000003", "0023/2025", "63311/2026"],
+      "values": [
+        {
+          "original": "R$ 12.458.875,00",
+          "value": 12458875,
+          "currency": "BRL"
+        }
+      ],
+      "value_highest": 12458875,
+      "reference_numbers": [
+        "188/2026",
+        "ARP26CIN000003",
+        "0023/2025",
+        "63311/2026"
+      ],
       "importance": 96,
-      "news_value": { "score": 96, "reasons": ["educação pública", "contrato municipal de alto valor", "adesão a ata de preços"] },
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "educação pública",
+          "contrato municipal de alto valor",
+          "adesão a ata de preços"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -970,11 +1294,27 @@
         "Foram notificados, com prazo de dez dias para defesa, Agenor Joaquim da Costa, Jeovani Ribeiro do Nascimento, Ana Rosa de Almeida, Márcio Magno Vilhalba Martins e José Ribeiro Neto, responsáveis por diferentes unidades em 2024. A decisão não imputa débito nem aplica multa neste momento: a tomada de contas ainda deverá quantificar o dano e identificar eventuais responsáveis depois do contraditório."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "R$ 45.511,01", "value": 45511.01, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 45.511,01",
+          "value": 45511.01,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 45511.01,
-      "reference_numbers": ["09492/2024", "05817/2026"],
+      "reference_numbers": [
+        "09492/2024",
+        "05817/2026"
+      ],
       "importance": 96,
-      "news_value": { "score": 96, "reasons": ["possível dano ao erário", "previdência municipal", "tomada de contas especial"] },
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "possível dano ao erário",
+          "previdência municipal",
+          "tomada de contas especial"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1013,15 +1353,42 @@
       ],
       "public_body": "Agência Goiana de Infraestrutura e Transportes",
       "values": [
-        { "original": "R$ 5.720.713,39", "value": 5720713.39, "currency": "BRL" },
-        { "original": "R$ 13.829.379,16", "value": 13829379.16, "currency": "BRL" },
-        { "original": "R$ 4.862.654,08", "value": 4862654.08, "currency": "BRL" },
-        { "original": "R$ 441.078,69", "value": 441078.69, "currency": "BRL" }
+        {
+          "original": "R$ 5.720.713,39",
+          "value": 5720713.39,
+          "currency": "BRL"
+        },
+        {
+          "original": "R$ 13.829.379,16",
+          "value": 13829379.16,
+          "currency": "BRL"
+        },
+        {
+          "original": "R$ 4.862.654,08",
+          "value": 4862654.08,
+          "currency": "BRL"
+        },
+        {
+          "original": "R$ 441.078,69",
+          "value": 441078.69,
+          "currency": "BRL"
+        }
       ],
       "value_highest": 13829379.16,
-      "reference_numbers": ["252/2026/GOINFRA", "47/2025-GOINFRA", "202400036017865"],
+      "reference_numbers": [
+        "252/2026/GOINFRA",
+        "47/2025-GOINFRA",
+        "202400036017865"
+      ],
       "importance": 94,
-      "news_value": { "score": 94, "reasons": ["aumento líquido em contrato de obra", "rodovia estadual", "alteração de escopo"] },
+      "news_value": {
+        "score": 94,
+        "reasons": [
+          "aumento líquido em contrato de obra",
+          "rodovia estadual",
+          "alteração de escopo"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1059,11 +1426,30 @@
         "Segundo o acórdão, documentos apresentados depois da decisão inicial demonstraram que o município aderiu à Ata de Registro de Preços nº 007/2025, e não à ata nº 008/2025 citada na denúncia. O TCM considerou afastada a premissa que sustentava os indícios preliminares, não conheceu da denúncia e arquivou o processo sem resolução do mérito; a decisão não equivale a julgamento positivo de toda a execução contratual."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "R$ 2.732.666,45", "value": 2732666.45, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 2.732.666,45",
+          "value": 2732666.45,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 2732666.45,
-      "reference_numbers": ["03586/2026", "04982/2026", "334/2025", "007/2025", "008/2025"],
+      "reference_numbers": [
+        "03586/2026",
+        "04982/2026",
+        "334/2025",
+        "007/2025",
+        "008/2025"
+      ],
       "importance": 94,
-      "news_value": { "score": 94, "reasons": ["revogação de cautelar", "contrato para eventos", "correção de informação processual"] },
+      "news_value": {
+        "score": 94,
+        "reasons": [
+          "revogação de cautelar",
+          "contrato para eventos",
+          "correção de informação processual"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1101,11 +1487,28 @@
         "O acórdão aplicou multa de R$ 621,39 e recomendou à gestão atual ampliar a transparência e observar a exigência de servidores efetivos nas funções previstas pela nova Lei de Licitações. O processo trata da prestação de contas administrativa e não constitui, por si só, condenação criminal."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "R$ 621,39", "value": 621.39, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 621,39",
+          "value": 621.39,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 621.39,
-      "reference_numbers": ["02005/2025", "058E29/2026", "1067/2026-SECEXCONTAS"],
+      "reference_numbers": [
+        "02005/2025",
+        "058E29/2026",
+        "1067/2026-SECEXCONTAS"
+      ],
       "importance": 93,
-      "news_value": { "score": 93, "reasons": ["contas julgadas irregulares", "valores retidos sem repasse comprovado", "multa a gestor"] },
+      "news_value": {
+        "score": 93,
+        "reasons": [
+          "contas julgadas irregulares",
+          "valores retidos sem repasse comprovado",
+          "multa a gestor"
+        ]
+      },
       "prominence": "section",
       "record_type": "story",
       "editorial_status": "published",
@@ -1143,11 +1546,28 @@
         "A ex-gestora recebeu multa de R$ 621,39. As contas de Jania Gomes Machado Souza, responsável entre 1º e 16 de janeiro, foram julgadas regulares. O achado descrito pelo TCM é de classificação e controle contábil; o acórdão não afirma desvio de recursos nem imputa débito."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "R$ 621,39", "value": 621.39, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 621,39",
+          "value": 621.39,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 621.39,
-      "reference_numbers": ["00554/2025", "05867/2026", "1647/2026"],
+      "reference_numbers": [
+        "00554/2025",
+        "05867/2026",
+        "1647/2026"
+      ],
       "importance": 92,
-      "news_value": { "score": 92, "reasons": ["contas do Fundeb", "erro impediu verificar limite legal", "multa a gestora"] },
+      "news_value": {
+        "score": 92,
+        "reasons": [
+          "contas do Fundeb",
+          "erro impediu verificar limite legal",
+          "multa a gestora"
+        ]
+      },
       "prominence": "section",
       "record_type": "story",
       "editorial_status": "published",
@@ -1185,11 +1605,27 @@
         "O acórdão também registra falta de depreciação acumulada, lançamentos incompatíveis na reavaliação de bens, ausência de amortização de ativos intangíveis e do demonstrativo analítico de obrigações com fornecedores. O TCE determinou correções imediatas e monitoramento na prestação seguinte. A cifra se refere à divergência entre registros patrimoniais e contábeis, não a dano ao erário ou desaparecimento de dinheiro ou bens."
       ],
       "public_body": "TCE-GO",
-      "values": [{ "original": "R$ 10.772.240,97", "value": 10772240.97, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 10.772.240,97",
+          "value": 10772240.97,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 10772240.97,
-      "reference_numbers": ["202500047002967/102-01", "2069/2026"],
+      "reference_numbers": [
+        "202500047002967/102-01",
+        "2069/2026"
+      ],
       "importance": 96,
-      "news_value": { "score": 96, "reasons": ["divergência patrimonial de alto valor", "determinações de correção", "fundo ambiental estadual"] },
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "divergência patrimonial de alto valor",
+          "determinações de correção",
+          "fundo ambiental estadual"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1228,9 +1664,20 @@
       ],
       "public_body": "TCE-GO",
       "values": [],
-      "reference_numbers": ["202500047003217", "1980/2026", "06.0821"],
+      "reference_numbers": [
+        "202500047003217",
+        "1980/2026",
+        "06.0821"
+      ],
       "importance": 94,
-      "news_value": { "score": 94, "reasons": ["direitos de pessoas com deficiência", "determinação com prazo", "empresa estatal"] },
+      "news_value": {
+        "score": 94,
+        "reasons": [
+          "direitos de pessoas com deficiência",
+          "determinação com prazo",
+          "empresa estatal"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1269,9 +1716,23 @@
       ],
       "public_body": "TCE-GO",
       "values": [],
-      "reference_numbers": ["202600047000475/905", "2071/2026", "4379/2025", "22/2020-SEMAD", "01/2021-SEMAD", "02/2021-SEMAD"],
+      "reference_numbers": [
+        "202600047000475/905",
+        "2071/2026",
+        "4379/2025",
+        "22/2020-SEMAD",
+        "01/2021-SEMAD",
+        "02/2021-SEMAD"
+      ],
       "importance": 92,
-      "news_value": { "score": 92, "reasons": ["multas canceladas em recurso", "irregularidade mantida", "contratos preservados"] },
+      "news_value": {
+        "score": 92,
+        "reasons": [
+          "multas canceladas em recurso",
+          "irregularidade mantida",
+          "contratos preservados"
+        ]
+      },
       "prominence": "section",
       "record_type": "story",
       "editorial_status": "published",
@@ -1309,11 +1770,28 @@
         "A decisão enquadra a conduta nos incisos III e IV, alíneas “d” e “e”, do artigo 5º da Lei estadual nº 18.672/2014. O extrato não descreve a ação específica atribuída à empresa nem informa se ainda cabe recurso administrativo; trata-se de sanção administrativa, e não de condenação criminal ou judicial."
       ],
       "public_body": "Agência Goiana de Infraestrutura e Transportes",
-      "values": [{ "original": "R$ 1.047.863,45", "value": 1047863.45, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 1.047.863,45",
+          "value": 1047863.45,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 1047863.45,
-      "reference_numbers": ["202500036007390", "120/2026/GOINFRA/PR-CONTROLE", "16/2025"],
+      "reference_numbers": [
+        "202500036007390",
+        "120/2026/GOINFRA/PR-CONTROLE",
+        "16/2025"
+      ],
       "importance": 99,
-      "news_value": { "score": 99, "reasons": ["multa administrativa de alto valor", "processo de responsabilização", "publicação extraordinária da decisão"] },
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "multa administrativa de alto valor",
+          "processo de responsabilização",
+          "publicação extraordinária da decisão"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1351,11 +1829,28 @@
         "A penalidade está vinculada ao Contrato nº 47/2018 e ao processo administrativo nº 202000036012832. O extrato publicado nesta terça-feira (11) informa o enquadramento na legislação de licitações, mas não detalha a conduta nem esclarece, na página consultada, a existência de recurso pendente."
       ],
       "public_body": "Agência Goiana de Infraestrutura e Transportes",
-      "values": [{ "original": "R$ 202.145,78", "value": 202145.78, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 202.145,78",
+          "value": 202145.78,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 202145.78,
-      "reference_numbers": ["202000036012832", "85/2026/GOINFRA/PR-CONTROLE", "047/2018-PR-NEJUR"],
+      "reference_numbers": [
+        "202000036012832",
+        "85/2026/GOINFRA/PR-CONTROLE",
+        "047/2018-PR-NEJUR"
+      ],
       "importance": 97,
-      "news_value": { "score": 97, "reasons": ["suspensão de contratar com o poder público", "multa administrativa", "processo de responsabilização de fornecedor"] },
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "suspensão de contratar com o poder público",
+          "multa administrativa",
+          "processo de responsabilização de fornecedor"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1393,11 +1888,28 @@
         "O colegiado reconheceu que uma das exigências havia sido cumprida, porém preservou a multa ligada aos itens 4.1 e 4.2 do Acórdão nº 00922/2025. O tribunal também alertou o município para incluir documento de formalização da demanda nas licitações e avaliar a segurança e a economicidade da plataforma privada usada nas contratações eletrônicas."
       ],
       "public_body": "Tribunal de Contas dos Municípios de Goiás",
-      "values": [{ "original": "R$ 5.178,25", "value": 5178.25, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 5.178,25",
+          "value": 5178.25,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 5178.25,
-      "reference_numbers": ["04418/2025", "05814/2026", "00922/2025"],
+      "reference_numbers": [
+        "04418/2025",
+        "05814/2026",
+        "00922/2025"
+      ],
       "importance": 94,
-      "news_value": { "score": 94, "reasons": ["multa mantida em recurso", "descumprimento de determinações", "regras de licitação municipal"] },
+      "news_value": {
+        "score": 94,
+        "reasons": [
+          "multa mantida em recurso",
+          "descumprimento de determinações",
+          "regras de licitação municipal"
+        ]
+      },
       "prominence": "section",
       "record_type": "story",
       "editorial_status": "published",
@@ -1435,11 +1947,27 @@
         "O despacho classifica o julgamento como definitivo e irrecorrível na esfera administrativa e determina o envio dos autos à Goinfra para as providências pertinentes. A publicação não informa, na página consultada, se a empresa pretende discutir a sanção judicialmente."
       ],
       "public_body": "Secretaria de Estado da Infraestrutura",
-      "values": [{ "original": "R$ 1.819.696,68", "value": 1819696.68, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 1.819.696,68",
+          "value": 1819696.68,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 1819696.68,
-      "reference_numbers": ["202400036008072", "57/2026/GOINFRA/PR"],
+      "reference_numbers": [
+        "202400036008072",
+        "57/2026/GOINFRA/PR"
+      ],
       "importance": 100,
-      "news_value": { "score": 100, "reasons": ["sanção administrativa final", "multa de alto valor", "restrição para contratar com o poder público"] },
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "sanção administrativa final",
+          "multa de alto valor",
+          "restrição para contratar com o poder público"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1477,11 +2005,26 @@
         "O pacote inclui 42,44 quilômetros de restauração e melhorias na GO-070, entre a BR-060 e Goianira, com três obras de arte especiais, e a conclusão de 6,5 quilômetros da duplicação da GO-210 em Rio Verde, além de 10,1 quilômetros de vias marginais. O valor divulgado é o preço do contrato, não o total já pago."
       ],
       "public_body": "Agência Goiana de Infraestrutura e Transportes",
-      "values": [{ "original": "R$ 262.999.696,42", "value": 262999696.42, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 262.999.696,42",
+          "value": 262999696.42,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 262999696.42,
-      "reference_numbers": ["161/2026-GOINFRA"],
+      "reference_numbers": [
+        "161/2026-GOINFRA"
+      ],
       "importance": 99,
-      "news_value": { "score": 99, "reasons": ["contrato de alto valor", "infraestrutura rodoviária", "impacto regional"] },
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "contrato de alto valor",
+          "infraestrutura rodoviária",
+          "impacto regional"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1519,11 +2062,28 @@
         "O tribunal entendeu que não se pode exigir do prefeito o acompanhamento pormenorizado da jornada de cada servidor. Permaneceram, porém, a multa ao chefe imediato e a determinação para que o município mantenha controle efetivo de frequência, preferencialmente eletrônico, inclusive para ocupantes de cargos comissionados."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "R$ 2.071,30", "value": 2071.3, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 2.071,30",
+          "value": 2071.3,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 2071.3,
-      "reference_numbers": ["06177/23", "05790/2026", "05494/2025"],
+      "reference_numbers": [
+        "06177/23",
+        "05790/2026",
+        "05494/2025"
+      ],
       "importance": 98,
-      "news_value": { "score": 98, "reasons": ["decisão final sobre responsabilização", "efeito direto na gestão de pessoal", "interesse local"] },
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "decisão final sobre responsabilização",
+          "efeito direto na gestão de pessoal",
+          "interesse local"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1562,9 +2122,18 @@
       ],
       "public_body": "Secretaria de Estado da Infraestrutura",
       "values": [],
-      "reference_numbers": ["202300036000104", "018/2016-PR-NJ"],
+      "reference_numbers": [
+        "202300036000104",
+        "018/2016-PR-NJ"
+      ],
       "importance": 96,
-      "news_value": { "score": 96, "reasons": ["sanção administrativa final", "impedimento de contratar com o poder público"] },
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "sanção administrativa final",
+          "impedimento de contratar com o poder público"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1602,11 +2171,28 @@
         "A restrição foi retirada para o cargo de Agente Comunitário de Saúde depois de o tribunal considerar o vício corrigido. Para Analista Ambiental, o acórdão exige ajustes nas regras de experiência e prova de títulos e fixa prazo de dez dias para manifestação dos responsáveis."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "R$ 5.178,25", "value": 5178.25, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 5.178,25",
+          "value": 5178.25,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 5178.25,
-      "reference_numbers": ["05278/25", "05786/2026", "03106/2025"],
+      "reference_numbers": [
+        "05278/25",
+        "05786/2026",
+        "03106/2025"
+      ],
       "importance": 95,
-      "news_value": { "score": 95, "reasons": ["três multas", "concurso público parcialmente suspenso", "descumprimento de cautelar"] },
+      "news_value": {
+        "score": 95,
+        "reasons": [
+          "três multas",
+          "concurso público parcialmente suspenso",
+          "descumprimento de cautelar"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1644,11 +2230,27 @@
         "A vigência foi prorrogada por seis meses, de 23 de setembro de 2026 a 22 de março de 2027. O valor informado corresponde ao acréscimo contratual; a publicação não demonstra, por si só, quanto já foi efetivamente pago."
       ],
       "public_body": "Secretaria de Estado da Educação",
-      "values": [{ "original": "R$ 2.247.187,50", "value": 2247187.5, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 2.247.187,50",
+          "value": 2247187.5,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 2247187.5,
-      "reference_numbers": ["043/2026", "202600006028485"],
+      "reference_numbers": [
+        "043/2026",
+        "202600006028485"
+      ],
       "importance": 94,
-      "news_value": { "score": 94, "reasons": ["aditivo no limite de 25%", "educação", "valor superior a R$ 2 milhões"] },
+      "news_value": {
+        "score": 94,
+        "reasons": [
+          "aditivo no limite de 25%",
+          "educação",
+          "valor superior a R$ 2 milhões"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1687,9 +2289,20 @@
       ],
       "public_body": "TCM-GO",
       "values": [],
-      "reference_numbers": ["02533/26", "05787/2026", "05788/2026"],
+      "reference_numbers": [
+        "02533/26",
+        "05787/2026",
+        "05788/2026"
+      ],
       "importance": 96,
-      "news_value": { "score": 96, "reasons": ["concurso público", "suspensão cautelar", "impacto em candidatos"] },
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "concurso público",
+          "suspensão cautelar",
+          "impacto em candidatos"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1728,9 +2341,20 @@
       ],
       "public_body": "TCM-GO",
       "values": [],
-      "reference_numbers": ["05070/26", "002/2007", "338/2026"],
+      "reference_numbers": [
+        "05070/26",
+        "002/2007",
+        "338/2026"
+      ],
       "importance": 95,
-      "news_value": { "score": 95, "reasons": ["serviço de saúde", "pagamentos por indenização", "cobrança de documentos pelo controle externo"] },
+      "news_value": {
+        "score": 95,
+        "reasons": [
+          "serviço de saúde",
+          "pagamentos por indenização",
+          "cobrança de documentos pelo controle externo"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1768,11 +2392,28 @@
         "O processo apura possível impedimento na contratação de empresa individual de servidor comissionado da Fundação Educacional de Anicuns e eventual incompatibilidade de horários. Os responsáveis terão 15 dias para se manifestar; ainda não há julgamento definitivo sobre as suspeitas."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "R$ 20.250,00", "value": 20250, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 20.250,00",
+          "value": 20250,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 20250,
-      "reference_numbers": ["05503/26", "032/2026", "05819/2026"],
+      "reference_numbers": [
+        "05503/26",
+        "032/2026",
+        "05819/2026"
+      ],
       "importance": 93,
-      "news_value": { "score": 93, "reasons": ["pagamentos suspensos", "contrato legislativo", "apuração em andamento"] },
+      "news_value": {
+        "score": 93,
+        "reasons": [
+          "pagamentos suspensos",
+          "contrato legislativo",
+          "apuração em andamento"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1810,11 +2451,33 @@
         "Ao julgar embargos, o tribunal retirou da prefeita Juliana Izabel de Paula Costa o débito e a multa anteriormente aplicados, por entender que não havia nexo entre as atribuições políticas da gestora e as falhas apuradas. A decisão distingue o débito solidário — um único valor exigível dos responsáveis — de pagamentos separados de R$ 243 mil."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "R$ 243.450,62", "value": 243450.62, "currency": "BRL" }, { "original": "R$ 1.233,80", "value": 1233.8, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 243.450,62",
+          "value": 243450.62,
+          "currency": "BRL"
+        },
+        {
+          "original": "R$ 1.233,80",
+          "value": 1233.8,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 243450.62,
-      "reference_numbers": ["03932/24", "071/2021", "05631/2026"],
+      "reference_numbers": [
+        "03932/24",
+        "071/2021",
+        "05631/2026"
+      ],
       "importance": 97,
-      "news_value": { "score": 97, "reasons": ["débito solidário", "superfaturamento qualitativo segundo decisão", "fornecedor identificado"] },
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "débito solidário",
+          "superfaturamento qualitativo segundo decisão",
+          "fornecedor identificado"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1852,11 +2515,33 @@
         "Segundo o acórdão, a obra deveria estar concluída em junho de 2025 após replanejamento do cronograma, mas a finalização não foi comprovada. O tribunal declarou atraso imotivado e determinou o arquivamento após o trânsito em julgado."
       ],
       "public_body": "TCM-GO",
-      "values": [{ "original": "R$ 4.817.855,36", "value": 4817855.36, "currency": "BRL" }, { "original": "R$ 5.178,25", "value": 5178.25, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 4.817.855,36",
+          "value": 4817855.36,
+          "currency": "BRL"
+        },
+        {
+          "original": "R$ 5.178,25",
+          "value": 5178.25,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 4817855.36,
-      "reference_numbers": ["03249/24", "548/2023", "05637/2026"],
+      "reference_numbers": [
+        "03249/24",
+        "548/2023",
+        "05637/2026"
+      ],
       "importance": 95,
-      "news_value": { "score": 95, "reasons": ["obra de saúde", "atraso declarado", "multa aplicada"] },
+      "news_value": {
+        "score": 95,
+        "reasons": [
+          "obra de saúde",
+          "atraso declarado",
+          "multa aplicada"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1901,29 +2586,77 @@
         "O contexto indica que o problema pode ultrapassar a SGG, embora o processo não prove uma causa única. Na mesma edição do Diário de Contas, o TCE registrou ausência de movimentações de contas pagadoras nas contas de 2024 do Corpo de Bombeiros e omissão entre janeiro e setembro nas contas de diárias e folha da Secretaria de Relações Institucionais. A Secretaria da Economia, como órgão central de contabilidade, foi cientificada para orientar a aplicação correta das rubricas patrimoniais."
       ],
       "public_body": "TCE-GO",
-      "values": [{ "original": "R$ 63,7 milhões", "value": 63700000, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 63,7 milhões",
+          "value": 63700000,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 63700000,
-      "reference_numbers": ["202500047002354", "1896/2026", "44/2026", "492/2026"],
+      "reference_numbers": [
+        "202500047002354",
+        "1896/2026",
+        "44/2026",
+        "492/2026"
+      ],
       "process_number": "202500047002354",
       "process_url": "https://www.tce.go.gov.br/ConsultaProcesso?proc=375797",
       "source_action_label": "Abrir acórdão no Diário",
       "updated_at": "2026-08-10",
       "key_findings": [
-        { "label": "Onde apareceu", "value": "Contas pagadoras registradas no Sistema de Contabilidade Geral do Estado" },
-        { "label": "Causa documentada", "value": "Extratos de 2024 cadastrados parcialmente, com limitação temporal na alimentação do sistema" },
-        { "label": "O que não foi aberto", "value": "Contas, bancos, meses, memória de cálculo e direção da diferença" },
-        { "label": "Conclusão do processo", "value": "Falha contábil formal, sem dano apontado; contas regulares com ressalvas e determinação de correção" }
+        {
+          "label": "Onde apareceu",
+          "value": "Contas pagadoras registradas no Sistema de Contabilidade Geral do Estado"
+        },
+        {
+          "label": "Causa documentada",
+          "value": "Extratos de 2024 cadastrados parcialmente, com limitação temporal na alimentação do sistema"
+        },
+        {
+          "label": "O que não foi aberto",
+          "value": "Contas, bancos, meses, memória de cálculo e direção da diferença"
+        },
+        {
+          "label": "Conclusão do processo",
+          "value": "Falha contábil formal, sem dano apontado; contas regulares com ressalvas e determinação de correção"
+        }
       ],
       "process_timeline": [
-        { "date": "2025-06-18", "label": "Prestação de contas enviada ao TCE-GO" },
-        { "date": "2026-05-21", "label": "Instrução Técnica Conclusiva nº 44/2026 aponta as ressalvas" },
-        { "date": "2026-06-16", "label": "Ministério Público de Contas acompanha a área técnica" },
-        { "date": "2026-06-25", "label": "Conselheira substituta sugere citar o responsável para novos esclarecimentos" },
-        { "date": "2026-07-09", "label": "Relator rejeita nova citação e vota pela regularidade com ressalvas" },
-        { "date": "2026-08-04", "label": "Acórdão nº 1896/2026 é publicado no Diário de Contas" }
+        {
+          "date": "2025-06-18",
+          "label": "Prestação de contas enviada ao TCE-GO"
+        },
+        {
+          "date": "2026-05-21",
+          "label": "Instrução Técnica Conclusiva nº 44/2026 aponta as ressalvas"
+        },
+        {
+          "date": "2026-06-16",
+          "label": "Ministério Público de Contas acompanha a área técnica"
+        },
+        {
+          "date": "2026-06-25",
+          "label": "Conselheira substituta sugere citar o responsável para novos esclarecimentos"
+        },
+        {
+          "date": "2026-07-09",
+          "label": "Relator rejeita nova citação e vota pela regularidade com ressalvas"
+        },
+        {
+          "date": "2026-08-04",
+          "label": "Acórdão nº 1896/2026 é publicado no Diário de Contas"
+        }
       ],
       "importance": 100,
-      "news_value": { "score": 100, "reasons": ["diferença contábil material", "determinação de correção", "contas do governo estadual"] },
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "diferença contábil material",
+          "determinação de correção",
+          "contas do governo estadual"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -1961,11 +2694,27 @@
         "A decisão também afastou, por ora, a rescisão do termo, a caracterização de dolo e a multa associada ao alegado inadimplemento. O processo volta ao monitoramento para verificar protocolos de cooperação e definir o montante devido; a suspensão não equivale ao cancelamento definitivo da obrigação."
       ],
       "public_body": "TCE-GO",
-      "values": [{ "original": "R$ 25.562.791,51", "value": 25562791.51, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 25.562.791,51",
+          "value": 25562791.51,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 25562791.51,
-      "reference_numbers": ["202400047001263", "1889/2026"],
+      "reference_numbers": [
+        "202400047001263",
+        "1889/2026"
+      ],
       "importance": 98,
-      "news_value": { "score": 98, "reasons": ["pagamento de alto valor suspenso", "monitoramento retomado", "efeito financeiro estadual"] },
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "pagamento de alto valor suspenso",
+          "monitoramento retomado",
+          "efeito financeiro estadual"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -2003,11 +2752,27 @@
         "O instituto e dois responsáveis também receberam multa equivalente a 50% do valor de referência, e o tribunal determinou o envio integral do processo ao Ministério Público Estadual. Parte dos fatos anteriores a 3 de abril de 2019 foi alcançada pela prescrição; o débito de R$ 12 mil é solidário, não multiplicado por três."
       ],
       "public_body": "TCE-GO",
-      "values": [{ "original": "R$ 12.000,00", "value": 12000, "currency": "BRL" }],
+      "values": [
+        {
+          "original": "R$ 12.000,00",
+          "value": 12000,
+          "currency": "BRL"
+        }
+      ],
       "value_highest": 12000,
-      "reference_numbers": ["202100010022628", "1897/2026"],
+      "reference_numbers": [
+        "202100010022628",
+        "1897/2026"
+      ],
       "importance": 97,
-      "news_value": { "score": 97, "reasons": ["contas irregulares", "ressarcimento e multa", "envio ao Ministério Público"] },
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "contas irregulares",
+          "ressarcimento e multa",
+          "envio ao Ministério Público"
+        ]
+      },
       "prominence": "cover",
       "record_type": "story",
       "editorial_status": "published",
@@ -2046,9 +2811,19 @@
       ],
       "public_body": "TCE-GO",
       "values": [],
-      "reference_numbers": ["202400047002558", "1978/2026"],
+      "reference_numbers": [
+        "202400047002558",
+        "1978/2026"
+      ],
       "importance": 91,
-      "news_value": { "score": 91, "reasons": ["falhas contábeis reiteradas", "determinações de correção", "empresa estatal"] },
+      "news_value": {
+        "score": 91,
+        "reasons": [
+          "falhas contábeis reiteradas",
+          "determinações de correção",
+          "empresa estatal"
+        ]
+      },
       "prominence": "section",
       "record_type": "story",
       "editorial_status": "published",
@@ -2087,9 +2862,128 @@
       ],
       "public_body": "TCE-GO",
       "values": [],
-      "reference_numbers": ["45/2026-SEC-CEXTERNO"],
+      "reference_numbers": [
+        "45/2026-SEC-CEXTERNO"
+      ],
       "importance": 86,
-      "news_value": { "score": 86, "reasons": ["auditoria de saúde", "prazo definido", "acompanhamento de recursos públicos"] },
+      "news_value": {
+        "score": 86,
+        "reasons": [
+          "auditoria de saúde",
+          "prazo definido",
+          "acompanhamento de recursos públicos"
+        ]
+      },
+      "prominence": "section",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99
+    },
+    {
+      "id": "doego-24843-embrapii-pdi-31-milhoes",
+      "date": "2026-08-14",
+      "published_at": "2026-08-14",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Secretaria de Estado de Ciência, Tecnologia e Inovação",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7320",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7320",
+      "edition_number": "24.843 - Suplemento",
+      "external_identifier": "DECLARAÇÃO DE INEXIGIBILIDADE DE CHAMAMENTO PÚBLICO",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-14-edicao-7320-suplemento.pdf",
+      "document_sha256": "437a744e84a786d213652a289d73f3f388ef12b1e2088ed64140c7986c4008ff",
+      "page_start": 10,
+      "page_end": 10,
+      "document_reference": "DOE-GO nº 24.843 · suplemento · página 10",
+      "act_type": "inexigibilidade",
+      "type_label": "Parceria",
+      "official_title": "Declaração de inexigibilidade de chamamento público",
+      "title": "Goiás destina R$ 31,5 milhões à Embrapii para projetos de inovação",
+      "deck": "Parceria financiará pesquisa e desenvolvimento de empresas goianas com unidades credenciadas; publicação informa inexigibilidade de chamamento público.",
+      "summary": "A Secretaria de Ciência, Tecnologia e Inovação autorizou apoio de R$ 31,5 milhões à Embrapii para projetos de pesquisa, desenvolvimento e inovação de empresas de Goiás.",
+      "paragraphs": [
+        "A Secretaria de Estado de Ciência, Tecnologia e Inovação autorizou apoio financeiro e institucional de R$ 31,5 milhões à Associação Brasileira de Pesquisa e Inovação Industrial (Embrapii). A parceria, publicada no suplemento do Diário Oficial de sexta-feira (14), destina os recursos a projetos de pesquisa, desenvolvimento e inovação de empresas goianas em conjunto com unidades credenciadas pela entidade.",
+        "O ato declara inexigível o chamamento público e foi ratificado pelo secretário José Frederico Lyra Netto no processo nº 202614304000133. O valor corresponde ao apoio autorizado para a parceria; a publicação, isoladamente, não comprova que todo o montante já tenha sido transferido ou pago."
+      ],
+      "public_body": "Secretaria de Estado de Ciência, Tecnologia e Inovação",
+      "values": [
+        {
+          "original": "R$ 31.500.000,00",
+          "value": 31500000,
+          "currency": "BRL"
+        }
+      ],
+      "value_highest": 31500000,
+      "reference_numbers": [
+        "202614304000133",
+        "18.234.613/0001-59"
+      ],
+      "importance": 97,
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "destinação de R$ 31,5 milhões",
+          "política de inovação",
+          "parceria sem chamamento público"
+        ]
+      },
+      "prominence": "cover",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99
+    },
+    {
+      "id": "doego-24843-mantem-ressarcimento-licenca-remunerada",
+      "date": "2026-08-14",
+      "published_at": "2026-08-14",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governadoria e Casa Civil",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7320",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7320",
+      "edition_number": "24.843 - Suplemento",
+      "external_identifier": "DESPACHO Nº 822/2026/CASA CIVIL",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-14-edicao-7320-suplemento.pdf",
+      "document_sha256": "437a744e84a786d213652a289d73f3f388ef12b1e2088ed64140c7986c4008ff",
+      "page_start": 8,
+      "page_end": 8,
+      "document_reference": "DOE-GO nº 24.843 · suplemento · página 8",
+      "act_type": "decisao",
+      "type_label": "Decisão administrativa",
+      "official_title": "DESPACHO Nº 822/2026/CASA CIVIL",
+      "title": "Goiás nega recurso e mantém ressarcimento por licença remunerada",
+      "deck": "Decisão exclui o período de afastamento do tempo de serviço e preserva a devolução de valores; Diário Oficial não informa o total a ser restituído.",
+      "summary": "O Governo de Goiás negou recurso administrativo e manteve a obrigação de ressarcimento de valores recebidos por uma gestora jurídica durante licença remunerada.",
+      "paragraphs": [
+        "O Governo de Goiás negou recurso administrativo apresentado pela gestora jurídica Thalyssa Braga Ribeiro e manteve a decisão que exclui do tempo de efetivo serviço o período de uma licença remunerada. O despacho nº 822/2026 também preserva a obrigação de ressarcir os valores recebidos durante o afastamento e nega um novo pedido de licença acadêmica.",
+        "A decisão, publicada no suplemento do Diário Oficial de sexta-feira (14), trata do processo nº 202000003010493 e não informa o valor a ser devolvido. O texto registra que a interessada ainda pode buscar composição na Câmara de Conciliação, Mediação e Arbitragem da Procuradoria-Geral do Estado; não há, na publicação, informação sobre acordo ou pagamento efetivado."
+      ],
+      "public_body": "Governadoria do Estado de Goiás",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "822/2026",
+        "202000003010493"
+      ],
+      "importance": 92,
+      "news_value": {
+        "score": 92,
+        "reasons": [
+          "decisão administrativa final",
+          "ressarcimento ao erário",
+          "publicação não informa o valor"
+        ]
+      },
       "prominence": "section",
       "record_type": "story",
       "editorial_status": "published",
