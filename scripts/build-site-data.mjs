@@ -67,6 +67,7 @@ function buildSearchRecord(item) {
     city: item.city,
     date: item.date,
     year: item.year,
+    month: /^\d{4}-\d{2}/.test(String(item.date || "")) ? String(item.date).slice(0, 7) : null,
     type: item.type,
     title: item.title,
     deck: trimText(item.deck, 72),
@@ -714,6 +715,11 @@ async function main() {
   ).sort((a, b) => Number(b.label) - Number(a.label));
 
   const latestYear = yearCounts[0]?.label || null;
+  const monthCounts = countBy(
+    allRecords.filter((item) => /^\d{4}-\d{2}/.test(String(item.date || ""))),
+    (item) => String(item.date).slice(0, 7)
+  ).sort((a, b) => b.label.localeCompare(a.label));
+  const latestMonth = monthCounts[0]?.label || null;
   const loadedCities = new Set(allRecords.map((item) => item.city).filter(Boolean)).size;
   const stateCities = new Set(stateRecords.map((item) => item.city).filter(Boolean)).size;
   const yearSnapshots = yearCounts.slice(0, 6).map((bucket) => {
@@ -729,6 +735,7 @@ async function main() {
 
   const searchFilters = {
     years: yearCounts,
+    months: monthCounts,
     cities: countBy(allRecords.filter((item) => item.city), (item) => item.city).slice(0, 32),
     types: countBy(allRecords.filter((item) => item.type), (item) => item.type).slice(0, 24),
     families: countBy(allRecords.filter((item) => item.sourceFamily), (item) => item.sourceFamily).slice(0, 20),
@@ -913,12 +920,20 @@ async function main() {
     generatedAt: searchPayload.generatedAt,
     total: allRecords.length,
     defaultYear: latestYear,
+    defaultMonth: latestMonth,
+    defaultFile: latestMonth ? `month-${latestMonth}.json` : `year-${latestYear}.json`,
     filters: searchFilters,
     shards: yearCounts.map((item) => ({
       id: item.label,
       label: item.label,
       count: item.count,
       file: `year-${item.label}.json`
+    })),
+    monthShards: monthCounts.map((item) => ({
+      id: item.label,
+      label: item.label,
+      count: item.count,
+      file: `month-${item.label}.json`
     })),
     allFile: "site-search.json"
   };
@@ -958,6 +973,18 @@ async function main() {
       total: searchPayload.records.filter((item) => String(item.year || "") === shard.id).length,
       year: shard.id,
       records: searchPayload.records.filter((item) => String(item.year || "") === shard.id)
+    };
+    await fs.writeFile(
+      path.join(publicSearchDir, shard.file),
+      JSON.stringify(shardPayload)
+    );
+  }
+  for (const shard of searchManifest.monthShards) {
+    const shardPayload = {
+      generatedAt: searchPayload.generatedAt,
+      total: searchPayload.records.filter((item) => item.month === shard.id).length,
+      month: shard.id,
+      records: searchPayload.records.filter((item) => item.month === shard.id)
     };
     await fs.writeFile(
       path.join(publicSearchDir, shard.file),

@@ -11,7 +11,7 @@ const assert = (condition, message) => {
 const summary = await readJson("public", "data", "site-summary.json");
 const manifest = await readJson("public", "data", "site-search-manifest.json");
 const search = await readJson("public", "data", "site-search.json");
-const defaultShard = await readFile(path.join(root, "public", "data", "search", `year-${manifest.defaultYear}.json`));
+const defaultShard = await readFile(path.join(root, "public", "data", "search", manifest.defaultFile));
 const home = await readFile(path.join(root, "dist", "index.html"), "utf8");
 const platform = await readFile(path.join(root, "dist", "pauteiro", "index.html"), "utf8");
 const trindade = await readFile(path.join(root, "dist", "trindade", "index.html"), "utf8");
@@ -29,7 +29,7 @@ assert(ids.size === search.records.length, "A busca contém identificadores dupl
 assert(trindadeCount >= 5064, `A integração de Trindade perdeu registros; recebeu ${trindadeCount}.`);
 assert(summary.metrics.records === search.total, "Resumo do site e base de busca divergem.");
 assert(summary.metrics.trindadeActs === 2919, "A base deveria preservar os 2.919 atos estruturados.");
-assert(gzipSync(defaultShard).byteLength < 1_200_000, "O recorte anual padrão ficou pesado demais para celular.");
+assert(gzipSync(defaultShard).byteLength < 1_200_000, "O recorte padrão ficou pesado demais para celular.");
 assert(home.includes("PAUTEIRO"), "A identidade principal não aparece na capa.");
 assert(home.includes("Notícia pública, documento por documento."), "A proposta jornalística não aparece na capa.");
 assert(platform.includes("Plataforma editorial modular"), "A página da plataforma não foi renderizada.");
@@ -57,6 +57,7 @@ console.log(JSON.stringify({
   currentYearStories: summary.metrics.currentYearStories,
   citiesLoaded: summary.metrics.loadedCities,
   defaultYear: manifest.defaultYear,
+  defaultMonth: manifest.defaultMonth,
   defaultShardBytes: defaultShard.byteLength,
   defaultShardGzipBytes: gzipSync(defaultShard).byteLength,
   status: "ok"

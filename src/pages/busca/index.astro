@@ -3,6 +3,7 @@ import siteData from "../../generated/site-data.json";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.label || "";
+const defaultMonth = siteData.searchFilters.months?.[0]?.label || "";
 ---
 
 <BaseLayout title="Pauteiro | Busca pública" description="Consulta pública por município, fonte, ano, tipo e assunto na base integrada de Goiás e Trindade.">
@@ -22,6 +23,7 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
       data-search-all-url={`${baseHref}data/site-search.json`}
       data-search-base={`${baseHref}data/search/`}
       data-default-year={defaultYear}
+      data-default-month={defaultMonth}
     >
       <form class="search-form" data-search-form>
         <label>
@@ -40,6 +42,13 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
           <select name="year">
             <option value="all">Todos os anos</option>
             {siteData.searchFilters.years.map((item) => <option value={item.label}>{item.label}</option>)}
+          </select>
+        </label>
+        <label>
+          <span>Mês</span>
+          <select name="month">
+            <option value="">Todos os meses</option>
+            {siteData.searchFilters.months.map((item) => <option value={item.label}>{item.label}</option>)}
           </select>
         </label>
         <label>
@@ -68,10 +77,10 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
         <article class="quick-card">
           <strong>Comece por aqui</strong>
           <div class="quick-links">
-            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&city=Trindade`}>Trindade</a>
-            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&family=${encodeURIComponent("Estado de Goias / DOE")}`}>DOE</a>
-            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&family=${encodeURIComponent("MPGO / DOMP")}`}>MPGO</a>
-            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&q=${encodeURIComponent("edital")}`}>Editais</a>
+            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&month=${encodeURIComponent(defaultMonth)}&city=Trindade`}>Trindade</a>
+            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&month=${encodeURIComponent(defaultMonth)}&family=${encodeURIComponent("Estado de Goias / DOE")}`}>DOE</a>
+            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&month=${encodeURIComponent(defaultMonth)}&family=${encodeURIComponent("MPGO / DOMP")}`}>MPGO</a>
+            <a href={`${baseHref}busca/?year=${encodeURIComponent(defaultYear)}&month=${encodeURIComponent(defaultMonth)}&q=${encodeURIComponent("edital")}`}>Editais</a>
           </div>
         </article>
       </div>
@@ -80,13 +89,14 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
     </div>
   </section>
 
-  <script type="module" is:inline define:vars={{ baseUrl: baseHref, defaultYear }}>
+  <script type="module" is:inline define:vars={{ baseUrl: baseHref, defaultYear, defaultMonth }}>
     const root = document.querySelector("[data-search-root]");
     if (root) {
       const manifestUrl = root.dataset.searchManifestUrl;
       const allUrl = root.dataset.searchAllUrl;
       const searchBaseUrl = root.dataset.searchBase;
       const fallbackYear = root.dataset.defaultYear || defaultYear;
+      const fallbackMonth = root.dataset.defaultMonth || defaultMonth;
       const form = root.querySelector("[data-search-form]");
       const resultsNode = root.querySelector("[data-search-results]");
       const summaryNode = root.querySelector("[data-search-summary]");
@@ -98,6 +108,9 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
       function fillForm() {
         if (!params.has("year") && form.elements.year) {
           form.elements.year.value = fallbackYear;
+        }
+        if (!params.has("month") && !params.has("year") && form.elements.month) {
+          form.elements.month.value = fallbackMonth;
         }
         for (const [key, current] of params.entries()) {
           const field = form.elements[key];
@@ -151,6 +164,7 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
         if (q && !record.search.includes(q.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) return false;
         if (filters.city && record.city !== filters.city) return false;
         if (filters.year && filters.year !== "all" && String(record.year || "") !== filters.year) return false;
+        if (filters.month && record.month !== filters.month) return false;
         if (filters.type && record.type !== filters.type) return false;
         if (filters.family && record.sourceFamily !== filters.family) return false;
         return true;
@@ -161,13 +175,14 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
           q: value("q"),
           city: value("city"),
           year: value("year"),
+          month: value("month"),
           type: value("type"),
           family: value("family")
         };
       }
 
-      async function ensurePayload(year) {
-        const key = year || fallbackYear;
+      async function ensurePayload(year, month) {
+        const key = year === "all" ? "all" : (month && month.startsWith(`${year}-`) ? month : (year || fallbackYear));
         if (state.cache.has(key)) return state.cache.get(key);
         if (key === "all") {
           const response = await fetch(allUrl);
@@ -175,7 +190,10 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
           state.cache.set(key, payload);
           return payload;
         }
-        const shard = state.manifest.shards.find((item) => item.id === key) || state.manifest.shards[0];
+        const shard = key.includes("-")
+          ? state.manifest.monthShards.find((item) => item.id === key)
+          : state.manifest.shards.find((item) => item.id === key);
+        if (!shard) throw new Error(`Recorte de busca indisponível: ${key}`);
         const response = await fetch(`${searchBaseUrl}${shard.file}`);
         const payload = await response.json();
         state.cache.set(key, payload);
@@ -188,12 +206,16 @@ const defaultYear = siteData.latestYear || siteData.searchFilters.years[0]?.labe
           filters.year = fallbackYear;
           form.elements.year.value = fallbackYear;
         }
+        if (filters.year === "all" || (filters.month && !filters.month.startsWith(`${filters.year}-`))) {
+          filters.month = "";
+          form.elements.month.value = "";
+        }
         updateUrl(filters);
         summaryNode.innerHTML = `<strong>...</strong><span>carregando recorte ${filters.year === "all" ? "completo" : filters.year}</span>`;
-        const payload = await ensurePayload(filters.year);
+        const payload = await ensurePayload(filters.year, filters.month);
         const matchesFound = payload.records.filter((record) => matches(record, filters));
         const filtered = matchesFound.slice(0, 60);
-        const currentLabel = filters.year === "all" ? "todos os anos" : filters.year;
+        const currentLabel = filters.year === "all" ? "todos os anos" : (filters.month || filters.year);
         summaryNode.innerHTML = `<strong>${matchesFound.length}</strong><span>resultados em ${escapeHtml(currentLabel)}${matchesFound.length > 60 ? " · mostrando os 60 primeiros" : ""}</span>`;
         resultsNode.innerHTML = filtered.length
           ? filtered.map(renderCard).join("")

@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T15:30:25-03:00",
+  "generated_at": "2026-08-17T11:11:53-03:00",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-08-14"
+    "to": "2026-08-17"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 18,
-    "tcmgo_editions": 8,
+    "tcmgo_editions": 9,
     "tcego_editions": 8,
-    "published_stories": 51
+    "published_stories": 56
   },
   "items": [
     {
@@ -2990,6 +2990,309 @@
       "publication_mode": "edited_document_news",
       "source_type": "official_document",
       "confidence": 0.99
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "Tribunal de Contas dos Municípios de Goiás",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2741",
+      "edition_number": "2741",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2741-2026-08-17.pdf",
+      "document_sha256": "76f8af1cd12ad30c378f017e4eec664be4361d238976193b44897c3b39896d10",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcmgo-2741-posse-uniformes-marca-gestao",
+      "city": "Posse",
+      "external_identifier": "ACÓRDÃO Nº 05942/2026",
+      "page_start": 181,
+      "page_end": 183,
+      "document_reference": "Edição 2741 · páginas 181 a 183",
+      "act_type": "decisao_final",
+      "type_label": "Educação e controle",
+      "official_title": "ACÓRDÃO Nº 05942/2026 — TRIBUNAL PLENO",
+      "title": "TCM proíbe novos uniformes escolares com marca da gestão de Posse",
+      "deck": "Tribunal confirmou cautelar e julgou ilegal o uso de logomarca ligada ao mandato; suspeitas sobre a dispensa e a qualidade das peças foram afastadas.",
+      "summary": "O TCM-GO confirmou a proibição de novas compras de uniformes escolares com logomarca alusiva ao mandato municipal de Posse e julgou parcialmente procedente a representação.",
+      "paragraphs": [
+        "O Tribunal de Contas dos Municípios confirmou, em decisão definitiva de mérito, que a Prefeitura de Posse e a Secretaria Municipal de Educação devem se abster de comprar novos uniformes escolares com logomarca alusiva à gestão 2025-2028. O colegiado concluiu que a marca nos itens pagos com recursos do Fundeb e do Salário-Educação caracteriza promoção pessoal e viola a Constituição.",
+        "A representação do processo nº 09802/2025 foi julgada parcialmente procedente. O TCM afastou os apontamentos sobre inadequação da Dispensa nº 15612/2025, aquisição em massa e qualidade do material, não aplicou sanção neste julgamento e recomendou especificações técnicas mais precisas e outro modelo para futuras contratações contínuas de uniformes."
+      ],
+      "public_body": "Prefeitura de Posse e Secretaria Municipal de Educação",
+      "values": [],
+      "value_highest": 0,
+      "reference_numbers": [
+        "09802/2025",
+        "05942/2026",
+        "15612/2025",
+        "1.591/2025"
+      ],
+      "importance": 100,
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "decisão final sobre promoção pessoal",
+          "recursos da educação",
+          "proibição de novas aquisições"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "Tribunal de Contas dos Municípios de Goiás",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2741",
+      "edition_number": "2741",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2741-2026-08-17.pdf",
+      "document_sha256": "76f8af1cd12ad30c378f017e4eec664be4361d238976193b44897c3b39896d10",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcmgo-2741-inaciolandia-revoga-contrato-rodeio",
+      "city": "Inaciolândia",
+      "external_identifier": "ACÓRDÃO Nº 05941/2026",
+      "page_start": 139,
+      "page_end": 140,
+      "document_reference": "Edição 2741 · páginas 139 e 140",
+      "act_type": "medida_cautelar",
+      "type_label": "Licitação e evento",
+      "official_title": "ACÓRDÃO Nº 05941/2026 — TRIBUNAL PLENO",
+      "title": "TCM manda Inaciolândia revogar contrato de estrutura do rodeio",
+      "deck": "Decisão confirma cautelar, aponta lote único sem justificativa e exigências técnicas desproporcionais; prefeitura terá 30 dias após o trânsito em julgado.",
+      "summary": "O TCM-GO julgou procedente denúncia sobre a contratação da estrutura do aniversário de Inaciolândia e determinou a revogação do contrato, da ata e das contratações derivadas.",
+      "paragraphs": [
+        "O Tribunal de Contas dos Municípios confirmou a cautelar e determinou que o prefeito de Inaciolândia, Claudio Henrique Caixeta, revogue a Ata de Registro de Preços nº 06/2026, o Contrato nº 25/2026 e outras contratações derivadas do Pregão Presencial nº 7/2026. O certame reuniu em um único lote palco, som, iluminação e estrutura para o rodeio do aniversário da cidade.",
+        "O colegiado considerou procedente a denúncia porque não houve justificativa técnica para agregar os serviços e porque foram confirmadas exigências de qualificação desproporcionais. O prazo de 30 dias começa após o trânsito em julgado; o acórdão não informa o valor do contrato e ressalvou a aplicação de sanção nesta decisão."
+      ],
+      "public_body": "Prefeitura de Inaciolândia",
+      "values": [],
+      "value_highest": 0,
+      "reference_numbers": [
+        "02829/2026",
+        "05941/2026",
+        "7/2026",
+        "06/2026",
+        "25/2026"
+      ],
+      "importance": 99,
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "ordem de revogação contratual",
+          "licitação para rodeio",
+          "denúncia julgada procedente"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "Tribunal de Contas dos Municípios de Goiás",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2741",
+      "edition_number": "2741",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2741-2026-08-17.pdf",
+      "document_sha256": "76f8af1cd12ad30c378f017e4eec664be4361d238976193b44897c3b39896d10",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcmgo-2741-convam-contas-irregulares-multas",
+      "city": "Campos Verdes, Guarinos, Santa Terezinha de Goiás e Uirapuru",
+      "external_identifier": "ACÓRDÃO Nº 05946/2026",
+      "page_start": 113,
+      "page_end": 116,
+      "document_reference": "Edição 2741 · páginas 113 a 116",
+      "act_type": "contas_irregulares",
+      "type_label": "Prestação de contas",
+      "official_title": "ACÓRDÃO Nº 05946/2026 — TRIBUNAL PLENO",
+      "title": "TCM julga irregulares contas do consórcio Vale do Minério e aplica quatro multas",
+      "deck": "Faltaram balanço financeiro, extratos bancários, planilha dos repasses municipais e ata de aprovação das contas; multas somam R$ 4,1 mil.",
+      "summary": "O TCM-GO julgou irregulares as contas de 2024 do Consórcio Intermunicipal Vale do Minério e aplicou quatro multas de R$ 1.035,65 ao gestor Carlos Seixo de Brito Junior.",
+      "paragraphs": [
+        "O Tribunal de Contas dos Municípios julgou irregulares as contas de 2024 do Consórcio Intermunicipal Vale do Minério, formado por Campos Verdes, Guarinos, Santa Terezinha de Goiás e Uirapuru. O acórdão aponta atraso na prestação, falta de balanço financeiro e extratos bancários, ausência da planilha dos recursos recebidos de cada município e da ata da assembleia que apreciou as contas.",
+        "O gestor Carlos Seixo de Brito Junior recebeu quatro multas de R$ 1.035,65, uma por achado, que somam R$ 4.142,60. A decisão decorre de tomada de contas especial aberta após inadimplência documental e não registra imputação de débito ou conclusão de desvio de recursos."
+      ],
+      "public_body": "Consórcio Intermunicipal Vale do Minério",
+      "values": [
+        {
+          "original": "4 multas de R$ 1.035,65",
+          "value": 4142.6,
+          "currency": "BRL",
+          "label": "total das multas"
+        }
+      ],
+      "value_highest": 4142.6,
+      "reference_numbers": [
+        "06530/2025",
+        "05946/2026",
+        "01812/2026"
+      ],
+      "importance": 97,
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "contas julgadas irregulares",
+          "quatro municípios consorciados",
+          "multas ao gestor"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "Tribunal de Contas dos Municípios de Goiás",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2741",
+      "edition_number": "2741",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2741-2026-08-17.pdf",
+      "document_sha256": "76f8af1cd12ad30c378f017e4eec664be4361d238976193b44897c3b39896d10",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcmgo-2741-guarinos-desconstitui-debito-subsidios",
+      "city": "Guarinos",
+      "external_identifier": "ACÓRDÃO Nº 05964/2026",
+      "page_start": 134,
+      "page_end": 138,
+      "document_reference": "Edição 2741 · páginas 134 a 138",
+      "act_type": "recurso",
+      "type_label": "Correção de decisão",
+      "official_title": "ACÓRDÃO Nº 05964/2026 — TRIBUNAL PLENO",
+      "title": "TCM cancela débito de R$ 84,8 mil sobre subsídios da Câmara de Guarinos",
+      "deck": "Nova regra de fiscalização retirou o único fundamento da condenação; multa de R$ 621 também foi desconstituída e contas de 2023 passaram a regulares.",
+      "summary": "O TCM-GO reformou decisão sobre a Câmara de Guarinos, desconstituiu débito de R$ 84.837,90 e multa de R$ 621,39 e julgou regulares as contas de 2023.",
+      "paragraphs": [
+        "O Tribunal de Contas dos Municípios desconstituiu um débito de R$ 84.837,90 e uma multa de R$ 621,39 atribuídos ao então presidente da Câmara de Guarinos, Vilmon Jacinto de Souza, por pagamentos de subsídios a vereadores em 2023. O recurso foi parcialmente acolhido e as contas passaram de irregulares para regulares.",
+        "A mudança não decorreu de prova de devolução: o TCM aplicou a Decisão Normativa nº 2/2026, que retirou das contas de gestão anteriores à legislatura 2025-2028 esse ponto de controle sobre subsídios. Sem outra irregularidade remanescente, o Tribunal cancelou débito e multa e determinou o arquivamento após o trânsito em julgado."
+      ],
+      "public_body": "Câmara Municipal de Guarinos",
+      "values": [
+        {
+          "original": "R$ 84.837,90",
+          "value": 84837.9,
+          "currency": "BRL",
+          "label": "débito desconstituído"
+        },
+        {
+          "original": "R$ 621,39",
+          "value": 621.39,
+          "currency": "BRL",
+          "label": "multa desconstituída"
+        }
+      ],
+      "value_highest": 84837.9,
+      "reference_numbers": [
+        "02918/2024",
+        "05964/2026",
+        "07446/2025",
+        "002/2026"
+      ],
+      "importance": 95,
+      "news_value": {
+        "score": 95,
+        "reasons": [
+          "débito e multa cancelados",
+          "mudança normativa",
+          "contas reformadas para regulares"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "Tribunal de Contas dos Municípios de Goiás",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2741",
+      "edition_number": "2741",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2741-2026-08-17.pdf",
+      "document_sha256": "76f8af1cd12ad30c378f017e4eec664be4361d238976193b44897c3b39896d10",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcmgo-2741-turvelandia-desconstitui-debitos-subsidios",
+      "city": "Turvelândia",
+      "external_identifier": "ACÓRDÃO Nº 05956/2026",
+      "page_start": 212,
+      "page_end": 214,
+      "document_reference": "Edição 2741 · páginas 212 a 214",
+      "act_type": "recurso",
+      "type_label": "Correção de decisão",
+      "official_title": "ACÓRDÃO Nº 05956/2026 — TRIBUNAL PLENO",
+      "title": "TCM desconstitui R$ 70,1 mil em débitos da Câmara de Turvelândia",
+      "deck": "Tribunal também cancelou duas multas de R$ 621 e julgou regulares as contas de 2023 após mudança na regra sobre subsídios de vereadores.",
+      "summary": "O TCM-GO reformou as contas da Câmara de Turvelândia e desconstituiu dois débitos, de R$ 45.978,18 e R$ 24.160,37, além de duas multas.",
+      "paragraphs": [
+        "O Tribunal de Contas dos Municípios julgou regulares as contas de 2023 da Câmara de Turvelândia e desconstituiu débitos que somavam R$ 70.138,55. As cobranças haviam sido atribuídas aos gestores Itamar das Neves, no valor de R$ 45.978,18, e Eurípedes Pimenta Neves, no valor de R$ 24.160,37.",
+        "O acórdão também cancelou uma multa de R$ 621,39 de cada gestor. Assim como no caso de Guarinos, a reforma decorreu da Decisão Normativa nº 2/2026, que suprimiu esse controle de subsídios das contas de gestão de legislaturas anteriores a 2025-2028; o documento não afirma que os débitos tenham sido pagos."
+      ],
+      "public_body": "Câmara Municipal de Turvelândia",
+      "values": [
+        {
+          "original": "R$ 70.138,55",
+          "value": 70138.55,
+          "currency": "BRL",
+          "label": "total dos débitos desconstituídos"
+        },
+        {
+          "original": "2 multas de R$ 621,39",
+          "value": 1242.78,
+          "currency": "BRL",
+          "label": "total das multas desconstituídas"
+        }
+      ],
+      "value_highest": 70138.55,
+      "reference_numbers": [
+        "01161/2024",
+        "05956/2026",
+        "00243/2026",
+        "002/2026"
+      ],
+      "importance": 94,
+      "news_value": {
+        "score": 94,
+        "reasons": [
+          "R$ 70,1 mil em débitos cancelados",
+          "duas multas canceladas",
+          "contas reformadas para regulares"
+        ]
+      },
+      "prominence": "cover"
     }
   ]
 }
