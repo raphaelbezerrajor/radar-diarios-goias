@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-17T11:11:53-03:00",
+  "generated_at": "2026-08-17T20:31:31-03:00",
   "period": {
     "from": "2026-08-04",
     "to": "2026-08-17"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
-    "doego_editions": 18,
+    "doego_editions": 19,
     "tcmgo_editions": 9,
-    "tcego_editions": 8,
-    "published_stories": 57
+    "tcego_editions": 9,
+    "published_stories": 65
   },
   "items": [
     {
@@ -3353,6 +3353,510 @@
         ]
       },
       "prominence": "cover"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "Tribunal de Contas do Estado de Goiás",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291742742271",
+      "source_landing_url": "https://portal.tce.go.gov.br/diario-eletronico-de-contas1",
+      "edition_id": "tcego:147",
+      "edition_number": "147",
+      "local_path": "data/raw/tcego/2026/08/tcego-dec-147-2026-08-17.pdf",
+      "document_sha256": "2a823058b6cbfd13a971a5d44dbfce2fae3bfa0ad93d0d47229edd9b126f30f3",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcego-147-mpgo-corrige-rgf-ferias-20-milhoes",
+      "external_identifier": "ACÓRDÃO Nº 2181/2026",
+      "page_start": 75,
+      "page_end": 76,
+      "document_reference": "DEC nº 147 · páginas internas 74 e 75",
+      "act_type": "determinacao",
+      "type_label": "Fiscalização fiscal",
+      "official_title": "ACÓRDÃO Nº 2181/2026",
+      "title": "TCE manda MP corrigir relatório fiscal após classificação de R$ 20,15 milhões",
+      "deck": "Férias indenizadas de pessoal ativo foram lançadas na rubrica de demissão; órgão tem 15 dias para ajustar e republicar o demonstrativo.",
+      "summary": "O TCE-GO determinou que o Ministério Público estadual retire R$ 20,15 milhões em férias indenizadas da linha reservada a demissões no relatório fiscal do primeiro quadrimestre.",
+      "paragraphs": [
+        "O Tribunal de Contas do Estado de Goiás determinou que o Ministério Público estadual exclua R$ 20.153.321,71 em férias indenizadas de pessoal ativo da linha ‘Indenizações por Demissão e Incentivos à Demissão Voluntária’ do Relatório de Gestão Fiscal do primeiro quadrimestre de 2026. Segundo o Acórdão nº 2181/2026, a classificação do Empenho nº 2026.0701.003.00319 contraria a Lei de Responsabilidade Fiscal e o Manual de Demonstrativos Fiscais.",
+        "O MP-GO terá 15 dias, contados da ciência da decisão, para recalcular a Despesa Total com Pessoal e os percentuais sobre a Receita Corrente Líquida Ajustada e republicar o demonstrativo. O TCE também recomendou históricos contábeis mais detalhados. A decisão, aprovada por unanimidade em 13 de agosto, corrige a apresentação fiscal; não declara que o pagamento das férias tenha sido indevido nem aponta desvio de recursos."
+      ],
+      "public_body": "Ministério Público do Estado de Goiás",
+      "values": [
+        {
+          "original": "R$ 20.153.321,71",
+          "value": 20153321.71,
+          "currency": "BRL",
+          "label": "férias indenizadas a reclassificar"
+        }
+      ],
+      "value_highest": 20153321.71,
+      "reference_numbers": [
+        "202600047001944/314-01",
+        "2181/2026",
+        "2026.0701.003.00319"
+      ],
+      "importance": 100,
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "correção obrigatória de relatório fiscal",
+          "R$ 20,15 milhões em despesa de pessoal",
+          "prazo de 15 dias"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Agência Goiana de Infraestrutura e Transportes",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7321",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7321",
+      "edition_number": "24.844",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-17-edicao-7321.pdf",
+      "document_sha256": "2ad5875a47ff17de28ff4a630a533cf71cbd4b524f4365c850c9dae2463494de",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24844-rodovia-do-boi-187-milhoes",
+      "external_identifier": "CONCORRÊNCIA ELETRÔNICA Nº 068/2026",
+      "page_start": 21,
+      "page_end": 21,
+      "document_reference": "DOE-GO nº 24.844 · página 21",
+      "act_type": "homologacao",
+      "type_label": "Infraestrutura rodoviária",
+      "official_title": "TERMO DE JULGAMENTO E HOMOLOGAÇÃO — CONCORRÊNCIA ELETRÔNICA Nº 068/2026",
+      "title": "Goinfra homologa R$ 187,77 milhões para implantar a Rodovia do Boi",
+      "deck": "Consórcio formado por Caiapó, Engenho e Centro Leste venceu a disputa para projetar e executar 70,72 quilômetros entre a GO-173 e a GO-528.",
+      "summary": "A Goinfra adjudicou e homologou por R$ 187,77 milhões a contratação integrada dos projetos e das obras da Rodovia do Boi.",
+      "paragraphs": [
+        "A Agência Goiana de Infraestrutura e Transportes homologou por R$ 187.770.000 a contratação integrada dos projetos básico e executivo e da implantação da Rodovia do Boi. O trecho liga os entroncamentos da GO-173 e da GO-528 e terá 70,72 quilômetros, segundo o termo publicado no Diário Oficial desta segunda-feira (17).",
+        "O vencedor foi o Consórcio Rodovia do Boi, formado pela Construtora Caiapó, com 49,3% de participação, pela Construtora Centro Leste, também com 49,3%, e pela Engenho Projetos e Construções, com 1,4%. O documento adjudica e homologa a Concorrência nº 068/2026 após as fases de julgamento, habilitação e recurso; esse ato ainda não comprova assinatura do contrato nem pagamento ao consórcio."
+      ],
+      "public_body": "Agência Goiana de Infraestrutura e Transportes",
+      "values": [
+        {
+          "original": "R$ 187.770.000,00",
+          "value": 187770000,
+          "currency": "BRL",
+          "label": "valor homologado"
+        }
+      ],
+      "value_highest": 187770000,
+      "cnpjs": [
+        "00.237.518/0001-43",
+        "02.893.543/0001-00",
+        "02.155.735/0001-10"
+      ],
+      "reference_numbers": [
+        "068/2026",
+        "119566",
+        "202600005012787"
+      ],
+      "importance": 99,
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "obra rodoviária de R$ 187,77 milhões",
+          "70,72 quilômetros",
+          "resultado definitivo da licitação"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Agência Goiana de Infraestrutura e Transportes",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7321",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7321",
+      "edition_number": "24.844",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-17-edicao-7321.pdf",
+      "document_sha256": "2ad5875a47ff17de28ff4a630a533cf71cbd4b524f4365c850c9dae2463494de",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24844-go427-contrato-54-milhoes",
+      "external_identifier": "CONTRATO Nº 167/2026-GOINFRA",
+      "page_start": 22,
+      "page_end": 22,
+      "document_reference": "DOE-GO nº 24.844 · página 22",
+      "act_type": "contrato",
+      "type_label": "Infraestrutura rodoviária",
+      "official_title": "EXTRATO DO CONTRATO Nº 167/2026-GOINFRA",
+      "title": "Goinfra assina contrato de R$ 54,16 milhões para pavimentar trecho da GO-427",
+      "deck": "Consórcio GO 427 fará projetos e obras em 21,12 quilômetros entre Heitoraí e o entroncamento da GO-154.",
+      "summary": "A Goinfra contratou por R$ 54,16 milhões os projetos e a pavimentação de 21,12 quilômetros da GO-427.",
+      "paragraphs": [
+        "A Goinfra assinou contrato de R$ 54.157.469,93 com o Consórcio GO 427 para elaborar os projetos e executar a pavimentação de 21,12 quilômetros da rodovia. O trecho parte do entroncamento da GO-156, em Heitoraí, e segue até o entroncamento da GO-154(A).",
+        "O consórcio é formado por Mobicon Construtora, Ibiza Construtora e Latitude Engenharia e Tecnologia. O Contrato nº 167/2026 prevê seis meses para o projeto executivo, 12 meses para a obra e vigência total de 13 meses. O DOE cita três notas de empenho de 12 de agosto; empenho reserva orçamento, mas não comprova que o valor contratado já tenha sido pago."
+      ],
+      "public_body": "Agência Goiana de Infraestrutura e Transportes",
+      "values": [
+        {
+          "original": "R$ 54.157.469,93",
+          "value": 54157469.93,
+          "currency": "BRL",
+          "label": "valor do contrato"
+        }
+      ],
+      "value_highest": 54157469.93,
+      "reference_numbers": [
+        "167/2026-GOINFRA",
+        "202600036011861",
+        "2026.4361.085.00188",
+        "2026.4361.085.00189",
+        "2026.4361.085.00190"
+      ],
+      "importance": 96,
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "contrato de R$ 54,16 milhões",
+          "pavimentação de 21,12 quilômetros",
+          "prazos de projeto e obra definidos"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Agência Goiana de Infraestrutura e Transportes",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7321",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7321",
+      "edition_number": "24.844",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-17-edicao-7321.pdf",
+      "document_sha256": "2ad5875a47ff17de28ff4a630a533cf71cbd4b524f4365c850c9dae2463494de",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24844-go425-licitacao-53-milhoes",
+      "external_identifier": "EDITAL Nº 105/2026-GOINFRA",
+      "page_start": 20,
+      "page_end": 20,
+      "document_reference": "DOE-GO nº 24.844 · página 20",
+      "act_type": "aviso_de_licitacao",
+      "type_label": "Infraestrutura rodoviária",
+      "official_title": "CONCORRÊNCIA ELETRÔNICA — EDITAL Nº 105/2026-GOINFRA",
+      "title": "Goinfra abre licitação de R$ 53,99 milhões para implantar 24,2 km da GO-425",
+      "deck": "Disputa prevê projetos e obra entre a BR-060 e o perímetro urbano de Santo Antônio do Descoberto; sessão será em 18 de novembro.",
+      "summary": "A Goinfra abriu concorrência estimada em R$ 53,99 milhões para projetar e implantar 24,2 quilômetros da GO-425.",
+      "paragraphs": [
+        "A Goinfra marcou para 18 de novembro a concorrência que contratará os projetos básico e executivo e a implantação de 24,2 quilômetros da GO-425. O trecho liga o entroncamento da BR-060 ao início do perímetro urbano de Santo Antônio do Descoberto.",
+        "O Edital nº 105/2026 estima a contratação integrada em R$ 53.986.832,91 e adota julgamento por técnica e preço. Como a disputa ainda será realizada, o montante é uma estimativa e não representa contrato, empresa vencedora ou pagamento."
+      ],
+      "public_body": "Agência Goiana de Infraestrutura e Transportes",
+      "values": [
+        {
+          "original": "R$ 53.986.832,91",
+          "value": 53986832.91,
+          "currency": "BRL",
+          "label": "valor estimado da licitação"
+        }
+      ],
+      "value_highest": 53986832.91,
+      "reference_numbers": [
+        "105/2026-GOINFRA",
+        "121636",
+        "202600005024282"
+      ],
+      "importance": 93,
+      "news_value": {
+        "score": 93,
+        "reasons": [
+          "licitação estimada em R$ 53,99 milhões",
+          "24,2 quilômetros de nova rodovia",
+          "impacto regional"
+        ]
+      },
+      "prominence": "section"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "city": "Monte Alegre de Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Secretaria de Estado da Saúde",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7321",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7321",
+      "edition_number": "24.844",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-17-edicao-7321.pdf",
+      "document_sha256": "2ad5875a47ff17de28ff4a630a533cf71cbd4b524f4365c850c9dae2463494de",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24844-monte-alegre-prestacao-contas-veiculos",
+      "external_identifier": "TOMADA DE CONTAS ESPECIAL Nº 202600010039498",
+      "page_start": 15,
+      "page_end": 16,
+      "document_reference": "DOE-GO nº 24.844 · páginas 15 e 16",
+      "act_type": "tomada_de_contas_especial",
+      "type_label": "Prestação de contas",
+      "official_title": "NOTIFICAÇÃO EXTRAJUDICIAL Nº 118/2026/CPTCE/SES",
+      "title": "Saúde cobra prestação de contas de repasse para veículos em Monte Alegre",
+      "deck": "Ex-prefeito foi notificado a comprovar o uso de R$ 500 mil enviados em 2019 para uma van e um micro-ônibus; processo ainda terá defesa e julgamento.",
+      "summary": "A Secretaria da Saúde abriu tomada de contas sobre R$ 500 mil repassados ao Fundo Municipal de Saúde de Monte Alegre para comprar uma van e um micro-ônibus.",
+      "paragraphs": [
+        "A Comissão Permanente de Tomada de Contas Especial da Secretaria da Saúde notificou o ex-prefeito de Monte Alegre de Goiás Juvenal Fernandes de Almeida a apresentar, em cinco dias, a prestação de contas de R$ 500 mil repassados em 2019 ao Fundo Municipal de Saúde. O recurso da Portaria nº 941/2019 tinha como destino a compra de um micro-ônibus e uma van para ações e serviços de saúde.",
+        "A notificação afirma que não recebeu a prestação nem a devolução após reiteradas cobranças. O documento cita R$ 1.286.024,35 como montante atualizado em 30 de junho e R$ 722.093,02 para ressarcimento na fase interna, sem juros de mora, mas não concilia no extrato a diferença entre os dois cálculos. Ainda haverá defesa, auditoria da CGE e julgamento do TCE-GO; a abertura da tomada de contas não é decisão final de débito ou responsabilidade."
+      ],
+      "public_body": "Secretaria de Estado da Saúde",
+      "values": [
+        {
+          "original": "R$ 500.000,00",
+          "value": 500000,
+          "currency": "BRL",
+          "label": "repasse original"
+        },
+        {
+          "original": "R$ 1.286.024,35",
+          "value": 1286024.35,
+          "currency": "BRL",
+          "label": "montante atualizado citado na notificação"
+        },
+        {
+          "original": "R$ 722.093,02",
+          "value": 722093.02,
+          "currency": "BRL",
+          "label": "ressarcimento citado para a fase interna sem juros de mora"
+        }
+      ],
+      "value_highest": 1286024.35,
+      "reference_numbers": [
+        "118/2026/CPTCE/SES",
+        "202600010039498",
+        "941/2019",
+        "2019.2850.186.00226.001",
+        "81/2025-PCONTAS/SES"
+      ],
+      "importance": 95,
+      "news_value": {
+        "score": 95,
+        "reasons": [
+          "prestação de contas de recursos da saúde",
+          "repasse para veículos ainda sem comprovação no processo",
+          "prazo de defesa aberto"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "source_id": "aparecida",
+      "source_name": "Diário Oficial de Aparecida de Goiânia",
+      "source_label": "Prefeitura de Aparecida de Goiânia",
+      "official_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2915",
+      "source_landing_url": "https://doe.aparecida.go.gov.br/",
+      "edition_id": "aparecida:3027",
+      "edition_number": "2915",
+      "local_path": "data/raw/municipal-diaries/aparecida/2026/08/2026-08-17-2915.pdf",
+      "document_sha256": "c9de5058e195e7677e7211727d517182a8b5c7357a03c8862c42578d54aa0d77",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "aparecida-2915-medicamentos-5-milhoes",
+      "external_identifier": "PREGÃO ELETRÔNICO Nº 041/2026-SRP",
+      "page_start": 2,
+      "page_end": 15,
+      "document_reference": "Diário nº 2915 · páginas 2 a 15",
+      "act_type": "homologacao",
+      "type_label": "Saúde",
+      "official_title": "EXTRATO DE HOMOLOGAÇÃO DO PREGÃO ELETRÔNICO Nº 041/2026-SRP",
+      "title": "Aparecida registra R$ 5,14 milhões em preços para medicamentos",
+      "deck": "Pregão distribuiu 155 itens entre 22 fornecedores para atender a rede municipal de saúde; atas têm vigência de um ano.",
+      "summary": "Aparecida de Goiânia homologou R$ 5,14 milhões em preços registrados para eventual fornecimento de medicamentos orais e tópicos.",
+      "paragraphs": [
+        "A Prefeitura de Aparecida de Goiânia homologou R$ 5.141.180,08 em preços para o eventual fornecimento de medicamentos orais e tópicos à rede municipal de saúde. O Pregão Eletrônico nº 041/2026-SRP distribuiu 155 itens entre 22 empresas; os maiores lotes ficaram com Inovamed Hospitalar, por R$ 789.534, C.A. Hospitalar, por R$ 788.470, e Santé Médica Hospitalar, por R$ 535.680.",
+        "As atas de registro de preços têm validade de um ano a partir da divulgação no Portal Nacional de Contratações Públicas e podem ser prorrogadas por igual período se houver vantagem. Registro de preço define fornecedores e limites para compras futuras: a soma homologada não comprova que todos os medicamentos serão solicitados ou que R$ 5,14 milhões já tenham sido pagos."
+      ],
+      "public_body": "Secretarias municipais de Administração e Saúde de Aparecida de Goiânia",
+      "values": [
+        {
+          "original": "R$ 5.141.180,08",
+          "value": 5141180.08,
+          "currency": "BRL",
+          "label": "total homologado em preços registrados"
+        }
+      ],
+      "value_highest": 5141180.08,
+      "reference_numbers": [
+        "041/2026-SRP",
+        "2025.353.218",
+        "Atas 123/2026 a 144/2026"
+      ],
+      "importance": 92,
+      "news_value": {
+        "score": 92,
+        "reasons": [
+          "R$ 5,14 milhões em medicamentos",
+          "155 itens para a rede de saúde",
+          "22 fornecedores identificados"
+        ]
+      },
+      "prominence": "section"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "source_id": "aparecida",
+      "source_name": "Diário Oficial de Aparecida de Goiânia",
+      "source_label": "Prefeitura de Aparecida de Goiânia",
+      "official_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2915",
+      "source_landing_url": "https://doe.aparecida.go.gov.br/",
+      "edition_id": "aparecida:3027",
+      "edition_number": "2915",
+      "local_path": "data/raw/municipal-diaries/aparecida/2026/08/2026-08-17-2915.pdf",
+      "document_sha256": "c9de5058e195e7677e7211727d517182a8b5c7357a03c8862c42578d54aa0d77",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "aparecida-2915-papelaria-escolas-2-milhoes",
+      "external_identifier": "PREGÃO ELETRÔNICO Nº 059/2026-SRP",
+      "page_start": 3,
+      "page_end": 4,
+      "document_reference": "Diário nº 2915 · páginas 3 e 4",
+      "act_type": "homologacao",
+      "type_label": "Educação",
+      "official_title": "EXTRATO DE HOMOLOGAÇÃO DO PREGÃO ELETRÔNICO Nº 059/2026-SRP",
+      "title": "Aparecida registra R$ 2,39 milhões para papelaria da rede municipal",
+      "deck": "Brava Forte concentra R$ 2,08 milhões do total homologado; atas poderão ser usadas em compras futuras por até um ano.",
+      "summary": "Aparecida de Goiânia homologou R$ 2,39 milhões em preços registrados para materiais de expediente e papelaria da rede municipal de educação.",
+      "paragraphs": [
+        "A Prefeitura de Aparecida de Goiânia homologou R$ 2.388.713,90 em preços registrados para materiais de expediente e papelaria da rede municipal de educação. A Brava Forte Comercial ficou com R$ 2.080.754,40; os demais valores foram destinados à G7 Distribuição, com R$ 260.997,50, à Bazar Distribuidora, com R$ 24.928, e à Mundo do Expediente, com R$ 22.034.",
+        "As atas do Pregão Eletrônico nº 059/2026-SRP terão validade de um ano a partir da publicação no PNCP e poderão ser prorrogadas por igual período, se os preços permanecerem vantajosos. Os valores são tetos registrados para contratações futuras e não comprovam aquisição integral ou pagamento às quatro empresas."
+      ],
+      "public_body": "Secretarias municipais de Administração e Educação de Aparecida de Goiânia",
+      "values": [
+        {
+          "original": "R$ 2.388.713,90",
+          "value": 2388713.9,
+          "currency": "BRL",
+          "label": "total homologado em preços registrados"
+        }
+      ],
+      "value_highest": 2388713.9,
+      "cnpjs": [
+        "10.867.306/0001-01",
+        "04.609.906/0001-69",
+        "65.324.843/0001-99",
+        "21.978.696/0001-03"
+      ],
+      "reference_numbers": [
+        "059/2026-SRP",
+        "2025.347.109",
+        "107/2026",
+        "108/2026",
+        "109/2026",
+        "110/2026"
+      ],
+      "importance": 89,
+      "news_value": {
+        "score": 89,
+        "reasons": [
+          "R$ 2,39 milhões para a educação",
+          "quatro fornecedores identificados",
+          "registro de preços por um ano"
+        ]
+      },
+      "prominence": "section"
+    },
+    {
+      "date": "2026-08-17",
+      "published_at": "2026-08-17",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "source_id": "aparecida",
+      "source_name": "Diário Oficial de Aparecida de Goiânia",
+      "source_label": "Prefeitura de Aparecida de Goiânia",
+      "official_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2915",
+      "source_landing_url": "https://doe.aparecida.go.gov.br/",
+      "edition_id": "aparecida:3027",
+      "edition_number": "2915",
+      "local_path": "data/raw/municipal-diaries/aparecida/2026/08/2026-08-17-2915.pdf",
+      "document_sha256": "c9de5058e195e7677e7211727d517182a8b5c7357a03c8862c42578d54aa0d77",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "aparecida-2915-concorrencias-pavimentacao-br153",
+      "external_identifier": "CONCORRÊNCIAS PÚBLICAS Nº 006/2026 E Nº 007/2026",
+      "page_start": 16,
+      "page_end": 16,
+      "document_reference": "Diário nº 2915 · página 16",
+      "act_type": "aviso_de_licitacao",
+      "type_label": "Infraestrutura urbana",
+      "official_title": "AVISOS DE LICITAÇÃO — CONCORRÊNCIAS PÚBLICAS Nº 006/2026 E Nº 007/2026",
+      "title": "Aparecida abre concorrências para pavimentação e obras na BR-153",
+      "deck": "Uma disputa cobre a segunda etapa do programa Aparecida 100 Anos; a outra prevê projetos e obras de arte especiais na rodovia federal.",
+      "summary": "Aparecida de Goiânia abriu duas concorrências de infraestrutura para pavimentação e drenagem urbana e para obras de arte especiais na BR-153.",
+      "paragraphs": [
+        "A Prefeitura de Aparecida de Goiânia marcou para 14 de outubro a Concorrência nº 006/2026, destinada à segunda etapa de pavimentação e drenagem de vias urbanas do programa de infraestrutura Aparecida 100 Anos. No dia seguinte, será aberta a Concorrência nº 007/2026 para projeto executivo e execução de obras de arte especiais na BR-153 dentro do município.",
+        "Os dois avisos adotam o menor preço por lote e admitem empresas elegíveis dos países membros do Novo Banco de Desenvolvimento. O Diário Oficial não informa o orçamento estimado, as vias abrangidas nem quais estruturas serão executadas na BR-153; esses detalhes dependem da leitura dos editais e anexos no portal municipal e no PNCP."
+      ],
+      "public_body": "Secretaria Municipal de Infraestrutura de Aparecida de Goiânia",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "006/2026",
+        "2026.098.327",
+        "007/2026",
+        "2026.044.716"
+      ],
+      "importance": 90,
+      "news_value": {
+        "score": 90,
+        "reasons": [
+          "duas concorrências de infraestrutura",
+          "pavimentação e drenagem urbana",
+          "intervenções na BR-153"
+        ]
+      },
+      "prominence": "section"
     }
   ]
 }
