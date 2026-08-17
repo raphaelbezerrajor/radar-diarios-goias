@@ -10,7 +10,7 @@
     "doego_editions": 18,
     "tcmgo_editions": 9,
     "tcego_editions": 8,
-    "published_stories": 56
+    "published_stories": 57
   },
   "items": [
     {
@@ -3290,6 +3290,66 @@
           "R$ 70,1 mil em débitos cancelados",
           "duas multas canceladas",
           "contas reformadas para regulares"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-14",
+      "published_at": "2026-08-17",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Goinfra",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7319",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7319",
+      "edition_number": "24.843",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-14-edicao-7319.pdf",
+      "document_sha256": "a90f5566f2cea9b6a34fd635561ae8ada50c99e7ad38429be848a9c8fa02a42c",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24843-goinfra-trindade-estrada-bugre-15-milhoes",
+      "city": "Trindade",
+      "external_identifier": "CONTRATO Nº 165/2026-GOINFRA",
+      "page_start": 121,
+      "page_end": 121,
+      "document_reference": "DOE-GO nº 24.843 · página 121",
+      "act_type": "contrato",
+      "type_label": "Contrato de obra",
+      "official_title": "EXTRATO DE CONTRATO Nº 165/2026-GOINFRA",
+      "title": "Goinfra contrata obra de R$ 15 milhões para duplicação viária em Trindade",
+      "deck": "AL Almeida Engenharia terá seis meses para duplicar a Rua 9 e implantar a Estrada do Bugre, na Chácara Santa Luzia.",
+      "summary": "A Goinfra assinou contrato de R$ 15 milhões para duplicar a Rua 9 e implantar a Estrada do Bugre, em um trecho de 3,06 quilômetros em Trindade.",
+      "paragraphs": [
+        "A Agência Goiana de Infraestrutura e Transportes (Goinfra) contratou a AL Almeida Engenharia Ltda. por R$ 15.001.202,50 para executar a duplicação da Rua 9 e implantar a Estrada do Bugre, na região da Chácara Santa Luzia, em Trindade. O trecho informado no extrato tem extensão total de 3,06 quilômetros.",
+        "O Contrato nº 165/2026 prevê seis meses para a execução, contados da assinatura da ordem de serviço, e vigência de 12 meses após sua divulgação no Portal Nacional de Contratações Públicas. O DOE registra a Nota de Empenho nº 2026.4361.025.00046, de 12 de agosto; o valor publicado é contratual e não comprova pagamento já realizado à empresa."
+      ],
+      "public_body": "Agência Goiana de Infraestrutura e Transportes",
+      "values": [
+        {
+          "original": "R$ 15.001.202,50",
+          "value": 15001202.5,
+          "currency": "BRL",
+          "label": "valor do contrato"
+        }
+      ],
+      "value_highest": 15001202.5,
+      "reference_numbers": [
+        "165/2026-GOINFRA",
+        "202600036010060",
+        "2026.4361.025.00046"
+      ],
+      "importance": 99,
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "obra viária de R$ 15 milhões",
+          "intervenção urbana em Trindade",
+          "contrato e prazo definidos"
         ]
       },
       "prominence": "cover"
