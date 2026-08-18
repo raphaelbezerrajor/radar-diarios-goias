@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-17T20:31:31-03:00",
+  "generated_at": "2026-08-18T11:10:03-03:00",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-08-17"
+    "to": "2026-08-18"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
-    "doego_editions": 19,
-    "tcmgo_editions": 9,
+    "doego_editions": 21,
+    "tcmgo_editions": 10,
     "tcego_editions": 9,
-    "published_stories": 65
+    "published_stories": 69
   },
   "items": [
     {
@@ -3854,6 +3854,269 @@
           "duas concorrências de infraestrutura",
           "pavimentação e drenagem urbana",
           "intervenções na BR-153"
+        ]
+      },
+      "prominence": "section"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "scope": "Estadual",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "city": "Goiás",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Agência Goiana de Infraestrutura e Transportes",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7323",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7323",
+      "edition_number": "24.845",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-18-edicao-7323.pdf",
+      "document_sha256": "43f8ccaa01b1bab0e92cd5e2fc5f94ea3847e10f79ad68a608324c15089e7295",
+      "id": "doego-24845-go116-go490-79-milhoes",
+      "external_identifier": "CONTRATOS Nº 168/2026-GOINFRA E Nº 169/2026-GOINFRA",
+      "page_start": 23,
+      "page_end": 23,
+      "document_reference": "DOE-GO nº 24.845 · página 23",
+      "act_type": "contrato",
+      "type_label": "Infraestrutura rodoviária",
+      "official_title": "EXTRATOS DOS CONTRATOS Nº 168/2026-GOINFRA E Nº 169/2026-GOINFRA",
+      "title": "Goinfra assina R$ 79,27 milhões em contratos para trechos das GOs 116 e 490",
+      "deck": "Projetos e obras cobrem 33,64 quilômetros; consórcio fará a GO-116 e a Centro Leste implantará a ligação entre Hidrolândia e Aparecida.",
+      "summary": "A Goinfra publicou dois contratos que somam R$ 79,27 milhões para implantar 33,64 quilômetros das rodovias GO-116 e GO-490.",
+      "paragraphs": [
+        "A Agência Goiana de Infraestrutura e Transportes assinou dois contratos que somam R$ 79.273.162,64 para implantar 33,64 quilômetros de rodovias. O Contrato nº 168/2026, de R$ 40.924.162,64, prevê projetos e obras em 22 quilômetros da GO-116, do entroncamento da GO-524 ao km 22, sob responsabilidade do Consórcio Edeconsil-Queiroz GO-116.",
+        "O Contrato nº 169/2026 destina R$ 38.349.000 à Construtora Centro Leste para 11,64 quilômetros da GO-490, entre Hidrolândia e o Aeroporto Antares, em Aparecida de Goiânia. Os extratos citam notas de empenho e prazos de até dez meses de execução para a GO-116 e seis meses para a GO-490; empenho e valor contratual não comprovam pagamento integral nem obra concluída."
+      ],
+      "public_body": "Agência Goiana de Infraestrutura e Transportes",
+      "values": [
+        {
+          "original": "R$ 79.273.162,64",
+          "value": 79273162.64,
+          "currency": "BRL",
+          "label": "soma dos dois contratos"
+        },
+        {
+          "original": "R$ 40.924.162,64",
+          "value": 40924162.64,
+          "currency": "BRL",
+          "label": "Contrato nº 168/2026-GOINFRA"
+        },
+        {
+          "original": "R$ 38.349.000,00",
+          "value": 38349000,
+          "currency": "BRL",
+          "label": "Contrato nº 169/2026-GOINFRA"
+        }
+      ],
+      "value_highest": 79273162.64,
+      "reference_numbers": [
+        "168/2026-GOINFRA",
+        "169/2026-GOINFRA",
+        "202600036013707",
+        "202600005011923"
+      ],
+      "importance": 100,
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "R$ 79,27 milhões em obras rodoviárias",
+          "33,64 quilômetros",
+          "dois contratos assinados"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "scope": "Estadual",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "Tribunal de Contas dos Municípios de Goiás",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2742",
+      "edition_number": "2742",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2742-2026-08-18.pdf",
+      "document_sha256": "a148e3cc0fba815399a05e22dcf8ed74f5c672abcde83f4ef1569a356c12416f",
+      "id": "tcmgo-2742-pontalina-contratacoes-diretas-multas",
+      "city": "Pontalina",
+      "external_identifier": "ACÓRDÃO Nº 05580/2026",
+      "page_start": 132,
+      "page_end": 134,
+      "document_reference": "Edição 2742 · ato nas páginas 130 a 134; imagem-fonte da página 132",
+      "act_type": "decisao_final",
+      "type_label": "Gestão de pessoal",
+      "official_title": "ACÓRDÃO Nº 05580/2026 — TRIBUNAL PLENO",
+      "title": "TCM multa presidentes e manda Câmara de Pontalina parar contratações diretas",
+      "deck": "Decisão exige concurso e troca de prestadores em até 90 dias após o trânsito em julgado; acusação de nepotismo cruzado foi rejeitada.",
+      "summary": "O TCM-GO julgou parcialmente procedente representação sobre contratações diretas para atividades rotineiras na Câmara de Pontalina e aplicou duas multas.",
+      "paragraphs": [
+        "O Tribunal de Contas dos Municípios aplicou multas de R$ 2.071,13 ao ex-presidente da Câmara de Pontalina Renato Cassimiro de Almeida e de R$ 3.106,95 ao atual presidente, Lauro Fernandes Correia. O Acórdão nº 05580/2026 considerou que a contratação direta de prestadores para atividades rotineiras burlou a exigência constitucional de concurso público entre 2021 e 2022 e, na gestão atual, entre 2024 e 2026.",
+        "Depois do trânsito em julgado, a Câmara deverá cessar novas contratações diretas, readequar o quadro em 90 dias, substituir prestadores contratados por dispensa por seleção simplificada temporária e regularizar o controle interno. O TCM remeteu o processo ao MP-GO e rejeitou a parte da representação que apontava nepotismo cruzado por falta de elementos suficientes; a decisão prevê acompanhamento de cumprimento e ainda admite os recursos cabíveis."
+      ],
+      "public_body": "Câmara Municipal de Pontalina",
+      "values": [
+        {
+          "original": "R$ 5.178,08",
+          "value": 5178.08,
+          "currency": "BRL",
+          "label": "soma das multas"
+        },
+        {
+          "original": "R$ 2.071,13",
+          "value": 2071.13,
+          "currency": "BRL",
+          "label": "multa ao ex-presidente"
+        },
+        {
+          "original": "R$ 3.106,95",
+          "value": 3106.95,
+          "currency": "BRL",
+          "label": "multa ao atual presidente"
+        }
+      ],
+      "value_highest": 5178.08,
+      "reference_numbers": [
+        "07856/2023",
+        "05580/2026",
+        "04867/2010"
+      ],
+      "importance": 99,
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "contratações diretas julgadas irregulares",
+          "ordem de concurso e readequação em 90 dias",
+          "duas multas e envio ao MP-GO"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "scope": "Estadual",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "Tribunal de Contas dos Municípios de Goiás",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2742",
+      "edition_number": "2742",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2742-2026-08-18.pdf",
+      "document_sha256": "a148e3cc0fba815399a05e22dcf8ed74f5c672abcde83f4ef1569a356c12416f",
+      "id": "tcmgo-2742-doverlandia-saude-contas-irregulares",
+      "city": "Doverlândia",
+      "external_identifier": "PROCESSO Nº 006093/2025",
+      "page_start": 13,
+      "page_end": 15,
+      "document_reference": "Edição 2742 · páginas 13 a 15",
+      "act_type": "contas_irregulares",
+      "type_label": "Saúde e prestação de contas",
+      "official_title": "ACÓRDÃO SOBRE AS CONTAS DO FMS DE DOVERLÂNDIA — PROCESSO Nº 006093/2025",
+      "title": "TCM julga irregulares contas da Saúde de Doverlândia e aplica três multas",
+      "deck": "Decisão aponta repasse previdenciário incompleto, atraso na prestação e falta de manifestação do Conselho de Saúde; multas somam R$ 1,86 mil.",
+      "summary": "O TCM-GO julgou irregulares as contas de 2024 do Fundo Municipal de Saúde de Doverlândia e aplicou três multas ao gestor Daniel Lima dos Santos.",
+      "paragraphs": [
+        "O Tribunal de Contas dos Municípios julgou irregulares as contas de 2024 do Fundo Municipal de Saúde de Doverlândia, sob responsabilidade de Daniel Lima dos Santos. A decisão aponta que valores previdenciários retidos dos segurados não foram integralmente repassados ao regime próprio e que faltou a manifestação do Conselho Municipal de Saúde sobre o terceiro quadrimestre.",
+        "O gestor recebeu três multas de R$ 621,39, que somam R$ 1.864,17: uma pelo atraso da prestação de contas, outra pela falta do repasse e a terceira pela ausência da certidão do conselho. O acórdão não informa o valor previdenciário não repassado nem imputa débito nesse montante; recomenda à gestão atual reforçar transparência e reservar funções de contratação a servidores efetivos."
+      ],
+      "public_body": "Fundo Municipal de Saúde de Doverlândia",
+      "values": [
+        {
+          "original": "3 multas de R$ 621,39",
+          "value": 1864.17,
+          "currency": "BRL",
+          "label": "total das multas"
+        }
+      ],
+      "value_highest": 1864.17,
+      "reference_numbers": [
+        "006093/2025",
+        "1616/2026-SECEXCONTAS"
+      ],
+      "importance": 96,
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "contas da saúde julgadas irregulares",
+          "repasse previdenciário incompleto",
+          "três multas"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "scope": "Estadual",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "Tribunal de Contas dos Municípios de Goiás",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2742",
+      "edition_number": "2742",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2742-2026-08-18.pdf",
+      "document_sha256": "a148e3cc0fba815399a05e22dcf8ed74f5c672abcde83f4ef1569a356c12416f",
+      "id": "tcmgo-2742-leopoldo-bulhoes-fundeb-irregular",
+      "city": "Leopoldo de Bulhões",
+      "external_identifier": "PROCESSO Nº 01890/2025",
+      "page_start": 104,
+      "page_end": 105,
+      "document_reference": "Edição 2742 · páginas 104 e 105",
+      "act_type": "contas_irregulares",
+      "type_label": "Educação e prestação de contas",
+      "official_title": "ACÓRDÃO SOBRE AS CONTAS DO FUNDEB/FUNDEF — PROCESSO Nº 01890/2025",
+      "title": "TCM julga irregulares contas do Fundeb de Leopoldo de Bulhões",
+      "deck": "Tribunal aponta retenção de IRRF sem repasse integral, aplica multa de R$ 621 e recomenda correções de transparência.",
+      "summary": "O TCM-GO julgou irregulares as contas de 2024 do Fundeb de Leopoldo de Bulhões por falta de repasse integral de IRRF retido.",
+      "paragraphs": [
+        "O Tribunal de Contas dos Municípios julgou irregulares as contas de 2024 do Fundeb/Fundef de Leopoldo de Bulhões, sob responsabilidade de Ricardo Gomes da Silva. O acórdão registra retenção de Imposto de Renda na Fonte sem repasse integral e insuficiência financeira.",
+        "O gestor recebeu multa de R$ 621,39. O documento não informa quanto deixou de ser repassado nem determina ressarcimento desse valor no dispositivo publicado; a decisão também recomenda à gestão atual ampliar a transparência e selecionar servidores efetivos para funções de contratação e licitação."
+      ],
+      "public_body": "Fundeb/Fundef de Leopoldo de Bulhões",
+      "values": [
+        {
+          "original": "R$ 621,39",
+          "value": 621.39,
+          "currency": "BRL",
+          "label": "multa aplicada"
+        }
+      ],
+      "value_highest": 621.39,
+      "reference_numbers": [
+        "01890/2025",
+        "1470/2026-SECEXCONTAS"
+      ],
+      "importance": 94,
+      "news_value": {
+        "score": 94,
+        "reasons": [
+          "contas do Fundeb julgadas irregulares",
+          "retenção sem repasse integral",
+          "multa ao gestor"
         ]
       },
       "prominence": "section"
