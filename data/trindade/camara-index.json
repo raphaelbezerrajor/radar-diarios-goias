@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-19T20:13:46.436Z",
+  "generated_at": "2026-08-18T19:49:16.986Z",
   "coverage": {
     "from_year": 2018,
     "to_year": 2026,
-    "through": "2026-07-19"
+    "through": "2026-08-18"
   },
   "source": {
     "institution": "Câmara Municipal de Trindade (GO)",
@@ -77,22 +77,37 @@
         "paid": 15666851.609999983
       },
       "2026": {
-        "contracts": 9,
-        "contracted_value": 326551.18000000005,
-        "commitments": 743,
-        "committed": 11696423.880000021,
-        "liquidated": 9917662.030000014,
-        "paid": 9917662.030000014
+        "contracts": 13,
+        "contracted_value": 736002.7300000001,
+        "commitments": 852,
+        "committed": 13390124.780000022,
+        "liquidated": 11724436.870000023,
+        "paid": 11724436.870000023
       }
     },
-    "contracts": 88,
-    "contracted_value": 6474990.319999999,
-    "commitments": 8219,
-    "committed_value": 99621921.95000017,
-    "liquidated_value": 92172445.34000017,
-    "paid_value": 92172445.34000017
+    "contracts": 92,
+    "contracted_value": 6884441.87,
+    "commitments": 8328,
+    "committed_value": 101315622.85000016,
+    "liquidated_value": 93979220.18000017,
+    "paid_value": 93979220.18000017
   },
   "contracts": [
+    {
+      "id": "2026-115",
+      "year": 2026,
+      "number": "54",
+      "label": "Contrato 54/2026",
+      "supplier": "INSTITUTO DE DESENVOLVIMENTO EDUCACIONAL, CULTURAL E ASSISTENCIAL NACIONAL",
+      "supplier_document": "04.236.076/0001-71",
+      "value": 250000,
+      "object": "CONTRATAÇÃO DE INSTITUIÇÃO ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS TÉCNICOS ESPECIALIZADOS DE PLANEJAMENTO, ORGANIZAÇÃO, OPERACIONALIZAÇÃO E EXECUÇÃO DE CONCURSO PÚBLICO DESTINADO AO PROVIMENTO DE CARGOS EFETIVOS DA CÂMARA MUNICIPAL DE TRINDADE E DA PREFEITURA MUNICIPAL DE TRINDADE",
+      "status": "Em vigor",
+      "signed_at": "18/06/2026",
+      "starts_at": "18/06/2026",
+      "ends_at": "18/06/2027",
+      "procurement_id": null
+    },
     {
       "id": "2026-108",
       "year": 2026,
@@ -124,6 +139,36 @@
       "procurement_id": 1111
     },
     {
+      "id": "2026-116",
+      "year": 2026,
+      "number": "8",
+      "label": "Contrato 8/2026",
+      "supplier": "41.192.551 GESSICA POLLYANA FERNANDES DE OLIVEIRA",
+      "supplier_document": "41.192.551/0001-81",
+      "value": 55207.11,
+      "object": "CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE INSTALAÇÃO/MANUTENÇÃO DE PORTÃO ELETRÔNICO E INSTALAÇÃO/MANUTENÇÃO DE CÂMERAS DE SEGURANÇA, PARA ATENDER AS NECESSIDADES DA CÂMARA MUNICIPAL DE TRINDADE.",
+      "status": "Em vigor",
+      "signed_at": "05/05/2026",
+      "starts_at": "05/05/2026",
+      "ends_at": "05/05/2027",
+      "procurement_id": 1135
+    },
+    {
+      "id": "2026-117",
+      "year": 2026,
+      "number": "10",
+      "label": "Contrato 10/2026",
+      "supplier": "HELLEN CRISTINA ALBANO DE SOUZA 70236124161",
+      "supplier_document": "40.584.288/0001-03",
+      "value": 54381.64,
+      "object": "AQUISIÇÃO DE PRODUTOS DE LIMPEZA PARA ATENDER AS NECESSIDADES DA CÂMARA MUNICIPAL DE TRINDADE",
+      "status": "Em vigor",
+      "signed_at": "09/02/2026",
+      "starts_at": "09/02/2026",
+      "ends_at": "09/02/2027",
+      "procurement_id": 1124
+    },
+    {
       "id": "2026-111",
       "year": 2026,
       "number": "9",
@@ -137,6 +182,21 @@
       "starts_at": "19/05/2026",
       "ends_at": "19/05/2027",
       "procurement_id": 1144
+    },
+    {
+      "id": "2026-118",
+      "year": 2026,
+      "number": "15",
+      "label": "Contrato 15/2026",
+      "supplier": "MADRIFLEX COMERCIO DE MOVEIS LTDA",
+      "supplier_document": "04.055.961/0001-54",
+      "value": 49862.8,
+      "object": "AQUISIÇÃO DE MOBILIÁRIO PARA OS GABINETES DOS VEREADORES E DEPARTAMENTO ADMINISTRATIVO DA CÂMARA MUNICIPAL DE TRINDADE.",
+      "status": "Em vigor",
+      "signed_at": "28/07/2026",
+      "starts_at": "28/07/2026",
+      "ends_at": "28/07/2027",
+      "procurement_id": 1157
     },
     {
       "id": "2026-106",
@@ -1418,50 +1478,50 @@
     {
       "creditor": "CAMARA MUNICIPAL DE TRINDADE",
       "document": "26.913.574/0001-44",
-      "committed": 38886363.81999993,
-      "liquidated": 38889529.099999934,
-      "paid": 38889529.099999934,
-      "commitments": 1250
+      "committed": 39547629.639999926,
+      "liquidated": 39550794.91999993,
+      "paid": 39550794.91999993,
+      "commitments": 1272
     },
     {
       "creditor": "I.N.S.S.",
       "document": "29.979.036/0064-24",
-      "committed": 9768193.690000001,
-      "liquidated": 9768193.690000001,
-      "paid": 9768193.690000001,
-      "commitments": 139
+      "committed": 9932603.590000002,
+      "liquidated": 9932603.590000002,
+      "paid": 9932603.590000002,
+      "commitments": 140
     },
     {
       "creditor": "L RODRIGUES CONTABILIDADE E PLANEJAMENTO EIRELI",
       "document": "13.290.802/0001-25",
       "committed": 1923048,
-      "liquidated": 1792350,
-      "paid": 1792350,
+      "liquidated": 1814133,
+      "paid": 1814133,
       "commitments": 9
     },
     {
       "creditor": "J P CORAZZA LTDA-ME",
       "document": "11.018.291/0001-61",
       "committed": 1753228.75,
-      "liquidated": 1580085.09,
-      "paid": 1580085.09,
+      "liquidated": 1607988.4000000001,
+      "paid": 1607988.4000000001,
       "commitments": 13
     },
     {
       "creditor": "CARLOS JOSÉ DOMINGUES",
       "document": "302.xxx.xxx-49",
-      "committed": 1535052.52,
-      "liquidated": 1535052.52,
-      "paid": 1535052.52,
-      "commitments": 56
+      "committed": 1576898.01,
+      "liquidated": 1576898.01,
+      "paid": 1576898.01,
+      "commitments": 57
     },
     {
       "creditor": "DYEGO HYGOR DE OLIVEIRA MARQUES",
       "document": "865.xxx.xxx-68",
-      "committed": 1323376.909999999,
-      "liquidated": 1323376.909999999,
-      "paid": 1323376.909999999,
-      "commitments": 146
+      "committed": 1363250.0399999989,
+      "liquidated": 1363250.0399999989,
+      "paid": 1363250.0399999989,
+      "commitments": 149
     },
     {
       "creditor": "CARLOS JOSE VAZ DA SILVA",
@@ -1482,26 +1542,26 @@
     {
       "creditor": "WESLLEY SILVEIRA BUENO",
       "document": "601.xxx.xxx-04",
-      "committed": 1201184.9499999988,
-      "liquidated": 1201184.9499999988,
-      "paid": 1201184.9499999988,
-      "commitments": 129
+      "committed": 1228391.1799999988,
+      "liquidated": 1228391.1799999988,
+      "paid": 1228391.1799999988,
+      "commitments": 131
     },
     {
       "creditor": "TRINDADEPREV",
       "document": "05.015.173/0001-05",
-      "committed": 1148767.12,
-      "liquidated": 1148767.12,
-      "paid": 1148767.12,
-      "commitments": 107
+      "committed": 1164944.6900000002,
+      "liquidated": 1164944.6900000002,
+      "paid": 1164944.6900000002,
+      "commitments": 108
     },
     {
       "creditor": "HELIO BRAZ GOMES",
       "document": "587.xxx.xxx-49",
-      "committed": 1080204.479999999,
-      "liquidated": 1080204.479999999,
-      "paid": 1080204.479999999,
-      "commitments": 107
+      "committed": 1107410.709999999,
+      "liquidated": 1107410.709999999,
+      "paid": 1107410.709999999,
+      "commitments": 109
     },
     {
       "creditor": "JOHNATAN RODRIGUES DA SILVA",
@@ -1514,26 +1574,26 @@
     {
       "creditor": "MAURO DE PAULA SILVA",
       "document": "011.xxx.xxx-32",
-      "committed": 932470.2799999993,
-      "liquidated": 932470.2799999993,
-      "paid": 932470.2799999993,
-      "commitments": 109
+      "committed": 959676.5099999993,
+      "liquidated": 959676.5099999993,
+      "paid": 959676.5099999993,
+      "commitments": 111
     },
     {
       "creditor": "ANDERSON BORGES DA CRUZ",
       "document": "690.xxx.xxx-91",
-      "committed": 904252.6899999994,
-      "liquidated": 904252.6799999994,
-      "paid": 904252.6799999994,
-      "commitments": 105
+      "committed": 944282.2299999994,
+      "liquidated": 944282.2199999994,
+      "paid": 944282.2199999994,
+      "commitments": 108
     },
     {
       "creditor": "FERNANDO BARBOSA DA SILVA VIEIRA",
       "document": "002.xxx.xxx-73",
-      "committed": 898694.5999999994,
-      "liquidated": 898694.5999999994,
-      "paid": 898694.5999999994,
-      "commitments": 93
+      "committed": 925900.8299999994,
+      "liquidated": 925900.8299999994,
+      "paid": 925900.8299999994,
+      "commitments": 95
     },
     {
       "creditor": "MARCIA JOSEFA SILVA",
@@ -1571,8 +1631,8 @@
       "creditor": "FM CARVALHOGRAFICA E EDITORA LTDA-ME",
       "document": "27.028.940/0001-45",
       "committed": 831204,
-      "liquidated": 679884,
-      "paid": 679884,
+      "liquidated": 690694,
+      "paid": 690694,
       "commitments": 18
     },
     {
@@ -1586,17 +1646,17 @@
     {
       "creditor": "EDSON CANDIDO DE SOUSA",
       "document": "842.xxx.xxx-49",
-      "committed": 617298.5299999999,
-      "liquidated": 626798.7599999999,
-      "paid": 626798.7599999999,
-      "commitments": 82
+      "committed": 644504.76,
+      "liquidated": 654004.9899999999,
+      "paid": 654004.9899999999,
+      "commitments": 84
     },
     {
       "creditor": "LEITE ADVOGADOS & ASSOCIADOS S/C",
       "document": "17.657.381/0001-89",
       "committed": 715500,
-      "liquidated": 610500,
-      "paid": 610500,
+      "liquidated": 625500,
+      "paid": 625500,
       "commitments": 11
     },
     {
@@ -1611,16 +1671,16 @@
       "creditor": "AR TECNOLOGIA GESTAO INTELIGENTE LTDA",
       "document": "12.067.865/0001-54",
       "committed": 579893.9500000001,
-      "liquidated": 539638.63,
-      "paid": 539638.63,
+      "liquidated": 546347.8500000001,
+      "paid": 546347.8500000001,
       "commitments": 31
     },
     {
       "creditor": "M NOGUEIRA INFORMÁTICA LTDA",
       "document": "40.485.311/0001-02",
       "committed": 604909.9699999999,
-      "liquidated": 530867.58,
-      "paid": 530867.58,
+      "liquidated": 540240.19,
+      "paid": 540240.19,
       "commitments": 18
     },
     {
@@ -1642,10 +1702,58 @@
     {
       "creditor": "JANETE FONSECA DE MOURA RAPOSO",
       "document": "320.xxx.xxx-49",
-      "committed": 471748.2499999998,
-      "liquidated": 471748.2499999998,
-      "paid": 471748.2499999998,
-      "commitments": 45
+      "committed": 485745.1799999998,
+      "liquidated": 485745.1799999998,
+      "paid": 485745.1799999998,
+      "commitments": 46
+    },
+    {
+      "creditor": "THIAGO DA SILVA HUTIM",
+      "document": "040.xxx.xxx-23",
+      "committed": 478257.29999999993,
+      "liquidated": 478257.29999999993,
+      "paid": 478257.29999999993,
+      "commitments": 41
+    },
+    {
+      "creditor": "VAGNER FORTUNATO MACHADO",
+      "document": "426.xxx.xxx-68",
+      "committed": 478153.02999999997,
+      "liquidated": 478153.02999999997,
+      "paid": 478153.02999999997,
+      "commitments": 41
+    },
+    {
+      "creditor": "FABIANE CHEYENNE PIMENTA SILVA",
+      "document": "700.xxx.xxx-53",
+      "committed": 478153.02999999997,
+      "liquidated": 478153.02999999997,
+      "paid": 478153.02999999997,
+      "commitments": 41
+    },
+    {
+      "creditor": "WANDERSON PEREIRA LIMA",
+      "document": "032.xxx.xxx-71",
+      "committed": 478023.02999999997,
+      "liquidated": 478023.02999999997,
+      "paid": 478023.02999999997,
+      "commitments": 41
+    },
+    {
+      "creditor": "HELTON PAULO GONÇALVES SILVA",
+      "document": "700.xxx.xxx-71",
+      "committed": 477959.68999999994,
+      "liquidated": 477959.68999999994,
+      "paid": 477959.68999999994,
+      "commitments": 41
+    },
+    {
+      "creditor": "ALEX CORREIA DA SILVA NEPOMOCENO",
+      "document": "042.xxx.xxx-78",
+      "committed": 477553.7099999999,
+      "liquidated": 477533.7099999999,
+      "paid": 477533.7099999999,
+      "commitments": 41
     },
     {
       "creditor": "WENDER BURANELI DE MOURA",
@@ -1672,44 +1780,28 @@
       "commitments": 69
     },
     {
+      "creditor": "DIANA PEREIRA CAMARGOS",
+      "document": "013.xxx.xxx-18",
+      "committed": 466291.6599999999,
+      "liquidated": 466291.6599999999,
+      "paid": 466291.6599999999,
+      "commitments": 41
+    },
+    {
+      "creditor": "JOSE ARTHUR BARBOSA DA COSTA",
+      "document": "756.xxx.xxx-53",
+      "committed": 464427.0999999999,
+      "liquidated": 464427.0999999999,
+      "paid": 464427.0999999999,
+      "commitments": 40
+    },
+    {
       "creditor": "MARCO AURELIO FERREIRA DE SOUZA",
       "document": "018.xxx.xxx-96",
       "committed": 451001.8499999999,
       "liquidated": 451001.8499999999,
       "paid": 451001.8499999999,
       "commitments": 65
-    },
-    {
-      "creditor": "VAGNER FORTUNATO MACHADO",
-      "document": "426.xxx.xxx-68",
-      "committed": 450946.8,
-      "liquidated": 450946.8,
-      "paid": 450946.8,
-      "commitments": 39
-    },
-    {
-      "creditor": "FABIANE CHEYENNE PIMENTA SILVA",
-      "document": "700.xxx.xxx-53",
-      "committed": 450946.8,
-      "liquidated": 450946.8,
-      "paid": 450946.8,
-      "commitments": 39
-    },
-    {
-      "creditor": "HELTON PAULO GONÇALVES SILVA",
-      "document": "700.xxx.xxx-71",
-      "committed": 450753.45999999996,
-      "liquidated": 450753.45999999996,
-      "paid": 450753.45999999996,
-      "commitments": 39
-    },
-    {
-      "creditor": "DIANA PEREIRA CAMARGOS",
-      "document": "013.xxx.xxx-18",
-      "committed": 439085.42999999993,
-      "liquidated": 439085.42999999993,
-      "paid": 439085.42999999993,
-      "commitments": 39
     },
     {
       "creditor": "WANDERLEY FERREIRA DE SOUSA JUNIOR",
@@ -1720,44 +1812,20 @@
       "commitments": 38
     },
     {
-      "creditor": "THIAGO DA SILVA HUTIM",
-      "document": "040.xxx.xxx-23",
-      "committed": 438279.89999999997,
-      "liquidated": 438279.89999999997,
-      "paid": 438279.89999999997,
-      "commitments": 38
-    },
-    {
-      "creditor": "WANDERSON PEREIRA LIMA",
-      "document": "032.xxx.xxx-71",
-      "committed": 438149.89999999997,
-      "liquidated": 438149.89999999997,
-      "paid": 438149.89999999997,
-      "commitments": 38
-    },
-    {
-      "creditor": "ALEX CORREIA DA SILVA NEPOMOCENO",
-      "document": "042.xxx.xxx-78",
-      "committed": 437419.8999999999,
-      "liquidated": 437399.8999999999,
-      "paid": 437399.8999999999,
-      "commitments": 38
-    },
-    {
-      "creditor": "JOSE ARTHUR BARBOSA DA COSTA",
-      "document": "756.xxx.xxx-53",
-      "committed": 437220.86999999994,
-      "liquidated": 437220.86999999994,
-      "paid": 437220.86999999994,
-      "commitments": 38
-    },
-    {
       "creditor": "ALCIONE ACACIO DA SILVA",
       "document": "843.xxx.xxx-53",
       "committed": 415131.0699999997,
       "liquidated": 415131.0699999997,
       "paid": 415131.0699999997,
       "commitments": 40
+    },
+    {
+      "creditor": "MIRACI ROSA DA SILVA NOVAIS",
+      "document": "264.xxx.xxx-72",
+      "committed": 414624.25,
+      "liquidated": 414624.25,
+      "paid": 414624.25,
+      "commitments": 46
     },
     {
       "creditor": "IRANI OLIVEIRA MACHADO",
@@ -1784,19 +1852,11 @@
       "commitments": 39
     },
     {
-      "creditor": "MIRACI ROSA DA SILVA NOVAIS",
-      "document": "264.xxx.xxx-72",
-      "committed": 402493.58,
-      "liquidated": 402493.58,
-      "paid": 402493.58,
-      "commitments": 45
-    },
-    {
       "creditor": "EQUATORIAL GOIAS DISTRIBUIDORA DE ENERGIA S/A",
       "document": "01.543.032/0001-04",
       "committed": 451624.54000000004,
-      "liquidated": 398588.14,
-      "paid": 398588.14,
+      "liquidated": 403441.20000000007,
+      "paid": 403441.20000000007,
       "commitments": 23
     },
     {
@@ -1810,10 +1870,10 @@
     {
       "creditor": "ALEXANDRE SOUSA DE JESUS",
       "document": "029.xxx.xxx-80",
-      "committed": 371694.09,
-      "liquidated": 371694.09,
-      "paid": 371694.09,
-      "commitments": 45
+      "committed": 386124.69,
+      "liquidated": 386124.69,
+      "paid": 386124.69,
+      "commitments": 46
     },
     {
       "creditor": "ANA MARIA CARVALHO LUZ OLIVEIRA",
@@ -1834,10 +1894,18 @@
     {
       "creditor": "WELTON LEITE DA PAIXAO",
       "document": "968.xxx.xxx-49",
-      "committed": 321925.58999999997,
-      "liquidated": 321925.58999999997,
-      "paid": 321925.58999999997,
-      "commitments": 53
+      "committed": 332926.06999999995,
+      "liquidated": 332926.06999999995,
+      "paid": 332926.06999999995,
+      "commitments": 55
+    },
+    {
+      "creditor": "IVAN BATISTA BORGES",
+      "document": "935.xxx.xxx-49",
+      "committed": 316993.4999999999,
+      "liquidated": 316993.4999999999,
+      "paid": 316993.4999999999,
+      "commitments": 59
     },
     {
       "creditor": "IMMC HOTEL POUSADA LTDA - ME",
@@ -1856,12 +1924,12 @@
       "commitments": 32
     },
     {
-      "creditor": "IVAN BATISTA BORGES",
-      "document": "935.xxx.xxx-49",
-      "committed": 305573.0699999999,
-      "liquidated": 305573.0699999999,
-      "paid": 305573.0699999999,
-      "commitments": 57
+      "creditor": "CARLOS JOSE DOMINGUES FILHO",
+      "document": "751.xxx.xxx-04",
+      "committed": 307265.94,
+      "liquidated": 307265.94,
+      "paid": 307265.94,
+      "commitments": 48
     },
     {
       "creditor": "MARIA DE LOURDES DA SILVA ALVES",
@@ -1872,12 +1940,12 @@
       "commitments": 29
     },
     {
-      "creditor": "CARLOS JOSE DOMINGUES FILHO",
-      "document": "751.xxx.xxx-04",
-      "committed": 293214.5,
-      "liquidated": 293214.5,
-      "paid": 293214.5,
-      "commitments": 47
+      "creditor": "AIRTON APARECIDO SOUZA GOULART",
+      "document": "304.xxx.xxx-20",
+      "committed": 285438.89999999997,
+      "liquidated": 285438.89999999997,
+      "paid": 285438.89999999997,
+      "commitments": 53
     },
     {
       "creditor": "LEOFONSO TEIXEIRA RAMOS",
@@ -1886,14 +1954,6 @@
       "liquidated": 278020.68,
       "paid": 278020.68,
       "commitments": 29
-    },
-    {
-      "creditor": "AIRTON APARECIDO SOUZA GOULART",
-      "document": "304.xxx.xxx-20",
-      "committed": 277993.55999999994,
-      "liquidated": 277993.55999999994,
-      "paid": 277993.55999999994,
-      "commitments": 51
     },
     {
       "creditor": "ROBSON ADRIANO CUNHA - KIKA FRIOS E EMBALAGENS",
@@ -1915,16 +1975,16 @@
       "creditor": "RAFAELLA FARIA MELO 03572594162",
       "document": "41.556.378/0001-53",
       "committed": 266954,
-      "liquidated": 245254,
-      "paid": 245254,
+      "liquidated": 246854,
+      "paid": 246854,
       "commitments": 33
     },
     {
       "creditor": "POSTO ALVES CARVALHO LTDA",
       "document": "02.759.173/0001-13",
       "committed": 205450.47,
-      "liquidated": 190038.91,
-      "paid": 190038.91,
+      "liquidated": 194970.99,
+      "paid": 194970.99,
       "commitments": 37
     },
     {
@@ -1960,20 +2020,20 @@
       "commitments": 3
     },
     {
+      "creditor": "WANDERSON WESLEI DE SOUSA FONSECA",
+      "document": "035.xxx.xxx-01",
+      "committed": 162154.01999999996,
+      "liquidated": 162154.01999999996,
+      "paid": 162154.01999999996,
+      "commitments": 45
+    },
+    {
       "creditor": "MEGA SUPORTE E SERVIÇOS EIRELI",
       "document": "10.451.784/0001-28",
       "committed": 158322,
       "liquidated": 158322,
       "paid": 158322,
       "commitments": 11
-    },
-    {
-      "creditor": "WANDERSON WESLEI DE SOUSA FONSECA",
-      "document": "035.xxx.xxx-01",
-      "committed": 157193.63999999996,
-      "liquidated": 157193.63999999996,
-      "paid": 157193.63999999996,
-      "commitments": 44
     },
     {
       "creditor": "PCMAIS INFORMATICA LTDA",
@@ -1987,9 +2047,33 @@
       "creditor": "CENTI SOLUCOES LTDA",
       "document": "14.419.896/0001-52",
       "committed": 163328.52000000002,
-      "liquidated": 144061.07,
-      "paid": 144061.07,
+      "liquidated": 147914.56,
+      "paid": 147914.56,
       "commitments": 5
+    },
+    {
+      "creditor": "LUIZ GONZAGA SOCIEDADE INDIVIDUAL DE ADVOCACIA",
+      "document": "50.235.033/0001-99",
+      "committed": 192000,
+      "liquidated": 144000,
+      "paid": 144000,
+      "commitments": 3
+    },
+    {
+      "creditor": "GENOVA PAES E QUITANDAS LTDA",
+      "document": "39.564.013/0001-29",
+      "committed": 150204.84000000003,
+      "liquidated": 137882.40000000002,
+      "paid": 137882.40000000002,
+      "commitments": 36
+    },
+    {
+      "creditor": "WENDER CIRILO DA SILVA",
+      "document": "965.xxx.xxx-49",
+      "committed": 137166.61,
+      "liquidated": 137166.61,
+      "paid": 137166.61,
+      "commitments": 12
     },
     {
       "creditor": "FRANCIS FLAVIO ALBUQUERQUE COSTA",
@@ -2000,20 +2084,12 @@
       "commitments": 13
     },
     {
-      "creditor": "LUIZ GONZAGA SOCIEDADE INDIVIDUAL DE ADVOCACIA",
-      "document": "50.235.033/0001-99",
-      "committed": 192000,
-      "liquidated": 136000,
-      "paid": 136000,
-      "commitments": 3
-    },
-    {
-      "creditor": "GENOVA PAES E QUITANDAS LTDA",
-      "document": "39.564.013/0001-29",
-      "committed": 150204.84000000003,
-      "liquidated": 134484.65000000002,
-      "paid": 134484.65000000002,
-      "commitments": 36
+      "creditor": "ERICA OLIVEIRA DE ARAUJO",
+      "document": "008.xxx.xxx-27",
+      "committed": 133060.8,
+      "liquidated": 133060.8,
+      "paid": 133060.8,
+      "commitments": 11
     },
     {
       "creditor": "RP CONSTRUÇOES LOCAÇÕES E CONSULTORIA EIRELI",
@@ -2048,28 +2124,20 @@
       "commitments": 18
     },
     {
+      "creditor": "SANEAGO",
+      "document": "01.616.929/0001-02",
+      "committed": 128952.76999999996,
+      "liquidated": 115204.97999999995,
+      "paid": 115204.97999999995,
+      "commitments": 23
+    },
+    {
       "creditor": "SUPERMERCADO LEONEL",
       "document": "15.394.336/0001-53",
       "committed": 114204.43000000001,
       "liquidated": 114204.43000000001,
       "paid": 114204.43000000001,
       "commitments": 8
-    },
-    {
-      "creditor": "SANEAGO",
-      "document": "01.616.929/0001-02",
-      "committed": 128952.76999999996,
-      "liquidated": 113477.78999999996,
-      "paid": 113477.78999999996,
-      "commitments": 23
-    },
-    {
-      "creditor": "WENDER CIRILO DA SILVA",
-      "document": "965.xxx.xxx-49",
-      "committed": 109960.37999999999,
-      "liquidated": 109960.37999999999,
-      "paid": 109960.37999999999,
-      "commitments": 10
     },
     {
       "creditor": "JOSE RODRIGUES DOS SANTOS",
@@ -2088,14 +2156,6 @@
       "commitments": 10
     },
     {
-      "creditor": "ERICA OLIVEIRA DE ARAUJO",
-      "document": "008.xxx.xxx-27",
-      "committed": 105854.56999999999,
-      "liquidated": 105854.56999999999,
-      "paid": 105854.56999999999,
-      "commitments": 9
-    },
-    {
       "creditor": "FOLLE COMERCIO LTDA ME",
       "document": "19.519.931/0001-29",
       "committed": 132185,
@@ -2107,25 +2167,25 @@
       "creditor": "HELLEN CRISTINA ALBANO DE SOUZA 70236124161",
       "document": "40.584.288/0001-03",
       "committed": 147498.05000000002,
-      "liquidated": 102433.45000000001,
-      "paid": 102433.45000000001,
+      "liquidated": 104003.70000000001,
+      "paid": 104003.70000000001,
       "commitments": 39
-    },
-    {
-      "creditor": "ROGERIO APARECIDO GONÇALVES ME",
-      "document": "10.755.950/0001-80",
-      "committed": 107342,
-      "liquidated": 99137,
-      "paid": 99137,
-      "commitments": 9
     },
     {
       "creditor": "JA COMUNICACAO E TECNOLOGIA LTDA",
       "document": "21.652.210/0001-34",
       "committed": 142318,
-      "liquidated": 97046.1,
-      "paid": 97046.1,
+      "liquidated": 102434.15,
+      "paid": 102434.15,
       "commitments": 6
+    },
+    {
+      "creditor": "ROGERIO APARECIDO GONÇALVES ME",
+      "document": "10.755.950/0001-80",
+      "committed": 107342,
+      "liquidated": 100778,
+      "paid": 100778,
+      "commitments": 9
     },
     {
       "creditor": "ALAIR PAULA DA SILVA",
@@ -2139,8 +2199,8 @@
       "creditor": "CYSTEC COPIADORAS E SISTEMAS TECNICOS LTDA",
       "document": "07.673.261/0001-11",
       "committed": 100553.71999999999,
-      "liquidated": 84409.62,
-      "paid": 84409.62,
+      "liquidated": 85954.96999999999,
+      "paid": 85954.96999999999,
       "commitments": 24
     },
     {
@@ -2168,6 +2228,22 @@
       "commitments": 3
     },
     {
+      "creditor": "JULIO CESAR RODRIGUES MOURA",
+      "document": "080.xxx.xxx-22",
+      "committed": 78750.98,
+      "liquidated": 78750.98,
+      "paid": 78750.98,
+      "commitments": 6
+    },
+    {
+      "creditor": "GENIVALDO MARTINS DE OLIVEIRA",
+      "document": "955.xxx.xxx-15",
+      "committed": 76340.96,
+      "liquidated": 76340.96,
+      "paid": 76340.96,
+      "commitments": 16
+    },
+    {
       "creditor": "MULTI MOBKAR COMERCIO DE VEICULOS E MOVEIS LTDA",
       "document": "42.876.396/0001-85",
       "committed": 76148.7,
@@ -2185,10 +2261,10 @@
     },
     {
       "creditor": "CAIXA ECONOMICA FEDERAL S.A. - CEF",
-      "document": "01.149.953/0001-89",
+      "document": "00.360.305/0001-04",
       "committed": 84222.88,
-      "liquidated": 74077.58,
-      "paid": 74077.58,
+      "liquidated": 74932.3,
+      "paid": 74932.3,
       "commitments": 27
     },
     {
@@ -2198,22 +2274,6 @@
       "liquidated": 73303.59,
       "paid": 73303.59,
       "commitments": 3
-    },
-    {
-      "creditor": "BIG BRAIN COMUNICAÇÃO LTDA-ME",
-      "document": "09.474.688/0001-16",
-      "committed": 72640,
-      "liquidated": 72640,
-      "paid": 72640,
-      "commitments": 3
-    },
-    {
-      "creditor": "GENIVALDO MARTINS DE OLIVEIRA",
-      "document": "955.xxx.xxx-15",
-      "committed": 72587.6,
-      "liquidated": 72587.6,
-      "paid": 72587.6,
-      "commitments": 15
     }
   ]
 }

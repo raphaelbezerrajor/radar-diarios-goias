@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-08-18T11:34:23.870Z",
+  "generated_at": "2026-08-18T20:31:46.148Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
     "to": "2026-08-18",
     "last_checked": {
-      "from": "2026-08-17",
+      "from": "2026-08-12",
       "to": "2026-08-18"
     }
   },
@@ -23,12 +23,12 @@
   ],
   "summary": {
     "sources": 5,
-    "sources_ok": 5,
+    "sources_ok": 4,
     "municipalities": 7,
-    "editions": 252,
-    "downloaded": 252,
+    "editions": 253,
+    "downloaded": 253,
     "failed_downloads": 0,
-    "extraction_pending": 252
+    "extraction_pending": 253
   },
   "daily_check_windows": [
     {
@@ -1309,14 +1309,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-18T11:34:11.045Z",
+      "checked_at": "2026-08-18T20:31:37.742Z",
       "range_checked": {
-        "from": "2026-08-17",
+        "from": "2026-08-12",
         "to": "2026-08-18"
       },
       "summary": {
         "editions_total": 65,
-        "editions_in_checked_range": 2,
+        "editions_in_checked_range": 6,
         "downloaded": 65,
         "failed_downloads": 0,
         "extraction_pending": 65,
@@ -1352,16 +1352,8 @@
       "municipalities": [
         "Anapolis"
       ],
-      "collection_method": "api_publica_oficial",
-      "publication_pattern": {
-        "certainty": "observed_from_official_file_timestamps",
-        "ordinary_window": "fim da noite; ha edicoes publicadas depois das 22h",
-        "extraordinary_window": "sem janela fixa identificada",
-        "recommended_checks": [
-          "06:30",
-          "00:30"
-        ]
-      },
+      "status": "degraded_prior_preserved",
+      "source_warning": "fetch failed Resposta vazia; 4 edicoes anteriores foram preservadas.",
       "editions": [
         {
           "id": "anapolis:21319",
@@ -2257,15 +2249,14 @@
           "error": null
         }
       ],
-      "status": "checked",
-      "checked_at": "2026-08-18T11:34:12.156Z",
+      "checked_at": "2026-08-18T20:31:37.929Z",
       "range_checked": {
-        "from": "2026-08-17",
+        "from": "2026-08-12",
         "to": "2026-08-18"
       },
       "summary": {
         "editions_total": 47,
-        "editions_in_checked_range": 1,
+        "editions_in_checked_range": 4,
         "downloaded": 47,
         "failed_downloads": 0,
         "extraction_pending": 47,
@@ -3224,22 +3215,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3028",
+          "source_edition_id": "3028",
+          "edition_number": "2916",
+          "date": "2026-08-18",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2916",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/08/2026-08-18-2916.pdf",
+          "bytes": 742063,
+          "sha256": "e452fc9958ef2596dcfe79c9e5354f19958df29572a415f919e52a569bb547bd",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-18T11:34:12.826Z",
+      "checked_at": "2026-08-18T20:31:39.632Z",
       "range_checked": {
-        "from": "2026-08-17",
+        "from": "2026-08-12",
         "to": "2026-08-18"
       },
       "summary": {
-        "editions_total": 48,
-        "editions_in_checked_range": 1,
-        "downloaded": 48,
+        "editions_total": 49,
+        "editions_in_checked_range": 5,
+        "downloaded": 49,
         "failed_downloads": 0,
-        "extraction_pending": 48,
+        "extraction_pending": 49,
         "first_date": "2026-06-01",
-        "last_date": "2026-08-17",
+        "last_date": "2026-08-18",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -4088,14 +4098,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-18T11:34:14.069Z",
+      "checked_at": "2026-08-18T20:31:41.188Z",
       "range_checked": {
-        "from": "2026-08-17",
+        "from": "2026-08-12",
         "to": "2026-08-18"
       },
       "summary": {
         "editions_total": 43,
-        "editions_in_checked_range": 1,
+        "editions_in_checked_range": 4,
         "downloaded": 43,
         "failed_downloads": 0,
         "extraction_pending": 43,
@@ -5066,14 +5076,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-18T11:34:23.770Z",
+      "checked_at": "2026-08-18T20:31:42.546Z",
       "range_checked": {
-        "from": "2026-08-17",
+        "from": "2026-08-12",
         "to": "2026-08-18"
       },
       "summary": {
         "editions_total": 49,
-        "editions_in_checked_range": 2,
+        "editions_in_checked_range": 5,
         "downloaded": 49,
         "failed_downloads": 0,
         "extraction_pending": 49,

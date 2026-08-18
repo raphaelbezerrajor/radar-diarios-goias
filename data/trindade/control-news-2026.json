@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-18T11:39:12.130Z",
+  "generated_at": "2026-08-18T20:55:41.553Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-08-18"
@@ -10,7 +10,7 @@
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 73
+    "published_stories": 78
   },
   "items": [
     {
@@ -4371,6 +4371,290 @@
           "R$ 3,23 milhões em propostas",
           "seleção de organização da sociedade civil",
           "resultado ainda sujeito a habilitação"
+        ]
+      },
+      "prominence": "section"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "Tribunal de Contas do Estado de Goiás",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291742742371",
+      "source_landing_url": "https://portal.tce.go.gov.br/diario-eletronico-de-contas1",
+      "edition_id": "tcego:331291742742371",
+      "edition_number": "148",
+      "local_path": "data/raw/tcego/2026/08/tcego-dec-148-2026-08-18.pdf",
+      "document_sha256": "4e869e1d988c2846596251de2250033592674bfaaa3edcd6851c19f3f0b21043",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcego-148-casa-militar-revisao-contrato-aviao",
+      "external_identifier": "ACÓRDÃO Nº 2160/2026",
+      "page_start": 10,
+      "page_end": 11,
+      "document_reference": "DEC nº 148 · páginas internas 9 e 10",
+      "act_type": "determinacao",
+      "type_label": "Contrato e controle de preço",
+      "official_title": "ACÓRDÃO Nº 2160/2026",
+      "title": "TCE manda Casa Militar abater possível sobrepreço de R$ 958 mil em manutenção de avião",
+      "deck": "Decisão aponta duplicidade potencial no custo da revisão dos motores do King Air e falhas na pesquisa, habilitação e subcontratação.",
+      "summary": "O TCE-GO determinou a revisão do contrato de manutenção do avião King Air da Casa Militar para glosar ou abater possível sobrepreço de R$ 957,95 mil.",
+      "paragraphs": [
+        "O Tribunal de Contas do Estado determinou que a Casa Militar revise o contrato decorrente do Pregão Eletrônico nº 116/2025 e faça a glosa ou o abatimento de R$ 957.951,84, valor estimado como possível sobrepreço na revisão geral dos dois motores do avião King Air 350, matrícula PT-WTW. Segundo o Acórdão nº 2160/2026, a taxa de 25% aplicada a discrepâncias nos itens 1 e 2 do lote pode ter repetido custos que a cotação usada no orçamento já incluía.",
+        "O TCE também apontou pesquisa de preços pouco documentada, ausência de comprovação de homologação da ANAC para um teste em banco de provas e subcontratação de parcela que o termo de referência vedava. A decisão manda corrigir o valor contratual; o montante de R$ 957,95 mil é uma estimativa de possível sobrepreço indicada pelo tribunal, não pagamento indevido definitivamente comprovado nem débito imputado a uma pessoa."
+      ],
+      "public_body": "Secretaria de Estado da Casa Militar",
+      "values": [
+        {
+          "original": "R$ 957.951,84",
+          "value": 957951.84,
+          "currency": "BRL",
+          "label": "possível sobrepreço a glosar ou abater"
+        }
+      ],
+      "value_highest": 957951.84,
+      "reference_numbers": [
+        "202500047004504/309-06",
+        "2160/2026",
+        "116/2025"
+      ],
+      "importance": 101,
+      "news_value": {
+        "score": 101,
+        "reasons": [
+          "ordem de revisão de contrato",
+          "possível sobrepreço de R$ 957,95 mil",
+          "manutenção de aeronave oficial"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "Tribunal de Contas do Estado de Goiás",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291742742371",
+      "source_landing_url": "https://portal.tce.go.gov.br/diario-eletronico-de-contas1",
+      "edition_id": "tcego:331291742742371",
+      "edition_number": "148",
+      "local_path": "data/raw/tcego/2026/08/tcego-dec-148-2026-08-18.pdf",
+      "document_sha256": "4e869e1d988c2846596251de2250033592674bfaaa3edcd6851c19f3f0b21043",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcego-148-semad-divergencia-inventario-fema",
+      "external_identifier": "ACÓRDÃO Nº 2069/2026",
+      "page_start": 17,
+      "page_end": 18,
+      "document_reference": "DEC nº 148 · páginas internas 16 e 17",
+      "act_type": "contas_regulares_com_ressalvas",
+      "type_label": "Prestação de contas",
+      "official_title": "ACÓRDÃO Nº 2069/2026",
+      "title": "TCE aponta divergência de R$ 10,77 milhões no inventário de bens do Fundo Ambiental",
+      "deck": "Contas da Semad de 2024 foram julgadas regulares com ressalvas; tribunal mandou criar comissão de inventário e corrigir registros.",
+      "summary": "O TCE-GO registrou divergência de R$ 10,77 milhões ligada à ausência do inventário de bens móveis do Fundo Estadual do Meio Ambiente.",
+      "paragraphs": [
+        "O Tribunal de Contas do Estado apontou uma divergência de R$ 10.772.240,97 no controle patrimonial do Fundo Estadual do Meio Ambiente porque o inventário de bens móveis não constava no sistema estadual. Ao julgar as contas de 2024 da Semad, o Acórdão nº 2069/2026 também registrou ausência de depreciação de bens, lançamentos incompatíveis de reavaliação, falta de amortização de ativos intangíveis e ausência do demonstrativo analítico das obrigações com fornecedores.",
+        "As contas foram consideradas regulares com ressalvas e a então secretária Andréa Vulcanis recebeu quitação. O TCE afirmou que as falhas eram formais e procedimentais, sem apontar dano ao erário, desvio de recursos ou má-fé, e determinou à Semad criar comissão de inventário, ajustar os saldos e regularizar depreciação e amortização; portanto, a divergência contábil não pode ser tratada como prejuízo comprovado de R$ 10,77 milhões."
+      ],
+      "public_body": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável",
+      "values": [
+        {
+          "original": "R$ 10.772.240,97",
+          "value": 10772240.97,
+          "currency": "BRL",
+          "label": "divergência no inventário de bens móveis do Fema"
+        }
+      ],
+      "value_highest": 10772240.97,
+      "reference_numbers": [
+        "202500047002967",
+        "2069/2026"
+      ],
+      "importance": 99,
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "divergência patrimonial de R$ 10,77 milhões",
+          "determinações de correção",
+          "contas regulares com ressalvas"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "Tribunal de Contas do Estado de Goiás",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291742742371",
+      "source_landing_url": "https://portal.tce.go.gov.br/diario-eletronico-de-contas1",
+      "edition_id": "tcego:331291742742371",
+      "edition_number": "148",
+      "local_path": "data/raw/tcego/2026/08/tcego-dec-148-2026-08-18.pdf",
+      "document_sha256": "4e869e1d988c2846596251de2250033592674bfaaa3edcd6851c19f3f0b21043",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcego-148-saude-contas-ressalvas-correcoes",
+      "external_identifier": "ACÓRDÃO Nº 2152/2026",
+      "page_start": 3,
+      "page_end": 5,
+      "document_reference": "DEC nº 148 · páginas internas 2 a 4",
+      "act_type": "contas_regulares_com_ressalvas",
+      "type_label": "Saúde e prestação de contas",
+      "official_title": "ACÓRDÃO Nº 2152/2026",
+      "title": "TCE manda Saúde corrigir empenhos, restos a pagar e registros de patrimônio",
+      "deck": "Contas de 2024 foram aprovadas com ressalvas; decisão lista sete impropriedades, mas afirma que elas não causaram dano ao erário.",
+      "summary": "O TCE-GO julgou regulares com ressalvas as contas de 2024 da Saúde e determinou correções na execução orçamentária e na contabilidade patrimonial.",
+      "paragraphs": [
+        "O Tribunal de Contas do Estado julgou regulares com ressalvas as contas de 2024 da Secretaria de Saúde e do Fundo Estadual de Saúde. O Acórdão nº 2152/2026 aponta notas de empenho de repasses sem individualização dos municípios credores, divergência entre o portal de repasses e a contabilidade oficial, liquidação sem comprovação do fato gerador e inscrição irregular de restos a pagar processados, além de falhas em fundos rotativos, depreciação, reavaliação e amortização de ativos.",
+        "A Saúde deverá identificar os municípios nas notas, conciliar o portal com o Siofi, impedir liquidações sem prova do serviço ou bem entregue e reforçar a conferência das contas de organizações sociais. O TCE afirmou que as impropriedades não resultaram em dano ao erário e deu quitação aos responsáveis; a decisão corrige procedimentos contábeis e não comprova desvio ou pagamento indevido."
+      ],
+      "public_body": "Secretaria de Estado da Saúde e Fundo Estadual de Saúde",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "202500047002922/102-01",
+        "2152/2026"
+      ],
+      "importance": 98,
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "contas da saúde estadual",
+          "liquidação e restos a pagar",
+          "sete impropriedades e correções obrigatórias"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "Tribunal de Contas do Estado de Goiás",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291742742371",
+      "source_landing_url": "https://portal.tce.go.gov.br/diario-eletronico-de-contas1",
+      "edition_id": "tcego:331291742742371",
+      "edition_number": "148",
+      "local_path": "data/raw/tcego/2026/08/tcego-dec-148-2026-08-18.pdf",
+      "document_sha256": "4e869e1d988c2846596251de2250033592674bfaaa3edcd6851c19f3f0b21043",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcego-148-mercado-goiano-sobrepreco-potencial",
+      "external_identifier": "ACÓRDÃO Nº 2157/2026",
+      "page_start": 8,
+      "page_end": 8,
+      "document_reference": "DEC nº 148 · página interna 7",
+      "act_type": "ciencia_e_arquivamento",
+      "type_label": "Licitação de obra",
+      "official_title": "ACÓRDÃO Nº 2157/2026",
+      "title": "TCE aponta R$ 1,65 milhão de possível sobrepreço no Mercado Goiano de Valparaíso",
+      "deck": "Tribunal identificou falhas na pesquisa de preços e no orçamento de referência, deu ciência à secretaria e arquivou o processo.",
+      "summary": "O TCE-GO indicou que o orçamento da obra do Mercado Goiano de Valparaíso pode ter sido superestimado em R$ 1,65 milhão.",
+      "paragraphs": [
+        "O Tribunal de Contas do Estado identificou indícios de sobrepreço de R$ 1.653.750,19 no orçamento de referência da concorrência para construir o Mercado Goiano, uma feira coberta em Valparaíso de Goiás. O Acórdão nº 2157/2026 cita preços unitários acima dos praticados no mercado, ausência de busca prévia por contratações públicas semelhantes e falta de justificativa para descartar cotações consideradas inexequíveis ou excessivas.",
+        "A decisão deu ciência à Secretaria de Indústria, Comércio e Serviços para reforçar o controle interno e determinou o arquivamento do processo. O valor é uma superestimativa potencial apontada na análise do orçamento, não um débito definitivo, pagamento comprovado a maior ou sanção aplicada a gestor ou empresa."
+      ],
+      "public_body": "Secretaria de Estado de Indústria, Comércio e Serviços",
+      "values": [
+        {
+          "original": "R$ 1.653.750,19",
+          "value": 1653750.19,
+          "currency": "BRL",
+          "label": "valor potencialmente superestimado"
+        }
+      ],
+      "value_highest": 1653750.19,
+      "reference_numbers": [
+        "202400047000868/309-03",
+        "2157/2026",
+        "001/2024-SIC"
+      ],
+      "importance": 97,
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "possível sobrepreço de R$ 1,65 milhão",
+          "obra pública",
+          "falhas na pesquisa de preços"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "Tribunal de Contas do Estado de Goiás",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291742742371",
+      "source_landing_url": "https://portal.tce.go.gov.br/diario-eletronico-de-contas1",
+      "edition_id": "tcego:331291742742371",
+      "edition_number": "148",
+      "local_path": "data/raw/tcego/2026/08/tcego-dec-148-2026-08-18.pdf",
+      "document_sha256": "4e869e1d988c2846596251de2250033592674bfaaa3edcd6851c19f3f0b21043",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "tcego-148-goinfra-go219-medicao-jazidas",
+      "external_identifier": "ACÓRDÃO Nº 2158/2026",
+      "page_start": 8,
+      "page_end": 9,
+      "document_reference": "DEC nº 148 · páginas internas 7 e 8",
+      "act_type": "determinacao",
+      "type_label": "Fiscalização de obra rodoviária",
+      "official_title": "ACÓRDÃO Nº 2158/2026",
+      "title": "TCE manda Goinfra rever método de medição na obra da GO-219",
+      "deck": "Fase preparatória foi considerada regular, mas agência terá de avaliar jazidas e pagar transporte pela distância efetivamente percorrida.",
+      "summary": "O TCE-GO determinou ajustes na execução do contrato de pavimentação da GO-219 entre Hidrolândia e Aragoiânia.",
+      "paragraphs": [
+        "O Tribunal de Contas do Estado considerou regular a fase preparatória da Concorrência nº 105/2025, destinada à pavimentação da GO-219 entre a BR-153, em Hidrolândia, e a GO-319, em Aragoiânia, mas determinou mudanças na execução do contrato. A Goinfra deverá avaliar tecnicamente as jazidas de cascalho e medir o transporte pelas distâncias efetivamente percorridas, buscando a alternativa de menor custo.",
+        "O Acórdão nº 2158/2026 também manda substituir a metodologia de remuneração do fornecimento de material e verificar se medições ou pagamentos já feitos precisam de correção, com contraditório e ampla defesa. A agência tem 30 dias após a ciência para informar as primeiras providências; a decisão não afirma que já houve pagamento indevido."
+      ],
+      "public_body": "Agência Goiana de Infraestrutura e Transportes",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "202500047003757/309-03",
+        "2158/2026",
+        "105/2025"
+      ],
+      "importance": 95,
+      "news_value": {
+        "score": 95,
+        "reasons": [
+          "obra rodoviária",
+          "ordem de alterar medição e remuneração",
+          "monitoramento pelo TCE"
         ]
       },
       "prominence": "section"
