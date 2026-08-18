@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-18T11:10:03-03:00",
+  "generated_at": "2026-08-18T11:39:12.130Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-08-18"
@@ -9,8 +9,8 @@
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
-    "tcego_editions": 9,
-    "published_stories": 69
+    "tcego_editions": 10,
+    "published_stories": 73
   },
   "items": [
     {
@@ -4117,6 +4117,260 @@
           "contas do Fundeb julgadas irregulares",
           "retenção sem repasse integral",
           "multa ao gestor"
+        ]
+      },
+      "prominence": "section"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7323",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7323",
+      "edition_number": "24.845",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-18-edicao-7323.pdf",
+      "document_sha256": "43f8ccaa01b1bab0e92cd5e2fc5f94ea3847e10f79ad68a608324c15089e7295",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24845-detran-montreal-29-milhoes",
+      "source_label": "Departamento Estadual de Trânsito de Goiás",
+      "external_identifier": "QUINTO TERMO ADITIVO AO CONTRATO Nº 047/2021",
+      "page_start": 24,
+      "page_end": 24,
+      "document_reference": "DOE-GO nº 24.845 · página 24",
+      "act_type": "aditivo",
+      "type_label": "Contrato de tecnologia",
+      "official_title": "QUINTO TERMO ADITIVO AO CONTRATO Nº 047/2021",
+      "title": "Detran prorroga por 12 meses contrato de R$ 29,18 milhões com M.I. Montreal",
+      "deck": "Aditivo excepcional mantém o contrato ligado ao programa Trânsito Seguro; extrato não repete o objeto original nem comprova pagamento.",
+      "summary": "O Detran-GO prorrogou por mais 12 meses o Contrato nº 047/2021, com valor total publicado de R$ 29,18 milhões.",
+      "paragraphs": [
+        "O Departamento Estadual de Trânsito de Goiás prorrogou excepcionalmente por 12 meses o Contrato nº 047/2021 com a M.I. Montreal Informática S/A. O quinto termo aditivo fixa vigência a partir de 13 de agosto de 2026, valor mensal de R$ 2.431.800 e valor total de R$ 29.181.600.",
+        "A despesa está vinculada ao programa Trânsito Seguro e a publicação cita a Nota de Empenho nº 2026.2961.024.00015. O extrato não repete o objeto do contrato original; por isso, a edição permite afirmar a prorrogação e os valores, mas não detalhar o serviço nem tratar o total contratual como pagamento já realizado."
+      ],
+      "public_body": "Departamento Estadual de Trânsito de Goiás",
+      "values": [
+        {
+          "original": "R$ 29.181.600,00",
+          "value": 29181600,
+          "currency": "BRL",
+          "label": "valor total do período prorrogado"
+        },
+        {
+          "original": "R$ 2.431.800,00",
+          "value": 2431800,
+          "currency": "BRL",
+          "label": "valor mensal"
+        }
+      ],
+      "value_highest": 29181600,
+      "reference_numbers": [
+        "047/2021",
+        "202000025027655",
+        "2026.2961.024.00015"
+      ],
+      "importance": 98,
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "R$ 29,18 milhões",
+          "prorrogação excepcional de 12 meses",
+          "programa Trânsito Seguro"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7323",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7323",
+      "edition_number": "24.845",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-18-edicao-7323.pdf",
+      "document_sha256": "43f8ccaa01b1bab0e92cd5e2fc5f94ea3847e10f79ad68a608324c15089e7295",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24845-policia-penal-cs-brasil-aditivo",
+      "source_label": "Diretoria-Geral de Polícia Penal",
+      "external_identifier": "PRIMEIRO TERMO ADITIVO AO CONTRATO Nº 012/2024",
+      "page_start": 15,
+      "page_end": 15,
+      "document_reference": "DOE-GO nº 24.845 · ato nas páginas 14 e 15; imagem-fonte da página 15",
+      "act_type": "aditivo",
+      "type_label": "Contrato da Polícia Penal",
+      "official_title": "PRIMEIRO TERMO ADITIVO AO CONTRATO Nº 012/2024",
+      "title": "Polícia Penal amplia em 24,42% contrato com CS Brasil; total chega a R$ 6,73 milhões",
+      "deck": "Aditivo aumenta o quantitativo do Contrato nº 012/2024; publicação não repete o objeto original nem informa quanto já foi pago.",
+      "summary": "A Diretoria-Geral de Polícia Penal publicou aditivo de 24,42% ao Contrato nº 012/2024 com a CS Brasil Frotas.",
+      "paragraphs": [
+        "A Diretoria-Geral de Polícia Penal de Goiás publicou o primeiro termo aditivo ao Contrato nº 012/2024, firmado com a CS Brasil Frotas S/A. O ato aumenta em 24,42% o quantitativo inicial e informa valor total de R$ 6.731.777,80, com recursos ordinários não vinculados de impostos.",
+        "O termo foi assinado em 14 de agosto. A publicação não repete qual é o objeto do contrato original nem separa, em reais, quanto do total corresponde somente ao acréscimo; também não demonstra o montante já executado ou pago à empresa."
+      ],
+      "public_body": "Diretoria-Geral de Polícia Penal",
+      "values": [
+        {
+          "original": "R$ 6.731.777,80",
+          "value": 6731777.8,
+          "currency": "BRL",
+          "label": "valor total publicado após o aditivo"
+        }
+      ],
+      "value_highest": 6731777.8,
+      "reference_numbers": [
+        "012/2024",
+        "202416448031122"
+      ],
+      "importance": 96,
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "R$ 6,73 milhões",
+          "acréscimo quantitativo de 24,42%",
+          "contrato da Polícia Penal"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7323",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7323",
+      "edition_number": "24.845",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-18-edicao-7323.pdf",
+      "document_sha256": "43f8ccaa01b1bab0e92cd5e2fc5f94ea3847e10f79ad68a608324c15089e7295",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24845-semad-regularizacao-barragens",
+      "source_label": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável",
+      "external_identifier": "PORTARIA SEMAD Nº 200/2026",
+      "page_start": 3,
+      "page_end": 4,
+      "document_reference": "DOE-GO nº 24.845 · páginas 3 e 4",
+      "act_type": "portaria",
+      "type_label": "Segurança de barragens",
+      "official_title": "PORTARIA SEMAD Nº 200, DE 17 DE AGOSTO DE 2026",
+      "title": "Goiás cria ação para regularizar barragens e prevê autuação por descumprimento",
+      "deck": "Semad priorizará orientação em infrações antigas, mas poderá abrir processo sancionador quando as medidas não forem cumpridas no prazo.",
+      "summary": "A Semad criou uma ação estadual para orientar a regularização ambiental, hídrica e cadastral de barragens até março de 2027.",
+      "paragraphs": [
+        "A Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável instituiu ações de controle e monitoramento para regularizar barragens em Goiás. A Portaria nº 200/2026 abrange autorização ambiental, outorga ou registro de uso da água e cadastro no Sistema Estadual de Informações sobre Segurança de Barragens.",
+        "Para infrações consumadas há pelo menos três anos, ou permanentes iniciadas há mais de três anos, a Semad priorizará um Auto de Orientação sem caráter punitivo, com prazo para correção ou reparação. O descumprimento injustificado poderá gerar Auto de Infração e processo sancionador; a ação vale até 31 de março de 2027 e não anistia automaticamente infrações."
+      ],
+      "public_body": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "200/2026",
+        "202600017007384",
+        "9/2026"
+      ],
+      "importance": 95,
+      "news_value": {
+        "score": 95,
+        "reasons": [
+          "segurança de barragens",
+          "regularização ambiental e hídrica",
+          "possibilidade de processo sancionador"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-18",
+      "published_at": "2026-08-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7323",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7323",
+      "edition_number": "24.845",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-18-edicao-7323.pdf",
+      "document_sha256": "43f8ccaa01b1bab0e92cd5e2fc5f94ea3847e10f79ad68a608324c15089e7295",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24845-policia-penal-amendoeiras-3-milhoes",
+      "source_label": "Diretoria-Geral de Polícia Penal",
+      "external_identifier": "RESULTADO DEFINITIVO DO CHAMAMENTO Nº 003/2026-DGPP",
+      "page_start": 15,
+      "page_end": 15,
+      "document_reference": "DOE-GO nº 24.845 · página 15",
+      "act_type": "chamamento_publico",
+      "type_label": "Seleção de organização social",
+      "official_title": "HOMOLOGAÇÃO E RESULTADO DEFINITIVO DO CHAMAMENTO PÚBLICO Nº 003/2026-DGPP",
+      "title": "Polícia Penal seleciona instituto em propostas de R$ 3,23 milhões",
+      "deck": "Instituto Amendoeiras ficou em primeiro lugar nos dois lotes, mas ainda passará por habilitação e ajuste do plano de trabalho.",
+      "summary": "A Polícia Penal homologou o resultado de chamamento no qual o Instituto Amendoeiras apresentou propostas que somam R$ 3,23 milhões.",
+      "paragraphs": [
+        "A Diretoria-Geral de Polícia Penal homologou o resultado definitivo do Chamamento Público nº 003/2026. O Instituto Amendoeiras ficou em primeiro lugar nos dois lotes, com proposta de R$ 904 mil para o SIME e de R$ 2,33 milhões para CIAP, CAP/APEC e Patronato, totalizando R$ 3,234 milhões.",
+        "A organização foi convocada para a fase de habilitação e adequação do plano de trabalho. O resultado da seleção não equivale à assinatura de parceria, transferência ou pagamento dos valores; a formalização ainda depende das etapas posteriores previstas no edital."
+      ],
+      "public_body": "Diretoria-Geral de Polícia Penal",
+      "values": [
+        {
+          "original": "R$ 3.234.000,00",
+          "value": 3234000,
+          "currency": "BRL",
+          "label": "soma das propostas vencedoras"
+        },
+        {
+          "original": "R$ 904.000,00",
+          "value": 904000,
+          "currency": "BRL",
+          "label": "lote 1"
+        },
+        {
+          "original": "R$ 2.330.000,00",
+          "value": 2330000,
+          "currency": "BRL",
+          "label": "lote 2"
+        }
+      ],
+      "value_highest": 3234000,
+      "cnpjs": [
+        "12.667.012/0001-53"
+      ],
+      "reference_numbers": [
+        "003/2026-DGPP",
+        "202616448006261",
+        "902291/2020",
+        "036/2023"
+      ],
+      "importance": 93,
+      "news_value": {
+        "score": 93,
+        "reasons": [
+          "R$ 3,23 milhões em propostas",
+          "seleção de organização da sociedade civil",
+          "resultado ainda sujeito a habilitação"
         ]
       },
       "prominence": "section"

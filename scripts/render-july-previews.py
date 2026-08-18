@@ -5,11 +5,13 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import subprocess
+import sys
+import tempfile
 from datetime import datetime, timezone
 from io import BytesIO
 from pathlib import Path
 
-import fitz
 from PIL import Image
 
 
@@ -40,13 +42,23 @@ def build_edition_map(source_root: Path) -> dict[str, dict]:
 
 
 def render_page(pdf_path: Path, page_number: int, target: Path) -> tuple[int, int, str, int]:
-    document = fitz.open(pdf_path)
-    try:
-        page = document.load_page(page_number - 1)
-        pixmap = page.get_pixmap(matrix=fitz.Matrix(1.45, 1.45), colorspace=fitz.csRGB, alpha=False)
-        image = Image.frombytes("RGB", (pixmap.width, pixmap.height), pixmap.samples)
-    finally:
-        document.close()
+    dependencies = Path(sys.executable).resolve().parents[1]
+    pdftoppm = dependencies / "native" / "poppler" / "Library" / "bin" / "pdftoppm.exe"
+    if not pdftoppm.exists():
+        raise FileNotFoundError(f"pdftoppm não encontrado em {pdftoppm}")
+    with tempfile.TemporaryDirectory(prefix="pauteiro-july-preview-") as directory:
+        prefix = Path(directory) / "page"
+        subprocess.run(
+            [
+                str(pdftoppm), "-f", str(page_number), "-l", str(page_number),
+                "-r", "110", "-singlefile", "-png", str(pdf_path), str(prefix),
+            ],
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.PIPE,
+        )
+        with Image.open(prefix.with_suffix(".png")) as rendered:
+            image = rendered.convert("RGB")
 
     if image.width > 1100:
         height = round(image.height * 1100 / image.width)
