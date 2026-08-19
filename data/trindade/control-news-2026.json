@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-18T20:55:41.553Z",
+  "generated_at": "2026-08-19T12:29:06.467Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-08-18"
+    "to": "2026-08-19"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 78
+    "published_stories": 79
   },
   "items": [
     {
@@ -4658,6 +4658,60 @@
         ]
       },
       "prominence": "section"
+    },
+    {
+      "id": "tcmgo-2743-goiania-eventos-falhas-transparencia",
+      "date": "2026-08-19",
+      "published_at": "2026-08-19",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "Tribunal de Contas dos Municípios do Estado de Goiás",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2743",
+      "edition_number": "2743",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2743-2026-08-19.pdf",
+      "document_sha256": "3d82bb05fb06e1c550d49bc2e396490aac1fb47a6cdcdaf07e851b239605a9d7",
+      "external_identifier": "DECISÃO MONOCRÁTICA Nº 351/2026",
+      "page_start": 8,
+      "page_end": 14,
+      "document_reference": "Diário do TCM-GO nº 2.743 · páginas 8 a 14",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "act_type": "cumprimento_de_determinacao",
+      "type_label": "Fiscalização de gastos públicos",
+      "official_title": "DECISÃO MONOCRÁTICA Nº 351/2026",
+      "title": "Auditoria aponta falhas de transparência em contratações de artistas de Goiânia",
+      "deck": "Controle interno não encontrou promoção pessoal nem irregularidade grave, mas cobrou mais publicidade, memória de preços e prova de notoriedade.",
+      "summary": "A apuração dos gastos de Goiânia com eventos apontou fragilidades em editais e contratações diretas, embora não tenha identificado irregularidade grave ou promoção pessoal.",
+      "paragraphs": [
+        "Uma auditoria do controle interno de Goiânia encontrou falhas de transparência e de instrução em contratações de artistas e na execução do Chamamento Público nº 002/2025. Segundo decisão publicada pelo TCM-GO nesta quarta-feira (19), faltaram divulgação de resultados e prazos recursais, memória detalhada de custos e, no caso citado do MC Jacaré, documentos comprobatórios da notoriedade artística.",
+        "A apuração começou após denúncia sobre gastos com pré-carnaval, carnaval e pós-carnaval em cenário de calamidade financeira. O controle interno concluiu que as despesas tinham previsão orçamentária, não encontrou indícios de promoção pessoal e afirmou não haver irregularidades graves que comprometessem os atos. O TCM apenas registrou o cumprimento da determinação e arquivou o processo, sem reexaminar o mérito das conclusões municipais; por isso, a decisão não comprova desvio, superfaturamento ou dano ao erário."
+      ],
+      "public_body": "Prefeitura de Goiânia",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "05175/2026",
+        "02270/2026",
+        "351/2026",
+        "002/2025"
+      ],
+      "importance": 98,
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "gastos com eventos",
+          "falhas de transparência",
+          "controle de contratações artísticas"
+        ]
+      },
+      "prominence": "cover"
     }
   ]
 }
