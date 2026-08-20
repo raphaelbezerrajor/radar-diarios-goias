@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-08-20T11:22:15.915Z",
+  "generated_at": "2026-08-20T20:33:18.424Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -23,12 +23,12 @@
   ],
   "summary": {
     "sources": 5,
-    "sources_ok": 5,
+    "sources_ok": 4,
     "municipalities": 7,
-    "editions": 262,
-    "downloaded": 262,
+    "editions": 264,
+    "downloaded": 264,
     "failed_downloads": 0,
-    "extraction_pending": 262
+    "extraction_pending": 264
   },
   "daily_check_windows": [
     {
@@ -1344,25 +1344,44 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:121065",
+          "source_edition_id": "121065",
+          "edition_number": "3686a",
+          "date": "2026-08-20",
+          "published_at": "2026-08-20T16:56:09-03:00",
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": true,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_121065_2026-08-20_0b122c8dcd910c95ef4fe77fe7a96892.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/08/2026-08-20-3686a.pdf",
+          "bytes": 518915,
+          "sha256": "9e680b074bd87eb1a0b22c8ce574443015963080185a544fb57e836bb7624d28",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-20T11:21:51.813Z",
+      "checked_at": "2026-08-20T20:33:03.584Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
       },
       "summary": {
-        "editions_total": 67,
-        "editions_in_checked_range": 6,
-        "downloaded": 67,
+        "editions_total": 68,
+        "editions_in_checked_range": 7,
+        "downloaded": 68,
         "failed_downloads": 0,
-        "extraction_pending": 67,
+        "extraction_pending": 68,
         "first_date": "2026-06-01",
         "last_date": "2026-08-20",
         "observed_upload_times": {
           "all": {
-            "observations": 67,
+            "observations": 68,
             "earliest": "11:40",
             "median": "18:37",
             "latest": "20:04"
@@ -1374,7 +1393,7 @@
             "latest": "20:04"
           },
           "extraordinary": {
-            "observations": 14,
+            "observations": 15,
             "earliest": "11:40",
             "median": "16:37",
             "latest": "16:56"
@@ -1390,16 +1409,8 @@
       "municipalities": [
         "Anapolis"
       ],
-      "collection_method": "api_publica_oficial",
-      "publication_pattern": {
-        "certainty": "observed_from_official_file_timestamps",
-        "ordinary_window": "fim da noite; ha edicoes publicadas depois das 22h",
-        "extraordinary_window": "sem janela fixa identificada",
-        "recommended_checks": [
-          "06:30",
-          "00:30"
-        ]
-      },
+      "status": "degraded_prior_preserved",
+      "source_warning": "fetch failed Resposta vazia; 5 edicoes anteriores foram preservadas.",
       "editions": [
         {
           "id": "anapolis:21319",
@@ -2333,8 +2344,7 @@
           "error": null
         }
       ],
-      "status": "checked",
-      "checked_at": "2026-08-20T11:21:54.211Z",
+      "checked_at": "2026-08-20T20:33:03.702Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
@@ -3338,22 +3348,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3030",
+          "source_edition_id": "3030",
+          "edition_number": "2918",
+          "date": "2026-08-20",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2918",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/08/2026-08-20-2918.pdf",
+          "bytes": 879666,
+          "sha256": "95675128d5f5ebb3cfe7ce4393ba56fe3e6a68cddd94b1567f4ad88bf9feb234",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-20T11:21:54.885Z",
+      "checked_at": "2026-08-20T20:33:04.328Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
       },
       "summary": {
-        "editions_total": 50,
-        "editions_in_checked_range": 5,
-        "downloaded": 50,
+        "editions_total": 51,
+        "editions_in_checked_range": 6,
+        "downloaded": 51,
         "failed_downloads": 0,
-        "extraction_pending": 50,
+        "extraction_pending": 51,
         "first_date": "2026-06-01",
-        "last_date": "2026-08-19",
+        "last_date": "2026-08-20",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -4240,7 +4269,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-20T11:22:06.579Z",
+      "checked_at": "2026-08-20T20:33:11.179Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
@@ -5256,7 +5285,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-20T11:22:08.182Z",
+      "checked_at": "2026-08-20T20:33:12.616Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
