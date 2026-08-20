@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-20T20:44:33.512Z",
+  "generated_at": "2026-08-20T22:35:17.822Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-08-20"
@@ -10,7 +10,7 @@
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 83
+    "published_stories": 86
   },
   "items": [
     {
@@ -4947,6 +4947,187 @@
       "publication_mode": "edited_document_news",
       "source_type": "official_document",
       "confidence": 0.99
+    },
+    {
+      "date": "2026-08-20",
+      "published_at": "2026-08-20",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial do Município de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260820_000008846.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/casa-civil/diario-oficial/",
+      "edition_id": "goiania:do_20260820_000008846.pdf",
+      "edition_number": "8846",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/08/2026-08-20-8846.pdf",
+      "document_sha256": "a36215538646c40cf2eee576bd9e0b897f994b3e8d2ab77f990a2b532ff697ee",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "goiania-8846-pro-life-credenciamento-12-milhoes",
+      "external_identifier": "Despacho nº 5415/2026/SMS",
+      "page_start": 75,
+      "page_end": 75,
+      "document_reference": "DOM Goiânia nº 8.846 · página 75",
+      "act_type": "inexigibilidade",
+      "type_label": "Saúde e credenciamento",
+      "official_title": "Despacho nº 5415/2026/SMS",
+      "title": "Saúde de Goiânia autoriza credenciamento de até R$ 12,88 milhões com laboratório",
+      "deck": "Despacho permite contratação direta do Laboratório Pro Life para prestar serviços ao SUS; valor é estimado e não comprova pagamento.",
+      "summary": "A Secretaria de Saúde autorizou a formalização de contrato estimado em R$ 12,88 milhões com o Laboratório Pro Life por credenciamento.",
+      "paragraphs": [
+        "A Secretaria Municipal de Saúde de Goiânia autorizou a formalização de contrato com o Laboratório Pro Life, CNPJ 37.018.009/0001-30, para prestação de serviços ao SUS por credenciamento. O Despacho nº 5.415/2026 fixa o valor total estimado em R$ 12.883.254,00 e enquadra a contratação como inexigibilidade de licitação.",
+        "A autorização foi assinada pelo secretário Luiz Gaspar Machado Pellizzer e se apoia no artigo 74 da Lei nº 14.133/2021 e nas regras do SUS. O ato autoriza a despesa e a futura formalização do contrato; não informa a duração, não demonstra que o valor integral será executado e não comprova pagamentos ao laboratório."
+      ],
+      "public_body": "Secretaria Municipal de Saúde de Goiânia",
+      "values": [
+        {
+          "original": "R$ 12.883.254,00",
+          "value": 12883254,
+          "currency": "BRL",
+          "label": "valor total estimado autorizado"
+        }
+      ],
+      "value_highest": 12883254,
+      "cnpjs": [
+        "37.018.009/0001-30"
+      ],
+      "reference_numbers": [
+        "5415/2026/SMS",
+        "24.29.000046966-0",
+        "4917/2025-PGM/PEAA"
+      ],
+      "importance": 100,
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "R$ 12,88 milhões em saúde",
+          "contratação direta por credenciamento",
+          "serviços ao SUS"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-20",
+      "published_at": "2026-08-20",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial do Município de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260820_000008846.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/casa-civil/diario-oficial/",
+      "edition_id": "goiania:do_20260820_000008846.pdf",
+      "edition_number": "8846",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/08/2026-08-20-8846.pdf",
+      "document_sha256": "a36215538646c40cf2eee576bd9e0b897f994b3e8d2ab77f990a2b532ff697ee",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "goiania-8846-emendas-saude-520-mil",
+      "external_identifier": "Termos de Compromisso nº 080, 085, 091 e 092/2026",
+      "page_start": 76,
+      "page_end": 79,
+      "document_reference": "DOM Goiânia nº 8.846 · páginas 76 a 79",
+      "act_type": "termo_de_compromisso",
+      "type_label": "Saúde e emendas",
+      "official_title": "Extratos dos Termos de Compromisso nº 080, 085, 091 e 092/2026",
+      "title": "Goiânia formaliza R$ 520 mil em emendas para Banco de Olhos e combate ao câncer",
+      "deck": "Quatro termos destinam recursos de custeio à Fundação Banco de Olhos e à Associação de Combate ao Câncer; instrumentos preveem parcela única.",
+      "summary": "Quatro emendas parlamentares municipais destinam R$ 520 mil ao custeio de duas entidades de saúde de Goiânia.",
+      "paragraphs": [
+        "A Secretaria Municipal de Saúde de Goiânia formalizou quatro termos de compromisso que somam R$ 520 mil em emendas parlamentares para custeio de entidades. A Fundação Banco de Olhos de Goiás receberá valores previstos de R$ 270 mil, R$ 100 mil e R$ 50 mil; a Associação de Combate ao Câncer em Goiás tem termo de R$ 100 mil.",
+        "As emendas são atribuídas aos vereadores Denício Trindade, Kátia Maria, Willian Veloso e Rose Cruvinel. Os instrumentos têm vigência de 12 meses e indicam repasse em parcela única, mas a publicação dos termos não comprova que a transferência financeira já tenha sido realizada."
+      ],
+      "public_body": "Secretaria Municipal de Saúde de Goiânia",
+      "values": [
+        {
+          "original": "R$ 520.000,00",
+          "value": 520000,
+          "currency": "BRL",
+          "label": "soma dos quatro termos"
+        }
+      ],
+      "value_highest": 520000,
+      "cnpjs": [
+        "02.600.740/0001-94",
+        "01.585.595/0001-57"
+      ],
+      "reference_numbers": [
+        "080/2026",
+        "085/2026",
+        "091/2026",
+        "092/2026"
+      ],
+      "importance": 96,
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "R$ 520 mil em emendas",
+          "recursos para saúde",
+          "identificação de entidades e autores"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-20",
+      "published_at": "2026-08-20",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial do Município de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260820_000008846.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/casa-civil/diario-oficial/",
+      "edition_id": "goiania:do_20260820_000008846.pdf",
+      "edition_number": "8846",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/08/2026-08-20-8846.pdf",
+      "document_sha256": "a36215538646c40cf2eee576bd9e0b897f994b3e8d2ab77f990a2b532ff697ee",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "goiania-8846-indicadores-agua-esgoto-microrregiao-centro",
+      "external_identifier": "Resolução Normativa Conjunta nº 10/2026-AGR/AR",
+      "page_start": 88,
+      "page_end": 151,
+      "document_reference": "DOM Goiânia nº 8.846 · páginas 88 a 151",
+      "act_type": "resolucao",
+      "type_label": "Água e saneamento",
+      "official_title": "Resolução Normativa Conjunta nº 10/2026-AGR/AR",
+      "title": "Reguladores passam a medir perdas, interrupções e qualidade da água na região central",
+      "deck": "Norma conjunta da AGR e da Agência de Regulação de Goiânia cria avaliação anual e obriga prestadores a entregar dados trimestrais por município.",
+      "summary": "Nova norma estabelece indicadores de água e esgoto para municípios da Microrregião de Saneamento Básico Centro.",
+      "paragraphs": [
+        "A Agência Goiana de Regulação e a Agência de Regulação de Goiânia instituíram um conjunto comum de indicadores para acompanhar os serviços de água e esgoto nos municípios da Microrregião de Saneamento Básico Centro. A avaliação inclui cobertura, perdas de água, interrupções, qualidade da água e do efluente tratado, reclamações e duração de reparos em extravasamentos de esgoto.",
+        "Os prestadores deverão entregar informações trimestrais separadas por município, serviço, área territorial e contrato. As agências farão avaliação anual, abrirão prazo de 15 dias úteis para contraditório e publicarão relatório; a norma também admite auditoria dos dados e prevê penalidades conforme a regulamentação de cada agência."
+      ],
+      "public_body": "AGR e Agência de Regulação de Goiânia",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "10/2026-AGR/AR",
+        "202500029002216",
+        "211/2024-ANA"
+      ],
+      "importance": 94,
+      "news_value": {
+        "score": 94,
+        "reasons": [
+          "qualidade da água e do esgoto",
+          "dados trimestrais por município",
+          "avaliação e relatório anual"
+        ]
+      },
+      "prominence": "cover"
     }
   ]
 }

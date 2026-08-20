@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-08-20T20:33:18.424Z",
+  "generated_at": "2026-08-20T22:32:39.479Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -23,12 +23,12 @@
   ],
   "summary": {
     "sources": 5,
-    "sources_ok": 4,
+    "sources_ok": 5,
     "municipalities": 7,
-    "editions": 264,
-    "downloaded": 264,
+    "editions": 265,
+    "downloaded": 265,
     "failed_downloads": 0,
-    "extraction_pending": 264
+    "extraction_pending": 265
   },
   "daily_check_windows": [
     {
@@ -1366,7 +1366,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-20T20:33:03.584Z",
+      "checked_at": "2026-08-20T22:32:21.610Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
@@ -1409,8 +1409,16 @@
       "municipalities": [
         "Anapolis"
       ],
-      "status": "degraded_prior_preserved",
-      "source_warning": "fetch failed Resposta vazia; 5 edicoes anteriores foram preservadas.",
+      "collection_method": "api_publica_oficial",
+      "publication_pattern": {
+        "certainty": "observed_from_official_file_timestamps",
+        "ordinary_window": "fim da noite; ha edicoes publicadas depois das 22h",
+        "extraordinary_window": "sem janela fixa identificada",
+        "recommended_checks": [
+          "06:30",
+          "00:30"
+        ]
+      },
       "editions": [
         {
           "id": "anapolis:21319",
@@ -2344,7 +2352,8 @@
           "error": null
         }
       ],
-      "checked_at": "2026-08-20T20:33:03.702Z",
+      "status": "checked",
+      "checked_at": "2026-08-20T22:32:24.058Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
@@ -3370,7 +3379,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-20T20:33:04.328Z",
+      "checked_at": "2026-08-20T22:32:24.650Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
@@ -4266,31 +4275,50 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "goiania:do_20260820_000008846.pdf",
+          "source_edition_id": "do_20260820_000008846.pdf",
+          "edition_number": "8846",
+          "date": "2026-08-20",
+          "published_at": null,
+          "publication_timestamp_kind": "file_last_modified_only",
+          "extraordinary": false,
+          "official_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+          "file_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260820_000008846.pdf",
+          "local_path": "data/raw/municipal-diaries/goiania/2026/08/2026-08-20-8846.pdf",
+          "bytes": 8745762,
+          "sha256": "a36215538646c40cf2eee576bd9e0b897f994b3e8d2ab77f990a2b532ff697ee",
+          "last_modified": "Thu, 20 Aug 2026 21:03:06 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-20T20:33:11.179Z",
+      "checked_at": "2026-08-20T22:32:34.880Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
       },
       "summary": {
-        "editions_total": 45,
-        "editions_in_checked_range": 5,
-        "downloaded": 45,
+        "editions_total": 46,
+        "editions_in_checked_range": 6,
+        "downloaded": 46,
         "failed_downloads": 0,
-        "extraction_pending": 45,
+        "extraction_pending": 46,
         "first_date": "2026-06-01",
-        "last_date": "2026-08-19",
+        "last_date": "2026-08-20",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 45,
+          "observations": 46,
           "earliest": "11:39",
-          "median": "18:00",
+          "median": "18:01",
           "latest": "20:58"
         }
       }
@@ -5285,7 +5313,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-08-20T20:33:12.616Z",
+      "checked_at": "2026-08-20T22:32:36.316Z",
       "range_checked": {
         "from": "2026-08-13",
         "to": "2026-08-20"
