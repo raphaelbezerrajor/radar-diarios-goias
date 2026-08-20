@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Monitoramento documental, legislativo e financeiro da Assembleia Legislativa de Goias",
-  "generated_at": "2026-08-19T12:21:41.365Z",
+  "generated_at": "2026-08-20T11:21:31.463Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-08-19",
+    "to": "2026-08-20",
     "last_checked": {
-      "from": "2026-08-12",
-      "to": "2026-08-19"
+      "from": "2026-08-13",
+      "to": "2026-08-20"
     }
   },
   "summary": {
@@ -17,8 +17,8 @@
     "downloaded_diaries": 31,
     "failed_diary_downloads": 0,
     "extraction_pending": 31,
-    "vote_rows": 5169,
-    "roll_calls": 233,
+    "vote_rows": 5629,
+    "roll_calls": 254,
     "contracts": 84,
     "current_contracts": 73,
     "sanctions_registers": 1,
@@ -73,8 +73,8 @@
       "status": "checked",
       "collection_method": "api_publica_oficial",
       "summary": {
-        "rows": 5169,
-        "roll_calls": 233
+        "rows": 5629,
+        "roll_calls": 254
       }
     },
     {
@@ -100,6 +100,86 @@
     }
   ],
   "analysis_queue": [
+    {
+      "id": "alego-votacao:2026-08-19:41142",
+      "type": "votacao_nominal",
+      "date": "2026-08-19",
+      "priority": 90,
+      "title": "AUTORIZA O AUMENTO DO CAPITAL SOCIAL DA COMPANHIA DE DESENVOLVIMENTO ECONÔMICO DE GOIÁS — CODEGO, MEDIANTE INTEGRALIZAÇÃO DE RECURSOS, E ABRE CRÉDITO ESPECIAL AO FUNDO DE DESENVOLVIMENTO DE ATIVIDADES INDUSTRIAIS — FUNPRODUZIR.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 41142 · 23ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-08-19:41140",
+      "type": "votacao_nominal",
+      "date": "2026-08-19",
+      "priority": 90,
+      "title": "ALTERA LEI N° 23.524, DE 23 DE JUNHO DE 2025, QUE CRIA O PROGRAMA GOIÁS + INCLUSIVO E ABRE OS CRÉDITOS ESPECIAIS QUE ESPECIFICA.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 41140 · 23ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-08-19:41134",
+      "type": "votacao_nominal",
+      "date": "2026-08-19",
+      "priority": 90,
+      "title": "AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO INTERNA COM O BANCO NACIONAL DE DESENVOLVIMENTO ECONÔMICO E SOCIAL — BNDES, NO ÂMBITO DO FUNDO DE INVESTIMENTO EM INFRAESTRUTURA SOCIAL — FIIS SAÚDE, COM A GARANTIA DA UNIÃO",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 24 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 41134 · 23ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-08-19:41133",
+      "type": "votacao_nominal",
+      "date": "2026-08-19",
+      "priority": 90,
+      "title": "REQUER LICENÇA PARA TRATAMENTO DE SAÚDE E PARA TRATAR DE INTERESSE PARTICULAR.",
+      "why": "APROVADO EM DISCUSSÃO E VOTAÇÃO ÚNICA. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 41133 · 22ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-08-19:41132",
+      "type": "votacao_nominal",
+      "date": "2026-08-19",
+      "priority": 90,
+      "title": "REQUER LICENÇA PARA TRATAMENTO DE SAÚDE E PARA TRATAR DE INTERESSE PARTICULAR.",
+      "why": "APROVADO EM DISCUSSÃO E VOTAÇÃO ÚNICA. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 41132 · 22ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-08-19:41126",
+      "type": "votacao_nominal",
+      "date": "2026-08-19",
+      "priority": 90,
+      "title": "AUTORIZA O PODER EXECUTIVO A CONTRATAR OPERAÇÃO DE CRÉDITO INTERNA COM O BANCO NACIONAL DE DESENVOLVIMENTO ECONÔMICO E SOCIAL — BNDES, NO ÂMBITO DO FUNDO DE INVESTIMENTO EM INFRAESTRUTURA SOCIAL — FIIS SAÚDE, COM A GARANTIA DA UNIÃO",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 41126 · 22ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-08-19:41112",
+      "type": "votacao_nominal",
+      "date": "2026-08-19",
+      "priority": 90,
+      "title": "ALTERA LEI N° 23.524, DE 23 DE JUNHO DE 2025, QUE CRIA O PROGRAMA GOIÁS + INCLUSIVO E ABRE OS CRÉDITOS ESPECIAIS QUE ESPECIFICA.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 41112 · 22ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
+    {
+      "id": "alego-votacao:2026-08-19:41110",
+      "type": "votacao_nominal",
+      "date": "2026-08-19",
+      "priority": 90,
+      "title": "AUTORIZA O AUMENTO DO CAPITAL SOCIAL DA COMPANHIA DE DESENVOLVIMENTO ECONÔMICO DE GOIÁS — CODEGO, MEDIANTE INTEGRALIZAÇÃO DE RECURSOS, E ABRE CRÉDITO ESPECIAL AO FUNDO DE DESENVOLVIMENTO DE ATIVIDADES INDUSTRIAIS — FUNPRODUZIR.",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 26 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 41110 · 22ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
+    },
     {
       "id": "alego-votacao:2026-08-12:40410",
       "type": "votacao_nominal",
@@ -319,86 +399,6 @@
       "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO. À 2ª DISCUSSÃO E VOTAÇÃO. · 22 sim, 0 nao, 0 abstencoes.",
       "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
       "document_reference": "Pauta 37335 · 41ª SESSÃO ORDINÁRIA HÍBRIDA"
-    },
-    {
-      "id": "alego-votacao:2026-06-01:37220",
-      "type": "votacao_nominal",
-      "date": "2026-06-01",
-      "priority": 90,
-      "title": "INSTITUI A CAMPANHA “SAÚDE RENAL PARA TODOS” NAS ESCOLAS PÚBLICAS E PRIVADAS DO ESTADO DE GOIÁS E DÁ OUTRAS PROVIDÊNCIAS.",
-      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 21 sim, 0 nao, 0 abstencoes.",
-      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
-      "document_reference": "Pauta 37220 · 40ª SESSÃO ORDINÁRIA HÍBRIDA"
-    },
-    {
-      "id": "alego-votacao:2026-06-01:37214",
-      "type": "votacao_nominal",
-      "date": "2026-06-01",
-      "priority": 90,
-      "title": "ALTERA A LEI N° 20.756, DE 28 DE JANEIRO DE 2020, QUE DISPÕE SOBRE O REGIME JURÍDICO DOS SERVIDORES PÚBLICOS CIVIS DO ESTADO DE GOIÁS, DAS AUTARQUIAS E FUNDAÇÕES PÚBLICAS ESTADUAIS.",
-      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 21 sim, 0 nao, 0 abstencoes.",
-      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
-      "document_reference": "Pauta 37214 · 40ª SESSÃO ORDINÁRIA HÍBRIDA"
-    },
-    {
-      "id": "alego-contrato:650",
-      "type": "contrato",
-      "date": "2025-04-03",
-      "priority": 86,
-      "title": "Contrato 11/2025 — COMFORTSTAR SISTEMA DE AR CONDICIONADO LTDA.",
-      "why": "R$ 4.155.000,00 como maior valor informado entre empenhado e pago. Contratação de empresa para prestação de serviços continuados de manutenção preventiva e corretiva dos sistemas centrais de ar-condicionado com Chillers a ar, Fan Coils, Fancoletes, Dualfluid, Splitão, VRF ( Variable Ref",
-      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/R28VJHyoQ7IFZmVgRYqD_w==/contrato-alego-650",
-      "document_reference": "Processo 14874/2024"
-    },
-    {
-      "id": "alego-contrato:641",
-      "type": "contrato",
-      "date": "2025-02-05",
-      "priority": 84,
-      "title": "Contrato 05/2025 — GLOBAL SEC. TECNOLOGIA & INFORMAÇÃO LTDA",
-      "why": "R$ 2.733.424,00 como maior valor informado entre empenhado e pago. O objeto do presente instrumento é a PRESTAÇÃO DE SERVIÇO DE FORNECIMENTO DE EXPANSÃO DE SOLUÇÃO HIPERCONVERGENTE PARA DATA CENTER, INCLUINDO SOFTWARE DE GERENCIAMENTO E VIRTUALIZAÇÃO, IMPLANTAÇÃO, GARANTIA, ATUALIZAÇÃO ",
-      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/TSBceAFd8C7YmDOD4cwgdA==/contrato-alego-641",
-      "document_reference": "Processo 18130/2024"
-    },
-    {
-      "id": "alego-contrato:737",
-      "type": "contrato",
-      "date": "2025-07-03",
-      "priority": 83,
-      "title": "Contrato 029/2025 — LEGIX SOLUÇÕES EM AUTOMAÇÃO LTDA",
-      "why": "R$ 1.840.000,00 como maior valor informado entre empenhado e pago. 1.1.0 objeto do presente instrumento é a Contratação de Solução Integrada de Software de Gestão de Pessoas, Folha de Pagamento, Sáude/SESMT e eSocial com fornecimento de licença de uso, contemplando os serviços de migraç",
-      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/a8YvX5AnofWNk29Zsal16A==/contrato-alego-737",
-      "document_reference": "Processo 4738/2025"
-    },
-    {
-      "id": "alego-contrato:591",
-      "type": "contrato",
-      "date": "2024-01-24",
-      "priority": 83,
-      "title": "Contrato 01/2024 — TELEFONICA CLOUD E TECNOLOGIA DO BRASIL S.A.",
-      "why": "R$ 1.929.997,32 como maior valor informado entre empenhado e pago. 0 objeto do presente instrumento é a contratação de empresa especializada no fornecimento de SUBSCRIÇÃO DE LICENÇAS DE USO DE SOFTWARE MICROSOFT OFFICE NA MODALIDADE SOFTWARE AS A SERVICE — SAAS, UML EA - ENTERPRISE AGRE",
-      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/QfW-l0sN1Z5A2hZ-RdL_hQ==/contrato-alego-591",
-      "document_reference": "Processo 7448/2023"
-    },
-    {
-      "id": "alego-contrato:539",
-      "type": "contrato",
-      "date": "2022-11-09",
-      "priority": 83,
-      "title": "Contrato 053/2022 — ÁGAPE ASSESSORIA E CONSULTORIA LTDA",
-      "why": "R$ 1.828.967,86 como maior valor informado entre empenhado e pago. O objeto do presente contrato é o FORNECIMENTO DE LICENÇAS (PERPÉTUAS) DE USO DE SOFTWARE PARA VIRTUALIZAÇÃO DESTE PODER LEGISLATIVO, INCLUINDO SUSTENTAÇÃO, MANUTENÇÃO, HOSPEDAGEM NA MODALIDADE SOFTWARE AS A SERVICE – SA",
-      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/un8Z5KB08MCHDhJsZ-kZTg==/contrato-alego-539",
-      "document_reference": "Processo 2021006729"
-    },
-    {
-      "id": "alego-contrato:829",
-      "type": "contrato",
-      "date": "2026-06-19",
-      "priority": 80,
-      "title": "Contrato 066/2026 — AGAPE ASSESSORIA E CONSULTORIA LTDA",
-      "why": "R$ 924.000,00 como maior valor informado entre empenhado e pago. Contratação dos serviços de atualização de versão de software de virtualização, treinamento, suporte técnico, operação assistida, hospedagem e consultoria técnica para modelagem e automação de processos, para atender às ",
-      "source_url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/fxpAfvQPhQx0xmkD2k1dhg==/contrato-alego-829",
-      "document_reference": "Processo 32168/2025"
     }
   ]
 }

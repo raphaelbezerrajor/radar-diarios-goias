@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-19T12:29:06.467Z",
+  "generated_at": "2026-08-20T11:33:45.295Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-08-19"
+    "to": "2026-08-20"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 79
+    "published_stories": 81
   },
   "items": [
     {
@@ -4709,6 +4709,135 @@
           "gastos com eventos",
           "falhas de transparência",
           "controle de contratações artísticas"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-19",
+      "published_at": "2026-08-19",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial do Município de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260819_000008845.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id": "goiania:do_20260819_000008845.pdf",
+      "edition_number": "8845",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/08/2026-08-19-8845.pdf",
+      "document_sha256": "3db463981b1e16f907dbbaa4be0ea3235aa79b2e05cda4e250000715c27d21a7",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "goiania-8845-saude-laboratorios-20-milhoes",
+      "external_identifier": "Contratos nº 1845, 1851, 1855 e 1856/2026",
+      "page_start": 73,
+      "page_end": 76,
+      "document_reference": "DOM Goiânia nº 8.845 · páginas 73 a 76",
+      "act_type": "contratos",
+      "type_label": "Saúde e contratos",
+      "official_title": "EXTRATOS DOS CONTRATOS DE PRESTAÇÃO DE SERVIÇOS Nº 1845, 1851, 1855 E 1856/2026",
+      "title": "Goiânia firma contratos de até R$ 20 milhões com quatro laboratórios por cinco anos",
+      "deck": "Credenciamentos preveem atendimento ambulatorial e apoio diagnóstico ao SUS; montante é teto global estimado, não pagamento realizado.",
+      "summary": "Quatro contratos da Saúde de Goiânia somam R$ 20,04 milhões em valores globais estimados para 60 meses de serviços ao SUS.",
+      "paragraphs": [
+        "A Secretaria Municipal de Saúde de Goiânia publicou quatro contratos com laboratórios e prestadores de diagnóstico que somam R$ 20.040.517,20 em valores globais estimados para cinco anos. Foram credenciados Laboratório Oliveira Medicina Diagnóstico (R$ 5,72 milhões), Hemolabor (R$ 6,58 milhões), Hospital Santa Catarina (R$ 2,54 milhões) e Instituto de Olhos de Goiânia (R$ 5,20 milhões).",
+        "Os serviços abrangem assistência ambulatorial e apoio diagnóstico e terapêutico aos usuários do SUS, conforme demanda do Complexo Regulador e o Chamamento nº 002/2025. Os extratos também informam estimativas mensais e anuais; os R$ 20,04 milhões representam a soma dos tetos previstos para 60 meses, não comprovam pagamento já feito nem garantem que todo o valor será executado."
+      ],
+      "public_body": "Secretaria Municipal de Saúde de Goiânia",
+      "values": [
+        {
+          "original": "R$ 20.040.517,20",
+          "value": 20040517.2,
+          "currency": "BRL",
+          "label": "soma dos valores globais estimados para 60 meses"
+        }
+      ],
+      "value_highest": 20040517.2,
+      "reference_numbers": [
+        "1845/2026",
+        "1851/2026",
+        "1855/2026",
+        "1856/2026",
+        "002/2025"
+      ],
+      "importance": 98,
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "R$ 20 milhões em contratos de saúde",
+          "quatro prestadores privados",
+          "vigência de cinco anos"
+        ]
+      },
+      "prominence": "cover"
+    },
+    {
+      "date": "2026-08-19",
+      "published_at": "2026-08-19",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial do Município de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260819_000008845.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id": "goiania:do_20260819_000008845.pdf",
+      "edition_number": "8845",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/08/2026-08-19-8845.pdf",
+      "document_sha256": "3db463981b1e16f907dbbaa4be0ea3235aa79b2e05cda4e250000715c27d21a7",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "goiania-8845-saude-multas-fornecedores-medicamentos",
+      "external_identifier": "Despachos nº 5208 e 5289/2026",
+      "page_start": 68,
+      "page_end": 69,
+      "document_reference": "DOM Goiânia nº 8.845 · páginas 68 e 69",
+      "act_type": "multa",
+      "type_label": "Sanções contratuais na saúde",
+      "official_title": "DESPACHOS Nº 5208 E 5289/2026",
+      "title": "Saúde de Goiânia multa duas fornecedoras em R$ 120 mil por materiais não entregues",
+      "deck": "Decisões aplicam penalidade de 30% do contrato às empresas Get Med/Kania e WA Medicamentos por inexecução contratual.",
+      "summary": "A Saúde de Goiânia aplicou R$ 120,29 mil em multas a duas fornecedoras por descumprimento de contratos de materiais e medicamentos.",
+      "paragraphs": [
+        "A Secretaria Municipal de Saúde de Goiânia aplicou duas multas que somam R$ 120.286,11 a fornecedoras acusadas de não entregar materiais contratados. A Get Med Comércio de Medicamentos, também identificada no ato como Kania Comércio de Produtos Hospitalares, recebeu multa de R$ 32.803,11; a WA Medicamentos Soluções em Saúde foi multada em R$ 87.483,00.",
+        "Os dois despachos classificam a conduta como inexecução contratual e fixam a penalidade em 30% do valor de cada contrato. As decisões determinam registro, publicação e intimação das empresas. A publicação comprova a aplicação administrativa das multas, mas não informa se houve recurso posterior nem se os valores já foram recolhidos aos cofres municipais."
+      ],
+      "public_body": "Secretaria Municipal de Saúde de Goiânia",
+      "values": [
+        {
+          "original": "R$ 32.803,11",
+          "value": 32803.11,
+          "currency": "BRL",
+          "label": "multa à Get Med/Kania"
+        },
+        {
+          "original": "R$ 87.483,00",
+          "value": 87483,
+          "currency": "BRL",
+          "label": "multa à WA Medicamentos"
+        }
+      ],
+      "value_highest": 87483,
+      "reference_numbers": [
+        "5208/2026",
+        "5289/2026",
+        "25.29.000010947-3",
+        "24.29.000037274-8"
+      ],
+      "importance": 96,
+      "news_value": {
+        "score": 96,
+        "reasons": [
+          "sanções contratuais",
+          "materiais de saúde não entregues",
+          "duas fornecedoras"
         ]
       },
       "prominence": "cover"
