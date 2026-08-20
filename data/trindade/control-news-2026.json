@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-20T11:33:45.295Z",
+  "generated_at": "2026-08-20T20:44:33.512Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-08-20"
@@ -10,7 +10,7 @@
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 81
+    "published_stories": 83
   },
   "items": [
     {
@@ -4841,6 +4841,112 @@
         ]
       },
       "prominence": "cover"
+    },
+    {
+      "id": "trindade-3686a-saude-vagas-agentes-comunitarios",
+      "date": "2026-08-20",
+      "published_at": "2026-08-20",
+      "city": "Trindade",
+      "scope": "Municipal",
+      "source_id": "agm",
+      "source_name": "Diário Municipal de Goiás — AGM",
+      "source_label": "Secretaria Municipal de Saúde de Trindade",
+      "official_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_121065_2026-08-20_0b122c8dcd910c95ef4fe77fe7a96892.pdf",
+      "source_landing_url": "https://www.diariomunicipal.com.br/agm/",
+      "edition_id": "agm:121065",
+      "edition_number": "3686a",
+      "edition_extraordinary": true,
+      "external_identifier": "0D775657",
+      "document_sha256": "9e680b074bd87eb1a0b22c8ce574443015963080185a544fb57e836bb7624d28",
+      "local_path": "data/raw/municipal-diaries/agm/2026/08/2026-08-20-3686a.pdf",
+      "page_start": 5,
+      "page_end": 6,
+      "document_reference": "Edição extraordinária 3.686-A · páginas 5 e 6",
+      "act_type": "retificacao",
+      "type_label": "Saúde e seleção pública",
+      "official_title": "Edital de Retificação nº 1/2026 do Processo Seletivo Público nº 1/2026",
+      "title": "Trindade distribui 169 vagas de agentes de saúde entre 33 áreas de UBS",
+      "deck": "Retificação do processo seletivo também prevê 81 posições em cadastro de reserva e detalha os bairros atendidos por cada unidade.",
+      "summary": "A Saúde de Trindade publicou a distribuição territorial de 169 vagas imediatas e 81 de cadastro de reserva para agentes comunitários de saúde.",
+      "paragraphs": [
+        "A Secretaria Municipal de Saúde de Trindade publicou a nova distribuição territorial do processo seletivo para agentes comunitários de saúde. A tabela retificada reúne 169 vagas imediatas e 81 posições em cadastro de reserva, distribuídas por 33 áreas de atuação vinculadas a unidades básicas de saúde.",
+        "O anexo relaciona cada UBS aos bairros e setores atendidos e separa as vagas de ampla concorrência, as reservadas a pessoas pretas ou pardas e as destinadas a pessoas com deficiência. A retificação altera somente o Anexo V do Edital nº 1/2026; as demais regras do processo seletivo permanecem inalteradas."
+      ],
+      "public_body": "Secretaria Municipal de Saúde de Trindade",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "1/2026",
+        "2.970/2026"
+      ],
+      "importance": 95,
+      "news_value": {
+        "score": 95,
+        "reasons": [
+          "169 vagas imediatas",
+          "33 áreas de UBS",
+          "impacto direto no acesso ao processo seletivo"
+        ]
+      },
+      "prominence": "cover",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99
+    },
+    {
+      "id": "aparecida-2918-grupo-obitos-maternos-infantis",
+      "date": "2026-08-20",
+      "published_at": "2026-08-20",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "source_id": "aparecida",
+      "source_name": "Diário Oficial de Aparecida de Goiânia",
+      "source_label": "Secretaria Municipal de Saúde de Aparecida de Goiânia",
+      "official_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2918",
+      "source_landing_url": "https://doe.aparecida.go.gov.br/",
+      "edition_id": "aparecida:3030",
+      "edition_number": "2918",
+      "edition_extraordinary": false,
+      "external_identifier": "Portaria nº 128/2026-GAB/SMS",
+      "document_sha256": "95675128d5f5ebb3cfe7ce4393ba56fe3e6a68cddd94b1567f4ad88bf9feb234",
+      "local_path": "data/raw/municipal-diaries/aparecida/2026/08/2026-08-20-2918.pdf",
+      "page_start": 3,
+      "page_end": 4,
+      "document_reference": "Diário nº 2.918 · páginas 3 e 4",
+      "act_type": "portaria",
+      "type_label": "Saúde pública",
+      "official_title": "Portaria nº 128/2026-GAB/SMS",
+      "title": "Aparecida cria rotina mensal para analisar mortes maternas, infantis e fetais",
+      "deck": "Grupo técnico poderá apontar falhas de acesso, diagnóstico e atendimento e recomendar medidas para prevenir óbitos evitáveis.",
+      "summary": "A Saúde de Aparecida reorganizou o grupo responsável por investigar óbitos maternos, infantis e fetais e acompanhar respostas da rede.",
+      "paragraphs": [
+        "A Secretaria Municipal de Saúde de Aparecida de Goiânia reorganizou o grupo técnico que analisa mortes maternas, infantis e fetais no município. A equipe deverá se reunir ao menos uma vez por mês para investigar casos, avaliar a assistência prestada e identificar fragilidades de acesso, diagnóstico, tratamento e acompanhamento.",
+        "A Portaria nº 128/2026 determina que o grupo poderá avaliar se os óbitos eram evitáveis, propor intervenções e acompanhar as providências adotadas por unidades e gestores. O trabalho terá caráter técnico, confidencial e não punitivo; a publicação não apresenta números de mortes nem resultados de investigações já realizadas."
+      ],
+      "public_body": "Secretaria Municipal de Saúde de Aparecida de Goiânia",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "128/2026-GAB/SMS",
+        "067/2021-GAB/SMS"
+      ],
+      "importance": 89,
+      "news_value": {
+        "score": 89,
+        "reasons": [
+          "mortalidade materna e infantil",
+          "avaliação de óbitos evitáveis",
+          "monitoramento mensal da rede de saúde"
+        ]
+      },
+      "prominence": "cover",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99
     }
   ]
 }
