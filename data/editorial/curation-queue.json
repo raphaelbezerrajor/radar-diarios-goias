@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-08-20T20:35:29.595507+00:00",
+  "generatedAt": "2026-08-20T22:33:29.485534+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 8,
@@ -26,76 +26,6 @@
   },
   "invalidBriefs": [],
   "candidates": [
-    {
-      "id": "jul26-senador-canedo-669-c251f87a7226-9",
-      "status": "pending",
-      "date": "2026-08-20",
-      "city": "Senador Canedo",
-      "scope": "Municipal",
-      "actType": "pregao",
-      "typeLabel": "Pregão",
-      "priority": 100,
-      "importance": 100,
-      "curationReasons": [
-        "alto valor-notícia calculado"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "[E-MAIL REDIGIDO]. Comissão de Pregão da",
-        "extractedTitle": "Senador Canedo publica [E-MAIL REDIGIDO]. Comissão de Pregão da",
-        "extractedDeck": "Objeto: FORNECIMENTO DE ALIMENTAÇÃO PRONTA E TRANSPORTADA AOS Do Objeto: destina-se a prorrogação do prazo de PACIENTES/USUÁRIOS/SERVIDORES, TAIS COMO: vigência da Ata de Registro de Preços nº.303/2025 por DESJEJUM, COLAÇÃO, ALMOÇO, LANCHE E 12 (doze) meses, por 12 (doze) meses, a partir de sua…",
-        "extractedParagraphs": [
-          "Prefeitura de Senador Canedo, Estado de Goiás, aos 19 dias publicou pregão na edição 473 de Diário Oficial de Senador Canedo, datada de 20 de agosto de 2026. Objeto: FORNECIMENTO DE ALIMENTAÇÃO PRONTA E TRANSPORTADA AOS Do Objeto: destina-se a prorrogação do prazo de PACIENTES/USUÁRIOS/SERVIDORES, TAIS COMO: vigência da Ata de Registro de Preços nº.303/2025 por DESJEJUM, COLAÇÃO, ALMOÇO, LANCHE E 12 (doze) meses, por 12 (doze) meses, a partir de sua….",
-          "O maior valor monetário identificado no texto é R$ 9.124.007,52; o ato cita os CNPJs 09.097.711/0001-09, 19.095.352/0001-04, 21.832.981/0001-03; as referências documentais incluem 1DOC, 09.08.14.001-2026., 42.480/2025, 1Doc, 14.133/21.. A conferência deve ser feita no documento original, em páginas 5 a 6."
-        ],
-        "evidenceExcerpt": "[E-MAIL REDIGIDO]. Comissão de Pregão da Prefeitura de Senador Canedo, Estado de Goiás, aos 19 dias I TERMO ADITIVO A ARP Nº. 303/2025 -do mês de agosto de 2026. PE.047/2025-1DOC 35.485/2026 -PAULO RENATO DOS SANTOS CORREA LTDA - FME EXTRATO JACQUELINE SILVA CAMPOS Processo 1DOC: 35.485/2026. Diário Oficial do Município de Senador Canedo Código único identificador desta edição: hruv307472 5 Diário Oficial do Município de Senador Canedo Edição nº 473 Publicado em 20/08/2026 I TERMO ADITIVO A ATA DE REGISTRO DE…",
-        "publicBody": "Prefeitura de Senador Canedo, Estado de Goiás, aos 19 dias",
-        "values": [
-          {
-            "original": "R$106.188,00",
-            "value": 106188,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$9.124.007,52",
-            "value": 9124007.52,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "09.097.711/0001-09",
-          "19.095.352/0001-04",
-          "21.832.981/0001-03"
-        ],
-        "referenceNumbers": [
-          "1DOC",
-          "09.08.14.001-2026.",
-          "42.480/2025",
-          "1Doc",
-          "14.133/21.",
-          "14.133/21",
-          "004/25"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Oficial de Senador Canedo",
-        "label": "Prefeitura de Senador Canedo, Estado de Goiás, aos 19 dias",
-        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=20-08-2026",
-        "editionId": "senador-canedo:669",
-        "editionNumber": "473",
-        "pageStart": 5,
-        "pageEnd": 6,
-        "documentReference": "Edição 473 · páginas 5 a 6",
-        "documentSha256": "b8ba754507ff4c4046beeb9e2e3e5ec2e5e8fe98face4b85c71e105bca662389",
-        "actSha256": "c251f87a72265fc9045a867649520610268facecabb5f9862acb3b63250c5b8d"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
     {
       "id": "jul26-agm-114610-4DDC36A8-9",
       "status": "pending",
@@ -760,6 +690,58 @@
         "documentReference": "Edição 3686 · página 13",
         "documentSha256": "88a93c92e10c06b9b499ed10db533137b3bdde0c5089d33908942131209e6e42",
         "actSha256": "a8beffbd3d1dc535a6ddcc85546c57ab17439d15899268197eb3a1ceb588e53d"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-agm-114610-FB8D18B2-297",
+      "status": "pending",
+      "date": "2026-08-20",
+      "city": "Alexânia",
+      "scope": "Municipal",
+      "actType": "dispensa",
+      "typeLabel": "Dispensa",
+      "priority": 75,
+      "importance": 75,
+      "curationReasons": [
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "ATO DE DECLARAÇÃO DE DISPENSA",
+        "extractedTitle": "Alexânia publica ATO DE DECLARAÇÃO DE DISPENSA",
+        "extractedDeck": "AUTORIZAR a contratação direta, por Dispensa: Empresa: SANTANA RASTREAMENTO E MONITORAMENTO LTDA CNPJ/CPF: 22.140.663/0001-44 Lote Item Produto Unidade Marca Qtd Valor Total 1 1 SERVIÇO DE ATIVAÇÃO DE RASTREAMENTO VEICULAR EM SISTEMA DE COMODATO, CONTEMPLANDO O FORNECI",
+        "extractedParagraphs": [
+          "FUNDO MUNICIPAL DE EDUCAÇÃO publicou dispensa na edição 3686 de Diário Municipal de Goiás — AGM, datada de 20 de agosto de 2026. AUTORIZAR a contratação direta, por Dispensa: Empresa: SANTANA RASTREAMENTO E MONITORAMENTO LTDA CNPJ/CPF: 22.140.663/0001-44 Lote Item Produto Unidade Marca Qtd Valor Total 1 1 SERVIÇO DE ATIVAÇÃO DE RASTREAMENTO VEICULAR EM SISTEMA DE COMODATO, CONTEMPLANDO O FORNECI.",
+          "o ato cita o CNPJ 22.140.663/0001-44; as referências documentais incluem 7566/2026., 14.133/21. A conferência deve ser feita no documento original, em páginas 73 a 74."
+        ],
+        "evidenceExcerpt": "FUNDO MUNICIPAL DE EDUCAÇÃO ATO DE DECLARAÇÃO DE DISPENSA Dispõe sobre a declaração de Dispensa de licitação para CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS CONTÍNUOS DE MONITORAMENTO, RASTREAMENTO VEICULAR VIA SATÉLITE, TELEMETRIA E GESTÃO OPERACIONAL DA FROTA. O OBJETO INCLUI A CESSÃO DE processo 7566/2026. O(a) Responsável Sr.(a) KARYNE DAYANE FERREIRA OLIVEIRA, no uso de suas atribuições legais e constitucionais. CONSIDERANDO que a situação se enquadra na Dispensa - inciso II do Art. 75…",
+        "publicBody": "FUNDO MUNICIPAL DE EDUCAÇÃO",
+        "values": [],
+        "cnpjs": [
+          "22.140.663/0001-44"
+        ],
+        "referenceNumbers": [
+          "7566/2026.",
+          "14.133/21"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Municipal de Goiás — AGM",
+        "label": "FUNDO MUNICIPAL DE EDUCAÇÃO",
+        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114610_2026-08-19_1f5ca8bf13b77eb77a50aff398434561.pdf",
+        "editionId": "agm:114610",
+        "editionNumber": "3686",
+        "pageStart": 73,
+        "pageEnd": 74,
+        "documentReference": "Edição 3686 · páginas 73 a 74",
+        "documentSha256": "88a93c92e10c06b9b499ed10db533137b3bdde0c5089d33908942131209e6e42",
+        "actSha256": "b60038dfa9a90b3a07ed4aedb938878c92093111966d61af12a6ed85411bcca3"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
