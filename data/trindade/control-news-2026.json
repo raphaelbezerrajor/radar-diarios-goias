@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-20T22:35:17.822Z",
+  "generated_at": "2026-08-21T11:40:23.383Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-08-20"
+    "to": "2026-08-21"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 86
+    "published_stories": 90
   },
   "items": [
     {
@@ -5128,6 +5128,234 @@
         ]
       },
       "prominence": "cover"
+    },
+    {
+      "id": "doego-24847-suplemento-credito-bndes-saude-500-milhoes",
+      "date": "2026-08-21",
+      "published_at": "2026-08-21",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governo de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7328/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7328",
+      "edition_number": "24.847 · suplemento",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-20-edicao-7328-suplemento.pdf",
+      "document_sha256": "912738e65b6f83f933f1ff697e7203ecb61b9c678795eab79e8fbc32c0a518ad",
+      "page_start": 1,
+      "page_end": 1,
+      "document_reference": "DOE-GO nº 24.847, suplemento · página 1",
+      "external_identifier": "Lei nº 24.493/2026",
+      "official_title": "Lei nº 24.493, de 20 de agosto de 2026",
+      "act_type": "lei",
+      "type_label": "Saúde e financiamento",
+      "title": "Goiás autoriza empréstimo de até R$ 500 milhões para hospital e rede de saúde",
+      "deck": "Lei permite operação com o BNDES, com garantia da União; autorização não significa que o crédito já foi contratado ou liberado.",
+      "summary": "Estado poderá contratar até R$ 500 milhões com o BNDES para adquirir prédio hospitalar de alta complexidade e ampliar a infraestrutura pública de saúde.",
+      "paragraphs": [
+        "Goiás autorizou o Poder Executivo a contratar uma operação de crédito interno de até R$ 500 milhões com o Banco Nacional de Desenvolvimento Econômico e Social (BNDES). Segundo a Lei nº 24.493/2026, os recursos do programa FIIS Saúde deverão financiar a aquisição de um prédio hospitalar de alta complexidade e a ampliação da infraestrutura pública estadual de saúde.",
+        "A operação poderá ter garantia da União e contragarantias vinculadas a receitas constitucionais do Estado. A lei também exige que os recursos entrem no orçamento e que as despesas com amortização e encargos sejam previstas nas leis orçamentárias. O texto autoriza a contratação; não comprova que o empréstimo foi assinado, que o dinheiro foi liberado ou que o imóvel já foi comprado."
+      ],
+      "public_body": "Governo do Estado de Goiás",
+      "values": [
+        {
+          "original": "R$ 500.000.000,00",
+          "value": 500000000,
+          "currency": "BRL",
+          "label": "limite autorizado da operação de crédito"
+        }
+      ],
+      "value_highest": 500000000,
+      "reference_numbers": [
+        "24.493/2026"
+      ],
+      "importance": 101,
+      "news_value": {
+        "score": 101,
+        "reasons": [
+          "até R$ 500 milhões",
+          "infraestrutura hospitalar",
+          "endividamento estadual"
+        ]
+      },
+      "prominence": "cover",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99
+    },
+    {
+      "id": "doego-24848-ses-rag-2023-2024-ressalvas",
+      "date": "2026-08-21",
+      "published_at": "2026-08-21",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Secretaria de Estado da Saúde",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7329/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7329",
+      "edition_number": "24.848",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-21-edicao-7329.pdf",
+      "document_sha256": "a4e1f6092c4462605f124d7aa5191ab193deb675db99e75b074698895fb02287",
+      "page_start": 34,
+      "page_end": 37,
+      "document_reference": "DOE-GO nº 24.848 · páginas 34 a 37",
+      "external_identifier": "Portarias SES nº 2.681 e 2.690/2026",
+      "official_title": "Portarias nº 2.681 e 2.690/2026",
+      "act_type": "portaria",
+      "type_label": "Saúde e prestação de contas",
+      "title": "Conselho cobra rastreio de contratos e gastos nos relatórios de saúde de Goiás",
+      "deck": "Relatórios de gestão de 2023 e 2024 foram aprovados pelo Conselho de Saúde com ressalvas; Secretaria homologou apenas parte das exigências.",
+      "summary": "Atos publicados detalham cobranças por memória de cálculo, conciliação de repasses a organizações sociais, auditorias e melhor rastreabilidade financeira.",
+      "paragraphs": [
+        "O Conselho Estadual de Saúde aprovou com ressalvas os Relatórios Anuais de Gestão da saúde de Goiás de 2023 e 2024 e pediu documentação capaz de ligar despesas, contratos, metas e resultados. Entre as exigências estão memória de cálculo do gasto mínimo em saúde, conciliação de transferências a organizações sociais e civis, metas, glosas, saldos, devoluções, auditorias e demonstrações financeiras.",
+        "A Secretaria de Estado da Saúde homologou parcialmente as resoluções: acolheu algumas ressalvas e recomendações, rejeitou outras e aceitou parcialmente parte delas. Para 2024, o Conselho também pediu valores, objetos, unidades beneficiadas, estágio de execução e resultados, além de auditorias em unidades administradas por organizações sociais. Os atos registram divergência institucional sobre as exigências de controle, mas não apontam, por si, dano ao erário ou irregularidade comprovada."
+      ],
+      "public_body": "Secretaria de Estado da Saúde e Conselho Estadual de Saúde",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "2681/2026",
+        "2690/2026",
+        "57/2026-CES",
+        "58/2026-CES"
+      ],
+      "importance": 98,
+      "news_value": {
+        "score": 98,
+        "reasons": [
+          "prestação de contas da saúde",
+          "rastreabilidade de contratos com OS",
+          "ressalvas de dois exercícios"
+        ]
+      },
+      "prominence": "cover",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99
+    },
+    {
+      "id": "tcmgo-2745-anapolis-loteria-municipal-suspensa",
+      "date": "2026-08-21",
+      "published_at": "2026-08-21",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2745",
+      "edition_number": "2745",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2745-2026-08-21.pdf",
+      "document_sha256": "8127c2d306d249aafa283d155bee5ccc984546020de5eedbf0c04261f57b79dd",
+      "page_start": 13,
+      "page_end": 15,
+      "document_reference": "Diário de Contas nº 2.745 · páginas 13 a 15",
+      "external_identifier": "Processo nº 10952/2024 · Acórdão nº 06137/2026",
+      "official_title": "Acórdão nº 06137/2026",
+      "act_type": "acordao",
+      "type_label": "Controle e concessão pública",
+      "title": "TCM mantém suspensa concessão da loteria municipal de Anápolis",
+      "deck": "Tribunal pediu explicações sobre base constitucional, aposta de quota fixa, receita de outorga e custos para mitigar jogo patológico.",
+      "summary": "Concorrência nº 5/2024 seguirá suspensa enquanto Prefeitura responde a questionamentos e processo passa por nova instrução.",
+      "paragraphs": [
+        "O Tribunal de Contas dos Municípios manteve suspensa a Concorrência Pública nº 5/2024, criada para conceder a exploração da loteria municipal de Anápolis, a Lotan. No Processo nº 10952/2024, o TCM determinou que o prefeito Márcio Corrêa se manifeste sobre a compatibilidade da lei municipal com a Constituição Federal e pediu documentos sobre o planejamento da concessão.",
+        "O Tribunal apontou questões ainda pendentes: divergência entre estudos prévios e edital sobre apostas de quota fixa, justificativa para a receita de outorga, vinculação do dinheiro a políticas públicas e custos para reduzir riscos sociais do jogo patológico. O mérito da denúncia não foi julgado; a suspensão continua até nova deliberação após contraditório, análise técnica e manifestação do Ministério Público de Contas."
+      ],
+      "public_body": "Prefeitura de Anápolis e TCM-GO",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "10952/2024",
+        "06137/2026",
+        "5/2024",
+        "535/2023"
+      ],
+      "importance": 99,
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "concessão de loteria pública",
+          "licitação mantida suspensa",
+          "impacto social e financeiro"
+        ]
+      },
+      "prominence": "cover",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99
+    },
+    {
+      "id": "tcmgo-2745-iaciara-contrato-mao-obra-correcao",
+      "date": "2026-08-21",
+      "published_at": "2026-08-21",
+      "city": "Iaciara",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2745",
+      "edition_number": "2745",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2745-2026-08-21.pdf",
+      "document_sha256": "8127c2d306d249aafa283d155bee5ccc984546020de5eedbf0c04261f57b79dd",
+      "page_start": 99,
+      "page_end": 101,
+      "document_reference": "Diário de Contas nº 2.745 · páginas 99 a 101",
+      "external_identifier": "Contrato nº 28/2025 · Pregão nº 004/2025",
+      "official_title": "Decisão sobre denúncia no Pregão Eletrônico nº 004/2025",
+      "act_type": "acordao",
+      "type_label": "Contratos e trabalho",
+      "title": "TCM manda Iaciara corrigir custos trabalhistas em contrato de R$ 7,35 milhões",
+      "deck": "Planilha da V7 deverá incluir adicional noturno, ajustar insalubridade e usar salários e auxílio-alimentação das convenções coletivas.",
+      "summary": "Tribunal julgou denúncia parcialmente procedente e abriu monitoramento, sem alterar o valor global do Contrato nº 28/2025.",
+      "paragraphs": [
+        "O TCM-GO determinou que a Prefeitura de Iaciara exija da V7 Empreendimentos a correção da proposta de preços do Contrato nº 28/2025, de R$ 7.349.586,60, para fornecimento de mão de obra em atividades-meio. A planilha deverá prever insalubridade de 40% para agentes de limpeza, adicional noturno para vigias e salários e auxílio-alimentação definidos nas convenções coletivas vigentes na data da proposta.",
+        "A denúncia foi julgada parcialmente procedente, mas o Tribunal entendeu que os equívocos podem ser corrigidos sem mudar o valor global contratado. Não houve sanção nesta decisão. O TCM abriu fase de monitoramento e alertou que o descumprimento poderá gerar multa e até anulação ou revogação do contrato, além da possível conversão do processo em tomada de contas especial."
+      ],
+      "public_body": "Prefeitura de Iaciara e TCM-GO",
+      "values": [
+        {
+          "original": "R$ 7.349.586,60",
+          "value": 7349586.6,
+          "currency": "BRL",
+          "label": "valor global do contrato"
+        }
+      ],
+      "value_highest": 7349586.6,
+      "cnpjs": [
+        "40.898.945/0001-97"
+      ],
+      "reference_numbers": [
+        "28/2025",
+        "004/2025"
+      ],
+      "importance": 97,
+      "news_value": {
+        "score": 97,
+        "reasons": [
+          "contrato de R$ 7,35 milhões",
+          "direitos trabalhistas",
+          "determinação de correção"
+        ]
+      },
+      "prominence": "cover",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99
     }
   ]
 }
