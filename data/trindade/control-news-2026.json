@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-21T11:40:23.383Z",
+  "generated_at": "2026-08-27T11:06:11.624Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-08-21"
+    "to": "2026-08-27"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 90
+    "published_stories": 94
   },
   "items": [
     {
@@ -5356,6 +5356,240 @@
       "publication_mode": "edited_document_news",
       "source_type": "official_document",
       "confidence": 0.99
+    },
+    {
+      "id": "tcego-153-suspende-pregao-centro-administrativo-40-milhoes",
+      "date": "2026-08-25",
+      "published_at": "2026-08-27",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "TCE-GO",
+      "official_url": "https://www.tce.go.gov.br/DiarioEletronico",
+      "source_landing_url": "https://www.tce.go.gov.br/DiarioEletronico",
+      "edition_id": "tcego:153",
+      "edition_number": "153",
+      "local_path": "data/raw/tcego/2026/08/tcego-dec-153-2026-08-25.pdf",
+      "document_sha256": "b3736ae87a03d2e361b1db590185ad74be0efe72cb5c5080e1752832fe0c2a12",
+      "page_start": 4,
+      "page_end": 6,
+      "document_reference": "Diário Eletrônico de Contas nº 153 · páginas 4 a 6",
+      "external_identifier": "Acórdão nº 2187/2026 · Processo nº 202600047002832",
+      "official_title": "Acórdão nº 2187/2026",
+      "act_type": "medida_cautelar",
+      "type_label": "Licitação e patrimônio público",
+      "title": "TCE suspende pregão de R$ 40,4 milhões para o novo Centro Administrativo de Goiás",
+      "deck": "Cautelar interrompeu contratação de serviços de facilities por 36 meses; representação ainda será julgada no mérito.",
+      "summary": "Tribunal referendou a suspensão do Pregão Eletrônico nº 348/2025, estimado em R$ 40,39 milhões, destinado ao novo Centro Administrativo estadual.",
+      "paragraphs": [
+        "O Tribunal de Contas do Estado referendou a medida cautelar que suspendeu o Pregão Eletrônico nº 348/2025 da Secretaria de Administração. A licitação reúne 13 itens em lote único para contratar, por 36 meses, serviços de facilities no novo Centro Administrativo de Goiás, com valor total estimado em R$ 40.391.691,72.",
+        "A decisão foi tomada em representação apresentada pela Elo Soluções Ambientais Ltda. e impede o avanço do certame até nova deliberação. A cautelar aponta questões que precisam ser examinadas, mas não é julgamento definitivo da licitação nem prova de dano ou irregularidade consumada."
+      ],
+      "public_body": "Secretaria de Estado da Administração e TCE-GO",
+      "values": [
+        {
+          "original": "R$ 40.391.691,72",
+          "value": 40391691.72,
+          "currency": "BRL",
+          "label": "valor total estimado"
+        }
+      ],
+      "value_highest": 40391691.72,
+      "reference_numbers": [
+        "2187/2026",
+        "202600047002832",
+        "348/2025"
+      ],
+      "importance": 104,
+      "news_value": {
+        "score": 104,
+        "reasons": [
+          "R$ 40,4 milhões",
+          "novo Centro Administrativo",
+          "licitação suspensa cautelarmente"
+        ]
+      },
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover"
+    },
+    {
+      "id": "tcego-153-realidade-virtual-seduc-monitoramento",
+      "date": "2026-08-25",
+      "published_at": "2026-08-27",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "TCE-GO",
+      "official_url": "https://www.tce.go.gov.br/DiarioEletronico",
+      "source_landing_url": "https://www.tce.go.gov.br/DiarioEletronico",
+      "edition_id": "tcego:153",
+      "edition_number": "153",
+      "local_path": "data/raw/tcego/2026/08/tcego-dec-153-2026-08-25.pdf",
+      "document_sha256": "b3736ae87a03d2e361b1db590185ad74be0efe72cb5c5080e1752832fe0c2a12",
+      "page_start": 10,
+      "page_end": 13,
+      "document_reference": "Diário Eletrônico de Contas nº 153 · páginas 10 a 13",
+      "external_identifier": "Acórdão nº 2189/2026 · Processo nº 202500047001819",
+      "official_title": "Acórdão nº 2189/2026",
+      "act_type": "acordao",
+      "type_label": "Educação e tecnologia",
+      "title": "TCE cobra controle sobre uso de realidade virtual nas escolas de tempo integral",
+      "deck": "Tribunal viu falhas no planejamento da adesão da Seduc, mas afastou sobrepreço, dano e multas por falta de parâmetro técnico seguro.",
+      "summary": "Contrato permanece em execução, sob ordem de monitoramento documentado de equipamentos, licenças, treinamento, suporte, uso nas escolas e resultados.",
+      "paragraphs": [
+        "O TCE-GO julgou parcialmente procedente uma representação sobre a adesão da Secretaria de Educação à Ata de Registro de Preços nº 25/2024 para uma solução educacional integrada de realidade virtual em escolas de tempo integral. O Tribunal apontou deficiência na demonstração da vantagem da adesão, no planejamento e no acompanhamento das condições jurídicas do ajuste.",
+        "O acórdão não reconheceu sobrepreço nem dano ao erário, retirou multas e responsabilizações pessoais e manteve o contrato em execução. A Seduc deverá documentar equipamentos, licenças e conteúdo, treinamento, infraestrutura, suporte, escolas atendidas, uso efetivo e resultados; futuras contratações terão de usar parâmetros comparáveis e acompanhar formalmente as condições legais."
+      ],
+      "public_body": "Secretaria de Estado da Educação e TCE-GO",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [
+        "2189/2026",
+        "202500047001819",
+        "25/2024"
+      ],
+      "importance": 101,
+      "news_value": {
+        "score": 101,
+        "reasons": [
+          "tecnologia nas escolas",
+          "falhas de planejamento",
+          "monitoramento de resultados"
+        ]
+      },
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover"
+    },
+    {
+      "id": "tcmgo-2746-trindade-concursos-efeito-suspensivo",
+      "date": "2026-08-24",
+      "published_at": "2026-08-27",
+      "city": "Trindade",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2746",
+      "edition_number": "2746",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2746-2026-08-24.pdf",
+      "document_sha256": "6cb72e470b7f1c09e4a1a431e7b7f407a5981362cfa5ae46c7ddeacf8b959fb3",
+      "page_start": 168,
+      "page_end": 172,
+      "document_reference": "Diário de Contas nº 2.746 · páginas 168 a 172",
+      "external_identifier": "Recurso contra o Acórdão nº 05625/2026",
+      "official_title": "Decisão em recurso ordinário — Trindade",
+      "act_type": "decisao",
+      "type_label": "Serviço público",
+      "title": "TCM libera continuidade de concursos da Câmara e da Saúde de Trindade",
+      "deck": "Efeito suspensivo permite seguir com concurso legislativo e seleção de agentes de saúde; mérito do recurso ainda não foi julgado.",
+      "summary": "Decisão suspendeu os efeitos do acórdão anterior e permitiu a continuidade do Concurso nº 01/2026 e da seleção para ACS e ACE.",
+      "paragraphs": [
+        "A Presidência do TCM-GO concedeu efeito suspensivo ao recurso de Trindade e permitiu a continuidade do Concurso Público nº 01/2026 da Câmara Municipal e do Processo Seletivo nº 01/2026 da Secretaria de Saúde, voltado a agentes comunitários de saúde e de combate a endemias. A medida suspende, por enquanto, os efeitos do Acórdão nº 05625/2026.",
+        "A decisão considerou o risco de prejuízo reverso: a Saúde informou déficit de 31 agentes de combate a endemias e falhas de cobertura, enquanto a Câmara não realiza concurso desde 2011. O processo cita 124 atestados de capacidade técnica do Idecan, estimativa de 28 mil candidatos e teto variável de R$ 3,22 milhões, cobrado conforme inscrições aprovadas. O efeito suspensivo não valida definitivamente o contrato; o mérito do recurso ainda será analisado."
+      ],
+      "public_body": "Câmara Municipal, Secretaria Municipal de Saúde de Trindade e TCM-GO",
+      "values": [
+        {
+          "original": "R$ 3.220.000,00",
+          "value": 3220000,
+          "currency": "BRL",
+          "label": "teto variável estimado"
+        }
+      ],
+      "value_highest": 3220000,
+      "reference_numbers": [
+        "05625/2026",
+        "01/2026"
+      ],
+      "importance": 102,
+      "news_value": {
+        "score": 102,
+        "reasons": [
+          "concursos públicos",
+          "cobertura de saúde",
+          "efeito suspensivo"
+        ]
+      },
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover"
+    },
+    {
+      "id": "tcmgo-2746-rialma-multas-concurso",
+      "date": "2026-08-24",
+      "published_at": "2026-08-27",
+      "city": "Rialma",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2746",
+      "edition_number": "2746",
+      "local_path": "data/raw/tcmgo/trindade/2026/08/tcmgo-doc-2746-2026-08-24.pdf",
+      "document_sha256": "6cb72e470b7f1c09e4a1a431e7b7f407a5981362cfa5ae46c7ddeacf8b959fb3",
+      "page_start": 126,
+      "page_end": 131,
+      "document_reference": "Diário de Contas nº 2.746 · páginas 126 a 131",
+      "external_identifier": "Decisão sobre concurso público de Rialma",
+      "official_title": "Acórdão em processo de concurso público — Rialma",
+      "act_type": "acordao",
+      "type_label": "Concurso e responsabilização",
+      "title": "TCM multa três gestores de Rialma por descumprimento de cautelar em concurso",
+      "deck": "Prefeito, presidente da comissão e chefe de RH receberam multa individual de R$ 5.178,25; cautelar foi mantida para Analista Ambiental.",
+      "summary": "Tribunal manteve restrição para o cargo ambiental, revogou a cautelar para agente comunitário após correção e determinou novos ajustes.",
+      "paragraphs": [
+        "O TCM-GO aplicou multas individuais de R$ 5.178,25 ao prefeito Lucas Silva Chaves, à presidente da comissão do concurso, Alessandra Aparecida Valadão, e à chefe de Recursos Humanos, Maria Vicentina Silva Nunes. Segundo a decisão, os três descumpriram medida cautelar relacionada ao concurso público municipal.",
+        "O Tribunal manteve a cautelar para o cargo de Analista Ambiental, revogou a restrição sobre Agente Comunitário de Saúde depois de uma correção e ordenou novos ajustes e apresentação de documentos. As multas totalizam R$ 15.534,75, mas cada responsabilizado conserva os meios processuais de defesa e recurso previstos no TCM."
+      ],
+      "public_body": "Prefeitura de Rialma e TCM-GO",
+      "values": [
+        {
+          "original": "R$ 5.178,25",
+          "value": 5178.25,
+          "currency": "BRL",
+          "label": "multa individual"
+        },
+        {
+          "original": "R$ 15.534,75",
+          "value": 15534.75,
+          "currency": "BRL",
+          "label": "soma das três multas"
+        }
+      ],
+      "value_highest": 15534.75,
+      "reference_numbers": [],
+      "importance": 100,
+      "news_value": {
+        "score": 100,
+        "reasons": [
+          "multas a gestores",
+          "descumprimento de cautelar",
+          "concurso público"
+        ]
+      },
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover"
     }
   ]
 }
