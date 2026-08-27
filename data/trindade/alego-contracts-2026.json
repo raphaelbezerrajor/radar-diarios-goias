@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-21T11:34:04.549Z",
+  "generated_at": "2026-08-27T10:59:31.756Z",
   "source_url": "https://transparencia.al.go.leg.br/licitacoes-contratos-e-convenios/contratos-e-convenios/contratos",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-08-21",
+    "to": "2026-08-27",
     "last_checked": {
-      "from": "2026-08-14",
-      "to": "2026-08-21"
+      "from": "2026-08-21",
+      "to": "2026-08-27"
     }
   },
   "records": [
@@ -31,7 +31,7 @@
           "nome_suplente": "ROGERIO SILVA DE MATOS",
           "data_inicio_hgs": "2025-06-09",
           "data_termino_hgs": "2026-06-09",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlMmrUd7iA9-RCr2ixLfqBwFzBIfmcIBW8WR3KXa1kIUp",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIM9mmAbAqYehQSM9vc2TWyv_nPT-hu4XCO2jpGcLKxK",
           "url_portaria_gestores_nome": "Portaria nº 1037-2025 - processo nº 9602-2025 - (ID 2235087) - Gestor Abastecimento Aeronave.pdf"
         }
       ],
@@ -53,11 +53,50 @@
       "historico_fiscal_contratos": [
         {
           "nome_fiscal": "EDUARDO CAMPOS CARDOSO",
-          "url_portaria_fiscal": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/fbHDiLPxX2Q_y_LwyK4QV-fSamCl4acFlSlbwGzzCYzpd5fobqLk3yz1pIY62rz8",
+          "url_portaria_fiscal": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/fbHDiLPxX2Q_y_LwyK4QVws2-4vPkMdyq-p0TMiP_0avas6DjoYvKIl8B1T6z9qE",
           "url_portaria_fiscal_nome": "Portaria nº 1037-2025 - processo nº 9602-2025 - (ID 2235087) - Gestor Abastecimento Aeronave.pdf"
         }
       ],
       "current_contract": false
+    },
+    {
+      "id": 837,
+      "nome_favorecido": "NP3 CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
+      "cpf_cnpj": "01.667.155/0003-00",
+      "data_inicio": "2026-08-14T00:00:00.000-03:00",
+      "data_fim": "2026-12-31T00:00:00.000-03:00",
+      "valor_pago": 0,
+      "valor_empenhado": 1043964.31,
+      "numero_processo": "2864/2026",
+      "descricao": "",
+      "numero": "085/2026",
+      "tipo_contrato": "Fornecimento servicos",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/2WfZdluc-gcRKmgQhRPjFQ==/contrato-alego-837",
+      "contrato_tamanho": 61109202,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "GASPAR GONÇALVES DE OLIVEIRA",
+          "nome_suplente": "DIOGO PASCHOAL LEMOS",
+          "data_inicio_hgs": "2026-08-14",
+          "data_termino_hgs": "2027-08-14",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJuiBI65OJ6c0HU_9VQwGW7ssdbkJ3_u-EIxMfH073Oi",
+          "url_portaria_gestores_nome": "Portaria nº 9437-2026 - Processo nº 2864-2026- ( ID 2281005 ) Designa Gestor -Gaspar Gonçalves de Oliveira - Manutenção Veicular - NP3 Consultoria.pdf"
+        }
+      ],
+      "licitacao": {
+        "id": 1115,
+        "identificador": "Pregão Eletrônico n°21/2026",
+        "url_edital": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/nFcEtQVl8b5dkgZiVBwf6Q==/edital-alego-pregao-eletronico-n21-2026.pdf",
+        "tamanho_edital": 1868454
+      },
+      "historico_fiscal_contratos": [
+        {
+          "nome_fiscal": "YAGO MIQUELANTE FALEIROS",
+          "url_portaria_fiscal": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/fbHDiLPxX2Q_y_LwyK4QV7a-8tiljPYXvda9KM09p6sdAcDZ8BYBLxBfr-5oEF7O",
+          "url_portaria_fiscal_nome": "Portaria nº 9437-2026 - Processo nº 2864-2026- ( ID 2281005 ) Designa Gestor -Gaspar Gonçalves de Oliveira - Manutenção Veicular - NP3 Consultoria.pdf"
+        }
+      ],
+      "current_contract": true
     },
     {
       "id": 830,
@@ -79,7 +118,7 @@
           "nome_suplente": "LESLIO CESAR DE MORAES",
           "data_inicio_hgs": "2026-07-03",
           "data_termino_hgs": "2027-07-03",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPEO6X9T08ZNBOvjZF7hBn3ULsOIdQEKJqk-qqKXyKEv",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJUaEr5Q8PWPOI6sZgz0SbyVPDhnBRPV3iCjT4sCFU5o",
           "url_portaria_gestores_nome": "indePORTARIA Nº 7.843, DE 15 DE JUNHO DE 2026 - Henrique de medeiros.pdf"
         }
       ],
@@ -112,7 +151,7 @@
           "nome_suplente": "RAFAEL FRANCISCO SANTOS DE MELO",
           "data_inicio_hgs": "2026-07-01",
           "data_termino_hgs": "2026-10-01",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlLConiqrMRduAJSG3fItOCsI6gTKhpzY_-EcMyYVAn_E",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlO79w8ZKxk_mwg_gZDgHskVGntwq5jSONnqwUIECfzY_",
           "url_portaria_gestores_nome": "PORTARIA Nº 2.286, DE 22 DE JANEIRO DE 2026 - RCR EVENTOS.pdf"
         }
       ],
@@ -145,7 +184,7 @@
           "nome_suplente": "RAFAEL FRANCISCO SANTOS DE MELO",
           "data_inicio_hgs": "2026-06-30",
           "data_termino_hgs": "2026-09-30",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlH5JDUJDc4q2isERcPFVQO1BHYrmZQhW4sp-K7gV1Jtq",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlHfGIM_qry0lI3L5XE-LU8sF5Z1TJ__nBB-atLdTko1q",
           "url_portaria_gestores_nome": "portaria do contrato 082-2026.pdf"
         }
       ],
@@ -178,7 +217,7 @@
           "nome_suplente": null,
           "data_inicio_hgs": "2026-06-24",
           "data_termino_hgs": "2026-12-31",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJJ2LSVA7gr1K-Y7jhulq_U4NjPN1Oi-8w-Ezr-R_4sZ",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlEmmOUtg_55cLDAW6nKw-45-HnlIu2YJaE5mLBNPZNp_",
           "url_portaria_gestores_nome": "Portaria 8813 de 01 de julho de 2026.pdf"
         }
       ],
@@ -205,7 +244,7 @@
           "nome_suplente": "RENIS RANGEL CAVALCANTE FALEIROS",
           "data_inicio_hgs": "2026-06-19",
           "data_termino_hgs": "2027-06-19",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlP0meJpHZofI1vfcqXkqNcaG1vwaOxK3XfxWznypiMjN",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBKbn1OlqwFXnMmrwZi2rO44vgyAbCETDZx4x01JmGV-",
           "url_portaria_gestores_nome": "Portaria contrato 66-2026.pdf"
         }
       ],
@@ -232,7 +271,7 @@
           "nome_suplente": "DIOGO PASCHOAL LEMOS",
           "data_inicio_hgs": "2026-06-18",
           "data_termino_hgs": "2027-06-18",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBbX2U4W6vTak4KV5IYJAWOQDb1_mHht7Ecd5T2cWqY6",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlKHwWSx_5rVJDxe_yPcAyRe4lPTyJzV6T1InR_xJNgF-",
           "url_portaria_gestores_nome": "portaria 7838 15 de junho de 2026.pdf"
         }
       ],
@@ -259,7 +298,7 @@
           "nome_suplente": null,
           "data_inicio_hgs": "2026-06-16",
           "data_termino_hgs": "2029-06-16",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPWyGZv0X3dxM6yzV6V0fsCLE2sJGpsrfXA-J15bMw8S",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlA0OQvT2T_NPah_XjH3vXOasvXiCQh3WtECB4NS1QlLJ",
           "url_portaria_gestores_nome": "Portaria n° 7.670 - 2026 Processo nº 4174-2026 Designa Gestor André Lemos de Medeiros - 3F Ltda.pdf"
         }
       ],
@@ -269,6 +308,23 @@
         "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/OrI8DDi1Q3X1YC3MAEel8bcooGrJiJQU1_N7LqvOAWkHRBygR323kzBMGgDMtdchL7fGDMtPadnZ6JNNlVmFwjfeEPixP8UWwBSfv47VTBU=/pdf/edital-alego-dispensa-eletronica-n02-2026.pdf",
         "tamanho_edital": 1084196
       },
+      "historico_fiscal_contratos": [],
+      "current_contract": true
+    },
+    {
+      "id": 818,
+      "nome_favorecido": "ALUBAN EVENTOS LTDA",
+      "cpf_cnpj": "07.600.561/0001-70",
+      "data_inicio": "2026-06-12T00:00:00.000-03:00",
+      "data_fim": "2026-09-12T00:00:00.000-03:00",
+      "valor_pago": 0,
+      "valor_empenhado": 11899.98,
+      "numero_processo": "32250/2025",
+      "descricao": "",
+      "numero": "074/2026",
+      "tipo_contrato": "Fornecimento servicos",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/A5RDsL1LQLBqlXOpLeXIdw==/contrato-alego-818",
+      "contrato_tamanho": 15726531,
       "historico_fiscal_contratos": [],
       "current_contract": true
     },
@@ -292,7 +348,7 @@
           "nome_suplente": "RAFAEL FRANCISCO SANTOS DE MELO",
           "data_inicio_hgs": "2026-06-12",
           "data_termino_hgs": "2026-09-12",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlCsBp_OVGPC-adgQC_bfvOKAlKyxyj_nl9W5QHwgkNMs",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlHNUP_XJT1ocNf_uc_a9h2reAxUuaWMwN9ATWBFBjilH",
           "url_portaria_gestores_nome": "PORTARIA Nº 2.286, DE 22 DE JANEIRO DE 2026 - RCR EVENTOS.pdf"
         }
       ],
@@ -302,23 +358,6 @@
         "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/yc1xETxj7b3fjPuQuyWoD0G-pF9669i3YRum3eV-jxAXfSJGDhjUua5jHEz0tE7cL-Vjb9BiziEGmeQz3Ev7U3P9O_dUdTc9SUsLtqAllDN19CWr8dEcXU-PWKZZ8Ffr/pdf/edital-alego-pregao-eletronico-n01-2026.pdf",
         "tamanho_edital": 4220783
       },
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 818,
-      "nome_favorecido": "ALUBAN EVENTOS LTDA",
-      "cpf_cnpj": "07.600.561/0001-70",
-      "data_inicio": "2026-06-12T00:00:00.000-03:00",
-      "data_fim": "2026-09-12T00:00:00.000-03:00",
-      "valor_pago": 0,
-      "valor_empenhado": 11899.98,
-      "numero_processo": "32250/2025",
-      "descricao": "",
-      "numero": "074/2026",
-      "tipo_contrato": "Fornecimento servicos",
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/A5RDsL1LQLBqlXOpLeXIdw==/contrato-alego-818",
-      "contrato_tamanho": 15726531,
       "historico_fiscal_contratos": [],
       "current_contract": true
     },
@@ -342,7 +381,7 @@
           "nome_suplente": "ANDRE LEMOS DE MEDEIROS",
           "data_inicio_hgs": "2026-06-08",
           "data_termino_hgs": "2026-09-08",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlP-o76CUEY1_-uVItUD_faJYnD63-d5YH6wuVc6qHigA",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlG_SF55zQ0JrUmMIy1GoLqtWSBqjsLaGtxFfVI_xUOf7",
           "url_portaria_gestores_nome": "PORTARIA GESTORES GÓIAS CENTRAL.pdf"
         }
       ],
@@ -375,43 +414,10 @@
           "nome_suplente": "RAFAEL FRANCISCO SANTOS DE MELO",
           "data_inicio_hgs": "2026-05-29",
           "data_termino_hgs": "2026-08-29",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlEm38fNCDfKWBC2DH0NYoFqScUBXigBpSuHONsenYhpB",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlKz8lyrp8W9DcF2tfHQVz1d2NrfwSXq23iSkXEkU5Bne",
           "url_portaria_gestores_nome": "Portaria 2286 2026 contrato 068 2026.pdf"
         }
       ],
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 811,
-      "nome_favorecido": "RCR EVENTOS LTDA",
-      "cpf_cnpj": "22.140.284/0001-54",
-      "data_inicio": "2026-05-26T00:00:00.000-03:00",
-      "data_fim": "2026-08-26T00:00:00.000-03:00",
-      "valor_pago": 0,
-      "valor_empenhado": 100599.84,
-      "numero_processo": "32250/2025",
-      "descricao": "O objeto do presente instrumento é a LOCAÇÃO COM SERVIÇOS DE TRANSPORTE, MONTAGEM E DESMONTAGEM (MUNICÍPIO DE ALEXÂNIA-GO 30/05/2026 e APARECIDA DE GOIÂNIA-GO 03/06/2026), SOB DEMANDA, DE EQUIPAMENTOS E ESTRUTURAS E MATERIAIS, COMPREENDENDO TENDAS, PALCOS, SOM, MESAS, CADEIRAS, CLIMATIZADORES E OUTROS, para atender às demandas da Assembleia Legislativa do Estado de Goiás.",
-      "numero": "64/2026",
-      "tipo_contrato": "Fornecimento servicos",
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/ZHU04TVXwf9iVzxsaguXlw==/contrato-alego-811",
-      "contrato_tamanho": 16289025,
-      "historico_gestor_suplentes": [
-        {
-          "nome_gestor": "RENIS RANGEL CAVALCANTE FALEIROS",
-          "nome_suplente": "RAFAEL FRANCISCO SANTOS DE MELO",
-          "data_inicio_hgs": "2026-05-26",
-          "data_termino_hgs": "2026-08-26",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlE9koib0-Pwyl0D8mCp4aJMZHY7QQLow29pWmJU6GkgS",
-          "url_portaria_gestores_nome": "PORTARIA Nº 2.286, DE 22 DE JANEIRO DE 2026 - RCR EVENTOS.pdf"
-        }
-      ],
-      "licitacao": {
-        "id": 1092,
-        "identificador": "Pregão Eletrônico nº 01/2026",
-        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/yc1xETxj7b3fjPuQuyWoD0G-pF9669i3YRum3eV-jxAXfSJGDhjUua5jHEz0tE7cL-Vjb9BiziEGmeQz3Ev7U3P9O_dUdTc9SUsLtqAllDN19CWr8dEcXU-PWKZZ8Ffr/pdf/edital-alego-pregao-eletronico-n01-2026.pdf",
-        "tamanho_edital": 4220783
-      },
       "historico_fiscal_contratos": [],
       "current_contract": true
     },
@@ -435,7 +441,7 @@
           "nome_suplente": "RODRIGO DE BARROS",
           "data_inicio_hgs": "2026-05-22",
           "data_termino_hgs": "2027-05-22",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlNb9ervPHn6O1SKQ5Uj_004n2alahmz5tHKztinhr84Q",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGgPRid9v_e-5YWP_bpguXJxlXsorm31DuuvTo279Qc_",
           "url_portaria_gestores_nome": "Portaria n° 6.959 -2026 - Processo 28176-2025 - Designa Gestor JOÃO ANISIO - NTSEC.pdf"
         }
       ],
@@ -444,39 +450,6 @@
         "identificador": "Pregão Eletrônico nº 13/2026",
         "url_edital": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/RnvYmmQ0IENbVDOHNosg1w==/edital-alego-pregao-eletronico-n13-2026.pdf",
         "tamanho_edital": 2212581
-      },
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 810,
-      "nome_favorecido": "Aluban Eventos Ltda ",
-      "cpf_cnpj": "07.600.561/0001-70",
-      "data_inicio": "2026-05-22T00:00:00.000-03:00",
-      "data_fim": "2026-08-22T00:00:00.000-03:00",
-      "valor_pago": 0,
-      "valor_empenhado": 1983.33,
-      "numero_processo": "32250/2025",
-      "descricao": "Contratação de 1 Banheiro químico tipo trailer móvel para edição do Programa Deputados Aqui. Caldas Novas - GO, na data de 23/05/2026.",
-      "numero": "Contrato n: 061/2026",
-      "tipo_contrato": "Aluguel",
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/UgKJI1xq6ZHhJ4jv7CXg8A==/contrato-alego-810",
-      "contrato_tamanho": 14067505,
-      "historico_gestor_suplentes": [
-        {
-          "nome_gestor": "RENIS RANGEL CAVALCANTE FALEIROS",
-          "nome_suplente": null,
-          "data_inicio_hgs": "2026-05-22",
-          "data_termino_hgs": "2026-08-22",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJTTgQ9Kutu2AVOLZMRN33Gsm8ZvakujQB6f6iD4g8PT",
-          "url_portaria_gestores_nome": "Portaria 2286 2026 contrato 061-2026.pdf"
-        }
-      ],
-      "licitacao": {
-        "id": 1092,
-        "identificador": "Pregão Eletrônico nº 01/2026",
-        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/yc1xETxj7b3fjPuQuyWoD0G-pF9669i3YRum3eV-jxAXfSJGDhjUua5jHEz0tE7cL-Vjb9BiziEGmeQz3Ev7U3P9O_dUdTc9SUsLtqAllDN19CWr8dEcXU-PWKZZ8Ffr/pdf/edital-alego-pregao-eletronico-n01-2026.pdf",
-        "tamanho_edital": 4220783
       },
       "historico_fiscal_contratos": [],
       "current_contract": true
@@ -501,7 +474,7 @@
           "nome_suplente": "DIOGO PASCHOAL LEMOS",
           "data_inicio_hgs": "2026-04-10",
           "data_termino_hgs": "2027-04-10",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJoQT5SBItNzPRgnK0ZBX4IrmVjMs6BPKUvuxf_v-lJb",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBu9zX_7gE8G7onF52BlhRIG-50HotMA0-HmGA-RvIHH",
           "url_portaria_gestores_nome": "Portaria 4.411 de 25 de março de 2026 - Processo 26252-2025 - ID2264944 - Seguro Sura S.A -.pdf"
         }
       ],
@@ -510,39 +483,6 @@
         "identificador": "Pregão Eletrônico nº 08/2026",
         "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/3jhGytHPHG4O6JX2V_5lgDEfNcFCtP99W1fAa3p0Z9-SFUw2Ys_c6ZarAdX5yhsTMVxiiNelTuNpjaBCQXv6jeazy335rDVc11suQJbLLI4alYwDtrabRQGhjwfB5llx/pdf/edital-alego-pregao-eletronico-n08-2026.pdf",
         "tamanho_edital": 57751578
-      },
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 791,
-      "nome_favorecido": "Metalcouros",
-      "cpf_cnpj": "01.186.098/0001-86",
-      "data_inicio": "2026-03-25T00:00:00.000-03:00",
-      "data_fim": "2027-03-25T00:00:00.000-03:00",
-      "valor_pago": 0,
-      "valor_empenhado": 263868,
-      "numero_processo": "26989",
-      "descricao": "Aquisição de condecorações",
-      "numero": "00153/2026",
-      "tipo_contrato": "Aquisicao",
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/OrXZoWmi8IlcnnHwcOjwSw==/contrato-alego-791",
-      "contrato_tamanho": 267641,
-      "historico_gestor_suplentes": [
-        {
-          "nome_gestor": "JARDEL HENRIQUE COUTINHO",
-          "nome_suplente": "ROSANA VALENTE TAPXURE",
-          "data_inicio_hgs": "2026-03-25",
-          "data_termino_hgs": "2027-03-25",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJ_fQEuVx1mOc_jFgRAXY2Lp-W_OSHw4XlGXHUbuq7VT",
-          "url_portaria_gestores_nome": "Portaria.pdf"
-        }
-      ],
-      "licitacao": {
-        "id": 1091,
-        "identificador": "Pregão Eletrônico nº 57/2025",
-        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/Lo8m3pe3YdH9YcN0R6eUThX0nJsL0i5rUDm4a1s9fmnA0sUfPchdcJ7Kv9hF3FS2JaOU9pmY1UkTqgq7T50__3zdeaByzqCORXLicz60_ILLIE33NS4qOoR_5JK7q0G7/pdf/edital-alego-pregao-eletronico-n57-2025.pdf",
-        "tamanho_edital": 15371068
       },
       "historico_fiscal_contratos": [],
       "current_contract": true
@@ -567,7 +507,40 @@
           "nome_suplente": "ROSANA VALENTE TAPXURE",
           "data_inicio_hgs": "2026-03-25",
           "data_termino_hgs": "2027-03-25",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlM7Ywpj4Ei4Ji8Yz219bG3GY-RpGhe3o881XZ5wbqZVQ",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGbEblemTK8C2MDfdZWbWBo7sfiTuCTl64ttOM0RfBXI",
+          "url_portaria_gestores_nome": "Portaria.pdf"
+        }
+      ],
+      "licitacao": {
+        "id": 1091,
+        "identificador": "Pregão Eletrônico nº 57/2025",
+        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/Lo8m3pe3YdH9YcN0R6eUThX0nJsL0i5rUDm4a1s9fmnA0sUfPchdcJ7Kv9hF3FS2JaOU9pmY1UkTqgq7T50__3zdeaByzqCORXLicz60_ILLIE33NS4qOoR_5JK7q0G7/pdf/edital-alego-pregao-eletronico-n57-2025.pdf",
+        "tamanho_edital": 15371068
+      },
+      "historico_fiscal_contratos": [],
+      "current_contract": true
+    },
+    {
+      "id": 791,
+      "nome_favorecido": "Metalcouros",
+      "cpf_cnpj": "01.186.098/0001-86",
+      "data_inicio": "2026-03-25T00:00:00.000-03:00",
+      "data_fim": "2027-03-25T00:00:00.000-03:00",
+      "valor_pago": 0,
+      "valor_empenhado": 263868,
+      "numero_processo": "26989",
+      "descricao": "Aquisição de condecorações",
+      "numero": "00153/2026",
+      "tipo_contrato": "Aquisicao",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/OrXZoWmi8IlcnnHwcOjwSw==/contrato-alego-791",
+      "contrato_tamanho": 267641,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "JARDEL HENRIQUE COUTINHO",
+          "nome_suplente": "ROSANA VALENTE TAPXURE",
+          "data_inicio_hgs": "2026-03-25",
+          "data_termino_hgs": "2027-03-25",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlCFUYVGk9yIFDGWBrozHdTQlWW1yiFP14SLc_TLqCTic",
           "url_portaria_gestores_nome": "Portaria.pdf"
         }
       ],
@@ -600,7 +573,7 @@
           "nome_suplente": "VINICIUS MARTINS VILELA",
           "data_inicio_hgs": "2026-03-18",
           "data_termino_hgs": "2027-03-18",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlEodHZ5NxLZAlXsufelp06TpWJS-RniqGMY5Oy8ju_Fs",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlNbtmgd25xi81cezhZSJ5H2l1jYHRbiVewDsCBndXrvE",
           "url_portaria_gestores_nome": "Publicação.pdf"
         }
       ],
@@ -633,35 +606,8 @@
           "nome_suplente": "CECILIA ALMEIDA COIMBRA",
           "data_inicio_hgs": "2026-02-01",
           "data_termino_hgs": "2027-02-01",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlM2P0p8nRF_VQSZNOWBX8NELw5AnVWvg_jF5YKNr_-EZ",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlL3Qa4cxkrOGSRnrYOJah_-mBtiYJvXz994XGIseJfey",
           "url_portaria_gestores_nome": "PORTARIA GESTORES ZÊNITE.pdf"
-        }
-      ],
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 749,
-      "nome_favorecido": "MANCINI COMUNICAÇÃO E MARKETING LTDA, CNPJ nº 10.483.412/0001-83; FULL PROPAGANDA LTDA, CNPJ nº 08.675.055/ 0001-03 e DESIGUAL PROPAGANDA LTDA, CNPJ nº 13.033.901/0001-21",
-      "cpf_cnpj": "10.483.412/0001-83",
-      "data_inicio": "2026-01-30T00:00:00.000-03:00",
-      "data_fim": "2027-01-30T00:00:00.000-03:00",
-      "valor_pago": 0,
-      "valor_empenhado": 27958500,
-      "numero_processo": "10080/2024",
-      "descricao": "",
-      "numero": "12/2026",
-      "tipo_contrato": "Fornecimento servicos",
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/vE5ys9vIZVnEbiHDWbGWEA==/contrato-alego-749",
-      "contrato_tamanho": 31344727,
-      "historico_gestor_suplentes": [
-        {
-          "nome_gestor": "KARLA DE CAMPOS SANTANA CUNHA",
-          "nome_suplente": "RAFAEL XAVIER SILVA",
-          "data_inicio_hgs": "2026-01-30",
-          "data_termino_hgs": "2027-01-30",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJZP2Wi8OJImO5AX0jYXi5RhJDdAUKlFc7RhAOPg54WO",
-          "url_portaria_gestores_nome": "PORTARIA Nº 2.667 DE 05 DE FEVEREIRO DE 2026 - Publicidade.pdf"
         }
       ],
       "historico_fiscal_contratos": [],
@@ -687,7 +633,7 @@
           "nome_suplente": "RENIS RANGEL CAVALCANTE FALEIROS",
           "data_inicio_hgs": "2026-01-30",
           "data_termino_hgs": "2027-01-30",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIAOsoY3S5b7LnclKjKJ8eEj-tzJJM8lJSX9r225E7Ki",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIFYmrGRCIl2-A0ICioH5qBZpRZ2NB7kub1EaStlMOsB",
           "url_portaria_gestores_nome": "PORTARIA Nº 2.575 DE 03 DE FEVEREIRO DE 2026 - ZOEWEB.pdf"
         }
       ],
@@ -697,6 +643,33 @@
         "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/3aZ9DKluJ1Cr4eTgh-3ZcjFdQ6Bkhw63KsIHbvF3vmitdAmDWYfo6dBVr431olazCQpfmwxVBp90K0-ddxJdpIHljlCA3v4hEU6ZhcZ-qCbzjK9Ni7J0C5XdqNIgxeOM/pdf/edital-alego-pregao-eletronico-n56-2025.pdf",
         "tamanho_edital": 7506539
       },
+      "historico_fiscal_contratos": [],
+      "current_contract": true
+    },
+    {
+      "id": 749,
+      "nome_favorecido": "MANCINI COMUNICAÇÃO E MARKETING LTDA, CNPJ nº 10.483.412/0001-83; FULL PROPAGANDA LTDA, CNPJ nº 08.675.055/ 0001-03 e DESIGUAL PROPAGANDA LTDA, CNPJ nº 13.033.901/0001-21",
+      "cpf_cnpj": "10.483.412/0001-83",
+      "data_inicio": "2026-01-30T00:00:00.000-03:00",
+      "data_fim": "2027-01-30T00:00:00.000-03:00",
+      "valor_pago": 0,
+      "valor_empenhado": 27958500,
+      "numero_processo": "10080/2024",
+      "descricao": "",
+      "numero": "12/2026",
+      "tipo_contrato": "Fornecimento servicos",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/vE5ys9vIZVnEbiHDWbGWEA==/contrato-alego-749",
+      "contrato_tamanho": 31344727,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "KARLA DE CAMPOS SANTANA CUNHA",
+          "nome_suplente": "RAFAEL XAVIER SILVA",
+          "data_inicio_hgs": "2026-01-30",
+          "data_termino_hgs": "2027-01-30",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOi5sJ8G-T_U43Z1brYLqlyIfzqL6Mi6aREHNpjBjHW9",
+          "url_portaria_gestores_nome": "PORTARIA Nº 2.667 DE 05 DE FEVEREIRO DE 2026 - Publicidade.pdf"
+        }
+      ],
       "historico_fiscal_contratos": [],
       "current_contract": true
     },
@@ -720,7 +693,7 @@
           "nome_suplente": "HENRIQUE CÉLIO MARTINS COELHO",
           "data_inicio_hgs": "2026-01-27",
           "data_termino_hgs": "2027-01-27",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlF4qnx5HKzmZKymlB2rQWFo4zKcJS4oOJN8-e9q99UJi",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJ-7keGvBvubSCU4KwDGoLVpKeuyAWZ3pHpzxO9L-pQa",
           "url_portaria_gestores_nome": "Portaria nº 2288-2026 - Processo nº 22500-2025- Designa Gestor - CECILIA ALMEIDA COIMBRA - CONTRATOS GOV.pdf"
         }
       ],
@@ -753,7 +726,7 @@
           "nome_suplente": "RENATO ALVES FIGUEIREDO",
           "data_inicio_hgs": "2025-12-22",
           "data_termino_hgs": "2028-12-22",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlNI7S50cB3HuSGY_lRmAYoL_-CRU0vnbVf7OuoxOqdVM",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlITODGX-BwrCRWlVMvlO3CvisAYyrBbjZVcCiaBY5a1U",
           "url_portaria_gestores_nome": "4364966-202601221329046394428BXADR.pdf"
         }
       ],
@@ -786,7 +759,7 @@
           "nome_suplente": "MARCOS ANTONIO MONTEIRO MAGALHAES",
           "data_inicio_hgs": "2025-10-26",
           "data_termino_hgs": "2026-10-25",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIdMbb_pa5schi7JEMw87npH9UiDg8malQHsH1PJQyJa",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlP8J5pZXu0YhNAFN0PhsvndyutQiVwe1jiwbM3qn_Hcb",
           "url_portaria_gestores_nome": "Portaria 1425-2025.pdf"
         }
       ],
@@ -813,7 +786,7 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": "2025-10-01",
           "data_termino_hgs": "2026-10-01",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBv_9JmrgI9Bw5o44LogzOBE_2iCd9t9_5lDgizDHnpR",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlNyw8qZlHYLItGzcldF5GbeukXdvEIiQv45teSlJRCCH",
           "url_portaria_gestores_nome": "4293497-202510011804283156350WJ56H.pdf"
         }
       ],
@@ -846,14 +819,14 @@
           "nome_suplente": "SANTIAGO FRANCISCO ALVES SANTOS",
           "data_inicio_hgs": "2025-09-17",
           "data_termino_hgs": "2026-09-17",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlMAp374GZif1rQ9kMTbgEovRQ-Q8g4itJb8jtjNYNNgJ",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlLkIgzTIVmBrc7oamCWSq2uuyk-H3HeID3ogEdD1sTBI",
           "url_portaria_gestores_nome": "Portaria nº 1.324 - 2025 - processo nº 18206-2025 (ID 2246979) - Concurso - FGV.pdf"
         }
       ],
       "historico_fiscal_contratos": [
         {
           "nome_fiscal": "BRUNA COELHO CARVALHO",
-          "url_portaria_fiscal": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/fbHDiLPxX2Q_y_LwyK4QV-JPx9aRmHy0LxsuZIAZcJHR6csdOe036lka5lAo8qKj",
+          "url_portaria_fiscal": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/fbHDiLPxX2Q_y_LwyK4QVxXM4AU5nLrnX7ejWIUa6C-BIOL-IOssnSJDMDBuoQdp",
           "url_portaria_fiscal_nome": "Portaria nº 1.324 - 2025 - processo nº 18206-2025 (ID 2246979) - Concurso - FGV.pdf"
         }
       ],
@@ -879,7 +852,7 @@
           "nome_suplente": "DIOGO PASCHOAL LEMOS",
           "data_inicio_hgs": "2025-07-29",
           "data_termino_hgs": "2026-09-06",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJ6TTpqbAUS3QzcrBPc-enND7sdKHFwxMiPWkhlMeHKp",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlFTHldvHyrCrsvAiwQZk7P_4nnUe62cPFyfnn1Qcl9g7",
           "url_portaria_gestores_nome": "4240067-202508061802283989629MNEUO.pdf"
         }
       ],
@@ -912,35 +885,8 @@
           "nome_suplente": "WANDERSON ELIAS CARDOSO",
           "data_inicio_hgs": "2025-08-11",
           "data_termino_hgs": "2027-08-11",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBzOs_B2BuXyk2Qrfc3rbVcgTCAkTcbW4tr507EXqMJ2",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPRZmSettD3J7IF8ZjPBTTM-TgWO5kGZeWkP6X7lNecU",
           "url_portaria_gestores_nome": "PORTARIA Nº 1194, DE 11 DE AGOSTO DE 2025 - TOP SYSTEM.pdf"
-        }
-      ],
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 669,
-      "nome_favorecido": "A & A INDUSTRIA E COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
-      "cpf_cnpj": "12.999.469/0001-65",
-      "data_inicio": "2025-07-03T00:00:00.000-03:00",
-      "data_fim": null,
-      "valor_pago": 69972,
-      "valor_empenhado": 69972,
-      "numero_processo": "",
-      "descricao": "AQUISIÇÃO DE CAFÉ EM PÓ TORRADO E MOÍDO, PARA ATENDER AS DEMANDAS DA ASSEMBLEIA LEGISLATIVA DO ESTADO DE GOIÁS -ALEGO, CONFORME CONDIÇÕES, QUANTIDADES, EXIGÊNCIAS ESTIMATIVAS DESCRITAS NO TERMO DE REFERÊNCIA, SENDO: *ITEM 1 - 2.100 PACOTES DE CAFÉ EM PÓ TORRADO E MOÍDO; *ITEM 2 - 700 PACOTES DE CAFÉ EM PÓ TORRADO E MOÍDO.",
-      "numero": "00241/2025",
-      "tipo_contrato": "Aquisicao",
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/8afM1dWcjJ2g7pYVSJbUsg==/contrato-alego-669",
-      "contrato_tamanho": 358276,
-      "historico_gestor_suplentes": [
-        {
-          "nome_gestor": "MANOEL LOURENCO CAMPOS JUNIOR",
-          "nome_suplente": "LEANDRO DE CASTRO FERNANDES",
-          "data_inicio_hgs": "2025-07-03",
-          "data_termino_hgs": "2025-12-31",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlNv21B4N2fz3PPHrzVUz8n5FmUloCOGk9LkfMpwqe7l5",
-          "url_portaria_gestores_nome": "4220212-202507041242573099378U5TDC.pdf"
         }
       ],
       "historico_fiscal_contratos": [],
@@ -966,7 +912,7 @@
           "nome_suplente": "ROBERTO SILVA RIBEIRO",
           "data_inicio_hgs": "2025-07-03",
           "data_termino_hgs": "2028-07-03",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPbIXhDCiXAS3hKNzHk5FiFlzFhr_tBKOGcNxfXgQ6k9",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOiGMpp5G9XAt8tW3JI62SmMpH8MHA-jZmGriEs6POyj",
           "url_portaria_gestores_nome": "4222030-202507080802103736302A7XRP.pdf"
         }
       ],
@@ -976,6 +922,33 @@
         "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/HQtM_ItfdfCWmGvTetdp-Gb4lZmVuAq04VlkgEFtfWZGc5rR-P2RtmyRQP6cN9DUatVVMjg72IiphqKcgn270QSVS2p-0SEMv2tFkR2VdvUCWez3PELJgXP81rnX4RVC/pdf/edital-alego-pregao-eletronico-n19-2025.pdf",
         "tamanho_edital": 7089359
       },
+      "historico_fiscal_contratos": [],
+      "current_contract": true
+    },
+    {
+      "id": 669,
+      "nome_favorecido": "A & A INDUSTRIA E COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
+      "cpf_cnpj": "12.999.469/0001-65",
+      "data_inicio": "2025-07-03T00:00:00.000-03:00",
+      "data_fim": null,
+      "valor_pago": 69972,
+      "valor_empenhado": 69972,
+      "numero_processo": "",
+      "descricao": "AQUISIÇÃO DE CAFÉ EM PÓ TORRADO E MOÍDO, PARA ATENDER AS DEMANDAS DA ASSEMBLEIA LEGISLATIVA DO ESTADO DE GOIÁS -ALEGO, CONFORME CONDIÇÕES, QUANTIDADES, EXIGÊNCIAS ESTIMATIVAS DESCRITAS NO TERMO DE REFERÊNCIA, SENDO: *ITEM 1 - 2.100 PACOTES DE CAFÉ EM PÓ TORRADO E MOÍDO; *ITEM 2 - 700 PACOTES DE CAFÉ EM PÓ TORRADO E MOÍDO.",
+      "numero": "00241/2025",
+      "tipo_contrato": "Aquisicao",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/8afM1dWcjJ2g7pYVSJbUsg==/contrato-alego-669",
+      "contrato_tamanho": 358276,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "MANOEL LOURENCO CAMPOS JUNIOR",
+          "nome_suplente": "LEANDRO DE CASTRO FERNANDES",
+          "data_inicio_hgs": "2025-07-03",
+          "data_termino_hgs": "2025-12-31",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOppf-2PtPaIy5Rt7ARZ2szTP1vykBBLjjKCQ1WEMdmQ",
+          "url_portaria_gestores_nome": "4220212-202507041242573099378U5TDC.pdf"
+        }
+      ],
       "historico_fiscal_contratos": [],
       "current_contract": true
     },
@@ -999,7 +972,7 @@
           "nome_suplente": "FABIANO AMARAL VANNUCCI",
           "data_inicio_hgs": "2025-07-02",
           "data_termino_hgs": "2027-07-02",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIfcZpr1DLlS2iqIRFfT5kNXpL2wCCKa9E_dIPDoQox4",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDSKaaimHvxWg8SqdKuHc3YiOl_wF3t3VqJqyu_BzNg1",
           "url_portaria_gestores_nome": "portaria 1115.pdf"
         }
       ],
@@ -1032,7 +1005,7 @@
           "nome_suplente": "RENATO ALVES FIGUEIREDO",
           "data_inicio_hgs": "2025-04-25",
           "data_termino_hgs": "2028-04-14",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGUV08pbsNDgrhH6dZvFmUtrOfsuUYBnEHOUCTg25zSQ",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAxXkSGHEjL-OopCunEDc4FFVtTQAf_TQUu7HzBJ0ytp",
           "url_portaria_gestores_nome": "Portaria nº 897-2025 - Processo nº 22453-2024 - Designa Gestor - Aquisição de Softwares.pdf"
         }
       ],
@@ -1065,7 +1038,7 @@
           "nome_suplente": "PEDRO HENRIQUE TELES DE CARVALHO",
           "data_inicio_hgs": "2025-04-16",
           "data_termino_hgs": "2030-04-11",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDcHBhT5g4PGHE2enYO1GoRCJpOjxumktCB98U6cJOeP",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJSahBzx49HCxJL0yo6q_mcysJnfQpyRdrV4N0wFogOE",
           "url_portaria_gestores_nome": "Portaria nº 875 - 2025 - Processo nº 22480-2024 - Designar Gestor - Manutenção Geradores.pdf"
         }
       ],
@@ -1098,7 +1071,7 @@
           "nome_suplente": "PEDRO HENRIQUE TELES DE CARVALHO",
           "data_inicio_hgs": "2025-04-08",
           "data_termino_hgs": "2025-05-22",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAtcUA4ZUAxGSn4nWhgfz2H8zTYxBfS9scrZCKdZh_Ks",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlFFdW1_1HacA2FbIIm9gSzRjLvZ8vv8weDsBkm-wDFP-",
           "url_portaria_gestores_nome": "Portaria nº 854-2025 - processo nº 14874-2024 - Ar COndicionado.pdf"
         },
         {
@@ -1139,7 +1112,7 @@
           "nome_suplente": "CIBELLE BATISTA DAMASCENO",
           "data_inicio_hgs": "2024-04-04",
           "data_termino_hgs": "2030-03-14",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAuo2l8I5MQQFtycOl3Uw1ctbfxJSAyKxefxIqh5xlGO",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPAjK6rFSD3Kq83MNoRlwsbpK1X8n7RqcrDFxSC0sTEj",
           "url_portaria_gestores_nome": "Portaria nº 499-2024 - Processo nº 2023002238 - Ata Mobiliário.pdf"
         }
       ],
@@ -1172,7 +1145,7 @@
           "nome_suplente": "RODRIGO DE BARROS",
           "data_inicio_hgs": "2025-03-06",
           "data_termino_hgs": "2030-03-12",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOL981qsyTHOBzgLQiwq_HrEhmlvBulYnq7MbCX1I7HP",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlF05aHocbcDfZ_IEDwJmY5OPNFaDhd_OMnfQ4cTxThHz",
           "url_portaria_gestores_nome": "Portaria nº 766 de 18 de março de 2025 - Gestor - Deputados Aqui.pdf"
         }
       ],
@@ -1205,41 +1178,8 @@
           "nome_suplente": "CIBELLE BATISTA DAMASCENO",
           "data_inicio_hgs": "2024-04-04",
           "data_termino_hgs": "2025-04-02",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPL8aYVSOc0ofaHK-QlZjnXY7ie1W0owPIhlJa2MrHFY",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlI5ozSYWhjPeHHsRLJRF2E03x-4nCfzZdUKi0Rob7lg_",
           "url_portaria_gestores_nome": "3876959-202404041045508359233FZKVW(1314).pdf"
-        }
-      ],
-      "licitacao": {
-        "id": 949,
-        "identificador": "Pregão Eletrônico nº 02.2024",
-        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/J5BmsUMHCjdxZirC0MXboIh4FTJHbKt1RWzBqcXP3pNjagLal2hYDhEEMiZ6-s7T-9OW53sPLIuinBQsXpVpBSm6ysP4eWc9B5Tk5TzxCwKLEUsyl_3BmjeOl1ozJd32/pdf/edital-alego-pregao-eletronico-n02-2024.pdf",
-        "tamanho_edital": 1920705
-      },
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 645,
-      "nome_favorecido": "TECNO2000 INDÚSTRIA E COMÉRCIO",
-      "cpf_cnpj": "21.306.287/0001-52",
-      "data_inicio": "2025-02-05T00:00:00.000-03:00",
-      "data_fim": "2030-02-05T00:00:00.000-03:00",
-      "valor_pago": 376522.5,
-      "valor_empenhado": 376522.5,
-      "numero_processo": "2023002238 (ID 2223826)",
-      "descricao": "MOBILIÁRIO ADMINISTRATIVO, incluindo montagem e alocação, destinados a atender as demandas da Assembleia Legislativa do Estado de Goiás.",
-      "numero": "04/2025",
-      "tipo_contrato": "Fornecimento",
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/CbBOziG1aE2fyRNRtQHswA==/contrato-alego-645",
-      "contrato_tamanho": 20932446,
-      "historico_gestor_suplentes": [
-        {
-          "nome_gestor": "BRUNO RODRIGUES ARANTES",
-          "nome_suplente": "CIBELLE BATISTA DAMASCENO",
-          "data_inicio_hgs": "2024-04-04",
-          "data_termino_hgs": "2030-02-05",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOkcfW_4P-MG-rsMjOqQzjjJ0ENeE5QKmz5stkwgK-LO",
-          "url_portaria_gestores_nome": "Portaria nº 499-2024 - Processo nº 2023002238 - Ata Mobiliário.pdf"
         }
       ],
       "licitacao": {
@@ -1271,7 +1211,7 @@
           "nome_suplente": "RODRIGO DE BARROS",
           "data_inicio_hgs": "2025-02-05",
           "data_termino_hgs": "2028-02-05",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlFH38sno9pXNXQzJ7TA_qZJ4fFwZvGKFt7GS7NppnU4y",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlL0-TKqf84RMd_Cx9-QjvD2G-l2lhvDDPGsQJIYMoS0d",
           "url_portaria_gestores_nome": "4084502-202502092312010851109RLXVB(1945).pdf"
         }
       ],
@@ -1280,6 +1220,39 @@
         "identificador": "Pregão Eletrônico nº 56/2024",
         "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/veyJDTCIV7uaMRnRnvqnHUzIE2S5EYXdNWZAry9X78ANMDzGUVu_u69Vy6UUJ5BmYf2ZHVjlvw7tYElWF_DdCwls7eci0yqvWaxYeoogZZxgmLxp7VUzuZqT0-b9eZLU/pdf/edital-alego-pregao-eletronico-n56-2024.pdf",
         "tamanho_edital": 14999910
+      },
+      "historico_fiscal_contratos": [],
+      "current_contract": true
+    },
+    {
+      "id": 645,
+      "nome_favorecido": "TECNO2000 INDÚSTRIA E COMÉRCIO",
+      "cpf_cnpj": "21.306.287/0001-52",
+      "data_inicio": "2025-02-05T00:00:00.000-03:00",
+      "data_fim": "2030-02-05T00:00:00.000-03:00",
+      "valor_pago": 376522.5,
+      "valor_empenhado": 376522.5,
+      "numero_processo": "2023002238 (ID 2223826)",
+      "descricao": "MOBILIÁRIO ADMINISTRATIVO, incluindo montagem e alocação, destinados a atender as demandas da Assembleia Legislativa do Estado de Goiás.",
+      "numero": "04/2025",
+      "tipo_contrato": "Fornecimento",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/CbBOziG1aE2fyRNRtQHswA==/contrato-alego-645",
+      "contrato_tamanho": 20932446,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "BRUNO RODRIGUES ARANTES",
+          "nome_suplente": "CIBELLE BATISTA DAMASCENO",
+          "data_inicio_hgs": "2024-04-04",
+          "data_termino_hgs": "2030-02-05",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJjafEwsLSc6_t4w800DbMyjKb_mYdbIjHdeMWBT6CYT",
+          "url_portaria_gestores_nome": "Portaria nº 499-2024 - Processo nº 2023002238 - Ata Mobiliário.pdf"
+        }
+      ],
+      "licitacao": {
+        "id": 949,
+        "identificador": "Pregão Eletrônico nº 02.2024",
+        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/J5BmsUMHCjdxZirC0MXboIh4FTJHbKt1RWzBqcXP3pNjagLal2hYDhEEMiZ6-s7T-9OW53sPLIuinBQsXpVpBSm6ysP4eWc9B5Tk5TzxCwKLEUsyl_3BmjeOl1ozJd32/pdf/edital-alego-pregao-eletronico-n02-2024.pdf",
+        "tamanho_edital": 1920705
       },
       "historico_fiscal_contratos": [],
       "current_contract": true
@@ -1304,7 +1277,7 @@
           "nome_suplente": "FABRIZZIO CABRAL DE LACERDA",
           "data_inicio_hgs": "2025-01-24",
           "data_termino_hgs": "2027-06-22",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDzwogtRTScFmH7WH8La0X7y34DJ0z46SQbLcCt7cHwD",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGbqwL8TsHNbcuVtoy0eXAboRshUhvhhQLlFgyioDtDE",
           "url_portaria_gestores_nome": "4083160-202501271819562137105JXANC.pdf"
         }
       ],
@@ -1337,7 +1310,7 @@
           "nome_suplente": "BRUNA COELHO CARVALHO",
           "data_inicio_hgs": "2025-01-20",
           "data_termino_hgs": "2030-01-20",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJ-TPa_i8SXj8LrDScl0US5Qolz6cnecNuyfLgwfNkOh",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlD1S-QtDLF7MTWzCEt91Py39T-r1xudwya_oXTSN5fKT",
           "url_portaria_gestores_nome": "Portaria nº 720 -2024 - Processo nº 20324-2024 - Designa Gestor - Contrato nº 25-2024 - Contratação Estagiarios.pdf"
         }
       ],
@@ -1379,7 +1352,7 @@
           "nome_suplente": "REGINALDO GOMES DE OLIVEIRA",
           "data_inicio_hgs": "2024-11-04",
           "data_termino_hgs": "2026-10-30",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIzfBuuGHxBgYOdQIRqIIjZQBUx1bj10eF5sfHxVLnGh",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDcNrd3VM8pyF0IRshUNwIfvXmdmr1zBvSb-NwxvR_nh",
           "url_portaria_gestores_nome": "4025059-202411040816120953259QGUAH(1775).pdf"
         }
       ],
@@ -1412,7 +1385,7 @@
           "nome_suplente": "WEBERTY FERREIRA NUNES",
           "data_inicio_hgs": "2024-10-07",
           "data_termino_hgs": "2029-10-07",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlFObjvDUVG0bgzickRlMVMhUlusDknuDzjmJ_Jhuc-vV",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlNtWCZrLVJ3W08zuhlCu99spv05BJNuFpRmXaYA5_mOj",
           "url_portaria_gestores_nome": "Portaria nº 648-2024 - Processo nº 12820-2024 - Designa Gestor - Contrato nº 20-2024 - Sistema Detecção e Alarme Incêndio.pdf"
         }
       ],
@@ -1439,7 +1412,7 @@
           "nome_suplente": "GUILHERME FERNANDO DAS NEVES SILVA",
           "data_inicio_hgs": "2024-03-06",
           "data_termino_hgs": "2029-03-06",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlLX6F_51c1uxZsrx5ZEPYJbUDmUHJXA2XjsxxVssuGbY",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJJEJqv3X0tAzsLuq1tGNxH8RE8C93YMGFwva5G17JIN",
           "url_portaria_gestores_nome": "Portaria nº 475-2024 - Processo nº 2023010270  - Designa Gestor - Contrato nº 07-2024 - Licença Software.pdf"
         }
       ],
@@ -1466,7 +1439,7 @@
           "nome_suplente": "FELIPE MACEDO DE OLIVEIRA",
           "data_inicio_hgs": "2024-02-20",
           "data_termino_hgs": "2029-02-20",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlEZA7pjaXTVS_efhIj8sLqjGSZ3Eh_sKeCiNscBth_XT",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlKOZcm53Hd9OwAg5OOiaPznbITTCI3F0MOxdYBb1Tm1e",
           "url_portaria_gestores_nome": "Portaria nº 452-2024 - Designa Gestor - Contrato 06-2024 - Processo 2023009892 -Módulo Engenharia.pdf"
         }
       ],
@@ -1493,7 +1466,7 @@
           "nome_suplente": "REGINALDO GOMES DE OLIVEIRA",
           "data_inicio_hgs": "2024-01-31",
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlM7iOHqDq45mM_PkOYbGfKOULw_2-DdXAxGhlth3U_DW",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPU85o74xij3q7C6CxRn8JoaIZphuNuKerc33g4Q26_z",
           "url_portaria_gestores_nome": "PORTARIA Nº 436- Gestor_.pdf"
         }
       ],
@@ -1542,7 +1515,7 @@
           "nome_suplente": "CAIRO REZENDE DOS SANTOS",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlHHhfJdA6m4zaDlAkyhlZym33ZEPEr0uotTGzYFR19ai",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAEXaijhJtTXY1IzBxQeXM56sem3o-djFxQ4lcMzTmPF",
           "url_portaria_gestores_nome": "Portaria 431 -24 - gestor.pdf"
         }
       ],
@@ -1551,62 +1524,6 @@
         "identificador": "Pregão Eletrônico nº 03.2024",
         "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/SPCpZsYDqiRK4XNo2mqrxcNd7HaeRAb2NxPH06knx1TBDdFOgsR0HPnQ9yr-b-gBF29u7gzSnK1WWGc_dvR3UnKpmd2yhmm72Zc5EpOVZt3Yea7wfBIMUb_3zHInKATB/pdf/edital-alego-pregao-eletronico-n03-2024.pdf",
         "tamanho_edital": 3142993
-      },
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 666,
-      "nome_favorecido": "DESPRAG DEDETIZADORA LTDA",
-      "cpf_cnpj": "03.883.919/0001-69",
-      "data_inicio": "2023-08-25T00:00:00.000-03:00",
-      "data_fim": "2026-08-25T00:00:00.000-03:00",
-      "valor_pago": 0,
-      "valor_empenhado": 60000,
-      "numero_processo": "3202.2023",
-      "descricao": "É a contratação de empresa especializada para a prestação de SERVIÇO DE CONTROLE SANITÁRIO INTEGRADO NO COMBATE DE VETORES E PRAGAS URBANAS PARA DESINSETIZAÇÃO, DESCUPINIZAÇÃO E DESRATIZAÇÃO, para atender às demandas da Assembleia Legislativa do Estado de Goiás.",
-      "numero": "018/2023",
-      "tipo_contrato": "Fornecimento",
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/zOTMyRhkz_CJL7z8Y4md5w==/contrato-alego-666",
-      "contrato_tamanho": 20176490,
-      "historico_gestor_suplentes": [
-        {
-          "nome_gestor": "JOAO PAULO ANTUNES DA SILVA",
-          "nome_suplente": "FRANCISCO EDISON SAMPAIO",
-          "data_inicio_hgs": "2025-07-02",
-          "data_termino_hgs": "2026-08-25",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAxJWo-Nb3ZMthWh53a_D-IOkwmcehNFXCvlELBwB9kN",
-          "url_portaria_gestores_nome": "Portaria Gestor Desprag.pdf"
-        }
-      ],
-      "aditivo": [
-        {
-          "url_aditivo": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/bwtgclPgJ9JBiWh3E-4Mag==",
-          "url_aditivo_nome": "Primeiro Termo Aditivo -3202.2023-  Desprag Dedetizadora.pdf",
-          "data_inicial": "2024-08-26",
-          "data_final": "2025-08-25",
-          "valor": "60000.0"
-        },
-        {
-          "url_aditivo": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/0VLr8m7USwSuDGZhwQl4YQ==",
-          "url_aditivo_nome": "2º Termo Aditivo Desprag.pdf",
-          "data_inicial": "2025-08-26",
-          "data_final": "2026-08-25",
-          "valor": "60000.0"
-        },
-        {
-          "url_aditivo": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/dImwwE28cGgS6wyWiEO3fw==",
-          "url_aditivo_nome": "Terceiro Termo Aditivo ao contrato 018-2023 - DESPRAG DEDETIZADORES LTDA.pdf",
-          "data_inicial": "2026-08-26",
-          "data_final": "2027-08-25",
-          "valor": "60000.0"
-        }
-      ],
-      "licitacao": {
-        "id": 909,
-        "identificador": "Cotação Eletrônica n. 11/2023",
-        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/JovTb_Z2GslDFoMMveBSq4PxI1mUrNdDVq96nx8L1mCv57bKn3vQkbDnJLWGoI4I8jJHveq5e5qB35KMYkeGf-bbHh-5YsLerukxUg7D_r0xPUBRNWJxpp1cqbYuF4kI/pdf/edital-alego-cotacao-eletronica-n-11-2023.pdf",
-        "tamanho_edital": 1587008
       },
       "historico_fiscal_contratos": [],
       "current_contract": true
@@ -1631,7 +1548,7 @@
           "nome_suplente": "UILSON ALCANTARA MANZAN JUNIOR",
           "data_inicio_hgs": "2023-02-02",
           "data_termino_hgs": "2023-04-20",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOWdSLZUxsHxjoReo5AbX8W_ME9ze7KOOy4bIPJNXMup",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlFN_7XW2Ir_y6eOCMqqZriugNBdFUDpcFBfy6-JD3j03",
           "url_portaria_gestores_nome": "Portaria 016-2023 - 201070300 - TRIVALE- Contrato 04-2023 (Substituir).pdf"
         },
         {
@@ -1639,11 +1556,11 @@
           "nome_suplente": "UILSON ALCANTARA MANZAN JUNIOR",
           "data_inicio_hgs": "2023-04-20",
           "data_termino_hgs": "2025-02-02",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlF75f9KkVZallzIkXpJ8Tgo6SH_VZaIP5UsPlaheX5Lc",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlCRRPLlQJ8yvuO5Kr5tBHiH6Os5ViAnZB5WXkULTaHVr",
           "url_portaria_gestores_nome": "Portaria 130- 2023-  2022003839_TRUVALE INSTITUIÇÃO DE PAGAMENTO LTDA_Contrato-04-2023 (Designar).pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOFpa_yVCRNbsME44EaR3_0Fv88OyVPbyP-_On3wzGDB/contrato-alego-520",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIuZ3O63wMebwxHOMiJxLObUtl8Xux5hzgmEyDQUVmXw/contrato-alego-520",
       "aditivo": [
         {
           "url_aditivo": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/txF11Mkqr4nn17BsAuqWUA==",
@@ -1703,7 +1620,7 @@
           "nome_suplente": "LEONARDO RASSI NETO",
           "data_inicio_hgs": "2022-11-09",
           "data_termino_hgs": "2023-03-02",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPPlpPnJEWf5m30ixxeQibCssiVq1ABk3o7VPgKfENkc",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlLFDR5_hNzDA3LasVd9-klOY_Yr0venKpKx5QxEWw1Sx",
           "url_portaria_gestores_nome": "Publicação Portaria 27-2022.pdf"
         },
         {
@@ -1711,11 +1628,11 @@
           "nome_suplente": "RENIS RANGEL CAVALCANTE FALEIROS",
           "data_inicio_hgs": "2023-03-02",
           "data_termino_hgs": "2026-11-09",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlC5GBHWYShfPOd3LErtHUvXopqTPRcEB7Z9Y8hfKPH9L",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlK9OUmzAnk0QTZduAjJH3VcNX3a4fOltf5Z2sxpcTkS_",
           "url_portaria_gestores_nome": "Portaria 013-2023 - 2021006729 - ÁGAPE ASSESSORIA E CONSULTORIA - Contrato-53-2022 (Substituir).pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlCTSk2auOZeehPHUmCfpvORGMBRE97tP-gEAZagLUDcL/contrato-alego-539",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOCj-Q_qd8jlg1uAzSTntgxIMHqusjnb6D9I6gclOrr8/contrato-alego-539",
       "licitacao": {
         "id": 773,
         "identificador": "Pregão Eletrônico nº 44/2021",
@@ -1745,11 +1662,11 @@
           "nome_suplente": "MONISE CAMPOS PEREIRA",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOW8qcXTmsyz4RG4GQb3A_Rr1ebUTSwAWk70mw1YLs9q",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlC8MtjqOaqd2fEpxz6miHy2UnxaPTnVU_1MhDoRC-Xkz",
           "url_portaria_gestores_nome": "Portaria 078 - 2022003715.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlD429zm6EjBj9SukGcsoxT98eOYw_hRlqKEAk8E1mOlj/contrato-alego-493",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBsaDk-hkySvZmuyCOSmPEmUmamuadj-POsYtdkUyPCZ/contrato-alego-493",
       "aditivo": [
         {
           "url_aditivo": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/UPE0zjx7mr6goT-VQWGo4A==",
@@ -1795,11 +1712,11 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlNfFWlFmLfBGGn3kXWd6H9exTG078vmSuPWmpNnY_9Eg",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlELiGkR3P-D4x4N5bA1CJiZUoPUsf_HufxonSeXT4A2T",
           "url_portaria_gestores_nome": "Portaria nº 110 Processo nº 2021007837 - Substitui gestor para o contrato nº 50-2022 - Eloisa Silva Veloso.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlFkOt5CNFwCX1uuXek63UnrlTXgwLScT-qPh-zX5Z4mI/contrato-alego-538",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJMPsqydDxR9KJgKp2-PHx94VmqemhxDSAx-lATJ53YH/contrato-alego-538",
       "aditivo": [
         {
           "url_aditivo": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/7SYMFXTr1tDufaiLla-W7g==",
@@ -1838,7 +1755,7 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": "2022-07-06",
           "data_termino_hgs": "2032-08-31",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAE9nErTkgR90VzuGYUjxIUQh4O1b3-v_K98e240Qr_R",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOsS5_tF5jJtZWSqQp8qM186GxOF4YOv1JjK81SMz3q_",
           "url_portaria_gestores_nome": "Portaria 774-2022 - Publicação.pdf"
         }
       ],
@@ -1871,11 +1788,11 @@
           "nome_suplente": "WENDELL LOPES DA SILVA",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGrZ6xl3VJkhKD6HmzeX766uUj1vWJgcVSFgyeRy84yQ",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIPkNik3JWfZaN3JR4HbFWxlrB3wxPIL35yUt0lEjZ2a",
           "url_portaria_gestores_nome": "Portaria nº 038 Processo nº 2022003332 - Advancis Max Equipamentos Eletrônicos.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlCDRSHbP6A81DS6DNs5iy228iDqzqg9OGDyi6w9HPV8P/contrato-alego-532",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlEqBBeUvauHr8cn21uN6t6BxU8Dglc6sum0p0Tw3ITUl/contrato-alego-532",
       "licitacao": {
         "id": 814,
         "identificador": "Pregão Eletrônico nº 13/2022",
@@ -1905,7 +1822,7 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": "2022-07-06",
           "data_termino_hgs": "2027-08-11",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAnvzVlFzJCHV6aHbGCR6QB5EBG3Y97DY44tT12z-5xH",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGqdzLUU2qofEnjYGeVIeqaADDUqVZdYjrqYXeMiHece",
           "url_portaria_gestores_nome": "Portaria 774-2022 - Publicação.pdf"
         }
       ],
@@ -1938,7 +1855,7 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": "2022-07-19",
           "data_termino_hgs": "2027-07-19",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGXTYWxbvA9KVQdZIbP9Z0FwSXMAmJxFrogjs-qLIlpe",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJLAwt0qGnkEVAVF7-93bincyHxX2xqOKO7-IfwXq0FZ",
           "url_portaria_gestores_nome": "Portaria 790-2022 com publicação.pdf"
         },
         {
@@ -1946,7 +1863,7 @@
           "nome_suplente": "DAIVIS LEONARDO ALVES CAVALCANTE",
           "data_inicio_hgs": "2024-05-16",
           "data_termino_hgs": "2027-07-14",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAdQomG-_ELh9cirDfxa3XGHtDf76ChOsnYO-hw8BwvR",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlLrJ64L0FjKjAF1cyIcqNx3fEd3iiJEp0jJ-7BSqeXRM",
           "url_portaria_gestores_nome": "Portaria 533-2024.pdf"
         }
       ],
@@ -1979,11 +1896,11 @@
           "nome_suplente": "EGNALDO HONORATO DA SILVA LOPES",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPxkXAec4Qc4JLSQu-91tOeVjQWCBGrTKQPygqZSlRo2",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlHvQvrOb5lQuJPaedf04yzOKOkbtJ_TA8aTvr6aOHvw2",
           "url_portaria_gestores_nome": "Portaria nº 044- Processo nº 2021008427- Substitui gestor contrato nº 029-2022 banco santander.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGa_vEWrVTJ3_CoBtRE7rY8J4t6HXU-LgwV_qhGLFwzs/contrato-alego-472",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlORACCS3SeeA4sE_hK-lAssF2Gc-NSXMISlPS_-X8seF/contrato-alego-472",
       "licitacao": {
         "id": 822,
         "identificador": "Pregão Presencial nº 02.2022",
@@ -2013,11 +1930,11 @@
           "nome_suplente": "WESCLEI APARECIDO BARBOSA",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlN0_djT4PeXbj76d_ETTXU496THATIYm3olQYaDVHowo",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlCZlc2xtmh9WE-vs5x29VhJurJki3ZhevtCjCYOvR7cJ",
           "url_portaria_gestores_nome": "Portaria 073 - 2022001313.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOLkgp3ytu1NdKbjWvOgpZX7KaB_pBHJ1hE_mP2wxGdo/contrato-alego-470",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGMMpRslrl7cwx8U0kp3UZm-1-J7Z01fmWSSmS2SIfJp/contrato-alego-470",
       "licitacao": {
         "id": 802,
         "identificador": "Pregão Eletrônico nº 03/2022",
@@ -2047,57 +1964,16 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlATdg9rVSOCwdgqty0xqGH0VgcGZ8RVIawVE1pLhS2lg",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPx_uvWPRtofnGms05Ic3l1klCPbCeBQZAX92fP73xZL",
           "url_portaria_gestores_nome": "Portaria de N°125, 20 de abril de 2023.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJoQT5SBItNzPRgnK0ZBX4Iuq6E-cx8LU2N58QZibGt-/contrato-alego-528",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBu9zX_7gE8G7onF52BlhRJ3rQLhIxO2P8_wi4HPpVrL/contrato-alego-528",
       "licitacao": {
         "id": 777,
         "identificador": "Pregão Eletrônico nº 47/2021",
         "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/zCKHvYlbme66olYB6NHUbPn_mCaOSBlhyRReTM0ZR3xVtTJvX3l0p-rNqD8ORhXB3QKMPLIlceIelW4mud3ny2xwrp68iJBMIhYH4k4Wkmc=/pdf/edital-alego-pregao-eletronico-n47-2021.pdf",
         "tamanho_edital": 1708749
-      },
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 526,
-      "nome_favorecido": "VETORSCAN SOLUÇÕES CORPORATIVAS E IMPORTAÇÃO EIRELI – EPP",
-      "cpf_cnpj": "11.113.866/0001-25",
-      "data_inicio": "2022-04-07T00:00:00.000-03:00",
-      "data_fim": "2027-04-07T00:00:00.000-03:00",
-      "valor_pago": 316800,
-      "valor_empenhado": 316800,
-      "numero_processo": "2021008944",
-      "descricao": "O objeto deste instrumento é a contratação de empresas especializadas no fornecimento de MICROCOMPUTADORES CORPORATIVOS DO TIPO MINI DESKTOPS DE PEQUENO PORTE INCLUINDO MONITOR, COM GARANTIA MÍNIMA DE 60 (SESSENTA) MESES ON-SITE // SCANNER DE REDE CORPORATIVO, COM GARANTIA MÍNIMA DE 36 (TRINTA E SEIS) MESES ON-SITE, para serem instalados na nova sede da Assembleia Legislativa do Estado de Goiás, conforme condições, quantidades, exigências e estimativas descritas neste contrato.",
-      "numero": "013/2022",
-      "tipo_contrato": "Fornecimento",
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/adiMNhrDC7305De35lvB7A==/contrato-alego-526",
-      "contrato_tamanho": 758073,
-      "historico_gestor_suplentes": [
-        {
-          "nome_gestor": "RENIS RANGEL CAVALCANTE FALEIROS",
-          "nome_suplente": "SORAYA DOS SANTOS",
-          "data_inicio_hgs": "2022-02-23",
-          "data_termino_hgs": "2023-03-20",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAfvX8OBMAOXuS9jCcMXzUFRC8G2v3yTH7bab_WLmU8b",
-          "url_portaria_gestores_nome": "Publicação Portaria 630-2022.pdf"
-        },
-        {
-          "nome_gestor": "RANULFO TELES PEREIRA",
-          "nome_suplente": "ROSEMERE IMAY RIBEIRO",
-          "data_inicio_hgs": "2023-03-20",
-          "data_termino_hgs": "2027-04-07",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOwvph_WOwCZkKA7EczzwYHIHph72RaWuyq9qHaETVYZ",
-          "url_portaria_gestores_nome": "Portaria 066-2023 - 2022001315 - VETOSCAN - Contrato-13-2022 (Substituir).pdf"
-        }
-      ],
-      "licitacao": {
-        "id": 802,
-        "identificador": "Pregão Eletrônico nº 03/2022",
-        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/DYhx3WvukxBol4JbE2Tga_m2ndR2SDY_adIe2DO3fySdgEeFB3KexKjneQR807Dl1GD5KU4jp5DLzM0fDef9tLWyADA9RRv4h5f8I8k8OywO3puH9dhsagcyivCNcRcC/pdf/edital-alego-pregao-eletronico-n03-2022.pdf",
-        "tamanho_edital": 7741205
       },
       "historico_fiscal_contratos": [],
       "current_contract": true
@@ -2122,7 +1998,7 @@
           "nome_suplente": "SORAYA DOS SANTOS",
           "data_inicio_hgs": "2022-02-23",
           "data_termino_hgs": "2023-03-03",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlHuAZJeGAvXcBrJzwsOj8SLGfPBynGvPvBJISKyIpO2H",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlF446b3mI-ZIksvB9I86nZRAotidcnM4dbzivZc97Td2",
           "url_portaria_gestores_nome": "Publicação Portaria 630-2022.pdf"
         },
         {
@@ -2130,11 +2006,52 @@
           "nome_suplente": "WESCLEI APARECIDO BARBOSA",
           "data_inicio_hgs": "2023-03-03",
           "data_termino_hgs": "2027-04-07",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAHFAMBZUKlzbW8HMtj9x_hter6d3j-WKhN8L2JCsEMW",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGh_LXT1QGF19LGQ4M-jyqAjeg0nZQcXEIw_HkjuAtWi",
           "url_portaria_gestores_nome": "Portaria 022-2023 - 2022001314 - BBR SOLUÇÕES - Contrato- 14-2022 (Substituir).pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJBtjOJDjjeQepxnw9HaRNWQ_y5ttKq0vrlEftRhtOoI/contrato-alego-527",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOIa5v3ez-pbi3X_r3WbcQfdXtczjh2IwJxlzKgAIs5k/contrato-alego-527",
+      "licitacao": {
+        "id": 802,
+        "identificador": "Pregão Eletrônico nº 03/2022",
+        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/DYhx3WvukxBol4JbE2Tga_m2ndR2SDY_adIe2DO3fySdgEeFB3KexKjneQR807Dl1GD5KU4jp5DLzM0fDef9tLWyADA9RRv4h5f8I8k8OywO3puH9dhsagcyivCNcRcC/pdf/edital-alego-pregao-eletronico-n03-2022.pdf",
+        "tamanho_edital": 7741205
+      },
+      "historico_fiscal_contratos": [],
+      "current_contract": true
+    },
+    {
+      "id": 526,
+      "nome_favorecido": "VETORSCAN SOLUÇÕES CORPORATIVAS E IMPORTAÇÃO EIRELI – EPP",
+      "cpf_cnpj": "11.113.866/0001-25",
+      "data_inicio": "2022-04-07T00:00:00.000-03:00",
+      "data_fim": "2027-04-07T00:00:00.000-03:00",
+      "valor_pago": 316800,
+      "valor_empenhado": 316800,
+      "numero_processo": "2021008944",
+      "descricao": "O objeto deste instrumento é a contratação de empresas especializadas no fornecimento de MICROCOMPUTADORES CORPORATIVOS DO TIPO MINI DESKTOPS DE PEQUENO PORTE INCLUINDO MONITOR, COM GARANTIA MÍNIMA DE 60 (SESSENTA) MESES ON-SITE // SCANNER DE REDE CORPORATIVO, COM GARANTIA MÍNIMA DE 36 (TRINTA E SEIS) MESES ON-SITE, para serem instalados na nova sede da Assembleia Legislativa do Estado de Goiás, conforme condições, quantidades, exigências e estimativas descritas neste contrato.",
+      "numero": "013/2022",
+      "tipo_contrato": "Fornecimento",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/adiMNhrDC7305De35lvB7A==/contrato-alego-526",
+      "contrato_tamanho": 758073,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "RENIS RANGEL CAVALCANTE FALEIROS",
+          "nome_suplente": "SORAYA DOS SANTOS",
+          "data_inicio_hgs": "2022-02-23",
+          "data_termino_hgs": "2023-03-20",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlI6cWLgKOy8NyEl8C9hYl_Kxw2QRI1iqDpOQ_JBb1wap",
+          "url_portaria_gestores_nome": "Publicação Portaria 630-2022.pdf"
+        },
+        {
+          "nome_gestor": "RANULFO TELES PEREIRA",
+          "nome_suplente": "ROSEMERE IMAY RIBEIRO",
+          "data_inicio_hgs": "2023-03-20",
+          "data_termino_hgs": "2027-04-07",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlCGBw47qa_CbZ_zSoblV2i3sVBo7MDqMiyP2WdMgCPSM",
+          "url_portaria_gestores_nome": "Portaria 066-2023 - 2022001315 - VETOSCAN - Contrato-13-2022 (Substituir).pdf"
+        }
+      ],
       "licitacao": {
         "id": 802,
         "identificador": "Pregão Eletrônico nº 03/2022",
@@ -2164,7 +2081,7 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": "2022-02-23",
           "data_termino_hgs": "2027-02-25",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPMgg__Sz9aJV2EbgjEJrFeYi3iGzLViDlAHwxrbFlWM",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDOi4Kj5jkcPucqbborpb1qQxRT9sCDfX7eKzXF9Hovj",
           "url_portaria_gestores_nome": "Portaria Nº607, de 23 de Fevereiro de 2022-Ata Registro de Preços 006-2022.pdf"
         }
       ],
@@ -2197,45 +2114,11 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDuQh2f8z23aC6o32uMdh54aOv5zZwvE6DJ_toXORtkG",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlG6L_jvjgEoQ1twEyIjG6ng4iDje37vFqQIJR4Ro1Uwj",
           "url_portaria_gestores_nome": "PORTARIA Nº 566- revoga carlos e nomeia cibele.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlOn5EAhsGCYQYTbiDiVj1N1N_MoyHy1O1_9oJOkqnxu-/contrato-alego-518",
-      "historico_fiscal_contratos": [],
-      "current_contract": true
-    },
-    {
-      "id": 454,
-      "nome_favorecido": "JS FAGUNDES EIRELI-ME",
-      "cpf_cnpj": "21.103.048/0001-03",
-      "data_inicio": "2021-12-22T00:00:00.000-03:00",
-      "data_fim": "2026-12-22T00:00:00.000-03:00",
-      "valor_pago": 65500,
-      "valor_empenhado": 65500,
-      "numero_processo": "2021009307",
-      "descricao": "aquisição de CADEIRA FIXA, POLTRONAS GIRATÓRIAS E LONGARINAS DE 2 E 3 LUGARES, incluindo montagem e alocação, destinados a atender as demandas da Assembleia Legislativa do Estado de Goiás.",
-      "numero": "",
-      "tipo_contrato": null,
-      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/x10WWUXf5rliJbOKEswfaQ==/contrato-alego-454",
-      "contrato_tamanho": 707230,
-      "historico_gestor_suplentes": [
-        {
-          "nome_gestor": "CIBELLE BATISTA DAMASCENO",
-          "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
-          "data_inicio_hgs": null,
-          "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlKZY1duID1ziJ4Uu7cUF17zf5GbCcyYn56UBgHSLnpir",
-          "url_portaria_gestores_nome": "Portaria nº 563 de 20 de DEZEMBRO de 2021 - contrato nº46-21 JS FAGUNDES EIRELI.pdf"
-        }
-      ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlEyHnB-my-9nUURmjZQgO5hg_uPeNx3XyrzFKQvNB-rq/contrato-alego-454",
-      "licitacao": {
-        "id": 777,
-        "identificador": "Pregão Eletrônico nº 47/2021",
-        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/zCKHvYlbme66olYB6NHUbPn_mCaOSBlhyRReTM0ZR3xVtTJvX3l0p-rNqD8ORhXB3QKMPLIlceIelW4mud3ny2xwrp68iJBMIhYH4k4Wkmc=/pdf/edital-alego-pregao-eletronico-n47-2021.pdf",
-        "tamanho_edital": 1708749
-      },
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlB9wFpp3La4oBiC8NFxEcnHAtNRu3HCia915t7G8G56L/contrato-alego-518",
       "historico_fiscal_contratos": [],
       "current_contract": true
     },
@@ -2259,11 +2142,11 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlN_TmO955fvCGHR7yFsst5ecUalWZNuZT-oAgrWlu-5K",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlMWMnULTXfamALU1e0YGQp8vzlEl8pWKEb5uUnCkBUpv",
           "url_portaria_gestores_nome": "Portaria nº 559 de 20 de dezembro de 2021 - HGC TAVEIRA COMERCIO DE MOVEIS EIRELI.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlLPafu9suEItSU70SDXgj4X9TFLml8D3InUTe0gJ76F9/contrato-alego-453",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDRCe8mulC02ef9As5fMSRqP8Ux_zfMzE7yu9J0YPsqE/contrato-alego-453",
       "licitacao": {
         "id": 777,
         "identificador": "Pregão Eletrônico nº 47/2021",
@@ -2293,11 +2176,45 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIotWArfklLM9xIfZQ4HmUuXL5xxlWHidCfaTLGN1JVg",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlNrgU_n1f5y7UeJDrN3UNcXnOkxj2pl9TPNcfYHVB7zg",
           "url_portaria_gestores_nome": "Portaria nº 564 de 21 de dezembro de 2021 - FLEXFORM INDÚSTRIA E COMÉRCIO DE MÓVEIS LTDA.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPyoWiEmn50CPqCqDnbeIWFiPr7k9B77FWexP3XexrbD/contrato-alego-459",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBHzarvOn1fNbO2xYVUsHN0iVooMXT_Zm5c4XXldTJAk/contrato-alego-459",
+      "licitacao": {
+        "id": 777,
+        "identificador": "Pregão Eletrônico nº 47/2021",
+        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/zCKHvYlbme66olYB6NHUbPn_mCaOSBlhyRReTM0ZR3xVtTJvX3l0p-rNqD8ORhXB3QKMPLIlceIelW4mud3ny2xwrp68iJBMIhYH4k4Wkmc=/pdf/edital-alego-pregao-eletronico-n47-2021.pdf",
+        "tamanho_edital": 1708749
+      },
+      "historico_fiscal_contratos": [],
+      "current_contract": true
+    },
+    {
+      "id": 454,
+      "nome_favorecido": "JS FAGUNDES EIRELI-ME",
+      "cpf_cnpj": "21.103.048/0001-03",
+      "data_inicio": "2021-12-22T00:00:00.000-03:00",
+      "data_fim": "2026-12-22T00:00:00.000-03:00",
+      "valor_pago": 65500,
+      "valor_empenhado": 65500,
+      "numero_processo": "2021009307",
+      "descricao": "aquisição de CADEIRA FIXA, POLTRONAS GIRATÓRIAS E LONGARINAS DE 2 E 3 LUGARES, incluindo montagem e alocação, destinados a atender as demandas da Assembleia Legislativa do Estado de Goiás.",
+      "numero": "",
+      "tipo_contrato": null,
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/x10WWUXf5rliJbOKEswfaQ==/contrato-alego-454",
+      "contrato_tamanho": 707230,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "CIBELLE BATISTA DAMASCENO",
+          "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
+          "data_inicio_hgs": null,
+          "data_termino_hgs": null,
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlPd-jqHUBcJ4Fq_7d4lRe85YJHY33JGhbaZeoQtO6bv2",
+          "url_portaria_gestores_nome": "Portaria nº 563 de 20 de DEZEMBRO de 2021 - contrato nº46-21 JS FAGUNDES EIRELI.pdf"
+        }
+      ],
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDduFcTUMLNSxv9Mju73E8CfkgWiHFCiLvEyvrHE2c5E/contrato-alego-454",
       "licitacao": {
         "id": 777,
         "identificador": "Pregão Eletrônico nº 47/2021",
@@ -2327,11 +2244,11 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlLHvYpdVmAdTeG-FfoerbksNu-iTRjVuFu3PSWq5hk-s",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlHFlZb6LAHS6nSWYNUABAMnIbC9C_PGtWQfKbgiu3Oec",
           "url_portaria_gestores_nome": "Portaria nº 563 de 21 de DEZEMBRO de 2021 - contrato nº49-21 FK GRUPOS SA.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGAdaGcyKqNC-F6h5IncVl7xPGssfwma3abJHMb-mNhO/contrato-alego-458",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBc_vQIknZHGyPU7QwFvfB1JzhznXyKD8tCtxEjC0ypS/contrato-alego-458",
       "licitacao": {
         "id": 777,
         "identificador": "Pregão Eletrônico nº 47/2021",
@@ -2361,11 +2278,11 @@
           "nome_suplente": "CIBELLE BATISTA DAMASCENO",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlFR8bXuK9l2_vOdI-F6VRqyxu9iSzaUQH9P4n7gg_j0v",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDCx3_mljs8ppmEwSBAwHy7BEbaPN4xQrp-_KF7hMDY3",
           "url_portaria_gestores_nome": "Portaria nº 489 de 18 de NOVEMBRO de 2021 -FLEXFORM INDUSTRIA E COMERCIO DE MOVEIS LTDA.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlBxqolawLaCrLGb1mmdQa1Eff4G3zJgzkdLYqsBSpEJI/contrato-alego-460",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlCgMFY_wyE3F6QRVc5oLcnvuQFiBvTSZRtbEM35NQG9M/contrato-alego-460",
       "licitacao": {
         "id": 733,
         "identificador": "Pregão Eletrônico nº 09/2021",
@@ -2395,7 +2312,7 @@
           "nome_suplente": "CIBELLE BATISTA DAMASCENO",
           "data_inicio_hgs": "2021-11-19",
           "data_termino_hgs": "2021-12-21",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlEWt1b_bLz65rhDjxN8oNvZwsjVTQXSBkXImyNEbP6pT",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGnBFzNRIo-QShHn3VV-KlvXaNSZbW0iGLSQ6jnsgu1q",
           "url_portaria_gestores_nome": "Portaria nº 492 de 19 de NOVEMBRO de 2021 - FK GRUPO SA.pdf"
         },
         {
@@ -2403,7 +2320,7 @@
           "nome_suplente": "MANOEL LOURENCO CAMPOS JUNIOR",
           "data_inicio_hgs": "2021-12-21",
           "data_termino_hgs": "2026-11-16",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJ6WFoxXDSP-JOWLNB98qA8e5x_cmdCGqx7xI_5XwFfR",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlIJHKDgNk8OI0BM6UEdNRyK0BexVesOAbr4plnKykeRx",
           "url_portaria_gestores_nome": "PORTARIA Nº 566- revoga carlos e nomeia cibele.pdf"
         }
       ],
@@ -2436,11 +2353,11 @@
           "nome_suplente": "REGINALDO GOMES DE OLIVEIRA",
           "data_inicio_hgs": null,
           "data_termino_hgs": null,
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlG4RdkaLm-FKG3mJx09aZGg-Ch_UHWexgVmWbwjWL74x",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlLkcOR63GyDjHmyGaXMGR9BrZ-GCY8bkUwlMCyo-dQPa",
           "url_portaria_gestores_nome": "Portaria 021 - 2021006593.pdf"
         }
       ],
-      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlDG0X8W6EGLgywkNDspFMGm-4JOwGeTDVDLQA8hXGb6o/contrato-alego-510",
+      "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlGvPE9ROTUFvmSkhGqRm6MKk7KEiRTeeSLViBwBIW7ib/contrato-alego-510",
       "licitacao": {
         "id": 759,
         "identificador": "Pregão Eletrônico nº 33/2021",
@@ -2470,7 +2387,7 @@
           "nome_suplente": "VILMA ROSA MIOTTO",
           "data_inicio_hgs": "2023-03-08",
           "data_termino_hgs": "2026-08-18",
-          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlLJ0IinHMDnAOuTj95UlKiVdRBsX-_2Kw1OYIwQUUAPo",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJ69H7oG9ZW_g6IzbErznk4QhRZrykrBfugpi4ATRIke",
           "url_portaria_gestores_nome": "PORTARIA Nº 046-2023 GESTOR.pdf"
         }
       ],
@@ -2565,6 +2482,128 @@
       },
       "historico_fiscal_contratos": [],
       "current_contract": true
+    },
+    {
+      "id": 811,
+      "nome_favorecido": "RCR EVENTOS LTDA",
+      "cpf_cnpj": "22.140.284/0001-54",
+      "data_inicio": "2026-05-26T00:00:00.000-03:00",
+      "data_fim": "2026-08-26T00:00:00.000-03:00",
+      "valor_pago": 0,
+      "valor_empenhado": 100599.84,
+      "numero_processo": "32250/2025",
+      "descricao": "O objeto do presente instrumento é a LOCAÇÃO COM SERVIÇOS DE TRANSPORTE, MONTAGEM E DESMONTAGEM (MUNICÍPIO DE ALEXÂNIA-GO 30/05/2026 e APARECIDA DE GOIÂNIA-GO 03/06/2026), SOB DEMANDA, DE EQUIPAMENTOS E ESTRUTURAS E MATERIAIS, COMPREENDENDO TENDAS, PALCOS, SOM, MESAS, CADEIRAS, CLIMATIZADORES E OUTROS, para atender às demandas da Assembleia Legislativa do Estado de Goiás.",
+      "numero": "64/2026",
+      "tipo_contrato": "Fornecimento servicos",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/ZHU04TVXwf9iVzxsaguXlw==/contrato-alego-811",
+      "contrato_tamanho": 16289025,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "RENIS RANGEL CAVALCANTE FALEIROS",
+          "nome_suplente": "RAFAEL FRANCISCO SANTOS DE MELO",
+          "data_inicio_hgs": "2026-05-26",
+          "data_termino_hgs": "2026-08-26",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlE9koib0-Pwyl0D8mCp4aJPWKTAUZT1n7DU3laPsn74y",
+          "url_portaria_gestores_nome": "PORTARIA Nº 2.286, DE 22 DE JANEIRO DE 2026 - RCR EVENTOS.pdf"
+        }
+      ],
+      "licitacao": {
+        "id": 1092,
+        "identificador": "Pregão Eletrônico nº 01/2026",
+        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/yc1xETxj7b3fjPuQuyWoD0G-pF9669i3YRum3eV-jxAXfSJGDhjUua5jHEz0tE7cL-Vjb9BiziEGmeQz3Ev7U3P9O_dUdTc9SUsLtqAllDN19CWr8dEcXU-PWKZZ8Ffr/pdf/edital-alego-pregao-eletronico-n01-2026.pdf",
+        "tamanho_edital": 4220783
+      },
+      "historico_fiscal_contratos": [],
+      "current_contract": false
+    },
+    {
+      "id": 810,
+      "nome_favorecido": "Aluban Eventos Ltda ",
+      "cpf_cnpj": "07.600.561/0001-70",
+      "data_inicio": "2026-05-22T00:00:00.000-03:00",
+      "data_fim": "2026-08-22T00:00:00.000-03:00",
+      "valor_pago": 0,
+      "valor_empenhado": 1983.33,
+      "numero_processo": "32250/2025",
+      "descricao": "Contratação de 1 Banheiro químico tipo trailer móvel para edição do Programa Deputados Aqui. Caldas Novas - GO, na data de 23/05/2026.",
+      "numero": "Contrato n: 061/2026",
+      "tipo_contrato": "Aluguel",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/UgKJI1xq6ZHhJ4jv7CXg8A==/contrato-alego-810",
+      "contrato_tamanho": 14067505,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "RENIS RANGEL CAVALCANTE FALEIROS",
+          "nome_suplente": null,
+          "data_inicio_hgs": "2026-05-22",
+          "data_termino_hgs": "2026-08-22",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlJTTgQ9Kutu2AVOLZMRN33E4mfmnk0-W_pCIB83F93FI",
+          "url_portaria_gestores_nome": "Portaria 2286 2026 contrato 061-2026.pdf"
+        }
+      ],
+      "licitacao": {
+        "id": 1092,
+        "identificador": "Pregão Eletrônico nº 01/2026",
+        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/yc1xETxj7b3fjPuQuyWoD0G-pF9669i3YRum3eV-jxAXfSJGDhjUua5jHEz0tE7cL-Vjb9BiziEGmeQz3Ev7U3P9O_dUdTc9SUsLtqAllDN19CWr8dEcXU-PWKZZ8Ffr/pdf/edital-alego-pregao-eletronico-n01-2026.pdf",
+        "tamanho_edital": 4220783
+      },
+      "historico_fiscal_contratos": [],
+      "current_contract": false
+    },
+    {
+      "id": 666,
+      "nome_favorecido": "DESPRAG DEDETIZADORA LTDA",
+      "cpf_cnpj": "03.883.919/0001-69",
+      "data_inicio": "2023-08-25T00:00:00.000-03:00",
+      "data_fim": "2026-08-25T00:00:00.000-03:00",
+      "valor_pago": 0,
+      "valor_empenhado": 60000,
+      "numero_processo": "3202.2023",
+      "descricao": "É a contratação de empresa especializada para a prestação de SERVIÇO DE CONTROLE SANITÁRIO INTEGRADO NO COMBATE DE VETORES E PRAGAS URBANAS PARA DESINSETIZAÇÃO, DESCUPINIZAÇÃO E DESRATIZAÇÃO, para atender às demandas da Assembleia Legislativa do Estado de Goiás.",
+      "numero": "018/2023",
+      "tipo_contrato": "Fornecimento",
+      "url": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/zOTMyRhkz_CJL7z8Y4md5w==/contrato-alego-666",
+      "contrato_tamanho": 20176490,
+      "historico_gestor_suplentes": [
+        {
+          "nome_gestor": "JOAO PAULO ANTUNES DA SILVA",
+          "nome_suplente": "FRANCISCO EDISON SAMPAIO",
+          "data_inicio_hgs": "2025-07-02",
+          "data_termino_hgs": "2026-08-25",
+          "url_portaria_gestores": "https://saba.al.go.leg.br/v1/view/aquisicoes/private/ZcwjAQXu15aT2_RCKY4wlAxJWo-Nb3ZMthWh53a_D-L6i1vtSMlNMQLQ1M_sDYHD",
+          "url_portaria_gestores_nome": "Portaria Gestor Desprag.pdf"
+        }
+      ],
+      "aditivo": [
+        {
+          "url_aditivo": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/bwtgclPgJ9JBiWh3E-4Mag==",
+          "url_aditivo_nome": "Primeiro Termo Aditivo -3202.2023-  Desprag Dedetizadora.pdf",
+          "data_inicial": "2024-08-26",
+          "data_final": "2025-08-25",
+          "valor": "60000.0"
+        },
+        {
+          "url_aditivo": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/0VLr8m7USwSuDGZhwQl4YQ==",
+          "url_aditivo_nome": "2º Termo Aditivo Desprag.pdf",
+          "data_inicial": "2025-08-26",
+          "data_final": "2026-08-25",
+          "valor": "60000.0"
+        },
+        {
+          "url_aditivo": "https://saba.al.go.leg.br/v1/view/aquisicoes/public/dImwwE28cGgS6wyWiEO3fw==",
+          "url_aditivo_nome": "Terceiro Termo Aditivo ao contrato 018-2023 - DESPRAG DEDETIZADORES LTDA.pdf",
+          "data_inicial": "2026-08-26",
+          "data_final": "2027-08-25",
+          "valor": "60000.0"
+        }
+      ],
+      "licitacao": {
+        "id": 909,
+        "identificador": "Cotação Eletrônica n. 11/2023",
+        "url_edital": "https://saba.al.go.leg.br/v1/merged/view/aquisicoes/public/JovTb_Z2GslDFoMMveBSq4PxI1mUrNdDVq96nx8L1mCv57bKn3vQkbDnJLWGoI4I8jJHveq5e5qB35KMYkeGf-bbHh-5YsLerukxUg7D_r0xPUBRNWJxpp1cqbYuF4kI/pdf/edital-alego-cotacao-eletronica-n-11-2023.pdf",
+        "tamanho_edital": 1587008
+      },
+      "historico_fiscal_contratos": [],
+      "current_contract": false
     },
     {
       "id": 828,
