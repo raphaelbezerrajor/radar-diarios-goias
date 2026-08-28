@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-27T11:06:11.624Z",
+  "generated_at": "2026-08-28T11:23:33.503Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-08-27"
+    "to": "2026-08-28"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 94
+    "published_stories": 97
   },
   "items": [
     {
@@ -5590,6 +5590,186 @@
       "source_type": "official_document",
       "confidence": 0.99,
       "prominence": "cover"
+    },
+    {
+      "date": "2026-08-28",
+      "published_at": "2026-08-28",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governo de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7340/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7340",
+      "edition_number": "24.853",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-28-edicao-7340.pdf",
+      "document_sha256": "6c41c644a86e87d6f90935b252ec0fc131ba7e95e372ea40461fb0411bd8baa6",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "doego-24853-go341-pavimentacao-142-milhoes",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "page_start": 24,
+      "page_end": 24,
+      "document_reference": "DOE-GO nº 24.853 · página 24",
+      "external_identifier": "Contrato nº 166/2026-GOINFRA",
+      "official_title": "Contrato nº 166/2026-GOINFRA",
+      "act_type": "contrato",
+      "type_label": "Infraestrutura e rodovias",
+      "title": "Goiás contrata obra de R$ 142 milhões para pavimentar 41 km da GO-341",
+      "deck": "Consórcio formado por Cosampa e Seplane executará trecho entre Córrego das Antas e a BR-158; prazo de obra é de 19 meses.",
+      "summary": "Contrato da Goinfra prevê pavimentação de 41,11 quilômetros da GO-341 por R$ 142,08 milhões.",
+      "paragraphs": [
+        "A Goinfra contratou por R$ 142.079.890,20 a pavimentação de 41,11 quilômetros da GO-341, no trecho entre Córrego das Antas e o entroncamento com a BR-158. O Contrato nº 166/2026 foi firmado com o Consórcio GO-341/Córrego das Antas, formado pela Cosampa Construções e pela Seplane Serviços de Engenharia e Planejamento do Nordeste.",
+        "O prazo de execução é de 19 meses, contado da ordem de serviço, e a vigência contratual será de 25 meses após a divulgação no Portal Nacional de Contratações Públicas. O extrato informa notas de empenho datadas de 12 de agosto; empenho é reserva orçamentária e não comprova pagamento ou conclusão da obra."
+      ],
+      "public_body": "Agência Goiana de Infraestrutura e Transportes — Goinfra",
+      "values": [
+        {
+          "original": "R$ 142.079.890,20",
+          "value": 142079890.2,
+          "currency": "BRL",
+          "label": "valor do contrato"
+        }
+      ],
+      "value_highest": 142079890.2,
+      "reference_numbers": [
+        "166/2026-GOINFRA",
+        "202600036012237"
+      ],
+      "importance": 106,
+      "news_value": {
+        "score": 106,
+        "reasons": [
+          "contrato de R$ 142 milhões",
+          "41,11 km de rodovia",
+          "obra estadual"
+        ]
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "published_at": "2026-08-28",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governo de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7340/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7340",
+      "edition_number": "24.853",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-28-edicao-7340.pdf",
+      "document_sha256": "6c41c644a86e87d6f90935b252ec0fc131ba7e95e372ea40461fb0411bd8baa6",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "doego-24853-maes-goias-convenio-102-milhoes",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "page_start": 19,
+      "page_end": 19,
+      "document_reference": "DOE-GO nº 24.853 · página 19",
+      "external_identifier": "Convênio nº 01/2026",
+      "official_title": "Extrato do Convênio nº 01/2026",
+      "act_type": "convenio",
+      "type_label": "Assistência social",
+      "title": "Goiás destina R$ 102,4 milhões ao Mães de Goiás em 2026",
+      "deck": "Convênio com a GoiásFomento financiará atenção social e transferência monetária para mães de crianças de até seis anos em extrema pobreza.",
+      "summary": "Secretaria de Desenvolvimento Social e GoiásFomento firmaram convênio de R$ 102,4 milhões para o programa Mães de Goiás.",
+      "paragraphs": [
+        "O Governo de Goiás destinou R$ 102.397.806,29 ao programa Mães de Goiás no exercício de 2026. O Convênio nº 01/2026 foi firmado entre a Secretaria de Desenvolvimento Social e a Agência de Fomento de Goiás, a GoiásFomento, para financiar ações de atenção social e transferência monetária.",
+        "O programa atende mães com filhos de zero a seis anos que vivem em situação de extrema pobreza, conforme o plano de trabalho citado no extrato. A publicação informa o valor transferido para execução do programa, mas não detalha nesse ato a quantidade de beneficiárias, o cronograma de desembolso nem a execução financeira já realizada."
+      ],
+      "public_body": "Secretaria de Estado do Desenvolvimento Social e GoiásFomento",
+      "values": [
+        {
+          "original": "R$ 102.397.806,29",
+          "value": 102397806.29,
+          "currency": "BRL",
+          "label": "valor do convênio em 2026"
+        }
+      ],
+      "value_highest": 102397806.29,
+      "reference_numbers": [
+        "01/2026",
+        "202610319001747"
+      ],
+      "importance": 104,
+      "news_value": {
+        "score": 104,
+        "reasons": [
+          "R$ 102,4 milhões",
+          "extrema pobreza",
+          "transferência de renda"
+        ]
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "published_at": "2026-08-28",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governo de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7340/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7340",
+      "edition_number": "24.853",
+      "local_path": "data/raw/doego/2026/08/doego-2026-08-28-edicao-7340.pdf",
+      "document_sha256": "6c41c644a86e87d6f90935b252ec0fc131ba7e95e372ea40461fb0411bd8baa6",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "doego-24853-anapolis-veiculos-47-milhoes",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "page_start": 31,
+      "page_end": 31,
+      "document_reference": "DOE-GO nº 24.853 · página 31",
+      "external_identifier": "Pregão Eletrônico nº 005/2026",
+      "official_title": "Termo de homologação do Pregão Eletrônico nº 005/2026",
+      "act_type": "homologacao",
+      "type_label": "Licitação e frota",
+      "title": "Anápolis homologa R$ 47,7 milhões para locação de veículos",
+      "deck": "Única Prestadora venceu dois lotes para serviços com e sem motorista; outros cinco lotes fracassaram.",
+      "summary": "Pregão registrou R$ 21,22 milhões e R$ 26,50 milhões nos dois lotes adjudicados para locação de veículos.",
+      "paragraphs": [
+        "A Prefeitura de Anápolis homologou dois lotes do Pregão Eletrônico nº 005/2026 para futura e eventual locação de veículos utilitários e de transporte, com e sem motorista. A Única Prestadora Ltda. venceu o lote 5 por R$ 21.218.760 e o lote 6 por R$ 26.503.146, totalizando R$ 47.721.906.",
+        "Os lotes 1, 2, 3, 4 e 7 foram declarados fracassados. Como se trata de registro de preços, a homologação e os valores globais não significam que todo o montante já foi contratado ou pago; o gasto dependerá das contratações e serviços efetivamente demandados pela administração municipal."
+      ],
+      "public_body": "Prefeitura de Anápolis",
+      "values": [
+        {
+          "original": "R$ 47.721.906,00",
+          "value": 47721906,
+          "currency": "BRL",
+          "label": "soma dos lotes homologados"
+        }
+      ],
+      "value_highest": 47721906,
+      "cnpjs": [
+        "22.469.527/0001-00"
+      ],
+      "reference_numbers": [
+        "005/2026",
+        "01125.00002876/2025-40"
+      ],
+      "importance": 102,
+      "news_value": {
+        "score": 102,
+        "reasons": [
+          "R$ 47,7 milhões",
+          "locação de veículos",
+          "cinco lotes fracassados"
+        ]
+      }
     }
   ]
 }
