@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-28T11:23:33.503Z",
+  "generated_at": "2026-08-31T11:23:33.891Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-08-28"
+    "to": "2026-08-31"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 97
+    "published_stories": 101
   },
   "items": [
     {
@@ -5768,6 +5768,241 @@
           "R$ 47,7 milhões",
           "locação de veículos",
           "cinco lotes fracassados"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "tcego-156-temporarios-educacao-segundo-trimestre",
+      "date": "2026-08-28",
+      "published_at": "2026-08-31",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "TCE-GO",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291642252761",
+      "source_landing_url": "https://www.tce.go.gov.br/DiarioEletronico",
+      "edition_id": "tcego:156",
+      "edition_number": "156",
+      "local_path": "data/raw/tcego/2026/08/tcego-dec-156-2026-08-28.pdf",
+      "document_sha256": "2f828063b3a5a1757c76ae5715a2c0b3eb39943e79fd15513302e42350196743",
+      "page_start": 5,
+      "page_end": 6,
+      "document_reference": "Diário Eletrônico de Contas nº 156 · páginas 5 e 6",
+      "external_identifier": "Relatório do art. 30 · 2º trimestre de 2026",
+      "official_title": "Relatório Consolidado do Artigo 30 — 2º trimestre de 2026",
+      "act_type": "relatorio",
+      "type_label": "Pessoal e transparência",
+      "title": "Educação concentra 21 mil dos 24 mil temporários do Estado de Goiás",
+      "deck": "Relatório constitucional do 2º trimestre mostra 23.964 vínculos temporários na administração direta; 21.155 estavam na Seduc.",
+      "summary": "Dados publicados pelo TCE mostram que a Educação respondia por cerca de 88% dos vínculos temporários da administração direta estadual.",
+      "paragraphs": [
+        "A Secretaria de Educação concentrava 21.155 dos 23.964 vínculos temporários existentes na administração direta de Goiás ao fim do segundo trimestre de 2026, cerca de 88% do total. O relatório consolidado publicado pelo TCE-GO também registra 22.942 servidores efetivos na Seduc no mesmo período.",
+        "Os números são declarados pelos próprios órgãos e consolidados pelo Tribunal para cumprimento do artigo 30 da Constituição Estadual. O relatório descreve quantitativos de vínculos, inclusões e exclusões; ele não classifica as contratações como irregulares nem informa, nessas tabelas, funções, salários ou duração individual dos contratos."
+      ],
+      "public_body": "Tribunal de Contas do Estado e Secretaria de Estado da Educação",
+      "values": [],
+      "value_highest": null,
+      "reference_numbers": [],
+      "importance": 107,
+      "news_value": {
+        "score": 107,
+        "reasons": [
+          "21.155 vínculos temporários na Educação",
+          "88% do total estadual",
+          "quadro de pessoal"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "anapolis-4014-maquinas-infraestrutura-32-milhoes",
+      "date": "2026-08-28",
+      "published_at": "2026-08-31",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "source_id": "anapolis",
+      "source_name": "Diário Oficial do Município de Anápolis",
+      "source_label": "Prefeitura de Anápolis",
+      "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23695",
+      "source_landing_url": "https://dom.anapolis.go.gov.br/",
+      "edition_id": "anapolis:23695",
+      "edition_number": "4.014/2026",
+      "local_path": "data/raw/municipal-diaries/anapolis/2026/08/2026-08-28-4.014-2026.pdf",
+      "document_sha256": "50a29fb3620348f76df19298e872284ace357ff6615a4635be541e4aa5be15ae",
+      "page_start": 3,
+      "page_end": 3,
+      "document_reference": "Diário Oficial nº 4.014/2026 · página 3",
+      "external_identifier": "Contrato nº 266/2026",
+      "official_title": "Contrato nº 266/2026",
+      "act_type": "contrato",
+      "type_label": "Infraestrutura urbana",
+      "title": "Anápolis fecha contrato de R$ 32,9 milhões para máquinas e coleta de resíduos",
+      "deck": "AFS Infraestrutura fornecerá horas-máquina, caminhões, veículos, combustível e operadores por 12 meses.",
+      "summary": "Contrato por adesão a ata paulista atende manutenção urbana, infraestrutura viária e coleta de resíduos domiciliares.",
+      "paragraphs": [
+        "A Prefeitura de Anápolis assinou contrato de R$ 32.941.418,40 com a AFS Infraestrutura e Construções para fornecimento de horas-máquina, caminhões, máquinas pesadas, equipamentos e veículos leves. O serviço inclui combustível e operadores e deverá apoiar manutenção e conservação urbana, obras viárias e coleta de resíduos sólidos domiciliares e de espaços públicos.",
+        "O Contrato nº 266/2026 tem vigência inicial de 12 meses e decorre de adesão a uma ata de registro de preços do Cindesp, consórcio público de municípios de São Paulo. O valor é o montante contratado; a publicação não comprova que todo ele já foi pago ou executado."
+      ],
+      "public_body": "Secretaria Municipal de Obras de Anápolis",
+      "values": [
+        {
+          "original": "R$ 32.941.418,40",
+          "value": 32941418.4,
+          "currency": "BRL",
+          "label": "valor do contrato"
+        }
+      ],
+      "value_highest": 32941418.4,
+      "cnpjs": [
+        "09.499.908/0001-66"
+      ],
+      "reference_numbers": [
+        "266/2026",
+        "01120.00002590/2025-03"
+      ],
+      "importance": 104,
+      "news_value": {
+        "score": 104,
+        "reasons": [
+          "R$ 32,9 milhões",
+          "máquinas e coleta de resíduos",
+          "adesão a ata externa"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "anapolis-4014-locacao-veiculos-47-milhoes",
+      "date": "2026-08-28",
+      "published_at": "2026-08-31",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "source_id": "anapolis",
+      "source_name": "Diário Oficial do Município de Anápolis",
+      "source_label": "Prefeitura de Anápolis",
+      "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23695",
+      "source_landing_url": "https://dom.anapolis.go.gov.br/",
+      "edition_id": "anapolis:23695",
+      "edition_number": "4.014/2026",
+      "local_path": "data/raw/municipal-diaries/anapolis/2026/08/2026-08-28-4.014-2026.pdf",
+      "document_sha256": "50a29fb3620348f76df19298e872284ace357ff6615a4635be541e4aa5be15ae",
+      "page_start": 4,
+      "page_end": 4,
+      "document_reference": "Diário Oficial nº 4.014/2026 · página 4",
+      "external_identifier": "Pregão Eletrônico nº 006/2026",
+      "official_title": "Termo de homologação do Pregão Eletrônico nº 006/2026",
+      "act_type": "homologacao",
+      "type_label": "Licitação e frota",
+      "title": "Anápolis homologa R$ 47,2 milhões para carros e motos sob demanda",
+      "deck": "CS Brasil e TM Veículos venceram lotes de locação com manutenção, seguro, telemetria e substituição em até 24 horas.",
+      "summary": "Registro de preços reúne cinco lotes para veículos leves e motocicletas, sem dedicação exclusiva de mão de obra.",
+      "paragraphs": [
+        "Anápolis homologou R$ 47.189.698,20 em cinco lotes do Pregão Eletrônico nº 006/2026 para locação, sob demanda, de veículos leves e motocicletas. A CS Brasil Frotas venceu quatro lotes, que somam R$ 43.504.738,20, e a TM Veículos e Serviços ficou com um lote de R$ 3.684.960.",
+        "Os serviços incluem manutenção preventiva e corretiva, seguro total, rastreamento e telemetria, identidade visual e substituição de veículo indisponível em até 24 horas. Como o procedimento é um registro de preços, a homologação fixa fornecedores e limites; não significa que todo o valor já tenha sido contratado ou pago."
+      ],
+      "public_body": "Prefeitura de Anápolis",
+      "values": [
+        {
+          "original": "R$ 47.189.698,20",
+          "value": 47189698.2,
+          "currency": "BRL",
+          "label": "soma dos lotes homologados"
+        }
+      ],
+      "value_highest": 47189698.2,
+      "cnpjs": [
+        "27.595.780/0001-16",
+        "30.587.848/0001-20"
+      ],
+      "reference_numbers": [
+        "006/2026",
+        "01125.00002877/2025-94"
+      ],
+      "importance": 103,
+      "news_value": {
+        "score": 103,
+        "reasons": [
+          "R$ 47,2 milhões",
+          "locação sob demanda",
+          "seguro e telemetria"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "agm-3693-inhumas-gases-medicinais-12-milhoes",
+      "date": "2026-08-31",
+      "published_at": "2026-08-31",
+      "city": "Inhumas",
+      "scope": "Municipal",
+      "source_id": "agm",
+      "source_name": "Diário Municipal de Goiás — AGM",
+      "source_label": "Prefeitura de Inhumas",
+      "official_url": "https://www.diariomunicipal.com.br/agm/",
+      "source_landing_url": "https://www.diariomunicipal.com.br/agm/",
+      "edition_id": "agm:3693",
+      "edition_number": "3693",
+      "local_path": "data/raw/municipal-diaries/agm/2026/08/2026-08-31-3693.pdf",
+      "document_sha256": "bf863d1ba635125450368ffdc8ea72e69519ba2512ba07a2850ceeed6b927fbb",
+      "page_start": 36,
+      "page_end": 36,
+      "document_reference": "Diário Municipal de Goiás nº 3693 · página 36",
+      "external_identifier": "Ata nº 204/2026",
+      "official_title": "Extrato de Ata nº 204/2026",
+      "act_type": "ata_registro_precos",
+      "type_label": "Saúde pública",
+      "title": "Inhumas registra R$ 12,3 milhões para gases medicinais",
+      "deck": "Ata cobre unidades de saúde, Samu, UPA, hospital municipal, atendimento domiciliar, UBS e fisioterapia.",
+      "summary": "Rochedo Comércio e Serviços fornecerá gases e equipamentos em comodato, com instalação, manutenção e assistência técnica.",
+      "paragraphs": [
+        "O Fundo Municipal de Saúde de Inhumas registrou R$ 12.276.940 na Ata nº 204/2026 para eventual fornecimento continuado de gases medicinais. A contratação inclui cessão de tanques, cilindros e central de oxigênio em comodato, além de instalação, manutenção, monitoramento, assistência técnica e acessórios.",
+        "A ata atende Samu, UPA, hospital municipal, unidades básicas, serviço de atenção domiciliar, pacientes em casa e ambulatório de fisioterapia. A fornecedora é a Rochedo Comércio e Serviços. Por ser registro de preços, o valor representa o limite da ata e não comprova compra ou pagamento integral."
+      ],
+      "public_body": "Fundo Municipal de Saúde de Inhumas",
+      "values": [
+        {
+          "original": "R$ 12.276.940,00",
+          "value": 12276940,
+          "currency": "BRL",
+          "label": "valor da ata"
+        }
+      ],
+      "value_highest": 12276940,
+      "cnpjs": [
+        "26.368.557/0001-73"
+      ],
+      "reference_numbers": [
+        "204/2026"
+      ],
+      "importance": 102,
+      "news_value": {
+        "score": 102,
+        "reasons": [
+          "R$ 12,3 milhões",
+          "gases medicinais",
+          "rede municipal de saúde"
         ]
       }
     }
