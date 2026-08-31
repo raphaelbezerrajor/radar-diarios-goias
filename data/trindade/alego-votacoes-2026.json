@@ -1,32 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-28T11:18:34.158Z",
+  "generated_at": "2026-08-31T11:17:07.454Z",
   "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-08-28",
+    "to": "2026-08-31",
     "last_checked": {
-      "from": "2026-08-21",
-      "to": "2026-08-28"
+      "from": "2026-08-24",
+      "to": "2026-08-31"
     }
   },
   "rows": [
-    {
-      "data_sessao": "2026-08-26",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 26,
-      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - DISPÕE SOBRE A CONVALIDAÇÃO DA UTILIZAÇÃO DE INCENTIVO E BENEFÍCIO FISCAL OU FINANCEIRO-FISCAL SEM O CUMPRIMENTO DE CONDICIONANTES PREVISTAS NA LEGISLAÇÃO TRIBUTÁRIA E A EXTINÇÃO DE CRÉDITO TRIBUTÁRIO CONEXO.",
-      "pauta_id": 41651,
-      "parlamentar": "VIVIAN NAVES",
-      "tipo_voto": "SIM",
-      "partido_sigla": "REP",
-      "partido_nome": "REPUBLICANOS",
-      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
     {
       "data_sessao": "2026-08-26",
       "ano": 2026,
@@ -40,6 +24,22 @@
       "tipo_voto": "SIM",
       "partido_sigla": "UB",
       "partido_nome": "UNIÃO BRASIL",
+      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-26",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 26,
+      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - DISPÕE SOBRE A CONVALIDAÇÃO DA UTILIZAÇÃO DE INCENTIVO E BENEFÍCIO FISCAL OU FINANCEIRO-FISCAL SEM O CUMPRIMENTO DE CONDICIONANTES PREVISTAS NA LEGISLAÇÃO TRIBUTÁRIA E A EXTINÇÃO DE CRÉDITO TRIBUTÁRIO CONEXO.",
+      "pauta_id": 41651,
+      "parlamentar": "VETER MARTINS",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PSB",
+      "partido_nome": "PARTIDO SOCIALISTA BRASILEIRO",
       "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
       "tipo_votacao": "NOMINAL"
     },
@@ -388,10 +388,74 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - DISPÕE SOBRE A CONVALIDAÇÃO DA UTILIZAÇÃO DE INCENTIVO E BENEFÍCIO FISCAL OU FINANCEIRO-FISCAL SEM O CUMPRIMENTO DE CONDICIONANTES PREVISTAS NA LEGISLAÇÃO TRIBUTÁRIA E A EXTINÇÃO DE CRÉDITO TRIBUTÁRIO CONEXO.",
       "pauta_id": 41651,
-      "parlamentar": "VETER MARTINS",
+      "parlamentar": "VIVIAN NAVES",
       "tipo_voto": "SIM",
-      "partido_sigla": "PSB",
-      "partido_nome": "PARTIDO SOCIALISTA BRASILEIRO",
+      "partido_sigla": "REP",
+      "partido_nome": "REPUBLICANOS",
+      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-26",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 26,
+      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - ALTERA A LOCALIZAÇÃO DO AGROCOLÉGIO ESTADUAL MAGUITO VILELA PARA O MUNICÍPIO DE GOIANÉSIA/GO E REVOGA O ART. 11- C DA LEI Nº 19.651, DE 12 DE MAIO DE 2017.",
+      "pauta_id": 41491,
+      "parlamentar": "ROSÂNGELA REZENDE",
+      "tipo_voto": "SIM",
+      "partido_sigla": "AGIR",
+      "partido_nome": "AGIR",
+      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-26",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 26,
+      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - ALTERA A LOCALIZAÇÃO DO AGROCOLÉGIO ESTADUAL MAGUITO VILELA PARA O MUNICÍPIO DE GOIANÉSIA/GO E REVOGA O ART. 11- C DA LEI Nº 19.651, DE 12 DE MAIO DE 2017.",
+      "pauta_id": 41491,
+      "parlamentar": "RICARDO QUIRINO",
+      "tipo_voto": "SIM",
+      "partido_sigla": "REP",
+      "partido_nome": "REPUBLICANOS",
+      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-26",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 26,
+      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - ALTERA A LOCALIZAÇÃO DO AGROCOLÉGIO ESTADUAL MAGUITO VILELA PARA O MUNICÍPIO DE GOIANÉSIA/GO E REVOGA O ART. 11- C DA LEI Nº 19.651, DE 12 DE MAIO DE 2017.",
+      "pauta_id": 41491,
+      "parlamentar": "MAURO RUBEM",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PT",
+      "partido_nome": "PARTIDO DOS TRABALHADORES",
+      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-26",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 26,
+      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - ALTERA A LOCALIZAÇÃO DO AGROCOLÉGIO ESTADUAL MAGUITO VILELA PARA O MUNICÍPIO DE GOIANÉSIA/GO E REVOGA O ART. 11- C DA LEI Nº 19.651, DE 12 DE MAIO DE 2017.",
+      "pauta_id": 41491,
+      "parlamentar": "LUCAS DO VALE ",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PSD",
+      "partido_nome": "PARTIDO SOCIAL DEMOCRÁTICO",
       "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
       "tipo_votacao": "NOMINAL"
     },
@@ -664,70 +728,6 @@
       "tipo_voto": "SIM",
       "partido_sigla": "PSB",
       "partido_nome": "PARTIDO SOCIALISTA BRASILEIRO",
-      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-26",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 26,
-      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - ALTERA A LOCALIZAÇÃO DO AGROCOLÉGIO ESTADUAL MAGUITO VILELA PARA O MUNICÍPIO DE GOIANÉSIA/GO E REVOGA O ART. 11- C DA LEI Nº 19.651, DE 12 DE MAIO DE 2017.",
-      "pauta_id": 41491,
-      "parlamentar": "ROSÂNGELA REZENDE",
-      "tipo_voto": "SIM",
-      "partido_sigla": "AGIR",
-      "partido_nome": "AGIR",
-      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-26",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 26,
-      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - ALTERA A LOCALIZAÇÃO DO AGROCOLÉGIO ESTADUAL MAGUITO VILELA PARA O MUNICÍPIO DE GOIANÉSIA/GO E REVOGA O ART. 11- C DA LEI Nº 19.651, DE 12 DE MAIO DE 2017.",
-      "pauta_id": 41491,
-      "parlamentar": "RICARDO QUIRINO",
-      "tipo_voto": "SIM",
-      "partido_sigla": "REP",
-      "partido_nome": "REPUBLICANOS",
-      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-26",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 26,
-      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - ALTERA A LOCALIZAÇÃO DO AGROCOLÉGIO ESTADUAL MAGUITO VILELA PARA O MUNICÍPIO DE GOIANÉSIA/GO E REVOGA O ART. 11- C DA LEI Nº 19.651, DE 12 DE MAIO DE 2017.",
-      "pauta_id": 41491,
-      "parlamentar": "MAURO RUBEM",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PT",
-      "partido_nome": "PARTIDO DOS TRABALHADORES",
-      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-26",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 26,
-      "nome_sessao": "65ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - GOVERNADORIA\nASSUNTO - ALTERA A LOCALIZAÇÃO DO AGROCOLÉGIO ESTADUAL MAGUITO VILELA PARA O MUNICÍPIO DE GOIANÉSIA/GO E REVOGA O ART. 11- C DA LEI Nº 19.651, DE 12 DE MAIO DE 2017.",
-      "pauta_id": 41491,
-      "parlamentar": "LUCAS DO VALE ",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PSD",
-      "partido_nome": "PARTIDO SOCIAL DEMOCRÁTICO",
       "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
       "tipo_votacao": "NOMINAL"
     },
@@ -1828,10 +1828,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "ANDERSON TEODORO",
+      "parlamentar": "VIVIAN NAVES",
       "tipo_voto": "SIM",
-      "partido_sigla": "PRD",
-      "partido_nome": "PARTIDO RENOVAÇÃO DEMOCRÁTICA",
+      "partido_sigla": "REP",
+      "partido_nome": "REPUBLICANOS",
       "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
       "tipo_votacao": "NOMINAL"
     },
@@ -1844,7 +1844,7 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "ANDRÉ DO PREMIUM",
+      "parlamentar": "VIRMONDES CRUVINEL",
       "tipo_voto": "SIM",
       "partido_sigla": "UB",
       "partido_nome": "UNIÃO BRASIL",
@@ -1860,7 +1860,71 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "ANTÔNIO GOMIDE",
+      "parlamentar": "TALLES BARRETO",
+      "tipo_voto": "SIM",
+      "partido_sigla": "UB",
+      "partido_nome": "UNIÃO BRASIL",
+      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
+      "pauta_id": 41312,
+      "parlamentar": "RUBENS MARQUES",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PSB",
+      "partido_nome": "PARTIDO SOCIALISTA BRASILEIRO",
+      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
+      "pauta_id": 41312,
+      "parlamentar": "ROSÂNGELA REZENDE",
+      "tipo_voto": "SIM",
+      "partido_sigla": "AGIR",
+      "partido_nome": "AGIR",
+      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
+      "pauta_id": 41312,
+      "parlamentar": "RICARDO QUIRINO",
+      "tipo_voto": "SIM",
+      "partido_sigla": "REP",
+      "partido_nome": "REPUBLICANOS",
+      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
+      "pauta_id": 41312,
+      "parlamentar": "MAURO RUBEM",
       "tipo_voto": "SIM",
       "partido_sigla": "PT",
       "partido_nome": "PARTIDO DOS TRABALHADORES",
@@ -1876,71 +1940,7 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "BIA DE LIMA",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PT",
-      "partido_nome": "PARTIDO DOS TRABALHADORES",
-      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
-      "pauta_id": 41312,
-      "parlamentar": "CLÉCIO ALVES",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PSDB",
-      "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
-      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
-      "pauta_id": 41312,
-      "parlamentar": "CRISTIANO GALINDO",
-      "tipo_voto": "SIM",
-      "partido_sigla": "SD",
-      "partido_nome": "SOLIDARIEDADE",
-      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
-      "pauta_id": 41312,
-      "parlamentar": "CRISTÓVÃO TORMIN",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PRD",
-      "partido_nome": "PARTIDO RENOVAÇÃO DEMOCRÁTICA",
-      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
-      "pauta_id": 41312,
-      "parlamentar": "DRª. ZELI",
+      "parlamentar": "LUCAS DO VALE ",
       "tipo_voto": "SIM",
       "partido_sigla": "PSD",
       "partido_nome": "PARTIDO SOCIAL DEMOCRÁTICO",
@@ -1956,7 +1956,39 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "GUGU NADER",
+      "parlamentar": "LUCAS CALIL",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PRD",
+      "partido_nome": "PARTIDO RENOVAÇÃO DEMOCRÁTICA",
+      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
+      "pauta_id": 41312,
+      "parlamentar": "LINEU OLIMPIO",
+      "tipo_voto": "SIM",
+      "partido_sigla": "MDB",
+      "partido_nome": "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
+      "pauta_id": 41312,
+      "parlamentar": "JOSÉ MACHADO",
       "tipo_voto": "SIM",
       "partido_sigla": "PSDB",
       "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
@@ -1988,7 +2020,7 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "JOSÉ MACHADO",
+      "parlamentar": "GUGU NADER",
       "tipo_voto": "SIM",
       "partido_sigla": "PSDB",
       "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
@@ -2004,39 +2036,7 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "LINEU OLIMPIO",
-      "tipo_voto": "SIM",
-      "partido_sigla": "MDB",
-      "partido_nome": "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
-      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
-      "pauta_id": 41312,
-      "parlamentar": "LUCAS CALIL",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PRD",
-      "partido_nome": "PARTIDO RENOVAÇÃO DEMOCRÁTICA",
-      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
-      "pauta_id": 41312,
-      "parlamentar": "LUCAS DO VALE ",
+      "parlamentar": "DRª. ZELI",
       "tipo_voto": "SIM",
       "partido_sigla": "PSD",
       "partido_nome": "PARTIDO SOCIAL DEMOCRÁTICO",
@@ -2052,7 +2052,55 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "MAURO RUBEM",
+      "parlamentar": "CRISTÓVÃO TORMIN",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PRD",
+      "partido_nome": "PARTIDO RENOVAÇÃO DEMOCRÁTICA",
+      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
+      "pauta_id": 41312,
+      "parlamentar": "CRISTIANO GALINDO",
+      "tipo_voto": "SIM",
+      "partido_sigla": "SD",
+      "partido_nome": "SOLIDARIEDADE",
+      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
+      "pauta_id": 41312,
+      "parlamentar": "CLÉCIO ALVES",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PSDB",
+      "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
+      "pauta_id": 41312,
+      "parlamentar": "BIA DE LIMA",
       "tipo_voto": "SIM",
       "partido_sigla": "PT",
       "partido_nome": "PARTIDO DOS TRABALHADORES",
@@ -2068,10 +2116,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "RICARDO QUIRINO",
+      "parlamentar": "ANTÔNIO GOMIDE",
       "tipo_voto": "SIM",
-      "partido_sigla": "REP",
-      "partido_nome": "REPUBLICANOS",
+      "partido_sigla": "PT",
+      "partido_nome": "PARTIDO DOS TRABALHADORES",
       "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
       "tipo_votacao": "NOMINAL"
     },
@@ -2084,39 +2132,7 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "ROSÂNGELA REZENDE",
-      "tipo_voto": "SIM",
-      "partido_sigla": "AGIR",
-      "partido_nome": "AGIR",
-      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
-      "pauta_id": 41312,
-      "parlamentar": "RUBENS MARQUES",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PSB",
-      "partido_nome": "PARTIDO SOCIALISTA BRASILEIRO",
-      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
-      "pauta_id": 41312,
-      "parlamentar": "TALLES BARRETO",
+      "parlamentar": "ANDRÉ DO PREMIUM",
       "tipo_voto": "SIM",
       "partido_sigla": "UB",
       "partido_nome": "UNIÃO BRASIL",
@@ -2132,26 +2148,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
       "pauta_id": 41312,
-      "parlamentar": "VIRMONDES CRUVINEL",
+      "parlamentar": "ANDERSON TEODORO",
       "tipo_voto": "SIM",
-      "partido_sigla": "UB",
-      "partido_nome": "UNIÃO BRASIL",
-      "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTORES - DEPUTADOS...\nASSUNTO - VOTAÇÃO EM BLOCO DE DECLARAÇÃO DE UTILIDADE PÚBLICA.\nPROCESSOS - 19533/2025, 20897/2025, 32199/2025, 7577/2026, 7583/2026, 8752/2026, 25471/2025, 25719/2025, 11605/2025.",
-      "pauta_id": 41312,
-      "parlamentar": "VIVIAN NAVES",
-      "tipo_voto": "SIM",
-      "partido_sigla": "REP",
-      "partido_nome": "REPUBLICANOS",
+      "partido_sigla": "PRD",
+      "partido_nome": "PARTIDO RENOVAÇÃO DEMOCRÁTICA",
       "resultado_votacao": "APROVADOS EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
       "tipo_votacao": "NOMINAL"
     },
@@ -2244,106 +2244,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "RICARDO QUIRINO",
+      "parlamentar": "JOSÉ MACHADO",
       "tipo_voto": "SIM",
-      "partido_sigla": "REP",
-      "partido_nome": "REPUBLICANOS",
-      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
-      "pauta_id": 41311,
-      "parlamentar": "MAURO RUBEM",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PT",
-      "partido_nome": "PARTIDO DOS TRABALHADORES",
-      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
-      "pauta_id": 41311,
-      "parlamentar": "MAJOR ARAÚJO",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PL",
-      "partido_nome": "PARTIDO LIBERAL",
-      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
-      "pauta_id": 41311,
-      "parlamentar": "LUCAS DO VALE ",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PSD",
-      "partido_nome": "PARTIDO SOCIAL DEMOCRÁTICO",
-      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
-      "pauta_id": 41311,
-      "parlamentar": "LUCAS CALIL",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PRD",
-      "partido_nome": "PARTIDO RENOVAÇÃO DEMOCRÁTICA",
-      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
-      "pauta_id": 41311,
-      "parlamentar": "LINEU OLIMPIO",
-      "tipo_voto": "SIM",
-      "partido_sigla": "MDB",
-      "partido_nome": "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
-      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
-      "pauta_id": 41311,
-      "parlamentar": "LINCOLN TEJOTA",
-      "tipo_voto": "SIM",
-      "partido_sigla": "UB",
-      "partido_nome": "UNIÃO BRASIL",
+      "partido_sigla": "PSDB",
+      "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
       "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
       "tipo_votacao": "NOMINAL"
     },
@@ -2372,10 +2276,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "JOSÉ MACHADO",
+      "parlamentar": "LINCOLN TEJOTA",
       "tipo_voto": "SIM",
-      "partido_sigla": "PSDB",
-      "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+      "partido_sigla": "UB",
+      "partido_nome": "UNIÃO BRASIL",
       "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
       "tipo_votacao": "NOMINAL"
     },
@@ -2388,10 +2292,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "GUGU NADER",
+      "parlamentar": "LINEU OLIMPIO",
       "tipo_voto": "SIM",
-      "partido_sigla": "PSDB",
-      "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+      "partido_sigla": "MDB",
+      "partido_nome": "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
       "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
       "tipo_votacao": "NOMINAL"
     },
@@ -2404,39 +2308,7 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "DRª. ZELI",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PSD",
-      "partido_nome": "PARTIDO SOCIAL DEMOCRÁTICO",
-      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
-      "pauta_id": 41311,
-      "parlamentar": "DEL. EDUARDO PRADO",
-      "tipo_voto": "SIM",
-      "partido_sigla": "PL",
-      "partido_nome": "PARTIDO LIBERAL",
-      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
-      "pauta_id": 41311,
-      "parlamentar": "CRISTÓVÃO TORMIN",
+      "parlamentar": "LUCAS CALIL",
       "tipo_voto": "SIM",
       "partido_sigla": "PRD",
       "partido_nome": "PARTIDO RENOVAÇÃO DEMOCRÁTICA",
@@ -2452,10 +2324,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "CRISTIANO GALINDO",
+      "parlamentar": "LUCAS DO VALE ",
       "tipo_voto": "SIM",
-      "partido_sigla": "SD",
-      "partido_nome": "SOLIDARIEDADE",
+      "partido_sigla": "PSD",
+      "partido_nome": "PARTIDO SOCIAL DEMOCRÁTICO",
       "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
       "tipo_votacao": "NOMINAL"
     },
@@ -2468,10 +2340,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "CLÉCIO ALVES",
+      "parlamentar": "MAJOR ARAÚJO",
       "tipo_voto": "SIM",
-      "partido_sigla": "PSDB",
-      "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+      "partido_sigla": "PL",
+      "partido_nome": "PARTIDO LIBERAL",
       "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
       "tipo_votacao": "NOMINAL"
     },
@@ -2484,23 +2356,7 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "BRUNO PEIXOTO",
-      "tipo_voto": "SIM",
-      "partido_sigla": "UB",
-      "partido_nome": "UNIÃO BRASIL",
-      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-08-25",
-      "ano": 2026,
-      "mes": 8,
-      "dia": 25,
-      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
-      "pauta_id": 41311,
-      "parlamentar": "BIA DE LIMA",
+      "parlamentar": "MAURO RUBEM",
       "tipo_voto": "SIM",
       "partido_sigla": "PT",
       "partido_nome": "PARTIDO DOS TRABALHADORES",
@@ -2516,10 +2372,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "ANTÔNIO GOMIDE",
+      "parlamentar": "RICARDO QUIRINO",
       "tipo_voto": "SIM",
-      "partido_sigla": "PT",
-      "partido_nome": "PARTIDO DOS TRABALHADORES",
+      "partido_sigla": "REP",
+      "partido_nome": "REPUBLICANOS",
       "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
       "tipo_votacao": "NOMINAL"
     },
@@ -2532,10 +2388,10 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "ANDRÉ DO PREMIUM",
+      "parlamentar": "AMILTON FILHO",
       "tipo_voto": "SIM",
-      "partido_sigla": "UB",
-      "partido_nome": "UNIÃO BRASIL",
+      "partido_sigla": "MDB",
+      "partido_nome": "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
       "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
       "tipo_votacao": "NOMINAL"
     },
@@ -2564,10 +2420,154 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
       "pauta_id": 41311,
-      "parlamentar": "AMILTON FILHO",
+      "parlamentar": "ANDRÉ DO PREMIUM",
       "tipo_voto": "SIM",
-      "partido_sigla": "MDB",
-      "partido_nome": "MOVIMENTO DEMOCRÁTICO BRASILEIRO",
+      "partido_sigla": "UB",
+      "partido_nome": "UNIÃO BRASIL",
+      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
+      "pauta_id": 41311,
+      "parlamentar": "ANTÔNIO GOMIDE",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PT",
+      "partido_nome": "PARTIDO DOS TRABALHADORES",
+      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
+      "pauta_id": 41311,
+      "parlamentar": "BIA DE LIMA",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PT",
+      "partido_nome": "PARTIDO DOS TRABALHADORES",
+      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
+      "pauta_id": 41311,
+      "parlamentar": "BRUNO PEIXOTO",
+      "tipo_voto": "SIM",
+      "partido_sigla": "UB",
+      "partido_nome": "UNIÃO BRASIL",
+      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
+      "pauta_id": 41311,
+      "parlamentar": "CLÉCIO ALVES",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PSDB",
+      "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
+      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
+      "pauta_id": 41311,
+      "parlamentar": "CRISTIANO GALINDO",
+      "tipo_voto": "SIM",
+      "partido_sigla": "SD",
+      "partido_nome": "SOLIDARIEDADE",
+      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
+      "pauta_id": 41311,
+      "parlamentar": "CRISTÓVÃO TORMIN",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PRD",
+      "partido_nome": "PARTIDO RENOVAÇÃO DEMOCRÁTICA",
+      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
+      "pauta_id": 41311,
+      "parlamentar": "DEL. EDUARDO PRADO",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PL",
+      "partido_nome": "PARTIDO LIBERAL",
+      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
+      "pauta_id": 41311,
+      "parlamentar": "DRª. ZELI",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PSD",
+      "partido_nome": "PARTIDO SOCIAL DEMOCRÁTICO",
+      "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-08-25",
+      "ano": 2026,
+      "mes": 8,
+      "dia": 25,
+      "nome_sessao": "64ª SESSÃO ORDINÁRIA HÍBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO PAULO CEZAR MARTINS\nASSUNTO - VOTAÇÃO DE REQUERIMENTOS.\nREQUERIMENTOS - 906, 907, 908, 910, 911/2026.",
+      "pauta_id": 41311,
+      "parlamentar": "GUGU NADER",
+      "tipo_voto": "SIM",
+      "partido_sigla": "PSDB",
+      "partido_nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA",
       "resultado_votacao": "APROVADOS. À SECRETARIA PARA AS DEVIDAS PROVIDÊNCIAS.",
       "tipo_votacao": "NOMINAL"
     },
@@ -92652,13 +92652,13 @@
       "absence_or_other": 0,
       "votes": [
         {
-          "parliamentarian": "VIVIAN NAVES",
-          "party": "REP",
+          "parliamentarian": "VIRMONDES CRUVINEL",
+          "party": "UB",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "VIRMONDES CRUVINEL",
-          "party": "UB",
+          "parliamentarian": "VETER MARTINS",
+          "party": "PSB",
           "vote": "SIM"
         },
         {
@@ -92767,8 +92767,8 @@
           "vote": "SIM"
         },
         {
-          "parliamentarian": "VETER MARTINS",
-          "party": "PSB",
+          "parliamentarian": "VIVIAN NAVES",
+          "party": "REP",
           "vote": "SIM"
         }
       ]
@@ -92787,6 +92787,26 @@
       "abstention": 0,
       "absence_or_other": 0,
       "votes": [
+        {
+          "parliamentarian": "ROSÂNGELA REZENDE",
+          "party": "AGIR",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "RICARDO QUIRINO",
+          "party": "REP",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "MAURO RUBEM",
+          "party": "PT",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "LUCAS DO VALE ",
+          "party": "PSD",
+          "vote": "SIM"
+        },
         {
           "parliamentarian": "LUCAS CALIL",
           "party": "PRD",
@@ -92870,26 +92890,6 @@
         {
           "parliamentarian": "RUBENS MARQUES",
           "party": "PSB",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "ROSÂNGELA REZENDE",
-          "party": "AGIR",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "RICARDO QUIRINO",
-          "party": "REP",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "MAURO RUBEM",
-          "party": "PT",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "LUCAS DO VALE ",
-          "party": "PSD",
           "vote": "SIM"
         }
       ]
@@ -93297,47 +93297,57 @@
           "vote": "SIM"
         },
         {
-          "parliamentarian": "ANDERSON TEODORO",
-          "party": "PRD",
+          "parliamentarian": "VIVIAN NAVES",
+          "party": "REP",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "ANDRÉ DO PREMIUM",
+          "parliamentarian": "VIRMONDES CRUVINEL",
           "party": "UB",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "ANTÔNIO GOMIDE",
+          "parliamentarian": "TALLES BARRETO",
+          "party": "UB",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "RUBENS MARQUES",
+          "party": "PSB",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "ROSÂNGELA REZENDE",
+          "party": "AGIR",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "RICARDO QUIRINO",
+          "party": "REP",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "MAURO RUBEM",
           "party": "PT",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "BIA DE LIMA",
-          "party": "PT",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "CLÉCIO ALVES",
-          "party": "PSDB",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "CRISTIANO GALINDO",
-          "party": "SD",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "CRISTÓVÃO TORMIN",
-          "party": "PRD",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "DRª. ZELI",
+          "parliamentarian": "LUCAS DO VALE ",
           "party": "PSD",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "GUGU NADER",
+          "parliamentarian": "LUCAS CALIL",
+          "party": "PRD",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "LINEU OLIMPIO",
+          "party": "MDB",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "JOSÉ MACHADO",
           "party": "PSDB",
           "vote": "SIM"
         },
@@ -93347,58 +93357,48 @@
           "vote": "SIM"
         },
         {
-          "parliamentarian": "JOSÉ MACHADO",
+          "parliamentarian": "GUGU NADER",
           "party": "PSDB",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "LINEU OLIMPIO",
-          "party": "MDB",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "LUCAS CALIL",
-          "party": "PRD",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "LUCAS DO VALE ",
+          "parliamentarian": "DRª. ZELI",
           "party": "PSD",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "MAURO RUBEM",
+          "parliamentarian": "CRISTÓVÃO TORMIN",
+          "party": "PRD",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "CRISTIANO GALINDO",
+          "party": "SD",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "CLÉCIO ALVES",
+          "party": "PSDB",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "BIA DE LIMA",
           "party": "PT",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "RICARDO QUIRINO",
-          "party": "REP",
+          "parliamentarian": "ANTÔNIO GOMIDE",
+          "party": "PT",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "ROSÂNGELA REZENDE",
-          "party": "AGIR",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "RUBENS MARQUES",
-          "party": "PSB",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "TALLES BARRETO",
+          "parliamentarian": "ANDRÉ DO PREMIUM",
           "party": "UB",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "VIRMONDES CRUVINEL",
-          "party": "UB",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "VIVIAN NAVES",
-          "party": "REP",
+          "parliamentarian": "ANDERSON TEODORO",
+          "party": "PRD",
           "vote": "SIM"
         }
       ]
@@ -93443,38 +93443,8 @@
           "vote": "SIM"
         },
         {
-          "parliamentarian": "RICARDO QUIRINO",
-          "party": "REP",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "MAURO RUBEM",
-          "party": "PT",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "MAJOR ARAÚJO",
-          "party": "PL",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "LUCAS DO VALE ",
-          "party": "PSD",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "LUCAS CALIL",
-          "party": "PRD",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "LINEU OLIMPIO",
-          "party": "MDB",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "LINCOLN TEJOTA",
-          "party": "UB",
+          "parliamentarian": "JOSÉ MACHADO",
+          "party": "PSDB",
           "vote": "SIM"
         },
         {
@@ -93483,58 +93453,43 @@
           "vote": "SIM"
         },
         {
-          "parliamentarian": "JOSÉ MACHADO",
-          "party": "PSDB",
+          "parliamentarian": "LINCOLN TEJOTA",
+          "party": "UB",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "GUGU NADER",
-          "party": "PSDB",
+          "parliamentarian": "LINEU OLIMPIO",
+          "party": "MDB",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "DRª. ZELI",
-          "party": "PSD",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "DEL. EDUARDO PRADO",
-          "party": "PL",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "CRISTÓVÃO TORMIN",
+          "parliamentarian": "LUCAS CALIL",
           "party": "PRD",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "CRISTIANO GALINDO",
-          "party": "SD",
+          "parliamentarian": "LUCAS DO VALE ",
+          "party": "PSD",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "CLÉCIO ALVES",
-          "party": "PSDB",
+          "parliamentarian": "MAJOR ARAÚJO",
+          "party": "PL",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "BRUNO PEIXOTO",
-          "party": "UB",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "BIA DE LIMA",
+          "parliamentarian": "MAURO RUBEM",
           "party": "PT",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "ANTÔNIO GOMIDE",
-          "party": "PT",
+          "parliamentarian": "RICARDO QUIRINO",
+          "party": "REP",
           "vote": "SIM"
         },
         {
-          "parliamentarian": "ANDRÉ DO PREMIUM",
-          "party": "UB",
+          "parliamentarian": "AMILTON FILHO",
+          "party": "MDB",
           "vote": "SIM"
         },
         {
@@ -93543,8 +93498,53 @@
           "vote": "SIM"
         },
         {
-          "parliamentarian": "AMILTON FILHO",
-          "party": "MDB",
+          "parliamentarian": "ANDRÉ DO PREMIUM",
+          "party": "UB",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "ANTÔNIO GOMIDE",
+          "party": "PT",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "BIA DE LIMA",
+          "party": "PT",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "BRUNO PEIXOTO",
+          "party": "UB",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "CLÉCIO ALVES",
+          "party": "PSDB",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "CRISTIANO GALINDO",
+          "party": "SD",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "CRISTÓVÃO TORMIN",
+          "party": "PRD",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "DEL. EDUARDO PRADO",
+          "party": "PL",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "DRª. ZELI",
+          "party": "PSD",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "GUGU NADER",
+          "party": "PSDB",
           "vote": "SIM"
         }
       ]
