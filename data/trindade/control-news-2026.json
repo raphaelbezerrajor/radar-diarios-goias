@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-01T10:40:50.690Z",
+  "generated_at": "2026-09-01T20:33:23.687Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-01"
@@ -10,7 +10,7 @@
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 102
+    "published_stories": 104
   },
   "items": [
     {
@@ -6067,6 +6067,130 @@
           "digitalização de arquivos públicos",
           "11 estruturas municipais",
           "adesão a ata de consórcio de outro estado"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-01",
+      "published_at": "2026-09-01",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "TCE-GO",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291642352061",
+      "source_landing_url": "https://www.tce.go.gov.br/DiarioEletronico",
+      "edition_id": "tcego:331291642352061",
+      "edition_number": "158",
+      "local_path": "data/raw/tcego/2026/09/tcego-dec-158-2026-09-01.pdf",
+      "document_sha256": "09ae01137b7ae31a21f36d2d0a8e10112f44244be4c8e7a9d129055b4fd14500",
+      "id": "tcego-158-go020-compensacao-debito-6-milhoes",
+      "page_start": 7,
+      "page_end": 8,
+      "document_reference": "Diário Eletrônico de Contas nº 158 · páginas 7 e 8",
+      "external_identifier": "Processo nº 201300047003752/101-02 · Acórdão nº 2374/2026",
+      "official_title": "Acórdão nº 2374/2026",
+      "act_type": "tomada_contas_especial",
+      "type_label": "Controle e responsabilização",
+      "title": "TCE abate R$ 6,4 milhões de débito da GO-020, mas mantém saldo e responsabilidade de gestores",
+      "deck": "Compensação deu quitação apenas parcial; Tribunal mandou recalcular o valor restante e preservou multas aplicadas em 2025.",
+      "summary": "Decisão envolve contrato de 2013 para duplicação, terceira faixa e ciclovia entre Goiânia e Bela Vista de Goiás.",
+      "paragraphs": [
+        "O Tribunal de Contas do Estado reconheceu uma compensação administrativa de R$ 6.427.066,15 no débito relacionado ao Contrato nº 168/2013, firmado para obras na GO-020. O acordo publicado nesta terça-feira concede quitação apenas parcial e manda recalcular o saldo restante, com abatimento do valor compensado do total atualizado em 26 de fevereiro de 2026.",
+        "O contrato abrangia terraplenagem e pavimentação para duplicar o trecho entre o Autódromo de Goiânia e Bela Vista, construir terceira faixa entre a BR-153 e o autódromo e implantar ciclovia. O TCE manteve a responsabilidade solidária dos gestores já relacionados no processo pelo saldo que ainda será apurado e preservou as multas individuais do Acórdão nº 3920/2025. A decisão não informa, nestas páginas, o valor final remanescente."
+      ],
+      "public_body": "Tribunal de Contas do Estado e Goinfra",
+      "values": [
+        {
+          "original": "R$ 6.427.066,15",
+          "value": 6427066.15,
+          "currency": "BRL",
+          "label": "valor abatido por compensação"
+        }
+      ],
+      "value_highest": 6427066.15,
+      "reference_numbers": [
+        "201300047003752/101-02",
+        "168/2013",
+        "2374/2026",
+        "3920/2025"
+      ],
+      "importance": 110,
+      "news_value": {
+        "score": 110,
+        "reasons": [
+          "débito de obra pública",
+          "R$ 6,4 milhões compensados",
+          "saldo ainda pendente",
+          "responsabilidade solidária mantida"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-01",
+      "published_at": "2026-09-01",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "TCE-GO",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291642352061",
+      "source_landing_url": "https://www.tce.go.gov.br/DiarioEletronico",
+      "edition_id": "tcego:331291642352061",
+      "edition_number": "158",
+      "local_path": "data/raw/tcego/2026/09/tcego-dec-158-2026-09-01.pdf",
+      "document_sha256": "09ae01137b7ae31a21f36d2d0a8e10112f44244be4c8e7a9d129055b4fd14500",
+      "id": "tcego-158-cestas-basicas-30-milhoes-falhas",
+      "page_start": 3,
+      "page_end": 5,
+      "document_reference": "Diário Eletrônico de Contas nº 158 · páginas 3 a 5",
+      "external_identifier": "Processo nº 202400047001643/309-06 · Acórdão nº 2370/2026",
+      "official_title": "Acórdão nº 2370/2026",
+      "act_type": "fiscalizacao_licitacao",
+      "type_label": "Licitação e assistência social",
+      "title": "TCE aponta 11 falhas em licitação de R$ 30,7 milhões para cestas básicas em Goiás",
+      "deck": "Problemas envolveram planejamento, estimativa de quantidades, pesquisa de preços, verificação societária e programa de integridade.",
+      "summary": "Tribunal classificou as falhas como predominantemente formais, emitiu recomendações à Seds e arquivou o processo.",
+      "paragraphs": [
+        "O TCE-GO identificou 11 falhas no Pregão Eletrônico nº 1/2024 da Secretaria de Desenvolvimento Social, estimado em R$ 30.684.000 para fornecer cestas básicas sob demanda durante 12 meses. A lista inclui documentação insuficiente sobre a quantidade estimada, ausência de parâmetros de execução física e financeira, falhas no estudo ambiental e na pesquisa de preços e falta de registro das verificações sobre o sócio majoritário da vencedora.",
+        "O Tribunal também apontou ausência de comprovação tempestiva da declaração relativa ao programa de integridade do Contrato nº 34/2024. O acórdão classificou o conjunto como falhas predominantemente formais, deu ciência à secretaria, recomendou melhorias no planejamento e nas pesquisas de preços e determinou o arquivamento. A decisão não imputa dano nem aplica multa neste processo."
+      ],
+      "public_body": "Secretaria de Estado de Desenvolvimento Social",
+      "values": [
+        {
+          "original": "R$ 30.684.000,00",
+          "value": 30684000,
+          "currency": "BRL",
+          "label": "valor global estimado da licitação"
+        }
+      ],
+      "value_highest": 30684000,
+      "reference_numbers": [
+        "202400047001643/309-06",
+        "001/2024",
+        "34/2024",
+        "2370/2026"
+      ],
+      "importance": 108,
+      "news_value": {
+        "score": 108,
+        "reasons": [
+          "R$ 30,7 milhões",
+          "11 falhas documentais",
+          "cestas básicas",
+          "controle de licitação estadual"
         ]
       }
     }
