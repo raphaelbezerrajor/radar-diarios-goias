@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-31T11:23:33.891Z",
+  "generated_at": "2026-09-01T10:40:50.690Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-08-31"
+    "to": "2026-09-01"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 101
+    "published_stories": 102
   },
   "items": [
     {
@@ -6003,6 +6003,70 @@
           "R$ 12,3 milhões",
           "gases medicinais",
           "rede municipal de saúde"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "senador-canedo-481-gestao-documental-6-milhoes",
+      "date": "2026-09-01",
+      "published_at": "2026-09-01",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "source_id": "senador-canedo",
+      "source_name": "Diário Oficial do Município de Senador Canedo",
+      "source_label": "Prefeitura de Senador Canedo",
+      "official_url": "https://diario.senadorcanedo.go.gov.br/diario/8gsg1ln480",
+      "source_landing_url": "https://diario.senadorcanedo.go.gov.br/",
+      "edition_id": "senador-canedo:677",
+      "edition_number": "481",
+      "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-01-481.pdf",
+      "document_sha256": "9748cbaca8bada556135e052ec42aee188773580ab367f0505d870163d34d329",
+      "page_start": 8,
+      "page_end": 8,
+      "document_reference": "Diário Oficial nº 481 · página 8",
+      "external_identifier": "Adesão à Ata nº 043/2025 · Processo 1Doc nº 26.111/2026",
+      "official_title": "Termo de adesão parcial à Ata de Registro de Preços nº 043/2025",
+      "act_type": "adesao_ata_registro_precos",
+      "type_label": "Gestão documental",
+      "title": "Senador Canedo adere a ata de R$ 6,4 milhões para digitalizar arquivos públicos",
+      "deck": "Serviço inclui organização, preservação, digitalização, guarda e sistema eletrônico para documentos de 11 órgãos municipais.",
+      "summary": "Maindoc Gestão Digital atenderá prefeitura, fundos, autarquias e institutos municipais por adesão a uma ata de consórcio mineiro.",
+      "paragraphs": [
+        "Senador Canedo formalizou uma adesão de R$ 6.398.090,33 a uma ata de registro de preços para modernizar a gestão de documentos do município. O pacote prevê organização e classificação do acervo, digitalização do passivo em papel, adequação de arquivos já digitalizados, preservação e guarda, certificação e rastreabilidade, além de um sistema de gerenciamento eletrônico de documentos.",
+        "A fornecedora é a Maindoc Gestão Digital. A adesão alcança 11 estruturas municipais, entre elas Prefeitura, Saúde, Educação, Assistência Social, Meio Ambiente, Saneamento, Previdência e o instituto de assistência dos servidores, e utiliza uma ata do Consórcio Intermunicipal Multifinalitário da Microrregião do Alto Sapucaí, em Minas Gerais. O valor publicado corresponde à adesão, não a pagamentos já realizados."
+      ],
+      "public_body": "Prefeitura de Senador Canedo e órgãos municipais aderentes",
+      "values": [
+        {
+          "original": "R$ 6.398.090,33",
+          "value": 6398090.33,
+          "currency": "BRL",
+          "label": "valor global da adesão"
+        }
+      ],
+      "value_highest": 6398090.33,
+      "cnpjs": [
+        "23.447.382/0001-00"
+      ],
+      "reference_numbers": [
+        "043/2025",
+        "050/2025",
+        "26.111/2026"
+      ],
+      "importance": 101,
+      "news_value": {
+        "score": 101,
+        "reasons": [
+          "R$ 6,4 milhões",
+          "digitalização de arquivos públicos",
+          "11 estruturas municipais",
+          "adesão a ata de consórcio de outro estado"
         ]
       }
     }
