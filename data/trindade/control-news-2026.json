@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-01T20:33:23.687Z",
+  "generated_at": "2026-09-02T10:24:31.920Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-09-01"
+    "to": "2026-09-02"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 104
+    "published_stories": 105
   },
   "items": [
     {
@@ -6191,6 +6191,76 @@
           "11 falhas documentais",
           "cestas básicas",
           "controle de licitação estadual"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "trindade-3695-folha-pagamento-consultoria-1-milhao",
+      "date": "2026-09-02",
+      "published_at": "2026-09-02",
+      "city": "Trindade",
+      "scope": "Municipal",
+      "source_id": "agm",
+      "source_name": "Diário Municipal de Goiás — AGM",
+      "source_label": "Prefeitura de Trindade",
+      "official_url": "https://www.diariomunicipal.com.br/agm/",
+      "source_landing_url": "https://www.diariomunicipal.com.br/agm/",
+      "edition_id": "agm:3695",
+      "edition_number": "3695",
+      "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-02-3695.pdf",
+      "document_sha256": "4354765448119efc8b6540cd48a9269c717c5936255312e558cb5436d0eb6938",
+      "page_start": 135,
+      "page_end": 137,
+      "document_reference": "Diário Municipal de Goiás nº 3695 · páginas 135 a 137",
+      "external_identifier": "Contrato nº 037/2026 · Processo nº 5457/2026 · Inexigibilidade nº 011/2026",
+      "official_title": "Primeiro termo aditivo ao Contrato Administrativo nº 037/2026",
+      "act_type": "termo_aditivo",
+      "type_label": "Folha de pagamento",
+      "title": "Trindade prevê pagar até R$ 1,5 milhão por estudo para negociar folha dos servidores",
+      "deck": "Consultoria receberá 19% do valor negociado somente se banco pagar mais que o piso de R$ 6,3 milhões definido pela prefeitura.",
+      "summary": "Aditivo detalha remuneração por êxito do instituto contratado por inexigibilidade para assessorar a futura seleção de um banco.",
+      "paragraphs": [
+        "A Prefeitura de Trindade alterou o contrato com o Instituto Brasileiro de Tecnologia, Empreendedorismo e Gestão para prever remuneração de até R$ 1,5 milhão pelo estudo e assessoramento da futura negociação da folha dos servidores. O aditivo fixa uma taxa de R$ 0,19 para cada R$ 1 negociado com a instituição financeira vencedora, equivalente a 19% do valor final, respeitado o teto contratual.",
+        "O pagamento depende de êxito: o banco deverá oferecer mais que o piso de R$ 6,3 milhões e a prefeitura afirma que nada será devido se o valor final for igual ou inferior a esse limite. O instituto, sediado em Nova Lima, Minas Gerais, foi contratado por inexigibilidade. A publicação descreve a fórmula e as condições do pagamento, mas não informa que a escolha do banco já tenha sido concluída nem que a consultoria já tenha recebido qualquer valor."
+      ],
+      "public_body": "Prefeitura de Trindade",
+      "values": [
+        {
+          "original": "R$ 1.500.000,00",
+          "value": 1500000,
+          "currency": "BRL",
+          "label": "limite da remuneração da consultoria"
+        },
+        {
+          "original": "R$ 6.300.000,00",
+          "value": 6300000,
+          "currency": "BRL",
+          "label": "valor-base para a negociação da folha"
+        }
+      ],
+      "value_highest": 6300000,
+      "cnpjs": [
+        "15.555.941/0001-69"
+      ],
+      "reference_numbers": [
+        "037/2026",
+        "5457/2026",
+        "011/2026"
+      ],
+      "importance": 109,
+      "news_value": {
+        "score": 109,
+        "reasons": [
+          "até R$ 1,5 milhão",
+          "contratação por inexigibilidade",
+          "folha dos servidores",
+          "remuneração condicionada ao êxito"
         ]
       }
     }
