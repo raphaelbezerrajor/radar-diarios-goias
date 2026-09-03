@@ -1,0 +1,16 @@
+---
+import siteData from "../../generated/site-data.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import { compactNumber } from "../../lib/format.js";
+
+const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const stories = siteData.timeline.stories.filter((item) => item.scope === "Municipal" || item.cluster === "municipios" || item.cluster === "trindade").slice(0, 18);
+---
+
+<BaseLayout title="Municípios | Pauteiro" description="Notícias e documentos oficiais dos municípios de Goiás em uma única cobertura.">
+  <section class="section-band page-intro-band"><div class="shell page-intro"><p class="section-kicker">Cobertura municipal</p><h1>Uma editoria para todos os municípios.</h1><p class="page-summary">Trindade, Goiânia, Anápolis, Aparecida, Senador Canedo e os municípios publicados pela AGM entram na mesma linha jornalística. Não há mais um portal separado para cada base.</p></div></section>
+  <section class="section-band section-band-newsprint"><div class="shell"><SectionHeader kicker="Notícias recentes" title="O que importa nas cidades" intro="A seleção privilegia dinheiro público, serviços, obras, direitos e decisões com impacto. Rotinas administrativas continuam pesquisáveis." /><div class="story-grid story-grid-three">{stories.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}</div></div></section>
+  <section class="section-band"><div class="shell"><SectionHeader kicker="Entrar por cidade" title={`${compactNumber(siteData.searchFilters.cities.length)} municípios com material carregado`} intro="Use a cidade como porta de entrada para notícias e registros do acervo." /><div class="city-shortcuts city-shortcuts-large">{siteData.searchFilters.cities.slice(0, 40).map((item) => <a href={`${baseHref}busca/?city=${encodeURIComponent(item.label)}&year=all`}>{item.label}<span>{compactNumber(item.count)}</span></a>)}</div></div></section>
+</BaseLayout>

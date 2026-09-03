@@ -1,0 +1,12 @@
+---
+import siteData from "../../generated/site-data.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import { compactNumber } from "../../lib/format.js";
+---
+
+<BaseLayout title="Controle público | Pauteiro" description="Decisões do TCM-GO e TCE-GO explicadas com contexto e fonte oficial.">
+  <section class="section-band page-intro-band"><div class="shell page-intro"><p class="section-kicker">TCM-GO e TCE-GO</p><h1>Fiscalização pública explicada com precisão.</h1><p class="page-summary">O Pauteiro diferencia investigação, parecer, cautelar, multa, débito e decisão final. Divergência contábil não é tratada automaticamente como dano, e contrato não é confundido com pagamento.</p></div></section>
+  <section class="section-band section-band-newsprint"><div class="shell"><SectionHeader kicker="Últimas decisões" title="Processos que merecem atenção" intro={`${compactNumber(siteData.controlFront.length)} destaques recentes selecionados por impacto, estágio e interesse público.`} /><div class="story-grid story-grid-three">{siteData.controlFront.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}</div></div></section>
+</BaseLayout>

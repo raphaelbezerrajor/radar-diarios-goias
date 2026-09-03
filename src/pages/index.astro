@@ -1,242 +1,95 @@
 ---
 import siteData from "../generated/site-data.json";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import MetricStrip from "../components/MetricStrip.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import StoryCard from "../components/StoryCard.astro";
 import { compactNumber, formatDate, withBase } from "../lib/format.js";
 
+const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const hero = siteData.leadStory;
 const heroImage = withBase(hero.image?.src);
 const heroLead = hero.paragraphs?.[0] || hero.summary;
-const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-const yearCards = siteData.yearSnapshots.slice(0, 6);
-const stateFeatured = siteData.stateFront.slice(0, 2);
-const stateBriefs = siteData.stateFront.slice(2, 6);
-const actsBriefs = siteData.actsFront.slice(0, 6);
-const controlFeatured = siteData.controlFront.slice(0, 2);
-const controlBriefs = siteData.controlFront.slice(2, 8);
-const quickCities = siteData.priorityMunicipalities.slice(0, 6).map((item) => ({
+const latest = siteData.timeline.stories.filter((story) => story.id !== hero.id).slice(0, 6);
+const control = siteData.controlFront.slice(0, 4);
+const municipalities = siteData.actsFront.filter((story) => !/TC[EM]-GO/.test(story.sourceFamily || "")).slice(0, 6);
+const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
   label: item.name,
   href: `${baseHref}busca/?city=${encodeURIComponent(item.name)}&year=${encodeURIComponent(siteData.latestYear || "")}`
 }));
-const quickTopics = ["contrato", "nomeação", "edital", "processo TCM"].map((label) => ({
-  label,
-  href: `${baseHref}busca/?q=${encodeURIComponent(label)}&year=all`
-}));
-const metrics = [
-  { label: "Notícias documentais", value: compactNumber(siteData.metrics.julyStories), note: "todo ato segmentado é publicado" },
-  { label: "PDFs processados", value: compactNumber(siteData.metrics.julyPdfs), note: `${compactNumber(siteData.metrics.julyPages)} páginas processadas` },
-  { label: "Processos relevantes do TCM", value: compactNumber(siteData.metrics.tcmStories), note: "controle e responsabilização" },
-  { label: "Documentos pesquisáveis", value: compactNumber(siteData.metrics.repositoryRecords), note: "fonte e página preservadas" }
-];
 ---
 
-<BaseLayout title="Pauteiro | Notícias e documentos públicos de Goiás" description="Notícias extraídas de atos públicos, contratos, diários oficiais e órgãos de controle de Goiás e seus municípios, com a fonte original preservada.">
-  <section class="opening-band">
-    <div class="shell opening-grid">
-      <div class="opening-copy">
-        <p class="section-kicker section-kicker-light">Notícias públicas · Goiás e seus municípios</p>
-        <h1>Notícia pública, documento por documento.</h1>
-        <p class="page-summary">O Pauteiro procura o que importa nos documentos públicos: dinheiro, contratos, decisões, mudanças e efeitos sobre a vida da cidade. A burocracia continua pesquisável, mas não ocupa a capa.</p>
-        <form class="quick-search" action={`${baseHref}busca/`} method="get">
-          <label class="sr-only" for="home-search">Buscar na base pública</label>
-          <input id="home-search" type="search" name="q" placeholder="Busque empresa, contrato, pessoa ou assunto" />
-          <input type="hidden" name="year" value="all" />
-          <button type="submit">Buscar</button>
-        </form>
-        <div class="topic-links" aria-label="Buscas rápidas">
-          {quickTopics.map((item) => <a href={item.href}>{item.label}</a>)}
-        </div>
-      </div>
-      <aside class="opening-side" aria-label="Situação da base">
-        <p>Estado do Pauteiro</p>
-        <strong>{formatDate(siteData.metadata.updatedAt)}</strong>
-        <span>{compactNumber(siteData.metrics.julyStories)} notícias documentais publicadas, com as mais recentes no topo</span>
-        <a href={`${baseHref}pauteiro/`}>Entender a redação <span aria-hidden="true">→</span></a>
-      </aside>
+<BaseLayout title="Pauteiro | Jornalismo baseado em documentos públicos" description="Notícias explicativas produzidas a partir de diários oficiais, contratos e decisões públicas de Goiás.">
+  <section class="newsroom-strip">
+    <div class="shell newsroom-strip-inner">
+      <p><strong>Atualizado em {formatDate(siteData.metadata.updatedAt)}</strong><span>Goiás · documentos oficiais conferidos</span></p>
+      <a href={`${baseHref}busca/`}>Pesquisar toda a base →</a>
     </div>
   </section>
 
-  <section class="hero-band">
+  <section class="hero-band hero-band-first">
     <div class="shell hero-grid">
       <article class="hero-lead">
         <a class="hero-image" href={withBase(hero.path)} aria-label={`Abrir: ${hero.title}`}>
           <img src={heroImage} alt={hero.image?.alt || hero.title} fetchpriority="high" decoding="async" />
         </a>
         <div class="hero-copy">
-          <p class="section-kicker">Em destaque</p>
-          <h2>{hero.title}</h2>
+          <p class="section-kicker">Manchete</p>
+          <div class="hero-meta hero-meta-top"><span>{hero.city}</span><span>{hero.type}</span><span>{formatDate(hero.date)}</span></div>
+          <h1>{hero.title}</h1>
           <p class="hero-deck">{hero.deck}</p>
           {heroLead && <p class="hero-summary">{heroLead}</p>}
-          <div class="hero-meta">
-            <span>{hero.sourceFamily}</span>
-            <span>{hero.city}</span>
-            <span>{formatDate(hero.date)}</span>
-          </div>
           <div class="hero-actions">
             <a class="button-primary" href={withBase(hero.path)}>Ler matéria</a>
-            <a class="button-secondary" href={`${baseHref}linha-do-tempo/`}>Ver últimas notícias</a>
+            <a class="button-secondary" href={`${baseHref}linha-do-tempo/`}>Ver as últimas</a>
           </div>
         </div>
       </article>
-      <aside class="hero-side">
-        <div class="rail-heading">
-          <p class="section-kicker">Agora</p>
-          <h2>Mais itens para acompanhar</h2>
-        </div>
+      <aside class="hero-side" aria-label="Outras notícias em destaque">
+        <div class="rail-heading"><p class="section-kicker">Em destaque</p><h2>Outros assuntos importantes</h2></div>
         <div class="stack-list">
           {siteData.heroSidebar.map((record) => (
-            <a class="stack-item" href={withBase(record.path)}>
-              <span class="pill">{record.type}</span>
-              <strong>{record.title}</strong>
-              <small>{record.city} · {formatDate(record.date)}</small>
-            </a>
+            <a class="stack-item" href={withBase(record.path)}><span class="pill">{record.city}</span><strong>{record.title}</strong><small>{record.type} · {formatDate(record.date)}</small></a>
           ))}
         </div>
       </aside>
     </div>
   </section>
 
-  <MetricStrip items={metrics} />
-
   <section class="section-band section-band-newsprint content-auto">
     <div class="shell">
-      <SectionHeader
-        kicker="Fiscalização e decisões"
-        title="O que TCM e TCE decidiram nesta semana"
-        intro="Multas, cautelares, correções e cobranças entram aqui pelo efeito real da decisão. Apuração preliminar é identificada como apuração; contrato, débito e pagamento não são tratados como a mesma coisa."
-        actionHref={`${baseHref}busca/?q=${encodeURIComponent("TCM TCE")}&year=2026`}
-        actionLabel="Pesquisar órgãos de controle"
-      />
-      <div class="headline-package">
-        <div class="story-grid story-grid-featured">
-          {controlFeatured.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}
-        </div>
-        <div class="brief-list">
-          {controlBriefs.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="hide" />)}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-band platform-band content-auto">
-    <div class="shell platform-callout">
-      <div>
-        <p class="section-kicker">Diários ato a ato</p>
-        <h2>Tudo publicado, destaque com critério.</h2>
-        <p>Cada ato extraído vira notícia e pode ser conferido na página e edição de origem. Valor-notícia define o tamanho do destaque; a data mais recente define a ordem.</p>
-      </div>
-      <div class="platform-actions">
-        <a class="button-primary" href={`${baseHref}julho/`}>Abrir cobertura dos diários</a>
-        <span>{compactNumber(siteData.metrics.julyStories)} matérias em ordem cronológica</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-band section-band-newsprint content-auto">
-    <div class="shell split-grid acts-package">
-      <div>
-        <SectionHeader
-          kicker="Cobertura municipal"
-          title="O que merece atenção em Goiás"
-          intro="Esta seleção reúne dinheiro público, contratações, políticas, obras, serviços e decisões com impacto, independentemente do município de origem. Os demais atos continuam disponíveis na busca documental."
-          actionHref={`${baseHref}busca/?year=${encodeURIComponent(siteData.latestYear || "all")}`}
-          actionLabel="Ver todos os atos"
-        />
-        <div class="brief-list">
-          {actsBriefs.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}
-        </div>
-      </div>
-      <aside class="coverage-card">
-        <p class="section-kicker">Base local em destaque</p>
-        <h2>Oito anos catalogados e o acervo estruturado entrando em publicação.</h2>
-        <dl class="coverage-list">
-          <div><dt>Edições catalogadas</dt><dd>{compactNumber(siteData.trindadeStats.status.coverage[0].available)}</dd></div>
-          <div><dt>Atos estruturados</dt><dd>{compactNumber(siteData.trindadeStats.analysis.acts)}</dd></div>
-          <div><dt>Contratos da Câmara</dt><dd>{compactNumber(siteData.trindadeStats.chamberSummary.contracts)}</dd></div>
-          <div><dt>Matérias do TCM</dt><dd>{compactNumber(siteData.metrics.tcmStories)}</dd></div>
-        </dl>
-        <p class="coverage-note">O inventário cobre oito anos. A publicação ato a ato começa pelo período já extraído e verificado e avança com a atualização diária.</p>
-        <a class="button-secondary" href={`${baseHref}trindade/`}>Entender a cobertura</a>
-      </aside>
+      <SectionHeader kicker="Últimas notícias" title="O que apareceu nos documentos públicos" intro="Seleção por interesse público, impacto e atualidade. Atos rotineiros permanecem no acervo, sem disputar espaço com notícia." actionHref={`${baseHref}linha-do-tempo/`} actionLabel="Ver todas as notícias" />
+      <div class="story-grid story-grid-three">{latest.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}</div>
     </div>
   </section>
 
   <section class="section-band content-auto">
-    <div class="shell">
-      <SectionHeader
-        kicker="Cobertura estadual"
-        title="Goiás entra no noticiário a partir dos documentos oficiais"
-        intro={`O caderno reúne matérias geradas a partir de Diários e atos públicos já carregados, sem reaproveitar reportagens de outros sites.`}
-        actionHref={`${baseHref}goias/`}
-        actionLabel="Abrir caderno Goiás"
-      />
-      <div class="headline-package">
-        <div class="story-grid story-grid-featured">
-          {stateFeatured.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="auto" />)}
-        </div>
-        <div class="brief-list">
-          {stateBriefs.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="hide" />)}
-        </div>
+    <div class="shell section-split-editorial">
+      <div>
+        <SectionHeader kicker="Controle público" title="Decisões de TCM e TCE, sem juridiquês" intro="Multas, alertas, cautelares e correções são apresentados com o estágio do processo e os limites do que a decisão permite afirmar." actionHref={`${baseHref}controle/`} actionLabel="Abrir Controle" />
+        <div class="brief-list">{control.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="hide" />)}</div>
       </div>
+      <aside class="editorial-principle">
+        <p class="section-kicker">Nosso método</p><h2>Fato primeiro. Contexto logo depois.</h2>
+        <p>Cada matéria responde o que aconteceu, quem está envolvido, quanto dinheiro aparece e o que ainda não pode ser concluído.</p>
+        <dl><div><dt>{compactNumber(siteData.metrics.repositoryRecords)}</dt><dd>documentos pesquisáveis</dd></div><div><dt>{compactNumber(siteData.timeline.total)}</dt><dd>notícias relevantes em {siteData.timeline.year}</dd></div></dl>
+        <a class="button-secondary" href={`${baseHref}pauteiro/`}>Como o Pauteiro trabalha</a>
+      </aside>
     </div>
   </section>
 
   <section class="section-band section-band-contrast content-auto">
-    <div class="shell split-grid">
-      <div>
-        <SectionHeader
-          kicker="Arquivo"
-          title="Entre pela data"
-          intro="Cada ano abre somente o recorte necessário, deixando a consulta mais leve no celular."
-        />
-        <div class="year-board">
-          {yearCards.map((item) => (
-            <a class="year-card" href={withBase(item.href)}>
-              <strong>{item.year}</strong>
-              <span>{compactNumber(item.count)} registros</span>
-              <small>{item.cities.map((city) => city.label).join(" · ") || "base integrada"}</small>
-            </a>
-          ))}
-        </div>
-      </div>
-      <div>
-        <SectionHeader
-          kicker="Atalhos"
-          title="Entre pela cidade"
-          intro="Os municípios abaixo já têm algum conteúdo carregado ou estão na fila prioritária."
-        />
-        <div class="quick-card">
-          <div class="quick-links">
-            {quickCities.map((item) => <a href={item.href}>{item.label}</a>)}
-          </div>
-          <a class="text-link" href={`${baseHref}busca/`}>Abrir todos os filtros</a>
-        </div>
-      </div>
+    <div class="shell">
+      <SectionHeader kicker="Municípios" title="Dinheiro, serviços e decisões perto do leitor" intro="Contratos, licitações, orçamento, obras e políticas públicas entram em uma única cobertura municipal — sem portais paralelos." actionHref={`${baseHref}municipios/`} actionLabel="Abrir Municípios" />
+      <div class="story-grid story-grid-three">{municipalities.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}</div>
+      <div class="city-shortcuts" aria-label="Acesso rápido por município">{quickCities.map((item) => <a href={item.href}>{item.label}</a>)}</div>
     </div>
   </section>
 
-  <section class="section-band content-auto">
-    <div class="shell">
-      <SectionHeader
-        kicker="Transparência da coleta"
-        title="De onde vêm os registros"
-        intro="A fonte oficial, o estágio da leitura e as lacunas ficam visíveis para evitar conclusões maiores que os documentos."
-      />
-      <div class="source-list source-list-wide">
-        {siteData.sourceCards.slice(0, 6).map((item) => (
-          <article class="source-card">
-            <div class="source-card-top">
-              <strong>{item.label}</strong>
-              <span>{compactNumber(item.stateCount)}</span>
-            </div>
-            <p>{item.analysisFocus}</p>
-            <small>{item.materialTypes}</small>
-            <a class="text-link" href={item.officialUrl}>Abrir fonte oficial ↗</a>
-          </article>
-        ))}
-      </div>
+  <section class="section-band compact-closing">
+    <div class="shell source-note-panel">
+      <div><p class="section-kicker">Acervo verificável</p><h2>A notícia abre o documento que a sustenta.</h2></div>
+      <p>Os registros de 2025 e 2026 continuam na mesma busca. O que tem valor-notícia recebe leitura explicativa; o restante permanece como documento de consulta.</p>
+      <a class="button-primary" href={`${baseHref}busca/?year=all`}>Explorar a base</a>
     </div>
   </section>
 </BaseLayout>

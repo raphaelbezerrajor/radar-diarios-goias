@@ -31,7 +31,7 @@ assert(summary.metrics.records === search.total, "Resumo do site e base de busca
 assert(summary.metrics.trindadeActs === 2919, "A base deveria preservar os 2.919 atos estruturados.");
 assert(gzipSync(defaultShard).byteLength < 1_200_000, "O recorte padrão ficou pesado demais para celular.");
 assert(home.includes("PAUTEIRO"), "A identidade principal não aparece na capa.");
-assert(home.includes("Notícia pública, documento por documento."), "A proposta jornalística não aparece na capa.");
+assert(home.includes("Últimas notícias") && home.includes("Outros assuntos importantes"), "A hierarquia jornalística não aparece na capa.");
 assert(platform.includes("Plataforma editorial modular"), "A página da plataforma não foi renderizada.");
 assert(platform.includes("Publicação") && platform.includes("Matérias documentais verificadas entram diariamente"), "A publicação documental não aparece como ativa.");
 assert(trindade.includes("oito anos"), "A página de Trindade não explica o horizonte de cobertura.");

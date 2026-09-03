@@ -12,16 +12,26 @@ const assert = (condition, message) => {
 const records = await readJson("src", "generated", "site-records.json");
 const site = await readJson("src", "generated", "site-data.json");
 const julyIndex = await readJson("public", "data", "july-news-index.json");
+const julySource = await readJson("data", "trindade", "july-document-news-2026.json");
 const previews = await readJson("data", "trindade", "source-previews.json");
 const curationQueue = await readJson("data", "editorial", "curation-queue.json");
 const curatedBriefs = await readJson("data", "editorial", "curated-briefs.json");
 const automatic = records.filter((item) => item.publicationMode === "automatic_document_news");
 const institutionalPattern = /\/(?:noticia|noticias|news|imprensa|agencia-de-noticias)(?:\/|\?|$)/i;
 
-assert(automatic.length >= 7_500, `A publicação ato a ato de julho ficou incompleta: ${automatic.length}.`);
+const recordIds = new Set(records.map((item) => item.id));
+const nonDuplicatedJulySource = (julySource.items || [])
+  .filter((item) => item.editorial_status !== "needs_review")
+  .filter((item) => !(item.source_id === "agm" && item.city === "Trindade"));
+assert(nonDuplicatedJulySource.every((item) => recordIds.has(item.id)), "Há documentos de julho ausentes do acervo unificado.");
+assert(automatic.length >= 500, `O noticiário documental relevante ficou abaixo do baseline: ${automatic.length}.`);
+assert(
+  records.filter((item) => item.recordType === "story" && item.publicationMode === "automatic_document_news" && item.id?.startsWith("jul26-")).every((item) => Number(item.importance) >= 80),
+  "Atos de baixo valor-notícia continuam apresentados como reportagem."
+);
 assert(records.filter((item) => item.kind === "ato").length >= 2_919, "Os 2.919 atos de Trindade não foram preservados.");
 assert(records.filter((item) => item.kind === "tcm_process").length === 445, "Os 445 dossiês confirmados do TCM-GO não foram preservados.");
-assert(records.filter((item) => item.publicationMode === "repository_record").length >= 2_500, "Atos burocráticos demais entraram no noticiário.");
+assert(records.filter((item) => item.publicationMode === "repository_record").length >= 18_000, "Atos burocráticos demais entraram no noticiário.");
 assert(julyIndex.total === julyIndex.records.length, "O índice de notícias de julho está truncado.");
 assert(julyIndex.total === site.metrics.julyStories, "A contagem pública de julho diverge do índice.");
 assert(julyIndex.records.every((item, index, items) => index === 0 || items[index - 1].date >= item.date), "Julho não está ordenado do mais recente para o mais antigo.");

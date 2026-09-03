@@ -187,6 +187,32 @@ function headlineValue(value) {
   return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 }
 
+function stripBureaucraticOpening(value) {
+  return clean(value)
+    .replace(/^(?:objeto|assunto|descri[cç][aã]o)\s*:\s*/i, "")
+    .replace(/^disp[oõ]e\s+(?:sobre|acerca de)\s+/i, "")
+    .replace(/^torna\s+p[uú]blico\s+(?:que\s+)?/i, "")
+    .replace(/^fica\s+(?:autorizad[ao]|aprovad[ao]|concedid[ao]|institu[ií]d[ao])\s+/i, "")
+    .replace(/[.…]+$/, "")
+    .trim();
+}
+
+function activeActHeadline(item, valueTotal) {
+  const city = clean(item.city) || "Trindade";
+  const summary = stripBureaucraticOpening(item.summary || item.deck);
+  const text = normalize(`${item.official_title || item.title} ${summary}`);
+  const value = headlineValue(valueTotal || item.value_highest);
+  const suffix = value ? ` de ${value}` : "";
+
+  if (/credito adicional|credito suplementar/.test(text)) return `${city} abre crédito${suffix} no orçamento`;
+  if (/alimentacao escolar|merenda escolar/.test(text)) return `${city} define compra${suffix} para alimentação escolar`;
+  if (/construcao de salas? de aula/.test(text)) return `${city} homologa obra${suffix} para construir salas de aula`;
+  if (/promocao por habilitacao/.test(text)) return `${city} concede promoção por habilitação a servidor da educação`;
+  if (/concessao de diarias|concede diarias/.test(text)) return `${city} autoriza diárias para servidores`;
+  if (/adicional por tempo de servico|quinquenio/.test(text)) return `${city} concede adicional por tempo de serviço`;
+  return "";
+}
+
 function humanizePurpose(value) {
   let text = clean(value).replace(/\s+\p{L}$/u, "");
   const letters = text.match(/\p{L}/gu) || [];
@@ -215,6 +241,8 @@ function purposeFromSummary(summary) {
 }
 
 function headlineFromAct(item, valueTotal) {
+  const activeHeadline = activeActHeadline({ ...item, city: "Trindade" }, valueTotal);
+  if (activeHeadline) return truncateHeadline(activeHeadline);
   const officialTitle = clean(item.title) || "Ato oficial";
   const summary = clean(item.summary);
   const type = normalize(item.act_type).replaceAll(" ", "_");
@@ -240,6 +268,12 @@ function headlineFromAct(item, valueTotal) {
   const purpose = purposeFromSummary(summary);
 
   if (label && /(contrato|convenio|dispensa|inexigibilidade|licitacao|rescisao|aditivo|apostilamento)/.test(type)) {
+    if (purpose && type === "contrato") return truncateHeadline(`Trindade contrata ${lowerFirst(purpose)}${value ? ` por ${value}` : ""}`);
+    if (purpose && type === "convenio") return truncateHeadline(`Trindade firma convênio para ${lowerFirst(purpose)}${value ? `, com ${value}` : ""}`);
+    if (purpose && /(dispensa|inexigibilidade)/.test(type)) return truncateHeadline(`Trindade autoriza contratação direta para ${lowerFirst(purpose)}${value ? ` por ${value}` : ""}`);
+    if (purpose && type === "aviso_de_licitacao") return truncateHeadline(`Trindade abre licitação para ${lowerFirst(purpose)}${value ? `, estimada em ${value}` : ""}`);
+    if (purpose && type === "rescisao") return truncateHeadline(`Trindade encerra contrato de ${lowerFirst(purpose)}`);
+    if (purpose && /(aditivo|apostilamento)/.test(type)) return truncateHeadline(`Trindade altera contrato de ${lowerFirst(purpose)}${value ? `, com ${value}` : ""}`);
     const core = `Trindade publica ${label}${reference ? ` ${reference}` : ""}${value ? ` de ${value}` : ""}`;
     return truncateHeadline(purpose ? `${core} para ${lowerFirst(purpose)}` : `${core}: ${summary || officialTitle}`);
   }
@@ -253,6 +287,76 @@ function headlineFromAct(item, valueTotal) {
     return truncateHeadline(`Trindade publica ${officialTitle}: ${lowerFirst(subject)}`);
   }
   return truncateHeadline(`${officialTitle}: ${summary.replace(/[.;]+$/, "")}`);
+}
+
+export function buildDocumentExplainer(item = {}) {
+  const actType = normalize(item.act_type || item.type_label || "ato");
+  const values = (item.values || []).map((entry) => Number(entry?.value)).filter((value) => Number.isFinite(value) && value > 0);
+  const highestValue = Number(item.value_highest) || (values.length ? Math.max(...values) : 0);
+  const references = joinNatural(item.reference_numbers);
+  const cnpjs = joinNatural(item.cnpjs);
+  const facts = [
+    item.public_body ? { label: "Órgão", value: clean(item.public_body) } : null,
+    highestValue ? { label: "Maior valor citado", value: headlineValue(highestValue) } : null,
+    references ? { label: "Referências", value: references } : null,
+    cnpjs ? { label: "CNPJs citados", value: cnpjs } : null,
+    item.document_reference ? { label: "Localização", value: clean(item.document_reference) } : null
+  ].filter(Boolean);
+
+  let meaning = "O ato registra uma decisão administrativa e deve ser acompanhado por publicações posteriores para verificar seus efeitos concretos.";
+  let limit = "O documento comprova a publicação do ato, mas não permite presumir execução, pagamento, resultado ou irregularidade além do que está escrito.";
+  if (/(contrato|aditivo|apostilamento|dispensa|inexigibilidade)/.test(actType)) {
+    meaning = "A publicação formaliza uma etapa da contratação. O valor do instrumento estabelece uma obrigação ou limite contratual, enquanto a execução financeira aparece separadamente em empenhos, liquidações e pagamentos.";
+    limit = "Contrato, ata ou aditivo não equivalem a pagamento. É preciso cruzar o instrumento com a execução orçamentária e com eventuais alterações posteriores.";
+  } else if (/(pregao|licitacao|chamada publica|edital|aviso|homologacao)/.test(actType)) {
+    meaning = "O documento integra uma etapa do procedimento de seleção. Homologação, resultado e abertura de disputa têm efeitos diferentes e não significam, isoladamente, que o objeto já foi executado.";
+    limit = "O ato não comprova entrega nem pagamento. Contrato, empenho e execução precisam ser verificados em registros próprios.";
+  } else if (/(credito|orcament|suplementar)/.test(normalize(`${item.title} ${item.deck} ${item.summary}`))) {
+    meaning = "O crédito altera a distribuição autorizada do orçamento. Ele permite movimentar dotações, mas não demonstra que a despesa tenha sido executada.";
+    limit = "Autorização orçamentária não é gasto realizado. A confirmação depende de empenhos, liquidações e pagamentos.";
+  } else if (/(nomeacao|exoneracao|portaria|servidor|pessoal)/.test(actType)) {
+    meaning = "É um ato de pessoal ou organização interna. Sua relevância pública depende do cargo, da duração, do efeito financeiro e da função exercida.";
+    limit = "A publicação confirma a mudança administrativa descrita, sem permitir conclusões adicionais sobre desempenho ou responsabilidade da pessoa citada.";
+  }
+
+  return {
+    facts,
+    sections: [
+      { title: "O que muda", text: finish(stripBureaucraticOpening(item.deck || item.summary || item.official_title || item.title)) },
+      { title: "Como interpretar", text: meaning },
+      { title: "O que ainda falta saber", text: limit }
+    ].filter((section) => section.text)
+  };
+}
+
+export function buildStructuredDocumentNews(item = {}) {
+  const city = clean(item.city) || "Município não identificado";
+  const type = normalize(item.act_type || item.type_label || "ato").replaceAll(" ", "_");
+  const valueTotal = Number(item.value_highest) || Math.max(0, ...(item.values || []).map((entry) => Number(entry?.value) || 0));
+  const purpose = stripBureaucraticOpening(item.deck || item.summary || item.official_title || item.title);
+  const activeHeadline = activeActHeadline(item, valueTotal);
+  const labels = {
+    contrato: "firma contrato", extrato: "publica contrato", aditivo: "altera contrato",
+    termo_aditivo: "altera contrato", dispensa: "autoriza contratação direta",
+    inexigibilidade: "autoriza contratação direta", homologacao: "homologa procedimento",
+    pregao: "abre licitação", licitacao: "abre licitação", aviso: "publica aviso",
+    decreto: "publica decreto", lei: "sanciona lei", portaria: "publica portaria"
+  };
+  const action = labels[type] || "publica ato";
+  const value = headlineValue(valueTotal);
+  const fallbackTitle = `${city} ${action}${value ? ` de ${value}` : ""}${purpose ? `: ${lowerFirst(purpose)}` : ""}`;
+  const title = truncateHeadline(activeHeadline || fallbackTitle, 132);
+  const explainer = buildDocumentExplainer(item);
+  const firstFact = explainer.facts.filter((fact) => fact.label !== "Órgão" && fact.label !== "Localização").map((fact) => `${fact.label}: ${fact.value}`).join("; ");
+  const lead = finish(`${title}. ${purpose && !normalize(title).includes(normalize(purpose).slice(0, 36)) ? purpose : "O ato foi localizado e conferido no documento oficial."}`);
+  const detail = finish(`${clean(item.public_body) || city} publicou o ato em ${item.document_reference || "edição oficial identificada na base"}.${firstFact ? ` ${firstFact}.` : ""}`);
+  return {
+    title,
+    deck: finish(purpose || clean(item.summary) || clean(item.official_title) || clean(item.title)),
+    summary: lead,
+    paragraphs: [lead, detail, explainer.sections.find((section) => section.title === "Como interpretar")?.text].filter(Boolean),
+    explainer
+  };
 }
 
 function actContext(item, valueTotal) {

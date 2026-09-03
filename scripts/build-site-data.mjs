@@ -6,6 +6,8 @@ import {
   assessActNewsValue,
   assessTcmNewsValue,
   buildActNews,
+  buildDocumentExplainer,
+  buildStructuredDocumentNews,
   buildStateNews,
   buildTcmNews,
   hasPrimarySource,
@@ -240,8 +242,8 @@ function normalizeTrindadeAct(item, preview) {
   const article = buildActNews(item);
   const totalValue = article.valueTotal;
   const newsValue = assessActNewsValue(item, totalValue);
-  const julyPublication = String(item.edition_date || "").startsWith("2026-07");
-  const publishedAsStory = newsValue.publish || julyPublication;
+  const hasSubstantiveReading = !/consulte o documento oficial|conteúdo integral|conteudo integral/i.test(String(item.summary || ""));
+  const publishedAsStory = newsValue.score >= 80 && (totalValue > 0 || hasSubstantiveReading);
   const actType = item.act_type || "ato";
   const slug = `trindade-ato-${slugify(item.id)}`;
   const pageLabel = item.page_start
@@ -249,6 +251,11 @@ function normalizeTrindadeAct(item, preview) {
       ? `p. ${item.page_start}-${item.page_end}`
       : `p. ${item.page_start}`
     : "";
+  const explainer = buildDocumentExplainer({
+    ...item,
+    city: "Trindade",
+    document_reference: `Edição ${item.edition_number}${pageLabel ? ` · ${pageLabel}` : ""}`
+  });
   return {
     id: item.id,
     slug,
@@ -292,8 +299,10 @@ function normalizeTrindadeAct(item, preview) {
     sourceType: "official_document",
     publicationMode: publishedAsStory ? "automatic_document_news" : "repository_record",
     editorialStatus: publishedAsStory ? "published" : "archived",
-    prominence: newsValue.publish ? "section" : julyPublication ? "archive" : "repository",
+    prominence: newsValue.publish ? "section" : "repository",
     paragraphs: article.paragraphs,
+    keyFindings: explainer.facts,
+    explainerSections: explainer.sections,
     valueTotal: totalValue,
     pageStart: article.pageStart,
     pageEnd: article.pageEnd,
@@ -304,6 +313,9 @@ function normalizeTrindadeAct(item, preview) {
 
 function normalizeJulyDocumentNews(item, preview) {
   const slug = `julho-documento-${slugify(item.id).slice(0, 96)}`;
+  const structured = buildStructuredDocumentNews(item);
+  const manuallyEdited = item.publication_mode === "edited_document_news";
+  const isStory = manuallyEdited || (Number(item.importance) || 0) >= 80;
   return {
     id: item.id,
     slug,
@@ -316,12 +328,13 @@ function normalizeJulyDocumentNews(item, preview) {
     kind: "ato",
     actCode: item.act_type,
     type: item.type_label || titleCase(item.act_type || "ato"),
-    title: item.title,
+    title: manuallyEdited ? item.title : structured.title,
     officialTitle: item.official_title,
-    deck: item.deck,
-    summary: item.summary,
-    paragraphs: item.paragraphs || [],
-    keyFindings: item.key_findings || [],
+    deck: manuallyEdited ? item.deck : structured.deck,
+    summary: manuallyEdited ? item.summary : structured.summary,
+    paragraphs: manuallyEdited ? (item.paragraphs || []) : structured.paragraphs,
+    keyFindings: item.key_findings?.length ? item.key_findings : structured.explainer.facts,
+    explainerSections: item.explainer_sections?.length ? item.explainer_sections : structured.explainer.sections,
     processTimeline: item.process_timeline || [],
     editoria: item.public_body || "Atos públicos",
     sourceFamily: item.source_name || "Documento oficial",
@@ -356,10 +369,10 @@ function normalizeJulyDocumentNews(item, preview) {
     newsValue: item.news_value || { score: Number(item.importance) || 25, reasons: [] },
     prominence: item.prominence || "archive",
     hasOriginalSource: Boolean(item.official_url || item.source_landing_url),
-    recordType: "story",
+    recordType: isStory ? "story" : "record",
     sourceType: "official_document",
-    publicationMode: item.publication_mode || "automatic_document_news",
-    editorialStatus: "published",
+    publicationMode: isStory ? (item.publication_mode || "automatic_document_news") : "repository_record",
+    editorialStatus: isStory ? "published" : "archived",
     pageStart: item.page_start,
     pageEnd: item.page_end,
     documentReference: item.document_reference || "",
@@ -597,7 +610,9 @@ async function main() {
     radar.updated_at,
     radar.cutoff_date,
     String(julyDocumentNews.generated_at || "").slice(0, 10),
-    julyDocumentNews.period?.to
+    julyDocumentNews.period?.to,
+    String(controlNews.generated_at || "").slice(0, 10),
+    controlNews.period?.to
   ].filter(Boolean).sort().at(-1);
   const addPublicationMetadata = (item) => item.recordType === "story"
     ? { ...item, publishedAt: item.publishedAt || editorialPublicationDate }
@@ -632,7 +647,7 @@ async function main() {
   const leadStory = frontPage.lead;
   const heroSidebar = frontPage.sidebar;
   const rankedControlNews = rankFrontPageStories(
-    normalizedControlNews.filter((item) => /TC[EM]-GO/.test(item.sourceFamily || ""))
+    normalizedControlNews.filter((item) => item.recordType === "story" && /TC[EM]-GO/.test(item.sourceFamily || ""))
   );
   const controlFront = rankedControlNews.slice(0, 8);
   for (const requiredSource of ["TCM-GO", "TCE-GO"]) {
@@ -661,7 +676,7 @@ async function main() {
       normalizedJulyDocumentNews.concat(
         normalizedTrindadeActs.filter((item) => item.month === "2026-07" && item.recordType === "story")
       )
-    ).map(applyEditorialCuration)
+    ).filter((item) => item.recordType === "story").map(applyEditorialCuration)
   );
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>
@@ -765,7 +780,10 @@ async function main() {
       brand: radar.project_name,
       title: radar.site_title,
       updatedAt: editorialPublicationDate,
-      cutoffDate: [radar.cutoff_date, julyDocumentNews.period?.to].filter(Boolean).sort().at(-1),
+      cutoffDate: [radar.cutoff_date, julyDocumentNews.period?.to, controlNews.period?.to]
+        .filter(Boolean)
+        .sort()
+        .at(-1),
       remoteUrl: radar.remote_url,
       yearsOpen: radar.archive_years || []
     },
@@ -780,6 +798,7 @@ async function main() {
       currentYear: editorialYear,
       repositoryRecords: allRecords.length,
       routineRecordsArchived: normalizedTrindadeActs.filter((item) => item.recordType !== "story").length
+        + normalizedJulyDocumentNews.filter((item) => item.recordType !== "story").length
         + normalizedTcmNews.filter((item) => item.recordType !== "story").length,
       excludedInstitutionalNews: (radar.entries || []).filter((item) => !isPrimaryOfficialSource(item)).length
         + trindadeNews.filter((item) => !hasPrimarySource(item)).length,
@@ -787,8 +806,8 @@ async function main() {
       tcmStories: normalizedTcmNews.filter((item) => item.recordType === "story").length
         + normalizedControlNews.filter((item) => item.sourceFamily?.includes("TCM-GO")).length,
       tcmDocuments: normalizedTcmNews.length,
-      controlStories: normalizedControlNews.length,
-      tceStories: normalizedControlNews.filter((item) => item.sourceFamily?.includes("TCE-GO")).length,
+      controlStories: normalizedControlNews.filter((item) => item.recordType === "story").length,
+      tceStories: normalizedControlNews.filter((item) => item.recordType === "story" && item.sourceFamily?.includes("TCE-GO")).length,
       consultedSources: sourceCards.length,
       pagesReviewed: trindadeCoverage.pages || 0,
       municipalities: coverage.summary?.municipalities_total || radar.coverage_goal?.municipalities_total || 0,

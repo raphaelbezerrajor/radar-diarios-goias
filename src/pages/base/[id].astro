@@ -101,6 +101,22 @@ if (isStory) {
             {record.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           </div>
         ) : null}
+        {record.explainerSections?.length ? (
+          <section class="story-explainer" aria-labelledby="story-explainer-title">
+            <div class="story-explainer-heading">
+              <p class="section-kicker">Entenda o documento</p>
+              <h2 id="story-explainer-title">O fato, o efeito e o que falta conferir</h2>
+            </div>
+            <div class="story-explainer-grid">
+              {record.explainerSections.map((section) => (
+                <article>
+                  <h3>{section.title}</h3>
+                  <p>{section.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
         {record.processTimeline?.length ? (
           <section class="analysis-timeline" aria-labelledby="process-timeline-title">
             <h2 id="process-timeline-title">Como o processo avançou</h2>

@@ -13,10 +13,10 @@ const currentPath = Astro.url.pathname;
 const navItems = [
   { label: "Capa", href: baseHref, active: currentPath === baseHref },
   { label: "Últimas", href: `${baseHref}linha-do-tempo/`, active: currentPath.includes("/linha-do-tempo/") },
-  { label: "Diários", href: `${baseHref}julho/`, active: currentPath.includes("/julho/") },
-  { label: "Trindade", href: `${baseHref}trindade/`, active: currentPath.includes("/trindade/") },
+  { label: "Municípios", href: `${baseHref}municipios/`, active: currentPath.includes("/municipios/") || currentPath.includes("/trindade/") },
   { label: "Goiás", href: `${baseHref}goias/`, active: currentPath.includes("/goias/") },
-  { label: "Buscar", href: `${baseHref}busca/`, active: currentPath.includes("/busca/") }
+  { label: "Controle", href: `${baseHref}controle/`, active: currentPath.includes("/controle/") },
+  { label: "Base", href: `${baseHref}busca/`, active: currentPath.includes("/busca/") }
 ];
 ---
 
@@ -41,16 +41,10 @@ const navItems = [
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
     <header class="site-header">
-      <div class="site-topline">
-        <div class="shell topline-bar">
-          <span>Notícias públicas · fatos extraídos de documentos oficiais</span>
-          <a href={`${baseHref}julho/`}>Abrir cobertura dos diários →</a>
-        </div>
-      </div>
       <div class="shell header-bar">
         <a class="brand" href={baseHref}>
           <span class="brand-mark">PAUTEIRO</span>
-          <span class="brand-copy">documento, contexto e notícia</span>
+          <span class="brand-copy">Goiás em documentos e notícias</span>
         </a>
         <nav class="site-nav" aria-label="Principal">
           {navItems.map((item) => (
@@ -75,7 +69,7 @@ const navItems = [
         <div class="footer-links">
           <a href={`${baseHref}busca/`}>Buscar na base</a>
           <a href={`${baseHref}linha-do-tempo/`}>Últimas notícias</a>
-          <a href={`${baseHref}julho/`}>Cobertura dos diários</a>
+          <a href={`${baseHref}municipios/`}>Municípios</a>
         </div>
       </div>
     </footer>
