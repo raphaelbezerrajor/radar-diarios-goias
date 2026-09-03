@@ -9,7 +9,9 @@ const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
 const hero = siteData.leadStory;
 const heroImage = withBase(hero.image?.src);
 const heroLead = hero.paragraphs?.[0] || hero.summary;
-const latest = siteData.timeline.stories.filter((story) => story.id !== hero.id).slice(0, 6);
+const latest = siteData.timeline.stories
+  .filter((story) => story.id !== hero.id && story.publicationMode !== "automatic_document_news")
+  .slice(0, 6);
 const control = siteData.controlFront.slice(0, 4);
 const municipalities = siteData.actsFront.filter((story) => !/TC[EM]-GO/.test(story.sourceFamily || "")).slice(0, 6);
 const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
