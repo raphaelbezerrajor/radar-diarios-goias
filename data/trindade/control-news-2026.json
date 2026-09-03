@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T21:37:53.771Z",
+  "generated_at": "2026-09-03T22:39:46.871Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-03"
@@ -10,7 +10,7 @@
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 108
+    "published_stories": 114
   },
   "items": [
     {
@@ -6447,6 +6447,411 @@
           "dispensa de licitação",
           "regularização fundiária",
           "vigência de quatro anos"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-02",
+      "published_at": "2026-09-03",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governo de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7347/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7347",
+      "edition_number": "24.856",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-02-edicao-7347.pdf",
+      "document_sha256": "b4a5a5af8de98a6d5e7101451e76affada5aded95bb6949d51f9c90111c7ddd2",
+      "id": "doego-24856-agehab-289-casas-58-milhoes",
+      "page_start": 42,
+      "page_end": 43,
+      "document_reference": "DOE-GO nº 24.856 · páginas 42 e 43",
+      "external_identifier": "Contratos Agehab nº 027, 028, 029, 030, 031 e 033/2026",
+      "official_title": "Extratos de seis contratos para construção de moradias de interesse social",
+      "act_type": "contratos",
+      "type_label": "Habitação",
+      "title": "Agehab firma R$ 58,5 milhões em contratos para construir 289 moradias",
+      "deck": "Casas serão erguidas em Colinas do Sul, Crixás, Divinópolis, Niquelândia, Nova Glória e Ipiranga de Goiás.",
+      "summary": "Seis contratos foram assinados em 1º de setembro e têm vigência de 24 meses; valores publicados não equivalem a pagamentos já feitos.",
+      "paragraphs": [
+        "A Agência Goiana de Habitação assinou seis contratos que somam R$ 58.458.478,44 para construir 289 moradias de interesse social em seis municípios. Os projetos preveem 50 unidades em Colinas do Sul, 49 em Crixás, 50 em Divinópolis, 40 em Niquelândia, 50 em Nova Glória e 50 em Ipiranga de Goiás, além de passeio público, meio-fio e vigilância estendida.",
+        "Quatro contratos ficaram com a SPE Vila Central Empreendimentos Imobiliários, um com a Bela Mares Incorporações e outro com a Patrimonial Serviços Especializados. Todos foram assinados em 1º de setembro, têm vigência de 24 meses e serão custeados pelo Tesouro estadual. Os extratos registram compromissos contratuais; não demonstram quanto já foi executado ou pago nem informam o cronograma de entrega das casas."
+      ],
+      "public_body": "Agência Goiana de Habitação — Agehab",
+      "values": [
+        {
+          "original": "R$ 58.458.478,44",
+          "value": 58458478.44,
+          "currency": "BRL",
+          "label": "soma dos seis contratos"
+        }
+      ],
+      "value_highest": 58458478.44,
+      "cnpjs": [
+        "63.857.631/0001-41",
+        "11.325.535/0001-59",
+        "16.530.021/0001-59"
+      ],
+      "reference_numbers": [
+        "027/2026",
+        "028/2026",
+        "029/2026",
+        "030/2026",
+        "031/2026",
+        "033/2026"
+      ],
+      "importance": 114,
+      "news_value": {
+        "score": 114,
+        "reasons": [
+          "R$ 58,5 milhões",
+          "289 moradias",
+          "seis municípios",
+          "Tesouro estadual"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-02",
+      "published_at": "2026-09-03",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governo de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7347/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7347",
+      "edition_number": "24.856",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-02-edicao-7347.pdf",
+      "document_sha256": "b4a5a5af8de98a6d5e7101451e76affada5aded95bb6949d51f9c90111c7ddd2",
+      "id": "doego-24856-goinfra-supervisao-rodovias-30-milhoes",
+      "page_start": 30,
+      "page_end": 31,
+      "document_reference": "DOE-GO nº 24.856 · páginas 30 e 31",
+      "external_identifier": "Termos aditivos nº 283 e 284/2026-Goinfra",
+      "official_title": "Aditivos aos contratos nº 90 e 89/2024-Goinfra",
+      "act_type": "termos_aditivos",
+      "type_label": "Rodovias",
+      "title": "Goinfra acrescenta R$ 30,8 milhões à supervisão da manutenção de rodovias",
+      "deck": "Dois aditivos prorrogam por um ano serviços de apoio à fiscalização dos lotes 3 e 5 da malha estadual.",
+      "summary": "Consórcio Supervisor Engevvia GO e Estudos Técnicos Ltda. tiveram contratos prorrogados; notas de empenho não comprovam pagamento.",
+      "paragraphs": [
+        "A Goinfra publicou dois aditivos que somam R$ 30.799.446,12 para manter por mais um ano os serviços técnicos de supervisão e apoio à fiscalização da manutenção e recuperação de rodovias estaduais. O maior, de R$ 16.767.158,12, prorroga o lote 3 com o Consórcio Supervisor Engevvia GO; o outro, de R$ 14.032.288, amplia o lote 5 com a Etel — Estudos Técnicos Ltda.",
+        "Nos dois casos, a execução foi estendida de 7 de setembro de 2026 a 6 de setembro de 2027, enquanto a vigência contratual avança até maio e junho de 2028. O Diário Oficial cita notas de empenho emitidas em agosto, que representam reserva orçamentária, não pagamento. Os extratos também não apresentam indicadores sobre quilômetros acompanhados ou resultados da fiscalização."
+      ],
+      "public_body": "Agência Goiana de Infraestrutura e Transportes — Goinfra",
+      "values": [
+        {
+          "original": "R$ 16.767.158,12",
+          "value": 16767158.12,
+          "currency": "BRL",
+          "label": "aditivo do lote 3"
+        },
+        {
+          "original": "R$ 14.032.288,00",
+          "value": 14032288,
+          "currency": "BRL",
+          "label": "aditivo do lote 5"
+        },
+        {
+          "original": "R$ 30.799.446,12",
+          "value": 30799446.12,
+          "currency": "BRL",
+          "label": "soma dos aditivos"
+        }
+      ],
+      "value_highest": 30799446.12,
+      "cnpjs": [
+        "02.893.543/0001-00"
+      ],
+      "reference_numbers": [
+        "283/2026-GOINFRA",
+        "284/2026-GOINFRA",
+        "90/2024-GOINFRA",
+        "89/2024-GOINFRA"
+      ],
+      "importance": 111,
+      "news_value": {
+        "score": 111,
+        "reasons": [
+          "R$ 30,8 milhões",
+          "manutenção rodoviária",
+          "prorrogação contratual",
+          "fiscalização"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-02",
+      "published_at": "2026-09-03",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governo de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7347/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7347",
+      "edition_number": "24.856",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-02-edicao-7347.pdf",
+      "document_sha256": "b4a5a5af8de98a6d5e7101451e76affada5aded95bb6949d51f9c90111c7ddd2",
+      "id": "doego-24856-secti-software-montreal-22-milhoes",
+      "page_start": 5,
+      "page_end": 5,
+      "document_reference": "DOE-GO nº 24.856 · página 5; objeto descrito no DOE-GO nº 24.849 · página 16",
+      "external_identifier": "1º termo aditivo ao Contrato nº 17/2026-Secti · Processo SEI nº 202614304001364",
+      "official_title": "1º termo aditivo ao Contrato nº 17/2026-Secti",
+      "act_type": "termo_aditivo",
+      "type_label": "Tecnologia",
+      "title": "Goiás prorroga por R$ 22,6 milhões contrato de desenvolvimento de software",
+      "deck": "Aditivo mantém a M.I. Montreal Informática na Secti até setembro de 2027.",
+      "summary": "Serviço cobre desenvolvimento, testes, implantação, manutenção e sustentação de sistemas sob demanda.",
+      "paragraphs": [
+        "A Secretaria de Ciência, Tecnologia e Inovação prorrogou por mais 12 meses, ao custo de R$ 22.596.139,28, o contrato com a M.I. Montreal Informática. O serviço envolve desenvolvimento, testes, implantação, evolução, manutenção e sustentação de software, por alocação de perfis profissionais de tecnologia vinculados à entrega de resultados.",
+        "O novo período vai de 4 de setembro de 2026 a 4 de setembro de 2027. O contrato nº 17/2026 foi formado a partir da cisão de um ajuste anteriormente vinculado à Secretaria-Geral de Governo. O extrato do aditivo informa valor e dotações para 2026 e 2027, mas não apresenta métricas de entrega, quantidade de profissionais ou pagamentos já realizados."
+      ],
+      "public_body": "Secretaria de Estado de Ciência, Tecnologia e Inovação — Secti",
+      "values": [
+        {
+          "original": "R$ 22.596.139,28",
+          "value": 22596139.28,
+          "currency": "BRL",
+          "label": "valor do aditivo"
+        }
+      ],
+      "value_highest": 22596139.28,
+      "cnpjs": [
+        "42.563.692/0001-26"
+      ],
+      "reference_numbers": [
+        "17/2026-SECTI",
+        "202614304001364"
+      ],
+      "importance": 108,
+      "news_value": {
+        "score": 108,
+        "reasons": [
+          "R$ 22,6 milhões",
+          "software público",
+          "prorrogação de 12 meses",
+          "tecnologia"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-02",
+      "published_at": "2026-09-03",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governo de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7347/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7347",
+      "edition_number": "24.856",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-02-edicao-7347.pdf",
+      "document_sha256": "b4a5a5af8de98a6d5e7101451e76affada5aded95bb6949d51f9c90111c7ddd2",
+      "id": "doego-24856-ovg-natal-do-bem-decoracao-13-milhoes",
+      "page_start": 37,
+      "page_end": 37,
+      "document_reference": "DOE-GO nº 24.856 · página 37",
+      "external_identifier": "Contrato de Locação com Fornecimento e Prestação de Serviços nº 010/2026",
+      "official_title": "Extrato do CL-CF-CPS nº 010/2026",
+      "act_type": "contrato",
+      "type_label": "Eventos",
+      "title": "OVG contrata R$ 13 milhões em decoração para o Natal do Bem de 2026",
+      "deck": "Fábrica de Luz fornecerá estruturas iluminadas, esculturas e serviços para duas etapas do evento.",
+      "summary": "Contrato tem vigência de nove meses e usa recursos do contrato de gestão da organização com o Estado.",
+      "paragraphs": [
+        "A Organização das Voluntárias de Goiás contratou por R$ 13 milhões a locação de estruturas iluminadas, esculturas decorativas e serviços de decoração para a edição de 2026 do Natal do Bem. A empresa escolhida é a Fábrica de Luz Projetos e Iluminações Ltda., e o objeto cobre a primeira e a segunda etapas do evento.",
+        "O contrato terá vigência de nove meses e será pago com recursos do Contrato de Gestão nº 001/2011-Sead. O extrato identifica o valor global, a empresa e os signatários, mas não detalha a quantidade de peças, os preços unitários, o período de montagem nem o que cabe a cada etapa. O valor contratado não significa que a quantia já tenha sido integralmente paga."
+      ],
+      "public_body": "Organização das Voluntárias de Goiás — OVG",
+      "values": [
+        {
+          "original": "R$ 13.000.000,00",
+          "value": 13000000,
+          "currency": "BRL",
+          "label": "valor do contrato"
+        }
+      ],
+      "value_highest": 13000000,
+      "cnpjs": [],
+      "reference_numbers": [
+        "010/2026",
+        "202600058004375",
+        "001/2011-SEAD"
+      ],
+      "importance": 107,
+      "news_value": {
+        "score": 107,
+        "reasons": [
+          "R$ 13 milhões",
+          "evento público",
+          "decoração",
+          "contrato de gestão"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-02",
+      "published_at": "2026-09-03",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2753",
+      "edition_number": "2753",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2753-2026-09-02.pdf",
+      "document_sha256": "5ae6628787937f8ca78b9227c752e49ac10b5b7e8569c0ad3807e3d51e4904f2",
+      "id": "tcmgo-2753-avelinopolis-contrato-advocacia-sobrepreco",
+      "city": "Avelinópolis",
+      "page_start": 21,
+      "page_end": 26,
+      "document_reference": "Diário de Contas nº 2.753 · páginas 21 a 26",
+      "external_identifier": "Processo nº 08765/2025 · Contrato nº 002/2025",
+      "official_title": "Despacho nº 294/2026-GCSPHB",
+      "act_type": "despacho_em_representacao",
+      "type_label": "Controle e contratos",
+      "title": "TCM manda aprofundar apuração sobre contrato de advocacia de Avelinópolis",
+      "deck": "Área técnica estimou R$ 12,2 mil de possível sobrepreço, mas relator disse que o processo ainda não está pronto para julgamento.",
+      "summary": "Prefeito, secretário, agente de contratação e escritório terão de demonstrar o preço de mercado e os serviços efetivamente prestados.",
+      "paragraphs": [
+        "O TCM-GO determinou nova instrução em uma representação que questiona a contratação, sem licitação, do escritório Almeida e Morais Advogados Associados pela Prefeitura de Avelinópolis. A área técnica apontou possível sobrepreço de R$ 12.171,89 com base em contratações semelhantes e na tabela de honorários da OAB-GO, mas o relator considerou que os autos ainda não estão maduros para julgamento.",
+        "O despacho manda notificar o prefeito Antônio Marcos Barbosa, o secretário de Administração Zélio Pereira Alves, a agente de contratação Kássia Rodrigues Bernardino e o escritório para que comprovem o preço de mercado e quais serviços foram efetivamente prestados. Não houve condenação nem débito fixado: o próprio relator afirmou que a tabela da OAB, isoladamente, é piso ético e não pode ser tratada automaticamente como preço de mercado."
+      ],
+      "public_body": "Prefeitura de Avelinópolis e TCM-GO",
+      "values": [
+        {
+          "original": "R$ 12.171,89",
+          "value": 12171.89,
+          "currency": "BRL",
+          "label": "possível sobrepreço estimado pela área técnica"
+        }
+      ],
+      "value_highest": 12171.89,
+      "cnpjs": [
+        "10.538.464/0001-00"
+      ],
+      "reference_numbers": [
+        "08765/2025",
+        "002/2025",
+        "294/2026-GCSPHB"
+      ],
+      "importance": 105,
+      "news_value": {
+        "score": 105,
+        "reasons": [
+          "apuração do TCM",
+          "contratação sem licitação",
+          "possível sobrepreço",
+          "decisão ainda não final"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-02",
+      "published_at": "2026-09-03",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2753",
+      "edition_number": "2753",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2753-2026-09-02.pdf",
+      "document_sha256": "5ae6628787937f8ca78b9227c752e49ac10b5b7e8569c0ad3807e3d51e4904f2",
+      "id": "tcmgo-2753-sao-simao-show-100-mil-denuncia-arquivada",
+      "city": "São Simão",
+      "page_start": 122,
+      "page_end": 128,
+      "document_reference": "Diário de Contas nº 2.753 · páginas 122 a 128",
+      "external_identifier": "Processo nº 06388/2026 · Contrato nº 48/2025",
+      "official_title": "Decisão monocrática nº 390/2026-GCSCQ",
+      "act_type": "decisao_monocratica",
+      "type_label": "Controle e eventos",
+      "title": "TCM arquiva denúncia de empresa que cobra R$ 100 mil por show em São Simão",
+      "deck": "L & R Produções disse não ter recebido pela apresentação da dupla Luccas e Rodrigo no réveillon; Tribunal não julgou o crédito.",
+      "summary": "Relator concluiu que cobrança contratual deve seguir pelas vias administrativa ou judicial e que faltaram indícios para abrir fiscalização.",
+      "paragraphs": [
+        "O TCM-GO não admitiu uma denúncia da L & R Produções, que afirma não ter recebido R$ 100 mil pela apresentação da dupla Luccas e Rodrigo no réveillon de São Simão. Segundo a empresa, o show ocorreu em 29 de dezembro de 2025, o pagamento deveria ter sido feito em maio e a cobrança atualizada chegou a R$ 110 mil após juros e multa contratual.",
+        "O relator decidiu que a cobrança de crédito contratual não cabe ao Tribunal e deve ser tratada nas vias administrativa ou judicial. Também afirmou que não foram apresentados indícios mínimos de falhas em empenho, liquidação, transparência ou ordem de pagamentos, destacando que a consulta feita pela própria denunciante não permitia concluir que o empenho inexistia. O arquivamento, portanto, não confirma o pagamento nem reconhece irregularidade do município."
+      ],
+      "public_body": "Prefeitura de São Simão e TCM-GO",
+      "values": [
+        {
+          "original": "R$ 100.000,00",
+          "value": 100000,
+          "currency": "BRL",
+          "label": "valor do contrato informado na denúncia"
+        },
+        {
+          "original": "R$ 110.000,00",
+          "value": 110000,
+          "currency": "BRL",
+          "label": "valor atualizado informado pela denunciante"
+        }
+      ],
+      "value_highest": 110000,
+      "cnpjs": [
+        "55.151.624/0001-00"
+      ],
+      "reference_numbers": [
+        "06388/2026",
+        "48/2025",
+        "390/2026-GCSCQ"
+      ],
+      "importance": 99,
+      "news_value": {
+        "score": 99,
+        "reasons": [
+          "contrato de show",
+          "alegação de falta de pagamento",
+          "denúncia arquivada",
+          "limites da decisão"
         ]
       }
     }
