@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Monitoramento documental, legislativo e financeiro da Assembleia Legislativa de Goias",
-  "generated_at": "2026-09-02T10:21:27.317Z",
+  "generated_at": "2026-09-03T21:35:59.136Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-09-02",
+    "to": "2026-09-03",
     "last_checked": {
-      "from": "2026-08-27",
-      "to": "2026-09-02"
+      "from": "2026-08-28",
+      "to": "2026-09-03"
     }
   },
   "summary": {
@@ -17,8 +17,8 @@
     "downloaded_diaries": 31,
     "failed_diary_downloads": 0,
     "extraction_pending": 31,
-    "vote_rows": 5789,
-    "roll_calls": 261,
+    "vote_rows": 5881,
+    "roll_calls": 265,
     "contracts": 85,
     "current_contracts": 70,
     "sanctions_registers": 1,
@@ -73,8 +73,8 @@
       "status": "checked",
       "collection_method": "api_publica_oficial",
       "summary": {
-        "rows": 5789,
-        "roll_calls": 261
+        "rows": 5881,
+        "roll_calls": 265
       }
     },
     {
@@ -100,6 +100,16 @@
     }
   ],
   "analysis_queue": [
+    {
+      "id": "alego-votacao:2026-09-02:41828",
+      "type": "votacao_nominal",
+      "date": "2026-09-02",
+      "priority": 90,
+      "title": "DISPÕE SOBRE A CONVALIDAÇÃO DA UTILIZAÇÃO DE INCENTIVO E BENEFÍCIO FISCAL OU FINANCEIRO-FISCAL SEM O CUMPRIMENTO DE CONDICIONANTES PREVISTAS NA LEGISLAÇÃO TRIBUTÁRIA E A EXTINÇÃO DE CRÉDITO TRIBUTÁRIO CONEXO.",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 41828 · 67ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
     {
       "id": "alego-votacao:2026-08-26:41651",
       "type": "votacao_nominal",
@@ -389,16 +399,6 @@
       "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 24 sim, 0 nao, 0 abstencoes.",
       "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
       "document_reference": "Pauta 38486 · 47ª SESSÃO ORDINÁRIA HÍBRIDA"
-    },
-    {
-      "id": "alego-votacao:2026-06-17:38320",
-      "type": "votacao_nominal",
-      "date": "2026-06-17",
-      "priority": 90,
-      "title": "ALTERA A LEI N° 20.756, DE 28 DE JANEIRO DE 2020, QUE DISPÕE SOBRE O REGIME JURÍDICO DOS SERVIDORES PÚBLICOS CIVIS DO ESTADO DE GOIÁS, DAS AUTARQUIAS E FUNDAÇÕES PÚBLICAS ESTADUAIS, E DÁ OUTRAS PROVIDÊNCIAS, E A LEI N° 18.456, DE 30 DE ABRIL DE 2014, QUE DISPÕE SOBRE A PREVENÇÃO E A PUNIÇÃO DE ASSÉDIO MORAL NO ÂMBITO DA ADMINISTRAÇÃO ESTADUAL E DÁ OUTRAS PROVIDÊNCIAS.",
-      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 23 sim, 0 nao, 0 abstencoes.",
-      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
-      "document_reference": "Pauta 38320 · 12ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
     }
   ]
 }

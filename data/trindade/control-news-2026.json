@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T10:24:31.920Z",
+  "generated_at": "2026-09-03T21:37:53.771Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-09-02"
+    "to": "2026-09-03"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 105
+    "published_stories": 108
   },
   "items": [
     {
@@ -6261,6 +6261,192 @@
           "contratação por inexigibilidade",
           "folha dos servidores",
           "remuneração condicionada ao êxito"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "id": "trindade-3696-reequilibrio-insumos-asfalto-1-5-milhao",
+      "date": "2026-09-03",
+      "published_at": "2026-09-03",
+      "city": "Trindade",
+      "scope": "Municipal",
+      "source_id": "agm",
+      "source_name": "Diário Municipal de Goiás — AGM",
+      "source_label": "Prefeitura de Trindade",
+      "official_url": "https://www.diariomunicipal.com.br/agm/",
+      "source_landing_url": "https://www.diariomunicipal.com.br/agm/",
+      "edition_id": "agm:3696",
+      "edition_number": "3696",
+      "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-03-3696.pdf",
+      "document_sha256": "a7b043a576e0fa481584d5877f150429cdb1365a2db6966143f658696671cd5d",
+      "page_start": 90,
+      "page_end": 90,
+      "document_reference": "Diário Municipal de Goiás nº 3696 · página 90",
+      "external_identifier": "1º termo aditivo de reequilíbrio · Ata de Registro de Preços nº 012/2025 · Pregão Eletrônico nº 012/2025",
+      "official_title": "Extrato do 1º termo aditivo de reequilíbrio relativo à Ata de Registro de Preços nº 012/2025",
+      "act_type": "termo_aditivo",
+      "type_label": "Asfalto e pavimentação",
+      "title": "Trindade reajusta em R$ 1,5 milhão ata para compra de insumos de asfalto",
+      "deck": "Reequilíbrio beneficia a Conceito Asfaltos e alcança materiais usados em pavimentação, recapeamento e tapa-buracos.",
+      "summary": "Aditivo eleva os preços registrados para insumos de obras viárias; publicação não informa o valor original da ata nem pagamentos realizados.",
+      "paragraphs": [
+        "A Prefeitura de Trindade formalizou um reequilíbrio de R$ 1.545.126,17 na ata de registro de preços firmada com a Conceito Asfaltos Ltda. O ajuste alcança o fornecimento futuro de material betuminoso, cascalho, brita zero, pedrisco, pó de pedra e cal para pavimentação, recapeamento e operações de tapa-buracos no município.",
+        "O primeiro termo aditivo foi assinado em 1º de setembro e publicado nesta quinta-feira (3). As despesas foram vinculadas à Secretaria Municipal de Infraestrutura. O extrato identifica a empresa, o objeto e o valor total do reequilíbrio, mas não detalha o valor original da ata, a variação por item nem informa quanto já foi comprado ou pago; registro de preços e aditivo não equivalem, por si sós, a desembolso realizado."
+      ],
+      "public_body": "Prefeitura de Trindade",
+      "values": [
+        {
+          "original": "R$ 1.545.126,17",
+          "value": 1545126.17,
+          "currency": "BRL",
+          "label": "valor total do reequilíbrio"
+        }
+      ],
+      "value_highest": 1545126.17,
+      "cnpjs": [
+        "47.334.900/0001-39"
+      ],
+      "reference_numbers": [
+        "012/2025"
+      ],
+      "importance": 108,
+      "news_value": {
+        "score": 108,
+        "reasons": [
+          "R$ 1,5 milhão",
+          "insumos para asfalto",
+          "reequilíbrio de preços",
+          "impacto em obras viárias"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-03",
+      "published_at": "2026-09-03",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id": "goiania:do_20260903_000008856.pdf",
+      "edition_number": "8856",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-03-8856.pdf",
+      "document_sha256": "ddfcbdf59f9f36f8533a76534c364a0c11c32a05a2a6eb1d9a24e713a87b4ce6",
+      "id": "goiania-8856-alimentacao-escolar-agricultura-familiar-50-milhoes",
+      "page_start": 48,
+      "page_end": 67,
+      "document_reference": "Diário Oficial de Goiânia nº 8856 · páginas 48 a 67",
+      "external_identifier": "Chamada Pública nº 002/2026 · Processo SEI nº 26.24.000018565-9",
+      "official_title": "Resultado da Chamada Pública nº 002/2026",
+      "act_type": "resultado_chamada_publica",
+      "type_label": "Alimentação escolar",
+      "title": "Goiânia seleciona R$ 50,5 milhões em alimentos da agricultura familiar para escolas",
+      "deck": "Resultado da chamada pública inclui carnes, leite, hortaliças, polpas de frutas e outros itens destinados à alimentação escolar.",
+      "summary": "Secretaria de Educação classificou cooperativas e associações para fornecer 12 grupos de alimentos; resultado ainda não comprova pagamento.",
+      "paragraphs": [
+        "A Secretaria Municipal de Educação de Goiânia divulgou o resultado de uma chamada pública de R$ 50.519.456,50 para a compra de alimentos da agricultura familiar destinados à rede municipal. A relação abrange itens como carnes bovina e suína, frango, leite, hortaliças, pão de queijo, polpas de frutas e outros produtos, com classificação de cooperativas e associações para cada grupo.",
+        "Entre os maiores lotes aparecem R$ 11,4 milhões em polpas de frutas, R$ 8,16 milhões em leite integral, R$ 7,17 milhões em filé de peito de frango e R$ 6,86 milhões em pão de queijo. O documento é o resultado da Chamada Pública nº 002/2026 e apresenta quantidades, valores e fornecedores classificados; a publicação do resultado não significa que todo o montante já tenha sido contratado, entregue ou pago."
+      ],
+      "public_body": "Secretaria Municipal de Educação de Goiânia",
+      "values": [
+        {
+          "original": "R$ 50.519.456,50",
+          "value": 50519456.5,
+          "currency": "BRL",
+          "label": "valor total da chamada pública"
+        }
+      ],
+      "value_highest": 50519456.5,
+      "cnpjs": [],
+      "reference_numbers": [
+        "002/2026",
+        "26.24.000018565-9"
+      ],
+      "importance": 116,
+      "news_value": {
+        "score": 116,
+        "reasons": [
+          "R$ 50,5 milhões",
+          "alimentação escolar",
+          "agricultura familiar",
+          "rede municipal de ensino"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-03",
+      "published_at": "2026-09-03",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id": "goiania:do_20260903_000008856.pdf",
+      "edition_number": "8856",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-03-8856.pdf",
+      "document_sha256": "ddfcbdf59f9f36f8533a76534c364a0c11c32a05a2a6eb1d9a24e713a87b4ce6",
+      "id": "goiania-8856-regularizacao-fundiaria-fucape-21-milhoes",
+      "page_start": 86,
+      "page_end": 88,
+      "document_reference": "Diário Oficial de Goiânia nº 8856 · páginas 86 a 88",
+      "external_identifier": "Contrato nº 4 · Processo SEI nº 26.33.000000306-1",
+      "official_title": "Contrato nº 4 e ato de dispensa de licitação",
+      "act_type": "contrato",
+      "type_label": "Regularização fundiária",
+      "title": "Goiânia contrata instituto por R$ 21,8 milhões para regularização fundiária",
+      "deck": "Contrato com o Instituto Fucape terá duração de quatro anos e foi celebrado por dispensa de licitação.",
+      "summary": "Projeto prevê cadastro social, cartografia, projetos urbanísticos, trabalho de campo e articulação com cartórios.",
+      "paragraphs": [
+        "A Prefeitura de Goiânia contratou o Instituto Fucape de Tecnologias Sociais por R$ 21.857.800 para executar um projeto de regularização fundiária urbana. O trabalho inclui capacitação, apoio técnico, cadastro social, cartografia, elaboração de projetos urbanísticos, atividades de campo e articulação registral.",
+        "O contrato terá vigência de 48 meses e foi celebrado por dispensa de licitação com fundamento no artigo 75, inciso XV, da Lei nº 14.133/2021, hipótese aplicável à contratação de instituição brasileira sem fins lucrativos nas condições previstas em lei. A publicação registra o valor contratado, mas não informa o número de imóveis ou famílias que deverão ser atendidos nem comprova pagamentos já realizados."
+      ],
+      "public_body": "Secretaria Municipal de Habitação e Regularização Fundiária de Goiânia",
+      "values": [
+        {
+          "original": "R$ 21.857.800,00",
+          "value": 21857800,
+          "currency": "BRL",
+          "label": "valor global do contrato"
+        }
+      ],
+      "value_highest": 21857800,
+      "cnpjs": [
+        "20.317.623/0001-08"
+      ],
+      "reference_numbers": [
+        "4",
+        "26.33.000000306-1"
+      ],
+      "importance": 113,
+      "news_value": {
+        "score": 113,
+        "reasons": [
+          "R$ 21,8 milhões",
+          "dispensa de licitação",
+          "regularização fundiária",
+          "vigência de quatro anos"
         ]
       }
     }
