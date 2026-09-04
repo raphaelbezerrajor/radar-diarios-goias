@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T22:39:46.871Z",
+  "generated_at": "2026-09-04T11:03:51.945Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-09-03"
+    "to": "2026-09-04"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 114
+    "published_stories": 126
   },
   "items": [
     {
@@ -6852,6 +6852,782 @@
           "alegação de falta de pagamento",
           "denúncia arquivada",
           "limites da decisão"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "scope": "Municipal",
+      "source_id": "agm",
+      "source_name": "Diário Municipal de Goiás — AGM",
+      "source_label": "Diário dos Municípios",
+      "official_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114621_2026-09-03_a53fcc47ad32021ab5f1ba592789f75f.pdf",
+      "source_landing_url": "https://www.diariomunicipal.com.br/agm/",
+      "edition_id": "agm:114621",
+      "edition_number": "3697",
+      "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-04-3697.pdf",
+      "document_sha256": "c3bb600eeffdf5122a515930e8695bd77507b04f80d819be2cafab8b8ce82fa5",
+      "id": "agm-3697-itaucu-cancela-cinco-shows-1-milhao",
+      "city": "Itauçu",
+      "act_date": "2026-08-31",
+      "page_start": 35,
+      "page_end": 36,
+      "document_reference": "Diário Municipal de Goiás nº 3.697 · páginas 35 e 36",
+      "external_identifier": "Contratos nº 123, 124, 142, 143 e 144/2026",
+      "official_title": "Extratos dos termos de rescisão de cinco contratos da Festa do Peão de Itauçu",
+      "act_type": "rescisoes_contratuais",
+      "type_label": "Eventos e dinheiro público",
+      "title": "Itauçu cancela R$ 1,42 milhão em shows após recomendação do MP",
+      "deck": "Cinco apresentações da Festa do Peão foram retiradas da programação; contratos incluíam Edson e Hudson, Zé Ricardo e Thiago e outras duplas.",
+      "summary": "Município citou preservação do interesse público e da regularidade financeira; eventuais restituições ainda serão apuradas.",
+      "paragraphs": [
+        "A Prefeitura de Itauçu cancelou cinco contratos artísticos da Festa do Peão de 2026 que somavam R$ 1.423.000. Foram retiradas as apresentações de Felipe e Rodrigo, por R$ 263 mil; Mariana Fagundes, por R$ 200 mil; Rayane e Rafaela, por R$ 180 mil; Zé Ricardo e Thiago, por R$ 280 mil; e Edson e Hudson, por R$ 500 mil.",
+        "Os termos foram assinados em 31 de agosto e citam uma circunstância superveniente, a preservação do interesse público e da regularidade orçamentária e financeira, além da Recomendação nº 2026009672257 do Ministério Público de Goiás. As obrigações futuras foram encerradas sem multa ao município, mas os documentos deixam eventuais restituições ou acertos financeiros para apuração administrativa; por isso, o cancelamento não permite concluir quanto já havia sido pago ou quanto será recuperado."
+      ],
+      "public_body": "Prefeitura de Itauçu",
+      "values": [
+        {
+          "original": "R$ 263.000,00",
+          "value": 263000,
+          "currency": "BRL",
+          "label": "Felipe e Rodrigo"
+        },
+        {
+          "original": "R$ 200.000,00",
+          "value": 200000,
+          "currency": "BRL",
+          "label": "Mariana Fagundes"
+        },
+        {
+          "original": "R$ 180.000,00",
+          "value": 180000,
+          "currency": "BRL",
+          "label": "Rayane e Rafaela"
+        },
+        {
+          "original": "R$ 280.000,00",
+          "value": 280000,
+          "currency": "BRL",
+          "label": "Zé Ricardo e Thiago"
+        },
+        {
+          "original": "R$ 500.000,00",
+          "value": 500000,
+          "currency": "BRL",
+          "label": "Edson e Hudson"
+        },
+        {
+          "original": "R$ 1.423.000,00",
+          "value": 1423000,
+          "currency": "BRL",
+          "label": "soma dos cinco contratos cancelados"
+        }
+      ],
+      "value_highest": 1423000,
+      "cnpjs": [
+        "34.164.532/0001-86",
+        "28.037.230/0001-44",
+        "41.840.881/0001-36",
+        "43.912.016/0001-14",
+        "06.974.438/0001-57"
+      ],
+      "reference_numbers": [
+        "123/2026",
+        "124/2026",
+        "142/2026",
+        "143/2026",
+        "144/2026",
+        "2026009672257"
+      ],
+      "importance": 118,
+      "news_value": {
+        "score": 118,
+        "reasons": [
+          "R$ 1,42 milhão",
+          "cinco shows cancelados",
+          "recomendação do MP",
+          "impacto orçamentário"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "source_id": "senador-canedo",
+      "source_name": "Diário Oficial de Senador Canedo",
+      "source_label": "Prefeitura de Senador Canedo",
+      "official_url": "https://diario.senadorcanedo.go.gov.br/diario/hz0ptyq483",
+      "source_landing_url": "https://diario.senadorcanedo.go.gov.br/",
+      "edition_id": "senador-canedo:680",
+      "edition_number": "484",
+      "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-04-484.pdf",
+      "document_sha256": "208e9c7f34f4aadec8ee6d7810418df90680f267e0a1b206815c316eecbb8275",
+      "id": "senador-canedo-484-transporte-escolar-notificacao-evolucao",
+      "page_start": 82,
+      "page_end": 82,
+      "document_reference": "Diário de Senador Canedo nº 484 · página 82",
+      "external_identifier": "ARP/Contrato nº 20.06.16.001/2026 · Processo 1Doc nº 34493/2026",
+      "official_title": "Notificação administrativa à Evolução Engenharia e Transportes Ltda.",
+      "act_type": "notificacao_contratual",
+      "type_label": "Transporte escolar",
+      "title": "Senador Canedo cobra correções no transporte escolar e ameaça encerrar contrato",
+      "deck": "Notificação aponta veículos inadequados, falhas de acessibilidade, falta de monitores e problemas com cintos e rastreamento.",
+      "summary": "Evolução Engenharia e Transportes recebeu três dias para corrigir as falhas e apresentar defesa; ainda não houve sanção definitiva.",
+      "paragraphs": [
+        "A Secretaria Municipal de Educação de Senador Canedo notificou a Evolução Engenharia e Transportes Ltda. por falhas na operação do transporte escolar. O documento cita veículos em condições inadequadas, problemas nas rampas de acessibilidade das rotas 19, 20, 21, 60 e 61, ausência de monitores em parte do serviço, falhas no uso do cinto nas rotas 60 e 61 e pendências nas vistorias de veículos, motoristas e monitores.",
+        "A prefeitura também registrou problemas no rastreamento, dificuldade de comunicação com a fiscalização, reincidência e falta de resposta formal a duas advertências anteriores. A empresa recebeu prazo de três dias para corrigir as pendências e apresentar defesa. A extinção da ata e um processo de responsabilização foram anunciados como consequências possíveis, não como penalidades já aplicadas."
+      ],
+      "public_body": "Secretaria Municipal de Educação de Senador Canedo",
+      "values": [],
+      "value_highest": null,
+      "cnpjs": [
+        "13.331.555/0001-68"
+      ],
+      "reference_numbers": [
+        "20.06.16.001/2026",
+        "34493/2026"
+      ],
+      "importance": 113,
+      "news_value": {
+        "score": 113,
+        "reasons": [
+          "transporte escolar",
+          "segurança e acessibilidade",
+          "possível encerramento contratual",
+          "serviço essencial"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-03",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Agehab",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7349/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7349",
+      "edition_number": "24.857 — suplemento",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-03-edicao-7349-suplemento.pdf",
+      "document_sha256": "71933035f3d6daafd37e58c193ddb1ceefe35e68ca00113f52ffc871ff1afaae",
+      "id": "doego-24857-agehab-sorteio-211-moradias",
+      "page_start": 1,
+      "page_end": 2,
+      "document_reference": "Suplemento do DOE-GO nº 24.857 · páginas 1 e 2",
+      "external_identifier": "Ata de Reunião nº 11/2026-Agehab",
+      "official_title": "Resultado do 2º sorteio de atribuição de contrapartida social remunerada",
+      "act_type": "sorteio_de_habitacao",
+      "type_label": "Habitação",
+      "title": "Agehab distribui demanda de 211 moradias entre construtoras em cinco cidades",
+      "deck": "Sorteio abrange Itapaci, Teresina de Goiás, Doverlândia, Cachoeira Dourada e Guapó; empresas ainda passarão pela habilitação.",
+      "summary": "Casas serão contrapartida a subsídio de crédito outorgado de ICMS; a ata não equivale a contrato de obra nem informa valores.",
+      "paragraphs": [
+        "A Agehab realizou um segundo sorteio para distribuir entre construtoras a demanda de 211 moradias sociais em cinco municípios. O resultado relaciona 29 unidades em Itapaci, 50 em Teresina de Goiás, 50 em Doverlândia, 50 em Cachoeira Dourada e 32 em Guapó, dentro do credenciamento que usa a construção de casas como contrapartida ao benefício de crédito outorgado de ICMS.",
+        "A ata registra alterações após desistências e desclassificações: Mambaí ficou fora por questão técnica, uma empresa perdeu a demanda por não ter representante na sessão e houve troca entre Guapó e Teresina de Goiás. As interessadas têm cinco dias corridos, a partir de 4 de setembro, para enviar a documentação de habilitação. O sorteio atribui demandas, mas não constitui contrato assinado, pagamento ou garantia de que todas as unidades serão executadas."
+      ],
+      "public_body": "Agência Goiana de Habitação — Agehab",
+      "values": [],
+      "value_highest": null,
+      "cnpjs": [],
+      "reference_numbers": [
+        "11/2026-AGEHAB",
+        "001/2025"
+      ],
+      "importance": 111,
+      "news_value": {
+        "score": 111,
+        "reasons": [
+          "211 moradias",
+          "cinco municípios",
+          "política habitacional",
+          "contrapartida de ICMS"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "section",
+      "date": "2026-09-03",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "source_id": "anapolis",
+      "source_name": "Diário Oficial de Anápolis",
+      "source_label": "Prefeitura de Anápolis",
+      "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23827",
+      "source_landing_url": "https://dom.anapolis.go.gov.br/",
+      "edition_id": "anapolis:23827",
+      "edition_number": "4.018/2026",
+      "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-03-4.018-2026.pdf",
+      "document_sha256": "3e5ae4812d05745b12275ab0f914d9ac930d81d43043d00aa21ac3be2da66855",
+      "id": "anapolis-4018-nfse-padrao-nacional-outubro",
+      "page_start": 8,
+      "page_end": 9,
+      "document_reference": "Diário Oficial de Anápolis nº 4.018/2026 · páginas 8 e 9",
+      "external_identifier": "Portaria nº 033/2026-Semec",
+      "official_title": "Adoção do webservice do padrão nacional da NFS-e em Anápolis",
+      "act_type": "regulamentacao_tributaria",
+      "type_label": "Tributos e serviços",
+      "title": "Anápolis torna obrigatória a NFS-e nacional a partir de outubro",
+      "deck": "Prestadores que usam sistemas próprios terão de adaptar a integração ao webservice do padrão nacional.",
+      "summary": "Mudança começa em 1º de outubro, mas a própria portaria permite ajuste da data se o cronograma nacional for alterado.",
+      "paragraphs": [
+        "A emissão de Nota Fiscal de Serviços Eletrônica em Anápolis deverá passar exclusivamente pelo webservice do padrão nacional a partir de 1º de outubro. A determinação atinge prestadores e empresas com sistemas emissores integrados ao processamento municipal, que precisarão fazer as adaptações técnicas até a data de entrada em vigor.",
+        "A prefeitura relaciona a mudança à implantação do IBS e da CBS e à padronização nacional das informações fiscais. A Portaria nº 033/2026 prevê que o prazo poderá ser alterado se os comitês gestores nacionais modificarem o cronograma. O ato trata da forma de emissão da nota e não cria, por si, uma nova alíquota municipal."
+      ],
+      "public_body": "Secretaria Municipal de Economia de Anápolis",
+      "values": [],
+      "value_highest": null,
+      "cnpjs": [],
+      "reference_numbers": [
+        "033/2026",
+        "52.525/2026"
+      ],
+      "importance": 108,
+      "news_value": {
+        "score": 108,
+        "reasons": [
+          "impacto sobre prestadores",
+          "NFS-e",
+          "IBS e CBS",
+          "prazo em outubro"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2755",
+      "edition_number": "2755",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2755-2026-09-04.pdf",
+      "document_sha256": "184c327d04cf8f605ad44943a9396a23992da5245431a2971e775e45476b58f4",
+      "id": "tcmgo-2755-pires-do-rio-reurb-contratos-7-milhoes",
+      "city": "Pires do Rio",
+      "page_start": 91,
+      "page_end": 103,
+      "document_reference": "Diário de Contas nº 2.755 · páginas 91 a 103",
+      "external_identifier": "Processo nº 05027/2026 · Despacho nº 270/2026-SecexContratações",
+      "official_title": "Despacho técnico sobre contratos de regularização fundiária",
+      "act_type": "despacho_de_instrucao",
+      "type_label": "Contratos e controle",
+      "title": "TCM cobra provas sobre R$ 140 mil pagos por regularização fundiária em Pires do Rio",
+      "deck": "Apuração alcança dois contratos de R$ 7,25 milhões e pede comprovação de serviços equivalentes a 70 imóveis.",
+      "summary": "Área técnica não encontrou duplicidade temporal, mas apontou falta de prova suficiente para inexigibilidade e execução; processo ainda não foi julgado.",
+      "paragraphs": [
+        "A área técnica do TCM-GO notificou gestores, fiscais e duas contratadas para esclarecer a execução de contratos de regularização fundiária que somam R$ 7,25 milhões em Pires do Rio. No primeiro ajuste, de R$ 5 milhões com a Associação Habitacional Brasileira de Moradia, o sistema do Tribunal registrou R$ 140 mil em pagamentos. Como o preço previsto era de R$ 2 mil por imóvel, os técnicos pediram relatórios e atestes que comprovem serviços equivalentes a 70 regularizações.",
+        "O primeiro contrato foi rescindido em janeiro. Um segundo, de R$ 2,25 milhões com Ferreira & Netto Advogados Associados, tinha R$ 750 mil empenhados e nenhum pagamento localizado pelo TCM até a análise. A equipe considerou improcedente a suspeita de sobreposição temporal, mas pediu prova da inviabilidade de competição, da especialização das contratadas e das entregas. O despacho é uma etapa de instrução: não fixou débito, não aplicou multa e ainda permite defesa antes do julgamento."
+      ],
+      "public_body": "Prefeitura de Pires do Rio e TCM-GO",
+      "values": [
+        {
+          "original": "R$ 5.000.000,00",
+          "value": 5000000,
+          "currency": "BRL",
+          "label": "Contrato nº 220/2025"
+        },
+        {
+          "original": "R$ 2.250.000,00",
+          "value": 2250000,
+          "currency": "BRL",
+          "label": "Contrato nº 332/2026"
+        },
+        {
+          "original": "R$ 140.000,00",
+          "value": 140000,
+          "currency": "BRL",
+          "label": "pagamentos localizados no primeiro contrato"
+        },
+        {
+          "original": "R$ 750.000,00",
+          "value": 750000,
+          "currency": "BRL",
+          "label": "empenho localizado no segundo contrato"
+        }
+      ],
+      "value_highest": 7250000,
+      "cnpjs": [
+        "35.267.975/0001-65",
+        "19.859.112/0001-20"
+      ],
+      "reference_numbers": [
+        "05027/2026",
+        "220/2025",
+        "332/2026",
+        "270/2026"
+      ],
+      "importance": 116,
+      "news_value": {
+        "score": 116,
+        "reasons": [
+          "R$ 7,25 milhões em contratos",
+          "R$ 140 mil pagos",
+          "entregas sob comprovação",
+          "apuração preliminar do TCM"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2755",
+      "edition_number": "2755",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2755-2026-09-04.pdf",
+      "document_sha256": "184c327d04cf8f605ad44943a9396a23992da5245431a2971e775e45476b58f4",
+      "id": "tcmgo-2755-goiania-concurso-educacao-fisica-cautelar",
+      "city": "Goiânia",
+      "page_start": 52,
+      "page_end": 55,
+      "document_reference": "Diário de Contas nº 2.755 · páginas 52 a 55",
+      "external_identifier": "Processo nº 05515/2026 · Acórdão nº 06307/2026",
+      "official_title": "Medida cautelar sobre o cadastro de reserva do Concurso Público nº 01/2020",
+      "act_type": "medida_cautelar",
+      "type_label": "Concurso público",
+      "title": "TCM impede Goiânia de preencher vagas técnicas com comissionados em área de Educação Física",
+      "deck": "Prefeitura terá de preservar vagas de analista de Cultura e Desporto e explicar possível preterição de aprovados em concurso.",
+      "summary": "Cautelar não manda nomear imediatamente: proíbe soluções precárias e exige dados sobre comissionados, vacâncias e necessidade de pessoal.",
+      "paragraphs": [
+        "O TCM-GO concedeu medida cautelar para impedir que a Prefeitura de Goiânia use cargos comissionados em funções técnicas correspondentes ao cargo efetivo de Analista em Cultura e Desporto — Educação Física. O município também deverá preservar as vagas abertas por vacâncias legais e não preenchê-las de forma precária até a decisão definitiva do Tribunal.",
+        "O prefeito Sandro Mabel e o secretário de Administração, Adonídio Neto Vieira Júnior, têm dez dias úteis para apresentar a relação de comissionados, as atribuições exercidas, as vacâncias, as nomeações e a necessidade de pessoal, além de explicar a alegada preterição de candidatos do Concurso nº 01/2020. A decisão é cautelar e admite defesa; ela não determina, neste momento, a nomeação imediata de todos os aprovados."
+      ],
+      "public_body": "Prefeitura de Goiânia e TCM-GO",
+      "values": [],
+      "value_highest": null,
+      "cnpjs": [],
+      "reference_numbers": [
+        "05515/2026",
+        "06307/2026",
+        "01/2020"
+      ],
+      "importance": 115,
+      "news_value": {
+        "score": 115,
+        "reasons": [
+          "concurso público",
+          "direito de aprovados",
+          "medida cautelar",
+          "Goiânia"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2755",
+      "edition_number": "2755",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2755-2026-09-04.pdf",
+      "document_sha256": "184c327d04cf8f605ad44943a9396a23992da5245431a2971e775e45476b58f4",
+      "id": "tcmgo-2755-caiaponia-bloqueia-pagamentos-lago-buritis",
+      "city": "Caiapônia",
+      "page_start": 29,
+      "page_end": 32,
+      "document_reference": "Diário de Contas nº 2.755 · páginas 29 a 32",
+      "external_identifier": "Processo nº 05982/2026 · Acórdão nº 06349/2026",
+      "official_title": "Cautelar na execução do Contrato nº 54/2025",
+      "act_type": "medida_cautelar",
+      "type_label": "Obras e controle",
+      "title": "TCM bloqueia novos pagamentos de obra de R$ 396 mil no Lago dos Buritis",
+      "deck": "Caiapônia terá de explicar custos, medições, operação de escavadeira e divergência de R$ 80,4 mil no saldo do contrato.",
+      "summary": "Contrato com a Galvão e Azanki Engenharia cobre drenagem e comporta metálica; apuração ainda não concluiu irregularidade.",
+      "paragraphs": [
+        "O TCM-GO referendou uma cautelar que proíbe a Prefeitura de Caiapônia de fazer novos pagamentos no Contrato nº 54/2025, de R$ 396 mil, até o julgamento do mérito. A Galvão e Azanki Engenharia foi contratada para executar drenagem e instalar uma comporta metálica no Lago dos Buritis.",
+        "O Tribunal exigiu cotações, memória de cálculo, identificação do operador da escavadeira, diários de obra, medições, faturas, notas de empenho, liquidações e pagamentos. A prefeitura também deverá explicar o destino de um saldo de R$ 80.429 e divergências entre edital, contrato e relatórios financeiros. A medida preserva recursos enquanto o caso é apurado e não representa condenação da empresa ou dos gestores."
+      ],
+      "public_body": "Prefeitura de Caiapônia e TCM-GO",
+      "values": [
+        {
+          "original": "R$ 396.000,00",
+          "value": 396000,
+          "currency": "BRL",
+          "label": "valor do contrato"
+        },
+        {
+          "original": "R$ 80.429,00",
+          "value": 80429,
+          "currency": "BRL",
+          "label": "saldo que deverá ser esclarecido"
+        }
+      ],
+      "value_highest": 396000,
+      "cnpjs": [],
+      "reference_numbers": [
+        "05982/2026",
+        "06349/2026",
+        "54/2025",
+        "1/2025"
+      ],
+      "importance": 112,
+      "news_value": {
+        "score": 112,
+        "reasons": [
+          "pagamentos suspensos",
+          "obra pública",
+          "R$ 396 mil",
+          "documentação financeira"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2755",
+      "edition_number": "2755",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2755-2026-09-04.pdf",
+      "document_sha256": "184c327d04cf8f605ad44943a9396a23992da5245431a2971e775e45476b58f4",
+      "id": "tcmgo-2755-cacu-suspende-leilao-dois-veiculos",
+      "city": "Caçu",
+      "page_start": 26,
+      "page_end": 29,
+      "document_reference": "Diário de Contas nº 2.755 · páginas 26 a 29",
+      "external_identifier": "Processo nº 06586/2026 · Acórdão nº 06276/2026",
+      "official_title": "Cautelar sobre despesas de manutenção e o Leilão nº 001/2026",
+      "act_type": "medida_cautelar",
+      "type_label": "Patrimônio e controle",
+      "title": "TCM suspende venda de dois veículos de Caçu e pede provas de gastos com manutenção",
+      "deck": "Lotes 10 e 13 não poderão ser adjudicados nem homologados; os demais bens do leilão continuam liberados.",
+      "summary": "Prefeitura deverá apresentar laudos dos veículos e comprovar peças e serviços pagos por três empenhos à JC Peças e Serviços.",
+      "paragraphs": [
+        "O TCM-GO determinou que a Prefeitura de Caçu suspenda a adjudicação e a homologação dos lotes 10 e 13 do Leilão nº 001/2026. Os dois veículos, identificados pelas placas NVW5O35 e NVW5A55, deverão permanecer sob guarda municipal até nova decisão. Os demais lotes não foram interrompidos.",
+        "A cautelar foi concedida em uma representação de vereadores que questiona gastos de manutenção e a alienação dos veículos. O prefeito e o leiloeiro terão de apresentar os laudos de avaliação, explicar as peças e os serviços realizados em 2026 e comprovar as despesas vinculadas aos empenhos 163074, 163101 e 166131, em favor da JC Peças e Serviços Ltda. O mérito ainda será instruído e não há sanção definitiva."
+      ],
+      "public_body": "Prefeitura de Caçu e TCM-GO",
+      "values": [],
+      "value_highest": null,
+      "cnpjs": [],
+      "reference_numbers": [
+        "06586/2026",
+        "06276/2026",
+        "001/2026",
+        "163074/2026",
+        "163101/2026",
+        "166131/2026"
+      ],
+      "importance": 110,
+      "news_value": {
+        "score": 110,
+        "reasons": [
+          "leilão parcialmente suspenso",
+          "gastos com veículos",
+          "controle patrimonial",
+          "medida cautelar"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2755",
+      "edition_number": "2755",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2755-2026-09-04.pdf",
+      "document_sha256": "184c327d04cf8f605ad44943a9396a23992da5245431a2971e775e45476b58f4",
+      "id": "tcmgo-2755-mineiros-gratificacao-vereadores-45-por-cento",
+      "city": "Mineiros",
+      "page_start": 67,
+      "page_end": 69,
+      "document_reference": "Diário de Contas nº 2.755 · páginas 67 a 69",
+      "external_identifier": "Processo nº 04916/2026 · Acórdão nº 06272/2026",
+      "official_title": "Agravo sobre gratificação de representação prevista na Lei nº 2.267/2026",
+      "act_type": "julgamento_de_agravo",
+      "type_label": "Câmara e remuneração",
+      "title": "TCM libera gratificação de 45% para Mesa da Câmara de Mineiros, mas mantém bloqueio a presidentes de comissões",
+      "deck": "Recurso restringiu a cautelar anterior; análise definitiva da legalidade dos pagamentos continua na fase principal.",
+      "summary": "Presidente e demais integrantes da Mesa poderão receber a verba de representação; presidentes de comissões permanentes seguem impedidos.",
+      "paragraphs": [
+        "O TCM-GO deu provimento parcial a um recurso da Câmara de Mineiros e liberou a execução da gratificação de representação de 45% para o presidente e os demais membros da Mesa Diretora. A cautelar anterior havia suspendido todos os dispositivos da Lei Municipal nº 2.267/2026 e qualquer inclusão da verba na folha dos vereadores.",
+        "Com a nova decisão, o bloqueio fica restrito ao pagamento da gratificação aos presidentes das comissões permanentes. O processo principal seguirá para a área técnica e para o Ministério Público de Contas, o que significa que a Corte ainda não encerrou a análise de mérito sobre a legalidade da vantagem."
+      ],
+      "public_body": "Câmara Municipal de Mineiros e TCM-GO",
+      "values": [],
+      "value_highest": null,
+      "cnpjs": [],
+      "reference_numbers": [
+        "04916/2026",
+        "06272/2026",
+        "05217/2026",
+        "2.267/2026"
+      ],
+      "importance": 111,
+      "news_value": {
+        "score": 111,
+        "reasons": [
+          "remuneração de vereadores",
+          "gratificação de 45%",
+          "revisão de cautelar",
+          "impacto na folha"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2755",
+      "edition_number": "2755",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2755-2026-09-04.pdf",
+      "document_sha256": "184c327d04cf8f605ad44943a9396a23992da5245431a2971e775e45476b58f4",
+      "id": "tcmgo-2755-neropolis-mantem-suspensao-contrato-advocacia",
+      "city": "Nerópolis",
+      "page_start": 74,
+      "page_end": 76,
+      "document_reference": "Diário de Contas nº 2.755 · páginas 74 a 76",
+      "external_identifier": "Processo nº 03550/2026 · Acórdão nº 06263/2026",
+      "official_title": "Agravo contra cautelar no Contrato nº 010/2026",
+      "act_type": "julgamento_de_agravo",
+      "type_label": "Contratação jurídica",
+      "title": "TCM mantém suspensos contrato de advocacia e pagamentos em Nerópolis",
+      "deck": "Recurso do prefeito e do procurador-geral foi negado; Corte apontou falta de comprovação documental da especialização e possível conflito de interesses.",
+      "summary": "Suspensão alcança execução, empenho, liquidação e pagamento do Contrato nº 010/2026; mérito da denúncia ainda será analisado.",
+      "paragraphs": [
+        "O TCM-GO negou o recurso apresentado pelo prefeito e pelo procurador-geral de Nerópolis e restabeleceu integralmente a cautelar que suspende a execução ordinária do Contrato nº 010/2026, firmado por inexigibilidade para serviços advocatícios. A ordem também bloqueia empenhos, liquidações e pagamentos vinculados ao ajuste.",
+        "Segundo a ementa, informações novas reduziram parte das dúvidas sobre a motivação e a pesquisa de preços, mas permaneceram a falta de comprovação documental da notória especialização e um potencial conflito de interesses. A decisão mantém a proteção cautelar enquanto a denúncia volta à área técnica; não é um julgamento definitivo de responsabilidade."
+      ],
+      "public_body": "Prefeitura de Nerópolis e TCM-GO",
+      "values": [],
+      "value_highest": null,
+      "cnpjs": [],
+      "reference_numbers": [
+        "03550/2026",
+        "06263/2026",
+        "04190/2026",
+        "010/2026",
+        "019/2026"
+      ],
+      "importance": 111,
+      "news_value": {
+        "score": 111,
+        "reasons": [
+          "contrato e pagamentos suspensos",
+          "serviços advocatícios",
+          "inexigibilidade",
+          "recurso negado"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2755",
+      "edition_number": "2755",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2755-2026-09-04.pdf",
+      "document_sha256": "184c327d04cf8f605ad44943a9396a23992da5245431a2971e775e45476b58f4",
+      "id": "tcmgo-2755-porangatu-suspende-licitacao-residuos",
+      "city": "Porangatu",
+      "page_start": 104,
+      "page_end": 106,
+      "document_reference": "Diário de Contas nº 2.755 · páginas 104 a 106",
+      "external_identifier": "Processo nº 06151/2026 · Acórdão nº 06264/2026",
+      "official_title": "Cautelar no Pregão Eletrônico nº 36/2026",
+      "act_type": "medida_cautelar",
+      "type_label": "Resíduos sólidos",
+      "title": "TCM suspende licitação de Porangatu para transbordo e destinação de lixo",
+      "deck": "Edital deverá explicar preço de R$ 646,21 por tonelada, intervalo mínimo dos lances e exigência de estação em raio de dez quilômetros.",
+      "summary": "Município tem 48 horas para comprovar a suspensão; ainda não há conclusão definitiva sobre as falhas apontadas.",
+      "paragraphs": [
+        "O TCM-GO suspendeu imediatamente o Pregão Eletrônico nº 36/2026 de Porangatu, destinado ao recebimento, transbordo, transporte e destinação final de resíduos sólidos urbanos. A prefeitura não poderá avançar para adjudicação, homologação ou contratação até nova deliberação da Corte e terá 48 horas para comprovar o cumprimento.",
+        "O Tribunal pediu a memória de cálculo do preço estimado de R$ 646,2083 por tonelada e justificativas para o intervalo mínimo de R$ 100 entre os lances, para a exigência de estação de transbordo em raio máximo de dez quilômetros e para uma divergência entre as sanções do edital e da minuta contratual. A cautelar paralisa o certame para instrução e não equivale a condenação dos responsáveis."
+      ],
+      "public_body": "Prefeitura de Porangatu e TCM-GO",
+      "values": [
+        {
+          "original": "R$ 646,2083 por tonelada",
+          "value": 646.2083,
+          "currency": "BRL",
+          "label": "preço unitário estimado"
+        }
+      ],
+      "value_highest": 646.2083,
+      "cnpjs": [],
+      "reference_numbers": [
+        "06151/2026",
+        "06264/2026",
+        "36/2026"
+      ],
+      "importance": 112,
+      "news_value": {
+        "score": 112,
+        "reasons": [
+          "licitação suspensa",
+          "coleta e destinação de lixo",
+          "formação de preço",
+          "serviço essencial"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-02",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2755",
+      "edition_number": "2755",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2755-2026-09-04.pdf",
+      "document_sha256": "184c327d04cf8f605ad44943a9396a23992da5245431a2971e775e45476b58f4",
+      "id": "tcmgo-2755-divinopolis-suspende-enfermeiro-plantonista",
+      "city": "Divinópolis de Goiás",
+      "page_start": 36,
+      "page_end": 38,
+      "document_reference": "Diário de Contas nº 2.755 · páginas 36 a 38",
+      "external_identifier": "Processo nº 06279/2026 · Acórdão nº 06322/2026",
+      "official_title": "Cautelar em credenciamento de enfermeiro plantonista",
+      "act_type": "medida_cautelar",
+      "type_label": "Saúde e contratos",
+      "title": "TCM suspende contrato e pagamentos de enfermeiro plantonista em Divinópolis",
+      "deck": "Fundo Municipal de Saúde deverá comprovar formação e registro profissional do contratado antes de retomar o ajuste.",
+      "summary": "Decisão cautelar interrompe o Contrato nº 15/2026; suspeita sobre habilitação ainda depende de defesa e julgamento.",
+      "paragraphs": [
+        "O TCM-GO determinou que o Fundo Municipal de Saúde de Divinópolis de Goiás suspenda a execução do Contrato nº 15/2026 e qualquer pagamento ao enfermeiro plantonista Arthur Pimentel Samia. A cautelar foi concedida após denúncia sobre os credenciamentos nº 1/2025 e nº 2/2026.",
+        "O gestor Humberto Brito Paranaguá e o contratado deverão demonstrar a regularidade da contratação, a formação profissional e a inscrição no Conselho Regional de Enfermagem. O Tribunal apontou risco de pagamento indevido caso a habilitação não seja comprovada, mas a decisão é provisória e não conclui que houve exercício irregular ou dano ao erário."
+      ],
+      "public_body": "Fundo Municipal de Saúde de Divinópolis de Goiás e TCM-GO",
+      "values": [],
+      "value_highest": null,
+      "cnpjs": [],
+      "reference_numbers": [
+        "06279/2026",
+        "06322/2026",
+        "15/2026",
+        "153/2025",
+        "1/2025-SMS",
+        "2/2026"
+      ],
+      "importance": 109,
+      "news_value": {
+        "score": 109,
+        "reasons": [
+          "saúde pública",
+          "contrato e pagamentos suspensos",
+          "habilitação profissional",
+          "medida cautelar"
         ]
       }
     }
