@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-04T11:03:51.945Z",
+  "generated_at": "2026-09-04T20:37:44.038Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-04"
@@ -10,7 +10,7 @@
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 126
+    "published_stories": 130
   },
   "items": [
     {
@@ -7628,6 +7628,339 @@
           "contrato e pagamentos suspensos",
           "habilitação profissional",
           "medida cautelar"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-03",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "TCE-GO",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291642052661",
+      "source_landing_url": "https://portal.tce.go.gov.br/diario-eletronico-de-contas1",
+      "edition_id": "tcego:331291642052661",
+      "edition_number": "160",
+      "local_path": "data/raw/tcego/2026/09/tcego-dec-160-2026-09-04.pdf",
+      "document_sha256": "d21c986982357897560b1c33793c2660acd4efec0be2502651f01193342c08a4",
+      "id": "tcego-160-go184-falhas-asfalto-novos-testes",
+      "city": "Aporé",
+      "page_start": 11,
+      "page_end": 13,
+      "document_reference": "Diário Eletrônico de Contas do TCE-GO nº 160 · páginas 11 a 13",
+      "external_identifier": "Processo nº 202500047002939/301 · Acórdão nº 2487/2026",
+      "official_title": "Inspeção na execução do Contrato nº 38/2025/Goinfra, na GO-184",
+      "act_type": "julgamento_de_inspecao",
+      "type_label": "Rodovias e controle",
+      "title": "TCE aponta falhas na GO-184 e manda refazer testes em 91,8 km de obra",
+      "deck": "Inspeção identificou problemas em medições, projeto e qualidade do asfalto; nova campanha de ensaios deverá terminar em até 120 dias.",
+      "summary": "Corte reconheceu irregularidades objetivas, mas afastou multas e não considerou R$ 2,7 milhões como dano comprovado no estágio atual.",
+      "paragraphs": [
+        "O Tribunal de Contas do Estado considerou parcialmente procedente uma inspeção na execução do Contrato nº 38/2025 da Goinfra com o Consórcio CCL/JM. A obra alcança cerca de 91,8 quilômetros da GO-184, entre Itumirim, Aporé e o trevo para Cassilândia. O acórdão registra serviços medidos antes da formalização de alterações contratuais, mudanças nas fontes e nas distâncias de transporte de agregados, baixa rastreabilidade dos tapa-buracos, sobreposição de imprimação e pintura de ligação, falhas no projeto executivo e desconformidades amostrais na espessura, no teor de ligante e na compactação do asfalto.",
+        "A Goinfra terá 30 dias para apresentar um plano de avaliação independente e até 120 dias para concluir novos ensaios; se as falhas forem confirmadas, deverá recalcular medições e promover glosas, reparos ou compensações. O TCE registrou glosas administrativas anteriores de R$ 59.860,58 e R$ 832.634,08, mas afastou, por falta de prova individualizada, a classificação de R$ 2.706.554,84 como dano ao erário, além de multas e débito global. A decisão preserva a responsabilidade contratual por defeitos eventualmente comprovados e autoriza nova apuração se os testes demonstrarem prejuízo."
+      ],
+      "public_body": "Goinfra e TCE-GO",
+      "values": [
+        {
+          "original": "R$ 59.860,58",
+          "value": 59860.58,
+          "currency": "BRL",
+          "label": "glosa por sobreposição de serviços"
+        },
+        {
+          "original": "R$ 832.634,08",
+          "value": 832634.08,
+          "currency": "BRL",
+          "label": "glosa por diferenças nas distâncias de transporte"
+        },
+        {
+          "original": "R$ 2.706.554,84",
+          "value": 2706554.84,
+          "currency": "BRL",
+          "label": "valor não reconhecido como dano comprovado no estágio atual"
+        }
+      ],
+      "value_highest": 2706554.84,
+      "cnpjs": [],
+      "reference_numbers": [
+        "202500047002939/301",
+        "2487/2026",
+        "38/2025"
+      ],
+      "importance": 125,
+      "news_value": {
+        "score": 125,
+        "reasons": [
+          "91,8 km de rodovia",
+          "qualidade do asfalto",
+          "novos ensaios independentes",
+          "valores controvertidos"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-03",
+      "scope": "Estadual",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "TCE-GO",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291642052661",
+      "source_landing_url": "https://portal.tce.go.gov.br/diario-eletronico-de-contas1",
+      "edition_id": "tcego:331291642052661",
+      "edition_number": "160",
+      "local_path": "data/raw/tcego/2026/09/tcego-dec-160-2026-09-04.pdf",
+      "document_sha256": "d21c986982357897560b1c33793c2660acd4efec0be2502651f01193342c08a4",
+      "id": "tcego-160-seduc-anula-contratacao-iup6d",
+      "city": "Goiás",
+      "page_start": 10,
+      "page_end": 10,
+      "document_reference": "Diário Eletrônico de Contas do TCE-GO nº 160 · página 10",
+      "external_identifier": "Processo sigiloso nº 202500047004009/311 · Acórdão nº 2486/2026",
+      "official_title": "Denúncia sobre a Inexigibilidade de Licitação nº 11/2025 da Seduc",
+      "act_type": "julgamento_de_denuncia",
+      "type_label": "Educação e controle",
+      "title": "TCE manda Educação anular contratação direta de plataforma para ensino especial",
+      "deck": "Corte concluiu que não foi comprovada a inviabilidade de competição para a solução iUP 6D e manteve a cautelar contra o negócio.",
+      "summary": "Seduc tem 15 dias para comprovar a anulação e poderá abrir novo procedimento com estudo técnico, termo de referência e orçamento.",
+      "paragraphs": [
+        "O TCE-GO julgou procedente uma denúncia e determinou que a Secretaria de Estado da Educação não realize a contratação direta da Plataforma Multidisciplinar iUP 6D, planejada para modernizar salas de atendimento educacional especializado da rede estadual. Segundo o Acórdão nº 2486/2026, a Inexigibilidade de Licitação nº 11/2025 não comprovou a inviabilidade de competição exigida para dispensar uma disputa entre fornecedores.",
+        "A Seduc deverá anular a inexigibilidade e eventuais atos posteriores e comprovar a medida ao Tribunal em 15 dias. O acórdão também aponta divergência aritmética no subtotal dos equipamentos e uma redução posterior relevante no valor global da proposta sem justificativa técnica suficiente. A pasta poderá iniciar outra contratação se mantiver o interesse, desde que produza novo estudo técnico preliminar, termo de referência e orçamento estimado. A decisão publicada não informa o valor do negócio nem aplica sanção pessoal."
+      ],
+      "public_body": "Secretaria de Estado da Educação e TCE-GO",
+      "values": [],
+      "value_highest": null,
+      "cnpjs": [],
+      "reference_numbers": [
+        "202500047004009/311",
+        "2486/2026",
+        "11/2025",
+        "113007"
+      ],
+      "importance": 123,
+      "news_value": {
+        "score": 123,
+        "reasons": [
+          "contratação direta anulada",
+          "educação especial",
+          "denúncia procedente",
+          "inconsistências na proposta"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-03",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7350/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7350",
+      "edition_number": "24.858",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-04-edicao-7350.pdf",
+      "document_sha256": "f88b612229b56c41251ab43a2f5d88353c57066528bf6eabb524fc88676f9bbb",
+      "source_label": "Agehab",
+      "id": "doego-24858-agehab-41-milhoes-191-casas",
+      "city": "Goiás",
+      "page_start": 57,
+      "page_end": 58,
+      "document_reference": "Diário Oficial do Estado de Goiás nº 24.858 · páginas 57 e 58",
+      "external_identifier": "Contratos Agehab nº 034, 035, 037, 038 e 039/2026",
+      "official_title": "Extratos de cinco contratos para construção de unidades habitacionais de interesse social",
+      "act_type": "contratos_de_habitacao",
+      "type_label": "Habitação e dinheiro público",
+      "title": "Agehab assina R$ 41 milhões para construir 191 casas em cinco cidades",
+      "deck": "Contratos abrangem Cachoeira Alta, Pires do Rio, Caçu, Aporé e Corumbaíba e têm prazo de 24 meses.",
+      "summary": "Obras incluem passeio, meio-fio e vigilância estendida; os valores contratados não demonstram, por si, quanto já foi executado ou pago.",
+      "paragraphs": [
+        "A Agência Goiana de Habitação assinou cinco contratos que somam R$ 41.052.535,41 para construir 191 moradias de interesse social. São 22 casas em Cachoeira Alta, por R$ 4,76 milhões; 39 em Pires do Rio, por R$ 8,62 milhões; 32 em Caçu, por R$ 6,62 milhões; 48 em Aporé, por R$ 9,40 milhões; e 50 em Corumbaíba, por R$ 11,67 milhões. A Construteto Empreendimentos aparece em três contratos; J Cezar Engenharia e Foco Engenharia ficaram com um contrato cada.",
+        "Os cinco instrumentos foram assinados em 3 de setembro, preveem recursos do Tesouro Estadual e prazo de 24 meses. Além das casas, os objetos incluem passeio público, meio-fio e vigilância estendida. Os extratos registram o valor contratado e a vigência, mas não comprovam desembolso, avanço físico ou entrega das unidades; a execução deverá ser acompanhada por medições, empenhos, liquidações e pagamentos."
+      ],
+      "public_body": "Agência Goiana de Habitação — Agehab",
+      "values": [
+        {
+          "original": "R$ 4.758.318,39",
+          "value": 4758318.39,
+          "currency": "BRL",
+          "label": "22 moradias em Cachoeira Alta"
+        },
+        {
+          "original": "R$ 8.615.024,90",
+          "value": 8615024.9,
+          "currency": "BRL",
+          "label": "39 moradias em Pires do Rio"
+        },
+        {
+          "original": "R$ 6.615.181,81",
+          "value": 6615181.81,
+          "currency": "BRL",
+          "label": "32 moradias em Caçu"
+        },
+        {
+          "original": "R$ 9.396.420,06",
+          "value": 9396420.06,
+          "currency": "BRL",
+          "label": "48 moradias em Aporé"
+        },
+        {
+          "original": "R$ 11.667.590,25",
+          "value": 11667590.25,
+          "currency": "BRL",
+          "label": "50 moradias em Corumbaíba"
+        },
+        {
+          "original": "R$ 41.052.535,41",
+          "value": 41052535.41,
+          "currency": "BRL",
+          "label": "soma dos cinco contratos"
+        }
+      ],
+      "value_highest": 41052535.41,
+      "cnpjs": [
+        "10.983.854/0001-99",
+        "31.461.574/0007-86",
+        "11.454.168/0001-93"
+      ],
+      "reference_numbers": [
+        "034/2026",
+        "035/2026",
+        "037/2026",
+        "038/2026",
+        "039/2026",
+        "001/2025"
+      ],
+      "importance": 121,
+      "news_value": {
+        "score": 121,
+        "reasons": [
+          "R$ 41 milhões",
+          "191 moradias",
+          "cinco municípios",
+          "contratos assinados"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-04",
+      "act_date": "2026-09-03",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7350/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7350",
+      "edition_number": "24.858",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-04-edicao-7350.pdf",
+      "document_sha256": "f88b612229b56c41251ab43a2f5d88353c57066528bf6eabb524fc88676f9bbb",
+      "source_label": "Saneago",
+      "id": "doego-24858-saneago-32-milhoes-contratos-agosto",
+      "city": "Goiás",
+      "page_start": 59,
+      "page_end": 60,
+      "document_reference": "Diário Oficial do Estado de Goiás nº 24.858 · páginas 59 e 60",
+      "external_identifier": "Extrato de contratos da Saneago — período de 1º a 31 de agosto de 2026",
+      "official_title": "Extrato mensal de contratos da Saneago",
+      "act_type": "extrato_mensal_de_contratos",
+      "type_label": "Saneamento e dinheiro público",
+      "title": "Saneago publica R$ 32,6 milhões em contratos e aditivos de agosto",
+      "deck": "Maiores valores envolvem macromedidores, plataforma de protestos, manutenção de bombas, obra remanescente e rede de dados.",
+      "summary": "Extrato reúne 20 instrumentos com valor declarado e dois aditivos sem cifra; montantes contratuais não equivalem a pagamentos realizados.",
+      "paragraphs": [
+        "A Saneago publicou uma relação de contratos e aditivos de agosto com 20 instrumentos que informam valores globais somados em R$ 32.614.619,02. Os cinco maiores são R$ 8,82 milhões para macromedidores com a Conaut Controles Automáticos; R$ 6,77 milhões para a plataforma de remessa de títulos a protesto do IEPTB-GO; R$ 4,15 milhões para manutenção de bombas submersíveis com a AJEL Service; R$ 3,26 milhões para obras remanescentes de uma unidade de tratamento de resíduos em Santo Antônio do Descoberto com a TAF; e R$ 2,69 milhões para serviço emergencial de comunicação de dados com a BRFibra.",
+        "A lista também inclui compras, reformas, locações, materiais e um termo de rescisão, além de dois aditivos sem valor informado. O registro da Saneago apresenta valores contratuais, atas e acréscimos — não a soma efetivamente paga no mês. A conferência financeira depende do cruzamento posterior com empenhos, liquidações, ordens de pagamento e medições de cada processo."
+      ],
+      "public_body": "Saneamento de Goiás S.A. — Saneago",
+      "values": [
+        {
+          "original": "R$ 32.614.619,02",
+          "value": 32614619.02,
+          "currency": "BRL",
+          "label": "soma dos 20 instrumentos com valor declarado"
+        },
+        {
+          "original": "R$ 8.821.217,85",
+          "value": 8821217.85,
+          "currency": "BRL",
+          "label": "macromedidores"
+        },
+        {
+          "original": "R$ 6.770.988,00",
+          "value": 6770988,
+          "currency": "BRL",
+          "label": "plataforma de protestos"
+        },
+        {
+          "original": "R$ 4.152.787,14",
+          "value": 4152787.14,
+          "currency": "BRL",
+          "label": "manutenção de bombas submersíveis"
+        },
+        {
+          "original": "R$ 3.258.000,00",
+          "value": 3258000,
+          "currency": "BRL",
+          "label": "obra remanescente em Santo Antônio do Descoberto"
+        },
+        {
+          "original": "R$ 2.694.844,02",
+          "value": 2694844.02,
+          "currency": "BRL",
+          "label": "serviço emergencial de comunicação de dados"
+        }
+      ],
+      "value_highest": 32614619.02,
+      "cnpjs": [
+        "57.277.537/0001-10",
+        "05.864.824/0001-23",
+        "02.910.623/0001-27",
+        "22.692.282/0001-78",
+        "73.972.002/0001-16"
+      ],
+      "reference_numbers": [
+        "30000212/2026",
+        "30000208/2026",
+        "30000201/2026",
+        "30000196/2026",
+        "30000203/2026"
+      ],
+      "importance": 116,
+      "news_value": {
+        "score": 116,
+        "reasons": [
+          "R$ 32,6 milhões",
+          "contratos estaduais",
+          "saneamento",
+          "emergencial e inexigibilidade"
         ]
       }
     }

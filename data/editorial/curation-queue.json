@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-09-04T10:59:58.700739+00:00",
+  "generatedAt": "2026-09-04T20:38:00.818356+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 9,
@@ -19,8 +19,8 @@
   },
   "summary": {
     "candidates": 240,
-    "pending": 201,
-    "withBrief": 39,
+    "pending": 202,
+    "withBrief": 38,
     "existingBriefs": 65,
     "invalidBriefs": 0
   },
@@ -140,6 +140,91 @@
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
         "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-aparecida-3041-1d2321b378f5-6",
+      "status": "pending",
+      "date": "2026-09-04",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "actType": "aditivo",
+      "typeLabel": "Termo aditivo",
+      "priority": 91,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "controle, correção ou responsabilização"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "TERMO DE RE-RATIFICAÇÃO AO TERMO ADITIVO Nº 373/2026-PGM b)LEIA-SE: \"4º Termo Aditivo ao Contrato nº 1.013/2023\"",
+        "extractedTitle": "Aparecida de Goiânia publica TERMO DE RE-RATIFICAÇÃO AO TERMO ADITIVO Nº 373/2026-PGM b)LEIA-SE: \"4º Termo Aditivo ao Contrato nº 1.013/2023\"",
+        "extractedDeck": "tem por objeto a re-ratificação formal do Termo Aditivo nº 373/2026-PGM (fls. 125-128 e fls. 139-142), vinculado ao Contrato nº 1.013/2023 Aparecida de Goiânia (GO), ..... de de 2026.(fls. 5-24), exclusivamente para proceder à correção de erro material verificado em sua titulação/numeração…",
+        "extractedParagraphs": [
+          "MUNICÍPIO DE APARECIDA DE GOIÂNIA, pessoa ju e setenta e cinco mil reais) para R$ 2.500.000,00 (dois milhões e quinhentos mil publicou termo aditivo na edição 2929 de Diário Oficial de Aparecida de Goiânia, datada de 4 de setembro de 2026. tem por objeto a re-ratificação formal do Termo Aditivo nº 373/2026-PGM (fls. 125-128 e fls. 139-142), vinculado ao Contrato nº 1.013/2023 Aparecida de Goiânia (GO), ..... de de 2026.(fls. 5-24), exclusivamente para proceder à correção de erro material verificado em sua titulação/numeração….",
+          "O maior valor monetário identificado no texto é R$ 2.500.000,00; o ato cita os CNPJs 03.817.702/0001-50, 22.100.219/0001-03; as referências documentais incluem 1.013/2023, 1013/2023. A conferência deve ser feita no documento original, em página 4."
+        ],
+        "evidenceExcerpt": "TERMO DE RE-RATIFICAÇÃO AO TERMO ADITIVO Nº 373/2026-PGM b)LEIA-SE: \"4º Termo Aditivo ao Contrato nº 1.013/2023\". DO CONTRATO Nº 1.013/2023, CELEBRADO ENTRE O MUNICÍ PIO DE APARECIDA DE GOIÂNIA, POR INTERMÉDIO DO FUNDO Fica corrigida a identificação do referido instrumento aditivo em todas as suas ESPECIAL MUNICIPAL DO CORPO DE BOMBEIROS MILITAR, FEM cláusulas, preâmbulos, ementas, publicações e registros administrativos, registran BOM, E A EMPRESA VÓLUS INSTITUIÇÃO DE PAGAMENTO LTDA. do-se que seu objeto é a…",
+        "publicBody": "MUNICÍPIO DE APARECIDA DE GOIÂNIA, pessoa ju e setenta e cinco mil reais) para R$ 2.500.000,00 (dois milhões e quinhentos mil",
+        "values": [
+          {
+            "original": "R$ 625.000,00",
+            "value": 625000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 1.875.000,00",
+            "value": 1875000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 2.500.000,00",
+            "value": 2500000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 500.000,00",
+            "value": 500000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 125.000,00",
+            "value": 125000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 1.250.000,00",
+            "value": 1250000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "03.817.702/0001-50",
+          "22.100.219/0001-03"
+        ],
+        "referenceNumbers": [
+          "1.013/2023",
+          "1013/2023"
+        ],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Aparecida de Goiânia",
+        "label": "MUNICÍPIO DE APARECIDA DE GOIÂNIA, pessoa ju e setenta e cinco mil reais) para R$ 2.500.000,00 (dois milhões e quinhentos mil",
+        "url": "https://webio.aparecida.go.gov.br/diariooficial/download/2929",
+        "editionId": "aparecida:3041",
+        "editionNumber": "2929",
+        "pageStart": 4,
+        "pageEnd": 4,
+        "documentReference": "Edição 2929 · página 4",
+        "documentSha256": "8a01822f9d5cd0ca5f1f894d454a275ec38de761f1926ecdbbe2fa57f03a89f4",
+        "actSha256": "1d2321b378f52404b67096dac4df7596d0ec4c07e52be323ad23144ea922472c"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
       }
     },
     {
@@ -15698,63 +15783,6 @@
         "documentReference": "Edição 3675 · página 34",
         "documentSha256": "10f949d8069c20ce356d8f5c75300b7c3bde8b7b866960c4d12634a3d7907025",
         "actSha256": "fe5ae111a4427504175941373684765c35daedc5180d06cc2c7952827f58594c"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-senador-canedo-658-26db68087fe6-7",
-      "status": "brief_exists",
-      "date": "2026-08-05",
-      "city": "Senador Canedo",
-      "scope": "Municipal",
-      "actType": "decreto",
-      "typeLabel": "Decreto",
-      "priority": 95,
-      "importance": 95,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "DECRETO SUPLEMENTAR Nº 113",
-        "extractedTitle": "Senador Canedo publica DECRETO SUPLEMENTAR Nº 113",
-        "extractedDeck": "Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 1.822.908,25 distribuídos nas seguintes dotações: Suplementação ( + ) 1.822.908,25 01 03 10 SEC.MUN.INFRAESTRUTURA, SERVICOS E MOBILIDADE URBANA-SEINFRA 184 15.122.4100.4126.0000 APOIO ADMINISTRATIVO 787.889,61…",
-        "extractedParagraphs": [
-          "SECRETARIA MUNICIPAL DE EDUCAÇÃO publicou decreto na edição 462 de Diário Oficial de Senador Canedo, datada de 5 de agosto de 2026. Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 1.822.908,25 distribuídos nas seguintes dotações: Suplementação ( + ) 1.822.908,25 01 03 10 SEC.MUN.INFRAESTRUTURA, SERVICOS E MOBILIDADE URBANA-SEINFRA 184 15.122.4100.4126.0000 APOIO ADMINISTRATIVO 787.889,61….",
-          "O maior valor monetário identificado no texto é R$ 1.822.908,25; as referências documentais incluem 113, 3015. A conferência deve ser feita no documento original, em páginas 31 a 38."
-        ],
-        "evidenceExcerpt": "DECRETO SUPLEMENTAR Nº 113 DECRETO Nº 113 DE 14 DE JULHO DE 2026 - LEI N.3015 Abre no orçamento vigente crédito adicional suplementar e da outras providências. O PREFEITO DE SENADOR CANEDO, no uso das atribuições que lhe confere, DECRETA: Artigo 1º Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 1.822.908,25 distribuídos nas seguintes dotações: Suplementação ( + ) 1.822.908,25 01 03 10 SEC.MUN.INFRAESTRUTURA, SERVICOS E MOBILIDADE URBANA-SEINFRA 184 15.122.4100.4126.0000 APOIO…",
-        "publicBody": "SECRETARIA MUNICIPAL DE EDUCAÇÃO",
-        "values": [
-          {
-            "original": "R$ 1.822.908,25",
-            "value": 1822908.25,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "113",
-          "3015"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Oficial de Senador Canedo",
-        "label": "SECRETARIA MUNICIPAL DE EDUCAÇÃO",
-        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=05-08-2026",
-        "editionId": "senador-canedo:658",
-        "editionNumber": "462",
-        "pageStart": 31,
-        "pageEnd": 38,
-        "documentReference": "Edição 462 · páginas 31 a 38",
-        "documentSha256": "5ef57b37bfc07f1726efd40c0f060fe4ae5cc9fdbdb3504e747c4cbad0db4287",
-        "actSha256": "26db68087fe6b52f147d4e9e9e04a2725105d2511e01d86769969b60cba4153c"
       },
       "requestedOutput": {
         "kind": "editorial_brief",

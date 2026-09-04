@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-09-04T10:54:58.125Z",
+  "generated_at": "2026-09-04T20:31:36.832Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
     "to": "2026-09-04",
     "last_checked": {
-      "from": "2026-08-29",
+      "from": "2026-08-28",
       "to": "2026-09-04"
     }
   },
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 320,
-    "downloaded": 320,
+    "editions": 323,
+    "downloaded": 323,
     "failed_downloads": 0,
-    "extraction_pending": 320
+    "extraction_pending": 323
   },
   "daily_check_windows": [
     {
@@ -1610,25 +1610,44 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:121225",
+          "source_edition_id": "121225",
+          "edition_number": "3697a",
+          "date": "2026-09-04",
+          "published_at": "2026-09-04T16:49:57-03:00",
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": true,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_121225_2026-09-04_83b821f1e98839246fb83c580c05ce16.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-04-3697a.pdf",
+          "bytes": 330782,
+          "sha256": "48f9b379127c051ce7a4f9d2572d0e5fdcf20e13e2269e0e5c689e7e8adfd9f3",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-04T10:54:44.970Z",
+      "checked_at": "2026-09-04T20:31:30.590Z",
       "range_checked": {
-        "from": "2026-08-29",
+        "from": "2026-08-28",
         "to": "2026-09-04"
       },
       "summary": {
-        "editions_total": 81,
-        "editions_in_checked_range": 5,
-        "downloaded": 81,
+        "editions_total": 82,
+        "editions_in_checked_range": 7,
+        "downloaded": 82,
         "failed_downloads": 0,
-        "extraction_pending": 81,
+        "extraction_pending": 82,
         "first_date": "2026-06-01",
         "last_date": "2026-09-04",
         "observed_upload_times": {
           "all": {
-            "observations": 81,
+            "observations": 82,
             "earliest": "11:40",
             "median": "18:39",
             "latest": "20:04"
@@ -1640,7 +1659,7 @@
             "latest": "20:04"
           },
           "extraordinary": {
-            "observations": 17,
+            "observations": 18,
             "earliest": "11:40",
             "median": "16:37",
             "latest": "17:00"
@@ -2789,19 +2808,38 @@
           "error": null
         },
         {
-          "id": "anapolis:23827",
-          "source_edition_id": "23827",
+          "id": "anapolis:23893",
+          "source_edition_id": "23893",
           "edition_number": "4.018/2026",
           "date": "2026-09-03",
-          "published_at": "2026-09-03 22:18:00",
+          "published_at": "2026-09-03 22:56:03",
           "publication_timestamp_kind": "official_file_created_timestamp",
           "extraordinary": false,
-          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23827",
-          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25081/T7198fsE2PRwGUqjMprwZSJ0tU3tFPAVfCIiAAUt.pdf",
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23893",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25114/K4GqeJ4SDNdzojRYEJhsRpCtYeEpoO1MzJDBiRye.pdf",
           "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-03-4.018-2026.pdf",
           "bytes": 621633,
           "sha256": "3e5ae4812d05745b12275ab0f914d9ac930d81d43043d00aa21ac3be2da66855",
-          "last_modified": "Fri, 04 Sep 2026 01:18:08 GMT",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
+        },
+        {
+          "id": "anapolis:23926",
+          "source_edition_id": "23926",
+          "edition_number": "4.019/2026",
+          "date": "2026-09-04",
+          "published_at": "2026-09-04 11:14:00",
+          "publication_timestamp_kind": "official_file_created_timestamp",
+          "extraordinary": false,
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23926",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25147/wUOdJKcixkTdZUXgovCOtufIPWeseMOXEvPTCzOU.pdf",
+          "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-04-4.019-2026.pdf",
+          "bytes": 381626,
+          "sha256": "948e2a2437599aa8ef9ef65a682e9e80cb1978ea91e269e718998ccf3e0e79f4",
+          "last_modified": "Fri, 04 Sep 2026 14:14:02 GMT",
           "download_status": "download_success",
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
@@ -2809,30 +2847,30 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-04T10:54:46.304Z",
+      "checked_at": "2026-09-04T20:31:32.184Z",
       "range_checked": {
-        "from": "2026-08-29",
+        "from": "2026-08-28",
         "to": "2026-09-04"
       },
       "summary": {
-        "editions_total": 60,
-        "editions_in_checked_range": 4,
-        "downloaded": 60,
+        "editions_total": 61,
+        "editions_in_checked_range": 6,
+        "downloaded": 61,
         "failed_downloads": 0,
-        "extraction_pending": 60,
+        "extraction_pending": 61,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-03",
+        "last_date": "2026-09-04",
         "observed_upload_times": {
           "all": {
-            "observations": 60,
+            "observations": 61,
             "earliest": "01:41",
-            "median": "21:36",
+            "median": "21:35",
             "latest": "23:57"
           },
           "ordinary": {
-            "observations": 60,
+            "observations": 61,
             "earliest": "01:41",
-            "median": "21:36",
+            "median": "21:35",
             "latest": "23:57"
           },
           "extraordinary": null
@@ -2840,7 +2878,7 @@
         "observed_file_last_modified": {
           "observations": 23,
           "earliest": "01:41",
-          "median": "21:46",
+          "median": "21:31",
           "latest": "23:31"
         }
       }
@@ -4022,22 +4060,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3041",
+          "source_edition_id": "3041",
+          "edition_number": "2929",
+          "date": "2026-09-04",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2929",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/09/2026-09-04-2929.pdf",
+          "bytes": 942823,
+          "sha256": "8a01822f9d5cd0ca5f1f894d454a275ec38de761f1926ecdbbe2fa57f03a89f4",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-04T10:54:46.908Z",
+      "checked_at": "2026-09-04T20:31:32.856Z",
       "range_checked": {
-        "from": "2026-08-29",
+        "from": "2026-08-28",
         "to": "2026-09-04"
       },
       "summary": {
-        "editions_total": 61,
-        "editions_in_checked_range": 4,
-        "downloaded": 61,
+        "editions_total": 62,
+        "editions_in_checked_range": 6,
+        "downloaded": 62,
         "failed_downloads": 0,
-        "extraction_pending": 61,
+        "extraction_pending": 62,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-03",
+        "last_date": "2026-09-04",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -5133,14 +5190,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-04T10:54:48.053Z",
+      "checked_at": "2026-09-04T20:31:34.165Z",
       "range_checked": {
-        "from": "2026-08-29",
+        "from": "2026-08-28",
         "to": "2026-09-04"
       },
       "summary": {
         "editions_total": 56,
-        "editions_in_checked_range": 4,
+        "editions_in_checked_range": 5,
         "downloaded": 56,
         "failed_downloads": 0,
         "extraction_pending": 56,
@@ -6358,14 +6415,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-04T10:54:50.508Z",
+      "checked_at": "2026-09-04T20:31:35.487Z",
       "range_checked": {
-        "from": "2026-08-29",
+        "from": "2026-08-28",
         "to": "2026-09-04"
       },
       "summary": {
         "editions_total": 62,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 6,
         "downloaded": 62,
         "failed_downloads": 0,
         "extraction_pending": 62,
