@@ -30,7 +30,9 @@ def render_page(pdf_path: Path, page_number: int, target: Path) -> dict:
     pdftoppm = dependencies / "native" / "poppler" / "Library" / "bin" / "pdftoppm.exe"
     if not pdftoppm.exists():
         raise FileNotFoundError(f"pdftoppm not found at {pdftoppm}")
-    with tempfile.TemporaryDirectory(prefix="pauteiro-preview-") as directory:
+    temporary_root = ROOT.parents[1] / "tmp"
+    temporary_root.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="pauteiro-preview-", dir=temporary_root) as directory:
         prefix = Path(directory) / "page"
         subprocess.run(
             [

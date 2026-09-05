@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-04T20:37:44.038Z",
+  "generated_at": "2026-09-05T16:53:01.047Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-04"
@@ -10,7 +10,7 @@
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 130
+    "published_stories": 134
   },
   "items": [
     {
@@ -7961,6 +7961,259 @@
           "contratos estaduais",
           "saneamento",
           "emergencial e inexigibilidade"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-05",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260904_000008857.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id": "goiania:do_20260904_000008857.pdf",
+      "edition_number": "8857",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-04-8857.pdf",
+      "document_sha256": "d6792e32867f26befd5868d8011f2be2267846abc9e985cad007d8bf14d26703",
+      "cnpjs": [],
+      "id": "goiania-8857-apae-83-milhoes-rede-cer",
+      "act_date": "2026-08-24",
+      "page_start": 79,
+      "page_end": 80,
+      "document_reference": "Diário Oficial de Goiânia nº 8.857 · páginas 79 e 80",
+      "external_identifier": "Processo 26.29.000018585-0 · Resolução Normativa 47/2026",
+      "official_title": "Aprovação de nova contratação da APAE de Goiânia",
+      "act_type": "autorizacao_de_despesa",
+      "type_label": "Saúde e orçamento",
+      "title": "Goiânia aprova R$ 83,1 milhões para novo contrato com a APAE",
+      "deck": "Resolução prevê R$ 1,38 milhão por mês para serviços na rede de reabilitação; publicação registra a autorização da despesa.",
+      "summary": "Credenciamento integra chamamento da Saúde; o documento não apresenta contrato assinado nem pagamentos.",
+      "paragraphs": [
+        "Goiânia aprovou as medidas para uma nova contratação da Associação de Pais e Amigos dos Excepcionais de Goiânia (APAE), com valor total de R$ 83.124.911,40 e previsão mensal de R$ 1.385.415,19. A autorização consta da Resolução Normativa nº 47, de 24 de agosto, publicada no Diário Oficial de 4 de setembro. O credenciamento é destinado à prestação de serviços habilitados na rede de Centros Especializados em Reabilitação (CER), por meio do chamamento público SMS nº 002/2025.",
+        "A contratação pode sustentar o atendimento especializado organizado pela Secretaria Municipal de Saúde, mas a resolução não detalha quantidade de vagas, procedimentos ou metas de atendimento. A aprovação é uma etapa fiscal e orçamentária: as páginas publicadas não trazem o instrumento contratual assinado nem comprovantes de pagamento. Esses documentos, assim como as metas assistenciais, serão necessários para acompanhar o que será efetivamente oferecido aos pacientes."
+      ],
+      "public_body": "Secretaria Municipal de Saúde de Goiânia",
+      "reference_numbers": [
+        "26.29.000018585-0",
+        "47/2026",
+        "002/2025"
+      ],
+      "values": [
+        {
+          "original": "R$ 83.124.911,40",
+          "value": 83124911.4,
+          "currency": "BRL",
+          "label": "valor total autorizado"
+        },
+        {
+          "original": "R$ 1.385.415,19",
+          "value": 1385415.19,
+          "currency": "BRL",
+          "label": "previsão mensal"
+        }
+      ],
+      "value_highest": 83124911.4,
+      "importance": 130,
+      "news_value": {
+        "score": 130,
+        "reasons": [
+          "reabilitação",
+          "atendimento de saúde",
+          "R$ 83,1 milhões"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-05",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260904_000008857.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id": "goiania:do_20260904_000008857.pdf",
+      "edition_number": "8857",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-04-8857.pdf",
+      "document_sha256": "d6792e32867f26befd5868d8011f2be2267846abc9e985cad007d8bf14d26703",
+      "cnpjs": [
+        "01.004.795/0001-79"
+      ],
+      "id": "goiania-8857-davita-nefrologia-51-milhoes",
+      "act_date": "2026-09-01",
+      "page_start": 272,
+      "page_end": 272,
+      "document_reference": "Diário Oficial de Goiânia nº 8.857 · página 272",
+      "external_identifier": "Contrato 1898/2026 · Processo 26.29.000020183-9",
+      "official_title": "Contrato de prestação de serviços com DaVita Serviços de Nefrologia Goiânia",
+      "act_type": "contrato_de_saude",
+      "type_label": "Saúde e contratos",
+      "title": "Goiânia assina contrato de R$ 51,4 milhões com a DaVita para atendimento pelo SUS",
+      "deck": "Acordo tem prazo de cinco anos e prevê R$ 856,3 mil mensais para assistência ambulatorial e apoio diagnóstico e terapêutico.",
+      "summary": "Valores são estimados para os 60 meses; o extrato não informa quantidade de pacientes ou procedimentos.",
+      "paragraphs": [
+        "A Secretaria Municipal de Saúde de Goiânia assinou contrato com a DaVita Serviços de Nefrologia Goiânia Ltda. para atendimento de usuários do SUS, com valor global estimado de R$ 51.381.276,00 em 60 meses. O instrumento nº 1898/2026, assinado em 1º de setembro e publicado no dia 4, prevê R$ 856.354,60 por mês e R$ 10.276.255,20 por ano. O objeto abrange assistência médica ambulatorial e/ou apoio diagnóstico e terapêutico, conforme encaminhamento do Complexo Regulador municipal.",
+        "A contratação decorre do chamamento nº 002/2025 e de autorização de inexigibilidade ligada ao credenciamento. O extrato identifica a empresa pelo CNPJ 01.004.795/0001-79, mas não informa a quantidade de pacientes, a tabela de procedimentos ou metas de produção. Os R$ 51,4 milhões representam a estimativa para toda a vigência; a confirmação dos serviços prestados e dos desembolsos depende dos registros de execução e pagamento."
+      ],
+      "public_body": "Secretaria Municipal de Saúde de Goiânia",
+      "reference_numbers": [
+        "1898/2026",
+        "26.29.000020183-9",
+        "002/2025"
+      ],
+      "values": [
+        {
+          "original": "R$ 51.381.276,00",
+          "value": 51381276,
+          "currency": "BRL",
+          "label": "estimativa global para 60 meses"
+        },
+        {
+          "original": "R$ 856.354,60",
+          "value": 856354.6,
+          "currency": "BRL",
+          "label": "estimativa mensal"
+        }
+      ],
+      "value_highest": 51381276,
+      "importance": 128,
+      "news_value": {
+        "score": 128,
+        "reasons": [
+          "atendimento SUS",
+          "contrato assinado",
+          "cinco anos"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-05",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial de Goiânia",
+      "source_label": "Prefeitura de Goiânia",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260904_000008857.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id": "goiania:do_20260904_000008857.pdf",
+      "edition_number": "8857",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-04-8857.pdf",
+      "document_sha256": "d6792e32867f26befd5868d8011f2be2267846abc9e985cad007d8bf14d26703",
+      "cnpjs": [],
+      "id": "goiania-8857-lousas-digitais-13-milhoes",
+      "act_date": "2026-08-17",
+      "page_start": 77,
+      "page_end": 78,
+      "document_reference": "Diário Oficial de Goiânia nº 8.857 · páginas 77 e 78",
+      "external_identifier": "Resolução Normativa 46/2026",
+      "official_title": "Aprovação de aquisição de lousas digitais e telas interativas",
+      "act_type": "autorizacao_de_despesa",
+      "type_label": "Educação e compras",
+      "title": "Goiânia autoriza R$ 13,1 milhões para lousas digitais nas escolas",
+      "deck": "Compra prevista inclui telas interativas e suportes; aquisição será feita por adesão a ata de registro de preços.",
+      "summary": "Autorização orçamentária não apresenta entrega dos equipamentos nem comprovante de pagamento.",
+      "paragraphs": [
+        "Goiânia aprovou despesa de R$ 13.138.647,63 para adquirir lousas digitais e telas interativas para a educação municipal, incluindo suportes fixos e móveis. A medida consta da Resolução Normativa nº 46, de 17 de agosto, publicada no Diário Oficial de 4 de setembro. A compra foi apresentada como adesão a uma ata de registro de preços, modalidade em que o órgão utiliza condições registradas em uma contratação anterior.",
+        "A autorização permite avançar na execução orçamentária da compra, mas as páginas da resolução não demonstram quantos equipamentos serão entregues, quais escolas os receberão ou o custo por unidade. Também não comprovam assinatura do contrato, instalação ou pagamento. A distribuição dos aparelhos e os documentos da aquisição serão os próximos pontos para avaliar o alcance do investimento na rede municipal."
+      ],
+      "public_body": "Secretaria Municipal de Educação de Goiânia",
+      "reference_numbers": [
+        "46/2026"
+      ],
+      "values": [
+        {
+          "original": "R$ 13.138.647,63",
+          "value": 13138647.63,
+          "currency": "BRL",
+          "label": "despesa autorizada"
+        }
+      ],
+      "value_highest": 13138647.63,
+      "importance": 120,
+      "news_value": {
+        "score": 120,
+        "reasons": [
+          "equipamentos escolares",
+          "R$ 13,1 milhões",
+          "educação"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-04",
+      "published_at": "2026-09-05",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "Governo de Goiás",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7351/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/",
+      "edition_id": "doego:7351",
+      "edition_number": "24.858 — suplemento",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-04-edicao-7351-suplemento.pdf",
+      "document_sha256": "c629d70cbc46be3b04297831b40c282dad607919c0c4f2cec80fab59bf1358cd",
+      "cnpjs": [],
+      "id": "doego-24858-suplemento-cesio-promocoes-judiciais",
+      "act_date": "2026-09-04",
+      "page_start": 1,
+      "page_end": 1,
+      "document_reference": "Diário Oficial de Goiás nº 24.858 · suplemento · página 1",
+      "external_identifier": "Decretos de 4 de setembro de 2026 · protocolos 650652, 650654 e 650655",
+      "official_title": "Promoções por bravura em cumprimento a decisões judiciais",
+      "act_type": "cumprimento_de_decisao_judicial",
+      "type_label": "Direitos e memória",
+      "title": "Goiás promove três militares por atuação no acidente com o Césio-137 após decisões judiciais",
+      "deck": "Decretos reconhecem bravura e fixam efeitos retroativos distintos para cada promoção.",
+      "summary": "Atos publicados no suplemento de 4 de setembro cumprem decisões do Tribunal de Justiça de Goiás.",
+      "paragraphs": [
+        "O Governo de Goiás publicou três promoções por bravura de militares que atuaram nas operações relacionadas ao acidente radiológico com o Césio-137. Os decretos de 4 de setembro cumprem decisões judiciais e promovem Antonio Delson de Moura e Eunice Serafim da Silva Mendonça ao posto de major, além de João Pereira de Souza ao posto de primeiro-tenente da reserva remunerada. Os atos foram publicados na primeira página do suplemento do Diário Oficial nº 24.858.",
+        "Os efeitos retroativos foram fixados em 6 de dezembro de 2021 para Antonio Delson, 2 de abril de 2020 para Eunice e 3 de agosto de 2026 para João Pereira. Cada promoção está ligada a um processo judicial diferente. Os decretos formalizam o reconhecimento funcional, mas não apresentam cálculo de diferenças remuneratórias nem comprovam pagamento de valores retroativos."
+      ],
+      "public_body": "Governo de Goiás e Polícia Militar",
+      "reference_numbers": [
+        "650652",
+        "650654",
+        "650655"
+      ],
+      "values": [],
+      "value_highest": null,
+      "importance": 112,
+      "news_value": {
+        "score": 112,
+        "reasons": [
+          "Césio-137",
+          "direitos reconhecidos judicialmente",
+          "efeitos retroativos"
         ]
       }
     }
