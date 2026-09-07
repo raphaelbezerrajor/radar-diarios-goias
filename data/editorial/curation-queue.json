@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-09-05T16:53:18.808183+00:00",
+  "generatedAt": "2026-09-07T12:11:33.921317+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 9,
     "from": "2026-07-01",
-    "to": "2026-09-04"
+    "to": "2026-09-07"
   },
   "policy": {
     "minimumScore": 85,
@@ -19,13 +19,241 @@
   },
   "summary": {
     "candidates": 240,
-    "pending": 202,
-    "withBrief": 38,
+    "pending": 206,
+    "withBrief": 34,
     "existingBriefs": 65,
     "invalidBriefs": 0
   },
   "invalidBriefs": [],
   "candidates": [
+    {
+      "id": "jul26-senador-canedo-681-46abb656a76f-17",
+      "status": "pending",
+      "date": "2026-09-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "DECRETO SUPLEMENTAR Nº 136",
+        "extractedTitle": "Senador Canedo publica DECRETO SUPLEMENTAR Nº 136",
+        "extractedDeck": "Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 9.784.969,42 distribuídos nas seguintes dotações: Suplementação ( + ) 9.784.969,42 01 03 10 SEC.MUN.INFRAESTRUTURA, SERVICOS E MOBILIDADE URBANA-SEINFRA 230 15.452.5128.2341.0000 CIDADE MODERNA 697.086,58 3.3.90.39.00…",
+        "extractedParagraphs": [
+          "Município de Senador Canedo publicou decreto na edição 485 de Diário Oficial de Senador Canedo, datada de 7 de setembro de 2026. Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 9.784.969,42 distribuídos nas seguintes dotações: Suplementação ( + ) 9.784.969,42 01 03 10 SEC.MUN.INFRAESTRUTURA, SERVICOS E MOBILIDADE URBANA-SEINFRA 230 15.452.5128.2341.0000 CIDADE MODERNA 697.086,58 3.3.90.39.00….",
+          "O maior valor monetário identificado no texto é R$ 9.784.969,42; as referências documentais incluem 136, 3015. A conferência deve ser feita no documento original, em páginas 30 a 38."
+        ],
+        "evidenceExcerpt": "DECRETO SUPLEMENTAR Nº 136 DECRETO Nº 136 DE 01 DE SETEMBRO DE 2026 - LEI N.3015 Abre no orçamento vigente crédito adicional suplementar e da outras providências. Diário Oficial do Município de Senador Canedo Código único identificador desta edição: 391opej484 30 Diário Oficial do Município de Senador Canedo Edição nº 485 Publicado em 07/09/2026 O PREFEITO DE SENADOR CANEDO, no uso das atribuições que lhe confere, DECRETA: Artigo 1º Fica aberto no orçamento vigente, um crédito adicional na importância de R$…",
+        "publicBody": "Município de Senador Canedo",
+        "values": [
+          {
+            "original": "R$ 9.784.969,42",
+            "value": 9784969.42,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "136",
+          "3015"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial de Senador Canedo",
+        "label": "Município de Senador Canedo",
+        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-09-2026",
+        "editionId": "senador-canedo:681",
+        "editionNumber": "485",
+        "pageStart": 30,
+        "pageEnd": 38,
+        "documentReference": "Edição 485 · páginas 30 a 38",
+        "documentSha256": "faaac67704bc99c9a3b4182d7903cd0650735403b408b6507347d7eb1a995bf9",
+        "actSha256": "46abb656a76f00bcf2cd3cb4f11160aab240675907052e17c9712141fa8284f3"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-681-7d0de2828228-18",
+      "status": "pending",
+      "date": "2026-09-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "DECRETO SUPLEMENTAR Nº 137",
+        "extractedTitle": "Senador Canedo publica DECRETO SUPLEMENTAR Nº 137",
+        "extractedDeck": "Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 3.516.770,77 distribuídos nas seguintes dotações: Suplementação ( + ) 3.516.770,77 38 Edição nº 485 Publicado em 07/09/2026 01 03 04 SEC",
+        "extractedParagraphs": [
+          "Município de Senador Canedo publicou decreto na edição 485 de Diário Oficial de Senador Canedo, datada de 7 de setembro de 2026. Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 3.516.770,77 distribuídos nas seguintes dotações: Suplementação ( + ) 3.516.770,77 38 Edição nº 485 Publicado em 07/09/2026 01 03 04 SEC.",
+          "O maior valor monetário identificado no texto é R$ 3.516.770,77; as referências documentais incluem 137, 3015. A conferência deve ser feita no documento original, em páginas 38 a 44."
+        ],
+        "evidenceExcerpt": "DECRETO SUPLEMENTAR Nº 137 DECRETO Nº 137 DE 03 DE SETEMBRO DE 2026 - LEI N.3015 Abre no orçamento vigente crédito adicional suplementar e da outras providências. O PREFEITO DE SENADOR CANEDO, no uso das atribuições que lhe confere, DECRETA: Artigo 1º Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 3.516.770,77 distribuídos nas seguintes dotações: Suplementação ( + ) 3.516.770,77 Diário Oficial do Município de Senador Canedo Código único identificador desta edição: 391opej484 38 Diário…",
+        "publicBody": "Município de Senador Canedo",
+        "values": [
+          {
+            "original": "R$ 3.516.770,77",
+            "value": 3516770.77,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "137",
+          "3015"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial de Senador Canedo",
+        "label": "Município de Senador Canedo",
+        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-09-2026",
+        "editionId": "senador-canedo:681",
+        "editionNumber": "485",
+        "pageStart": 38,
+        "pageEnd": 44,
+        "documentReference": "Edição 485 · páginas 38 a 44",
+        "documentSha256": "faaac67704bc99c9a3b4182d7903cd0650735403b408b6507347d7eb1a995bf9",
+        "actSha256": "7d0de2828228f038682129c48a0be63d89c0da986cdbeb3e8ca96d5a35327f3e"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-681-80c9135b3ae7-19",
+      "status": "pending",
+      "date": "2026-09-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "DECRETO SUPLEMENTAR Nº 138",
+        "extractedTitle": "Senador Canedo publica DECRETO SUPLEMENTAR Nº 138",
+        "extractedDeck": "Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 1.411.000,00 distribuídos nas seguintes dotações: Suplementação ( + ) 1.411.000,00 01 03 12 SEC",
+        "extractedParagraphs": [
+          "SECRETARIA MUNICIPAL DE EDUCAÇÃO publicou decreto na edição 485 de Diário Oficial de Senador Canedo, datada de 7 de setembro de 2026. Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 1.411.000,00 distribuídos nas seguintes dotações: Suplementação ( + ) 1.411.000,00 01 03 12 SEC.",
+          "O maior valor monetário identificado no texto é R$ 1.411.000,00; as referências documentais incluem 138, 3015. A conferência deve ser feita no documento original, em páginas 44 a 49."
+        ],
+        "evidenceExcerpt": "Diário Oficial do Município de Senador Canedo Código único identificador desta edição: 391opej484 44 Diário Oficial do Município de Senador Canedo Edição nº 485 Publicado em 07/09/2026 DECRETO SUPLEMENTAR Nº 138 DECRETO Nº 138 DE 04 DE SETEMBRO DE 2026 - LEI N.3015 Abre no orçamento vigente crédito adicional suplementar e da outras providências. O PREFEITO DE SENADOR CANEDO, no uso das atribuições que lhe confere, DECRETA: Artigo 1º Fica aberto no orçamento vigente, um crédito adicional na importância de R$…",
+        "publicBody": "SECRETARIA MUNICIPAL DE EDUCAÇÃO",
+        "values": [
+          {
+            "original": "R$ 1.411.000,00",
+            "value": 1411000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "138",
+          "3015"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial de Senador Canedo",
+        "label": "SECRETARIA MUNICIPAL DE EDUCAÇÃO",
+        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-09-2026",
+        "editionId": "senador-canedo:681",
+        "editionNumber": "485",
+        "pageStart": 44,
+        "pageEnd": 49,
+        "documentReference": "Edição 485 · páginas 44 a 49",
+        "documentSha256": "faaac67704bc99c9a3b4182d7903cd0650735403b408b6507347d7eb1a995bf9",
+        "actSha256": "80c9135b3ae7d2c161de1fb36ef8fbf9136405f332b90d3ac6ca9894a3d4f919"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-senador-canedo-681-f4feb3841920-16",
+      "status": "pending",
+      "date": "2026-09-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "DECRETO SUPLEMENTAR Nº 135",
+        "extractedTitle": "Senador Canedo publica DECRETO SUPLEMENTAR Nº 135",
+        "extractedDeck": "Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 4.577.852,71 distribuídos nas seguintes dotações: Suplementação ( + ) 4.577.852,71 01 03 05 SEC",
+        "extractedParagraphs": [
+          "SECRETARIA MUNICIPAL DE FAZENDA E FINANÇAS publicou decreto na edição 485 de Diário Oficial de Senador Canedo, datada de 7 de setembro de 2026. Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 4.577.852,71 distribuídos nas seguintes dotações: Suplementação ( + ) 4.577.852,71 01 03 05 SEC.",
+          "O maior valor monetário identificado no texto é R$ 4.577.852,71; as referências documentais incluem 135, 3015. A conferência deve ser feita no documento original, em páginas 24 a 30."
+        ],
+        "evidenceExcerpt": "SECRETARIA MUNICIPAL DE FAZENDA E FINANÇAS MARCO ANTÔNIO CALDAS JUNIOR PÚBLICAS Secretário Municipal de Planejamento Urbano DECRETO SUPLEMENTAR Nº 135 DECRETO Nº 135 DE 31 DE AGOSTO DE 2026 - LEI N.3015 Abre no orçamento vigente crédito adicional suplementar e da outras providências. O PREFEITO DE SENADOR CANEDO, no uso das atribuições que lhe confere, DECRETA: Artigo 1º Fica aberto no orçamento vigente, um crédito adicional na importância de R$ 4.577.852,71 distribuídos nas seguintes dotações: Suplementação ( +…",
+        "publicBody": "SECRETARIA MUNICIPAL DE FAZENDA E FINANÇAS",
+        "values": [
+          {
+            "original": "R$ 4.577.852,71",
+            "value": 4577852.71,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "135",
+          "3015"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial de Senador Canedo",
+        "label": "SECRETARIA MUNICIPAL DE FAZENDA E FINANÇAS",
+        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-09-2026",
+        "editionId": "senador-canedo:681",
+        "editionNumber": "485",
+        "pageStart": 24,
+        "pageEnd": 30,
+        "documentReference": "Edição 485 · páginas 24 a 30",
+        "documentSha256": "faaac67704bc99c9a3b4182d7903cd0650735403b408b6507347d7eb1a995bf9",
+        "actSha256": "f4feb3841920773ada7eb51586a5a259dce3a2201227e4f6bf2935dd540d7172"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
     {
       "id": "jul26-goiania-do_20260904_000008857.pdf-9916545fc880-212",
       "status": "pending",
@@ -15647,250 +15875,6 @@
         "documentReference": "Edição 463 · páginas 34 a 39",
         "documentSha256": "62a9e4eda5f3c2ce690a4b7038d8d609ad297bad260983ac201525bae3a285f4",
         "actSha256": "a35d3a303820a5dbb9447e7d15cb9d0e8862f4561fcf66f439e676426d8bd0eb"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114600-53F772D3-101",
-      "status": "brief_exists",
-      "date": "2026-08-06",
-      "city": "Hidrolandia",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DE CONTRATO Nº 290/2026 - MEDPLUS",
-        "extractedTitle": "Hidrolandia publica EXTRATO DE CONTRATO Nº 290/2026 - MEDPLUS",
-        "extractedDeck": "OBJETO: Contratação de empresa especializada para prestação de Serviços de manutenção preventiva e corretiva, com fornecimento de peças, componentes, insumos e acessórios para equipamentos odontológicos para atender as necessidades do Fundo Municipal de Saúde de Hidrolândia-GO",
-        "extractedParagraphs": [
-          "FUNDO MUNICIPAL DE SAUDE publicou contrato na edição 3676 de Diário Municipal de Goiás — AGM, datada de 6 de agosto de 2026. OBJETO: Contratação de empresa especializada para prestação de Serviços de manutenção preventiva e corretiva, com fornecimento de peças, componentes, insumos e acessórios para equipamentos odontológicos para atender as necessidades do Fundo Municipal de Saúde de Hidrolândia-GO.",
-          "O maior valor monetário identificado no texto é R$ 108.000,00; as referências documentais incluem 290/2026, 14.133. A conferência deve ser feita no documento original, em página 29."
-        ],
-        "evidenceExcerpt": "FUNDO MUNICIPAL DE SAUDE EXTRATO DE CONTRATO Nº 290/2026 - MEDPLUS HOSPITALAR COMERCIO E SERVICOS LTDA EXTRATO DE CONTRATO Nº 290/2026 PREGÃO ELETRÔNICO Nº 025/2026 DAS PARTES: O FUNDO MUNICIPAL DE SAÚDE DE HIDROLÂNDIA-GO X MEDPLUS HOSPITALAR COMERCIO E SERVICOS LTDA. OBJETO: Contratação de empresa especializada para prestação de Serviços de manutenção preventiva e corretiva, com fornecimento de peças, componentes, insumos e acessórios para equipamentos odontológicos para atender as necessidades do Fundo…",
-        "publicBody": "FUNDO MUNICIPAL DE SAUDE",
-        "values": [
-          {
-            "original": "R$ 9.000,00",
-            "value": 9000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 108.000,00",
-            "value": 108000,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "290/2026",
-          "14.133"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "FUNDO MUNICIPAL DE SAUDE",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114600_2026-08-05_ff5f594eb3a8ca345cdf876d3b0fe6bd.pdf",
-        "editionId": "agm:114600",
-        "editionNumber": "3676",
-        "pageStart": 29,
-        "pageEnd": 29,
-        "documentReference": "Edição 3676 · página 29",
-        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
-        "actSha256": "1a29b7c81ea02052888ab5a3b45f99681ef50c3bb429b9f3e9f71492e9ed1190"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114600-A1DA58AE-98",
-      "status": "brief_exists",
-      "date": "2026-08-06",
-      "city": "Goiatuba",
-      "scope": "Municipal",
-      "actType": "aditivo",
-      "typeLabel": "Termo aditivo",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DO PRIMEIRO TERMO ADITIVO AO TERMO DE",
-        "extractedTitle": "Goiatuba publica EXTRATO DO PRIMEIRO TERMO ADITIVO AO TERMO DE",
-        "extractedDeck": "OBJETO: Prorrogação do prazo de vigência do Contrato nº 367/2025, referente ao credenciamento de empresa para a prestação de serviços de saúde, consistentes na realização de exames de imagem destinados ao apoio ao diagnóstico clínico",
-        "extractedParagraphs": [
-          "FUNDO MUNICIPAL DE SAÚDE publicou termo aditivo na edição 3676 de Diário Municipal de Goiás — AGM, datada de 6 de agosto de 2026. OBJETO: Prorrogação do prazo de vigência do Contrato nº 367/2025, referente ao credenciamento de empresa para a prestação de serviços de saúde, consistentes na realização de exames de imagem destinados ao apoio ao diagnóstico clínico.",
-          "O maior valor monetário identificado no texto é R$ 120.000,00; as referências documentais incluem 05/2025, 367/2025. A conferência deve ser feita no documento original, em página 28."
-        ],
-        "evidenceExcerpt": "FUNDO MUNICIPAL DE SAÚDE EXTRATO DO PRIMEIRO TERMO ADITIVO AO TERMO DE CREDENCIAMENTO – EDITAL 05/2025 CONTRATO Nº 367/2025 CONTRATANTE: FUNDO MUNICIPAL DE SAÚDE CREDENCIADO: NOVACLÍNICA LIMITADA – EPP OBJETO: Prorrogação do prazo de vigência do Contrato nº 367/2025, referente ao credenciamento de empresa para a prestação de serviços de saúde, consistentes na realização de exames de imagem destinados ao apoio ao diagnóstico clínico. VIGÊNCIA: O prazo de vigência do contrato fica prorrogado por mais 12 (doze)…",
-        "publicBody": "FUNDO MUNICIPAL DE SAÚDE",
-        "values": [
-          {
-            "original": "R$ 120.000,00",
-            "value": 120000,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "05/2025",
-          "367/2025"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "FUNDO MUNICIPAL DE SAÚDE",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114600_2026-08-05_ff5f594eb3a8ca345cdf876d3b0fe6bd.pdf",
-        "editionId": "agm:114600",
-        "editionNumber": "3676",
-        "pageStart": 28,
-        "pageEnd": 28,
-        "documentReference": "Edição 3676 · página 28",
-        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
-        "actSha256": "27cde13e748a47a9f51d8f8b39327a5fce3ad9fe1a541d8302e997c9b7d7e74b"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114600-B2CB9A8A-186",
-      "status": "brief_exists",
-      "date": "2026-08-06",
-      "city": "Nazário",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 75,
-      "importance": 75,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DE CONTRATO Nº 121/2025",
-        "extractedTitle": "Nazário publica EXTRATO DE CONTRATO Nº 121/2025",
-        "extractedDeck": "Objeto: 1º Termo aditivo de Contrato 121/2025 Proveniente de solicitação de despesa com aditivo de Contratação de empresa para prestação de serviços de telefonia fixo comutado-stfc (fixo - fixo e fixo – móvel), nas modalidades local, longa distância nacional (idn), em manutenção da secretaria…",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE NAZÁRIO publicou contrato na edição 3676 de Diário Municipal de Goiás — AGM, datada de 6 de agosto de 2026. Objeto: 1º Termo aditivo de Contrato 121/2025 Proveniente de solicitação de despesa com aditivo de Contratação de empresa para prestação de serviços de telefonia fixo comutado-stfc (fixo - fixo e fixo – móvel), nas modalidades local, longa distância nacional (idn), em manutenção da secretaria….",
-          "O maior valor monetário identificado no texto é R$ 1.548,00; o ato cita o CNPJ 14.376.757/0001-99; as referências documentais incluem 121/2025, 14.133/2021.. A conferência deve ser feita no documento original, em página 49."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE NAZÁRIO SECRETARIA MUNICIPAL DE SAUDE 1° TERMO ADITIVO EXTRATO DE CONTRATO Nº 121/2025 1° TERMO ADITIVO EXTRATO DE CONTRATO Nº 121/2025 Contratantes: PREFEITURA MUNICIPAL DE SAÚDE Contratada: INFORTEL SOLUÇÕES EM INFORMATICA LTDA, CNPJ: 14.376.757/0001-99 Objeto: 1º Termo aditivo de Contrato 121/2025 Proveniente de solicitação de despesa com aditivo de Contratação de empresa para prestação de serviços de telefonia fixo comutado-stfc (fixo - fixo e fixo – móvel), nas modalidades local,…",
-        "publicBody": "MUNICÍPIO DE NAZÁRIO",
-        "values": [
-          {
-            "original": "R$ 1.548,00",
-            "value": 1548,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "14.376.757/0001-99"
-        ],
-        "referenceNumbers": [
-          "121/2025",
-          "14.133/2021."
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE NAZÁRIO",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114600_2026-08-05_ff5f594eb3a8ca345cdf876d3b0fe6bd.pdf",
-        "editionId": "agm:114600",
-        "editionNumber": "3676",
-        "pageStart": 49,
-        "pageEnd": 49,
-        "documentReference": "Edição 3676 · página 49",
-        "documentSha256": "543bd13a360e57013a4851c83a3500a0bf4a153c57b3ff1784b3a57f78e5d338",
-        "actSha256": "3036b969e51ef1287a2daf52f764bd5abb51fce5717d8e4ad6374a441d904d69"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114599-CCBACC9D-127",
-      "status": "brief_exists",
-      "date": "2026-08-05",
-      "city": "Indiara",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 95,
-      "importance": 95,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DO CONTRATO DE EXECUÇÃO DE OBRA",
-        "extractedTitle": "Indiara publica EXTRATO DO CONTRATO DE EXECUÇÃO DE OBRA",
-        "extractedDeck": "OBJETO: Construção de espaço multiuso para realização de eventos turísticos e culturais, localizado no Parque de Exposição Agropecuária do município de Indiara/GO",
-        "extractedParagraphs": [
-          "PREFEITURA MUNICIPAL DE INDIARA publicou contrato na edição 3675 de Diário Municipal de Goiás — AGM, datada de 5 de agosto de 2026. OBJETO: Construção de espaço multiuso para realização de eventos turísticos e culturais, localizado no Parque de Exposição Agropecuária do município de Indiara/GO.",
-          "O maior valor monetário identificado no texto é R$ 547.641,51; o ato cita os CNPJs 00.005.959/0001-10, 10.540.335/0001-56; as referências documentais incluem 2553/2026. A conferência deve ser feita no documento original, em página 34."
-        ],
-        "evidenceExcerpt": "PREFEITURA MUNICIPAL DE INDIARA EXTRATO DO CONTRATO DE EXECUÇÃO DE OBRA PÚBLICA Nº 456/2026 CONTRATANTE: MUNICIPIO DE INDIARA, Estado de Goiás, pessoa jurídica de direito público interno, inscrito no CNPJ nº 00.005.959/0001-10, com sede na Rua Mizael Machado, s/n - Centro, na cidade de Indiara-GO. SIGNATÁRIO: Sr. RAFAEL CALISTO SILVA GOMES – Gestor Administrativo, nomeado pelo Decreto Municipal n° 348/2025-RH. CONTRATADA: BORGES ENGENHARIA E CONSTRUÇÕES LTDA, pessoa jurídica de direito privado, inscrita no…",
-        "publicBody": "PREFEITURA MUNICIPAL DE INDIARA",
-        "values": [
-          {
-            "original": "R$ 547.641,51",
-            "value": 547641.51,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 495.000,00",
-            "value": 495000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 52.641,51",
-            "value": 52641.51,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "00.005.959/0001-10",
-          "10.540.335/0001-56"
-        ],
-        "referenceNumbers": [
-          "2553/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "PREFEITURA MUNICIPAL DE INDIARA",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114599_2026-08-04_bfe3f40cdd26a6db910c52750b8833ad.pdf",
-        "editionId": "agm:114599",
-        "editionNumber": "3675",
-        "pageStart": 34,
-        "pageEnd": 34,
-        "documentReference": "Edição 3675 · página 34",
-        "documentSha256": "10f949d8069c20ce356d8f5c75300b7c3bde8b7b866960c4d12634a3d7907025",
-        "actSha256": "fe5ae111a4427504175941373684765c35daedc5180d06cc2c7952827f58594c"
       },
       "requestedOutput": {
         "kind": "editorial_brief",

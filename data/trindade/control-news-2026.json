@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-05T16:53:01.047Z",
+  "generated_at": "2026-09-07T12:11:21.212Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-09-04"
+    "to": "2026-09-07"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 134
+    "published_stories": 136
   },
   "items": [
     {
@@ -8214,6 +8214,124 @@
           "Césio-137",
           "direitos reconhecidos judicialmente",
           "efeitos retroativos"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-07",
+      "published_at": "2026-09-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "source_id": "senador-canedo",
+      "source_name": "Diário Oficial de Senador Canedo",
+      "source_label": "Prefeitura de Senador Canedo",
+      "official_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-09-2026",
+      "source_landing_url": "https://diario.senadorcanedo.go.gov.br/diario/391opej484",
+      "edition_id": "senador-canedo:681",
+      "edition_number": "485",
+      "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-07-485.pdf",
+      "document_sha256": "faaac67704bc99c9a3b4182d7903cd0650735403b408b6507347d7eb1a995bf9",
+      "id": "canedo-485-maindoc-gestao-documental-6-milhoes",
+      "act_date": "2026-09-01",
+      "page_start": 2,
+      "page_end": 4,
+      "document_reference": "Diário Oficial de Senador Canedo nº 485 · páginas 2 a 4",
+      "external_identifier": "Contrato 03.09.01.001-2026 · Processo 1Doc 26.111/2026",
+      "official_title": "Contratação de gestão documental e arquivística com Maindoc Gestão Digital Ltda.",
+      "act_type": "contrato",
+      "type_label": "Contratos e transparência",
+      "title": "Senador Canedo contrata R$ 6,4 milhões para organizar e digitalizar documentos públicos",
+      "deck": "Maindoc ficará responsável por gestão, preservação e guarda do acervo; contrato abrange secretarias, fundos e institutos municipais.",
+      "summary": "Vigência de 12 meses começa com a publicação no PNCP; extrato informa valor contratado, sem demonstrar pagamentos.",
+      "paragraphs": [
+        "Senador Canedo contratou a Maindoc Gestão Digital Ltda. por R$ 6.398.090,33 para organizar, preservar e digitalizar o acervo documental municipal. O contrato nº 03.09.01.001-2026, datado de 1º de setembro e publicado no Diário Oficial de 7 de setembro, inclui classificação de arquivos, tratamento técnico, adequação de documentos já digitalizados, certificação, rastreabilidade e um sistema de gerenciamento eletrônico. Participam da contratação órgãos como Saúde, Educação, Controladoria, Fazenda, Sanesc e Senaprev.",
+        "A contratação utiliza adesão à ata de registro de preços nº 043/2025 do Consórcio Intermunicipal Multifinalitário da Microrregião do Alto Sapucaí, em Minas Gerais, decorrente do Pregão nº 050/2025. O prazo é de 12 meses a partir da publicação no Portal Nacional de Contratações Públicas. Além da digitalização, o objeto prevê guarda e gerenciamento do acervo, atividades que afetam a recuperação e a preservação dos registros da prefeitura. O extrato não discrimina o volume de páginas, preços por serviço ou cronograma de entregas; o valor global contratado não comprova quanto já foi executado ou pago."
+      ],
+      "public_body": "Prefeitura de Senador Canedo",
+      "cnpjs": [
+        "23.447.382/0001-00"
+      ],
+      "reference_numbers": [
+        "03.09.01.001-2026",
+        "26.111/2026",
+        "043/2025",
+        "050/2025"
+      ],
+      "values": [
+        {
+          "original": "R$ 6.398.090,33",
+          "value": 6398090.33,
+          "currency": "BRL",
+          "label": "valor global contratado"
+        }
+      ],
+      "value_highest": 6398090.33,
+      "importance": 123,
+      "news_value": {
+        "score": 123,
+        "reasons": [
+          "R$ 6,4 milhões",
+          "acervo público",
+          "vários órgãos municipais"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-07",
+      "published_at": "2026-09-07",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "source_id": "senador-canedo",
+      "source_name": "Diário Oficial de Senador Canedo",
+      "source_label": "Prefeitura de Senador Canedo",
+      "official_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=07-09-2026",
+      "source_landing_url": "https://diario.senadorcanedo.go.gov.br/diario/391opej484",
+      "edition_id": "senador-canedo:681",
+      "edition_number": "485",
+      "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-07-485.pdf",
+      "document_sha256": "faaac67704bc99c9a3b4182d7903cd0650735403b408b6507347d7eb1a995bf9",
+      "id": "canedo-485-campo-das-flores-192-aptos",
+      "act_date": "2026-09-07",
+      "page_start": 51,
+      "page_end": 63,
+      "document_reference": "Diário Oficial de Senador Canedo nº 485 · páginas 50 a 63",
+      "external_identifier": "Edital 001/2025 · Campo das Flores I",
+      "official_title": "Listagem de candidatos aptos ao Campo das Flores I",
+      "act_type": "resultado_habitacional",
+      "type_label": "Habitação e serviços",
+      "title": "Senador Canedo divulga 192 candidatos aptos ao Campo das Flores I",
+      "deck": "Lista integra a seleção do Minha Casa Minha Vida; aprovação nas etapas seguintes e assinatura com a Caixa ainda são necessárias.",
+      "summary": "Candidatos com análise em andamento passarão a integrar o processo do Campo das Flores II, segundo o comunicado.",
+      "paragraphs": [
+        "A Prefeitura de Senador Canedo publicou uma lista com 192 candidatos aptos ao Residencial Campo das Flores I, vinculado ao Minha Casa Minha Vida, Faixa I, com recursos do FAR. A relação aparece no Diário Oficial nº 485, de 7 de setembro, dentro do processo regido pelo Edital nº 001/2025. A Secretaria Municipal de Habitação e Regularização Fundiária ressalta que estar na lista não significa já ter sido contemplado com uma moradia: a seleção depende da aprovação de todas as etapas e da assinatura do contrato com a Caixa Econômica Federal.",
+        "O comunicado informa que ainda podem ocorrer desclassificações antes da contratação. Os demais candidatos que entregaram a documentação e continuam em análise passarão a compor o processo do Campo das Flores II, cuja relação será divulgada após as verificações. As análises documentais e socioeconômicas seguem em andamento. Para conferir a própria situação, os inscritos devem consultar a lista no diário e acompanhar os comunicados oficiais da prefeitura e da secretaria; a publicação não fixa data de entrega das chaves."
+      ],
+      "public_body": "Secretaria Municipal de Habitação e Regularização Fundiária de Senador Canedo",
+      "cnpjs": [],
+      "reference_numbers": [
+        "001/2025"
+      ],
+      "values": [],
+      "value_highest": null,
+      "importance": 116,
+      "news_value": {
+        "score": 116,
+        "reasons": [
+          "acesso à moradia",
+          "192 candidatos",
+          "serviço aos inscritos"
         ]
       }
     }
