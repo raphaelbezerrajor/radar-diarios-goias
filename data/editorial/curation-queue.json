@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-09-08T10:43:42.298328+00:00",
+  "generatedAt": "2026-09-08T20:39:35.125472+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 9,
@@ -34,21 +34,20 @@
       "scope": "Municipal",
       "actType": "homologacao",
       "typeLabel": "Homologação",
-      "priority": 91,
-      "importance": 87,
+      "priority": 100,
+      "importance": 105,
       "curationReasons": [
         "alto valor-notícia calculado",
-        "controle, correção ou responsabilização",
         "possível impacto em serviço, política ou patrimônio público"
       ],
-      "mandatoryHumanReview": true,
+      "mandatoryHumanReview": false,
       "factPacket": {
         "officialTitle": "TERMO DE HOMOLOGAÇÃO PROCESSO Nº 383/2026",
-        "extractedTitle": "Adelândia publica TERMO DE HOMOLOGAÇÃO PROCESSO Nº 383/2026",
-        "extractedDeck": "HOMOLOGAR o procedimento licitatório realizado na modalidade de CONCORRÊNCIA ELETRÔNICA nº 2/2026 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NO RAMO DA ENGENHARIA CIVIL, PARA PRESTAÇÃO DE SERVIÇOS DE APLICAÇÃO DE PINTURA DE LIGAÇÃO E MICRORREVESTIMENTO ASFÁLTICO, EM RUAS E A",
+        "extractedTitle": "Adelândia aprova licitação de R$ 440 mil para revestimento de ruas e avenidas",
+        "extractedDeck": "Pavium Engenharia venceu a concorrência para aplicar pintura de ligação e microrrevestimento asfáltico.",
         "extractedParagraphs": [
-          "MUNICÍPIO DE ADELÂNDIA/GO - CONCORRÊNCIA publicou homologação na edição 3698 de Diário Municipal de Goiás — AGM, datada de 8 de setembro de 2026. HOMOLOGAR o procedimento licitatório realizado na modalidade de CONCORRÊNCIA ELETRÔNICA nº 2/2026 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NO RAMO DA ENGENHARIA CIVIL, PARA PRESTAÇÃO DE SERVIÇOS DE APLICAÇÃO DE PINTURA DE LIGAÇÃO E MICRORREVESTIMENTO ASFÁLTICO, EM RUAS E A.",
-          "O maior valor monetário identificado no texto é R$ 440.000,00; o ato cita o CNPJ 14.443.019/0001-17; as referências documentais incluem 383/2026. A conferência deve ser feita no documento original, em página 3."
+          "A Prefeitura de Adelândia homologou uma licitação de R$ 440 mil para aplicar pintura de ligação e microrrevestimento asfáltico em ruas e avenidas do município. A vencedora foi a Pavium Engenharia Ltda., de Aparecida de Goiânia, inscrita no CNPJ 14.443.019/0001-17. O prefeito Edson Vieira de Paula assinou a homologação da Concorrência Eletrônica nº 2/2026 em 4 de setembro, com publicação no Diário Municipal de Goiás de 8 de setembro.",
+          "A despesa está vinculada à dotação de manutenção de ruas e pavimentação urbana da Secretaria de Obras e Serviços. O ato remete a relação de vias ao termo de referência e aos projetos anexos, sem apresentar no extrato os trechos, a extensão ou o calendário de execução. A homologação confirma o resultado da disputa, não o início ou a conclusão das obras; tampouco demonstra que os R$ 440 mil tenham sido pagos."
         ],
         "evidenceExcerpt": "SECRETARIA DE OBRAS E SERVIÇOS URBANOS TERMO DE HOMOLOGAÇÃO PROCESSO Nº 383/2026 MUNICÍPIO DE ADELÂNDIA/GO - CONCORRÊNCIA ELETRÔNICA Nº 2/2026. TERMO DE HOMOLOGAÇÃO PROCESSO Nº 383/2026 MUNICÍPIO DE ADELÂNDIA/GO - CONCORRÊNCIA ELETRÔNICA Nº 2/2026. DESPACHO. Tendo em vista o que consta dos presentes autos e considerando a regularidade de todo o procedimento licitatório, em especial o julgamento procedido pelo(a) Presidente(a) , inserto nestes autos, bem como Parecer Jurídico, RESOLVO, no uso de minhas atribuições…",
         "publicBody": "MUNICÍPIO DE ADELÂNDIA/GO - CONCORRÊNCIA",
@@ -63,7 +62,8 @@
           "14.443.019/0001-17"
         ],
         "referenceNumbers": [
-          "383/2026"
+          "383/2026",
+          "2/2026"
         ],
         "confidence": 0.94
       },
@@ -82,7 +82,7 @@
       "requestedOutput": {
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
+        "publishAutomatically": true
       }
     },
     {
@@ -93,21 +93,20 @@
       "scope": "Municipal",
       "actType": "homologacao",
       "typeLabel": "Homologação",
-      "priority": 91,
-      "importance": 87,
+      "priority": 100,
+      "importance": 103,
       "curationReasons": [
         "alto valor-notícia calculado",
-        "controle, correção ou responsabilização",
         "possível impacto em serviço, política ou patrimônio público"
       ],
-      "mandatoryHumanReview": true,
+      "mandatoryHumanReview": false,
       "factPacket": {
         "officialTitle": "EXTRATO DE ADJUDICAÇÃO E HOMOLOGAÇÃO",
-        "extractedTitle": "Edéia publica EXTRATO DE ADJUDICAÇÃO E HOMOLOGAÇÃO",
-        "extractedDeck": "123 MÓVEIS DO BRASIL LTDA, inscrita no CNPJ sob nº 18.335.676/0001-00, vencedora dos itens:",
+        "extractedTitle": "Edéia aprova compra de R$ 86 mil em mesas e cadeiras para duas escolas",
+        "extractedDeck": "123 Móveis do Brasil venceu a licitação para fornecer mobiliário às escolas Joaquim Teodoro Rodrigues e José Esteves Rodrigues.",
         "extractedParagraphs": [
-          "MUNICÍPIO DE EDÉIA publicou homologação na edição 3698 de Diário Municipal de Goiás — AGM, datada de 8 de setembro de 2026. 123 MÓVEIS DO BRASIL LTDA, inscrita no CNPJ sob nº 18.335.676/0001-00, vencedora dos itens:.",
-          "O maior valor monetário identificado no texto é R$ 86.277,12; o ato cita o CNPJ 18.335.676/0001-00; as referências documentais incluem 202600005001507.. A conferência deve ser feita no documento original, em página 23."
+          "A Prefeitura de Edéia aprovou o resultado da licitação de R$ 86.277,12 para comprar conjuntos de mesas e cadeiras destinados aos alunos de duas escolas municipais: Joaquim Teodoro Rodrigues e José Esteves Rodrigues. A empresa 123 Móveis do Brasil Ltda., CNPJ 18.335.676/0001-00, venceu os dois itens do Pregão Eletrônico nº 018/2026. A homologação foi assinada pela prefeita Carla Faria de Freitas em 4 de setembro e publicada no Diário Municipal de Goiás de 8 de setembro.",
+          "A aquisição será custeada com recursos de convênio via Secretaria de Estado da Educação, ligado à Emenda Parlamentar nº 519/2026 e ao processo nº 202600005001507. O resultado permite o avanço da contratação, mas o extrato não informa a quantidade de conjuntos, o prazo de entrega ou pagamentos realizados. Esses detalhes precisam ser conferidos no edital, no contrato e nos registros de execução antes de afirmar que o mobiliário chegou às escolas."
         ],
         "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE EDÉIA SECRETARIA MUNICIPAL DE EDUCAÇÃO E CULTURA EXTRATO DE ADJUDICAÇÃO E HOMOLOGAÇÃO — PREGÃO ELETRÔNICO Nº 018/2026 O Município de Edéia/GO torna pública a ADJUDICAÇÃO e HOMOLOGAÇÃO do Processo Licitatório nº 18/2026, na modalidade Pregão Eletrônico nº 018/2026, cujo objeto é a AQUISIÇÃO DE MOBILIÁRIO ESCOLAR (CONJUNTOS DE MESAS E CADEIRAS PARA ALUNOS), DESTINADO A ATENDER ÀS NECESSIDADES ESTRUTURAIS E PEDAGÓGICAS DAS UNIDADES ESCOLARES DA REDE MUNICIPAL DE ENSINO DE EDÉIA/GO,…",
         "publicBody": "MUNICÍPIO DE EDÉIA",
@@ -122,7 +121,9 @@
           "18.335.676/0001-00"
         ],
         "referenceNumbers": [
-          "202600005001507."
+          "018/2026",
+          "519/2026",
+          "202600005001507"
         ],
         "confidence": 0.94
       },
@@ -141,7 +142,7 @@
       "requestedOutput": {
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
+        "publishAutomatically": true
       }
     },
     {

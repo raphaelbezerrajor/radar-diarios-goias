@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-08T10:49:34.258Z",
+  "generated_at": "2026-09-08T20:39:44.000Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -8518,6 +8518,148 @@
           "saúde dos servidores",
           "contratação direta",
           "R$ 336 mil"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-08",
+      "published_at": "2026-09-08",
+      "scope": "Estadual",
+      "city": "Goiás",
+      "cnpjs": [],
+      "edition_id": "tcego:331291642152461",
+      "edition_number": "161",
+      "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291642152461",
+      "source_landing_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291642152461",
+      "local_path": "data/raw/tcego/2026/09/tcego-dec-161-2026-09-08.pdf",
+      "document_sha256": "56217f6fdc0d04fba40d27175158b02778e0873caa9810315df67e887f987f8d",
+      "id": "tcego-161-rreo-saude-educacao-divergencias",
+      "source_id": "tcego",
+      "source_name": "Diário Eletrônico de Contas do TCE-GO",
+      "source_label": "TCE-GO",
+      "page_start": 78,
+      "page_end": 79,
+      "document_reference": "DEC nº 161 · páginas impressas 77–78 (páginas 78–79 do PDF)",
+      "external_identifier": "Processo 202600047001867 · Acórdão 2368/2026",
+      "official_title": "Apreciação do RREO do segundo bimestre de 2026",
+      "act_type": "divergencia_contabil",
+      "type_label": "Contas públicas",
+      "public_body": "Secretaria de Estado da Economia e TCE-GO",
+      "title": "TCE aponta divergências bilionárias nos relatórios de saúde e educação de Goiás",
+      "deck": "Sistemas federais registram R$ 1,897 bilhão na saúde e R$ 1,028 bilhão na educação em campos que aparecem zerados no relatório estadual. Decisão trata de inconsistência contábil, não de desvio comprovado.",
+      "summary": "Tribunal comunicou a Secretaria da Economia sobre divergências no relatório do segundo bimestre e determinou o arquivamento do processo.",
+      "paragraphs": [
+        "O TCE-GO apontou divergências entre o relatório fiscal de Goiás do segundo bimestre de 2026 e os dados enviados aos sistemas federais de saúde e educação. Na ata publicada em 8 de setembro, o Tribunal registra que o Siope informa R$ 1,028 bilhão no total geral de despesas com educação inscritas em restos a pagar não processados, enquanto os campos correspondentes do Anexo 8 do Relatório Resumido da Execução Orçamentária (RREO) aparecem zerados. Na saúde, o Siops registra R$ 1,897 bilhão no total dessas despesas, também ausentes dos campos correspondentes do Anexo 12. São despesas empenhadas cuja liquidação ainda não foi concluída; os valores não representam pagamentos comprovados nem uma quantificação de prejuízo.",
+        "O Acórdão nº 2368/2026 foi aprovado por unanimidade pela Segunda Câmara no processo nº 202600047001867. O TCE comunicou as inconsistências à Secretaria de Estado da Economia para que adote providências internas e evite falhas semelhantes, por entender que as diferenças comprometem a consistência e a transparência das informações fiscais. Também determinou que a Assembleia Legislativa receba as análises sobre o desempenho da receita estadual e mandou arquivar o processo. A publicação não aplica multa nem conclui que houve desvio: para saber a origem das diferenças e se foram corrigidas, ainda é necessário confrontar as versões dos demonstrativos e obter a resposta da Secretaria da Economia."
+      ],
+      "reference_numbers": [
+        "202600047001867",
+        "2368/2026"
+      ],
+      "values": [
+        {
+          "original": "R$ 1,897 bilhão",
+          "value": 1897000000,
+          "currency": "BRL",
+          "label": "RPNP de saúde registrados no Siops; não representa dano"
+        },
+        {
+          "original": "R$ 1,028 bilhão",
+          "value": 1028000000,
+          "currency": "BRL",
+          "label": "RPNP de educação registrados no Siope; não representa dano"
+        }
+      ],
+      "value_highest": 1897000000,
+      "importance": 140,
+      "news_value": {
+        "score": 140,
+        "reasons": [
+          "transparência das contas estaduais",
+          "saúde e educação",
+          "divergências entre demonstrativos"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "Onde os números divergem",
+          "text": "Na educação, o Siope registra valores nas linhas 11, 19, 31 e 32 que estão zerados no Anexo 8 do RREO. Na saúde, a divergência está na coluna (g), campos 17 a 38, 82 a 103 e 104 a 111 do Anexo 12, em comparação com o Siops."
+        },
+        {
+          "title": "O que a decisão significa",
+          "text": "O Tribunal deu ciência das falhas e arquivou o processo. Não declarou dano ao erário nem aplicou sanção nesse julgamento."
+        },
+        {
+          "title": "O que falta esclarecer",
+          "text": "A causa das divergências, a versão correta dos dados e a eventual republicação dos demonstrativos dependem de documentos complementares e da manifestação da Secretaria da Economia."
+        }
+      ]
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-08",
+      "published_at": "2026-09-08",
+      "scope": "Estadual",
+      "city": "Goiás",
+      "cnpjs": [
+        "42.563.692/0001-26"
+      ],
+      "edition_id": "doego:7352",
+      "edition_number": "24859",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7352/",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7352/",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-08-edicao-7352.pdf",
+      "document_sha256": "fce102456d646b0c46504e75194bb0e6a04e220152010dd4311919ae9475dd33",
+      "id": "doego-24859-sgg-software-montreal-prorrogacao",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "DOE-GO",
+      "page_start": 1,
+      "page_end": 1,
+      "act_date": "2026-09-03",
+      "document_reference": "DOE nº 24.859 · página 1 · protocolo 650415",
+      "external_identifier": "Contrato 32/2024-SGG · Processo 202418037003174",
+      "official_title": "Terceiro termo aditivo ao Contrato 32/2024-SGG",
+      "act_type": "aditivo_contratual",
+      "type_label": "Tecnologia e contratos",
+      "public_body": "Secretaria-Geral de Governo de Goiás",
+      "title": "Goiás prorroga contrato de software por R$ 1,14 milhão até setembro de 2027",
+      "deck": "Aditivo mantém por mais 12 meses os serviços da Montreal para desenvolver e sustentar sistemas da Secretaria-Geral de Governo.",
+      "summary": "Serviços são previstos sob demanda; o valor do aditivo não comprova pagamento nem entrega de sistemas.",
+      "paragraphs": [
+        "A Secretaria-Geral de Governo de Goiás prorrogou por mais 12 meses o contrato com a M.I. Montreal Informática S.A. para desenvolvimento, manutenção e sustentação de software. O terceiro aditivo ao Contrato nº 32/2024 tem valor de R$ 1.137.986,24 e vigência de 4 de setembro de 2026 a 3 de setembro de 2027. Assinado em 3 de setembro, o extrato foi publicado na primeira página do Diário Oficial do Estado de 8 de setembro.",
+        "O serviço abrange projeto, construção, testes, implantação, evolução e garantia de qualidade de sistemas, com profissionais de tecnologia vinculados ao alcance de resultados, sem dedicação exclusiva de mão de obra. A contratação prevê atendimento sob demanda, futuro e eventual. Por isso, o valor divulgado é o do aditivo, não uma comprovação de gasto já pago. O extrato identifica a Montreal pelo CNPJ 42.563.692/0001-26 e o processo nº 202418037003174, mas não lista quais sistemas serão atendidos nem as entregas previstas para cada um."
+      ],
+      "reference_numbers": [
+        "32/2024",
+        "202418037003174"
+      ],
+      "values": [
+        {
+          "original": "R$ 1.137.986,24",
+          "value": 1137986.24,
+          "currency": "BRL",
+          "label": "valor do aditivo de prorrogação"
+        }
+      ],
+      "value_highest": 1137986.24,
+      "importance": 112,
+      "news_value": {
+        "score": 112,
+        "reasons": [
+          "contrato estadual de tecnologia",
+          "prorrogação de 12 meses"
         ]
       }
     }
