@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-07T12:11:21.212Z",
+  "generated_at": "2026-09-08T10:45:08.344Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-09-07"
+    "to": "2026-09-08"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 136
+    "published_stories": 139
   },
   "items": [
     {
@@ -8332,6 +8332,192 @@
           "acesso à moradia",
           "192 candidatos",
           "serviço aos inscritos"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-08",
+      "published_at": "2026-09-08",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2756",
+      "edition_number": "2756",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2756-2026-09-08.pdf",
+      "document_sha256": "56191aa2a5702308b5dd6e17a7666b8df296ce98bdce496984d5a41842cddd1e",
+      "cnpjs": [],
+      "id": "tcmgo-2756-bom-jesus-limpeza-6-milhoes",
+      "city": "Bom Jesus de Goiás",
+      "act_date": "2026-09-02",
+      "page_start": 7,
+      "page_end": 10,
+      "document_reference": "Diário de Contas nº 2756 · páginas 6 a 10",
+      "external_identifier": "Processo 05617/2026 · Acórdão 06275/2026",
+      "official_title": "Denúncia sobre o Pregão Eletrônico 041/2026",
+      "act_type": "denuncia_em_apuracao",
+      "type_label": "Licitações e controle",
+      "title": "TCM cobra explicações sobre licitação de R$ 6,4 milhões em Bom Jesus de Goiás",
+      "deck": "Tribunal apura exclusão de 11 concorrentes e questionamentos à proposta vencedora, mas negou a suspensão para preservar os serviços de limpeza.",
+      "summary": "Gestores têm prazo regimental de dez dias para apresentar defesa; o mérito da denúncia ainda será analisado.",
+      "paragraphs": [
+        "O TCM-GO recebeu uma denúncia sobre o Pregão Eletrônico nº 041/2026 de Bom Jesus de Goiás, estimado em R$ 6.371.929,14 por ano para limpeza e conservação predial, e determinou que a prefeitura apresente esclarecimentos e defesa. O Acórdão nº 06275/2026, de 2 de setembro, publicado em 8 de setembro, aponta quatro questões a apurar: a inabilitação de 11 licitantes por falhas formais, a regularidade de documentação fiscal, a previsão de adicional de insalubridade e a capacidade da proposta vencedora de cobrir os custos trabalhistas. A denúncia foi apresentada pela empresa Seta Incorporadora e Prestadora de Serviços.",
+        "O prefeito Daniel Vieira Ramos Junior, o gestor Danillo Miguel Silva e o pregoeiro Gabriel Tomas Silva deverão responder no prazo regimental de dez dias. O Tribunal negou a suspensão cautelar por considerar que a interrupção dos serviços essenciais de limpeza poderia causar prejuízo à população. A decisão mantém a apuração em andamento: não declara fraude nem aplica multa pelos fatos denunciados. O alerta de possível multa refere-se ao eventual descumprimento das diligências, e o valor de R$ 6,4 milhões é uma estimativa da licitação, não um pagamento comprovado."
+      ],
+      "public_body": "Prefeitura de Bom Jesus de Goiás e TCM-GO",
+      "reference_numbers": [
+        "05617/2026",
+        "06275/2026",
+        "041/2026"
+      ],
+      "values": [
+        {
+          "original": "R$ 6.371.929,14",
+          "value": 6371929.14,
+          "currency": "BRL",
+          "label": "estimativa anual da licitação"
+        }
+      ],
+      "value_highest": 6371929.14,
+      "importance": 132,
+      "news_value": {
+        "score": 132,
+        "reasons": [
+          "competitividade da licitação",
+          "serviço essencial",
+          "defesas requisitadas"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-08",
+      "published_at": "2026-09-08",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id": "tcmgo:2756",
+      "edition_number": "2756",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2756-2026-09-08.pdf",
+      "document_sha256": "56191aa2a5702308b5dd6e17a7666b8df296ce98bdce496984d5a41842cddd1e",
+      "cnpjs": [],
+      "id": "tcmgo-2756-itaguaru-energia-solar-retomada",
+      "city": "Itaguaru",
+      "page_start": 53,
+      "page_end": 54,
+      "document_reference": "Diário de Contas nº 2756 · páginas 51 a 54",
+      "external_identifier": "Processo 04047/2026, fase 2 · Despacho 2951/2026",
+      "official_title": "Agravo contra suspensão de ata de registro de preços para energia solar",
+      "act_type": "decisao_provisoria_em_recurso",
+      "type_label": "Energia e controle",
+      "title": "TCM permite continuidade de projeto de energia solar em Itaguaru enquanto analisa recurso",
+      "deck": "Decisão suspende temporariamente uma cautelar e considera os prazos da concessionária e do financiamento; julgamento definitivo continua pendente.",
+      "summary": "Cinco unidades consumidoras já tinham aprovação técnica da concessionária, segundo o despacho.",
+      "paragraphs": [
+        "O TCM-GO permitiu a continuidade da execução da ata de registro de preços nº 06/2026 de Itaguaru, destinada à implantação de sistemas de energia solar, ao conceder efeito suspensivo ao recurso da prefeitura. O Despacho nº 2951/2026, publicado em 8 de setembro, interrompe temporariamente os efeitos da cautelar que havia paralisado a contratação do Pregão nº 01/2026. O objeto inclui projetos, equipamentos, instalação, regularização, monitoramento e manutenção de sistemas conectados à rede elétrica.",
+        "A decisão registra que a execução havia começado antes da cautelar e que cinco unidades consumidoras já contavam com aprovação técnica da Equatorial Goiás. Considera também o risco de perder prazos de vistoria e de comprometer o financiamento FINISA nº 0646350-29. O recurso foi apresentado pelo prefeito Joaquim Fernando Moreira Araújo e terá relatoria do conselheiro Humberto Aidar. A autorização é provisória e não resolve as suspeitas que motivaram a denúncia; o despacho não informa o valor da contratação nem comprova economia já obtida com a geração de energia."
+      ],
+      "public_body": "Prefeitura de Itaguaru e TCM-GO",
+      "reference_numbers": [
+        "04047/2026",
+        "2951/2026",
+        "04533/2026",
+        "06/2026",
+        "01/2026",
+        "0646350-29"
+      ],
+      "values": [],
+      "value_highest": null,
+      "importance": 123,
+      "news_value": {
+        "score": 123,
+        "reasons": [
+          "energia solar",
+          "mudança de cautelar",
+          "financiamento público"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-08",
+      "published_at": "2026-09-08",
+      "scope": "Municipal",
+      "source_id": "agm",
+      "source_name": "Diário Municipal de Goiás — AGM",
+      "source_label": "Fundo Municipal de Saúde de Trindade",
+      "official_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114622_2026-09-04_533db33441bc1cc2471ffa6784eb5c9d.pdf",
+      "source_landing_url": "https://www.diariomunicipal.com.br/agm/",
+      "edition_id": "agm:114622",
+      "edition_number": "3698",
+      "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-08-3698.pdf",
+      "document_sha256": "4b3c856435a9d714345a2220563ca3144f786b78d866d5307ac26e5788b95637",
+      "cnpjs": [
+        "18.670.548/0001-04"
+      ],
+      "id": "trindade-agm3698-saude-mental-me360-336-mil",
+      "city": "Trindade",
+      "act_date": "2026-08-31",
+      "page_start": 44,
+      "page_end": 44,
+      "document_reference": "Diário Municipal de Goiás nº 3698 · página 44",
+      "external_identifier": "Contrato 1268/2026 · Processo 25515/2026 · Portaria 060/2026",
+      "official_title": "Transferência de metodologia ME360 para programa de saúde mental de servidores",
+      "act_type": "contrato",
+      "type_label": "Saúde e contratos",
+      "title": "Trindade contrata R$ 336 mil em metodologia para saúde mental dos servidores da Saúde",
+      "deck": "Contrato de um ano prevê transferência do método ME360 para futura implantação de programa; contratação ocorreu por inexigibilidade.",
+      "summary": "Extrato informa a contratação de metodologia, sem comprovar atendimentos ou resultados de saúde.",
+      "paragraphs": [
+        "O Fundo Municipal de Saúde de Trindade contratou a Rede de Negócios Consultoria e Desenvolvimento Ltda. por R$ 336 mil para transferir a metodologia Mentalidade Empreendedora 360 (ME360), destinada à futura implantação de um programa de saúde mental, emocional e relacional para servidores da pasta. O contrato nº 1268/2026 foi assinado em 31 de agosto, tem vigência de 12 meses e foi publicado no Diário Municipal de Goiás de 8 de setembro. O objeto inclui valorização profissional e gerenciamento de riscos psicossociais no ambiente de trabalho.",
+        "A Portaria nº 060/2026 autorizou a contratação por inexigibilidade, com fundamento em treinamento e aperfeiçoamento de pessoal, e registra como justificativas a metodologia proprietária e a notória especialização. A empresa tem CNPJ 18.670.548/0001-04. O extrato não discrimina o número de servidores atendidos, a carga horária, os indicadores de resultado ou o cronograma de entregas. O valor é contratual e não comprova desembolso; a publicação também não demonstra que o programa já foi implantado ou produziu melhora na saúde dos trabalhadores."
+      ],
+      "public_body": "Fundo Municipal de Saúde de Trindade",
+      "reference_numbers": [
+        "1268/2026",
+        "25515/2026",
+        "059/2026",
+        "060/2026",
+        "E36A775C",
+        "4BB9D2B4"
+      ],
+      "values": [
+        {
+          "original": "R$ 336.000,00",
+          "value": 336000,
+          "currency": "BRL",
+          "label": "valor contratado para 12 meses"
+        }
+      ],
+      "value_highest": 336000,
+      "importance": 119,
+      "news_value": {
+        "score": 119,
+        "reasons": [
+          "saúde dos servidores",
+          "contratação direta",
+          "R$ 336 mil"
         ]
       }
     }

@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-09-07T12:04:27.677Z",
+  "generated_at": "2026-09-08T10:41:49.894Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-09-07",
+    "to": "2026-09-08",
     "last_checked": {
-      "from": "2026-09-01",
-      "to": "2026-09-07"
+      "from": "2026-09-02",
+      "to": "2026-09-08"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 326,
-    "downloaded": 326,
+    "editions": 327,
+    "downloaded": 327,
     "failed_downloads": 0,
-    "extraction_pending": 326
+    "extraction_pending": 327
   },
   "daily_check_windows": [
     {
@@ -1629,33 +1629,52 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:114622",
+          "source_edition_id": "114622",
+          "edition_number": "3698",
+          "date": "2026-09-08",
+          "published_at": "2026-09-04T18:38:21-03:00",
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114622_2026-09-04_533db33441bc1cc2471ffa6784eb5c9d.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-08-3698.pdf",
+          "bytes": 1663720,
+          "sha256": "4b3c856435a9d714345a2220563ca3144f786b78d866d5307ac26e5788b95637",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-07T12:04:16.674Z",
+      "checked_at": "2026-09-08T10:41:39.488Z",
       "range_checked": {
-        "from": "2026-09-01",
-        "to": "2026-09-07"
+        "from": "2026-09-02",
+        "to": "2026-09-08"
       },
       "summary": {
-        "editions_total": 82,
+        "editions_total": 83,
         "editions_in_checked_range": 5,
-        "downloaded": 82,
+        "downloaded": 83,
         "failed_downloads": 0,
-        "extraction_pending": 82,
+        "extraction_pending": 83,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-04",
+        "last_date": "2026-09-08",
         "observed_upload_times": {
           "all": {
-            "observations": 82,
+            "observations": 83,
             "earliest": "11:40",
-            "median": "18:39",
+            "median": "18:38",
             "latest": "20:04"
           },
           "ordinary": {
-            "observations": 64,
+            "observations": 65,
             "earliest": "12:30",
-            "median": "18:44",
+            "median": "18:42",
             "latest": "20:04"
           },
           "extraordinary": {
@@ -2809,14 +2828,14 @@
         },
         {
           "id": "anapolis:23893",
-          "source_edition_id": "23827",
+          "source_edition_id": "23893",
           "edition_number": "4.018/2026",
           "date": "2026-09-03",
-          "published_at": "2026-09-03 22:18:00",
+          "published_at": "2026-09-03 22:56:03",
           "publication_timestamp_kind": "official_file_created_timestamp",
           "extraordinary": false,
-          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23827",
-          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25081/T7198fsE2PRwGUqjMprwZSJ0tU3tFPAVfCIiAAUt.pdf",
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23893",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25114/K4GqeJ4SDNdzojRYEJhsRpCtYeEpoO1MzJDBiRye.pdf",
           "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-03-4.018-2026.pdf",
           "bytes": 621633,
           "sha256": "3e5ae4812d05745b12275ab0f914d9ac930d81d43043d00aa21ac3be2da66855",
@@ -2866,14 +2885,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-07T12:04:19.059Z",
+      "checked_at": "2026-09-08T10:41:41.843Z",
       "range_checked": {
-        "from": "2026-09-01",
-        "to": "2026-09-07"
+        "from": "2026-09-02",
+        "to": "2026-09-08"
       },
       "summary": {
         "editions_total": 62,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 62,
         "failed_downloads": 0,
         "extraction_pending": 62,
@@ -4101,14 +4120,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-07T12:04:19.663Z",
+      "checked_at": "2026-09-08T10:41:42.472Z",
       "range_checked": {
-        "from": "2026-09-01",
-        "to": "2026-09-07"
+        "from": "2026-09-02",
+        "to": "2026-09-08"
       },
       "summary": {
         "editions_total": 62,
-        "editions_in_checked_range": 4,
+        "editions_in_checked_range": 3,
         "downloaded": 62,
         "failed_downloads": 0,
         "extraction_pending": 62,
@@ -5228,14 +5247,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-07T12:04:22.653Z",
+      "checked_at": "2026-09-08T10:41:46.414Z",
       "range_checked": {
-        "from": "2026-09-01",
-        "to": "2026-09-07"
+        "from": "2026-09-02",
+        "to": "2026-09-08"
       },
       "summary": {
         "editions_total": 57,
-        "editions_in_checked_range": 4,
+        "editions_in_checked_range": 3,
         "downloaded": 57,
         "failed_downloads": 0,
         "extraction_pending": 57,
@@ -6472,14 +6491,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-07T12:04:24.073Z",
+      "checked_at": "2026-09-08T10:41:47.790Z",
       "range_checked": {
-        "from": "2026-09-01",
-        "to": "2026-09-07"
+        "from": "2026-09-02",
+        "to": "2026-09-08"
       },
       "summary": {
         "editions_total": 63,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 63,
         "failed_downloads": 0,
         "extraction_pending": 63,
