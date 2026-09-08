@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-09-08T10:41:49.894Z",
+  "generated_at": "2026-09-08T20:32:22.417Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 327,
-    "downloaded": 327,
+    "editions": 328,
+    "downloaded": 328,
     "failed_downloads": 0,
-    "extraction_pending": 327
+    "extraction_pending": 328
   },
   "daily_check_windows": [
     {
@@ -1648,25 +1648,44 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:121236",
+          "source_edition_id": "121236",
+          "edition_number": "3698a",
+          "date": "2026-09-08",
+          "published_at": "2026-09-08T17:12:02-03:00",
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": true,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_121236_2026-09-08_afdf820e8a7b523a7770f2dacf556842.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-08-3698a.pdf",
+          "bytes": 375903,
+          "sha256": "9989b4aac31b338a1c687840c59cbac7399664adf946f64a5c6a26022f4a344b",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-08T10:41:39.488Z",
+      "checked_at": "2026-09-08T20:32:13.559Z",
       "range_checked": {
         "from": "2026-09-02",
         "to": "2026-09-08"
       },
       "summary": {
-        "editions_total": 83,
-        "editions_in_checked_range": 5,
-        "downloaded": 83,
+        "editions_total": 84,
+        "editions_in_checked_range": 6,
+        "downloaded": 84,
         "failed_downloads": 0,
-        "extraction_pending": 83,
+        "extraction_pending": 84,
         "first_date": "2026-06-01",
         "last_date": "2026-09-08",
         "observed_upload_times": {
           "all": {
-            "observations": 83,
+            "observations": 84,
             "earliest": "11:40",
             "median": "18:38",
             "latest": "20:04"
@@ -1678,10 +1697,10 @@
             "latest": "20:04"
           },
           "extraordinary": {
-            "observations": 18,
+            "observations": 19,
             "earliest": "11:40",
             "median": "16:37",
-            "latest": "17:00"
+            "latest": "17:12"
           }
         },
         "observed_file_last_modified": null
@@ -2828,14 +2847,14 @@
         },
         {
           "id": "anapolis:23893",
-          "source_edition_id": "23893",
+          "source_edition_id": "23827",
           "edition_number": "4.018/2026",
           "date": "2026-09-03",
-          "published_at": "2026-09-03 22:56:03",
+          "published_at": "2026-09-03 22:18:00",
           "publication_timestamp_kind": "official_file_created_timestamp",
           "extraordinary": false,
-          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23893",
-          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25114/K4GqeJ4SDNdzojRYEJhsRpCtYeEpoO1MzJDBiRye.pdf",
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/23827",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25081/T7198fsE2PRwGUqjMprwZSJ0tU3tFPAVfCIiAAUt.pdf",
           "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-03-4.018-2026.pdf",
           "bytes": 621633,
           "sha256": "3e5ae4812d05745b12275ab0f914d9ac930d81d43043d00aa21ac3be2da66855",
@@ -2885,7 +2904,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-08T10:41:41.843Z",
+      "checked_at": "2026-09-08T20:32:15.904Z",
       "range_checked": {
         "from": "2026-09-02",
         "to": "2026-09-08"
@@ -4120,7 +4139,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-08T10:41:42.472Z",
+      "checked_at": "2026-09-08T20:32:16.598Z",
       "range_checked": {
         "from": "2026-09-02",
         "to": "2026-09-08"
@@ -5247,7 +5266,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-08T10:41:46.414Z",
+      "checked_at": "2026-09-08T20:32:20.779Z",
       "range_checked": {
         "from": "2026-09-02",
         "to": "2026-09-08"
@@ -6491,7 +6510,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-08T10:41:47.790Z",
+      "checked_at": "2026-09-08T20:32:22.163Z",
       "range_checked": {
         "from": "2026-09-02",
         "to": "2026-09-08"

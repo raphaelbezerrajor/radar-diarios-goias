@@ -8,7 +8,6 @@ import { compactNumber, formatDate, withBase } from "../lib/format.js";
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const hero = siteData.leadStory;
 const heroImage = withBase(hero.image?.src);
-const heroLead = hero.paragraphs?.[0] || hero.summary;
 const latest = siteData.timeline.stories
   .filter((story) => story.id !== hero.id && story.publicationMode !== "automatic_document_news")
   .slice(0, 6);
@@ -39,7 +38,6 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
           <div class="hero-meta hero-meta-top"><span>{hero.city}</span><span>{hero.type}</span><span>{formatDate(hero.date)}</span></div>
           <h1>{hero.title}</h1>
           <p class="hero-deck">{hero.deck}</p>
-          {heroLead && <p class="hero-summary">{heroLead}</p>}
           <div class="hero-actions">
             <a class="button-primary" href={withBase(hero.path)}>Ler matéria</a>
             <a class="button-secondary" href={`${baseHref}linha-do-tempo/`}>Ver as últimas</a>
@@ -47,7 +45,7 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
         </div>
       </article>
       <aside class="hero-side" aria-label="Outras notícias em destaque">
-        <div class="rail-heading"><p class="section-kicker">Em destaque</p><h2>Outros assuntos importantes</h2></div>
+        <div class="rail-heading"><p class="section-kicker">Em destaque</p><h2>Também é notícia</h2></div>
         <div class="stack-list">
           {siteData.heroSidebar.map((record) => (
             <a class="stack-item" href={withBase(record.path)}><span class="pill">{record.city}</span><strong>{record.title}</strong><small>{record.type} · {formatDate(record.date)}</small></a>
@@ -59,7 +57,7 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
 
   <section class="section-band section-band-newsprint content-auto">
     <div class="shell">
-      <SectionHeader kicker="Últimas notícias" title="O que apareceu nos documentos públicos" intro="Seleção por interesse público, impacto e atualidade. Atos rotineiros permanecem no acervo, sem disputar espaço com notícia." actionHref={`${baseHref}linha-do-tempo/`} actionLabel="Ver todas as notícias" />
+      <SectionHeader kicker="Últimas notícias" title="Goiás em pauta" actionHref={`${baseHref}linha-do-tempo/`} actionLabel="Ver todas as notícias" />
       <div class="story-grid story-grid-three">{latest.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}</div>
     </div>
   </section>

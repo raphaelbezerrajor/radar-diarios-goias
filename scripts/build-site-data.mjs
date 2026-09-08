@@ -320,7 +320,7 @@ function normalizeJulyDocumentNews(item, preview) {
     id: item.id,
     slug,
     path: `/base/${slug}/`,
-    cluster: item.source_id === "alego" ? "goias" : "municipios",
+    cluster: ["alego", "doego", "tcego"].includes(item.source_id) ? "goias" : "municipios",
     city: item.city,
     date: item.date,
     year: Number(String(item.date).slice(0, 4)),
