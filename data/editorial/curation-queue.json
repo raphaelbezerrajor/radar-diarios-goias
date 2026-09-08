@@ -19,8 +19,8 @@
   },
   "summary": {
     "candidates": 240,
-    "pending": 218,
-    "withBrief": 22,
+    "pending": 217,
+    "withBrief": 23,
     "existingBriefs": 65,
     "invalidBriefs": 0
   },
@@ -142,67 +142,6 @@
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
         "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114622-4CC1DCEB-73",
-      "status": "pending",
-      "date": "2026-09-08",
-      "city": "Indiara",
-      "scope": "Municipal",
-      "actType": "dispensa",
-      "typeLabel": "Dispensa",
-      "priority": 85,
-      "importance": 85,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO",
-        "extractedTitle": "Indiara publica TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO",
-        "extractedDeck": "contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante",
-        "extractedParagraphs": [
-          "FUNDO MUNICIPAL DE EDUCAÇÃO BASICA publicou dispensa na edição 3698 de Diário Municipal de Goiás — AGM, datada de 8 de setembro de 2026. contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante.",
-          "O maior valor monetário identificado no texto é R$ 65.492,11; as referências documentais incluem 14.133/21. A conferência deve ser feita no documento original, em página 26."
-        ],
-        "evidenceExcerpt": "FUNDO MUNICIPAL DE EDUCAÇÃO BASICA TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO Nº 231/2026 TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO Nº 231/2026 “Dispõe sobre termo de ratificação dispensa de licitação e dá outras providências.” O PREFEITO DO MUNICÍPIO DE INDIARA-GO, no uso de suas atribuições legais, e, Considerando que fora demonstrado a real necessidade de se contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante; Considerando que fora realizada planilha orçamentária de…",
-        "publicBody": "FUNDO MUNICIPAL DE EDUCAÇÃO BASICA",
-        "values": [
-          {
-            "original": "R$ 65.492,11",
-            "value": 65492.11,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 2.520,00",
-            "value": 2520,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "14.133/21"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "FUNDO MUNICIPAL DE EDUCAÇÃO BASICA",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114622_2026-09-04_533db33441bc1cc2471ffa6784eb5c9d.pdf",
-        "editionId": "agm:114622",
-        "editionNumber": "3698",
-        "pageStart": 26,
-        "pageEnd": 26,
-        "documentReference": "Edição 3698 · página 26",
-        "documentSha256": "4b3c856435a9d714345a2220563ca3144f786b78d866d5307ac26e5788b95637",
-        "actSha256": "39800a6be80e83281c2fba7cc6c7c9d8b9e6fbec4321dd1abb7bd89fc1aa341b"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
       }
     },
     {
@@ -15854,6 +15793,57 @@
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
         "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-anapolis-23134-b47e8dc194e6-22",
+      "status": "brief_exists",
+      "date": "2026-08-07",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "actType": "dispensa",
+      "typeLabel": "Dispensa",
+      "priority": 85,
+      "importance": 81,
+      "curationReasons": [
+        "controle, correção ou responsabilização"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº rente ao Item 03 da Dispensa Eletrônica nº 030/2025;",
+        "extractedTitle": "Anápolis publica TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº rente ao Item 03 da Dispensa Eletrônica nº 030/2025;",
+        "extractedDeck": "APLICAR à empresa SALES FERREIRA SOLUÇÕES LTDA. multa compensatória correspondente a 10% (dez por cento) sobre o va‐ O Secretário Municipal de Administração, Gestão de Pessoas e Ino‐ lor do Item 03 inadimplido, determinando ao setor competente a apura‐ vação, com ful",
+        "extractedParagraphs": [
+          "Município de Anápolis publicou dispensa na edição 3.999/2026 de Diário Oficial de Anápolis, datada de 7 de agosto de 2026. APLICAR à empresa SALES FERREIRA SOLUÇÕES LTDA. multa compensatória correspondente a 10% (dez por cento) sobre o va‐ O Secretário Municipal de Administração, Gestão de Pessoas e Ino‐ lor do Item 03 inadimplido, determinando ao setor competente a apura‐ vação, com ful.",
+          "as referências documentais incluem 110/2026, 01123.00015819/2026-68, 2073/92.. A conferência deve ser feita no documento original, em páginas 4 a 5."
+        ],
+        "evidenceExcerpt": "TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº rente ao Item 03 da Dispensa Eletrônica nº 030/2025; 017/2025 – RETIFICAÇÃO IV – APLICAR à empresa SALES FERREIRA SOLUÇÕES LTDA. multa compensatória correspondente a 10% (dez por cento) sobre o va‐ O Secretário Municipal de Administração, Gestão de Pessoas e Ino‐ lor do Item 03 inadimplido, determinando ao setor competente a apura‐ vação, com fulcro no art. 2º do Decreto Municipal 51.848/2025, em ção do valor devido e a adoção das medidas administrativas necessárias face…",
+        "publicBody": "Município de Anápolis",
+        "values": [],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "110/2026",
+          "01123.00015819/2026-68",
+          "2073/92."
+        ],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Anápolis",
+        "label": "Município de Anápolis",
+        "url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/24388/ECmId2CpaHoKXPtiZsssYudKzuHe7eisCsm7DNvP.pdf",
+        "editionId": "anapolis:23134",
+        "editionNumber": "3.999/2026",
+        "pageStart": 4,
+        "pageEnd": 5,
+        "documentReference": "Edição 3.999/2026 · páginas 4 a 5",
+        "documentSha256": "555a5b6013a0fa53349a7d990b507d06f5c97c314ada6fa05c861176127da313",
+        "actSha256": "b47e8dc194e6db27bb8173888b35f625c426e55b2ca1d301f0a04a271dd0f45d"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
       }
     }
   ]
