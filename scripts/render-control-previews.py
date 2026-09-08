@@ -67,6 +67,7 @@ def render_page(pdf_path: Path, page_number: int, target: Path) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source-root", type=Path, default=ROOT.parent / "trindade-aberta")
+    parser.add_argument("--record-id", action="append", default=[], help="Render only these IDs, preserving all other previews")
     args = parser.parse_args()
     source_root = args.source_root.resolve()
     payload = json.loads(DATA_PATH.read_text(encoding="utf-8"))
@@ -75,7 +76,11 @@ def main() -> None:
     cache: dict[tuple[str, int], dict] = {}
     failures = []
 
-    for item in payload.get("items", []):
+    selected = [item for item in payload.get("items", []) if not args.record_id or item["id"] in args.record_id]
+    missing = set(args.record_id) - {item["id"] for item in selected}
+    if missing:
+        raise ValueError(f"Unknown record IDs: {sorted(missing)}")
+    for item in selected:
         try:
             pdf_path = source_root / item["local_path"]
             contents = pdf_path.read_bytes()
@@ -111,7 +116,7 @@ def main() -> None:
         "failures": failures,
     }
     MANIFEST_PATH.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"rendered": len(payload.get("items", [])) - len(failures), "failures": failures}, ensure_ascii=False))
+    print(json.dumps({"rendered": len(selected) - len(failures), "failures": failures}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

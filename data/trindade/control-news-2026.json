@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-08T20:39:44.000Z",
+  "generated_at": "2026-09-08T22:34:37.995Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -8660,6 +8660,144 @@
         "reasons": [
           "contrato estadual de tecnologia",
           "prorrogação de 12 meses"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-08",
+      "published_at": "2026-09-08",
+      "scope": "Municipal",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial de Goiânia",
+      "source_label": "Diário Oficial de Goiânia",
+      "edition_id": "goiania:do_20260908_000008858.pdf",
+      "edition_number": "8858",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260908_000008858.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-08-8858.pdf",
+      "document_sha256": "129c302d9e2ded43791e34473a030f7ac0a04f833a8a6429eb4a0d5d042111b5",
+      "id": "goiania-8858-dimaster-reducao-multa",
+      "city": "Goiânia",
+      "act_date": "2026-09-04",
+      "page_start": 111,
+      "page_end": 112,
+      "document_reference": "DOM nº 8858 · decisão nas páginas 106–112 do PDF; dispositivo na página 111",
+      "external_identifier": "Processo 25.29.000035346-3 · SEI 9988472",
+      "official_title": "Decisão em recurso da Dimaster — Contrato 018/2025",
+      "act_type": "revisao_de_multa",
+      "type_label": "Saúde e fiscalização",
+      "public_body": "Gabinete do Prefeito e Secretaria Municipal de Saúde de Goiânia",
+      "title": "Goiânia reduz de 30% para 0,5% multa por atraso na entrega de medicamentos",
+      "deck": "Decisão mantém a responsabilidade da Dimaster pelo atraso, mas considera que os produtos foram entregues e que a sanção máxima era desproporcional.",
+      "summary": "Recurso foi parcialmente acolhido pelo prefeito Sandro Mabel em contrato emergencial de R$ 200.245.",
+      "paragraphs": [
+        "O prefeito de Goiânia, Sandro Mabel, reduziu de 30% para 0,5% do valor do contrato a multa aplicada à Dimaster Comércio de Produtos Hospitalares Ltda. por atraso no fornecimento de medicamentos à rede municipal de saúde. A decisão, assinada em 4 de setembro e publicada no Diário Oficial de 8 de setembro, mantém o reconhecimento do descumprimento contratual, mas acolhe parcialmente o recurso da empresa para diminuir a penalidade. O Contrato nº 018/2025, firmado em caráter emergencial, totaliza R$ 200.245; a multa não se confunde com esse valor contratado nem com pagamento realizado à fornecedora.",
+        "A Dimaster alegou dificuldades de abastecimento junto à indústria e pediu o afastamento ou a redução da sanção. A prefeitura rejeitou essa justificativa como motivo para excluir a responsabilidade, mas considerou que todas as entregas foram concluídas em 9 de outubro de 2025 e que os itens apontados na análise correspondiam a R$ 1.020. Segundo a decisão, aplicar o percentual máximo não seria proporcional à extensão da falha, ao fornecimento integral posterior e à ausência de prejuízo irreparável aos serviços. O processo nº 25.29.000035346-3 retorna à Secretaria de Saúde para comunicar a empresa e adotar as providências cabíveis; o ato não comprova recolhimento da multa nem declara a fornecedora isenta de responsabilidade."
+      ],
+      "cnpjs": [
+        "02.520.829/0001-40"
+      ],
+      "reference_numbers": [
+        "25.29.000035346-3",
+        "018/2025",
+        "9988472"
+      ],
+      "values": [
+        {
+          "original": "R$ 200.245,00",
+          "value": 200245,
+          "currency": "BRL",
+          "label": "valor global do contrato, não valor da multa"
+        }
+      ],
+      "value_highest": 200245,
+      "importance": 126,
+      "news_value": {
+        "score": 126,
+        "reasons": [
+          "revisão de sanção administrativa",
+          "fornecimento emergencial de medicamentos"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que foi revisto",
+          "text": "A multa foi reduzida de 30% para 0,5% sobre o contrato. A conclusão de atraso no fornecimento foi mantida."
+        },
+        {
+          "title": "O que a empresa alegou",
+          "text": "A defesa apontou problemas de abastecimento na indústria e entrega da maior parte do objeto. A decisão não aceitou afastar a responsabilidade, mas considerou a entrega integral posterior ao graduar a multa."
+        },
+        {
+          "title": "O que ainda depende de acompanhamento",
+          "text": "Notificação, cobrança e eventual recolhimento da multa não são comprovados pela publicação."
+        }
+      ]
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "date": "2026-09-08",
+      "published_at": "2026-09-08",
+      "scope": "Municipal",
+      "source_id": "anapolis",
+      "source_name": "Diário Oficial de Anápolis",
+      "source_label": "Diário Oficial de Anápolis",
+      "edition_id": "anapolis:23959",
+      "edition_number": "4.021/2026",
+      "official_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25213/ABBZX3kU2fuuCdBJ9h6vezCyyS95xHHtm8DB1nMi.pdf",
+      "source_landing_url": "https://dom.anapolis.go.gov.br/diarios/lista/23959",
+      "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-08-4.021-2026.pdf",
+      "document_sha256": "1262f6c308cfaba078a2dcc30837cc78cb0aba5ec9c5763bc03f5e242dd7a008",
+      "id": "anapolis-4021-atendimento-digital-emergencial",
+      "city": "Anápolis",
+      "page_start": 5,
+      "page_end": 5,
+      "document_reference": "DOM nº 4.021/2026 · página 5",
+      "external_identifier": "Ato Declaratório 01/2026 · Processo 01123.00019786/2026-25",
+      "official_title": "Dispensa emergencial para atendimento digital ao cidadão",
+      "act_type": "dispensa_emergencial",
+      "type_label": "Serviços digitais",
+      "public_body": "Secretaria Municipal de Governo de Anápolis",
+      "title": "Anápolis autoriza R$ 348 mil para manter atendimento digital com WhatsApp",
+      "deck": "Dispensa emergencial prevê dez meses de serviço; prefeitura cita risco de interrupção do canal oficial de atendimento ao cidadão.",
+      "summary": "Ato autoriza contratar a Virtual Sistemas e Tecnologia; a formalização do contrato ainda é prevista no documento.",
+      "paragraphs": [
+        "A Secretaria de Governo de Anápolis autorizou a contratação emergencial da Virtual Sistemas e Tecnologia Ltda. por R$ 348.333,38 para manter uma solução de atendimento digital ao cidadão integrada à API oficial do WhatsApp Business. O prazo previsto é de dez meses. Publicado em 8 de setembro, o Ato Declaratório nº 01/2026 justifica a dispensa de licitação pelo caráter transitório da contratação e pelo risco de interrupção do canal, classificado como crítico na análise administrativa citada no documento.",
+        "O ato foi assinado pelo secretário Bruno Rios Rolim e integra o processo nº 01123.00019786/2026-25. A empresa está inscrita no CNPJ 10.445.420/0001-35. A publicação estabelece que a contratação será formalizada por contrato administrativo, mas não apresenta esse instrumento, o volume de atendimentos, as metas de resposta ou os pagamentos. Portanto, o valor é o previsto para a contratação autorizada: o documento não comprova que o serviço tenha sido interrompido nem que a despesa já tenha sido paga."
+      ],
+      "cnpjs": [
+        "10.445.420/0001-35"
+      ],
+      "reference_numbers": [
+        "01/2026",
+        "01123.00019786/2026-25"
+      ],
+      "values": [
+        {
+          "original": "R$ 348.333,38",
+          "value": 348333.38,
+          "currency": "BRL",
+          "label": "valor previsto para contratação autorizada"
+        }
+      ],
+      "value_highest": 348333.38,
+      "importance": 111,
+      "news_value": {
+        "score": 111,
+        "reasons": [
+          "continuidade do atendimento ao cidadão",
+          "contratação emergencial"
         ]
       }
     }
