@@ -65,13 +65,13 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
   <section class="section-band content-auto">
     <div class="shell section-split-editorial">
       <div>
-        <SectionHeader kicker="Controle público" title="Decisões de TCM e TCE, sem juridiquês" intro="Multas, alertas, cautelares e correções são apresentados com o estágio do processo e os limites do que a decisão permite afirmar." actionHref={`${baseHref}controle/`} actionLabel="Abrir Controle" />
+        <SectionHeader kicker="Controle público" title="O que decidiram os tribunais de contas" intro="Entenda as multas, os alertas e as decisões do TCM e do TCE — e o que ainda está em apuração." actionHref={`${baseHref}controle/`} actionLabel="Ver decisões" />
         <div class="brief-list">{control.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="hide" />)}</div>
       </div>
       <aside class="editorial-principle">
         <p class="section-kicker">Nosso método</p><h2>Fato primeiro. Contexto logo depois.</h2>
         <p>Cada matéria responde o que aconteceu, quem está envolvido, quanto dinheiro aparece e o que ainda não pode ser concluído.</p>
-        <dl><div><dt>{compactNumber(siteData.metrics.repositoryRecords)}</dt><dd>documentos pesquisáveis</dd></div><div><dt>{compactNumber(siteData.timeline.total)}</dt><dd>notícias relevantes em {siteData.timeline.year}</dd></div></dl>
+        <dl><div><dt>{compactNumber(siteData.metrics.repositoryRecords)}</dt><dd>registros pesquisáveis</dd></div><div><dt>{compactNumber(siteData.timeline.total)}</dt><dd>notícias em {siteData.timeline.year}</dd></div></dl>
         <a class="button-secondary" href={`${baseHref}pauteiro/`}>Como o Pauteiro trabalha</a>
       </aside>
     </div>
@@ -79,7 +79,7 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
 
   <section class="section-band section-band-contrast content-auto">
     <div class="shell">
-      <SectionHeader kicker="Municípios" title="Dinheiro, serviços e decisões perto do leitor" intro="Contratos, licitações, orçamento, obras e políticas públicas entram em uma única cobertura municipal — sem portais paralelos." actionHref={`${baseHref}municipios/`} actionLabel="Abrir Municípios" />
+      <SectionHeader kicker="Municípios" title="O que muda nas cidades" intro="Onde o dinheiro público será usado, quais serviços estão previstos e o que as prefeituras decidiram." actionHref={`${baseHref}municipios/`} actionLabel="Ver municípios" />
       <div class="story-grid story-grid-three">{municipalities.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}</div>
       <div class="city-shortcuts" aria-label="Acesso rápido por município">{quickCities.map((item) => <a href={item.href}>{item.label}</a>)}</div>
     </div>

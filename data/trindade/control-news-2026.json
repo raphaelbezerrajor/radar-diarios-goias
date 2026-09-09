@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-09T20:35:23.449Z",
+  "generated_at": "2026-09-09T22:39:47.641Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -9137,6 +9137,75 @@
         {
           "title": "O que a lei não prevê",
           "text": "O texto não cria dotação, evento, benefício financeiro ou regra de trânsito."
+        }
+      ]
+    },
+    {
+      "id": "goiania-8859-saude-sindicancia-30-processos",
+      "date": "2026-09-09",
+      "act_date": "2026-09-04",
+      "published_at": "2026-09-09",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "source_id": "goiania",
+      "source_name": "Diário Oficial de Goiânia",
+      "source_label": "Goiânia",
+      "edition_id": "goiania:do_20260909_000008859.pdf",
+      "edition_number": "8859",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260909_000008859.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-09-8859.pdf",
+      "document_sha256": "247966c17466b227393d7c3bbe12bd8182cf250343fad08fea3a11c11625fedd",
+      "page_start": 65,
+      "page_end": 66,
+      "document_reference": "DOM nº 8859 · páginas 65–66",
+      "external_identifier": "Portaria 640/2026 · Processo SEI 26.29.000007886-7",
+      "official_title": "Instaura Processo de Sindicância Administrativa para apuração de irregularidades funcionais, eventual prescrição punitiva no âmbito da Secretaria Municipal de Saúde",
+      "act_type": "instauracao_sindicancia",
+      "type_label": "Saúde e fiscalização",
+      "public_body": "Secretaria Municipal de Saúde de Goiânia",
+      "title": "Goiânia abre investigação sobre 30 processos da Saúde e possível perda de prazo para punir",
+      "deck": "Sindicância reúne casos antes separados e terá 60 dias para apuração; portaria não aponta culpados nem quantifica prejuízo.",
+      "summary": "Apuração vai verificar eventuais falhas e prescrição na Secretaria de Saúde, sem conclusão antecipada sobre responsabilidades.",
+      "paragraphs": [
+        "A Secretaria Municipal de Saúde de Goiânia abriu uma sindicância para investigar possíveis falhas na tramitação de 30 processos, incluindo paralisações injustificadas e eventual perda do prazo para aplicar punições. A medida foi publicada em 9 de setembro no Diário Oficial. Em vez de manter apurações separadas, a pasta reuniu os casos em um único procedimento e suspendeu o andamento dos processos de origem. A investigação deverá verificar o que ocorreu, quem eventualmente deu causa aos atrasos e se houve prejuízo ao serviço público ou aos cofres municipais.",
+        "A Portaria nº 640, datada de 4 de setembro e assinada eletronicamente no dia 8 pelo secretário Luiz Gaspar Machado Pellizzer, prevê 60 dias para a apuração, prorrogáveis por mais 60 mediante pedido escrito. O texto cita recomendações da Controladoria e da Corregedoria municipais e permite incorporar outros casos relacionados. A comissão poderá colher provas e ouvir envolvidos, com direito à defesa. O resultado ainda está em aberto: pode haver arquivamento, penalidade ou abertura de processo disciplinar. A publicação não identifica acusados, não informa valores de possível prejuízo e não permite concluir que os 30 casos tenham prescrito."
+      ],
+      "cnpjs": [],
+      "reference_numbers": [
+        "640/2026",
+        "26.29.000007886-7",
+        "781/2026"
+      ],
+      "values": [],
+      "value_highest": 0,
+      "importance": 137,
+      "news_value": {
+        "score": 137,
+        "reasons": [
+          "apuração envolvendo 30 processos da Saúde",
+          "possível perda do prazo de punição",
+          "responsabilidades ainda em investigação"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "Por que isso importa",
+          "text": "A investigação busca esclarecer se falhas no andamento dos processos impediram a apuração e a punição de eventuais infrações no serviço de saúde. Esse risco é o objeto da sindicância, não uma conclusão já demonstrada."
+        },
+        {
+          "title": "O que significa prescrição aqui",
+          "text": "A portaria trata da eventual perda do prazo para exercer o poder de punir. Ela não declara que isso ocorreu em todos os processos e determina que a comissão apure as circunstâncias e responsabilidades."
+        },
+        {
+          "title": "O que acompanhar agora",
+          "text": "O relatório conclusivo, eventual prorrogação e as decisões posteriores. Os nomes apresentados como integrantes da comissão são de responsáveis pela investigação, não de acusados."
         }
       ]
     }
