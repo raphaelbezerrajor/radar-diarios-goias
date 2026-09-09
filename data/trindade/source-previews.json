@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-08T22:35:18.752711+00:00",
+  "generated_at": "2026-09-09T12:10:55.821146+00:00",
   "policy": "Renderização integral da página oficial em WebP; conteúdo textual não é reescrito.",
   "items": [
     {
@@ -736,6 +736,18 @@
       "preview_sha256": "163ede73284d5b5486806e402f2bfbd40bc0f3b4e903b50a648f1f4e66b34e77"
     },
     {
+      "record_id": "canedo-486-publicidade-mancini-3-milhoes",
+      "source_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=09-09-2026",
+      "source_sha256": "5f2775b7affb8dde553396bf20fb94d445c5020acc316fa0cb26d04d92429c01",
+      "generated_at": "2026-09-09T12:10:54.103197+00:00",
+      "src": "/assets/sources/control/5f2775b7affb8dde55-p-11.webp",
+      "page": 11,
+      "width": 909,
+      "height": 1287,
+      "bytes": 139676,
+      "preview_sha256": "0683097e9701e4b002783f9d92231e8f86c33635c73052c4a703a2931ec69ec5"
+    },
+    {
       "record_id": "doego-24839-goinfra-go070-263-milhoes",
       "source_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7311",
       "source_sha256": "729303c63b23c05d8ca17a424a6e4e9399438146ba32cf54a75a13924bdf483f",
@@ -1274,6 +1286,18 @@
       "height": 1287,
       "bytes": 156626,
       "preview_sha256": "c88b68d337824ffc943699e23cd74e2cacc14160e1a10e3cd710ac91cab68eb1"
+    },
+    {
+      "record_id": "doego-24860-sgg-manutencao-predial",
+      "source_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7354",
+      "source_sha256": "5977808faba1e7b5c23819507608f0900eb082ecfbdc3028365813323192f499",
+      "generated_at": "2026-09-09T12:10:55.821146+00:00",
+      "src": "/assets/sources/control/5977808faba1e7b5c2-p-1.webp",
+      "page": 1,
+      "width": 910,
+      "height": 1287,
+      "bytes": 187338,
+      "preview_sha256": "b39e66bfd7a341c8e38f06d886a48b5458317e28b2afcdf8d226335bbb8a8c2f"
     },
     {
       "record_id": "goiania-8845-saude-laboratorios-20-milhoes",
@@ -4946,6 +4970,30 @@
       "height": 1287,
       "bytes": 104906,
       "preview_sha256": "e3df9ba23b954bfba421d4b9c0c37183ed95bce25bc693cb6d923d1f3c5fd0f0"
+    },
+    {
+      "record_id": "tcmgo-2757-guarani-multa-descumprimento",
+      "source_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_sha256": "8c9e007866105081ff6f550dbfd925ebb712760518bd17a1c331a47767edf4f3",
+      "generated_at": "2026-09-09T12:10:54.730706+00:00",
+      "src": "/assets/sources/control/8c9e007866105081ff-p-54.webp",
+      "page": 54,
+      "width": 910,
+      "height": 1287,
+      "bytes": 100216,
+      "preview_sha256": "71c5f19255a6eb78a3abe228c69df3e5036977037983170f96c4eecd221f91b0"
+    },
+    {
+      "record_id": "tcmgo-2757-itumbiara-combustiveis-improcedente",
+      "source_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_sha256": "8c9e007866105081ff6f550dbfd925ebb712760518bd17a1c331a47767edf4f3",
+      "generated_at": "2026-09-09T12:10:55.187085+00:00",
+      "src": "/assets/sources/control/8c9e007866105081ff-p-58.webp",
+      "page": 58,
+      "width": 910,
+      "height": 1287,
+      "bytes": 92754,
+      "preview_sha256": "f71c39fd05f452ef48970bc215251e814d95d1d0a2f2b83cb3a670b98c70f68f"
     },
     {
       "record_id": "trindade-3686a-saude-vagas-agentes-comunitarios",
