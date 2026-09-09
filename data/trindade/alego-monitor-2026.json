@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Monitoramento documental, legislativo e financeiro da Assembleia Legislativa de Goias",
-  "generated_at": "2026-09-08T22:31:17.688Z",
+  "generated_at": "2026-09-09T12:05:18.001Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-09-08",
+    "to": "2026-09-09",
     "last_checked": {
-      "from": "2026-09-02",
-      "to": "2026-09-08"
+      "from": "2026-09-03",
+      "to": "2026-09-09"
     }
   },
   "summary": {
@@ -17,10 +17,10 @@
     "downloaded_diaries": 31,
     "failed_diary_downloads": 0,
     "extraction_pending": 31,
-    "vote_rows": 5881,
-    "roll_calls": 265,
+    "vote_rows": 6033,
+    "roll_calls": 272,
     "contracts": 86,
-    "current_contracts": 69,
+    "current_contracts": 68,
     "sanctions_registers": 1,
     "analysis_queue": 30
   },
@@ -73,8 +73,8 @@
       "status": "checked",
       "collection_method": "api_publica_oficial",
       "summary": {
-        "rows": 5881,
-        "roll_calls": 265
+        "rows": 6033,
+        "roll_calls": 272
       }
     },
     {
@@ -85,7 +85,7 @@
       "collection_method": "api_publica_oficial",
       "summary": {
         "records": 86,
-        "current": 69
+        "current": 68
       }
     },
     {
@@ -100,6 +100,16 @@
     }
   ],
   "analysis_queue": [
+    {
+      "id": "alego-votacao:2026-09-08:42012",
+      "type": "votacao_nominal",
+      "date": "2026-09-08",
+      "priority": 90,
+      "title": "OBRIGA OS ESTABELECIMENTOS DE SAÚDE NO ESTADO DE GOIÁS A DISPONIBILIZAREM MACAS E CADEIRAS DE RODAS ADEQUADAS AO ATENDIMENTO DE PESSOAS OBESAS. (PROCESSO RECONSTITUÍDO EM 12/12/2024)",
+      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 42012 · 68ª SESSÃO ORDINÁRIA HÍBRIDA"
+    },
     {
       "id": "alego-votacao:2026-09-02:41828",
       "type": "votacao_nominal",
@@ -389,16 +399,6 @@
       "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
       "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
       "document_reference": "Pauta 38488 · 47ª SESSÃO ORDINÁRIA HÍBRIDA"
-    },
-    {
-      "id": "alego-votacao:2026-06-18:38486",
-      "type": "votacao_nominal",
-      "date": "2026-06-18",
-      "priority": 90,
-      "title": "ALTERA A LEI N° 21.880, DE 20 DE ABRIL DE 2023, QUE AUTORIZA O PODER EXECUTIVO A INSTITUIR O SERVIÇO SOCIAL AUTÔNOMO DE ASSISTÊNCIA À SAÚDE DOS SERVIDORES PÚBLICOS E MILITARES DO ESTADO DE GOIÁS —IPASGO SAÚDE.",
-      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 24 sim, 0 nao, 0 abstencoes.",
-      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
-      "document_reference": "Pauta 38486 · 47ª SESSÃO ORDINÁRIA HÍBRIDA"
     }
   ]
 }

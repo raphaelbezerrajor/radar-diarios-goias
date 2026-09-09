@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-08T22:34:37.995Z",
+  "generated_at": "2026-09-09T12:10:08.724Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -8798,6 +8798,283 @@
         "reasons": [
           "continuidade do atendimento ao cidadão",
           "contratação emergencial"
+        ]
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "published_at": "2026-09-09",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "scope": "Municipal",
+      "cnpjs": [
+        "10.483.412/0001-83"
+      ],
+      "id": "canedo-486-publicidade-mancini-3-milhoes",
+      "city": "Senador Canedo",
+      "source_id": "senador-canedo",
+      "source_name": "Diário Oficial de Senador Canedo",
+      "source_label": "Senador Canedo",
+      "edition_id": "senador-canedo:682",
+      "edition_number": "486",
+      "official_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=09-09-2026",
+      "source_landing_url": "https://diario.senadorcanedo.go.gov.br/diario/n781117485",
+      "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-09-486.pdf",
+      "document_sha256": "5f2775b7affb8dde553396bf20fb94d445c5020acc316fa0cb26d04d92429c01",
+      "act_date": "2026-09-08",
+      "page_start": 11,
+      "page_end": 12,
+      "document_reference": "DOM nº 486 · extrato nas páginas 10–12; valores na página 11",
+      "external_identifier": "6º aditivo · Contrato 03.09.10.001/2021 · Processo 36.710/2026",
+      "official_title": "Sexto termo aditivo excepcional ao contrato de publicidade da Mancini",
+      "act_type": "aditivo_publicidade",
+      "type_label": "Publicidade e dinheiro público",
+      "public_body": "Prefeitura de Senador Canedo",
+      "title": "Senador Canedo prorroga publicidade por R$ 3 milhões até dezembro",
+      "deck": "Aditivo com a Mancini reserva R$ 2 milhões à Comunicação e R$ 1 milhão ao Meio Ambiente; extrato não identifica veículos beneficiários.",
+      "summary": "Prorrogação excepcional vai de 10 de setembro a 31 de dezembro de 2026, sem comprovar pagamentos já realizados.",
+      "paragraphs": [
+        "Senador Canedo prorrogou o contrato de publicidade com a Mancini Comunicação e Marketing Ltda. por R$ 3 milhões, com vigência de 10 de setembro a 31 de dezembro de 2026. O sexto aditivo, identificado como excepcional e publicado em 9 de setembro, mantém serviços de planejamento, criação, intermediação e distribuição de publicidade da prefeitura e de órgãos municipais. No quadro apresentado como empenho, o extrato vincula R$ 2 milhões à Secretaria de Comunicação e Eventos e R$ 1 milhão à Agência Municipal de Meio Ambiente; as demais unidades listadas aparecem com valor zero.",
+        "O contrato nº 03.09.10.001/2021 decorre da Concorrência nº 001/2021. A agência contratada tem CNPJ 10.483.412/0001-83, e o novo aditivo integra o processo 36.710/2026. O documento informa o orçamento do período, mas não apresenta campanhas, ordens de inserção, produtoras, veículos de comunicação ou pagamentos individualizados. Por isso, os R$ 3 milhões não podem ser tratados como dinheiro já recebido pela agência ou pela mídia: a distribuição efetiva depende da execução contratual e dos registros de liquidação e pagamento."
+      ],
+      "reference_numbers": [
+        "03.09.10.001/2021",
+        "36.710/2026",
+        "001/2021"
+      ],
+      "values": [
+        {
+          "original": "R$ 3.000.000,00",
+          "value": 3000000,
+          "currency": "BRL",
+          "label": "valor total do aditivo; não comprova pagamento"
+        }
+      ],
+      "value_highest": 3000000,
+      "importance": 142,
+      "news_value": {
+        "score": 142,
+        "reasons": [
+          "publicidade municipal",
+          "destinação de R$ 3 milhões até dezembro",
+          "distribuição dos recursos ainda não identificada"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "De onde vêm os recursos",
+          "text": "O extrato vincula R$ 2 milhões à Comunicação e Eventos e R$ 1 milhão à Agência Municipal de Meio Ambiente."
+        },
+        {
+          "title": "Quem foi contratado",
+          "text": "Mancini Comunicação e Marketing Ltda. A identificação da agência não revela quais veículos ou produtoras receberão valores na execução."
+        },
+        {
+          "title": "O que falta acompanhar",
+          "text": "Campanhas, ordens de inserção, notas fiscais, liquidações e pagamentos por beneficiário ainda precisam ser localizados."
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "published_at": "2026-09-09",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "scope": "Municipal",
+      "cnpjs": [],
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "edition_id": "tcmgo:2757",
+      "edition_number": "2757",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2757-2026-09-09.pdf",
+      "document_sha256": "8c9e007866105081ff6f550dbfd925ebb712760518bd17a1c331a47767edf4f3",
+      "act_date": "2026-09-02",
+      "id": "tcmgo-2757-guarani-multa-descumprimento",
+      "city": "Guarani de Goiás",
+      "page_start": 54,
+      "page_end": 55,
+      "document_reference": "DOC nº 2757 · páginas 53–55",
+      "external_identifier": "Processo 05646/2025, fase 2 · Acórdão 06294/2026",
+      "official_title": "Descumprimento do Acórdão 05509/2025",
+      "act_type": "multa_por_descumprimento",
+      "type_label": "Fiscalização e multa",
+      "public_body": "TCM-GO e Prefeitura de Guarani de Goiás",
+      "title": "TCM multa prefeito de Guarani de Goiás por descumprir decisão sobre licitação de eventos",
+      "deck": "Multa de R$ 5.178,25 decorre da falta de cumprimento de determinações; pregão fiscalizado tinha estimativa de R$ 3,1 milhões.",
+      "summary": "Tribunal afirma que o gestor teve duas oportunidades de manifestação sem apresentar resposta.",
+      "paragraphs": [
+        "O TCM-GO aplicou multa de R$ 5.178,25 ao prefeito de Guarani de Goiás, Janézio Pereira da Silva, por descumprir determinações de uma decisão anterior sobre a licitação de estruturas para eventos. O Acórdão nº 06294/2026, aprovado em 2 de setembro e publicado em 9 de setembro, trata do monitoramento do Pregão Eletrônico nº 03/2025, estimado em R$ 3.122.068,46 para locação eventual de equipamentos eletrônicos, som, palcos e outras estruturas. Esse valor é a estimativa da disputa, não o valor da multa nem um prejuízo comprovado.",
+        "Segundo a decisão, não foram cumpridos os subitens 8.1, 8.2 e 8.3 do Acórdão nº 05509/2025, e o gestor teve duas oportunidades de manifestação sem responder. O Tribunal considerou que a omissão prejudicou o acompanhamento de suas determinações, encaminhou a decisão à área de contas para avaliar eventual repercussão nas contas de governo de 2025 e mandou comunicar os interessados. A publicação confirma a aplicação da sanção por descumprimento, mas não comprova seu pagamento ou o encerramento de eventual possibilidade de recurso; também não detalha no dispositivo atual o conteúdo das três medidas exigidas anteriormente."
+      ],
+      "reference_numbers": [
+        "05646/2025",
+        "06294/2026",
+        "05509/2025",
+        "03/2025"
+      ],
+      "values": [
+        {
+          "original": "R$ 5.178,25",
+          "value": 5178.25,
+          "currency": "BRL",
+          "label": "multa aplicada por descumprimento"
+        }
+      ],
+      "value_highest": 5178.25,
+      "importance": 130,
+      "news_value": {
+        "score": 130,
+        "reasons": [
+          "sanção efetivamente aplicada",
+          "descumprimento de decisão de controle"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "Motivo da multa",
+          "text": "O julgamento pune o descumprimento de determinações anteriores, não quantifica dano financeiro na licitação."
+        },
+        {
+          "title": "Manifestação do gestor",
+          "text": "O acórdão registra duas oportunidades de manifestação sem resposta. A publicação não contém versão posterior do prefeito."
+        },
+        {
+          "title": "Próximos documentos",
+          "text": "Acórdão 05509/2025, comprovantes de notificação, eventual recurso e recolhimento da multa."
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "published_at": "2026-09-09",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "scope": "Municipal",
+      "cnpjs": [],
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "edition_id": "tcmgo:2757",
+      "edition_number": "2757",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2757-2026-09-09.pdf",
+      "document_sha256": "8c9e007866105081ff6f550dbfd925ebb712760518bd17a1c331a47767edf4f3",
+      "act_date": "2026-09-02",
+      "id": "tcmgo-2757-itumbiara-combustiveis-improcedente",
+      "city": "Itumbiara",
+      "page_start": 58,
+      "page_end": 59,
+      "document_reference": "DOC nº 2757 · páginas 57–59",
+      "external_identifier": "Processo 09176/2025 · Acórdão 06296/2026",
+      "official_title": "Denúncia sobre o Pregão Eletrônico 35/2025",
+      "act_type": "denuncia_improcedente",
+      "type_label": "Licitação e controle",
+      "public_body": "TCM-GO e Prefeitura de Itumbiara",
+      "title": "TCM rejeita denúncia contra licitação de R$ 9,7 milhões para abastecimento em Itumbiara",
+      "deck": "Tribunal não confirmou restrição à competição nos pontos questionados pela Prime Consultoria, incluindo habilitação da Volus.",
+      "summary": "Decisão limita suas conclusões aos fatos denunciados e determina arquivamento após o trânsito em julgado.",
+      "paragraphs": [
+        "O TCM-GO julgou improcedente uma denúncia contra o Pregão Eletrônico nº 35/2025 de Itumbiara, estimado em R$ 9.706.771,60 para 12 meses de gerenciamento do abastecimento da frota municipal por cartões eletrônicos e rede credenciada de postos. A Prime Consultoria e Serviços Ltda. questionava possíveis restrições à competitividade. No Acórdão nº 06296/2026, de 2 de setembro, publicado em 9 de setembro, o Tribunal concluiu que houve justificativa para impedir taxa de administração negativa, que a ordem dos critérios de desempate foi respeitada e que as irregularidades alegadas na habilitação da Volus Instituição de Pagamentos Ltda. não foram constatadas.",
+        "A decisão no processo nº 09176/2025 afasta os questionamentos examinados, mas ressalva que a análise não substitui outras fiscalizações sobre fatos diferentes. O arquivamento foi determinado para depois do trânsito em julgado, sem comprovação de que essa etapa já tenha ocorrido na data da publicação. O montante de R$ 9,7 milhões é uma estimativa do registro de preços: não demonstra combustível consumido, serviços executados ou pagamentos à empresa."
+      ],
+      "reference_numbers": [
+        "09176/2025",
+        "06296/2026",
+        "35/2025"
+      ],
+      "values": [
+        {
+          "original": "R$ 9.706.771,60",
+          "value": 9706771.6,
+          "currency": "BRL",
+          "label": "estimativa para 12 meses, não pagamento"
+        }
+      ],
+      "value_highest": 9706771.6,
+      "importance": 121,
+      "news_value": {
+        "score": 121,
+        "reasons": [
+          "desfecho de denúncia",
+          "abastecimento da frota municipal"
+        ]
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "published_at": "2026-09-09",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "scope": "Estadual",
+      "cnpjs": [
+        "28.313.205/0001-46"
+      ],
+      "id": "doego-24860-sgg-manutencao-predial",
+      "city": "Goiás",
+      "source_id": "doego",
+      "source_name": "Diário Oficial do Estado de Goiás",
+      "source_label": "DOE-GO",
+      "edition_id": "doego:7354",
+      "edition_number": "24860",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7354",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7354/",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-09-edicao-7354.pdf",
+      "document_sha256": "5977808faba1e7b5c23819507608f0900eb082ecfbdc3028365813323192f499",
+      "act_date": "2026-09-05",
+      "page_start": 1,
+      "page_end": 1,
+      "document_reference": "DOE nº 24.860 · página 1 · protocolo 650666",
+      "external_identifier": "4º aditivo ao Contrato 12/2022-SGG · Processo 202218037004607",
+      "official_title": "Prorrogação de manutenção predial da SGG",
+      "act_type": "aditivo_contratual",
+      "type_label": "Contratos estaduais",
+      "public_body": "Secretaria-Geral de Governo de Goiás",
+      "title": "Goiás renova manutenção predial da SGG por R$ 1,56 milhão sem reajuste",
+      "deck": "Prorrogação de 12 meses mantém a R.P.A Construtora até setembro de 2027, com fornecimento de materiais e mão de obra.",
+      "summary": "Valor corresponde ao aditivo; extrato não comprova serviços executados nem pagamentos.",
+      "paragraphs": [
+        "A Secretaria-Geral de Governo de Goiás prorrogou por mais 12 meses o contrato de manutenção de suas instalações com a R.P.A Construtora e Serviços Terceirizados Ltda. O quarto aditivo ao Contrato nº 12/2022 soma R$ 1.559.980,50, sem reajuste dos preços contratados, e vigora de 9 de setembro de 2026 a 8 de setembro de 2027. O documento foi assinado em 5 de setembro e publicado no Diário Oficial do Estado de 9 de setembro.",
+        "O objeto inclui manutenção preventiva, corretiva e preditiva, peças, materiais de consumo, insumos, mão de obra e serviços eventuais em sistemas, equipamentos e instalações usados pela SGG. A empresa é identificada pelo CNPJ 28.313.205/0001-46, no processo nº 202218037004607. O extrato não discrimina os prédios, o calendário de intervenções ou as medições: o valor é o da prorrogação, não uma comprovação de serviços realizados ou pagamentos efetuados."
+      ],
+      "reference_numbers": [
+        "12/2022",
+        "202218037004607"
+      ],
+      "values": [
+        {
+          "original": "R$ 1.559.980,50",
+          "value": 1559980.5,
+          "currency": "BRL",
+          "label": "valor do aditivo de prorrogação"
+        }
+      ],
+      "value_highest": 1559980.5,
+      "importance": 110,
+      "news_value": {
+        "score": 110,
+        "reasons": [
+          "manutenção de instalações públicas",
+          "prorrogação sem reajuste"
         ]
       }
     }
