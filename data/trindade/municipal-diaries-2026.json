@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-09-09T12:06:01.327Z",
+  "generated_at": "2026-09-09T20:32:55.298Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 333,
-    "downloaded": 333,
+    "editions": 334,
+    "downloaded": 334,
     "failed_downloads": 0,
-    "extraction_pending": 333
+    "extraction_pending": 334
   },
   "daily_check_windows": [
     {
@@ -1689,7 +1689,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-09T12:05:16.642Z",
+      "checked_at": "2026-09-09T20:32:50.042Z",
       "range_checked": {
         "from": "2026-09-03",
         "to": "2026-09-09"
@@ -2942,7 +2942,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-09T12:05:19.174Z",
+      "checked_at": "2026-09-09T20:32:51.444Z",
       "range_checked": {
         "from": "2026-09-03",
         "to": "2026-09-09"
@@ -4193,22 +4193,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3043",
+          "source_edition_id": "3043",
+          "edition_number": "2931",
+          "date": "2026-09-09",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2931",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/09/2026-09-09-2931.pdf",
+          "bytes": 832808,
+          "sha256": "c47140e263231807eb0e9bcab85e7063e49300cc57b839d015670e57600eaf24",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-09T12:05:19.848Z",
+      "checked_at": "2026-09-09T20:32:52.039Z",
       "range_checked": {
         "from": "2026-09-03",
         "to": "2026-09-09"
       },
       "summary": {
-        "editions_total": 63,
-        "editions_in_checked_range": 3,
-        "downloaded": 63,
+        "editions_total": 64,
+        "editions_in_checked_range": 4,
+        "downloaded": 64,
         "failed_downloads": 0,
-        "extraction_pending": 63,
+        "extraction_pending": 64,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-08",
+        "last_date": "2026-09-09",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -5342,7 +5361,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-09T12:05:21.187Z",
+      "checked_at": "2026-09-09T20:32:53.422Z",
       "range_checked": {
         "from": "2026-09-03",
         "to": "2026-09-09"
@@ -6605,7 +6624,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-09T12:05:41.297Z",
+      "checked_at": "2026-09-09T20:32:54.827Z",
       "range_checked": {
         "from": "2026-09-03",
         "to": "2026-09-09"

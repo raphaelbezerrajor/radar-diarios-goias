@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-09T12:10:08.724Z",
+  "generated_at": "2026-09-09T20:35:23.449Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -9077,6 +9077,68 @@
           "prorrogação sem reajuste"
         ]
       }
+    },
+    {
+      "id": "aparecida-2931-corrida-patrimonio-cultural",
+      "date": "2026-09-09",
+      "act_date": "2026-09-09",
+      "published_at": "2026-09-09",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "secondary",
+      "source_id": "aparecida",
+      "source_name": "Diário Oficial de Aparecida de Goiânia",
+      "source_label": "Aparecida de Goiânia",
+      "edition_id": "aparecida:3043",
+      "edition_number": "2931",
+      "official_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2931",
+      "source_landing_url": "https://doe.aparecida.go.gov.br/",
+      "local_path": "data/raw/municipal-diaries/aparecida/2026/09/2026-09-09-2931.pdf",
+      "document_sha256": "c47140e263231807eb0e9bcab85e7063e49300cc57b839d015670e57600eaf24",
+      "page_start": 1,
+      "page_end": 1,
+      "document_reference": "DOM nº 2931 · página 1",
+      "external_identifier": "Lei 3.926/2026",
+      "official_title": "Declara a Corrida de Rua como patrimônio cultural imaterial",
+      "act_type": "lei_cultural",
+      "type_label": "Esporte e cultura",
+      "public_body": "Prefeitura e Câmara Municipal de Aparecida de Goiânia",
+      "title": "Corrida de rua vira patrimônio cultural imaterial de Aparecida de Goiânia",
+      "deck": "Lei sancionada por Leandro Vilela entrou em vigor nesta quarta-feira; texto reconhece a prática, sem criar verba ou calendário de eventos.",
+      "summary": "Reconhecimento foi publicado na Lei nº 3.926, de 9 de setembro de 2026.",
+      "paragraphs": [
+        "A corrida de rua passou a ser reconhecida como patrimônio cultural imaterial de Aparecida de Goiânia. A Lei nº 3.926, sancionada pelo prefeito Leandro Vilela e publicada nesta quarta-feira, 9 de setembro, entrou em vigor na própria data de publicação. O texto aprovado pela Câmara Municipal identifica também o vereador Tatá Teixeira e atribui o reconhecimento à prática da corrida de rua, sem restringi-lo a uma prova específica.",
+        "Com apenas dois artigos, a lei formaliza o reconhecimento cultural, mas não estabelece financiamento, calendário de corridas, regras para organizadores ou alterações no trânsito. Assim, a publicação não permite afirmar que haverá novos eventos ou recursos públicos destinados à modalidade. Eventuais medidas de incentivo e organização dependerão de outros atos, que não constam desta lei."
+      ],
+      "cnpjs": [],
+      "reference_numbers": [
+        "3.926/2026"
+      ],
+      "values": [],
+      "value_highest": 0,
+      "importance": 88,
+      "news_value": {
+        "score": 88,
+        "reasons": [
+          "reconhecimento cultural de prática esportiva",
+          "nova lei municipal"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que muda",
+          "text": "A corrida de rua recebe reconhecimento legal como patrimônio cultural imaterial do município."
+        },
+        {
+          "title": "O que a lei não prevê",
+          "text": "O texto não cria dotação, evento, benefício financeiro ou regra de trânsito."
+        }
+      ]
     }
   ]
 }
