@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-09T22:43:45.762088+00:00",
+  "generated_at": "2026-09-10T16:05:30.579315+00:00",
   "policy": "Renderização integral da página oficial em WebP; conteúdo textual não é reescrito.",
   "items": [
     {
@@ -760,6 +760,42 @@
       "preview_sha256": "0683097e9701e4b002783f9d92231e8f86c33635c73052c4a703a2931ec69ec5"
     },
     {
+      "record_id": "canedo-487-vila-sao-sebastiao-regularizacao",
+      "source_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=10-09-2026",
+      "source_sha256": "1d8116a6c7b3002cede1569694dbab9575297eda22f7a9a03137991046737a44",
+      "generated_at": "2026-09-10T16:05:29.528006+00:00",
+      "src": "/assets/sources/control/1d8116a6c7b3002ced-p-14.webp",
+      "page": 14,
+      "width": 909,
+      "height": 1287,
+      "bytes": 193044,
+      "preview_sha256": "84a652d0b9cc21ccb8b6268956c2b5394cc257f14bb5ed96b920be88f78af584"
+    },
+    {
+      "record_id": "doego-10984-itaberai-anel-viario-icms",
+      "source_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7355",
+      "source_sha256": "33e84ae191cf42f5c68187d3216425b5d38abf1d60de1d8d026002af0890c0c7",
+      "generated_at": "2026-09-10T16:05:27.695109+00:00",
+      "src": "/assets/sources/control/33e84ae191cf42f5c6-p-6.webp",
+      "page": 6,
+      "width": 910,
+      "height": 1287,
+      "bytes": 148828,
+      "preview_sha256": "f820fe22f71577c50b9684ccfbb2b1327db5653ce260a0cc43f414cfa5584fc1"
+    },
+    {
+      "record_id": "doego-24530-acompanhante-autismo-internacao",
+      "source_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7355",
+      "source_sha256": "33e84ae191cf42f5c68187d3216425b5d38abf1d60de1d8d026002af0890c0c7",
+      "generated_at": "2026-09-10T16:05:26.428585+00:00",
+      "src": "/assets/sources/control/33e84ae191cf42f5c6-p-5.webp",
+      "page": 5,
+      "width": 910,
+      "height": 1287,
+      "bytes": 119168,
+      "preview_sha256": "7584ff95fd336e5b10cd0c8fd77027f5e528f6a25fe7324baca30300421ceb30"
+    },
+    {
       "record_id": "doego-24839-goinfra-go070-263-milhoes",
       "source_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7311",
       "source_sha256": "729303c63b23c05d8ca17a424a6e4e9399438146ba32cf54a75a13924bdf483f",
@@ -1310,6 +1346,18 @@
       "height": 1287,
       "bytes": 187338,
       "preview_sha256": "b39e66bfd7a341c8e38f06d886a48b5458317e28b2afcdf8d226335bbb8a8c2f"
+    },
+    {
+      "record_id": "doego-24861-contorno-goiania-anteprojeto-dnit",
+      "source_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7356",
+      "source_sha256": "a0f51610aa5d5e9d00adfe8960fb1c36a87667f0aab188ee2160992831487636",
+      "generated_at": "2026-09-10T16:05:24.247132+00:00",
+      "src": "/assets/sources/control/a0f51610aa5d5e9d00-p-37.webp",
+      "page": 37,
+      "width": 910,
+      "height": 1287,
+      "bytes": 217052,
+      "preview_sha256": "05edad9fd61e9dc92400a8bd8d05fb0bbf9a25ff0b6f599c4fd571da0b8d5458"
     },
     {
       "record_id": "goiania-8845-saude-laboratorios-20-milhoes",
@@ -4444,6 +4492,18 @@
       "preview_sha256": "2254dbf0fbde7700b5db4f7fa39276eb364ba99567c860c273f4be5e2325be8a"
     },
     {
+      "record_id": "tcego-163-internet-satelite-gotech",
+      "source_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291642152061",
+      "source_sha256": "55c28afaa9844665cff132dd315c2ce2894a1f674fdc9242a3a5112d8a6d6368",
+      "generated_at": "2026-09-10T16:05:30.579315+00:00",
+      "src": "/assets/sources/control/55c28afaa9844665cf-p-5.webp",
+      "page": 5,
+      "width": 910,
+      "height": 1287,
+      "bytes": 131072,
+      "preview_sha256": "02c751f24332753acc277ec140bb4d1dcc35f55c518e770029e0bcf00a054b9d"
+    },
+    {
       "record_id": "tcmgo-2733-caldas-novas-hospital-atraso",
       "source_url": "https://www.tcmgo.tc.br/doc/index.jsf",
       "source_sha256": "875eae7accfcc40c6edc867908f66b872098c3516cfa2c021f2ffe7a52cc9993",
@@ -5018,6 +5078,30 @@
       "height": 1287,
       "bytes": 92754,
       "preview_sha256": "f71c39fd05f452ef48970bc215251e814d95d1d0a2f2b83cb3a670b98c70f68f"
+    },
+    {
+      "record_id": "tcmgo-2758-brazabrantes-santo-antonio-debitos",
+      "source_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_sha256": "707fc56aae45d37df5513d3cb040921724b51ebc74b651296360c6e2db142cd1",
+      "generated_at": "2026-09-10T16:05:20.549641+00:00",
+      "src": "/assets/sources/control/707fc56aae45d37df5-p-26.webp",
+      "page": 26,
+      "width": 910,
+      "height": 1287,
+      "bytes": 102864,
+      "preview_sha256": "dad07e249bc1ec9c6bd456c63991b2d3655d8a43e83697cc9fdb3e828680c8a5"
+    },
+    {
+      "record_id": "tcmgo-2758-trindade-dispensa-197-apuracao",
+      "source_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_sha256": "707fc56aae45d37df5513d3cb040921724b51ebc74b651296360c6e2db142cd1",
+      "generated_at": "2026-09-10T16:05:21.992524+00:00",
+      "src": "/assets/sources/control/707fc56aae45d37df5-p-195.webp",
+      "page": 195,
+      "width": 910,
+      "height": 1287,
+      "bytes": 76918,
+      "preview_sha256": "dba368729b2dac89850acea72b4c71ca4cf4d9cea184a954c911bf810ec02bd1"
     },
     {
       "record_id": "trindade-3686a-saude-vagas-agentes-comunitarios",

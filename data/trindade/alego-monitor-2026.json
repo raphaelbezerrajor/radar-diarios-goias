@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Monitoramento documental, legislativo e financeiro da Assembleia Legislativa de Goias",
-  "generated_at": "2026-09-09T22:32:33.004Z",
+  "generated_at": "2026-09-10T15:56:05.130Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-09-09",
+    "to": "2026-09-10",
     "last_checked": {
-      "from": "2026-09-03",
-      "to": "2026-09-09"
+      "from": "2026-09-04",
+      "to": "2026-09-10"
     }
   },
   "summary": {
@@ -17,8 +17,8 @@
     "downloaded_diaries": 31,
     "failed_diary_downloads": 0,
     "extraction_pending": 31,
-    "vote_rows": 6033,
-    "roll_calls": 272,
+    "vote_rows": 6098,
+    "roll_calls": 275,
     "contracts": 86,
     "current_contracts": 68,
     "sanctions_registers": 1,
@@ -73,8 +73,8 @@
       "status": "checked",
       "collection_method": "api_publica_oficial",
       "summary": {
-        "rows": 6033,
-        "roll_calls": 272
+        "rows": 6098,
+        "roll_calls": 275
       }
     },
     {
