@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-09-10T15:58:18.098121+00:00",
+  "generatedAt": "2026-09-10T22:26:04.234009+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 9,
@@ -26,6 +26,66 @@
   },
   "invalidBriefs": [],
   "candidates": [
+    {
+      "id": "jul26-goiania-do_20260910_000008860.pdf-2c10cf441c2f-99",
+      "status": "pending",
+      "date": "2026-09-10",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "inexigibilidade",
+      "typeLabel": "Inexigibilidade",
+      "priority": 100,
+      "importance": 100,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Despacho Inexigibilidade nº 5842/2026",
+        "extractedTitle": "Goiânia publica Despacho Inexigibilidade nº 5842/2026",
+        "extractedDeck": "DOM Eletrônico Edição Nº 8860, de 10 de setembro de 2026.",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou inexigibilidade na edição 8860 de Diário Oficial do Município de Goiânia, datada de 10 de setembro de 2026. DOM Eletrônico Edição Nº 8860, de 10 de setembro de 2026.",
+          "O maior valor monetário identificado no texto é R$ 4.500.000,00; o ato cita o CNPJ 60.765.823/0001-30; as referências documentais incluem 5842/2026, 11.419/2006., 26.29.000012660-8. A conferência deve ser feita no documento original, em página 126."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8860, de 10 de setembro de 2026. Página 126 de 158 Prefeitura de Goiânia Secretaria Municipal de Saúde Secretaria Geral DESPACHO INEXIGIBILIDADE Nº 5842/2026 O SECRETÁRIO MUNICIPAL DE SAÚDE DE GOIÂNIA, no uso de suas atribuições legais e regulamentares, e considerando o Despacho n.º 757/2026 (10503683), da Advocacia Setorial. Autoriza a realização da presente despesa, por INEXIGIBILIDADE de procedimento licitatório, para contratação da empresa SOCIEDADE BENEFICENTE ISRAELITA BRASILEIRA…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 4.500.000,00",
+            "value": 4500000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "60.765.823/0001-30"
+        ],
+        "referenceNumbers": [
+          "5842/2026",
+          "11.419/2006.",
+          "26.29.000012660-8"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260910_000008860.pdf",
+        "editionId": "goiania:do_20260910_000008860.pdf",
+        "editionNumber": "8860",
+        "pageStart": 126,
+        "pageEnd": 126,
+        "documentReference": "Edição 8860 · página 126",
+        "documentSha256": "cd70edc6c6fc32bb87100cd8741903f3e347e7ef826ac8d68a322e9b9e1b1754",
+        "actSha256": "2c10cf441c2f48fb59bb929ddfb205d1300f65da7c1fceaa939d1a1237d9b454"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
     {
       "id": "jul26-agm-114624-2BD68C16-165",
       "status": "pending",
@@ -449,6 +509,194 @@
       }
     },
     {
+      "id": "jul26-goiania-do_20260910_000008860.pdf-f2ab1a416d1d-49",
+      "status": "pending",
+      "date": "2026-09-10",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "portaria",
+      "typeLabel": "Portaria",
+      "priority": 83,
+      "importance": 83,
+      "curationReasons": [
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Portaria nº 587/2026",
+        "extractedTitle": "Goiânia publica Portaria nº 587/2026",
+        "extractedDeck": "Autorizar o 3º Repasse de Recursos Financeiros do Programa de Autonomia Financeira das Instituições Educacionais – PAFIE, exercício de 2026, às Unidades Executoras próprias das instituições educacionais relacionadas no Anexo Único desta Portaria, observados os valores",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou portaria na edição 8860 de Diário Oficial do Município de Goiânia, datada de 10 de setembro de 2026. Autorizar o 3º Repasse de Recursos Financeiros do Programa de Autonomia Financeira das Instituições Educacionais – PAFIE, exercício de 2026, às Unidades Executoras próprias das instituições educacionais relacionadas no Anexo Único desta Portaria, observados os valores.",
+          "O maior valor monetário identificado no texto é R$ 15.570.856,80; o ato cita os CNPJs 00.646.369/0001-76, 01.278.309/0001-00, 01.286.531/0001-55, 01.318.502/0001-28; as referências documentais incluem 587, 2.137, 134, 11.419/2006., 26.24.000037410-9. A conferência deve ser feita no documento original, em páginas 61 a 66."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8860, de 10 de setembro de 2026. Página 61 de 158 Prefeitura de Goiânia Secretaria Municipal de Educação Gabinete do Secretário PORTARIA Nº 587, 08 DE SETEMBRO DE 2026 Autoriza o 3º Repasse de Recursos Financeiros do Programa de Autonomia Financeira das Instituições Educacionais – PAFIE, Exercício de 2026, às Unidades Executoras das Instituições Educacionais da Rede Municipal de Educação de Goiânia, e aprova o Anexo Único. A SECRETÁRIA MUNICIPAL DE EDUCAÇÃO, no uso de suas atribuições…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 15.570.856,80",
+            "value": 15570856.8,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 5.649.198,00",
+            "value": 5649198,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 9.921.658,80",
+            "value": 9921658.8,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 21.216,00",
+            "value": 21216,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 28.694,40",
+            "value": 28694.4,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 49.910,40",
+            "value": 49910.4,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 19.329,00",
+            "value": 19329,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 26.820,00",
+            "value": 26820,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 46.149,00",
+            "value": 46149,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 37.842,00",
+            "value": 37842,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 51.307,20",
+            "value": 51307.2,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 89.149,20",
+            "value": 89149.2,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "00.646.369/0001-76",
+          "01.278.309/0001-00",
+          "01.286.531/0001-55",
+          "01.318.502/0001-28",
+          "01.318.508/0001-03",
+          "01.331.914/0001-06",
+          "01.385.933/0001-07",
+          "01.388.771/0001-60",
+          "01.396.627/0001-76",
+          "01.401.366/0001-35",
+          "01.407.100/0001-08",
+          "01.415.913/0001-31"
+        ],
+        "referenceNumbers": [
+          "587",
+          "2.137",
+          "134",
+          "11.419/2006.",
+          "26.24.000037410-9"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260910_000008860.pdf",
+        "editionId": "goiania:do_20260910_000008860.pdf",
+        "editionNumber": "8860",
+        "pageStart": 61,
+        "pageEnd": 66,
+        "documentReference": "Edição 8860 · páginas 61 a 66",
+        "documentSha256": "cd70edc6c6fc32bb87100cd8741903f3e347e7ef826ac8d68a322e9b9e1b1754",
+        "actSha256": "f2ab1a416d1d0b76dde56fb2a51812a0823225dd3e68d4cb6e8386de37013fc9"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20260910_000008860.pdf-4adc64b3d226-64",
+      "status": "pending",
+      "date": "2026-09-10",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 81,
+      "importance": 77,
+      "curationReasons": [
+        "controle, correção ou responsabilização",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Extrato do Contrato nº 020/2026",
+        "extractedTitle": "Goiânia publica Extrato do Contrato nº 020/2026",
+        "extractedDeck": "OBJETO: Este contrato tem por objeto a prestação, pela empresa especializada, da Ferramenta Herby de Avaliação de Larga Escala, com correção automática de gabaritos, destinada a aproximadamente 100.580 (cem mil, quinhentos e oitenta) estudantes da Rede Municipal de Educação de Goiânia, abrangendo…",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou contrato na edição 8860 de Diário Oficial do Município de Goiânia, datada de 10 de setembro de 2026. OBJETO: Este contrato tem por objeto a prestação, pela empresa especializada, da Ferramenta Herby de Avaliação de Larga Escala, com correção automática de gabaritos, destinada a aproximadamente 100.580 (cem mil, quinhentos e oitenta) estudantes da Rede Municipal de Educação de Goiânia, abrangendo….",
+          "O maior valor monetário identificado no texto é R$ 492.684,20; o ato cita o CNPJ 49.404.896/0001-63; as referências documentais incluem 020/2026, 14.133/2021, 11.419/2006., 26.24.000015740-0. A conferência deve ser feita no documento original, em página 89."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8860, de 10 de setembro de 2026. Página 89 de 158 Prefeitura de Goiânia Secretaria Municipal de Educação Gerência de Compras, Contratos e Convênios EXTRATO DO CONTRATO N.º 020/2026 PROCESSO SEI nº: 26.24.000015740-0 CONTRATANTE: SECRETARIA MUNICIPAL DE EDUCAÇÃO/SME CONTRATADA: HERBY VISION BRASIL - TECNOLOGIA EM EDUCACÃO LTDA - CNPJ N.º 49.404.896/0001-63 FUNDAMENTO LEGAL: Fundamentado na contratação direta por inexigibilidade de licitação, na forma do disposto no Art. 74, inciso I, da…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 492.684,20",
+            "value": 492684.2,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "49.404.896/0001-63"
+        ],
+        "referenceNumbers": [
+          "020/2026",
+          "14.133/2021",
+          "11.419/2006.",
+          "26.24.000015740-0"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260910_000008860.pdf",
+        "editionId": "goiania:do_20260910_000008860.pdf",
+        "editionNumber": "8860",
+        "pageStart": 89,
+        "pageEnd": 89,
+        "documentReference": "Edição 8860 · página 89",
+        "documentSha256": "cd70edc6c6fc32bb87100cd8741903f3e347e7ef826ac8d68a322e9b9e1b1754",
+        "actSha256": "4adc64b3d2265bdd20fae996863029adab2d3b5660b8ac78f51d04c46b48353d"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
       "id": "jul26-agm-114624-158CCAF9-7",
       "status": "pending",
       "date": "2026-09-10",
@@ -558,181 +806,6 @@
         "documentReference": "Edição 3700 · página 45",
         "documentSha256": "0d1b75993aa5ca465687a8659878c2794c53dea5da4264e51a4bf261a6948792",
         "actSha256": "67cd9442e8cff1b5461b3d67b68d02115488a89f1c296bc6b4a6a1ac30489ef7"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114624-42D6FB32-4",
-      "status": "pending",
-      "date": "2026-09-10",
-      "city": "Alexânia",
-      "scope": "Municipal",
-      "actType": "pregao",
-      "typeLabel": "Pregão",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "AVISO DE RESULTADO PREGÃO ELETRÔNICO Nº 034/2026",
-        "extractedTitle": "Alexânia publica AVISO DE RESULTADO PREGÃO ELETRÔNICO Nº 034/2026",
-        "extractedDeck": "Objeto: Registro de preços para aquisição futura e eventual de tiras de reagentes de medida de glicemia capilar para punção digital para portadores de diabetes mellitus insulinodependente e para utilização nas unidades de saúde e rede hospitalar",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE ALEXÂNIA publicou pregão na edição 3700 de Diário Municipal de Goiás — AGM, datada de 10 de setembro de 2026. Objeto: Registro de preços para aquisição futura e eventual de tiras de reagentes de medida de glicemia capilar para punção digital para portadores de diabetes mellitus insulinodependente e para utilização nas unidades de saúde e rede hospitalar.",
-          "O maior valor monetário identificado no texto é R$ 275.000,00; o ato cita os CNPJs 25.029.414/0001-74, 33.772.464/0001-75. A conferência deve ser feita no documento original, em páginas 1 a 2."
-        ],
-        "evidenceExcerpt": "Goiás , 10 de Setembro de 2026 • Diario Municipal de Goiás • ANO XV | Nº 3700 www.diariomunicipal.com.br/agm 2 ESTADO DE GOIÁS MUNICÍPIO DE ALEXÂNIA FUNDO MUNICIPAL DE SAÚDE DO MUNICÍPIO DE ALEXÂNIA - GO AVISO DE RESULTADO PREGÃO ELETRÔNICO Nº 034/2026 PROCESSO ADM: Nº 7103/2026 Objeto: Registro de preços para aquisição futura e eventual de tiras de reagentes de medida de glicemia capilar para punção digital para portadores de diabetes mellitus insulinodependente e para utilização nas unidades de saúde e rede…",
-        "publicBody": "MUNICÍPIO DE ALEXÂNIA",
-        "values": [
-          {
-            "original": "R$ 275.000,00",
-            "value": 275000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 49.980,00",
-            "value": 49980,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "25.029.414/0001-74",
-          "33.772.464/0001-75"
-        ],
-        "referenceNumbers": [],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE ALEXÂNIA",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114624_2026-09-09_8cfbc46ae4fb2579a971e5e4c4449ea5.pdf",
-        "editionId": "agm:114624",
-        "editionNumber": "3700",
-        "pageStart": 1,
-        "pageEnd": 2,
-        "documentReference": "Edição 3700 · páginas 1 a 2",
-        "documentSha256": "0d1b75993aa5ca465687a8659878c2794c53dea5da4264e51a4bf261a6948792",
-        "actSha256": "ce4759388c53587ce883d76af7e34e6c0c7bbfa73ef863b83dd920b3b73c92de"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114624-608F31BB-13",
-      "status": "pending",
-      "date": "2026-09-10",
-      "city": "Alexânia",
-      "scope": "Municipal",
-      "actType": "pregao",
-      "typeLabel": "Pregão",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DA ATA DE REGISTRO DE PREÇO 008 (PREGÃO",
-        "extractedTitle": "Alexânia publica EXTRATO DA ATA DE REGISTRO DE PREÇO 008 (PREGÃO",
-        "extractedDeck": "OBJETO: Registro de preços para aquisição futura e eventual de fórmulas, dietas e suplementos alimentares para atender às demandas da Secretaria Municipal de Saúde do município de Alexânia/GO",
-        "extractedParagraphs": [
-          "Município de Alexânia publicou pregão na edição 3700 de Diário Municipal de Goiás — AGM, datada de 10 de setembro de 2026. OBJETO: Registro de preços para aquisição futura e eventual de fórmulas, dietas e suplementos alimentares para atender às demandas da Secretaria Municipal de Saúde do município de Alexânia/GO.",
-          "O maior valor monetário identificado no texto é R$ 167.980,00; o ato cita o CNPJ 03.095.992/0001-76; as referências documentais incluem 7222/2026. A conferência deve ser feita no documento original, em página 3."
-        ],
-        "evidenceExcerpt": "FUNDO MUNICIPAL DE SAÚDE DO MUNICÍPIO DE ALEXÂNIA - GO EXTRATO DA ATA DE REGISTRO DE PREÇO 008 (PREGÃO ELETRÔNICO Nº. 037/2026 – PROCESSO ADMINISTRATIVO Nº. 7222/2026) ORGÃO GERENCIADOR: FUNDO MUNICIPAL DE SAÚDE DO MUNICÍPIO DE ALEXÂNIA – GO. FORNECEDOR (razão social): VIA NUT NUTRIÇÃO CLÍNICA E PRODUTOS HOSPITALARES LTDA; CNPJ/MF: 03.095.992/0001-76 ENDEREÇO: AV. PERIMETRAL, Nº 3677, QUADRA 172, LOTE 07, SETOR BUENO, GOIÂNIA/GO, CEP: 74.215-017 REPRESENTANTE: DAIANNI SOUSA CHAVES REZENDE OBJETO: Registro de…",
-        "publicBody": "Município de Alexânia",
-        "values": [
-          {
-            "original": "R$ 167.980,00",
-            "value": 167980,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "03.095.992/0001-76"
-        ],
-        "referenceNumbers": [
-          "7222/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "Município de Alexânia",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114624_2026-09-09_8cfbc46ae4fb2579a971e5e4c4449ea5.pdf",
-        "editionId": "agm:114624",
-        "editionNumber": "3700",
-        "pageStart": 3,
-        "pageEnd": 3,
-        "documentReference": "Edição 3700 · página 3",
-        "documentSha256": "0d1b75993aa5ca465687a8659878c2794c53dea5da4264e51a4bf261a6948792",
-        "actSha256": "bae30de4a42c8f73ea46ceeea6d6bc6b30296f0227f1fcd6fc8e62c6ef93ef1e"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114624-62948028-10",
-      "status": "pending",
-      "date": "2026-09-10",
-      "city": "Alexânia",
-      "scope": "Municipal",
-      "actType": "pregao",
-      "typeLabel": "Pregão",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DA ATA DE REGISTRO DE PREÇO 005 (PREGÃO",
-        "extractedTitle": "Alexânia publica EXTRATO DA ATA DE REGISTRO DE PREÇO 005 (PREGÃO",
-        "extractedDeck": "OBJETO: Registro de preços para aquisição futura e eventual de fórmulas, dietas e suplementos alimentares para atender às demandas da Secretaria Municipal de Saúde do município de Alexânia/GO",
-        "extractedParagraphs": [
-          "Município de Alexânia publicou pregão na edição 3700 de Diário Municipal de Goiás — AGM, datada de 10 de setembro de 2026. OBJETO: Registro de preços para aquisição futura e eventual de fórmulas, dietas e suplementos alimentares para atender às demandas da Secretaria Municipal de Saúde do município de Alexânia/GO.",
-          "O maior valor monetário identificado no texto é R$ 464.500,00; o ato cita o CNPJ 08.183.359/0001-53; as referências documentais incluem 7222/2026. A conferência deve ser feita no documento original, em página 3."
-        ],
-        "evidenceExcerpt": "FUNDO MUNICIPAL DE SAÚDE DO MUNICÍPIO DE ALEXÂNIA - GO EXTRATO DA ATA DE REGISTRO DE PREÇO 005 (PREGÃO ELETRÔNICO Nº. 037/2026 – PROCESSO ADMINISTRATIVO Nº. 7222/2026) ORGÃO GERENCIADOR: FUNDO MUNICIPAL DE SAÚDE DO MUNICÍPIO DE ALEXÂNIA – GO. FORNECEDOR (razão social): PRODIET NUTRIÇÃO CLINICA S.A CNPJ/MF: 08.183.359/0001-53 ENDEREÇO: RUA GENERAL POTIGUARA 1428, LOTES 20 E 21, BAIRRO NOVO MUNDO CURITIBA-PR, CEP: 81.050-500. REPRESENTANTE: CASSIANE ZABLONSKY DE RAMOS OBJETO: Registro de preços para aquisição…",
-        "publicBody": "Município de Alexânia",
-        "values": [
-          {
-            "original": "R$ 464.500,00",
-            "value": 464500,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "08.183.359/0001-53"
-        ],
-        "referenceNumbers": [
-          "7222/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "Município de Alexânia",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114624_2026-09-09_8cfbc46ae4fb2579a971e5e4c4449ea5.pdf",
-        "editionId": "agm:114624",
-        "editionNumber": "3700",
-        "pageStart": 3,
-        "pageEnd": 3,
-        "documentReference": "Edição 3700 · página 3",
-        "documentSha256": "0d1b75993aa5ca465687a8659878c2794c53dea5da4264e51a4bf261a6948792",
-        "actSha256": "e674dab4370f8436d825e145bf5083f7fc1c09eb5730cc5487a956cc11f846da"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
