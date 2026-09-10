@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-09-10T15:56:24.168Z",
+  "generated_at": "2026-09-10T22:24:37.817Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 338,
-    "downloaded": 338,
+    "editions": 340,
+    "downloaded": 340,
     "failed_downloads": 0,
-    "extraction_pending": 338
+    "extraction_pending": 340
   },
   "daily_check_windows": [
     {
@@ -1708,7 +1708,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-10T15:56:04.118Z",
+      "checked_at": "2026-09-10T22:24:28.199Z",
       "range_checked": {
         "from": "2026-09-04",
         "to": "2026-09-10"
@@ -2980,7 +2980,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-10T15:56:06.258Z",
+      "checked_at": "2026-09-10T22:24:30.340Z",
       "range_checked": {
         "from": "2026-09-04",
         "to": "2026-09-10"
@@ -4250,22 +4250,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3044",
+          "source_edition_id": "3044",
+          "edition_number": "2932",
+          "date": "2026-09-10",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2932",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/09/2026-09-10-2932.pdf",
+          "bytes": 5999878,
+          "sha256": "986222c3e97bad646975a29799fa9b4e296c8b96097b8394f7142abe52284273",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-10T15:56:06.876Z",
+      "checked_at": "2026-09-10T22:24:31.004Z",
       "range_checked": {
         "from": "2026-09-04",
         "to": "2026-09-10"
       },
       "summary": {
-        "editions_total": 64,
-        "editions_in_checked_range": 3,
-        "downloaded": 64,
+        "editions_total": 65,
+        "editions_in_checked_range": 4,
+        "downloaded": 65,
         "failed_downloads": 0,
-        "extraction_pending": 64,
+        "extraction_pending": 65,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-09",
+        "last_date": "2026-09-10",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -5415,31 +5434,50 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "goiania:do_20260910_000008860.pdf",
+          "source_edition_id": "do_20260910_000008860.pdf",
+          "edition_number": "8860",
+          "date": "2026-09-10",
+          "published_at": null,
+          "publication_timestamp_kind": "file_last_modified_only",
+          "extraordinary": false,
+          "official_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+          "file_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260910_000008860.pdf",
+          "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-10-8860.pdf",
+          "bytes": 10119113,
+          "sha256": "cd70edc6c6fc32bb87100cd8741903f3e347e7ef826ac8d68a322e9b9e1b1754",
+          "last_modified": "Thu, 10 Sep 2026 21:14:16 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-10T15:56:08.090Z",
+      "checked_at": "2026-09-10T22:24:32.551Z",
       "range_checked": {
         "from": "2026-09-04",
         "to": "2026-09-10"
       },
       "summary": {
-        "editions_total": 59,
-        "editions_in_checked_range": 3,
-        "downloaded": 59,
+        "editions_total": 60,
+        "editions_in_checked_range": 4,
+        "downloaded": 60,
         "failed_downloads": 0,
-        "extraction_pending": 59,
+        "extraction_pending": 60,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-09",
+        "last_date": "2026-09-10",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 59,
+          "observations": 60,
           "earliest": "11:39",
-          "median": "18:01",
+          "median": "18:02",
           "latest": "20:58"
         }
       }
@@ -6700,7 +6738,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-10T15:56:09.447Z",
+      "checked_at": "2026-09-10T22:24:33.947Z",
       "range_checked": {
         "from": "2026-09-04",
         "to": "2026-09-10"

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-10T16:03:00.967Z",
+  "generated_at": "2026-09-10T22:31:56.916Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -9628,6 +9628,218 @@
         "reasons": [
           "Contratos e tecnologia",
           "ato oficial integralmente conferido"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "scope": "Municipal",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "cnpjs": [],
+      "values": [
+        {
+          "value": 9921658.8,
+          "currency": "BRL",
+          "original": "R$ 9.921.658,80",
+          "label": "alimentação autorizada"
+        },
+        {
+          "value": 5649198,
+          "currency": "BRL",
+          "original": "R$ 5.649.198,00",
+          "label": "custeio autorizado"
+        }
+      ],
+      "value_highest": 15570856.8,
+      "date": "2026-09-10",
+      "published_at": "2026-09-10",
+      "source_id": "goiania",
+      "source_name": "Diario Oficial de Goiania — Sileg",
+      "source_label": "Diario Oficial de Goiania — Sileg",
+      "edition_id": "goiania:do_20260910_000008860.pdf",
+      "edition_number": "8860",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260910_000008860.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-10-8860.pdf",
+      "document_sha256": "cd70edc6c6fc32bb87100cd8741903f3e347e7ef826ac8d68a322e9b9e1b1754",
+      "id": "goiania-8860-pafie-terceiro-repasse",
+      "city": "Goiânia",
+      "act_date": "2026-09-08",
+      "page_start": 61,
+      "page_end": 66,
+      "document_reference": "DOM nº 8860 · Portaria nas páginas 61–62 e anexo nas páginas 63–66",
+      "external_identifier": "Portaria 587/2026 · Processo 26.24.000037410-9",
+      "reference_numbers": [
+        "587/2026",
+        "26.24.000037410-9",
+        "019911/2026",
+        "020355",
+        "019954"
+      ],
+      "official_title": "Terceiro repasse do Programa de Autonomia Financeira das Instituições Educacionais de 2026",
+      "act_type": "repasse_educacao",
+      "type_label": "Educação e dinheiro público",
+      "public_body": "Secretaria Municipal de Educação de Goiânia e FMMDE",
+      "importance": 163,
+      "title": "Goiânia autoriza R$ 15,57 milhões para alimentação e custeio escolar",
+      "deck": "Terceira parcela do PAFIE reserva R$ 9,92 milhões à alimentação; unidades terão 90 dias após o recebimento para prestar contas.",
+      "summary": "Portaria lista 180 unidades educacionais e exige divulgação dos gastos nas instituições.",
+      "paragraphs": [
+        "A rede municipal de educação de Goiânia teve autorizado um repasse de R$ 15.570.856,80 para alimentação e despesas de custeio das instituições relacionadas no terceiro lote do PAFIE de 2026. A Portaria nº 587, assinada pela secretária Giselle Pereira Campos Faria em 8 de setembro e publicada no dia 10, destina R$ 9.921.658,80 à alimentação e R$ 5.649.198,00 ao custeio. O anexo distribui os recursos entre 180 unidades educacionais e registra 87.266 alunos. Os valores serão transferidos pelo Fundo Municipal de Manutenção e Desenvolvimento do Ensino para contas específicas das unidades executoras.",
+        "O dinheiro deve seguir o plano de aplicação aprovado, e cada instituição terá de expor, em local visível, as informações sobre recebimento e uso dos recursos. A prestação de contas vence até 90 dias depois do recebimento da parcela e deve incluir comprovantes de despesas, extratos bancários e parecer do conselho fiscal. A falta de prestação de contas, sua rejeição ou o uso fora das regras pode suspender novos repasses. A portaria cita as notas de empenho, mas não apresenta comprovantes de transferência: autorizar o repasse não significa que as escolas já receberam ou gastaram o valor."
+      ],
+      "explainer_sections": [
+        {
+          "title": "Como acompanhar na escola",
+          "text": "A portaria exige que o plano de aplicação, a ata de intenção de gastos e a execução financeira sejam divulgados na própria instituição. O anexo permite consultar o valor previsto por unidade."
+        },
+        {
+          "title": "O que falta conferir",
+          "text": "Data de crédito em cada conta, compras realizadas, fornecedores e prestação de contas. Esses dados permitem ligar a autorização à despesa efetivamente executada."
+        }
+      ],
+      "news_value": {
+        "score": 163,
+        "reasons": [
+          "Educação e dinheiro público",
+          "impacto em serviços públicos",
+          "ato oficial conferido"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "scope": "Municipal",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "cnpjs": [
+        "60.765.823/0001-30"
+      ],
+      "values": [
+        {
+          "value": 4500000,
+          "currency": "BRL",
+          "original": "R$ 4.500.000,00",
+          "label": "despesa autorizada para contratação"
+        }
+      ],
+      "value_highest": 4500000,
+      "date": "2026-09-10",
+      "published_at": "2026-09-10",
+      "source_id": "goiania",
+      "source_name": "Diario Oficial de Goiania — Sileg",
+      "source_label": "Diario Oficial de Goiania — Sileg",
+      "edition_id": "goiania:do_20260910_000008860.pdf",
+      "edition_number": "8860",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260910_000008860.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-10-8860.pdf",
+      "document_sha256": "cd70edc6c6fc32bb87100cd8741903f3e347e7ef826ac8d68a322e9b9e1b1754",
+      "id": "goiania-8860-einstein-gestao-saude",
+      "city": "Goiânia",
+      "act_date": "2026-09-08",
+      "page_start": 126,
+      "page_end": 126,
+      "document_reference": "DOM nº 8860 · página 126",
+      "external_identifier": "Despacho de Inexigibilidade 5842/2026 · Processo 26.29.000012660-8",
+      "reference_numbers": [
+        "5842/2026",
+        "26.29.000012660-8"
+      ],
+      "official_title": "Autorização de contratação de serviços técnicos especializados do Hospital Albert Einstein",
+      "act_type": "autorizacao_contratacao_saude",
+      "type_label": "Saúde e contratos",
+      "public_body": "Secretaria Municipal de Saúde de Goiânia",
+      "importance": 149,
+      "title": "Goiânia autoriza R$ 4,5 milhões para serviços do Einstein na rede de urgência",
+      "deck": "Contratação direta prevê certificação de profissionais e acompanhamento de indicadores em UPAs, CAISs e CIAMSs; despacho não informa prazo nem metas numéricas.",
+      "summary": "Serviços técnicos são voltados à gestão e ao monitoramento assistencial e operacional, não à abertura de novas unidades.",
+      "paragraphs": [
+        "A Secretaria Municipal de Saúde de Goiânia autorizou uma despesa de R$ 4,5 milhões para contratar serviços técnicos da Sociedade Beneficente Israelita Brasileira Hospital Albert Einstein. O despacho, assinado pelo secretário Luiz Gaspar Machado Pellizzer em 8 de setembro e publicado no Diário Oficial do dia 10, prevê certificação de profissionais na metodologia Lean Six Sigma e monitoramento de indicadores assistenciais e operacionais nas UPAs, nos CAISs e nos CIAMSs da rede municipal.",
+        "A autorização é por inexigibilidade de licitação, com referência ao artigo 74, inciso III, alínea “c”, da Lei nº 14.133/2021. O documento descreve projetos de gestão e acompanhamento de indicadores, mas não informa duração dos serviços, quantidade de profissionais, metas numéricas ou calendário de entregas. Também não apresenta contrato assinado ou comprovantes de pagamento. Por isso, os R$ 4,5 milhões representam a despesa autorizada para a contratação, e não um desembolso já comprovado ou garantia de melhora no atendimento."
+      ],
+      "explainer_sections": [
+        {
+          "title": "O que cobrar do contrato",
+          "text": "Metas por unidade de saúde, indicadores antes e depois do projeto, profissionais certificados, cronograma e critérios de aceite. O despacho publicado não detalha esses compromissos."
+        }
+      ],
+      "news_value": {
+        "score": 149,
+        "reasons": [
+          "Saúde e contratos",
+          "impacto em serviços públicos",
+          "ato oficial conferido"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "scope": "Municipal",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "cnpjs": [],
+      "values": [],
+      "value_highest": 0,
+      "date": "2026-09-10",
+      "published_at": "2026-09-10",
+      "source_id": "aparecida",
+      "source_name": "Diario Oficial Eletronico de Aparecida de Goiania",
+      "source_label": "Diario Oficial Eletronico de Aparecida de Goiania",
+      "edition_id": "aparecida:3044",
+      "edition_number": "2932",
+      "official_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2932",
+      "source_landing_url": "https://doe.aparecida.go.gov.br/",
+      "local_path": "data/raw/municipal-diaries/aparecida/2026/09/2026-09-10-2932.pdf",
+      "document_sha256": "986222c3e97bad646975a29799fa9b4e296c8b96097b8394f7142abe52284273",
+      "id": "aparecida-2932-ldo-2027-regras",
+      "city": "Aparecida de Goiânia",
+      "act_date": "2026-09-10",
+      "page_start": 4,
+      "page_end": 4,
+      "document_reference": "DOM nº 2932 · texto da Lei 3.927 nas páginas 1–5; ordem de cortes no artigo 44, página 4",
+      "external_identifier": "Lei 3.927/2026 · Diretrizes Orçamentárias de 2027",
+      "reference_numbers": [
+        "3.927/2026"
+      ],
+      "official_title": "Diretrizes para elaboração da Lei Orçamentária de Aparecida de Goiânia de 2027",
+      "act_type": "lei_diretrizes_orcamentarias",
+      "type_label": "Orçamento e transparência",
+      "public_body": "Prefeitura e Câmara Municipal de Aparecida de Goiânia",
+      "importance": 145,
+      "title": "Aparecida põe publicidade e viagens entre os primeiros cortes se faltar receita em 2027",
+      "deck": "Lei de diretrizes orçamentárias define uma ordem para conter despesas e dá prioridade a projetos em andamento; não há corte anunciado agora.",
+      "summary": "Orçamento detalhado deverá ser enviado à Câmara até 30 de setembro de 2026.",
+      "paragraphs": [
+        "Aparecida de Goiânia definiu que serviços extraordinários, propaganda institucional e diárias e passagens aéreas serão, nessa ordem, as primeiras despesas alcançadas pela limitação de gastos se a arrecadação não for suficiente para equilibrar as contas em 2027. A regra está na Lei de Diretrizes Orçamentárias nº 3.927, sancionada por Leandro Vilela e publicada em 10 de setembro. A lista segue com ajuda de custo, locação de veículos, consultoria, outras despesas de custeio, treinamento e novos investimentos. Obrigações constitucionais ou legais e o serviço da dívida ficam fora dessa limitação.",
+        "A lei orienta a preparação do orçamento do próximo ano; ela não anuncia falta de dinheiro ou corte já executado. O projeto com receitas e despesas detalhadas deverá chegar à Câmara até 30 de setembro de 2026, e obras e projetos em andamento terão prioridade sobre novos. A norma também prevê audiências públicas presenciais ou eletrônicas e divulgação das contas. Se for necessário restringir despesas, Executivo e Legislativo deverão publicar atos com os valores atingidos, permitindo verificar quanto foi efetivamente contido."
+      ],
+      "explainer_sections": [
+        {
+          "title": "Diretriz não é orçamento aprovado",
+          "text": "A LDO fixa regras para preparar e executar o orçamento de 2027. As dotações por órgão e ação serão detalhadas na Lei Orçamentária Anual."
+        },
+        {
+          "title": "O que acompanhar",
+          "text": "Envio do projeto orçamentário até 30 de setembro, audiências públicas, dotações de publicidade e viagens e eventuais atos de limitação de empenho durante 2027."
+        }
+      ],
+      "news_value": {
+        "score": 145,
+        "reasons": [
+          "Orçamento e transparência",
+          "impacto em serviços públicos",
+          "ato oficial conferido"
         ]
       }
     }
