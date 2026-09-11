@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-10T22:31:56.916Z",
+  "generated_at": "2026-09-11T12:24:25.317Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -9840,6 +9840,227 @@
           "Orçamento e transparência",
           "impacto em serviços públicos",
           "ato oficial conferido"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "cnpjs": [],
+      "values": [
+        {
+          "value": 2333000,
+          "currency": "BRL",
+          "original": "R$ 2.333.000,00",
+          "label": "valor das sete contratações informado pelo MPC"
+        }
+      ],
+      "value_highest": 2333000,
+      "id": "tcmgo-2759-itaucu-shows-cautelar",
+      "date": "2026-09-11",
+      "published_at": "2026-09-11",
+      "act_date": "2026-09-09",
+      "city": "Itauçu",
+      "scope": "Municipal",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "edition_id": "tcmgo:2759",
+      "edition_number": "2759",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2759-2026-09-11.pdf",
+      "document_sha256": "4bf6d2bac7a87c9f2207afd14e7f7701c20963eec602f48f9bb891f02a806bdc",
+      "page_start": 307,
+      "page_end": 310,
+      "document_reference": "DOC nº 2759 · acórdão nas páginas 306–310; suspensão na página 307",
+      "external_identifier": "Acórdão 06550/2026 · Processo 06817/2026",
+      "reference_numbers": [
+        "06550/2026",
+        "06817/2026",
+        "21/2026",
+        "23/2026",
+        "24/2026",
+        "25/2026",
+        "27/2026",
+        "28/2026",
+        "29/2026",
+        "30/2026"
+      ],
+      "official_title": "Referendo de cautelar sobre contratações artísticas da XXXIII Festa do Peão de Itauçu",
+      "act_type": "cautelar_contratos_shows",
+      "type_label": "Dinheiro público e fiscalização",
+      "public_body": "TCM-GO e Prefeitura de Itauçu",
+      "importance": 174,
+      "title": "TCM mantém suspensos contratos de R$ 2,33 milhões para shows em Itauçu",
+      "deck": "Medida impede execução e novos pagamentos ligados a sete contratações da Festa do Peão; prefeitura terá oportunidade de defesa e não há julgamento definitivo.",
+      "summary": "Festa está prevista para 17 a 19 de setembro; tribunal cobra justificativas de preços, planejamento e capacidade de pagamento.",
+      "paragraphs": [
+        "O TCM-GO confirmou a suspensão dos contratos de sete apresentações artísticas da XXXIII Festa do Peão de Itauçu, prevista para 17, 18 e 19 de setembro. As contratações somam R$ 2.333.000,00, segundo o valor informado pelo Ministério Público de Contas na representação. O Acórdão nº 06550/2026, de 9 de setembro, publicado no dia 11, referenda uma medida cautelar que impede a execução desses contratos e novos desembolsos, liquidações e pagamentos até decisão posterior do tribunal. A ordem é dirigida ao prefeito Clayton Pereira de Melo e ao secretário de Administração e Planejamento, William Miquelino França.",
+        "A representação envolve shows de Mariana Fagundes, Ícaro e Gilmar, Felipe e Rodrigo, Edson e Hudson, Rayane e Raphaela, Humberto e Ronaldo e Zé Ricardo e Thiago. O tribunal determinou a notificação dos gestores para apresentarem defesa e documentos em 15 dias, cobrando esclarecimentos sobre justificativa dos preços, exclusividade das empresas intermediárias, planejamento, pagamentos antecipados, transparência e condições financeiras do município. A cautelar foi concedida sem ouvir previamente os responsáveis e não é uma conclusão definitiva sobre as suspeitas. O acórdão não aplica multa agora, não comprova quanto já foi pago e não determina o cancelamento de todo o evento."
+      ],
+      "explainer_sections": [
+        {
+          "title": "O que está suspenso",
+          "text": "Execução e novos desembolsos, liquidações e pagamentos das inexigibilidades 23, 24, 25, 27, 28, 29 e 30/2026. A proibição permanece até nova decisão do TCM."
+        },
+        {
+          "title": "O que ainda será apurado",
+          "text": "A defesa dos gestores e a documentação serão analisadas pelas áreas de contratações e contas e depois pelo Ministério Público de Contas. Os questionamentos não equivalem a dano comprovado ou condenação."
+        }
+      ],
+      "news_value": {
+        "score": 174,
+        "reasons": [
+          "Dinheiro público e fiscalização",
+          "ato oficial conferido",
+          "interesse público e atualidade"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "cnpjs": [
+        "04.635.778/0001-28"
+      ],
+      "values": [
+        {
+          "value": 679335.99,
+          "currency": "BRL",
+          "original": "R$ 679.335,99",
+          "label": "valor do contrato rescindido"
+        }
+      ],
+      "value_highest": 679335.99,
+      "date": "2026-09-11",
+      "published_at": "2026-09-11",
+      "source_id": "doego",
+      "source_name": "Diario Oficial do Estado de Goias",
+      "source_label": "Diario Oficial do Estado de Goias",
+      "edition_id": "doego:7358",
+      "edition_number": "24862",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7358",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7358/",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-11-edicao-7358.pdf",
+      "document_sha256": "3241b178192b448446667c9efd447a75d35cad545d083f6eb54d9eb6c8b389e3",
+      "id": "doego-24862-edeia-rescisao-obra-escolar",
+      "city": "Edéia",
+      "scope": "Estadual",
+      "page_start": 9,
+      "page_end": 9,
+      "document_reference": "DOE nº 24.862 · página 9 · protocolo 651554",
+      "external_identifier": "Despacho 1075/2026/GAB · Contrato 021/2024",
+      "reference_numbers": [
+        "1075/2026",
+        "021/2024",
+        "202600006038463",
+        "202200006047487"
+      ],
+      "official_title": "Rescisão unilateral de contrato de reforma e ampliação do Colégio Estadual Glacy Kelle de Sousa",
+      "act_type": "rescisao_sancao_administrativa",
+      "type_label": "Obras escolares e fiscalização",
+      "public_body": "Secretaria de Estado da Educação de Goiás",
+      "importance": 153,
+      "title": "Goiás rescinde contrato de reforma de colégio em Edéia e aplica sanções à construtora",
+      "deck": "Contrato tinha valor de R$ 679,3 mil; decisão prevê multa por atraso e suspensão de contratar com o Estado por dois anos, com direito a recurso.",
+      "summary": "Seduc determina assumir a obra no estado em que se encontra e adotar providências para sua continuidade.",
+      "paragraphs": [
+        "A Secretaria de Estado da Educação decidiu rescindir o contrato de R$ 679.335,99 para reforma e ampliação do Colégio Estadual Glacy Kelle de Sousa, em Edéia, firmado com a Ferthymar Empreendimentos e Participações Ltda. O despacho publicado em 11 de setembro também aplica multa por atraso e suspensão temporária do direito de participar de licitações e contratar com a administração pública estadual por dois anos. A decisão assinada pela secretária Helena da Costa Bezerra determina que o Estado assuma o objeto do contrato no estágio em que estiver e encaminhe providências para continuar as obras.",
+        "O processo passou por comissão de apuração e manifestação da Procuradoria Setorial. A multa foi fixada em 0,3% ao dia, até o trigésimo dia de atraso, sobre a parcela do serviço não realizado ou da etapa do cronograma não cumprida; o extrato não apresenta o total em reais. A construtora deverá ser notificada e ter acesso ao processo para recorrer. O texto publicado não reproduz sua defesa nem informa percentual de execução, valores já pagos ou data de retomada da obra. Os R$ 679,3 mil são o valor do contrato, não o valor da multa ou um prejuízo comprovado."
+      ],
+      "explainer_sections": [
+        {
+          "title": "A obra não está dada como retomada",
+          "text": "O despacho ordena providências para continuidade, mas não informa nova executora nem cronograma. Também não há confirmação de encerramento da fase de recursos."
+        }
+      ],
+      "news_value": {
+        "score": 153,
+        "reasons": [
+          "Obras escolares e fiscalização",
+          "ato oficial conferido",
+          "interesse público e atualidade"
+        ]
+      }
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "cnpjs": [
+        "45.332.501/0001-03",
+        "47.156.456/0001-09"
+      ],
+      "values": [
+        {
+          "value": 2998312,
+          "currency": "BRL",
+          "original": "R$ 2.998.312,00",
+          "label": "valor registrado para Alves Comunicação Visual"
+        },
+        {
+          "value": 398999,
+          "currency": "BRL",
+          "original": "R$ 398.999,00",
+          "label": "valor registrado para Embacom"
+        }
+      ],
+      "value_highest": 3397311,
+      "date": "2026-09-11",
+      "published_at": "2026-09-11",
+      "source_id": "senador-canedo",
+      "source_name": "Diario Oficial de Senador Canedo",
+      "source_label": "Diario Oficial de Senador Canedo",
+      "edition_id": "senador-canedo:684",
+      "edition_number": "488",
+      "official_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=11-09-2026",
+      "source_landing_url": "https://diario.senadorcanedo.go.gov.br/diario/wwcee77487",
+      "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-11-488.pdf",
+      "document_sha256": "5bb7f5384c3c47b01856f40fa7769696298ab1908f52be9ccc14f9d5eab9c280",
+      "id": "canedo-488-registro-materiais-graficos",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "act_date": "2026-09-10",
+      "page_start": 20,
+      "page_end": 20,
+      "document_reference": "DOM nº 488 · extrato começa na página 19 e termina na página 20",
+      "external_identifier": "Pregão 089/2026 · Atas 462 e 463/2026",
+      "reference_numbers": [
+        "089/2026",
+        "462/2026",
+        "463/2026",
+        "28.427/2026"
+      ],
+      "official_title": "Registro de preços para futura aquisição de materiais gráficos",
+      "act_type": "registro_precos_materiais_graficos",
+      "type_label": "Compras e comunicação pública",
+      "public_body": "Secretaria Municipal de Comunicação e Eventos de Senador Canedo",
+      "importance": 142,
+      "title": "Canedo registra R$ 3,4 milhões em preços para materiais gráficos de duas empresas",
+      "deck": "Alves Comunicação Visual reúne R$ 2,998 milhões e Embacom, R$ 399 mil; atas permitem compras futuras, mas não comprovam encomendas ou pagamentos.",
+      "summary": "Pregão atende à Comunicação e às demais secretarias; validade será de um ano a partir do marco previsto no PNCP.",
+      "paragraphs": [
+        "Senador Canedo publicou atas de registro de preços que totalizam R$ 3.397.311,00 para futuras aquisições de materiais gráficos destinados à Secretaria de Comunicação e Eventos e às demais secretarias. A Alves Comunicação Visual Ltda. venceu cinco lotes, que somam R$ 2.998.312,00, enquanto a Embacom Ltda. ficou com um lote de R$ 398.999,00. O resultado do Pregão Eletrônico nº 089/2026 foi publicado no Diário Oficial de 11 de setembro.",
+        "As atas 462 e 463/2026 terão vigência de um ano, contado do primeiro dia útil após a divulgação no Portal Nacional de Contratações Públicas, com possibilidade de prorrogação se o preço continuar vantajoso. O registro estabelece condições para compras futuras e eventuais: o total não significa que a prefeitura encomendou ou pagou todos os materiais. Para acompanhar a despesa real, será necessário conferir os pedidos, contratos, empenhos, entregas e pagamentos vinculados ao processo nº 28.427/2026. O extrato não informa esses dados de execução."
+      ],
+      "news_value": {
+        "score": 142,
+        "reasons": [
+          "Compras e comunicação pública",
+          "ato oficial conferido",
+          "interesse público e atualidade"
         ]
       }
     }
