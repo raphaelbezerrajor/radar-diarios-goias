@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-09-11T20:33:10.122915+00:00",
+  "generatedAt": "2026-09-12T19:24:47.499625+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 9,
@@ -333,6 +333,280 @@
       }
     },
     {
+      "id": "jul26-goiania-do_20260911_000008861.pdf-e4de58ee0e25-89",
+      "status": "pending",
+      "date": "2026-09-11",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "homologacao",
+      "typeLabel": "Homologação",
+      "priority": 93,
+      "importance": 89,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "controle, correção ou responsabilização"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "Termo de Homologação - Pregão Eletrônico nº 90014/2026",
+        "extractedTitle": "Goiânia publica Termo de Homologação - Pregão Eletrônico nº 90014/2026",
+        "extractedDeck": "Resolve HOMOLOGAR a adjudicação do Pregão Eletrônico nº 90014/2026, destinado à “Registro de Preços para eventual e futura aquisição e fornecimento de Insumos Betuminosos de Petróleo dos tipos CAP 30/45, CAP 50/70, RR-1C, CAP 30/40 e RL-1C, Emulsão Asfáltica para Serviço de Im",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou homologação na edição 8861 de Diário Oficial do Município de Goiânia, datada de 11 de setembro de 2026. Resolve HOMOLOGAR a adjudicação do Pregão Eletrônico nº 90014/2026, destinado à “Registro de Preços para eventual e futura aquisição e fornecimento de Insumos Betuminosos de Petróleo dos tipos CAP 30/45, CAP 50/70, RR-1C, CAP 30/40 e RL-1C, Emulsão Asfáltica para Serviço de Im.",
+          "O maior valor monetário identificado no texto é R$ 4.066.237,41; o ato cita o CNPJ 26.917.005/0001-77; as referências documentais incluem 24.18.000002494-0, 11.419/2006.. A conferência deve ser feita no documento original, em página 162."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8861, de 11 de setembro de 2026. Página 162 de 252 Prefeitura de Goiânia Secretaria Municipal de Administração Gerência de Pregões TERMO DE HOMOLOGAÇÃO - PE 90014/2026 O Secretário Municipal de Administração no uso de suas atribuições legais, constituído pelo Decreto de pessoal publicado no DOM Eletrônico Edição Nº 8769 e pela Lei Federal 14.133/2021,após constatada a regularidade dos atos procedimentais, considerando a realização do procedimento licitatório referente ao Processo nº…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 3.720,07",
+            "value": 3720.07,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 1.257.383,66",
+            "value": 1257383.66,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 3.038,99",
+            "value": 3038.99,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 656.421,84",
+            "value": 656421.84,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 3.906,41",
+            "value": 3906.41,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 2.152.431,91",
+            "value": 2152431.91,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 4.066.237,41",
+            "value": 4066237.41,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "26.917.005/0001-77"
+        ],
+        "referenceNumbers": [
+          "24.18.000002494-0",
+          "11.419/2006."
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260911_000008861.pdf",
+        "editionId": "goiania:do_20260911_000008861.pdf",
+        "editionNumber": "8861",
+        "pageStart": 162,
+        "pageEnd": 162,
+        "documentReference": "Edição 8861 · página 162",
+        "documentSha256": "4b4b52fcb53a881aa7753b7ef34512d8e57e9bd4a4f67aed6750af59d971eb5b",
+        "actSha256": "e4de58ee0e2534bf2ac5ba11e2d5e378d82cabe9f2d89f321d85fcd8e812f9ca"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-anapolis-24091-538dc84149ed-32",
+      "status": "pending",
+      "date": "2026-09-11",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "actType": "edital",
+      "typeLabel": "Edital",
+      "priority": 91,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "controle, correção ou responsabilização",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "EDITAL Nº 024/2026 - GERÊNCIA DE FISCALIZAÇÃO DE TRI‐ RIA",
+        "extractedTitle": "Anápolis publica EDITAL Nº 024/2026 - GERÊNCIA DE FISCALIZAÇÃO DE TRI‐ RIA",
+        "extractedDeck": "OBJETO: Aquisição de Ar condicionado te ato por seu titular, Sr",
+        "extractedParagraphs": [
+          "Município de Anápolis publicou edital na edição 4.024/2026 de Diário Oficial de Anápolis, datada de 11 de setembro de 2026. OBJETO: Aquisição de Ar condicionado te ato por seu titular, Sr.",
+          "O maior valor monetário identificado no texto é R$ 59.532,48; o ato cita os CNPJs 01.067.479/0001-46, 05.267.817/0001-44; as referências documentais incluem 024/2026, 14.133/2021, 735/2022, 10/2026, 8.666/1993. A conferência deve ser feita no documento original, em páginas 9 a 11."
+        ],
+        "evidenceExcerpt": "EDITAL Nº 024/2026 - GERÊNCIA DE FISCALIZAÇÃO DE TRI‐ RIA BUTOS - SECRETARIA MUNICIPAL DA ECONOMIA AUTO DE INFRAÇÃO FABRICIA PARAA Gerência de Fiscalização Tributária da Secretaria Municipal da RODRI‐ MULTAEconomia, no uso de suas atribuições funcionais, nos termos do inciso GUES AL‐ 008.810.491 00001913/2 000016705/ FORMALIV do artigo 449 da LC 136/06. Notifica por meio de ste, a todos os VES DE -58 026-00 2026 DE OBRI‐contribuintes arrolados abaixo, para que se considerem cientificados em OLIVEIRA GAÇÃOfunção…",
+        "publicBody": "Município de Anápolis",
+        "values": [
+          {
+            "original": "R$ 4.750,00",
+            "value": 4750,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 4.961,04",
+            "value": 4961.04,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 57.000,00",
+            "value": 57000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 59.532,48",
+            "value": 59532.48,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 2.532,48",
+            "value": 2532.48,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 24.143,73",
+            "value": 24143.73,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 35.388,75",
+            "value": 35388.75,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 33.459,90",
+            "value": 33459.9,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "01.067.479/0001-46",
+          "05.267.817/0001-44"
+        ],
+        "referenceNumbers": [
+          "024/2026",
+          "14.133/2021",
+          "735/2022",
+          "10/2026",
+          "8.666/1993",
+          "918/2022",
+          "001/2026/2"
+        ],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Anápolis",
+        "label": "Município de Anápolis",
+        "url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25345/BEcNQqcL0F8WnHAbD0bP7RX225n9Iwc0NJADg03F.pdf",
+        "editionId": "anapolis:24091",
+        "editionNumber": "4.024/2026",
+        "pageStart": 9,
+        "pageEnd": 11,
+        "documentReference": "Edição 4.024/2026 · páginas 9 a 11",
+        "documentSha256": "156a84a8cce40c6d2d72614f751e037e12b954c1433d648da359a17cc8d491ba",
+        "actSha256": "538dc84149ed523ccb8e90d4df608b81d63164c786fccb26201948132f82009f"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20260911_000008861.pdf-4472645f9262-133",
+      "status": "pending",
+      "date": "2026-09-11",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "homologacao",
+      "typeLabel": "Homologação",
+      "priority": 91,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "controle, correção ou responsabilização",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "Termo de Homologação do Pregão Eletrônico nº 90024/2026 - SRP",
+        "extractedTitle": "Goiânia publica Termo de Homologação do Pregão Eletrônico nº 90024/2026 - SRP",
+        "extractedDeck": "resolve HOMOLOGAR o presente procedimento licitatório e AUTORIZAR a despesa, conforme dados abaixo: · BARBARA RESENDE COMERCIAL - CNPJ: 37.144.033/0001-15 Valor Valor Total ITEM QTD DESCRIÇÃO/ESPECIFICAÇÃO Marca Unitário (R$) (R$) CASSETE LABORATÓRIO, aplicação histológico, ma",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou homologação na edição 8861 de Diário Oficial do Município de Goiânia, datada de 11 de setembro de 2026. resolve HOMOLOGAR o presente procedimento licitatório e AUTORIZAR a despesa, conforme dados abaixo: · BARBARA RESENDE COMERCIAL - CNPJ: 37.144.033/0001-15 Valor Valor Total ITEM QTD DESCRIÇÃO/ESPECIFICAÇÃO Marca Unitário (R$) (R$) CASSETE LABORATÓRIO, aplicação histológico, ma.",
+          "O maior valor monetário identificado no texto é R$ 56.132,90; o ato cita os CNPJs 07.944.100/0001-15, 37.144.033/0001-15, 60.734.271/0001-00, 63.550.245/0001-02; as referências documentais incluem 7174, 11.419/2006., 25.29.000036858-4. A conferência deve ser feita no documento original, em páginas 215 a 216."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8861, de 11 de setembro de 2026. Página 215 de 252 Prefeitura de Goiânia Secretaria Municipal de Saúde Presidência da Comissão Especial de Licitação TERMO DE HOMOLOGAÇÃO DO PREGÃO ELETRÔNICO N° 90024/2026 SRP – SAÚDE O Secretário de Saúde do Município de Goiânia, no uso de suas atribuições legais e na conformidade dos autos do Pregão Eletrônico nº 90024/2026 SRP – SAÚDE, Tipo MENOR PREÇO POR ITEM, Processo SEI nº 25.29.000036858-4, cujo objeto é a aquisição de insumos laboratoriais, na…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 1.229,70",
+            "value": 1229.7,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 31.584,90",
+            "value": 31584.9,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 10.570,00",
+            "value": 10570,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 12.748,30",
+            "value": 12748.3,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 56.132,90",
+            "value": 56132.9,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "07.944.100/0001-15",
+          "37.144.033/0001-15",
+          "60.734.271/0001-00",
+          "63.550.245/0001-02"
+        ],
+        "referenceNumbers": [
+          "7174",
+          "11.419/2006.",
+          "25.29.000036858-4"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260911_000008861.pdf",
+        "editionId": "goiania:do_20260911_000008861.pdf",
+        "editionNumber": "8861",
+        "pageStart": 215,
+        "pageEnd": 216,
+        "documentReference": "Edição 8861 · páginas 215 a 216",
+        "documentSha256": "4b4b52fcb53a881aa7753b7ef34512d8e57e9bd4a4f67aed6750af59d971eb5b",
+        "actSha256": "4472645f926286f8a666273de013644ead4e391099b3278a8b00309fbc199a12"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
       "id": "jul26-agm-114625-A83AC253-225",
       "status": "pending",
       "date": "2026-09-11",
@@ -615,212 +889,6 @@
         "documentReference": "Edição 3701 · página 25",
         "documentSha256": "74a73403c91db7d69c94a19de8066a39010a75f8c0f9511e33a30df840747490",
         "actSha256": "39c46674cb1ab75f6fbd7741852d6eead756a4d342795e4c6a0ee34f6bd02382"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114625-CEB1EC76-23",
-      "status": "pending",
-      "date": "2026-09-11",
-      "city": "Aparecida do Rio Doce",
-      "scope": "Municipal",
-      "actType": "homologacao",
-      "typeLabel": "Homologação",
-      "priority": 83,
-      "importance": 79,
-      "curationReasons": [
-        "controle, correção ou responsabilização"
-      ],
-      "mandatoryHumanReview": true,
-      "factPacket": {
-        "officialTitle": "EXTRATO ADJUDICAÇÃO/HOMOLOGAÇÃO-PREGÃO",
-        "extractedTitle": "Aparecida do Rio Doce publica EXTRATO ADJUDICAÇÃO/HOMOLOGAÇÃO-PREGÃO",
-        "extractedDeck": "objeto: AQUISIÇÃO DE PEÇAS PRÉ- MOLDADAS PARA IMPLANTAÇÃO DE MÚLTIPLOS DISPOSITIVOS AUXILIARES ECOLÓGICOS DE TRÂNSITO, CONFORME PREVISTO NO CÓDIGO DE TRÂNSITO BRASILEIRO (CTB), DESTINADOS À EXECUÇÃO DE ONDULAÇÕES TRANSVERSAIS TIPO B (QUEBRA-MOLAS) E À MELHORIA D",
-        "extractedParagraphs": [
-          "MUNICIPIO DE APARECIDA DO RIO DOCE publicou homologação na edição 3701 de Diário Municipal de Goiás — AGM, datada de 11 de setembro de 2026. objeto: AQUISIÇÃO DE PEÇAS PRÉ- MOLDADAS PARA IMPLANTAÇÃO DE MÚLTIPLOS DISPOSITIVOS AUXILIARES ECOLÓGICOS DE TRÂNSITO, CONFORME PREVISTO NO CÓDIGO DE TRÂNSITO BRASILEIRO (CTB), DESTINADOS À EXECUÇÃO DE ONDULAÇÕES TRANSVERSAIS TIPO B (QUEBRA-MOLAS) E À MELHORIA D.",
-          "O maior valor monetário identificado no texto é R$ 309.000,00; as referências documentais incluem 18998/2026. A conferência deve ser feita no documento original, em página 8."
-        ],
-        "evidenceExcerpt": "SETOR DE LICITAÇÕES E CONTRATOS EXTRATO ADJUDICAÇÃO/HOMOLOGAÇÃO-PREGÃO ELETRONICO N° 18/2026-PREF MUNICIPIO DE APARECIDA DO RIO DOCE RESULTADO DE JULGAMENTO E ADJUDICAÇÃO E HOMOLOGAÇÃO DO PREGÃO ELETRÔNICO Nº 18/2026 O condutor de processos do órgão MUNICIPIO DE APARECIDA DO RIO DOCE- APARECIDA DO RIO DOCE-GO, vem comunicar o resultado do processo de PREGÃO ELETRÔNICO nº 18/2026, Processo Administrativo nº 18998/2026 finalizado quinta-feira, 10 de setembro de 2026 às 10:04, objeto: AQUISIÇÃO DE PEÇAS PRÉ-…",
-        "publicBody": "MUNICIPIO DE APARECIDA DO RIO DOCE",
-        "values": [
-          {
-            "original": "R$ 309.000,00",
-            "value": 309000,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "18998/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICIPIO DE APARECIDA DO RIO DOCE",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114625_2026-09-10_5886f906a9ab2fb3a2eb8b5df81b200c.pdf",
-        "editionId": "agm:114625",
-        "editionNumber": "3701",
-        "pageStart": 8,
-        "pageEnd": 8,
-        "documentReference": "Edição 3701 · página 8",
-        "documentSha256": "74a73403c91db7d69c94a19de8066a39010a75f8c0f9511e33a30df840747490",
-        "actSha256": "25c2ed4cb8666c398ce543305587ae9a27fd21be933e8c64c7e77f9de1e990ab"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114625-4A15BDA8-39",
-      "status": "pending",
-      "date": "2026-09-11",
-      "city": "Arenópolis",
-      "scope": "Municipal",
-      "actType": "adjudicacao",
-      "typeLabel": "Adjudicação",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "RESULTADO DE JULGAMENTO E ADJUDICAÇÃO E",
-        "extractedTitle": "Arenópolis publica RESULTADO DE JULGAMENTO E ADJUDICAÇÃO E",
-        "extractedDeck": "objeto: Registro de Preços para futura e eventual aquisição de materiais de consumo destinados ao incremento e fortalecimento das ações e serviços de Média e Alta Complexidade (MAC), visando atender às necessidades da rede municipal de saúde do Município de Arenópolis-GO, vinculados à Proposta nº…",
-        "extractedParagraphs": [
-          "FUNDO MUNICIPAL DE SAUDE DE ARENOPOLIS publicou adjudicação na edição 3701 de Diário Municipal de Goiás — AGM, datada de 11 de setembro de 2026. objeto: Registro de Preços para futura e eventual aquisição de materiais de consumo destinados ao incremento e fortalecimento das ações e serviços de Média e Alta Complexidade (MAC), visando atender às necessidades da rede municipal de saúde do Município de Arenópolis-GO, vinculados à Proposta nº….",
-          "O maior valor monetário identificado no texto é R$ 172.094,09; as referências documentais incluem 1501/2026. A conferência deve ser feita no documento original, em página 12."
-        ],
-        "evidenceExcerpt": "FUNDO MUNICIPAL DE SAUDE DE ARENOPOLIS RESULTADO DE JULGAMENTO E ADJUDICAÇÃO E HOMOLOGAÇÃO DO PREGÃO ELETRÔNICO Nº30/2026 O condutor de processos do órgão FUNDO MUNICIPAL DE SAUDE DE ARENÓPOLIS-GO, vem comunicar o resultado do processo de PREGÃO ELETRÔNICO nº30/2026, Processo Administrativo nº 1501/2026 finalizado quarta-feira, 9 de setembro de 2026 às 07:41, objeto: Registro de Preços para futura e eventual aquisição de materiais de consumo destinados ao incremento e fortalecimento das ações e serviços de Média…",
-        "publicBody": "FUNDO MUNICIPAL DE SAUDE DE ARENOPOLIS",
-        "values": [
-          {
-            "original": "R$ 172.094,09",
-            "value": 172094.09,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 103.714,10",
-            "value": 103714.1,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 4.115,99",
-            "value": 4115.99,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 474,30",
-            "value": 474.3,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 3.930,00",
-            "value": 3930,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 3.676,20",
-            "value": 3676.2,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 17.446,30",
-            "value": 17446.3,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 599,20",
-            "value": 599.2,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 38.138,00",
-            "value": 38138,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "1501/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "FUNDO MUNICIPAL DE SAUDE DE ARENOPOLIS",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114625_2026-09-10_5886f906a9ab2fb3a2eb8b5df81b200c.pdf",
-        "editionId": "agm:114625",
-        "editionNumber": "3701",
-        "pageStart": 12,
-        "pageEnd": 12,
-        "documentReference": "Edição 3701 · página 12",
-        "documentSha256": "74a73403c91db7d69c94a19de8066a39010a75f8c0f9511e33a30df840747490",
-        "actSha256": "5aa51110203a2f6d47ebd378e4f5ceec19b918e00651f54dd4a561d539c9c7b2"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114625-BE090875-213",
-      "status": "pending",
-      "date": "2026-09-11",
-      "city": "Palmeiras",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 75,
-      "importance": 75,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 165/2026",
-        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 165/2026",
-        "extractedDeck": "FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº.",
-        "extractedParagraphs": [
-          "FUNDO MUNICIPAL DE SAUDE publicou contrato na edição 3701 de Diário Municipal de Goiás — AGM, datada de 11 de setembro de 2026. FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº.",
-          "O maior valor monetário identificado no texto é R$ 3.635,31; as referências documentais incluem 5626/2026, 202300010002736-1. A conferência deve ser feita no documento original, em página 55."
-        ],
-        "evidenceExcerpt": "FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 165/2026 EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 165/2026, PROCESSO ADMINISTRATIVO N.5626/2026 E PREGÃO ELETRÔNICO N. 99/2026, FUNDO MUNICIPAL DE SAUDE DE PALMEIRAS DE GOIAS-FMS, NESTE ATO REPRESENTADO PELO SECRETÁRIO DE SAÚDE E VIGILÂNCIA SANITÁRIA O SR. GETULIO JOSE DE OLIVEIRA NETO; E, DE OUTRO LADO, A EMPRESA SUDOESTE DISTRIBUIDORA HOSPITALAR LTDA; CLÁUSULA PRIMEIRA – DO OBJETO DO CONTRATO CONSTITUI O OBJETO DESTE INSTRUMENTO A AQUISIÇÃO DE EQUIPAMENTOS OFTALMOLÓGICOS…",
-        "publicBody": "FUNDO MUNICIPAL DE SAUDE",
-        "values": [
-          {
-            "original": "R$ 3.635,31",
-            "value": 3635.31,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "5626/2026",
-          "202300010002736-1"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "FUNDO MUNICIPAL DE SAUDE",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114625_2026-09-10_5886f906a9ab2fb3a2eb8b5df81b200c.pdf",
-        "editionId": "agm:114625",
-        "editionNumber": "3701",
-        "pageStart": 55,
-        "pageEnd": 55,
-        "documentReference": "Edição 3701 · página 55",
-        "documentSha256": "74a73403c91db7d69c94a19de8066a39010a75f8c0f9511e33a30df840747490",
-        "actSha256": "1450bf2e53c3ea852e5a9d458d40476b8eaba1fd5928a11f71c16548f250a3e1"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
