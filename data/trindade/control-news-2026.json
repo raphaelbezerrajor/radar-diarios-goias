@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-11T12:24:25.317Z",
+  "generated_at": "2026-09-12T19:28:31.918Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -10063,6 +10063,72 @@
           "interesse público e atualidade"
         ]
       }
+    },
+    {
+      "id": "goiania-8861-recurso-medica-registros-dengue",
+      "date": "2026-09-11",
+      "published_at": "2026-09-11",
+      "act_date": "2026-09-10",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "source_id": "goiania",
+      "source_name": "Diario Oficial de Goiania — Sileg",
+      "source_label": "Diario Oficial de Goiania — Sileg",
+      "edition_id": "goiania:do_20260911_000008861.pdf",
+      "edition_number": "8861",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260911_000008861.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-11-8861.pdf",
+      "document_sha256": "4b4b52fcb53a881aa7753b7ef34512d8e57e9bd4a4f67aed6750af59d971eb5b",
+      "page_start": 39,
+      "page_end": 40,
+      "document_reference": "DOM nº 8861 · decisão integral nas páginas 34–40; conclusão na página 39",
+      "external_identifier": "Processo 26.29.000007345-8 · Contrato 1147/2024",
+      "reference_numbers": [
+        "26.29.000007345-8",
+        "1147/2024",
+        "2844/2026",
+        "11077957"
+      ],
+      "official_title": "Decisão de recurso administrativo sobre rescisão contratual e penalidade de impedimento",
+      "act_type": "recurso_rescisao_saude",
+      "type_label": "Saúde e controle administrativo",
+      "public_body": "Gabinete do Prefeito e Secretaria Municipal de Saúde de Goiânia",
+      "title": "Goiânia anula punição a médica, mas mantém rescisão em caso sobre registros de dengue",
+      "deck": "Prefeitura reconheceu falta de procedimento obrigatório para impedir novas contratações. A decisão afirma que não ficou demonstrada subnotificação de casos pela profissional.",
+      "summary": "Recurso muda parte da decisão da Saúde; médica contestou as provas e afirmou ter cumprido o dever de notificar os casos.",
+      "paragraphs": [
+        "O prefeito de Goiânia, Sandro Mabel, anulou a punição que impedia a médica Mariana Garcia de Lacerda de participar de licitações e contratar com o município, mas manteve o encerramento de seu contrato com a rede de saúde. A decisão, assinada em 10 de setembro e publicada no dia 11, reconhece que a Secretaria de Saúde não instaurou o procedimento específico nem designou a comissão exigidos para aplicar essa restrição. O recurso foi aceito apenas em parte: a retirada da penalidade não restabelece o contrato de credenciamento nº 1147/2024, destinado a serviços médicos de 40 horas semanais.",
+        "O caso surgiu de capturas de conversas em um grupo de WhatsApp que, segundo a apuração relatada na decisão, continham orientações para usar outros códigos diagnósticos no lugar do de dengue. Em sua defesa, a médica questionou a autenticidade e a suficiência dessas provas, apontou falta de validação técnica e afirmou ter cumprido as notificações obrigatórias. O prefeito considerou a orientação atribuída à profissional incompatível com o contrato, mas registrou expressamente que a efetiva subnotificação de casos por ela não foi demonstrada no processo. Portanto, o ato não comprova que as estatísticas de dengue tenham sido alteradas; ele mantém a rescisão e derruba a sanção por falha no procedimento."
+      ],
+      "cnpjs": [],
+      "values": [],
+      "value_highest": 0,
+      "importance": 157,
+      "news_value": {
+        "score": 157,
+        "reasons": [
+          "saúde pública",
+          "controle de legalidade das punições",
+          "decisão e defesa conferidas integralmente"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "Por que a punição caiu",
+          "text": "A decisão aponta ausência de instauração formal do processo de responsabilização, de comissão processante, de oportunidade específica para produção de provas e alegações finais e de relatório conclusivo. Segundo o prefeito, a defesa apresentada no procedimento contratual não substitui essas etapas."
+        },
+        {
+          "title": "O que não mudou",
+          "text": "Permanece a rescisão do contrato. A decisão não apresenta julgamento do Conselho Regional de Medicina nem condenação criminal. O relato da defesa foi extraído do próprio ato oficial; não houve entrevista com a profissional nesta matéria."
+        }
+      ]
     }
   ]
 }
