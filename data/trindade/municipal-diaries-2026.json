@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-09-12T19:23:07.252Z",
+  "generated_at": "2026-09-14T11:07:51.012Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-09-12",
+    "to": "2026-09-14",
     "last_checked": {
-      "from": "2026-09-06",
-      "to": "2026-09-12"
+      "from": "2026-09-08",
+      "to": "2026-09-14"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 346,
-    "downloaded": 346,
+    "editions": 348,
+    "downloaded": 348,
     "failed_downloads": 0,
-    "extraction_pending": 346
+    "extraction_pending": 348
   },
   "daily_check_windows": [
     {
@@ -1724,33 +1724,52 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:114626",
+          "source_edition_id": "114626",
+          "edition_number": "3702",
+          "date": "2026-09-14",
+          "published_at": "2026-09-11T18:17:14-03:00",
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114626_2026-09-11_f982d457cc18d5b725dd5a3f3b3548cc.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-14-3702.pdf",
+          "bytes": 1507486,
+          "sha256": "6672d81f354d98a16fa702e68932e6b7b2c7ee270bed21da2e73083f872403d5",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-12T19:22:55.154Z",
+      "checked_at": "2026-09-14T11:07:36.982Z",
       "range_checked": {
-        "from": "2026-09-06",
-        "to": "2026-09-12"
+        "from": "2026-09-08",
+        "to": "2026-09-14"
       },
       "summary": {
-        "editions_total": 87,
-        "editions_in_checked_range": 5,
-        "downloaded": 87,
+        "editions_total": 88,
+        "editions_in_checked_range": 6,
+        "downloaded": 88,
         "failed_downloads": 0,
-        "extraction_pending": 87,
+        "extraction_pending": 88,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-11",
+        "last_date": "2026-09-14",
         "observed_upload_times": {
           "all": {
-            "observations": 87,
+            "observations": 88,
             "earliest": "11:40",
             "median": "18:38",
             "latest": "20:04"
           },
           "ordinary": {
-            "observations": 68,
+            "observations": 69,
             "earliest": "12:30",
-            "median": "18:44",
+            "median": "18:42",
             "latest": "20:04"
           },
           "extraordinary": {
@@ -3037,10 +3056,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-12T19:22:58.369Z",
+      "checked_at": "2026-09-14T11:07:39.524Z",
       "range_checked": {
-        "from": "2026-09-06",
-        "to": "2026-09-12"
+        "from": "2026-09-08",
+        "to": "2026-09-14"
       },
       "summary": {
         "editions_total": 66,
@@ -4348,10 +4367,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-12T19:22:58.973Z",
+      "checked_at": "2026-09-14T11:07:40.533Z",
       "range_checked": {
-        "from": "2026-09-06",
-        "to": "2026-09-12"
+        "from": "2026-09-08",
+        "to": "2026-09-14"
       },
       "summary": {
         "editions_total": 66,
@@ -5551,10 +5570,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-12T19:23:01.325Z",
+      "checked_at": "2026-09-14T11:07:43.593Z",
       "range_checked": {
-        "from": "2026-09-06",
-        "to": "2026-09-12"
+        "from": "2026-09-08",
+        "to": "2026-09-14"
       },
       "summary": {
         "editions_total": 61,
@@ -6849,22 +6868,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "senador-canedo:685",
+          "source_edition_id": "685",
+          "edition_number": "489",
+          "date": "2026-09-14",
+          "published_at": "2026-09-14T06:00:00.496Z",
+          "publication_timestamp_kind": "calendar_timestamp_not_upload_time",
+          "extraordinary": false,
+          "official_url": "https://diario.senadorcanedo.go.gov.br/diario/kkrmn2t488",
+          "file_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=14-09-2026",
+          "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-14-489.pdf",
+          "bytes": 409983,
+          "sha256": "0bbadd563caabaead086dd8954c61688778a04a62a230220c2ee3edb7d4f69ba",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-12T19:23:02.654Z",
+      "checked_at": "2026-09-14T11:07:45.986Z",
       "range_checked": {
-        "from": "2026-09-06",
-        "to": "2026-09-12"
+        "from": "2026-09-08",
+        "to": "2026-09-14"
       },
       "summary": {
-        "editions_total": 66,
+        "editions_total": 67,
         "editions_in_checked_range": 4,
-        "downloaded": 66,
+        "downloaded": 67,
         "failed_downloads": 0,
-        "extraction_pending": 66,
+        "extraction_pending": 67,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-11",
+        "last_date": "2026-09-14",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
