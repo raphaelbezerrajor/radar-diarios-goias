@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T19:28:31.918Z",
+  "generated_at": "2026-09-14T11:10:06.007Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -10127,6 +10127,75 @@
         {
           "title": "O que não mudou",
           "text": "Permanece a rescisão do contrato. A decisão não apresenta julgamento do Conselho Regional de Medicina nem condenação criminal. O relato da defesa foi extraído do próprio ato oficial; não houve entrevista com a profissional nesta matéria."
+        }
+      ]
+    },
+    {
+      "id": "tcmgo-2760-aparecida-reverte-multas-pregao",
+      "date": "2026-09-14",
+      "published_at": "2026-09-14",
+      "act_date": "2026-09-09",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "edition_id": "tcmgo:2760",
+      "edition_number": "2760",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "local_path": "data/raw/tcmgo/diario/2026/09/tcmgo-doc-2760-2026-09-14.pdf",
+      "document_sha256": "16e640033e1cfd0b9923526252e4678d6b654452445f7b0bda18d8bf7cbf36f6",
+      "page_start": 13,
+      "page_end": 14,
+      "document_reference": "DOC 2760 · acórdão nas páginas 12–14; decisão na página 13",
+      "external_identifier": "Acórdão 06552/2026 · Processo 10409/2024, fase 2",
+      "reference_numbers": [
+        "06552/2026",
+        "10409/2024",
+        "04717/2026",
+        "019/2024"
+      ],
+      "official_title": "Recurso ordinário sobre inabilitação de licitante e multas no Pregão 019/2024",
+      "act_type": "recurso_reforma_multas",
+      "type_label": "Licitações e revisão de decisões",
+      "public_body": "TCM-GO e Prefeitura de Aparecida de Goiânia",
+      "title": "TCM derruba multas a pregoeiras de Aparecida e revê decisão sobre licitação",
+      "deck": "Tribunal acolheu recurso e afastou irregularidades atribuídas à exclusão de uma empresa do Pregão 019/2024; cada pregoeira havia sido multada em R$ 1.233,80.",
+      "summary": "Revisão cancela as penalidades e a determinação ligada ao caso, mantendo os demais termos da decisão anterior.",
+      "paragraphs": [
+        "O TCM-GO cancelou as multas aplicadas a duas pregoeiras de Aparecida de Goiânia e afastou irregularidades que havia reconhecido na exclusão da empresa Marzze Serviços e Facilities Ltda. do Pregão Eletrônico nº 019/2024. A mudança foi decidida em 9 de setembro e publicada no Diário Oficial de Contas desta segunda-feira, 14. O recurso foi apresentado pelo secretário municipal de Administração, Arthur Henrique de Sousa Braga, e pelas pregoeiras Dhayly Oliveira e Stefany Linara Aguiar Ramos. Cada uma delas havia recebido multa de R$ 1.233,80 na decisão anterior.",
+        "O novo acórdão também desconstitui o apontamento de que faltou uma diligência para permitir a correção de erros materiais na proposta, sem alterar o valor global oferecido pela empresa. A determinação vinculada a esse ponto foi retirada por perda de objeto; os demais termos do Acórdão nº 04717/2026 foram mantidos. O texto publicado informa o resultado do recurso, mas não reproduz a fundamentação completa do voto nem apresenta valores de contrato ou pagamentos. A revisão não deve ser descrita como aprovação irrestrita de toda a licitação, e o documento não informa se as multas chegaram a ser recolhidas."
+      ],
+      "cnpjs": [],
+      "values": [
+        {
+          "value": 1233.8,
+          "original": "R$ 1.233,80",
+          "currency": "BRL",
+          "label": "valor individual de multa cancelada, não multa vigente"
+        }
+      ],
+      "value_highest": 1233.8,
+      "importance": 151,
+      "news_value": {
+        "score": 151,
+        "reasons": [
+          "revisão de sanção",
+          "licitação municipal",
+          "resultado de recurso verificado"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que mudou",
+          "text": "Foram afastados os apontamentos sobre inabilitação da Marzze e ausência de diligência para correção da proposta, as multas e a determinação associada. O ato remete ao voto do relator Sérgio Antônio Cardoso de Queiroz, cuja fundamentação integral não está reproduzida neste extrato."
         }
       ]
     }
