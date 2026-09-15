@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T11:10:06.007Z",
+  "generated_at": "2026-09-15T11:40:24.194Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -10196,6 +10196,69 @@
         {
           "title": "O que mudou",
           "text": "Foram afastados os apontamentos sobre inabilitação da Marzze e ausência de diligência para correção da proposta, as multas e a determinação associada. O ato remete ao voto do relator Sérgio Antônio Cardoso de Queiroz, cuja fundamentação integral não está reproduzida neste extrato."
+        }
+      ]
+    },
+    {
+      "id": "goiania-8862-encerra-aluguel-almoxarifado",
+      "date": "2026-09-14",
+      "published_at": "2026-09-14",
+      "act_date": "2026-08-25",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "secondary",
+      "source_id": "goiania",
+      "source_name": "Diario Oficial de Goiania — Sileg",
+      "source_label": "Diario Oficial de Goiania — Sileg",
+      "edition_id": "goiania:do_20260914_000008862.pdf",
+      "edition_number": "8862",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260914_000008862.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-14-8862.pdf",
+      "document_sha256": "191c3a76b7e2251b763b9a30a1ef8a7341c7642a539b85fa1cbc1071374abb80",
+      "page_start": 132,
+      "page_end": 132,
+      "document_reference": "DOM 8862 · página 132 · SEI 11391575",
+      "external_identifier": "Contrato 001/2023 · Processo 23.24.000000844-0",
+      "reference_numbers": [
+        "001/2023",
+        "23.24.000000844-0",
+        "11391575"
+      ],
+      "official_title": "Rescisão unilateral de locação do almoxarifado da Secretaria Municipal de Educação",
+      "act_type": "rescisao_locacao",
+      "type_label": "Educação e despesas de locação",
+      "public_body": "Secretaria Municipal de Educação de Goiânia",
+      "title": "Goiânia encerra aluguel de galpões da Educação sem multa por saída antecipada",
+      "deck": "Termo publicado em setembro fixa efeitos financeiros em 31 de maio, quando o imóvel foi devolvido; valor do aluguel não aparece no extrato.",
+      "summary": "Rescisão abrange três galpões na Vila João Vaz usados como almoxarifado da rede municipal de ensino.",
+      "paragraphs": [
+        "A Secretaria Municipal de Educação de Goiânia formalizou o encerramento do aluguel de três galpões usados como almoxarifado na Vila João Vaz, sem multa ou indenização pela saída antecipada. O termo publicado no Diário Oficial de 14 de setembro estabelece efeitos financeiros a partir de 31 de maio de 2026, data que o documento identifica como a da devolução do imóvel e entrega das chaves. A locação era feita com a Aspam Participações Ltda., pelo Contrato nº 001/2023, e abrangia os galpões B-1, B-2 e B-3 da Avenida Perimetral Norte, nº 2859.",
+        "O extrato tem data de 25 de agosto e assinatura eletrônica da secretária Giselle Pereira Campos Faria em 10 de setembro. Ele não informa o valor mensal do aluguel, eventual saldo a pagar, economia obtida ou o novo endereço do almoxarifado. Por isso, não é possível calcular a redução de despesas nem afirmar, a partir deste ato, que houve pagamentos depois da entrega das chaves. A rescisão encerra esse vínculo de locação; o texto não aplica sanção à empresa nem descreve interrupção do abastecimento das escolas."
+      ],
+      "cnpjs": [
+        "11.008.990/0001-20"
+      ],
+      "values": [],
+      "value_highest": 0,
+      "importance": 130,
+      "news_value": {
+        "score": 130,
+        "reasons": [
+          "despesa pública",
+          "locação encerrada",
+          "datas e efeitos financeiros documentados"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que falta para medir a economia",
+          "text": "O contrato original, os aditivos e a execução financeira precisam ser cruzados com os custos do imóvel substituto, caso exista. O extrato isolado não permite atribuir um valor à economia."
         }
       ]
     }
