@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T11:50:18.304Z",
+  "generated_at": "2026-09-17T22:34:10.412Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -10380,6 +10380,74 @@
           "decisão oficial integralmente conferida"
         ]
       }
+    },
+    {
+      "id": "doego-24866-economia-retifica-manutencao",
+      "date": "2026-09-17",
+      "published_at": "2026-09-17",
+      "act_date": "2026-09-17",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "secondary",
+      "source_id": "doego",
+      "source_name": "Diario Oficial do Estado de Goias",
+      "source_label": "DOE-GO",
+      "edition_id": "doego:7365",
+      "edition_number": "24866",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7365",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7365/",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-17-edicao-7365.pdf",
+      "document_sha256": "da6d1bc3148f02f2269cca98a9e9e3321aa16b9c88a4c7985f48b2c5244f31c7",
+      "page_start": 17,
+      "page_end": 17,
+      "document_reference": "DOE 24.866 · página 17 · protocolo 652492",
+      "external_identifier": "Pregão 018/2026 · Processo 202500005039090",
+      "reference_numbers": [
+        "018/2026",
+        "202500005039090",
+        "117705",
+        "652492"
+      ],
+      "official_title": "Aviso de retificação do Pregão Eletrônico 018/2026 da Secretaria de Estado da Economia",
+      "act_type": "retificacao_licitacao",
+      "type_label": "Licitações e manutenção predial",
+      "public_body": "Secretaria de Estado da Economia de Goiás",
+      "title": "Goiás muda regras de licitação de R$ 4,68 milhões para manutenção da Economia",
+      "deck": "Alterações afetam preços, mão de obra e subcontratação; empresas terão de cadastrar novamente suas propostas.",
+      "summary": "Pregão foi remarcado para 2 de outubro, às 8h. O valor é estimado e não representa dinheiro já pago.",
+      "paragraphs": [
+        "A Secretaria da Economia de Goiás mudou o edital da licitação para manutenção preventiva e corretiva de seus prédios e sistemas, estimada em R$ 4.683.254,39. O aviso publicado no Diário Oficial de 17 de setembro remarca a sessão para 2 de outubro, às 8h, e exige que os interessados cadastrem novamente suas propostas no Sislog. A disputa será aberta à ampla participação, com julgamento pelo maior desconto por item.",
+        "Segundo o aviso, a revisão altera o custo estimado, os requisitos de mão de obra, a medição da taxa de administração local, a fórmula de apresentação da proposta da primeira colocada e as regras de subcontratação. A secretaria afirma que os ajustes surgiram durante os esclarecimentos e a revisão dos documentos e reabre o prazo porque as mudanças afetam a preparação das ofertas. O documento não informa o orçamento anterior nem permite calcular quanto a estimativa mudou; também não anuncia uma empresa vencedora, contrato assinado ou pagamento."
+      ],
+      "cnpjs": [],
+      "values": [
+        {
+          "value": 4683254.39,
+          "original": "R$ 4.683.254,39",
+          "currency": "BRL",
+          "label": "Valor total estimado da licitação; não é pagamento"
+        }
+      ],
+      "value_highest": 4683254.39,
+      "importance": 145,
+      "news_value": {
+        "score": 145,
+        "reasons": [
+          "Dinheiro público",
+          "Reabertura de licitação com alterações nas propostas"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que conferir antes de participar",
+          "text": "O aviso exige usar as versões retificadas do edital e anexos, disponíveis no Sislog, código 117705. A publicação do diário não substitui a leitura desses documentos nem apresenta a comparação completa entre as versões."
+        }
+      ]
     }
   ]
 }
