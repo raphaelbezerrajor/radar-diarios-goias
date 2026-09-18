@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T22:34:10.412Z",
+  "generated_at": "2026-09-18T11:28:39.447Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -10446,6 +10446,150 @@
         {
           "title": "O que conferir antes de participar",
           "text": "O aviso exige usar as versões retificadas do edital e anexos, disponíveis no Sislog, código 117705. A publicação do diário não substitui a leitura desses documentos nem apresenta a comparação completa entre as versões."
+        }
+      ]
+    },
+    {
+      "id": "goiania-8865-sus-pronto-socorro-contrato",
+      "date": "2026-09-17",
+      "published_at": "2026-09-17",
+      "act_date": "2026-09-09",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "source_id": "goiania",
+      "source_name": "Diario Oficial de Goiania — Sileg",
+      "source_label": "Diário de Goiânia",
+      "edition_id": "goiania:do_20260917_000008865.pdf",
+      "edition_number": "8865",
+      "official_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260917_000008865.pdf",
+      "source_landing_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-17-8865.pdf",
+      "document_sha256": "8fef6a118b5bd21f32ffffbe8a0bebc9ef6073223c3d7ce4dd5fc5c4bf1da879",
+      "page_start": 400,
+      "page_end": 400,
+      "document_reference": "Diário de Goiânia 8865 · página 400 do PDF · SEI 11470385",
+      "external_identifier": "Contrato 1843/2026 · Processo 26.29.000012574-1",
+      "reference_numbers": [
+        "1843/2026",
+        "26.29.000012574-1",
+        "002/2025",
+        "11470385"
+      ],
+      "official_title": "Extrato do contrato de prestação de serviços 1843/2026",
+      "act_type": "contrato_saude",
+      "type_label": "Saúde e contratos",
+      "public_body": "Secretaria Municipal de Saúde de Goiânia",
+      "title": "Goiânia firma contrato de cinco anos para o SUS com estimativa de R$ 31,25 milhões",
+      "deck": "Pronto Socorro para Queimaduras Ltda prestará serviços regulados pela Saúde; extrato prevê R$ 520,85 mil mensais, mas não informa pagamentos.",
+      "summary": "Contrato 1843/2026 foi assinado em 9 de setembro e publicado no diário de 17 de setembro.",
+      "paragraphs": [
+        "Goiânia firmou um contrato de cinco anos com a empresa Pronto Socorro para Queimaduras Ltda para prestar serviços médicos aos usuários do SUS, com valor global estimado de R$ 31.251.093,00. O extrato publicado no Diário Oficial de 17 de setembro prevê R$ 520.851,55 por mês e R$ 6.250.218,60 por ano. O contrato 1843/2026 foi assinado em 9 de setembro e será executado conforme a regulação do Complexo Regulador da Secretaria Municipal de Saúde, responsável pelo encaminhamento dos usuários aos serviços.",
+        "A contratação decorre do chamamento 002/2025 e foi formalizada por inexigibilidade vinculada ao credenciamento, com fundamento no artigo 74, IV, da Lei 14.133/2021. O objeto abrange assistência ambulatorial e apoio diagnóstico e terapêutico, mas o extrato não detalha a quantidade de procedimentos, metas de atendimento ou valores por serviço. Também não demonstra quanto já foi empenhado, liquidado ou pago: os R$ 31,25 milhões são a estimativa para os 60 meses, não dinheiro já transferido. Para acompanhar a entrega efetiva, será necessário cruzar o contrato e seus anexos com a produção assistencial e a execução financeira."
+      ],
+      "cnpjs": [
+        "01.588.128/0001-80"
+      ],
+      "values": [
+        {
+          "value": 31251093,
+          "original": "R$ 31.251.093,00",
+          "currency": "BRL",
+          "label": "Estimativa global para 60 meses; não é pagamento"
+        },
+        {
+          "value": 520851.55,
+          "original": "R$ 520.851,55",
+          "currency": "BRL",
+          "label": "Estimativa mensal"
+        },
+        {
+          "value": 6250218.6,
+          "original": "R$ 6.250.218,60",
+          "currency": "BRL",
+          "label": "Estimativa anual"
+        }
+      ],
+      "value_highest": 31251093,
+      "importance": 172,
+      "news_value": {
+        "score": 172,
+        "reasons": [
+          "Atendimento do SUS",
+          "Contrato de cinco anos",
+          "Estimativa de dinheiro público"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que ainda falta para medir o resultado",
+          "text": "O extrato não comprova aumento de vagas, início dos atendimentos, redução de filas ou execução financeira. Essas conclusões dependem dos anexos contratuais, relatórios de atendimento e documentos de despesa. O nome da empresa, por si só, não permite delimitar todos os procedimentos cobertos."
+        }
+      ]
+    },
+    {
+      "id": "tcmgo-2764-trindade-revoga-cautelar-idecan",
+      "date": "2026-09-18",
+      "published_at": "2026-09-18",
+      "act_date": "2026-09-16",
+      "city": "Trindade",
+      "scope": "Municipal",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "cover",
+      "source_id": "tcmgo",
+      "source_name": "Diário Oficial de Contas do TCM-GO",
+      "source_label": "TCM-GO",
+      "edition_id": "tcmgo:2764",
+      "edition_number": "2764",
+      "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "source_landing_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+      "local_path": "data/raw/tcmgo/trindade/2026/09/tcmgo-doc-2764-2026-09-18.pdf",
+      "document_sha256": "9d438aac11c56d33d854b4a7a1d3c2b6c3476bd0b87ad0c2e4de7a8126da8613",
+      "page_start": 155,
+      "page_end": 155,
+      "document_reference": "DOC 2764 · decisão nas páginas 153–155; dispositivo na página 155",
+      "external_identifier": "Acórdão 06671/2026 · Processo 04707/2026, fase 2",
+      "reference_numbers": [
+        "06671/2026",
+        "04707/2026",
+        "05625/2026",
+        "054/2026"
+      ],
+      "official_title": "Agravo de Trindade contra medida cautelar no contrato 054/2026 com o IDECAN",
+      "act_type": "revogacao_cautelar",
+      "type_label": "Controle de contratos",
+      "public_body": "TCM-GO e Prefeitura de Trindade",
+      "title": "TCM retira suspensão de contrato de Trindade com o Idecan, mas mantém apuração",
+      "deck": "Tribunal acolheu recurso da prefeitura após mudança do quadro que sustentava a cautelar; defesa da entidade ainda será analisada.",
+      "summary": "A decisão revoga a medida provisória, não declara o contrato regular nem encerra a denúncia.",
+      "paragraphs": [
+        "O TCM-GO revogou a medida cautelar que havia suspendido a execução do contrato 054/2026 da Prefeitura de Trindade com o Instituto de Desenvolvimento Educacional, Cultural e Assistencial Nacional, o Idecan. A decisão de 16 de setembro, publicada no Diário Oficial de Contas de 18 de setembro, acolheu o recurso apresentado pelo município, representado pelo gestor Lhinicker Pereira Silva D’Orazio e pela procuradora Cristina Santos Lopes Leite. O tribunal cita uma mudança no quadro de fatos que sustentava a suspensão e o risco de que manter a medida provocasse prejuízos — o chamado perigo da demora inverso.",
+        "A retirada da suspensão não encerra a investigação nem equivale a uma declaração de regularidade. O Acórdão 06671/2026 manda devolver o processo 04707/2026 à fase inicial para a Secretaria de Controle Externo de Contratações analisar integralmente a documentação da prefeitura e a defesa do Idecan, dando continuidade à apuração das supostas irregularidades. O trecho publicado não detalha a mudança dos fatos, o valor do contrato ou seus pagamentos; por isso, não permite afirmar que houve dano, absolvição definitiva ou retomada efetiva dos serviços."
+      ],
+      "cnpjs": [],
+      "values": [],
+      "value_highest": 0,
+      "importance": 175,
+      "news_value": {
+        "score": 175,
+        "reasons": [
+          "Reversão de cautelar",
+          "Apuração de contrato continua"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que mudou e o que continua em aberto",
+          "text": "A decisão anterior era o Acórdão 05625/2026. O novo julgamento resolve o recurso contra a suspensão provisória. A conclusão sobre o mérito da denúncia permanece pendente e depende da análise da documentação e da defesa."
         }
       ]
     }
