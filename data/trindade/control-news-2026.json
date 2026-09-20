@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-18T11:28:39.447Z",
+  "generated_at": "2026-09-20T15:25:55.220Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -10590,6 +10590,75 @@
         {
           "title": "O que mudou e o que continua em aberto",
           "text": "A decisão anterior era o Acórdão 05625/2026. O novo julgamento resolve o recurso contra a suspensão provisória. A conclusão sobre o mérito da denúncia permanece pendente e depende da análise da documentação e da defesa."
+        }
+      ]
+    },
+    {
+      "id": "anapolis-4030-acolhimento-aditivos",
+      "date": "2026-09-18",
+      "published_at": "2026-09-18",
+      "act_date": "2026-09-18",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "secondary",
+      "source_id": "anapolis",
+      "source_name": "Diario Oficial de Anapolis",
+      "source_label": "Diário de Anápolis",
+      "edition_id": "anapolis:24322",
+      "edition_number": "4.030/2026",
+      "official_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25576/yAZLJVtNcnVuYgCJntrcB6HHl3B0vO7x3tNtn42K.pdf",
+      "source_landing_url": "https://dom.anapolis.go.gov.br/diarios/lista/24322",
+      "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-18-4.030-2026.pdf",
+      "document_sha256": "a5340033d2aca013df34f69c39efcb67c205a82401b5ab72cd68f4c281f68ac5",
+      "page_start": 1,
+      "page_end": 1,
+      "document_reference": "Diário extraordinário 4.030/2026 · página 1",
+      "external_identifier": "Aditivos aos termos 079/2023, 080/2023, 082/2023, 037/2019 e 010/2018",
+      "reference_numbers": [
+        "079/2023",
+        "080/2023",
+        "082/2023",
+        "037/2019",
+        "010/2018"
+      ],
+      "official_title": "Cinco aditivos a termos de colaboração para acolhimento institucional",
+      "act_type": "aditivos_assistencia_social",
+      "type_label": "Assistência social e recursos públicos",
+      "public_body": "Secretaria Municipal de Assistência e Políticas Sociais de Anápolis",
+      "title": "Anápolis publica R$ 954 mil em aditivos para acolhimento de idosos, mulheres e jovens",
+      "deck": "Cinco parcerias abrangem instituições de longa permanência e proteção a vítimas de violência; valores não comprovam repasses realizados.",
+      "summary": "Os períodos de vigência são diferentes: quatro termos seguem até setembro de 2027 e um até maio de 2027.",
+      "paragraphs": [
+        "Anápolis publicou cinco aditivos de parcerias para acolhimento institucional que somam R$ 954 mil nos valores informados pelos extratos. Três termos, de R$ 240 mil cada, atendem pessoas idosas: o Abrigo Evangélico Jesus Cristo é o Senhor, o Instituto dos Frades Servos da Imaculada e a Associação Evangélica Beneficente Monte Sinai. As três parcerias têm vigência de 14 de setembro de 2026 a 14 de setembro de 2027. Os documentos foram divulgados na edição extraordinária do Diário Oficial de 18 de setembro.",
+        "Outros R$ 78 mil correspondem à prorrogação da parceria com a Associação Missionária Esperança para acolhimento provisório de mulheres vítimas de violência, de 24 de setembro de 2026 a 24 de setembro de 2027. O Instituto Cristão Evangélico de Goiás aparece com R$ 156 mil para acolher crianças e adolescentes sob medida protetiva e atender jovens de 18 a 21 anos em repúblicas de transição, com vigência de 13 de setembro de 2026 a 13 de maio de 2027. Os R$ 954 mil são a soma de cinco valores com períodos distintos, não um pagamento comprovado. Os extratos não informam vagas, número de pessoas atendidas, metas ou prestação de contas."
+      ],
+      "cnpjs": [],
+      "values": [
+        {
+          "value": 954000,
+          "original": "R$ 954.000,00",
+          "currency": "BRL",
+          "label": "Soma dos cinco valores; vigências distintas; não é pagamento"
+        }
+      ],
+      "value_highest": 954000,
+      "importance": 149,
+      "news_value": {
+        "score": 149,
+        "reasons": [
+          "Proteção social",
+          "Cinco parcerias com valores identificados"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "Como o total foi calculado",
+          "text": "R$ 240 mil + R$ 240 mil + R$ 240 mil + R$ 78 mil + R$ 156 mil = R$ 954 mil. A soma reúne termos distintos e não demonstra execução financeira nem cobertura dos serviços."
         }
       ]
     }
