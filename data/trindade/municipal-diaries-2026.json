@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-09-20T15:24:17.736Z",
+  "generated_at": "2026-09-21T20:35:56.621Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-09-20",
+    "to": "2026-09-21",
     "last_checked": {
-      "from": "2026-09-14",
-      "to": "2026-09-20"
+      "from": "2026-09-15",
+      "to": "2026-09-21"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 376,
-    "downloaded": 376,
-    "failed_downloads": 0,
-    "extraction_pending": 376
+    "editions": 384,
+    "downloaded": 379,
+    "failed_downloads": 5,
+    "extraction_pending": 384
   },
   "daily_check_windows": [
     {
@@ -1753,7 +1753,7 @@
           "publication_timestamp_kind": "official_upload_timestamp",
           "extraordinary": false,
           "official_url": "https://www.diariomunicipal.com.br/agm/",
-          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114627_2026-09-14_281310d5e9af81f43565f1d32ac4b5cb.pdf",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114627_2026-09-14_281310d5e9af81f43565f1d32ac4b5cb.pdf",
           "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-15-3703.pdf",
           "bytes": 1876173,
           "sha256": "d0e39be5eee6e644f72d8a199425602b724d4ba87932a792525d869e8bc6769f",
@@ -1764,6 +1764,25 @@
           "error": null
         },
         {
+          "id": "agm:115643",
+          "source_edition_id": "115643",
+          "edition_number": "3910",
+          "date": "2026-09-15",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_115643_2026-09-14_fd14646d966e1a544f2628fa9c249a46.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-15-3910.pdf",
+          "bytes": null,
+          "sha256": null,
+          "last_modified": null,
+          "download_status": "download_failed",
+          "validation_status": "invalid_or_unavailable",
+          "extraction_status": "pending",
+          "error": "arquivo invalido (text/html; charset=UTF-8) (tentativa 3/3)"
+        },
+        {
           "id": "agm:121274",
           "source_edition_id": "121274",
           "edition_number": "3703a",
@@ -1772,7 +1791,7 @@
           "publication_timestamp_kind": "official_upload_timestamp",
           "extraordinary": true,
           "official_url": "https://www.diariomunicipal.com.br/agm/",
-          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_121274_2026-09-15_2dd322b112d57064fb5be42470e0ca88.pdf",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_121274_2026-09-15_2dd322b112d57064fb5be42470e0ca88.pdf",
           "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-15-3703a.pdf",
           "bytes": 727655,
           "sha256": "f3ffee23c3fb96e7b30654782cd0daad76ef538404fb5458609ca0d612950199",
@@ -1791,7 +1810,7 @@
           "publication_timestamp_kind": "official_upload_timestamp",
           "extraordinary": false,
           "official_url": "https://www.diariomunicipal.com.br/agm/",
-          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114628_2026-09-15_3d9195883e082956527d0272d02dcc58.pdf",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114628_2026-09-15_3d9195883e082956527d0272d02dcc58.pdf",
           "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-16-3704.pdf",
           "bytes": 1516155,
           "sha256": "1eb43fac1606781d78a113865b452c58adc3ee1ad37db7ccd6a80aa8f02e3ba9",
@@ -1802,6 +1821,25 @@
           "error": null
         },
         {
+          "id": "agm:115644",
+          "source_edition_id": "115644",
+          "edition_number": "3911",
+          "date": "2026-09-16",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_115644_2026-09-15_276e9ef60fb8bd080a3b1d0c5786c0c1.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-16-3911.pdf",
+          "bytes": null,
+          "sha256": null,
+          "last_modified": null,
+          "download_status": "download_failed",
+          "validation_status": "invalid_or_unavailable",
+          "extraction_status": "pending",
+          "error": "arquivo invalido (text/html; charset=UTF-8) (tentativa 3/3)"
+        },
+        {
           "id": "agm:114629",
           "source_edition_id": "114629",
           "edition_number": "3705",
@@ -1810,7 +1848,7 @@
           "publication_timestamp_kind": "official_upload_timestamp",
           "extraordinary": false,
           "official_url": "https://www.diariomunicipal.com.br/agm/",
-          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114629_2026-09-16_9bd6ee4901d4478401466573ac0d4b19.pdf",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114629_2026-09-16_9bd6ee4901d4478401466573ac0d4b19.pdf",
           "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-17-3705.pdf",
           "bytes": 1776993,
           "sha256": "f68dbe684254dc3145a39a73f49ba29ce0e65d78fce35abe376840f040497406",
@@ -1821,6 +1859,25 @@
           "error": null
         },
         {
+          "id": "agm:115645",
+          "source_edition_id": "115645",
+          "edition_number": "3912",
+          "date": "2026-09-17",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_115645_2026-09-16_ed0cb0f7c12ac91de75526cd43ad2916.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-17-3912.pdf",
+          "bytes": null,
+          "sha256": null,
+          "last_modified": null,
+          "download_status": "download_failed",
+          "validation_status": "invalid_or_unavailable",
+          "extraction_status": "pending",
+          "error": "arquivo invalido (text/html; charset=UTF-8) (tentativa 3/3)"
+        },
+        {
           "id": "agm:121292",
           "source_edition_id": "121292",
           "edition_number": "3705a",
@@ -1829,7 +1886,7 @@
           "publication_timestamp_kind": "official_upload_timestamp",
           "extraordinary": true,
           "official_url": "https://www.diariomunicipal.com.br/agm/",
-          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_121292_2026-09-17_73ddee88060b0bc58caba999433a842a.pdf",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_121292_2026-09-17_73ddee88060b0bc58caba999433a842a.pdf",
           "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-17-3705a.pdf",
           "bytes": 599169,
           "sha256": "2895048798c6ed4861b264ba50b9c69c36cbb2d4d17d1eb28aba6f06321c1bd4",
@@ -1848,7 +1905,7 @@
           "publication_timestamp_kind": "official_upload_timestamp",
           "extraordinary": false,
           "official_url": "https://www.diariomunicipal.com.br/agm/",
-          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114630_2026-09-17_12489aae97919b9bf029f3ca2bc224dc.pdf",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114630_2026-09-17_12489aae97919b9bf029f3ca2bc224dc.pdf",
           "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-18-3706.pdf",
           "bytes": 1227111,
           "sha256": "f76bfaa75d04ccd965d1134aab76186f5898d7b2f0c32b95184f937b3a5ff536",
@@ -1859,6 +1916,25 @@
           "error": null
         },
         {
+          "id": "agm:115646",
+          "source_edition_id": "115646",
+          "edition_number": "3913",
+          "date": "2026-09-18",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_115646_2026-09-17_e47baf9302b6a238e7ba8c678aaf7401.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-18-3913.pdf",
+          "bytes": null,
+          "sha256": null,
+          "last_modified": null,
+          "download_status": "download_failed",
+          "validation_status": "invalid_or_unavailable",
+          "extraction_status": "pending",
+          "error": "arquivo invalido (text/html; charset=UTF-8) (tentativa 3/3)"
+        },
+        {
           "id": "agm:121299",
           "source_edition_id": "121299",
           "edition_number": "3706a",
@@ -1867,7 +1943,7 @@
           "publication_timestamp_kind": "official_upload_timestamp",
           "extraordinary": true,
           "official_url": "https://www.diariomunicipal.com.br/agm/",
-          "file_url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_121299_2026-09-18_d867228d9e40e8e47faeddfe22872f0f.pdf",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_121299_2026-09-18_d867228d9e40e8e47faeddfe22872f0f.pdf",
           "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-18-3706a.pdf",
           "bytes": 361245,
           "sha256": "6fdb41fbed923996268298b4dc122fadfb14316b0a1a7da110db7bbff10ad73d",
@@ -1876,22 +1952,60 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:114631",
+          "source_edition_id": "114631",
+          "edition_number": "3707",
+          "date": "2026-09-21",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114631_2026-09-18_8a6c14bbbcc49768e5e194af287634ac.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-21-3707.pdf",
+          "bytes": 1517968,
+          "sha256": "57f21d7bd5d874c84e67434c1353148877a80c94e505e5008f4cb2ffd0cb6b01",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
+        },
+        {
+          "id": "agm:115647",
+          "source_edition_id": "115647",
+          "edition_number": "3914",
+          "date": "2026-09-21",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_115647_2026-09-18_96b27ca5aeff2ae80e005d8eef313d3e.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-21-3914.pdf",
+          "bytes": null,
+          "sha256": null,
+          "last_modified": null,
+          "download_status": "download_failed",
+          "validation_status": "invalid_or_unavailable",
+          "extraction_status": "pending",
+          "error": "arquivo invalido (text/html; charset=UTF-8) (tentativa 3/3)"
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-20T15:24:02.838Z",
+      "checked_at": "2026-09-21T20:35:30.518Z",
       "range_checked": {
-        "from": "2026-09-14",
-        "to": "2026-09-20"
+        "from": "2026-09-15",
+        "to": "2026-09-21"
       },
       "summary": {
-        "editions_total": 95,
-        "editions_in_checked_range": 8,
-        "downloaded": 95,
-        "failed_downloads": 0,
-        "extraction_pending": 95,
+        "editions_total": 101,
+        "editions_in_checked_range": 13,
+        "downloaded": 96,
+        "failed_downloads": 5,
+        "extraction_pending": 101,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-18",
+        "last_date": "2026-09-21",
         "observed_upload_times": {
           "all": {
             "observations": 95,
@@ -3322,14 +3436,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-20T15:24:06.024Z",
+      "checked_at": "2026-09-21T20:35:32.707Z",
       "range_checked": {
-        "from": "2026-09-14",
-        "to": "2026-09-20"
+        "from": "2026-09-15",
+        "to": "2026-09-21"
       },
       "summary": {
         "editions_total": 73,
-        "editions_in_checked_range": 7,
+        "editions_in_checked_range": 6,
         "downloaded": 73,
         "failed_downloads": 0,
         "extraction_pending": 73,
@@ -4725,22 +4839,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3051",
+          "source_edition_id": "3051",
+          "edition_number": "2939",
+          "date": "2026-09-21",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2939",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/09/2026-09-21-2939.pdf",
+          "bytes": 1111583,
+          "sha256": "535177c338ce318a8c46ca8ca9847ea237e298c4b2b549d20cf87676c406c104",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-20T15:24:06.737Z",
+      "checked_at": "2026-09-21T20:35:33.759Z",
       "range_checked": {
-        "from": "2026-09-14",
-        "to": "2026-09-20"
+        "from": "2026-09-15",
+        "to": "2026-09-21"
       },
       "summary": {
-        "editions_total": 71,
+        "editions_total": 72,
         "editions_in_checked_range": 5,
-        "downloaded": 71,
+        "downloaded": 72,
         "failed_downloads": 0,
-        "extraction_pending": 71,
+        "extraction_pending": 72,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-18",
+        "last_date": "2026-09-21",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -6026,14 +6159,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-20T15:24:09.950Z",
+      "checked_at": "2026-09-21T20:35:37.090Z",
       "range_checked": {
-        "from": "2026-09-14",
-        "to": "2026-09-20"
+        "from": "2026-09-15",
+        "to": "2026-09-21"
       },
       "summary": {
         "editions_total": 66,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 66,
         "failed_downloads": 0,
         "extraction_pending": 66,
@@ -7419,22 +7552,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "senador-canedo:690",
+          "source_edition_id": "690",
+          "edition_number": "494",
+          "date": "2026-09-21",
+          "published_at": "2026-09-21T06:00:00.228Z",
+          "publication_timestamp_kind": "calendar_timestamp_not_upload_time",
+          "extraordinary": false,
+          "official_url": "https://diario.senadorcanedo.go.gov.br/diario/pwlhxs2493",
+          "file_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=21-09-2026",
+          "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-21-494.pdf",
+          "bytes": 214961,
+          "sha256": "6c9598d280184b15655fd86c18b764906e7c80ae3d56989d686f58bd73be9db7",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-20T15:24:11.471Z",
+      "checked_at": "2026-09-21T20:35:38.500Z",
       "range_checked": {
-        "from": "2026-09-14",
-        "to": "2026-09-20"
+        "from": "2026-09-15",
+        "to": "2026-09-21"
       },
       "summary": {
-        "editions_total": 71,
+        "editions_total": 72,
         "editions_in_checked_range": 5,
-        "downloaded": 71,
+        "downloaded": 72,
         "failed_downloads": 0,
-        "extraction_pending": 71,
+        "extraction_pending": 72,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-18",
+        "last_date": "2026-09-21",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
