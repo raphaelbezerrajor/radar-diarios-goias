@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-21T12:13:14.099Z",
+  "generated_at": "2026-09-21T20:44:44.665Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -10,7 +10,8 @@
     "doego_editions": 21,
     "tcmgo_editions": 10,
     "tcego_editions": 10,
-    "published_stories": 139
+    "published_stories": 139,
+    "total_items": 175
   },
   "items": [
     {
@@ -10681,7 +10682,7 @@
       "edition_id": "doego:7368",
       "edition_number": "24868",
       "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7368",
-      "source_landing_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7368/",
+      "source_landing_url": "https://sislog.go.gov.br/PanelAquisicao/DetalhesLicitacao?idLicitacao=119904",
       "local_path": "data/raw/doego/2026/09/doego-2026-09-21-edicao-7368.pdf",
       "document_sha256": "78fc3d96ed40076cb050172e21b0435ee3b1829cc5e11933af65ced6b9b3701c",
       "page_start": 15,
@@ -10698,12 +10699,14 @@
       "act_type": "homologacao_licitacao",
       "type_label": "Tecnologia e contratações",
       "public_body": "Diretoria-Geral de Polícia Penal de Goiás",
-      "title": "Polícia Penal de Goiás homologa compra de 45 licenças de inteligência artificial por R$ 49 mil",
-      "deck": "Adapta Educação venceu o pregão com preço unitário de R$ 1.090; contrato ainda será publicado separadamente.",
-      "summary": "Software será usado para automação de tarefas, elaboração de documentos, análise de dados e apoio a decisões.",
+      "title": "Polícia Penal compra plataforma de IA por R$ 49 mil após disputa e recurso",
+      "deck": "Adapta One26 Business atenderá 45 unidades por 12 meses; homologação publicada no DOE registra prazo divergente de um mês.",
+      "summary": "Pacote inclui múltiplos modelos, capacitação, suporte, automações, gestão de usuários e controles de segurança.",
       "paragraphs": [
-        "A Polícia Penal de Goiás homologou a contratação de 45 licenças de software de inteligência artificial pelo valor total de R$ 49.050. O resultado do Pregão Eletrônico 9/2026 foi publicado no Diário Oficial do Estado desta segunda-feira, 21 de setembro. A empresa Adapta Educação Ltda., CNPJ 26.081.999/0001-34, aparece como fornecedora adjudicada, com preço unitário de R$ 1.090 para um período informado de um mês.",
-        "De acordo com o termo de homologação, as ferramentas serão destinadas à automação de tarefas, elaboração assistida de documentos, análise de dados e apoio à tomada de decisões. O ato encerra a etapa de julgamento do pregão e autoriza a contratação, mas informa que o contrato decorrente ainda será publicado. O documento não identifica o produto, os usuários das licenças, as regras de tratamento de dados, as salvaguardas para informações sensíveis ou indicadores de resultado; também não comprova que o valor já tenha sido pago."
+        "A Polícia Penal de Goiás homologou por R$ 49.050 a contratação da plataforma Adapta One26 Business para atender 45 unidades administrativas e operacionais. A proposta vencedora prevê 12 meses de acesso, suporte e capacitação, ao custo anual de R$ 1.090 por licença — equivalente a aproximadamente R$ 90,83 mensais por unidade. O orçamento inicial era de R$ 94.598,10, e o resultado ficou R$ 45.548,10 abaixo da estimativa, uma redução de 48,15%.",
+        "As licenças serão distribuídas entre gabinetes, superintendências, gerências, regionais penitenciárias, unidades de inteligência, segurança, monitoramento, tecnologia e operações especiais. A solução deverá reunir pelo menos dez modelos de inteligência artificial, além de pesquisa na internet, análise de documentos, transcrição, assistentes configuráveis, automações e painéis de acompanhamento.",
+        "A proposta da Adapta prevê criptografia, controle de acesso, integração com SSO e diretórios corporativos, registros de auditoria e proibição do uso de documentos e interações da Polícia Penal para treinamento de modelos. A capacitação terá carga mínima de 40 horas, podendo chegar a 120 horas para usuários avançados, com pelo menos quatro sessões e certificação mediante aproveitamento mínimo de 70%.",
+        "A Tess Tecnologia, segunda colocada, recorreu contra a classificação e questionou a complementação posterior da proposta, os limites de uso dos modelos, documentos fiscais e a capacidade técnica da vencedora. A Polícia Penal negou o recurso e afirmou que a diligência apenas esclareceu a solução, sem alterar preço, objeto ou prazo. O contrato definitivo ainda não foi publicado. Há uma divergência que precisa ser resolvida: o termo de referência, a proposta e a decisão do recurso falam em 12 meses, mas o quadro de homologação publicado no Diário Oficial registra período de um mês."
       ],
       "cnpjs": [
         "26.081.999/0001-34"
@@ -10713,28 +10716,297 @@
           "value": 49050,
           "original": "R$ 49.050,00",
           "currency": "BRL",
-          "label": "Valor total adjudicado; não é pagamento comprovado"
+          "label": "Valor anual adjudicado; não é pagamento comprovado"
         },
         {
           "value": 1090,
           "original": "R$ 1.090,00",
           "currency": "BRL",
-          "label": "Valor unitário publicado"
+          "label": "Valor anual publicado por licença"
+        },
+        {
+          "value": 94598.1,
+          "original": "R$ 94.598,10",
+          "currency": "BRL",
+          "label": "Orçamento estimado da contratação"
+        },
+        {
+          "value": 45548.1,
+          "original": "R$ 45.548,10",
+          "currency": "BRL",
+          "label": "Diferença entre orçamento e proposta vencedora"
         }
       ],
       "value_highest": 49050,
-      "importance": 156,
+      "importance": 172,
       "news_value": {
-        "score": 156,
+        "score": 172,
         "reasons": [
-          "Uso de inteligência artificial no poder público",
-          "Contratação homologada com fornecedor e valor"
+          "Uso de inteligência artificial na segurança pública",
+          "45 unidades por 12 meses",
+          "Recurso administrativo e divergência entre documentos oficiais"
         ]
       },
       "explainer_sections": [
         {
-          "title": "O que ainda precisa aparecer no contrato",
-          "text": "O termo publicado não informa o nome do software, o escopo técnico, a política de segurança, o tratamento de dados ou a governança do uso de inteligência artificial. Esses pontos dependem do edital, dos anexos e do contrato anunciado para publicação posterior."
+          "title": "O que está incluído",
+          "text": "Plataforma multimodelo, gestão de usuários, assistentes personalizados, automações, suporte, atualizações e treinamento. A proposta identifica o produto como Adapta One26 Business."
+        },
+        {
+          "title": "Controles prometidos",
+          "text": "A fornecedora declarou criptografia, segregação de acessos, logs, retenção configurável, exclusão segura e vedação ao treinamento de modelos com dados da Polícia Penal. O cumprimento dependerá da fiscalização contratual."
+        },
+        {
+          "title": "Ponto ainda sem resposta",
+          "text": "O contrato definitivo deverá esclarecer a divergência entre o período de um mês exibido na homologação e a vigência anual prevista no termo de referência e na proposta vencedora."
+        }
+      ]
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "doego-24868-agehab-2425-moradias",
+      "date": "2026-09-21",
+      "published_at": "2026-09-21",
+      "act_date": "2026-09-18",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "prominence": "featured",
+      "source_id": "doego",
+      "source_name": "Diario Oficial do Estado de Goias",
+      "source_label": "DOE-GO",
+      "edition_id": "doego:7368",
+      "edition_number": "24868",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7368",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7368/",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-21-edicao-7368.pdf",
+      "document_sha256": "78fc3d96ed40076cb050172e21b0435ee3b1829cc5e11933af65ced6b9b3701c",
+      "page_start": 29,
+      "page_end": 30,
+      "document_reference": "DOE 24.868 · páginas 29 e 30 · protocolo 653109",
+      "external_identifier": "Convênios AGEHAB 202602000031 a 202602000041",
+      "reference_numbers": [
+        "202602000031",
+        "202602000032",
+        "202602000033",
+        "202602000034",
+        "202602000035",
+        "202602000036",
+        "202602000037",
+        "202602000038",
+        "202602000039",
+        "202602000040",
+        "202602000041",
+        "653109"
+      ],
+      "official_title": "Aviso de extrato de convênios, TCTAs e aditivos da Agehab",
+      "act_type": "convenios_habitacao",
+      "type_label": "Habitação e dinheiro público",
+      "public_body": "Agência Goiana de Habitação (Agehab)",
+      "title": "Agehab firma R$ 114,9 milhões em convênios ligados a 2.425 moradias em cinco cidades",
+      "deck": "Onze ajustes preveem contrapartida social financeira de R$ 47,4 mil por unidade; atos foram assinados em 17 e 18 de setembro.",
+      "summary": "Empreendimentos ficam em Goiânia, Valparaíso, Aparecida de Goiânia, Caldas Novas e Águas Lindas de Goiás.",
+      "paragraphs": [
+        "A Agência Goiana de Habitação publicou onze convênios ligados à construção de 2.425 unidades habitacionais, com valores que somam R$ 114.945.000. Os ajustes foram assinados em 17 e 18 de setembro e abrangem empreendimentos em Goiânia, Valparaíso de Goiás, Aparecida de Goiânia, Caldas Novas e Águas Lindas de Goiás. Cada unidade corresponde a R$ 47,4 mil na rubrica identificada nos atos como Contrapartida Social Financeira.",
+        "Goiânia concentra 400 moradias e R$ 18,96 milhões; Valparaíso, 112 unidades e R$ 5,31 milhões; Aparecida de Goiânia, 752 unidades e R$ 35,64 milhões; Caldas Novas, 448 unidades e R$ 21,24 milhões; e Águas Lindas, 713 unidades e R$ 33,8 milhões. Os convênios têm vigência de 36 meses e envolvem seis grupos empresariais.",
+        "Os extratos vinculam os ajustes ao programa Pra Ter Onde Morar e ao mecanismo de crédito outorgado de ICMS. A publicação formaliza os valores e as obrigações dos convênios, mas não comprova que os R$ 114,9 milhões já tenham sido desembolsados. A execução física das obras, a liberação dos recursos e a entrega das moradias ainda precisam ser acompanhadas nos processos e nas prestações de contas."
+      ],
+      "cnpjs": [
+        "12.655.348/0001-04",
+        "37.857.810/0001-79",
+        "02.156.313/0001-69",
+        "54.563.863/0001-04",
+        "43.393.674/0001-06",
+        "44.111.101/0001-05"
+      ],
+      "values": [
+        {
+          "value": 114945000,
+          "original": "R$ 114.945.000,00",
+          "currency": "BRL",
+          "label": "Soma dos valores publicados nos onze convênios; não é pagamento comprovado"
+        },
+        {
+          "value": 47400,
+          "original": "R$ 47.400,00",
+          "currency": "BRL",
+          "label": "Valor equivalente publicado por unidade habitacional"
+        }
+      ],
+      "value_highest": 114945000,
+      "importance": 184,
+      "news_value": {
+        "score": 184,
+        "reasons": [
+          "R$ 114,9 milhões em valores formalizados",
+          "2.425 moradias em cinco municípios",
+          "Seis grupos empresariais"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "Como os valores se distribuem",
+          "text": "7LM: 400 unidades e R$ 18,96 milhões; Atlas: 112 e R$ 5,31 milhões; Central do Brasil: 272 e R$ 12,89 milhões; Porto Gramado: 448 e R$ 21,24 milhões; Porto Jatobá: 480 e R$ 22,75 milhões; Porto Quaresmeiras: 713 e R$ 33,8 milhões."
+        },
+        {
+          "title": "O que o ato ainda não prova",
+          "text": "A publicação dos convênios não demonstra desembolso integral, início das obras ou entrega das unidades. Esses marcos dependem da execução de cada ajuste e das prestações de contas."
+        }
+      ]
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "aparecida-2939-combustivel-ciapetro-aditivo",
+      "date": "2026-09-21",
+      "published_at": "2026-09-21",
+      "act_date": "2026-09-21",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "prominence": "secondary",
+      "source_id": "aparecida",
+      "source_name": "Diario Oficial Eletronico de Aparecida de Goiania",
+      "source_label": "Diário de Aparecida",
+      "edition_id": "aparecida:3051",
+      "edition_number": "2939",
+      "official_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2939",
+      "source_landing_url": "https://doe.aparecida.go.gov.br/",
+      "local_path": "data/raw/municipal-diaries/aparecida/2026/09/2026-09-21-2939.pdf",
+      "document_sha256": "535177c338ce318a8c46ca8ca9847ea237e298c4b2b549d20cf87676c406c104",
+      "page_start": 10,
+      "page_end": 11,
+      "document_reference": "Diário Oficial de Aparecida nº 2.939 · páginas 10 e 11",
+      "external_identifier": "2º aditivo ao Contrato 1.374/2024-SEL · Processo 2025.289.850",
+      "reference_numbers": [
+        "1.374/2024-SEL",
+        "2025.289.850",
+        "471/2026"
+      ],
+      "official_title": "Segundo termo aditivo ao contrato de fornecimento de combustíveis",
+      "act_type": "aditivo_contratual",
+      "type_label": "Contratos e abastecimento",
+      "public_body": "Prefeitura de Aparecida de Goiânia",
+      "title": "Aparecida prorroga contrato de combustíveis por até um ano e prevê mais R$ 5,05 milhões",
+      "deck": "Aditivo com a Ciapetro mantém gasolina, etanol, tanque, bomba e sistema de gestão; eficácia depende de comprovação de vantajosidade.",
+      "summary": "Contrato pode terminar antes caso a prefeitura conclua a transição para um novo sistema de abastecimento.",
+      "paragraphs": [
+        "A Prefeitura de Aparecida de Goiânia prorrogou por até 12 meses o contrato com a Ciapetro Distribuidora de Combustíveis para fornecimento de gasolina e etanol, disponibilização de tanque e bomba e operação do sistema de gerenciamento do abastecimento da frota. O novo período prevê R$ 5,05 milhões e vai de 25 de setembro de 2026 a 25 de setembro de 2027, ou até a transição para um novo sistema, se ela ocorrer antes.",
+        "Com o segundo aditivo, o valor global acumulado do Contrato 1.374/2024-SEL passa de R$ 10,1 milhões para R$ 15,15 milhões. O ato informa que a licitação destinada a escolher a futura empresa de gerenciamento ainda não foi concluída e condiciona a eficácia da prorrogação à demonstração de que os preços continuam vantajosos em relação ao mercado.",
+        "O valor de R$ 5,05 milhões corresponde à previsão para o novo período contratual e não comprova pagamento. As despesas podem alcançar Administração, Assistência Social, Meio Ambiente, Segurança Pública, Previdência e Saúde, conforme as dotações relacionadas no aditivo."
+      ],
+      "cnpjs": [
+        "01.466.091/0010-09"
+      ],
+      "values": [
+        {
+          "value": 5050000,
+          "original": "R$ 5.050.000,00",
+          "currency": "BRL",
+          "label": "Valor previsto para o novo período de até 12 meses; não é pagamento comprovado"
+        },
+        {
+          "value": 15150000,
+          "original": "R$ 15.150.000,00",
+          "currency": "BRL",
+          "label": "Valor global acumulado do contrato após o aditivo"
+        }
+      ],
+      "value_highest": 15150000,
+      "importance": 168,
+      "news_value": {
+        "score": 168,
+        "reasons": [
+          "R$ 5,05 milhões para novo período",
+          "Abastecimento de toda a frota municipal",
+          "Aditivo condicionado à demonstração de vantajosidade"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "Condição prevista no aditivo",
+          "text": "A prorrogação somente produz eficácia jurídica após demonstração da vantajosidade econômica dos preços frente ao mercado, conforme parecer jurídico citado no próprio instrumento."
+        }
+      ]
+    },
+    {
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "id": "senador-canedo-494-pavimentacao-edp-prorrogacao",
+      "date": "2026-09-21",
+      "published_at": "2026-09-21",
+      "act_date": "2026-09-18",
+      "city": "Senador Canedo",
+      "scope": "Municipal",
+      "prominence": "secondary",
+      "source_id": "senador-canedo",
+      "source_name": "Diario Oficial de Senador Canedo",
+      "source_label": "Diário de Senador Canedo",
+      "edition_id": "senador-canedo:690",
+      "edition_number": "494",
+      "official_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=21-09-2026",
+      "source_landing_url": "https://diario.senadorcanedo.go.gov.br/diario/pwlhxs2493",
+      "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-21-494.pdf",
+      "document_sha256": "6c9598d280184b15655fd86c18b764906e7c80ae3d56989d686f58bd73be9db7",
+      "page_start": 6,
+      "page_end": 7,
+      "document_reference": "Diário Oficial de Senador Canedo nº 494 · páginas 6 e 7",
+      "external_identifier": "3º aditivo ao Contrato 03.10.04.001.2024 · Processo 39.061/2026",
+      "reference_numbers": [
+        "03.10.04.001.2024",
+        "39.061/2026"
+      ],
+      "official_title": "Terceiro termo aditivo ao contrato de pavimentação em CBUQ",
+      "act_type": "prorrogacao_contratual",
+      "type_label": "Obras e pavimentação",
+      "public_body": "Prefeitura de Senador Canedo",
+      "title": "Senador Canedo prorroga contrato de pavimentação com saldo de R$ 8 milhões",
+      "deck": "Ajuste com a EDP Infraestrutura cobre obras em CBUQ por mais 12 meses; contrato original soma R$ 13,26 milhões.",
+      "summary": "Aditivo preserva o saldo remanescente para pavimentação em diferentes bairros do município.",
+      "paragraphs": [
+        "A Prefeitura de Senador Canedo prorrogou por mais 12 meses o contrato com a EDP Infraestrutura e Pavimentação Ltda. para obras de pavimentação em concreto betuminoso usinado a quente, o CBUQ, em diferentes bairros. O terceiro termo aditivo entra em vigor em 4 de outubro de 2026 e registra saldo contratual remanescente de R$ 8.034.441,57.",
+        "O contrato administrativo 03.10.04.001.2024 inclui material, mão de obra, encargos e logística e tem valor total informado de R$ 13.262.054,87. O extrato não detalha quais bairros ainda serão atendidos, quantos quilômetros faltam executar nem o percentual físico já concluído.",
+        "Os R$ 8 milhões correspondem ao saldo associado à continuidade do contrato, não a pagamento já realizado nem necessariamente a aumento do valor original. A execução e os desembolsos precisam ser confrontados com medições, empenhos, liquidações e pagamentos."
+      ],
+      "cnpjs": [
+        "01.784.187/0001-24"
+      ],
+      "values": [
+        {
+          "value": 8034441.57,
+          "original": "R$ 8.034.441,57",
+          "currency": "BRL",
+          "label": "Saldo contratual remanescente indicado no aditivo; não é pagamento comprovado"
+        },
+        {
+          "value": 13262054.87,
+          "original": "R$ 13.262.054,87",
+          "currency": "BRL",
+          "label": "Valor total informado do contrato"
+        }
+      ],
+      "value_highest": 13262054.87,
+      "importance": 164,
+      "news_value": {
+        "score": 164,
+        "reasons": [
+          "R$ 8 milhões de saldo contratual",
+          "Obras de pavimentação",
+          "Ausência de detalhamento físico no extrato"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que falta acompanhar",
+          "text": "O extrato não informa bairros, extensão pavimentada, medições já pagas ou etapas restantes. Esses dados dependem do processo, dos boletins de medição e da execução orçamentária."
         }
       ]
     }
