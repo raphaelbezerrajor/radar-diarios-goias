@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-20T15:25:55.220Z",
+  "generated_at": "2026-09-21T12:13:14.099Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -10659,6 +10659,82 @@
         {
           "title": "Como o total foi calculado",
           "text": "R$ 240 mil + R$ 240 mil + R$ 240 mil + R$ 78 mil + R$ 156 mil = R$ 954 mil. A soma reúne termos distintos e não demonstra execução financeira nem cobertura dos serviços."
+        }
+      ]
+    },
+    {
+      "id": "doego-24868-policia-penal-licencas-ia",
+      "date": "2026-09-21",
+      "published_at": "2026-09-21",
+      "act_date": "2026-09-21",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "prominence": "secondary",
+      "source_id": "doego",
+      "source_name": "Diario Oficial do Estado de Goias",
+      "source_label": "DOE-GO",
+      "edition_id": "doego:7368",
+      "edition_number": "24868",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7368",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7368/",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-21-edicao-7368.pdf",
+      "document_sha256": "78fc3d96ed40076cb050172e21b0435ee3b1829cc5e11933af65ced6b9b3701c",
+      "page_start": 15,
+      "page_end": 15,
+      "document_reference": "DOE 24.868 · página 15 · protocolo 653035",
+      "external_identifier": "Pregão 9/2026 · SISLOG 119904 · SEI 202600005015203",
+      "reference_numbers": [
+        "9/2026",
+        "119904",
+        "202600005015203",
+        "653035"
+      ],
+      "official_title": "Termo de julgamento e homologação para licenças de software de inteligência artificial",
+      "act_type": "homologacao_licitacao",
+      "type_label": "Tecnologia e contratações",
+      "public_body": "Diretoria-Geral de Polícia Penal de Goiás",
+      "title": "Polícia Penal de Goiás homologa compra de 45 licenças de inteligência artificial por R$ 49 mil",
+      "deck": "Adapta Educação venceu o pregão com preço unitário de R$ 1.090; contrato ainda será publicado separadamente.",
+      "summary": "Software será usado para automação de tarefas, elaboração de documentos, análise de dados e apoio a decisões.",
+      "paragraphs": [
+        "A Polícia Penal de Goiás homologou a contratação de 45 licenças de software de inteligência artificial pelo valor total de R$ 49.050. O resultado do Pregão Eletrônico 9/2026 foi publicado no Diário Oficial do Estado desta segunda-feira, 21 de setembro. A empresa Adapta Educação Ltda., CNPJ 26.081.999/0001-34, aparece como fornecedora adjudicada, com preço unitário de R$ 1.090 para um período informado de um mês.",
+        "De acordo com o termo de homologação, as ferramentas serão destinadas à automação de tarefas, elaboração assistida de documentos, análise de dados e apoio à tomada de decisões. O ato encerra a etapa de julgamento do pregão e autoriza a contratação, mas informa que o contrato decorrente ainda será publicado. O documento não identifica o produto, os usuários das licenças, as regras de tratamento de dados, as salvaguardas para informações sensíveis ou indicadores de resultado; também não comprova que o valor já tenha sido pago."
+      ],
+      "cnpjs": [
+        "26.081.999/0001-34"
+      ],
+      "values": [
+        {
+          "value": 49050,
+          "original": "R$ 49.050,00",
+          "currency": "BRL",
+          "label": "Valor total adjudicado; não é pagamento comprovado"
+        },
+        {
+          "value": 1090,
+          "original": "R$ 1.090,00",
+          "currency": "BRL",
+          "label": "Valor unitário publicado"
+        }
+      ],
+      "value_highest": 49050,
+      "importance": 156,
+      "news_value": {
+        "score": 156,
+        "reasons": [
+          "Uso de inteligência artificial no poder público",
+          "Contratação homologada com fornecedor e valor"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que ainda precisa aparecer no contrato",
+          "text": "O termo publicado não informa o nome do software, o escopo técnico, a política de segurança, o tratamento de dados ou a governança do uso de inteligência artificial. Esses pontos dependem do edital, dos anexos e do contrato anunciado para publicação posterior."
         }
       ]
     }
