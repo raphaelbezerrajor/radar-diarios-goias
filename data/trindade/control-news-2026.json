@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-21T20:44:44.665Z",
+  "generated_at": "2026-09-22T11:18:00.772Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-08"
@@ -11,7 +11,7 @@
     "tcmgo_editions": 10,
     "tcego_editions": 10,
     "published_stories": 139,
-    "total_items": 175
+    "total_items": 178
   },
   "items": [
     {
@@ -11007,6 +11007,248 @@
         {
           "title": "O que falta acompanhar",
           "text": "O extrato não informa bairros, extensão pavimentada, medições já pagas ou etapas restantes. Esses dados dependem do processo, dos boletins de medição e da execução orçamentária."
+        }
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "published_at": "2026-09-22",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "source_id": "doego",
+      "source_name": "Diario Oficial do Estado de Goias",
+      "source_label": "DOE-GO",
+      "edition_id": "doego:7370",
+      "edition_number": "24869",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7370",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7370/",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-22-edicao-7370.pdf",
+      "document_sha256": "3b582f807d61dbe32b31114eac97e58c23c1771f339e1b28c9ea8fc419a22c59",
+      "page_start": 2,
+      "page_end": 6,
+      "id": "doego-24869-due-diligence-fornecedores",
+      "act_date": "2026-09-22",
+      "city": "Goiás",
+      "scope": "Estadual",
+      "prominence": "featured",
+      "document_reference": "DOE nº 24.869 · páginas 2 a 6",
+      "external_identifier": "Instrução Normativa Conjunta CGE/SEAD nº 01/2026",
+      "reference_numbers": [
+        "01/2026",
+        "10.468/2024"
+      ],
+      "official_title": "Regulamentação da due diligence em contratações públicas estaduais",
+      "act_type": "regulamentacao_integridade_contratual",
+      "type_label": "Contratos e transparência",
+      "public_body": "Controladoria-Geral do Estado e Secretaria de Estado da Administração",
+      "title": "Goiás exigirá análise de risco de fornecedores em contratos acima de R$ 5 milhões",
+      "deck": "Regra alcança obras superiores a R$ 20 milhões e bens ou serviços acima de R$ 5 milhões; vigência começa 180 dias após a publicação.",
+      "summary": "Sislog classificará fornecedores em níveis de risco e contratos de risco alto deverão receber plano adicional de fiscalização.",
+      "paragraphs": [
+        "O Governo de Goiás regulamentou a análise de risco de fornecedores em contratos da administração direta, autárquica e fundacional do Executivo. A due diligence será obrigatória em obras e serviços de engenharia acima de R$ 20 milhões e em aquisições de bens ou serviços acima de R$ 5 milhões. A instrução conjunta da Controladoria-Geral do Estado e da Secretaria de Administração foi publicada nesta terça-feira, 22 de setembro, mas só entrará em vigor 180 dias depois.",
+        "O sócio ou representante legal terá de informar no Sislog a estrutura societária, o histórico de integridade, relações com o setor público e outros dados acompanhados de documentos. O sistema produzirá uma classificação de risco baixo, moderado ou alto, válida por 12 meses. Ausência de resposta, informação inverídica ou questão obrigatória sem preenchimento levará à classificação de risco alto.",
+        "A classificação elevada não impede automaticamente a contratação. Nesse caso, o gestor ou fiscal deverá adotar um plano de ação, intensificar a fiscalização, verificar entregas antes do aceite e acompanhar prazos e condições. A regra também alcançará prorrogações e aditivos de contratos antigos que atinjam os limites de valor; empresas públicas e sociedades de economia mista poderão adotar o procedimento de forma facultativa."
+      ],
+      "cnpjs": [],
+      "values": [
+        {
+          "value": 20000000,
+          "original": "R$ 20.000.000,00",
+          "currency": "BRL",
+          "label": "Limite a partir do qual obras e serviços de engenharia entram no procedimento"
+        },
+        {
+          "value": 5000000,
+          "original": "R$ 5.000.000,00",
+          "currency": "BRL",
+          "label": "Limite a partir do qual bens e serviços entram no procedimento"
+        }
+      ],
+      "value_highest": 20000000,
+      "importance": 188,
+      "news_value": {
+        "score": 188,
+        "reasons": [
+          "Regra estadual para grandes contratos",
+          "Classificação de risco de fornecedores",
+          "Impacto sobre fiscalização e transparência"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "Quando começa",
+          "text": "A instrução entra em vigor 180 dias após a publicação de 22 de setembro de 2026."
+        },
+        {
+          "title": "Risco alto não é condenação",
+          "text": "A classificação não bloqueia necessariamente o contrato; ela exige plano de ação e fiscalização reforçada."
+        }
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "published_at": "2026-09-22",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "source_id": "agm",
+      "source_name": "Diario Municipal de Goias — AGM",
+      "source_label": "Diário Municipal de Goiás",
+      "edition_id": "agm:114632",
+      "edition_number": "3708",
+      "official_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114632_2026-09-21_8b5f7a3f7a38d33526263757672ee172.pdf",
+      "source_landing_url": "https://www.diariomunicipal.com.br/agm/",
+      "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-22-3708.pdf",
+      "document_sha256": "d3452be3a054a24d1e0f1dbf01c4bd66b95ec395ebdd2c805276d0f003336306",
+      "page_start": 30,
+      "page_end": 31,
+      "id": "agm-3708-indiara-saude-imlotti-18-milhoes",
+      "act_date": "2026-09-17",
+      "city": "Indiara",
+      "scope": "Municipal",
+      "prominence": "secondary",
+      "document_reference": "Diário Municipal de Goiás nº 3.708 · páginas 30 e 31 · código 172677A8",
+      "external_identifier": "Decreto 189/2026 · Processo 1793/2026",
+      "reference_numbers": [
+        "189/2026",
+        "1793/2026",
+        "01/2026-SMS",
+        "172677A8"
+      ],
+      "official_title": "Dispensa de chamamento para parceria da rede municipal de saúde",
+      "act_type": "dispensa_chamamento_saude",
+      "type_label": "Saúde e recursos públicos",
+      "public_body": "Prefeitura de Indiara e Fundo Municipal de Saúde",
+      "title": "Indiara prepara parceria de R$ 18,38 milhões para gestão da rede municipal de saúde",
+      "deck": "Decreto dispensa chamamento público e autoriza negociação com o Instituto Margherita Lotti por 24 meses; termo ainda precisa ser formalizado.",
+      "summary": "Plano prevê R$ 765,9 mil por mês para fortalecimento institucional, assistencial e gerencial da saúde municipal.",
+      "paragraphs": [
+        "A Prefeitura de Indiara declarou dispensado o chamamento público para uma parceria de até R$ 18.382.927,20 com o Instituto Margherita Lotti, o Imlotti, destinada ao fortalecimento institucional, assistencial e gerencial da rede municipal de saúde. O plano aprovado prevê duração de 24 meses, com valor mensal de R$ 765.955,30 e projeção anual de R$ 9.191.463,60.",
+        "O Decreto nº 189/2026 informa que o instituto já estava credenciado e que a proposta foi considerada compatível com o planejamento municipal pela comissão de seleção. A justificativa para a dispensa foi publicada em 9 de setembro e, segundo o ato, o prazo legal transcorreu sem impugnação. O documento cita experiência, capacidade técnica e operacional e regularidade documental como fundamentos da escolha.",
+        "A publicação ainda não equivale à assinatura do termo nem comprova empenho ou pagamento dos R$ 18,38 milhões. O próprio decreto condiciona a execução à disponibilidade orçamentária, emissão dos empenhos, formalização e publicação do Termo de Colaboração, designação do gestor e criação da comissão de monitoramento e avaliação."
+      ],
+      "cnpjs": [
+        "17.837.282/0001-89"
+      ],
+      "values": [
+        {
+          "value": 18382927.2,
+          "original": "R$ 18.382.927,20",
+          "currency": "BRL",
+          "label": "Valor global previsto para 24 meses; não é pagamento comprovado"
+        },
+        {
+          "value": 9191463.6,
+          "original": "R$ 9.191.463,60",
+          "currency": "BRL",
+          "label": "Projeção anual do plano de trabalho"
+        },
+        {
+          "value": 765955.3,
+          "original": "R$ 765.955,30",
+          "currency": "BRL",
+          "label": "Valor mensal previsto"
+        }
+      ],
+      "value_highest": 18382927.2,
+      "importance": 179,
+      "news_value": {
+        "score": 179,
+        "reasons": [
+          "R$ 18,38 milhões previstos",
+          "Gestão da rede municipal de saúde",
+          "Dispensa de chamamento público"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que já ocorreu",
+          "text": "O município homologou a justificativa e autorizou as providências para a formalização da parceria."
+        },
+        {
+          "title": "O que ainda falta",
+          "text": "Termo, empenhos, gestor, comissão de monitoramento e publicação dos atos de execução ainda precisam ser confirmados."
+        }
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "published_at": "2026-09-22",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99,
+      "source_id": "doego",
+      "source_name": "Diario Oficial do Estado de Goias",
+      "source_label": "DOE-GO",
+      "edition_id": "doego:7370",
+      "edition_number": "24869",
+      "official_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7370",
+      "source_landing_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7370/",
+      "local_path": "data/raw/doego/2026/09/doego-2026-09-22-edicao-7370.pdf",
+      "document_sha256": "3b582f807d61dbe32b31114eac97e58c23c1771f339e1b28c9ea8fc419a22c59",
+      "page_start": 22,
+      "page_end": 23,
+      "id": "doego-24869-seduc-lars-escola-alexania",
+      "act_date": "2026-09-22",
+      "city": "Alexânia",
+      "scope": "Estadual",
+      "prominence": "secondary",
+      "document_reference": "DOE nº 24.869 · páginas 22 e 23 · protocolo 653120",
+      "external_identifier": "Despacho Decisório 1114/2026/GAB · Contrato 10/2023",
+      "reference_numbers": [
+        "1114/2026",
+        "10/2023",
+        "202500006100032",
+        "653120"
+      ],
+      "official_title": "Reconsideração parcial de sanções no contrato da Escola Padrão Século XXI de Alexânia",
+      "act_type": "decisao_sancao_contratual",
+      "type_label": "Obras escolares e fiscalização",
+      "public_body": "Secretaria de Estado da Educação de Goiás",
+      "title": "Educação mantém rescisão e multa por atraso em obra escolar de R$ 5,77 milhões",
+      "deck": "Secretaria retirou proibição de contratar por dois anos após a empresa concluir a escola em Alexânia, ainda que fora do prazo.",
+      "summary": "Processo foi aberto após fiscalização do TCE-GO apontar inconsistências na conclusão do Colégio Estadual Morada Nova.",
+      "paragraphs": [
+        "A Secretaria de Estado da Educação manteve a rescisão unilateral e a multa aplicada à Lars Locações e Engenharia pelo atraso na conclusão da Escola Padrão Século XXI do Colégio Estadual Morada Nova, em Alexânia. O Contrato nº 10/2023 tinha valor de R$ 5.776.572,54, e a multa corresponde a 3% sobre as parcelas ou etapas do cronograma que deixaram de ser executadas dentro do prazo.",
+        "Ao julgar o recurso administrativo, a secretaria retirou a suspensão de dois anos que impedia a empresa de participar de licitações e contratar com a pasta. A decisão considerou que a obra acabou sendo entregue conforme as especificações e determinações técnicas, embora de forma intempestiva. O valor exato da multa não aparece no extrato e não pode ser calculado apenas sobre o total do contrato, porque a base é a parte executada com atraso.",
+        "O procedimento teve origem em comunicação do Tribunal de Contas do Estado, baseada em relatório de fiscalização que apontou inconsistências e pediu providências preventivas. A publicação registra a decisão administrativa da Educação; não informa eventual desembolso final da obra nem o resultado de outras frentes de fiscalização do TCE-GO."
+      ],
+      "cnpjs": [
+        "18.504.013/0001-63"
+      ],
+      "values": [
+        {
+          "value": 5776572.54,
+          "original": "R$ 5.776.572,54",
+          "currency": "BRL",
+          "label": "Valor do contrato; não é o valor da multa nem pagamento comprovado"
+        }
+      ],
+      "value_highest": 5776572.54,
+      "importance": 176,
+      "news_value": {
+        "score": 176,
+        "reasons": [
+          "Obra escolar de R$ 5,77 milhões",
+          "Rescisão e multa mantidas",
+          "Decisão decorrente de fiscalização do TCE-GO"
+        ]
+      },
+      "explainer_sections": [
+        {
+          "title": "O que mudou no recurso",
+          "text": "Caiu a suspensão de contratar por dois anos; a rescisão e a multa pelo atraso foram mantidas."
+        },
+        {
+          "title": "Quanto é a multa",
+          "text": "O extrato informa 3% sobre as parcelas ou etapas atrasadas, mas não publica essa base de cálculo nem o valor final."
         }
       ]
     }
