@@ -87,7 +87,7 @@ def main() -> None:
             source_hash = digest(contents)
             if source_hash != item["document_sha256"]:
                 raise ValueError("local PDF hash differs from the validated manifest")
-            page_number = int(item["page_start"])
+            page_number = int(item.get("preview_page") or item["page_start"])
             key = (source_hash, page_number)
             preview = cache.get(key)
             if preview is None:

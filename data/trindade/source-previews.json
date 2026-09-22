@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-22T11:21:31.895779+00:00",
+  "generated_at": "2026-09-22T20:38:56.305239+00:00",
   "policy": "Renderização integral da página oficial em WebP; conteúdo textual não é reescrito.",
   "items": [
     {
@@ -770,6 +770,18 @@
       "height": 1650,
       "bytes": 256900,
       "preview_sha256": "09903cf3e61507929f2b7a5c87b8d5ec145f6161bca8b818655ca201daefd210"
+    },
+    {
+      "record_id": "aparecida-2940-refis-2026",
+      "source_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2940",
+      "source_sha256": "e18d8fbcf6206539f9263e17356a949d5ac27683bbedd21412f0a3f850ce16c0",
+      "generated_at": "2026-09-22T20:38:03.980125+00:00",
+      "src": "/assets/sources/control/e18d8fbcf6206539f9-p-1.webp",
+      "page": 1,
+      "width": 1100,
+      "height": 1650,
+      "bytes": 225060,
+      "preview_sha256": "375707181009461e5679e352b8a15056742aeb403b80ed2ac60104f530801345"
     },
     {
       "record_id": "canedo-485-campo-das-flores-192-aptos",
@@ -4730,6 +4742,30 @@
       "height": 1287,
       "bytes": 227404,
       "preview_sha256": "bf8acc693b72f7dc3f0434e217130ce571f470d3da6793c212a256772b0de711"
+    },
+    {
+      "record_id": "tcego-171-goinfra-aerodromos-glosas",
+      "source_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291942452561",
+      "source_sha256": "27b4dc59b1e5bba8cb02d19bf4981b5784e706874d4ce17d80e5e6c995de7844",
+      "generated_at": "2026-09-22T20:38:55.658190+00:00",
+      "src": "/assets/sources/control/27b4dc59b1e5bba8cb-p-18.webp",
+      "page": 18,
+      "width": 910,
+      "height": 1287,
+      "bytes": 195754,
+      "preview_sha256": "f53a13d5266b0141eaf02024766d8a010b16044a683a5eeeffe40392aa21fa05"
+    },
+    {
+      "record_id": "tcego-171-seduc-transporte-escolar-multas",
+      "source_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291942452561",
+      "source_sha256": "27b4dc59b1e5bba8cb02d19bf4981b5784e706874d4ce17d80e5e6c995de7844",
+      "generated_at": "2026-09-22T20:38:56.305239+00:00",
+      "src": "/assets/sources/control/27b4dc59b1e5bba8cb-p-6.webp",
+      "page": 6,
+      "width": 910,
+      "height": 1287,
+      "bytes": 195606,
+      "preview_sha256": "754512109437c162608e13553a544a4ca1e2a760c85c0dc36f31f8c0c473bece"
     },
     {
       "record_id": "tcmgo-2733-caldas-novas-hospital-atraso",
