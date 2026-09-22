@@ -14,6 +14,7 @@ import {
   isPrimaryOfficialSource
 } from "../src/lib/editorial/document-news.mjs";
 import { applyCuration } from "../src/lib/editorial/curation.mjs";
+import { applyStoryEntry, toNewStorySource, validateStoryEntry } from "../src/lib/editorial/story-overrides.mjs";
 import { buildFrontPagePackage, rankFrontPageStories } from "../src/lib/editorial/front-page.mjs";
 
 const root = process.cwd();
@@ -320,7 +321,7 @@ function normalizeJulyDocumentNews(item, preview) {
     id: item.id,
     slug,
     path: `/base/${slug}/`,
-    cluster: ["alego", "doego", "tcego"].includes(item.source_id) ? "goias" : "municipios",
+    cluster: item.scope === "Estadual" || ["alego", "doego", "tcego"].includes(item.source_id) ? "goias" : "municipios",
     city: item.city,
     date: item.date,
     year: Number(String(item.date).slice(0, 4)),
@@ -523,7 +524,8 @@ async function main() {
     alegoMonitor,
     julyDocumentNews,
     controlNews,
-    curatedBriefs
+    curatedBriefs,
+    storyOverrides
   ] = await Promise.all([
     trindadeProvider.buscarAtos(),
     trindadeProvider.obterAnalise(),
@@ -539,7 +541,8 @@ async function main() {
     readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], analysis_queue: [], range: {} }, "data", "trindade", "alego-monitor-2026.json"),
     readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "july-document-news-2026.json"),
     readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "control-news-2026.json"),
-    readJsonOptional({ briefs: [] }, "data", "editorial", "curated-briefs.json")
+    readJsonOptional({ briefs: [] }, "data", "editorial", "curated-briefs.json"),
+    readJsonOptional({ stories: [] }, "data", "editorial", "story-overrides.json")
   ]);
 
   const municipalityByName = new Map(
@@ -605,6 +608,21 @@ async function main() {
     .map(normalizeTcmDossier);
   const curatedBriefById = new Map((curatedBriefs.briefs || []).map((brief) => [brief.id, brief]));
   const applyEditorialCuration = (item) => applyCuration(item, curatedBriefById.get(item.id));
+  const editorialEntries = storyOverrides.stories || [];
+  const editorialEntryIds = new Set();
+  for (const entry of editorialEntries) {
+    if (editorialEntryIds.has(entry.id)) throw new Error(`Entrada editorial duplicada: ${entry.id}`);
+    editorialEntryIds.add(entry.id);
+  }
+  const newEditorialNews = editorialEntries
+    .filter((entry) => entry.kind === "new" && entry.status === "published")
+    .map((entry) => {
+      const validation = validateStoryEntry(entry);
+      if (!validation.valid) throw new Error(`Matéria editorial inválida ${entry.id}: ${validation.issues.join(", ")}`);
+      return { ...normalizeJulyDocumentNews(toNewStorySource(entry)), editorialEntryId: entry.id };
+    });
+  const editById = new Map(editorialEntries.filter((entry) => entry.kind === "edit").map((entry) => [entry.id, entry]));
+  const applyEditorialEdit = (item) => applyStoryEntry(item, editById.get(item.id));
   const editorialYear = Number(String(radar.cutoff_date || radar.updated_at).slice(0, 4));
   const editorialPublicationDate = [
     radar.updated_at,
@@ -630,17 +648,25 @@ async function main() {
         .concat(normalizedJulyDocumentNews)
         .concat(normalizedControlNews)
         .concat(normalizedTcmNews)
+        .concat(newEditorialNews)
         .concat(residualUnified)
         .map(applyEditorialCuration)
+        .map(applyEditorialEdit)
         .map(addPublicationMetadata)
         .map(attachSearch)
     )
   );
+  for (const entry of editorialEntries.filter((item) => item.kind === "edit" && item.status === "published")) {
+    if (!allRecords.some((item) => item.id === entry.id && item.editorialEntryId === entry.id)) {
+      throw new Error(`Edição editorial não aplicada: ${entry.id}`);
+    }
+  }
 
   const publishedNews = stateRecords
-    .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedControlNews, normalizedTcmNews)
+    .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedControlNews, normalizedTcmNews, newEditorialNews)
     .filter((item) => item.recordType === "story")
     .map(applyEditorialCuration)
+    .map(applyEditorialEdit)
     .map(addPublicationMetadata);
   const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
   const frontPage = buildFrontPagePackage(timelineNews);

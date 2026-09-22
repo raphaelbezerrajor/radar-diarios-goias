@@ -40,6 +40,13 @@ pnpm validate
 Publicacao atual:
 [https://raphaelbezerrajor.github.io/radar-diarios-goias/](https://raphaelbezerrajor.github.io/radar-diarios-goias/)
 
+## Redação integrada no computador
+
+Execute `pnpm redacao:local` e abra `http://127.0.0.1:4317/redacao/`.
+A interface permite localizar matérias, editar título, olho e texto, salvar
+rascunhos privados e aplicar mudanças ao site local após testes e validações.
+O site público não é alterado automaticamente. Veja `docs/REDACAO-LOCAL.md`.
+
 ## Base integrada
 
 - painel estadual com pautas curadas de 2025 e 2026;

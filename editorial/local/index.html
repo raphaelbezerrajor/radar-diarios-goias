@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Redação local | Pauteiro</title>
+  <link rel="stylesheet" href="/redacao/style.css">
+  <script type="module" src="/redacao/app.js"></script>
+</head>
+<body>
+  <header class="masthead"><div class="wrap masthead-inner"><a class="brand" href="/redacao/">PAUTEIRO<span> / REDAÇÃO</span></a><a class="site-link" href="/radar-diarios-goias/" target="_blank" rel="noopener">Ver site local ↗</a></div></header>
+  <main class="wrap">
+    <section class="intro"><div><p class="eyebrow">Área de trabalho neste computador</p><h1>Da fonte à matéria.</h1><p>Encontre um ato, ajuste a notícia e confira a página oficial antes de aplicar a mudança ao site local.</p></div><div class="intro-badge">Rascunhos privados<br><strong>no disco D:</strong></div></section>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <div class="workspace">
+      <aside class="sidebar" aria-label="Matérias"><div class="sidebar-head"><h2>Matérias</h2><button id="new-button" type="button">+ Nova</button></div><label for="search">Buscar</label><input id="search" type="search" placeholder="Título, cidade ou ID"><p id="count" class="hint"></p><div id="list" class="story-list"></div></aside>
+      <div class="main-column">
+        <div id="empty" class="empty">Escolha uma matéria à esquerda ou comece uma nova.</div>
+        <form id="editor" hidden>
+          <div class="editor-head"><div><p class="eyebrow" id="mode"></p><h2 id="editor-heading">Editar matéria</h2></div><a id="page-link" target="_blank" rel="noopener" hidden>Ver página local ↗</a></div>
+          <div class="two"><div><label for="city">Cidade ou âmbito</label><input id="city" required></div><div><label for="date">Data do ato</label><input id="date" type="date" required></div></div>
+          <label for="scope">Abrangência</label><select id="scope"><option value="Municipal">Municipal</option><option value="Estadual">Estadual</option></select>
+          <div class="two"><div><label for="type">Tipo do ato</label><input id="type" required></div><div><label for="importance">Relevância na base</label><input id="importance" type="number" min="0" value="80"></div></div>
+          <label for="title">Manchete</label><input id="title" maxlength="180" required>
+          <label for="deck">Olho</label><textarea id="deck" rows="3" maxlength="400" required></textarea>
+          <label for="body">Texto</label><textarea id="body" rows="13" placeholder="Separe os parágrafos com uma linha em branco" required></textarea>
+          <div class="two"><div><label for="source-label">Órgão ou diário</label><input id="source-label" required></div><div><label for="reference">Edição e páginas</label><input id="reference" required></div></div>
+          <label for="source-url">Documento oficial</label><input id="source-url" type="url" required><a id="source-link" target="_blank" rel="noopener" hidden>Abrir documento original ↗</a>
+          <p id="source-note" class="hint"></p>
+          <label class="confirm"><input id="verified" type="checkbox"><span>Conferi nomes, datas, valores e estágio do ato no documento original.</span></label>
+          <div class="actions"><button type="button" id="save-draft">Salvar rascunho</button><button type="submit" id="apply-story">Aplicar ao site local</button></div>
+          <p class="hint">Aplicar reconstrói e valida o site neste computador. A versão pública só muda quando o projeto é enviado para publicação.</p>
+        </form>
+        <section id="preview" class="preview" hidden><p class="eyebrow">Prévia de leitura</p><h2 id="preview-title"></h2><p id="preview-deck"></p><div id="preview-body"></div></section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
