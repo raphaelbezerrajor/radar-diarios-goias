@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-09-25T12:27:25.913Z",
+  "generated_at": "2026-09-28T15:25:18.460Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-09-25",
+    "to": "2026-09-28",
     "last_checked": {
-      "from": "2026-09-18",
-      "to": "2026-09-25"
+      "from": "2026-09-21",
+      "to": "2026-09-28"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 402,
-    "downloaded": 400,
+    "editions": 408,
+    "downloaded": 406,
     "failed_downloads": 2,
-    "extraction_pending": 402
+    "extraction_pending": 408
   },
   "daily_check_windows": [
     {
@@ -2047,22 +2047,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:114636",
+          "source_edition_id": "114636",
+          "edition_number": "3712",
+          "date": "2026-09-28",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114636_2026-09-25_547e29fb263761e3ece6f95faaa61f27.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/09/2026-09-28-3712.pdf",
+          "bytes": 1507020,
+          "sha256": "4e1bfdaa44c847658d285d1233761e9c16b3fddd158e5e8411ba60c1ba8a3f55",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-25T12:27:12.368Z",
+      "checked_at": "2026-09-28T15:25:01.387Z",
       "range_checked": {
-        "from": "2026-09-18",
-        "to": "2026-09-25"
+        "from": "2026-09-21",
+        "to": "2026-09-28"
       },
       "summary": {
-        "editions_total": 104,
-        "editions_in_checked_range": 9,
-        "downloaded": 102,
+        "editions_total": 105,
+        "editions_in_checked_range": 8,
+        "downloaded": 103,
         "failed_downloads": 2,
-        "extraction_pending": 104,
+        "extraction_pending": 105,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-25",
+        "last_date": "2026-09-28",
         "observed_upload_times": {
           "all": {
             "observations": 95,
@@ -3566,31 +3585,69 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "anapolis:24454",
+          "source_edition_id": "24454",
+          "edition_number": "4.036/2026",
+          "date": "2026-09-25",
+          "published_at": "2026-09-25 23:16:22",
+          "publication_timestamp_kind": "official_file_created_timestamp",
+          "extraordinary": false,
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/24454",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25774/F6LR1iGF9lLwv6HrvpJdTa6AqqqMZujkqkZ5LE4C.pdf",
+          "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-25-4.036-2026.pdf",
+          "bytes": 704117,
+          "sha256": "dab8390119799ff65046dce6f8136399545c4e3b6e281a2363bcd385785b3940",
+          "last_modified": "Sat, 26 Sep 2026 02:16:25 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
+        },
+        {
+          "id": "anapolis:24586",
+          "source_edition_id": "24586",
+          "edition_number": "4.038/2026",
+          "date": "2026-09-26",
+          "published_at": "2026-09-26 08:22:25",
+          "publication_timestamp_kind": "official_file_created_timestamp",
+          "extraordinary": false,
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/24586",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25873/QN5YAcpdDGZ38zjVqpLoyw0LyVn3yMakhoj2dxda.pdf",
+          "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-26-4.038-2026.pdf",
+          "bytes": 382371,
+          "sha256": "174bc214c88b5dad2211ae40dc8fb2f7bb60603bc4178895d409a764b1075719",
+          "last_modified": "Sat, 26 Sep 2026 11:22:30 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-25T12:27:14.555Z",
+      "checked_at": "2026-09-28T15:25:03.573Z",
       "range_checked": {
-        "from": "2026-09-18",
-        "to": "2026-09-25"
+        "from": "2026-09-21",
+        "to": "2026-09-28"
       },
       "summary": {
-        "editions_total": 77,
+        "editions_total": 79,
         "editions_in_checked_range": 6,
-        "downloaded": 77,
+        "downloaded": 79,
         "failed_downloads": 0,
-        "extraction_pending": 77,
+        "extraction_pending": 79,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-24",
+        "last_date": "2026-09-26",
         "observed_upload_times": {
           "all": {
-            "observations": 77,
+            "observations": 79,
             "earliest": "01:41",
             "median": "21:31",
             "latest": "23:57"
           },
           "ordinary": {
-            "observations": 77,
+            "observations": 79,
             "earliest": "01:41",
             "median": "21:31",
             "latest": "23:57"
@@ -3598,7 +3655,7 @@
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 37,
+          "observations": 39,
           "earliest": "01:41",
           "median": "21:04",
           "latest": "23:31"
@@ -5048,22 +5105,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3055",
+          "source_edition_id": "3055",
+          "edition_number": "2943",
+          "date": "2026-09-25",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2943",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/09/2026-09-25-2943.pdf",
+          "bytes": 12267543,
+          "sha256": "7dc3c256b5de5d6a0b537d3857ef3e267111711fc0f8b052576fc496dd39669f",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-25T12:27:15.187Z",
+      "checked_at": "2026-09-28T15:25:04.222Z",
       "range_checked": {
-        "from": "2026-09-18",
-        "to": "2026-09-25"
+        "from": "2026-09-21",
+        "to": "2026-09-28"
       },
       "summary": {
-        "editions_total": 75,
+        "editions_total": 76,
         "editions_in_checked_range": 5,
-        "downloaded": 75,
+        "downloaded": 76,
         "failed_downloads": 0,
-        "extraction_pending": 75,
+        "extraction_pending": 76,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-24",
+        "last_date": "2026-09-25",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -6422,29 +6498,48 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "goiania:do_20260925_000008871.pdf",
+          "source_edition_id": "do_20260925_000008871.pdf",
+          "edition_number": "8871",
+          "date": "2026-09-25",
+          "published_at": null,
+          "publication_timestamp_kind": "file_last_modified_only",
+          "extraordinary": false,
+          "official_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+          "file_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260925_000008871.pdf",
+          "local_path": "data/raw/municipal-diaries/goiania/2026/09/2026-09-25-8871.pdf",
+          "bytes": 9271128,
+          "sha256": "3ac73c99542b58674ded2fe5cd9f0341e197ea7104d4f1493b16f796b274c9af",
+          "last_modified": "Fri, 25 Sep 2026 21:08:23 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-25T12:27:17.540Z",
+      "checked_at": "2026-09-28T15:25:09.872Z",
       "range_checked": {
-        "from": "2026-09-18",
-        "to": "2026-09-25"
+        "from": "2026-09-21",
+        "to": "2026-09-28"
       },
       "summary": {
-        "editions_total": 70,
+        "editions_total": 71,
         "editions_in_checked_range": 5,
-        "downloaded": 70,
+        "downloaded": 71,
         "failed_downloads": 0,
-        "extraction_pending": 70,
+        "extraction_pending": 71,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-24",
+        "last_date": "2026-09-25",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 70,
+          "observations": 71,
           "earliest": "11:39",
           "median": "18:04",
           "latest": "20:58"
@@ -7913,22 +8008,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "senador-canedo:695",
+          "source_edition_id": "695",
+          "edition_number": "499",
+          "date": "2026-09-28",
+          "published_at": "2026-09-28T06:00:00.160Z",
+          "publication_timestamp_kind": "calendar_timestamp_not_upload_time",
+          "extraordinary": false,
+          "official_url": "https://diario.senadorcanedo.go.gov.br/diario/luh8xx3498",
+          "file_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=28-09-2026",
+          "local_path": "data/raw/municipal-diaries/senador-canedo/2026/09/2026-09-28-499.pdf",
+          "bytes": 241495,
+          "sha256": "a57532e84a126e65b0e00e4915d4a440e8698e306a574140b22e9153ddd2d3c5",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-09-25T12:27:19.327Z",
+      "checked_at": "2026-09-28T15:25:11.365Z",
       "range_checked": {
-        "from": "2026-09-18",
-        "to": "2026-09-25"
+        "from": "2026-09-21",
+        "to": "2026-09-28"
       },
       "summary": {
-        "editions_total": 76,
+        "editions_total": 77,
         "editions_in_checked_range": 6,
-        "downloaded": 76,
+        "downloaded": 77,
         "failed_downloads": 0,
-        "extraction_pending": 76,
+        "extraction_pending": 77,
         "first_date": "2026-06-01",
-        "last_date": "2026-09-25",
+        "last_date": "2026-09-28",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
