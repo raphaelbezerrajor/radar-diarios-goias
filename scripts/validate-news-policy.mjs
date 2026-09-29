@@ -13,6 +13,7 @@ const records = await readJson("src", "generated", "site-records.json");
 const site = await readJson("src", "generated", "site-data.json");
 const julyIndex = await readJson("public", "data", "july-news-index.json");
 const julySource = await readJson("data", "trindade", "july-document-news-2026.json");
+const editedDocumentNews = await readJson("data", "trindade", "control-news-2026.json");
 const previews = await readJson("data", "trindade", "source-previews.json");
 const curationQueue = await readJson("data", "editorial", "curation-queue.json");
 const curatedBriefs = await readJson("data", "editorial", "curated-briefs.json");
@@ -20,8 +21,13 @@ const automatic = records.filter((item) => item.publicationMode === "automatic_d
 const institutionalPattern = /\/(?:noticia|noticias|news|imprensa|agencia-de-noticias)(?:\/|\?|$)/i;
 
 const recordIds = new Set(records.map((item) => item.id));
+const replacedDocumentIds = new Set((editedDocumentNews.items || []).map((item) => item.origin_item_id).filter(Boolean));
+assert((editedDocumentNews.items || []).filter((item) => item.origin_item_id).every((item) =>
+  (julySource.items || []).some((source) => source.id === item.origin_item_id) && recordIds.has(item.id)
+), "Há substituição editorial sem documento original ou matéria publicada.");
 const nonDuplicatedJulySource = (julySource.items || [])
   .filter((item) => item.editorial_status !== "needs_review")
+  .filter((item) => !replacedDocumentIds.has(item.id))
   .filter((item) => !(item.source_id === "agm" && item.city === "Trindade"));
 assert(nonDuplicatedJulySource.every((item) => recordIds.has(item.id)), "Há documentos de julho ausentes do acervo unificado.");
 assert(automatic.length >= 500, `O noticiário documental relevante ficou abaixo do baseline: ${automatic.length}.`);
