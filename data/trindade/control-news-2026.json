@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T16:35:00Z",
+  "generated_at": "2026-09-29T20:41:00Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-09-29"
@@ -10,10 +10,58 @@
     "doego_editions": 32,
     "tcmgo_editions": 15,
     "tcego_editions": 16,
-    "published_stories": 197,
-    "total_items": 197
+    "published_stories": 198,
+    "total_items": 198
   },
   "items": [
+    {
+      "id": "aparecida-2945-iluminacao-ppp-reajuste-654-milhoes",
+      "origin_item_id": "jul26-aparecida-3057-319b48d8aac7-36",
+      "date": "2026-09-29",
+      "published_at": "2026-09-29",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "source_id": "aparecida",
+      "source_name": "Diário Oficial Eletrônico de Aparecida de Goiânia",
+      "source_label": "Prefeitura de Aparecida de Goiânia",
+      "official_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2945",
+      "source_landing_url": "https://doe.aparecida.go.gov.br/",
+      "edition_id": "aparecida:3057",
+      "edition_number": "2945",
+      "external_identifier": "Apostilamento 480/2026 · Contrato de concessão 1.028/2025",
+      "local_path": "data/raw/municipal-diaries/aparecida/2026/09/2026-09-29-2945.pdf",
+      "document_sha256": "2f32412b7f38ae98acab96a46fdca03e059d95490019fd68a7468da33aa4e4c6",
+      "page_start": 28,
+      "page_end": 29,
+      "preview_page": 28,
+      "document_reference": "Diário de Aparecida nº 2.945, de 29 de setembro · páginas 28 e 29",
+      "act_type": "reajuste_concessao",
+      "type_label": "Iluminação pública",
+      "official_title": "Termo de Apostilamento nº 480/2026 ao Contrato de Concessão Administrativa nº 1.028/2025",
+      "title": "Aparecida reajusta PPP da iluminação e projeta contrato em R$ 654,4 milhões",
+      "deck": "Parcela mensal sobe R$ 246,5 mil com correção de 12,22% pelo IPCA; valor global é uma projeção para 24 anos, não dinheiro já pago.",
+      "summary": "Aparecida de Goiânia reajustou a contraprestação mensal da concessão de iluminação pública de R$ 2,02 milhões para R$ 2,26 milhões, elevando a projeção global do contrato a R$ 654,4 milhões.",
+      "paragraphs": [
+        "A Prefeitura de Aparecida de Goiânia publicou nesta terça-feira (29) o primeiro reajuste ordinário da parceria público-privada de iluminação pública com a Luz Pública de Aparecida SPE Ltda., CNPJ 59.335.181/0001-50. A contraprestação mensal prevista no Contrato de Concessão Administrativa nº 1.028/2025 passa de R$ 2.017.599,07 para R$ 2.264.130,31 — aumento de R$ 246.531,24 por mês, calculado pelo IPCA acumulado de 12,219040% entre junho de 2023 e fevereiro de 2026.",
+        "O Termo de Apostilamento nº 480/2026 estima R$ 27.169.563,72 em contraprestações ordinárias para os próximos 12 meses e estabelece efeitos financeiros desde março de 2026. Com a projeção das parcelas reajustadas ao longo dos 24 anos da concessão e um aditivo separado de R$ 2.363.401,80 para decoração natalina de 2025, o valor global projetado passa de R$ 583.431.933,96 para R$ 654.432.931,08. O ato aponta a Contribuição para Custeio do Serviço de Iluminação Pública (Cosip) como fonte principal, com suporte subsidiário do Tesouro municipal.",
+        "O valor de R$ 654,4 milhões é uma estimativa contratual para toda a vigência, não desembolso realizado. O diário não discrimina quanto já foi efetivamente pago à concessionária nem o impacto financeiro retroativo desde março; esses dados dependem das medições e dos registros de empenho, liquidação e pagamento. O reajuste foi publicado como apostilamento, sem mudança das demais cláusulas da concessão."
+      ],
+      "public_body": "Prefeitura de Aparecida de Goiânia",
+      "values": [
+        {"original": "R$ 2.264.130,31", "value": 2264130.31, "currency": "BRL", "stage": "contraprestacao_mensal_reajustada_nao_pagamento"},
+        {"original": "R$ 654.432.931,08", "value": 654432931.08, "currency": "BRL", "stage": "projecao_global_24_anos_nao_pagamento"}
+      ],
+      "value_highest": 654432931.08,
+      "reference_numbers": ["480/2026", "1.028/2025", "584/2025", "597/2026"],
+      "importance": 262,
+      "news_value": {"score": 100, "reasons": ["contraprestação mensal de iluminação pública", "reajuste de R$ 246,5 mil por mês", "projeção contratual de R$ 654,4 milhões em 24 anos"]},
+      "prominence": "cover",
+      "record_type": "story",
+      "editorial_status": "published",
+      "publication_mode": "edited_document_news",
+      "source_type": "official_document",
+      "confidence": 0.99
+    },
     {
       "id": "doego-24875-goinfra-go219-remanescente-42-milhoes",
       "date": "2026-09-29",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-09-29T16:26:04.621754+00:00",
+  "generatedAt": "2026-09-29T20:33:22.250818+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 9,
@@ -82,6 +82,133 @@
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
         "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-aparecida-3057-436e0836a9b6-28",
+      "status": "pending",
+      "date": "2026-09-29",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "actType": "dispensa",
+      "typeLabel": "Dispensa",
+      "priority": 100,
+      "importance": 100,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "ATO DE DISPENSA DE LICITAÇÃO Nº 31/2026",
+        "extractedTitle": "Aparecida de Goiânia publica ATO DE DISPENSA DE LICITAÇÃO Nº 31/2026",
+        "extractedDeck": "Autorizar a participação dos servidores da CONVENENTE, conforme rela cionados no Plano de Trabalho, nos termos da lei e das normativas que disciplinam a matéria, sem que isto implique em disposição e/ou prejuízos no desenvolvimento das atividades normais e próprias dos",
+        "extractedParagraphs": [
+          "SECRETARIA MUNICIPAL DE EDUCAÇÃO, Sra. NÚBIA artigos nº 75, “XI” 53, 184 e 184-A, bem como Lei Municipal nº 1.031/1991 (Ins publicou dispensa na edição 2945 de Diário Oficial de Aparecida de Goiânia, datada de 29 de setembro de 2026. Autorizar a participação dos servidores da CONVENENTE, conforme rela cionados no Plano de Trabalho, nos termos da lei e das normativas que disciplinam a matéria, sem que isto implique em disposição e/ou prejuízos no desenvolvimento das atividades normais e próprias dos.",
+          "O maior valor monetário identificado no texto é R$ 2.369.334,49; o ato cita os CNPJs 00.799.205/0001-89, 01.567.601/0001-43, 05.120.923/0001-09, 07.481.455/0001-15; as referências documentais incluem 14.133/2021, 14.133/2021., 10.467/2002, 8.429/1992, 9.613/1998. A conferência deve ser feita no documento original, em páginas 12 a 21."
+        ],
+        "evidenceExcerpt": "ATO DE DISPENSA DE LICITAÇÃO Nº 31/2026 O presente convênio, celebrado nos termos da Lei nº 14.133/2021, em especial nos A Secretária da SECRETARIA MUNICIPAL DE EDUCAÇÃO, Sra. NÚBIA artigos nº 75, “XI” 53, 184 e 184-A, bem como Lei Municipal nº 1.031/1991 (Ins GOMES DE BRITO FARIAS, brasileira, inscria no CPF sob o nº 849.***.***- titui o Fundo Municipal de Saúde) tem por objeto o estabelecimento de cooperação 91, no uso de suas atribuições legais, e considerando tudo que consta nos au mútua entre os partícipes,…",
+        "publicBody": "SECRETARIA MUNICIPAL DE EDUCAÇÃO, Sra. NÚBIA artigos nº 75, “XI” 53, 184 e 184-A, bem como Lei Municipal nº 1.031/1991 (Ins",
+        "values": [
+          {
+            "original": "R$ 2.369.334,49",
+            "value": 2369334.49,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 80,00",
+            "value": 80,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 470.188,16",
+            "value": 470188.16,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 30.334,72",
+            "value": 30334.72,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 379.184,00",
+            "value": 379184,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$4.277,31",
+            "value": 4277.31,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$2.948,68",
+            "value": 2948.68,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$2.712,80",
+            "value": 2712.8,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 60,00",
+            "value": 60,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 473.866,90",
+            "value": 473866.9,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 1.421.600,69",
+            "value": 1421600.69,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 90.000,00",
+            "value": 90000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "00.799.205/0001-89",
+          "01.567.601/0001-43",
+          "05.120.923/0001-09",
+          "07.481.455/0001-15"
+        ],
+        "referenceNumbers": [
+          "14.133/2021",
+          "14.133/2021.",
+          "10.467/2002",
+          "8.429/1992",
+          "9.613/1998",
+          "2.848/40",
+          "12.846/2013",
+          "301/2026",
+          "2025.394.212",
+          "14.133/21",
+          "14.715/2004",
+          "14.133"
+        ],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Aparecida de Goiânia",
+        "label": "SECRETARIA MUNICIPAL DE EDUCAÇÃO, Sra. NÚBIA artigos nº 75, “XI” 53, 184 e 184-A, bem como Lei Municipal nº 1.031/1991 (Ins",
+        "url": "https://webio.aparecida.go.gov.br/diariooficial/download/2945",
+        "editionId": "aparecida:3057",
+        "editionNumber": "2945",
+        "pageStart": 12,
+        "pageEnd": 21,
+        "documentReference": "Edição 2945 · páginas 12 a 21",
+        "documentSha256": "2f32412b7f38ae98acab96a46fdca03e059d95490019fd68a7468da33aa4e4c6",
+        "actSha256": "436e0836a9b6f778cecc50348c7a910868b4a16f52da7430bed2d350b4b09dfa"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
       }
     },
     {
@@ -207,6 +334,138 @@
         "documentReference": "Edição 3713 · páginas 51 a 52",
         "documentSha256": "16e8d0403ed90d8c36c8c303b7e5b4b047f29a817f5c2c6b2cf99a3dfce833a4",
         "actSha256": "cc7c3222e26b9738e351eab39a656c3233decb0fc31e59096a300d026c39fa6d"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-aparecida-3057-42c63f471eaa-32",
+      "status": "pending",
+      "date": "2026-09-29",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "TERMO DE ADITAMENTO Nº 462/2026 CÁLCULO DO VALOR GLOBAL DO CONTRATO",
+        "extractedTitle": "Aparecida de Goiânia publica TERMO DE ADITAMENTO Nº 462/2026 CÁLCULO DO VALOR GLOBAL DO CONTRATO",
+        "extractedDeck": "ficam expressamente condicionadas à apresentação e comprovação, pela CONTRATADA, da regularidade fiscal, trabalhista e perante o FGTS, meDAS PARTES: diante a juntada das respectivas certidões devidamente atualizadas e válidas (ne CONTRATANTE: MUNICÍPIO DE APARECIDA DE GOIÂNIA, pessoa ju gativas ou…",
+        "extractedParagraphs": [
+          "MUNICÍPIO DE APARECIDA DE GOIÂNIA POR INTERMÉ Contrato n° 1.324/2025-SEL R$ 7.998.999,25 R$ 7.998.999,25 publicou contrato na edição 2945 de Diário Oficial de Aparecida de Goiânia, datada de 29 de setembro de 2026. ficam expressamente condicionadas à apresentação e comprovação, pela CONTRATADA, da regularidade fiscal, trabalhista e perante o FGTS, meDAS PARTES: diante a juntada das respectivas certidões devidamente atualizadas e válidas (ne CONTRATANTE: MUNICÍPIO DE APARECIDA DE GOIÂNIA, pessoa ju gativas ou….",
+          "O maior valor monetário identificado no texto é R$ 15.997.998,50; o ato cita o CNPJ 26.917.005/0001-77; as referências documentais incluem 1.324/2025-SEL, 1.324/2025-SEL., 14.133, 2026.041.309, 12.527. A conferência deve ser feita no documento original, em página 25."
+        ],
+        "evidenceExcerpt": "TERMO DE ADITAMENTO Nº 462/2026 CÁLCULO DO VALOR GLOBAL DO CONTRATO Referência Objeto Valor Anual (R$) Valor Global (R$)1º TERMO ADITIVO AO CONTRATO Nº 1.324/2025-SEL, CELEBRADO ENTRE O MUNICÍPIO DE APARECIDA DE GOIÂNIA POR INTERMÉ Contrato n° 1.324/2025-SEL R$ 7.998.999,25 R$ 7.998.999,25 DIO DA SECRETARIA MUNICIPAL DE INFRAESTRUTURA E A EM Novo Termo Aditivo Prorrogação de prazo/valor R$ 7.998.999,25 R$ 15.997.998,50 PRESA DISTRIBUIDORA BRASILEIRA DE ASFALTO LTDA., NA FOR 1.4.A liberação e a efetivação dos…",
+        "publicBody": "MUNICÍPIO DE APARECIDA DE GOIÂNIA POR INTERMÉ Contrato n° 1.324/2025-SEL R$ 7.998.999,25 R$ 7.998.999,25",
+        "values": [
+          {
+            "original": "R$ 7.998.999,25",
+            "value": 7998999.25,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 15.997.998,50",
+            "value": 15997998.5,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "26.917.005/0001-77"
+        ],
+        "referenceNumbers": [
+          "1.324/2025-SEL",
+          "1.324/2025-SEL.",
+          "14.133",
+          "2026.041.309",
+          "12.527",
+          "7.724"
+        ],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Aparecida de Goiânia",
+        "label": "MUNICÍPIO DE APARECIDA DE GOIÂNIA POR INTERMÉ Contrato n° 1.324/2025-SEL R$ 7.998.999,25 R$ 7.998.999,25",
+        "url": "https://webio.aparecida.go.gov.br/diariooficial/download/2945",
+        "editionId": "aparecida:3057",
+        "editionNumber": "2945",
+        "pageStart": 25,
+        "pageEnd": 25,
+        "documentReference": "Edição 2945 · página 25",
+        "documentSha256": "2f32412b7f38ae98acab96a46fdca03e059d95490019fd68a7468da33aa4e4c6",
+        "actSha256": "42c63f471eaaddc4fb4ba2e0f8981814c364931216bafad40a3e878a9b10ded4"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-aparecida-3057-4c2bf4cfff47-33",
+      "status": "pending",
+      "date": "2026-09-29",
+      "city": "Aparecida de Goiânia",
+      "scope": "Municipal",
+      "actType": "pregao",
+      "typeLabel": "Pregão",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "pregão eletrônico n°. 030/2025, em conformidade com a Lei nº. 14.133/21 e aten",
+        "extractedTitle": "Aparecida de Goiânia publica pregão eletrônico n°. 030/2025, em conformidade com a Lei nº. 14.133/21 e aten",
+        "extractedDeck": "fica eleito o Foro de Aparecida co, realizado pela administração direta do município",
+        "extractedParagraphs": [
+          "Secretaria Municipal de Infraestrutura nos serviços de recapeamento asfálti 6.1.Para as questões resultantes do instrumento, fica eleito o Foro de… publicou pregão na edição 2945 de Diário Oficial de Aparecida de Goiânia, datada de 29 de setembro de 2026. fica eleito o Foro de Aparecida co, realizado pela administração direta do município.",
+          "O maior valor monetário identificado no texto é R$ 15.997.998,50; as referências documentais incluem 14.133/21. A conferência deve ser feita no documento original, em página 25."
+        ],
+        "evidenceExcerpt": "pregão eletrônico n°. 030/2025, em conformidade com a Lei nº. 14.133/21 e aten de a Secretaria Municipal de Infraestrutura nos serviços de recapeamento asfálti 6.1.Para as questões resultantes do instrumento, fica eleito o Foro de Aparecida co, realizado pela administração direta do município. Ressalta-se que o aditivo ora de Goiânia, Estado de Goiás, com renúncia expressa a qualquer outro, por mais solicitado se justifica em razão da importante funcionalidade dos produtos para privilegiado que seja ou venha a se…",
+        "publicBody": "Secretaria Municipal de Infraestrutura nos serviços de recapeamento asfálti 6.1.Para as questões resultantes do instrumento, fica eleito o Foro de…",
+        "values": [
+          {
+            "original": "R$ 2",
+            "value": 2,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 15.997.998,50",
+            "value": 15997998.5,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 7.998.999,25",
+            "value": 7998999.25,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "14.133/21"
+        ],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Aparecida de Goiânia",
+        "label": "Secretaria Municipal de Infraestrutura nos serviços de recapeamento asfálti 6.1.Para as questões resultantes do instrumento, fica eleito o Foro de…",
+        "url": "https://webio.aparecida.go.gov.br/diariooficial/download/2945",
+        "editionId": "aparecida:3057",
+        "editionNumber": "2945",
+        "pageStart": 25,
+        "pageEnd": 25,
+        "documentReference": "Edição 2945 · página 25",
+        "documentSha256": "2f32412b7f38ae98acab96a46fdca03e059d95490019fd68a7468da33aa4e4c6",
+        "actSha256": "4c2bf4cfff47b6cba1f5bccfa26e41721427fe9827ce5a5a8e22337f55c71c06"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
@@ -570,193 +829,6 @@
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
         "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114637-4596AA64-120",
-      "status": "pending",
-      "date": "2026-09-29",
-      "city": "Itauçu",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DE PUBLICAÇÃO DO CONTRATO Nº 46 - 2026",
-        "extractedTitle": "Itauçu publica EXTRATO DE PUBLICAÇÃO DO CONTRATO Nº 46 - 2026",
-        "extractedDeck": "OBJETO: médico para atuar no hospital antônio alves de castro, sob regime de plantão de 24h (vinte e quatro horas), em escala de plantão no meio da semana e/ou final de semana em conformidade com edital de chamamento público nº 002-2025 e resolução nº 011-2024, de 05 de dezembro de 2024",
-        "extractedParagraphs": [
-          "SECRETARIA MUNICIPAL DE SAUDE publicou contrato na edição 3713 de Diário Municipal de Goiás — AGM, datada de 29 de setembro de 2026. OBJETO: médico para atuar no hospital antônio alves de castro, sob regime de plantão de 24h (vinte e quatro horas), em escala de plantão no meio da semana e/ou final de semana em conformidade com edital de chamamento público nº 002-2025 e resolução nº 011-2024, de 05 de dezembro de 2024.",
-          "O maior valor monetário identificado no texto é R$ 135.200,00; o ato cita os CNPJs 07.804.588/0001-85, 64.526.797/0001-48; as referências documentais incluem 011-2024. A conferência deve ser feita no documento original, em página 38."
-        ],
-        "evidenceExcerpt": "SECRETARIA MUNICIPAL DE SAUDE EXTRATO DE PUBLICAÇÃO DO CONTRATO Nº 46 - 2026 OBJETO: médico para atuar no hospital antônio alves de castro, sob regime de plantão de 24h (vinte e quatro horas), em escala de plantão no meio da semana e/ou final de semana em conformidade com edital de chamamento público nº 002-2025 e resolução nº 011-2024, de 05 de dezembro de 2024. VIGÊNCIA: 01/09/2026 a 31/12/2026 VALOR GLOBAL DA PRESTAÇÃO DE SERVIÇOS: Pelos serviços especificados nas cláusulas anteriores a CREDENCIANTE pagará a…",
-        "publicBody": "SECRETARIA MUNICIPAL DE SAUDE",
-        "values": [
-          {
-            "original": "R$ 33.800,00",
-            "value": 33800,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 2.200,00",
-            "value": 2200,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 2.300,00",
-            "value": 2300,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 135.200,00",
-            "value": 135200,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "07.804.588/0001-85",
-          "64.526.797/0001-48"
-        ],
-        "referenceNumbers": [
-          "011-2024"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "SECRETARIA MUNICIPAL DE SAUDE",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114637_2026-09-28_4c3b5e38d6687e34ce8eff62581977b1.pdf",
-        "editionId": "agm:114637",
-        "editionNumber": "3713",
-        "pageStart": 38,
-        "pageEnd": 38,
-        "documentReference": "Edição 3713 · página 38",
-        "documentSha256": "16e8d0403ed90d8c36c8c303b7e5b4b047f29a817f5c2c6b2cf99a3dfce833a4",
-        "actSha256": "eef3efd4cd2469e7630f5c1dc55c4cdb1a40b5af86a9f0b3f46673cb90a6ee40"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114637-7D6DE984-54",
-      "status": "pending",
-      "date": "2026-09-29",
-      "city": "Castelândia",
-      "scope": "Municipal",
-      "actType": "aditivo",
-      "typeLabel": "Termo aditivo",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DO ADITIVO AO CONTRATO Nº 52/2025",
-        "extractedTitle": "Castelândia publica EXTRATO DO ADITIVO AO CONTRATO Nº 52/2025",
-        "extractedDeck": "SECRETARIA MUNICIPAL ADMINISTRAÇÃO .",
-        "extractedParagraphs": [
-          "FUNDO MUNICIPAL DE SAUDE DE CASTELÂNDIA/GO. publicou termo aditivo na edição 3713 de Diário Municipal de Goiás — AGM, datada de 29 de setembro de 2026. SECRETARIA MUNICIPAL ADMINISTRAÇÃO .",
-          "O maior valor monetário identificado no texto é R$ 105.186,98; as referências documentais incluem 52/2025., 52/2025, 14.133/2021., 29/2025.. A conferência deve ser feita no documento original, em página 19."
-        ],
-        "evidenceExcerpt": "SECRETARIA MUNICIPAL ADMINISTRAÇÃO EXTRATO DO ADITIVO AO CONTRATO Nº 52/2025. Contratante: FUNDO MUNICIPAL DE SAUDE DE CASTELÂNDIA/GO. Contratado: ACM CONSTRUTORA LTDA. Objeto – Aditivo Contrato: O objeto do presente instrumento é o acrescimo de serviços e valores do objeto do contrato original n. 52/2025, referente à prestação de serviços de engenharia para Contratação de empresa especializada para execução de obra de engenharia para construção da UBS – Unidade Basica de Saúde, no município de Castelândia/Go,…",
-        "publicBody": "FUNDO MUNICIPAL DE SAUDE DE CASTELÂNDIA/GO.",
-        "values": [
-          {
-            "original": "R$ 105.186,98",
-            "value": 105186.98,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "52/2025.",
-          "52/2025",
-          "14.133/2021.",
-          "29/2025."
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "FUNDO MUNICIPAL DE SAUDE DE CASTELÂNDIA/GO.",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114637_2026-09-28_4c3b5e38d6687e34ce8eff62581977b1.pdf",
-        "editionId": "agm:114637",
-        "editionNumber": "3713",
-        "pageStart": 19,
-        "pageEnd": 19,
-        "documentReference": "Edição 3713 · página 19",
-        "documentSha256": "16e8d0403ed90d8c36c8c303b7e5b4b047f29a817f5c2c6b2cf99a3dfce833a4",
-        "actSha256": "2f2548e2bcf424ae14c7a6190f4cb106b4f5d9347190c56f443439f5a00eb229"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114637-9465879E-62",
-      "status": "pending",
-      "date": "2026-09-29",
-      "city": "Hidrolandia",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DO CONTRATO 352/2026",
-        "extractedTitle": "Hidrolandia publica EXTRATO DO CONTRATO 352/2026",
-        "extractedDeck": "OBJETO: Registro de preço, para futuras aquisições de materiais de construção e materiais elétricos, para atender as necessidades das Secretarias Municipais e Fundos Municipais",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE HIDROLANDIA publicou contrato na edição 3713 de Diário Municipal de Goiás — AGM, datada de 29 de setembro de 2026. OBJETO: Registro de preço, para futuras aquisições de materiais de construção e materiais elétricos, para atender as necessidades das Secretarias Municipais e Fundos Municipais.",
-          "O maior valor monetário identificado no texto é R$ 664.243,69; as referências documentais incluem 352/2026, 14.133. A conferência deve ser feita no documento original, em páginas 21 a 22."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE HIDROLANDIA FUNDO MUNICIPAL DE EDUCAÇÃO EXTRATO DO CONTRATO 352/2026 EXTRATO DE CONTRATO N° 352/2026 PREGÃO ELETRÔNICO N° 025/2024 DAS PARTES: O FUNDO MUNICIPAL DE EDUCAÇÃO DE HIDROLÂNDIA-GO X COMERCIAL BATISTA DE FERRAGENS E FERRAMENTAS LTDA. OBJETO: Registro de preço, para futuras aquisições de materiais de construção e materiais elétricos, para atender as necessidades das Secretarias Municipais e Fundos Municipais. Goiás , 29 de Setembro de 2026 • Diario Municipal de Goiás • ANO XV…",
-        "publicBody": "MUNICÍPIO DE HIDROLANDIA",
-        "values": [
-          {
-            "original": "R$ 664.243,69",
-            "value": 664243.69,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "352/2026",
-          "14.133"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE HIDROLANDIA",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114637_2026-09-28_4c3b5e38d6687e34ce8eff62581977b1.pdf",
-        "editionId": "agm:114637",
-        "editionNumber": "3713",
-        "pageStart": 21,
-        "pageEnd": 22,
-        "documentReference": "Edição 3713 · páginas 21 a 22",
-        "documentSha256": "16e8d0403ed90d8c36c8c303b7e5b4b047f29a817f5c2c6b2cf99a3dfce833a4",
-        "actSha256": "0e4e06e1c53d2082f9d034011e8500f626e1728cb467981a4def0e3fa2da1481"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
       }
     },
     {

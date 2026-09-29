@@ -591,8 +591,10 @@ async function main() {
       .filter(Boolean)
       .map((match) => `${match[1]}:${match[2].toUpperCase()}`)
   );
+  const replacedDocumentIds = new Set((controlNews.items || []).map((item) => item.origin_item_id).filter(Boolean));
   const normalizedJulyDocumentNews = (julyDocumentNews.items || [])
     .filter((item) => item.editorial_status !== "needs_review")
+    .filter((item) => !replacedDocumentIds.has(item.id))
     .filter((item) => {
       if (normalizeText(item.city) !== "trindade" || item.source_id !== "agm") return true;
       const editionId = String(item.edition_id || "").split(":").at(-1);
