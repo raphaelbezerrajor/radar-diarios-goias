@@ -1,19 +1,114 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T20:41:00Z",
+  "generated_at": "2026-09-30T04:10:00Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-09-29"
+    "to": "2026-09-30"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
-    "doego_editions": 32,
-    "tcmgo_editions": 15,
+    "doego_editions": 33,
+    "tcmgo_editions": 16,
     "tcego_editions": 16,
-    "published_stories": 198,
-    "total_items": 198
+    "published_stories": 202,
+    "total_items": 202
   },
   "items": [
+    {
+      "id": "anapolis-4039-reajuste-contrato-pavimentacao-128-milhoes",
+      "origin_item_id": "jul26-anapolis-24619-f89b1eea706c-19",
+      "date": "2026-09-29", "published_at": "2026-09-30", "city": "Anápolis", "scope": "Municipal",
+      "source_id": "anapolis", "source_name": "Diário Oficial de Anápolis", "source_label": "Prefeitura de Anápolis",
+      "official_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/25939/n7pLrYO5a783mDvQwMSXzMxqXUGCH9Rmt8ThZ8NC.pdf",
+      "source_landing_url": "https://dom.anapolis.go.gov.br/diarios/lista/24619",
+      "edition_id": "anapolis:24619", "edition_number": "4.039/2026",
+      "external_identifier": "Apostilamento II ao Contrato 133/2025",
+      "local_path": "data/raw/municipal-diaries/anapolis/2026/09/2026-09-29-4.039-2026.pdf",
+      "document_sha256": "12163bdd52d9b080375b8380b1927370490f3d5128fd9005ca5c3aecd3bc864f",
+      "page_start": 5, "page_end": 5, "preview_page": 5,
+      "document_reference": "Diário de Anápolis nº 4.039/2026, de 29 de setembro · página 5",
+      "act_type": "reajuste_contratual", "type_label": "Obras viárias",
+      "official_title": "Apostilamento II ao Contrato nº 133/2025",
+      "title": "Anápolis eleva previsão de contrato de obras viárias a R$ 128,7 milhões",
+      "deck": "Reajuste de R$ 13,7 milhões alcança serviços já executados e saldo a executar; apostilamento não informa quanto foi pago.",
+      "summary": "A Prefeitura de Anápolis reajustou o contrato de manutenção e revitalização viária com o Consórcio CFJ, cuja previsão passou de R$ 114,98 milhões a R$ 128,69 milhões.",
+      "paragraphs": [
+        "A Prefeitura de Anápolis publicou o segundo apostilamento do Contrato nº 133/2025, firmado com o Consórcio CFJ para manutenção e revitalização de vias, incluindo pavimentação asfáltica e concreto do tipo whitetopping. O valor contratual previsto passa de R$ 114.982.377,40 para R$ 128.692.716,01, diferença de R$ 13.710.338,61.",
+        "O documento, assinado em 28 de setembro e publicado na edição de 29 de setembro, discrimina R$ 2.584.092,01 de reajuste sobre os serviços já executados, à taxa de 12,14%, e R$ 11.126.246,60 de reajuste sobre o saldo remanescente, à taxa de 11,87%. Esses são os acréscimos calculados para cada parcela, não os valores originais dos serviços; o diário não apresenta medição detalhada por rua ou bairro.",
+        "Os R$ 128,69 milhões representam a nova previsão do contrato, não pagamento comprovado ao consórcio. Para saber quanto a prefeitura já desembolsou e o andamento físico das intervenções, é necessário conferir medições, liquidações e pagamentos posteriores."
+      ],
+      "public_body": "Prefeitura de Anápolis",
+      "values": [{"original":"R$ 128.692.716,01","value":128692716.01,"currency":"BRL","stage":"valor_contratual_reajustado_nao_pagamento"},{"original":"R$ 13.710.338,61","value":13710338.61,"currency":"BRL","stage":"acrescimo_por_reajuste_nao_pagamento"}],
+      "value_highest": 128692716.01, "reference_numbers": ["133/2025"], "importance": 265,
+      "news_value": {"score":100,"reasons":["reajuste de R$ 13,7 milhões","obras viárias de uso cotidiano","contrato projetado em R$ 128,7 milhões"]},
+      "prominence":"cover","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"goiania-8873-errata-citogens-sus-817-milhoes","origin_item_id":"jul26-goiania-do_20260929_000008873.pdf-cd42a05bceb3-122",
+      "date":"2026-09-29","published_at":"2026-09-30","city":"Goiânia","scope":"Municipal","source_id":"goiania",
+      "source_name":"Diário Oficial do Município de Goiânia","source_label":"Secretaria Municipal de Saúde de Goiânia",
+      "official_url":"https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260929_000008873.pdf",
+      "source_landing_url":"https://www.goiania.go.gov.br/diariooficial/","edition_id":"goiania:do_20260929_000008873.pdf","edition_number":"8873",
+      "external_identifier":"Errata ao Despacho de Inexigibilidade 4730/2026",
+      "local_path":"data/raw/municipal-diaries/goiania/2026/09/2026-09-29-8873.pdf",
+      "document_sha256":"1f2abce71e7d86599115cf7bea49309a79c93f77e6b1117cc5b5c9af4cc1349c",
+      "page_start":162,"page_end":162,"preview_page":162,"document_reference":"Diário de Goiânia nº 8.873, de 29 de setembro · página 162",
+      "act_type":"errata_valor_estimado","type_label":"Saúde pública","official_title":"Errata ao Despacho de Inexigibilidade nº 4730/2026",
+      "title":"Goiânia corrige para R$ 8,18 milhões valor previsto para laboratório do SUS",
+      "deck":"Errata amplia em R$ 6,72 milhões a estimativa publicada em julho para serviços de análises clínicas; correção não equivale a pagamento.",
+      "summary":"A Secretaria Municipal de Saúde de Goiânia corrigiu de R$ 1,46 milhão para R$ 8,18 milhões o valor estimado em ato de credenciamento do laboratório Citogens para atendimento ao SUS.",
+      "paragraphs":[
+        "A Secretaria Municipal de Saúde de Goiânia publicou uma errata que altera o valor estimado do Despacho de Inexigibilidade nº 4730/2026 para serviços de análises clínicas destinados ao SUS. Onde o ato original, divulgado em julho, indicava R$ 1.456.311,60, passa a constar R$ 8.175.943,80. A diferença é de R$ 6.719.632,20.",
+        "O despacho refere-se ao credenciamento do laboratório CITOGENS Laboratório de Análise Clínica, CNPJ 02.638.362/0001-38. A correção foi assinada em 26 de setembro e apareceu na edição de 29 de setembro do diário municipal. A publicação não explica, no próprio texto da errata, a causa da alteração da estimativa.",
+        "O novo número é valor estimado do ato administrativo, não prova de que a quantia tenha sido contratada integralmente, liquidada ou paga. O alcance financeiro efetivo depende dos instrumentos de contratação, da produção de exames e dos registros de execução da despesa; a errata, por si, não demonstra irregularidade."
+      ],
+      "public_body":"Secretaria Municipal de Saúde de Goiânia","values":[{"original":"R$ 8.175.943,80","value":8175943.8,"currency":"BRL","stage":"valor_estimado_corrigido_nao_pagamento"},{"original":"R$ 6.719.632,20","value":6719632.2,"currency":"BRL","stage":"diferenca_de_estimativa_nao_pagamento"}],
+      "value_highest":8175943.8,"reference_numbers":["4730/2026","02.638.362/0001-38"],"importance":260,
+      "news_value":{"score":100,"reasons":["correção de R$ 6,72 milhões","serviços laboratoriais do SUS","necessidade de acompanhar execução"]},
+      "prominence":"cover","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"tcmgo-2772-sao-domingos-multa-cargos-comissionados",
+      "date":"2026-09-30","published_at":"2026-09-30","city":"São Domingos","scope":"Municipal","source_id":"tcmgo",
+      "source_name":"Diário Oficial de Contas do TCM-GO","source_label":"TCM-GO","official_url":"https://www.tcmgo.tc.br/doc/index.jsf","source_landing_url":"https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id":"tcmgo:2772","edition_number":"2772","external_identifier":"Acórdão 06807/2026 · Processo 00001/2022, fase 2",
+      "local_path":"data/raw/tcmgo/trindade/2026/09/tcmgo-doc-2772-2026-09-30.pdf","document_sha256":"509cc2c42c783b4e3873ceb0ec8ba7c4520ccae3cb344ff14bb0f023dbd750e4",
+      "page_start":65,"page_end":67,"preview_page":66,"document_reference":"Diário Oficial de Contas do TCM-GO nº 2.772, de 30 de setembro · páginas 65 a 67",
+      "act_type":"multa_descumprimento_decisao","type_label":"Fiscalização municipal","official_title":"Acórdão nº 06807/2026",
+      "title":"TCM multa prefeito de São Domingos por descumprir decisão sobre cargos comissionados",
+      "deck":"Tribunal fixou multa de R$ 5.178,25 a Gilvanir Cardoso dos Reis; valor é sanção administrativa, não débito por dano aos cofres.",
+      "summary":"O TCM-GO aplicou multa de R$ 5.178,25 ao prefeito de São Domingos por descumprimento de determinação anterior relacionada a cargos comissionados.",
+      "paragraphs":[
+        "O Tribunal de Contas dos Municípios de Goiás aplicou multa de R$ 5.178,25 ao prefeito de São Domingos, Gilvanir Cardoso dos Reis, por descumprimento de decisão anterior sobre cargos comissionados criados pela Lei Municipal nº 15/2013. A deliberação consta do Acórdão nº 06807/2026, publicado no Diário Oficial de Contas desta quarta-feira (30).",
+        "No processo nº 00001/2022, fase 2, o tribunal examinou o cumprimento do Acórdão nº 00826/2025 e concluiu que a determinação relativa aos cargos não havia sido atendida. A penalidade corresponde a 25% do valor-base de R$ 20.713,00 adotado no julgamento; a decisão foi tomada em 23 de setembro.",
+        "A multa administrativa não é a mesma coisa que imputação de débito nem quantificação de dano ao erário. O acórdão deve ser acompanhado para verificar eventual recurso e as providências de adequação dos cargos; a publicação não comprova que o valor já tenha sido recolhido."
+      ],
+      "public_body":"Tribunal de Contas dos Municípios de Goiás","values":[{"original":"R$ 5.178,25","value":5178.25,"currency":"BRL","stage":"multa_administrativa_nao_debito_nao_pagamento"}],
+      "value_highest":5178.25,"reference_numbers":["06807/2026","00826/2025","00001/2022"],"importance":252,
+      "news_value":{"score":95,"reasons":["multa nominal a gestor","descumprimento de decisão do TCM","estrutura de cargos municipais"]},
+      "prominence":"cover","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"tcmgo-2772-trindade-denuncia-kits-nao-admitida",
+      "date":"2026-09-30","published_at":"2026-09-30","city":"Trindade","scope":"Municipal","source_id":"tcmgo",
+      "source_name":"Diário Oficial de Contas do TCM-GO","source_label":"TCM-GO","official_url":"https://www.tcmgo.tc.br/doc/index.jsf","source_landing_url":"https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id":"tcmgo:2772","edition_number":"2772","external_identifier":"Decisão Monocrática 426/2026 · Processo 06843/2026",
+      "local_path":"data/raw/tcmgo/trindade/2026/09/tcmgo-doc-2772-2026-09-30.pdf","document_sha256":"509cc2c42c783b4e3873ceb0ec8ba7c4520ccae3cb344ff14bb0f023dbd750e4",
+      "page_start":73,"page_end":79,"preview_page":79,"document_reference":"Diário Oficial de Contas do TCM-GO nº 2.772, de 30 de setembro · páginas 73 a 79",
+      "act_type":"denuncia_nao_admitida","type_label":"Controle externo","official_title":"Decisão Monocrática nº 426/2026",
+      "title":"TCM arquiva denúncia sobre kits pedagógicos de Trindade por falta de indícios",
+      "deck":"Relator não admitiu representação contra compra atribuída à rede municipal; alegações não foram comprovadas e não houve julgamento de irregularidade.",
+      "summary":"O TCM-GO não admitiu uma denúncia sobre kits pedagógicos ligados à rede municipal de Trindade por ausência de documentos e indícios suficientes e determinou o arquivamento.",
+      "paragraphs":[
+        "O Tribunal de Contas dos Municípios de Goiás decidiu não admitir uma denúncia que questionava a aquisição de kits pedagógicos associados à coleção ‘Turma do Cabeça-Oca’ em Trindade. Na Decisão Monocrática nº 426/2026, publicada nesta quarta-feira (30), o relator Sérgio Cardoso de Queiroz apontou falta de documentos e indícios que sustentassem as alegações e determinou o arquivamento do processo nº 06843/2026.",
+        "O denunciante mencionou a empresa CMQ Editora e valores superiores a R$ 15 milhões, inclusive uma contratação alegada de R$ 7.103.434,08. Esses números integram a narrativa da denúncia; a decisão publicada não os confirma como despesa contratada ou paga. O relator também registrou sobreposição substancial do tema com caso anterior de Caldas Novas, sem apresentação de fatos novos suficientes.",
+        "Não admitir a denúncia significa que ela não avançou à análise de mérito nesta via. O TCM não declarou regularidade das compras, tampouco reconheceu irregularidade, dano ou responsabilidade de agentes públicos no processo arquivado. Qualquer conclusão sobre os contratos exigiria consulta aos instrumentos e aos registros de execução financeira da prefeitura."
+      ],
+      "public_body":"Tribunal de Contas dos Municípios de Goiás","values":[],"value_highest":null,
+      "reference_numbers":["426/2026","06843/2026"],"importance":238,
+      "news_value":{"score":83,"reasons":["decisão encerra denúncia sobre compra educacional","evita tratar alegação como fato","interesse da comunidade escolar"]},
+      "prominence":"feed","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
     {
       "id": "aparecida-2945-iluminacao-ppp-reajuste-654-milhoes",
       "origin_item_id": "jul26-aparecida-3057-319b48d8aac7-36",
