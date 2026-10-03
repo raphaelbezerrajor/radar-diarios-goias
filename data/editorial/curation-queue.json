@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-10-02T12:24:28.259380+00:00",
+  "generatedAt": "2026-10-03T17:27:34.063458+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 10,
@@ -197,6 +197,77 @@
         "documentReference": "Edição 3716 · páginas 30 a 31",
         "documentSha256": "28536a9a631361e3c8510c204d64dccc573744f5a18b070ee94b9429fbeca245",
         "actSha256": "09535d658d8a8855dab455d94bec4d3ea1769053206180a774f85e76a89c5a59"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261002_000008876.pdf-30c975561747-59",
+      "status": "pending",
+      "date": "2026-10-02",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Extrato do Contrato de Prestação de Serviços nº 1937/2026",
+        "extractedTitle": "Goiânia publica Extrato do Contrato de Prestação de Serviços nº 1937/2026",
+        "extractedDeck": "OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde ambulatorial e/ou apoio diagnóstico terapêutico aos usuários do Sistema Único de Saúde – SUS, conforme regulação do Complexo Regulador da Secretaria Municipal de Saúde, nos termos do Edital de Chamamento nº…",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou contrato na edição 8876 de Diário Oficial do Município de Goiânia, datada de 2 de outubro de 2026. OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde ambulatorial e/ou apoio diagnóstico terapêutico aos usuários do Sistema Único de Saúde – SUS, conforme regulação do Complexo Regulador da Secretaria Municipal de Saúde, nos termos do Edital de Chamamento nº….",
+          "O maior valor monetário identificado no texto é R$ 5.792.040,00; o ato cita o CNPJ 07.488.727/0001-09; as referências documentais incluem 14.133/21, 26.29.000028884-5, 14.133/2021, 11.419/2006.. A conferência deve ser feita no documento original, em página 103."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8876, de 02 de outubro de 2026. Página 103 de 139 Prefeitura de Goiânia Secretaria Municipal de Saúde Gerência de Contratos e Convênios e Credenciamentos EXTRATO DO CONTRATO DE PRESTAÇÃO DE SERVIÇOS Nº 1937/2026 PROCESSO SEI: 26.29.000028884-5 CONTRATANTE: Secretaria Municipal de Saúde/Fundo Municipal de Saúde CONTRATADA: Neurocentro Serviços Médicos & Exames Clínicos Ltda – CNPJ: 07.488.727/0001-09 DO OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 96.534,00",
+            "value": 96534,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 1.158.408,00",
+            "value": 1158408,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 5.792.040,00",
+            "value": 5792040,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "07.488.727/0001-09"
+        ],
+        "referenceNumbers": [
+          "14.133/21",
+          "26.29.000028884-5",
+          "14.133/2021",
+          "11.419/2006."
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261002_000008876.pdf",
+        "editionId": "goiania:do_20261002_000008876.pdf",
+        "editionNumber": "8876",
+        "pageStart": 103,
+        "pageEnd": 103,
+        "documentReference": "Edição 8876 · página 103",
+        "documentSha256": "a8d2b5ffa751baeadd3d2a67fbb00196710fd18f678eea2576cdd475249a7935",
+        "actSha256": "30c9755617475e1787d96ab8df320c480c8db51f2e7752a30414f5d9f130ea59"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
@@ -547,6 +618,270 @@
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
         "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261002_000008876.pdf-2cd85f45d9d5-32",
+      "status": "pending",
+      "date": "2026-10-02",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "resolucao",
+      "typeLabel": "Resolução",
+      "priority": 77,
+      "importance": 77,
+      "curationReasons": [
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Resolução Normativa nº 52/2026",
+        "extractedTitle": "Goiânia publica Resolução Normativa nº 52/2026",
+        "extractedDeck": "OBJETO: Termo de Colaboração tem a finalidade de articular a parceria entre a SME e a UNIÃO DAS PIONEIRAS DE GOIÂNIA, para o funcionamento do Centro de Educação Infantil União das Pioneiras de Goiânia, que atenderá aproximadamente 120 (cento e vinte) crianças, na faixa etária de um a cinco anos",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou resolução na edição 8876 de Diário Oficial do Município de Goiânia, datada de 2 de outubro de 2026. OBJETO: Termo de Colaboração tem a finalidade de articular a parceria entre a SME e a UNIÃO DAS PIONEIRAS DE GOIÂNIA, para o funcionamento do Centro de Educação Infantil União das Pioneiras de Goiânia, que atenderá aproximadamente 120 (cento e vinte) crianças, na faixa etária de um a cinco anos.",
+          "O maior valor monetário identificado no texto é R$ 36.600.000,00; as referências documentais incluem 729, 2169/2025., 11.419/2006., 26.27.000000148-7. A conferência deve ser feita no documento original, em páginas 49 a 52."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8876, de 02 de outubro de 2026. Página 49 de 139 Prefeitura de Goiânia Secretaria Municipal da Fazenda Comitê de Controle de Gastos RESOLUÇÃO NORMATIVA Nº 52/2026 OS MEMBROS DO COMITÊ DE CONTROLE DE GASTOS, no uso de suas atribuições legais, as quais constam no Decreto nº 729, de 28 de janeiro de 2025, e considerando a deliberação realizada em 28 de setembro de 2026, RESOLVEM: Art. 1º Ficam aprovadas as medidas necessárias para a execução das despesas abaixo especificadas, conforme…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 6.140.550,00",
+            "value": 6140550,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 130.650,00",
+            "value": 130650,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 36.600.000,00",
+            "value": 36600000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 6.100.000,00",
+            "value": 6100000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 3.944.475,00",
+            "value": 3944475,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 145.500,00",
+            "value": 145500,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 2.000.000,00",
+            "value": 2000000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 166.666,67",
+            "value": 166666.67,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 34.352.928,68",
+            "value": 34352928.68,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 115.065,00",
+            "value": 115065,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 6.000.000,00",
+            "value": 6000000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 5.642.522,53",
+            "value": 5642522.53,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "729",
+          "2169/2025.",
+          "11.419/2006.",
+          "26.27.000000148-7"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261002_000008876.pdf",
+        "editionId": "goiania:do_20261002_000008876.pdf",
+        "editionNumber": "8876",
+        "pageStart": 49,
+        "pageEnd": 52,
+        "documentReference": "Edição 8876 · páginas 49 a 52",
+        "documentSha256": "a8d2b5ffa751baeadd3d2a67fbb00196710fd18f678eea2576cdd475249a7935",
+        "actSha256": "2cd85f45d9d584c49151d8c5946141e940789c0173e8ae9cb028bf9984353024"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261002_000008876.pdf-7500b2960ed3-83",
+      "status": "pending",
+      "date": "2026-10-02",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 77,
+      "importance": 77,
+      "curationReasons": [
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Extrato do Contrato nº 59/2026-AJU",
+        "extractedTitle": "Goiânia publica Extrato do Contrato nº 59/2026-AJU",
+        "extractedDeck": "OBJETO: prestação de serviços de coleta e transporte de Resíduos de Serviços de Saúde (RSS) gerados nas unidades municipais de saúde de Goiânia, com o transporte dos resíduos até a empresa responsável pelo respectivo tratamento, conforme as especificações, condições e exigências estabelecidas no…",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou contrato na edição 8876 de Diário Oficial do Município de Goiânia, datada de 2 de outubro de 2026. OBJETO: prestação de serviços de coleta e transporte de Resíduos de Serviços de Saúde (RSS) gerados nas unidades municipais de saúde de Goiânia, com o transporte dos resíduos até a empresa responsável pelo respectivo tratamento, conforme as especificações, condições e exigências estabelecidas no….",
+          "O maior valor monetário identificado no texto é R$ 180.369,33; o ato cita os CNPJs 05.767.075/0001-16, 73.797.383/0001-44; as referências documentais incluem 59/2026, 001/2026, 13.303/2016.., 11.419/2006., 26.30.000017214-7. A conferência deve ser feita no documento original, em páginas 137 a 139."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8876, de 02 de outubro de 2026. Página 137 de 139 Prefeitura de Goiânia Companhia de Urbanização de Goiânia Assessoria Jurídica de Licitações e Contratos EXTRATO DO CONTRATO Nº 59/2026– AJU · PROCESSO SEI Nº 26.30.000017214-7. · CONTRATANTE: COMPANHIA DE URBANIZAÇÃO DE GOIÂNIA - COMURG · CONTRATADA: RECOL AMBIENTAL COLETA E TRATAMENTO DE RESÍDUOS LTDA- CNPJ 73.797.383/0001-44 · OBJETO: prestação de serviços de coleta e transporte de Resíduos de Serviços de Saúde (RSS) gerados nas unidades…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 180.369,33",
+            "value": 180369.33,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "05.767.075/0001-16",
+          "73.797.383/0001-44"
+        ],
+        "referenceNumbers": [
+          "59/2026",
+          "001/2026",
+          "13.303/2016..",
+          "11.419/2006.",
+          "26.30.000017214-7"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261002_000008876.pdf",
+        "editionId": "goiania:do_20261002_000008876.pdf",
+        "editionNumber": "8876",
+        "pageStart": 137,
+        "pageEnd": 139,
+        "documentReference": "Edição 8876 · páginas 137 a 139",
+        "documentSha256": "a8d2b5ffa751baeadd3d2a67fbb00196710fd18f678eea2576cdd475249a7935",
+        "actSha256": "7500b2960ed3b8340a833ca7445099dffd47e14f0748f651cd1a662bbbe8b414"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261002_000008876.pdf-d60449760437-31",
+      "status": "pending",
+      "date": "2026-10-02",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "resolucao",
+      "typeLabel": "Resolução",
+      "priority": 77,
+      "importance": 77,
+      "curationReasons": [
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Resolução Normativa nº 51/2026",
+        "extractedTitle": "Goiânia publica Resolução Normativa nº 51/2026",
+        "extractedDeck": "OBJETO: TERMO DE COLABORAÇÃO Nº 143/2025, que tem a finalidade de articular a parceria entre a SME e a Obras Sociais do Centro APROVADO SEM Espírita \" O Consolador\", visando a transferência de recursos financeiros RESSALVA conforme Plano de Trabalho, para o funcionamento da Escola Espírita Allan…",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou resolução na edição 8876 de Diário Oficial do Município de Goiânia, datada de 2 de outubro de 2026. OBJETO: TERMO DE COLABORAÇÃO Nº 143/2025, que tem a finalidade de articular a parceria entre a SME e a Obras Sociais do Centro APROVADO SEM Espírita \" O Consolador\", visando a transferência de recursos financeiros RESSALVA conforme Plano de Trabalho, para o funcionamento da Escola Espírita Allan….",
+          "O maior valor monetário identificado no texto é R$ 10.593.291,50; as referências documentais incluem 729, 2096/21, 1902/2021, 11.419/2006., 26.27.000000148-7. A conferência deve ser feita no documento original, em páginas 47 a 48."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8876, de 02 de outubro de 2026. Página 47 de 139 Prefeitura de Goiânia Secretaria Municipal da Fazenda Comitê de Controle de Gastos RESOLUÇÃO NORMATIVA Nº 51/2026 OS MEMBROS DO COMITÊ DE CONTROLE DE GASTOS, no uso de suas atribuições legais, as quais constam no Decreto nº 729, de 28 de janeiro de 2025, e considerando a deliberação realizada em 21 de setembro de 2026, RESOLVEM: Art. 1º Ficam aprovadas as medidas necessárias para a execução das despesas abaixo especificadas, conforme…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 3.204.225,00",
+            "value": 3204225,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 53.403,75",
+            "value": 53403.75,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 25.754,12",
+            "value": 25754.12,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 10.593.291,50",
+            "value": 10593291.5,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 882.774,30",
+            "value": 882774.3,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 9.509.619,36",
+            "value": 9509619.36,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 792.468,28",
+            "value": 792468.28,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "729",
+          "2096/21",
+          "1902/2021",
+          "11.419/2006.",
+          "26.27.000000148-7"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261002_000008876.pdf",
+        "editionId": "goiania:do_20261002_000008876.pdf",
+        "editionNumber": "8876",
+        "pageStart": 47,
+        "pageEnd": 48,
+        "documentReference": "Edição 8876 · páginas 47 a 48",
+        "documentSha256": "a8d2b5ffa751baeadd3d2a67fbb00196710fd18f678eea2576cdd475249a7935",
+        "actSha256": "d60449760437f22d10934f0865a56114d8fb7db6c1da414001cfd6b71c1f3d13"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
       }
     },
     {
@@ -15942,279 +16277,6 @@
         "documentReference": "Edição 3697 · páginas 3 a 4",
         "documentSha256": "c3bb600eeffdf5122a515930e8695bd77507b04f80d819be2cafab8b8ce82fa5",
         "actSha256": "4c277080573f3ff3c0230e087d8662569f8fea06464cdff2e268f0e7b38472c3"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-goiania-do_20260904_000008857.pdf-56f68df463ce-206",
-      "status": "pending",
-      "date": "2026-09-04",
-      "city": "Goiânia",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 87,
-      "importance": 87,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "Extrato do Contrato de Prestação de Serviços nº 1841/2026",
-        "extractedTitle": "Goiânia publica Extrato do Contrato de Prestação de Serviços nº 1841/2026",
-        "extractedDeck": "OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde ambulatorial e/ou apoio diagnóstico terapêutico aos usuários do Sistema Único de Saúde – SUS, conforme regulação do Complexo Regulador da Secretaria Municipal de Saúde, nos termos do Edital de Chamamento nº…",
-        "extractedParagraphs": [
-          "Prefeitura de Goiânia publicou contrato na edição 8857 de Diário Oficial do Município de Goiânia, datada de 4 de setembro de 2026. OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde ambulatorial e/ou apoio diagnóstico terapêutico aos usuários do Sistema Único de Saúde – SUS, conforme regulação do Complexo Regulador da Secretaria Municipal de Saúde, nos termos do Edital de Chamamento nº….",
-          "O maior valor monetário identificado no texto é R$ 1.058.760,00; o ato cita o CNPJ 03.025.402/0001-39; as referências documentais incluem 14.133/21, 26.29.000009879-5, 11.419/2006.. A conferência deve ser feita no documento original, em página 271."
-        ],
-        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8857, de 04 de setembro de 2026. Página 271 de 299 Prefeitura de Goiânia Secretaria Municipal de Saúde Gerência de Contratos e Convênios e Credenciamentos EXTRATO DO CONTRATO DE PRESTAÇÃO DE SERVIÇOS Nº 1841/2026 PROCESSO SEI: 26.29.000009879-5 CONTRATANTE: Secretaria Municipal de Saúde/Fundo Municipal de Saúde CONTRATADA: Eletro Neuro Medicina Ltda – CNPJ: 03.025.402/0001-39 DO OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde ambulatorial e/ou apoio…",
-        "publicBody": "Prefeitura de Goiânia",
-        "values": [
-          {
-            "original": "R$ 17.646,00",
-            "value": 17646,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 211.752,00",
-            "value": 211752,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 1.058.760,00",
-            "value": 1058760,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "03.025.402/0001-39"
-        ],
-        "referenceNumbers": [
-          "14.133/21",
-          "26.29.000009879-5",
-          "11.419/2006."
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Oficial do Município de Goiânia",
-        "label": "Prefeitura de Goiânia",
-        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260904_000008857.pdf",
-        "editionId": "goiania:do_20260904_000008857.pdf",
-        "editionNumber": "8857",
-        "pageStart": 271,
-        "pageEnd": 271,
-        "documentReference": "Edição 8857 · página 271",
-        "documentSha256": "d6792e32867f26befd5868d8011f2be2267846abc9e985cad007d8bf14d26703",
-        "actSha256": "56f68df463ce8a3128f4b72baff479a91123ae1aa69e6a0a3d048e78cdad474d"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-goiania-do_20260904_000008857.pdf-5e1d04824ec4-207",
-      "status": "pending",
-      "date": "2026-09-04",
-      "city": "Goiânia",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 87,
-      "importance": 87,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "Extrato do Contrato de Prestação de Serviços nº 1898/2026",
-        "extractedTitle": "Goiânia publica Extrato do Contrato de Prestação de Serviços nº 1898/2026",
-        "extractedDeck": "OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde ambulatorial e/ou apoio diagnóstico terapêutico aos usuários do Sistema Único de Saúde – SUS, conforme regulação do Complexo Regulador da Secretaria Municipal de Saúde, nos termos do Edital de Chamamento nº…",
-        "extractedParagraphs": [
-          "Prefeitura de Goiânia publicou contrato na edição 8857 de Diário Oficial do Município de Goiânia, datada de 4 de setembro de 2026. OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde ambulatorial e/ou apoio diagnóstico terapêutico aos usuários do Sistema Único de Saúde – SUS, conforme regulação do Complexo Regulador da Secretaria Municipal de Saúde, nos termos do Edital de Chamamento nº….",
-          "O maior valor monetário identificado no texto é R$ 51.381.276,00; as referências documentais incluem 14.133/21, 26.29.000020183-9., 11.419/2006., 26.29.000020183-9. A conferência deve ser feita no documento original, em página 272."
-        ],
-        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8857, de 04 de setembro de 2026. Página 272 de 299 Prefeitura de Goiânia Secretaria Municipal de Saúde Gerência de Contratos e Convênios e Credenciamentos EXTRATO DO CONTRATO DE PRESTAÇÃO DE SERVIÇOS Nº 1898/2026 PROCESSO SEI: 26.29.000020183-9 CONTRATANTE: Secretaria Municipal de Saúde/Fundo Municipal de Saúde CONTRATADA: DAVITA SERVIÇOS DE NEFROLOGIA GOIÂNIA LTDA. – CNPJ: 01.004.795/0001- 79 DO OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde…",
-        "publicBody": "Prefeitura de Goiânia",
-        "values": [
-          {
-            "original": "R$ 856.354,60",
-            "value": 856354.6,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 10.276.255,20",
-            "value": 10276255.2,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 51.381.276,00",
-            "value": 51381276,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "14.133/21",
-          "26.29.000020183-9.",
-          "11.419/2006.",
-          "26.29.000020183-9"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Oficial do Município de Goiânia",
-        "label": "Prefeitura de Goiânia",
-        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260904_000008857.pdf",
-        "editionId": "goiania:do_20260904_000008857.pdf",
-        "editionNumber": "8857",
-        "pageStart": 272,
-        "pageEnd": 272,
-        "documentReference": "Edição 8857 · página 272",
-        "documentSha256": "d6792e32867f26befd5868d8011f2be2267846abc9e985cad007d8bf14d26703",
-        "actSha256": "5e1d04824ec466dfcebeef4da91b3ffaac8cf243a5ff81beed009e37e829bea3"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-goiania-do_20260904_000008857.pdf-7f9d45c5ecb1-205",
-      "status": "pending",
-      "date": "2026-09-04",
-      "city": "Goiânia",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 87,
-      "importance": 87,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "Extrato do Contrato de Prestação de Serviços nº 1672/2026",
-        "extractedTitle": "Goiânia publica Extrato do Contrato de Prestação de Serviços nº 1672/2026",
-        "extractedDeck": "OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde ambulatorial e/ou apoio diagnóstico terapêutico aos usuários do Sistema Único de Saúde – SUS, conforme regulação do Complexo Regulador da Secretaria Municipal de Saúde, nos termos do Edital de Chamamento nº…",
-        "extractedParagraphs": [
-          "Prefeitura de Goiânia publicou contrato na edição 8857 de Diário Oficial do Município de Goiânia, datada de 4 de setembro de 2026. OBJETO: Este termo tem por objeto Prestação de serviços médicos de assistência à saúde ambulatorial e/ou apoio diagnóstico terapêutico aos usuários do Sistema Único de Saúde – SUS, conforme regulação do Complexo Regulador da Secretaria Municipal de Saúde, nos termos do Edital de Chamamento nº….",
-          "O maior valor monetário identificado no texto é R$ 6.481.803,00; o ato cita o CNPJ 01.587.609/0014-96; as referências documentais incluem 14.133/21, 26.29.000009842-6., 11.419/2006., 26.29.000009842-6. A conferência deve ser feita no documento original, em página 270."
-        ],
-        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8857, de 04 de setembro de 2026. Página 270 de 299 Prefeitura de Goiânia Secretaria Municipal de Saúde Gerência de Contratos e Convênios e Credenciamentos EXTRATO DO CONTRATO DE PRESTAÇÃO DE SERVIÇOS Nº 1672/2026 PROCESSO SEI: 26.29.000009842-6 CONTRATANTE: Secretaria Municipal de Saúde/Fundo Municipal de Saúde CONTRATADA: Laboratório De Análises Clínicas Da Pontifícia Universidade Católica De Goiás / Sociedade Goiana De Cultura – CNPJ: 01.587.609/0014-96 DO OBJETO: Este termo tem por…",
-        "publicBody": "Prefeitura de Goiânia",
-        "values": [
-          {
-            "original": "R$ 108.030,05",
-            "value": 108030.05,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 1.296.360,60",
-            "value": 1296360.6,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 6.481.803,00",
-            "value": 6481803,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "01.587.609/0014-96"
-        ],
-        "referenceNumbers": [
-          "14.133/21",
-          "26.29.000009842-6.",
-          "11.419/2006.",
-          "26.29.000009842-6"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Oficial do Município de Goiânia",
-        "label": "Prefeitura de Goiânia",
-        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20260904_000008857.pdf",
-        "editionId": "goiania:do_20260904_000008857.pdf",
-        "editionNumber": "8857",
-        "pageStart": 270,
-        "pageEnd": 270,
-        "documentReference": "Edição 8857 · página 270",
-        "documentSha256": "d6792e32867f26befd5868d8011f2be2267846abc9e985cad007d8bf14d26703",
-        "actSha256": "7f9d45c5ecb199aece13a88c6d4853cc0f105bb13984e98657bd84c2586fa761"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114621-ADDFF783-87",
-      "status": "pending",
-      "date": "2026-09-04",
-      "city": "Indiara",
-      "scope": "Municipal",
-      "actType": "dispensa",
-      "typeLabel": "Dispensa",
-      "priority": 85,
-      "importance": 85,
-      "curationReasons": [
-        "alto valor-notícia calculado",
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO",
-        "extractedTitle": "Indiara publica TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO",
-        "extractedDeck": "contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE INDIARA publicou dispensa na edição 3697 de Diário Municipal de Goiás — AGM, datada de 4 de setembro de 2026. contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante.",
-          "O maior valor monetário identificado no texto é R$ 65.492,11; o ato cita o CNPJ 21.844.009/0001-59; as referências documentais incluem 14.133/21. A conferência deve ser feita no documento original, em páginas 21 a 22."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE INDIARA FUNDO MUNICIPAL DE SAÚDE TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO Nº 229/2026 TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO Nº 229/2026 “Dispõe sobre ato de ratificação dispensa de licitação e dá outras providências.” O PREFEITO DO MUNICÍPIO DE INDIARA-GO, no uso de suas atribuições legais, e, Considerando que fora demonstrado a real necessidade de se contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante; Considerando que fora realizada…",
-        "publicBody": "MUNICÍPIO DE INDIARA",
-        "values": [
-          {
-            "original": "R$ 65.492,11",
-            "value": 65492.11,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 10.321,60",
-            "value": 10321.6,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "21.844.009/0001-59"
-        ],
-        "referenceNumbers": [
-          "14.133/21"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE INDIARA",
-        "url": "https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=3392&i=publicado_114621_2026-09-03_a53fcc47ad32021ab5f1ba592789f75f.pdf",
-        "editionId": "agm:114621",
-        "editionNumber": "3697",
-        "pageStart": 21,
-        "pageEnd": 22,
-        "documentReference": "Edição 3697 · páginas 21 a 22",
-        "documentSha256": "c3bb600eeffdf5122a515930e8695bd77507b04f80d819be2cafab8b8ce82fa5",
-        "actSha256": "e7dcc5e31b7273756f1cff69167008ca7ed46f02a0278f6d6c856333c6a1d250"
       },
       "requestedOutput": {
         "kind": "editorial_brief",

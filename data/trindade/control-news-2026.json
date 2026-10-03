@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-02T12:40:00Z",
+  "generated_at": "2026-10-03T17:35:00Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-10-02"
@@ -10,10 +10,71 @@
     "doego_editions": 39,
     "tcmgo_editions": 18,
     "tcego_editions": 18,
-    "published_stories": 212,
-    "total_items": 212
+    "published_stories": 216,
+    "total_items": 216
   },
   "items": [
+    {
+      "id":"goiania-8876-fubog-renovacao-convenio-245-milhoes",
+      "origin_item_id":"jul26-goiania-do_20261002_000008876.pdf-132a3d7db2d0-30",
+      "date":"2026-10-02","published_at":"2026-10-02","city":"Goiânia","scope":"Municipal","source_id":"goiania",
+      "source_name":"Diário Oficial do Município de Goiânia","source_label":"Goiânia","official_url":"https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261002_000008876.pdf","source_landing_url":"https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id":"goiania:do_20261002_000008876.pdf","edition_number":"8876","external_identifier":"Resolução Normativa 50/2026 · Processo 26.29.000003632-3",
+      "local_path":"data/raw/municipal-diaries/goiania/2026/10/2026-10-02-8876.pdf","document_sha256":"a8d2b5ffa751baeadd3d2a67fbb00196710fd18f678eea2576cdd475249a7935","page_start":44,"page_end":46,"preview_page":45,
+      "document_reference":"Diário de Goiânia nº 8.876, de 2 de outubro · páginas 44 a 46",
+      "act_type":"aprovacao_orcamentaria_convenio","type_label":"Saúde e orçamento","official_title":"Comitê de Controle de Gastos aprova renovação de convênio com a FUBOG",
+      "title":"Comitê de Goiânia aprova renovação de convênio de R$ 245,8 milhões com Banco de Olhos",
+      "deck":"Resolução registra previsão de R$ 4,1 milhões por mês para a Fundação Banco de Olhos de Goiás; aprovação do comitê não é contrato assinado nem pagamento.",
+      "summary":"O Comitê de Controle de Gastos deu aval orçamentário e financeiro à renovação do convênio da saúde municipal com a FUBOG.",
+      "paragraphs":["O Comitê de Controle de Gastos de Goiânia aprovou a solicitação da Secretaria Municipal de Saúde para renovar o convênio com a Fundação Banco de Olhos de Goiás (FUBOG). A Resolução Normativa nº 50/2026 informa valor total de R$ 245.830.869,00 e valor mensal de R$ 4.097.181,15, sem ressalva na deliberação do colegiado.","O valor chama atenção pelo tamanho e pelo vínculo com a prestação de serviços de saúde, mas o ato publicado se limita à autorização do comitê para as medidas de execução da despesa. A resolução não reproduz o novo termo do convênio, não detalha metas assistenciais, duração ou serviços contratados e não informa pagamentos já realizados sob a renovação.","A própria resolução delimita a atuação do comitê aos aspectos orçamentário, financeiro e fiscal; a análise técnica e jurídica cabe às áreas responsáveis. Para acompanhar o destino dos recursos, será preciso localizar o termo assinado, seu plano de trabalho, metas, repasses e prestação de contas."],
+      "public_body":"Secretaria Municipal de Saúde e Comitê de Controle de Gastos de Goiânia","values":[{"original":"R$ 245.830.869,00","value":245830869,"currency":"BRL","stage":"valor_total_da_renovacao_aprovada_nao_pagamento"},{"original":"R$ 4.097.181,15","value":4097181.15,"currency":"BRL","stage":"valor_mensal_informado_na_resolucao"}],"value_highest":245830869,
+      "reference_numbers":["50/2026","26.29.000003632-3","11468108"],"importance":312,"news_value":{"score":99,"reasons":["R$ 245,8 milhões em renovação submetida ao comitê","serviço de saúde","necessidade de conferir termo e metas"]},"prominence":"cover","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"goiania-8876-hospital-celia-camara-termo-emergencial-36-milhoes",
+      "origin_item_id":"jul26-goiania-do_20261002_000008876.pdf-2cd85f45d9d5-32",
+      "date":"2026-10-02","published_at":"2026-10-02","city":"Goiânia","scope":"Municipal","source_id":"goiania",
+      "source_name":"Diário Oficial do Município de Goiânia","source_label":"Goiânia","official_url":"https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261002_000008876.pdf","source_landing_url":"https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id":"goiania:do_20261002_000008876.pdf","edition_number":"8876","external_identifier":"Resolução Normativa 52/2026 · Processo 26.29.000014434-7",
+      "local_path":"data/raw/municipal-diaries/goiania/2026/10/2026-10-02-8876.pdf","document_sha256":"a8d2b5ffa751baeadd3d2a67fbb00196710fd18f678eea2576cdd475249a7935","page_start":49,"page_end":49,"preview_page":49,
+      "document_reference":"Diário de Goiânia nº 8.876, de 2 de outubro · página 49",
+      "act_type":"aprovacao_orcamentaria_parceria_emergencial","type_label":"Saúde e gestão hospitalar","official_title":"Aval para termo de colaboração emergencial do Hospital Célia Câmara",
+      "title":"Goiânia dá aval a parceria emergencial de R$ 36,6 milhões para Hospital Célia Câmara",
+      "deck":"Comitê de gastos aprovou previsão de R$ 6,1 milhões mensais para gestão e serviços do hospital; organização parceira não é identificada nesse ato.",
+      "summary":"Resolução autoriza as medidas financeiras para formalizar termo emergencial de gestão do Hospital e Maternidade Municipal Célia Câmara.",
+      "paragraphs":["O Comitê de Controle de Gastos de Goiânia aprovou sem ressalvas uma proposta de Termo de Colaboração Emergencial de R$ 36,6 milhões para a gestão, operação e execução dos serviços do Hospital e Maternidade Municipal Célia Câmara. A previsão publicada é de R$ 6,1 milhões por mês.","A resolução descreve o objetivo como assegurar a continuidade dos atendimentos hospitalares e ambulatoriais. Ela não identifica a organização que receberia o termo, não reproduz o instrumento assinado e não informa a data de início, metas assistenciais ou repasses efetivados. O valor total equivale a seis parcelas mensais indicadas, mas essa relação aritmética não substitui a vigência formal do termo.","A aprovação é uma etapa de controle orçamentário e financeiro, não prova de contratação concluída nem de pagamento. O próximo documento decisivo é o termo de colaboração com plano de trabalho, entidade parceira, metas e cronograma de repasses."],
+      "public_body":"Secretaria Municipal de Saúde e Comitê de Controle de Gastos de Goiânia","values":[{"original":"R$ 36.600.000,00","value":36600000,"currency":"BRL","stage":"valor_total_aprovado_nao_pagamento"},{"original":"R$ 6.100.000,00","value":6100000,"currency":"BRL","stage":"valor_mensal_previsto"}],"value_highest":36600000,
+      "reference_numbers":["52/2026","26.29.000014434-7"],"importance":282,"news_value":{"score":95,"reasons":["R$ 36,6 milhões para hospital municipal","natureza emergencial","parceiro ainda não identificado no ato"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"goiania-8876-patrocinio-futebol-fgf-6-milhoes",
+      "date":"2026-10-02","published_at":"2026-10-02","city":"Goiânia","scope":"Municipal","source_id":"goiania",
+      "source_name":"Diário Oficial do Município de Goiânia","source_label":"Goiânia","official_url":"https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261002_000008876.pdf","source_landing_url":"https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id":"goiania:do_20261002_000008876.pdf","edition_number":"8876","external_identifier":"Resolução Normativa 52/2026 · Processo 26.26.000001038-1",
+      "local_path":"data/raw/municipal-diaries/goiania/2026/10/2026-10-02-8876.pdf","document_sha256":"a8d2b5ffa751baeadd3d2a67fbb00196710fd18f678eea2576cdd475249a7935","page_start":51,"page_end":52,"preview_page":51,
+      "document_reference":"Diário de Goiânia nº 8.876, de 2 de outubro · páginas 51 e 52",
+      "act_type":"aprovacao_orcamentaria_patrocinio","type_label":"Esporte e publicidade pública","official_title":"Aval do Comitê de Controle de Gastos a patrocínio à Federação Goiana de Futebol",
+      "title":"Comitê aprova proposta de R$ 6 milhões para Goiânia patrocinar futebol da Série B",
+      "deck":"Plano prevê três parcelas de R$ 2 milhões à Federação Goiana de Futebol por direitos de publicidade ligados a Goiás, Vila Nova e Atlético; ainda não é pagamento.",
+      "summary":"A prefeitura pretende associar sua marca a partidas do Campeonato Brasileiro entre setembro e dezembro de 2026.",
+      "paragraphs":["O Comitê de Controle de Gastos de Goiânia aprovou sem ressalva a proposta de patrocínio de R$ 6 milhões à Federação Goiana de Futebol (FGF). O objeto é a compra de direitos de marketing, publicidade e divulgação da marca do município ligados à participação de Goiás, Vila Nova e Atlético em partidas oficiais da Série B do Campeonato Brasileiro, de setembro a dezembro de 2026.","A resolução prevê desembolsos de R$ 2 milhões em novembro, R$ 2 milhões em dezembro e R$ 2 milhões em janeiro de 2027. A participação dos clubes é descrita como comunicacional; o ato identifica a FGF como destinatária da proposta de patrocínio. Não publica contrato, plano de entregas, métricas de exposição da marca ou comprovantes de transferência.","A aprovação do comitê avalia os aspectos orçamentário, financeiro e fiscal. A efetiva contratação, execução da publicidade e pagamento dependerão de documentação posterior; os três desembolsos são um cronograma previsto, não despesa já quitada."],
+      "public_body":"Secretaria Municipal de Esporte e Lazer e Comitê de Controle de Gastos de Goiânia","values":[{"original":"R$ 6.000.000,00","value":6000000,"currency":"BRL","stage":"patrocinio_aprovado_nao_pagamento"}],"value_highest":6000000,
+      "reference_numbers":["52/2026","26.26.000001038-1"],"importance":269,"news_value":{"score":93,"reasons":["R$ 6 milhões em publicidade esportiva","recursos municipais","entregas e contrato ainda não publicados"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"goiania-8876-concurso-aprovacao-convocacao-134-profissionais",
+      "date":"2026-10-02","published_at":"2026-10-02","city":"Goiânia","scope":"Municipal","source_id":"goiania",
+      "source_name":"Diário Oficial do Município de Goiânia","source_label":"Goiânia","official_url":"https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261002_000008876.pdf","source_landing_url":"https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id":"goiania:do_20261002_000008876.pdf","edition_number":"8876","external_identifier":"Resolução Normativa 52/2026 · Processo 25.6.000015571-0 · Concurso 01/2020",
+      "local_path":"data/raw/municipal-diaries/goiania/2026/10/2026-10-02-8876.pdf","document_sha256":"a8d2b5ffa751baeadd3d2a67fbb00196710fd18f678eea2576cdd475249a7935","page_start":50,"page_end":50,"preview_page":50,
+      "document_reference":"Diário de Goiânia nº 8.876, de 2 de outubro · página 50",
+      "act_type":"aprovacao_plano_convocacao_concurso","type_label":"Concurso e serviços públicos","official_title":"Aval para convocação de 134 aprovados no Concurso Público nº 01/2020",
+      "title":"Goiânia aprova plano para convocar 134 profissionais do concurso de 2020",
+      "deck":"Maior grupo é de 107 agentes comunitários de saúde; resolução autoriza o plano, mas não traz nomeações individuais.",
+      "summary":"O comitê de gastos autorizou, com ressalva, a convocação para substituir profissionais contratados.",
+      "paragraphs":["O Comitê de Controle de Gastos de Goiânia aprovou, com ressalva, um plano de ação para convocar 134 candidatos aprovados no Concurso Público nº 01/2020, em substituição a profissionais contratados. A maior parte das vagas autorizadas é para agentes comunitários de saúde: 107.","A lista também prevê seis médicos, um cirurgião-dentista endodontista, um enfermeiro intervencionista, um farmacêutico, um técnico em saúde intervencionista, cinco analistas em cultura e desportos e 12 analistas em assuntos sociais. Esses quantitativos somam 134 profissionais, conforme a Resolução Normativa nº 52/2026.","A decisão publicada é a aprovação do plano pelo comitê, não um edital de convocação com nomes nem posse já realizada. Os candidatos devem acompanhar os atos de chamada e nomeação que a prefeitura publicar depois."],
+      "public_body":"Comitê de Controle de Gastos e Secretaria Municipal de Administração de Goiânia","values":[],"value_highest":null,"reference_numbers":["52/2026","25.6.000015571-0","01/2020"],"importance":243,"news_value":{"score":88,"reasons":["134 vagas de concurso","107 agentes comunitários de saúde","convocação ainda depende de atos posteriores"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
     {
       "id":"tcmgo-2774-guapo-suspensao-edital-materiais-4-milhoes",
       "date":"2026-10-02","published_at":"2026-10-02","city":"Guapó","scope":"Municipal","source_id":"tcmgo",
