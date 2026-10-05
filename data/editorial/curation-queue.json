@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-10-05T12:29:20.518626+00:00",
+  "generatedAt": "2026-10-05T20:35:29.817468+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 10,
@@ -78,6 +78,191 @@
         "documentReference": "Edição 3717 · página 1",
         "documentSha256": "f65a7dd99da20000108b49f5fd139f8ee814fb34b14e8180833e860933fcecf9",
         "actSha256": "a388c447756a18ce28d80eee3ffdaf4771dfac309758dec33415e1d4ad630836"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-anapolis-24784-34c12b205bf7-9",
+      "status": "pending",
+      "date": "2026-10-05",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "EDITAL DE COMUNICAÇÃO DO CONSELHO MUNICIPAL 1.2 Desta forma, fica reajustado o valor total atualizado do contrato de",
+        "extractedTitle": "Anápolis publica EDITAL DE COMUNICAÇÃO DO CONSELHO MUNICIPAL 1.2 Desta forma, fica reajustado o valor total atualizado do contrato de",
+        "extractedDeck": "informa aos interessados a Pauta de Julgamento em Segunda Instância CLÁUSULA SEGUNDA - DA RATIFICAÇÃO Administrativa, a realizar-se dia 08/10/2026, a partir das 09:00 horas, 2.1 Permanecem inalteradas as demais cláusulas e condições do Con‐ na sala de reuniões 3º andar, no Centro Administrativo da…",
+        "extractedParagraphs": [
+          "COMPANHIA MUNICIPAL DE TRANSPORTE E publicou contrato na edição 4.043/2026 de Diário Oficial de Anápolis, datada de 5 de outubro de 2026. informa aos interessados a Pauta de Julgamento em Segunda Instância CLÁUSULA SEGUNDA - DA RATIFICAÇÃO Administrativa, a realizar-se dia 08/10/2026, a partir das 09:00 horas, 2.1 Permanecem inalteradas as demais cláusulas e condições do Con‐ na sala de reuniões 3º andar, no Centro Administrativo da….",
+          "O maior valor monetário identificado no texto é R$ 16.112.391,33. A conferência deve ser feita no documento original, em páginas 1 a 2."
+        ],
+        "evidenceExcerpt": "EDITAL DE COMUNICAÇÃO DO CONSELHO MUNICIPAL 1.2 Desta forma, fica reajustado o valor total atualizado do contrato de DE CONTRIBUINTES – CMC DA SECRETARIA MUNICIPAL R$ 14.982.322,72(quatorze milhões novecentos e oitenta e dois mil tre‐ DE ECONOMIA zentos e vinte e dois reais e setenta e dois centavos) para R$ 16.112.391,33 (dezesseis milhões, cento e doze mil, trezentos e noventa O Conselho Municipal de Contribuintes, no uso de suas atribuições, e um reais e trinta e três centavos). informa aos interessados a…",
+        "publicBody": "COMPANHIA MUNICIPAL DE TRANSPORTE E",
+        "values": [
+          {
+            "original": "R$ 14.982.322,72",
+            "value": 14982322.72,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 16.112.391,33",
+            "value": 16112391.33,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Anápolis",
+        "label": "COMPANHIA MUNICIPAL DE TRANSPORTE E",
+        "url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/26104/EnO22TOnSRPA3DZjLwm90HhSDYAB2cGuV0Ww0ONV.pdf",
+        "editionId": "anapolis:24784",
+        "editionNumber": "4.043/2026",
+        "pageStart": 1,
+        "pageEnd": 2,
+        "documentReference": "Edição 4.043/2026 · páginas 1 a 2",
+        "documentSha256": "a1ae4ed3c9cb124dee54cae333582e78ef22d7e3c2d24478b75e3ddb35fd7dc1",
+        "actSha256": "34c12b205bf7a69f2ae62ee6d64090c494aa319c41086c33736eb2acd4268a74"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-anapolis-24784-c799bdee75cc-11",
+      "status": "pending",
+      "date": "2026-10-05",
+      "city": "Anápolis",
+      "scope": "Municipal",
+      "actType": "dispensa",
+      "typeLabel": "Dispensa",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "EDITAL DE NOTIFICAÇÃO Nº 287/2026 (AUTUAÇÃO) AVISO DISPENSA DE LICITAÇÃO Nº 121/2026",
+        "extractedTitle": "Anápolis publica EDITAL DE NOTIFICAÇÃO Nº 287/2026 (AUTUAÇÃO) AVISO DISPENSA DE LICITAÇÃO Nº 121/2026",
+        "extractedDeck": "HOMOLOGAR a Dispensa Eletrônica conduzida pela REGISTRO DE PREÇO PARA INSUMOS, MATERIAIS ODON‐ Agente de Contratação, em favor das empresas a seguir relacionadas, TOLÓGICOS E MEDICAMENTOS A FIM DE SUPRIR AS DE‐ pelos respectivos valores unitários e totais dos itens:MAR",
+        "extractedParagraphs": [
+          "Companhia Municipal de Trânsito e Transporte de A Prefeitura Municipal de Anápolis-GO, através da Secretaria Mu‐ publicou dispensa na edição 4.043/2026 de Diário Oficial de Anápolis, datada de 5 de outubro de 2026. HOMOLOGAR a Dispensa Eletrônica conduzida pela REGISTRO DE PREÇO PARA INSUMOS, MATERIAIS ODON‐ Agente de Contratação, em favor das empresas a seguir relacionadas, TOLÓGICOS E MEDICAMENTOS A FIM DE SUPRIR AS DE‐ pelos respectivos valores unitários e totais dos itens:MAR.",
+          "O maior valor monetário identificado no texto é R$ 110.800.000.461,00; o ato cita os CNPJs 03.952.368/0001-48, 10.736.263/0001-17, 15.724.019/0001-58, 18.760.966/0001-92; as referências documentais incluem 01111.00002149/2026-11, 918/2022, 14.133. A conferência deve ser feita no documento original, em páginas 2 a 4."
+        ],
+        "evidenceExcerpt": "EDITAL DE NOTIFICAÇÃO Nº 287/2026 (AUTUAÇÃO) AVISO DISPENSA DE LICITAÇÃO Nº 121/2026 O Presidente da Companhia Municipal de Trânsito e Transporte de A Prefeitura Municipal de Anápolis-GO, através da Secretaria Mu‐ Anápolis (CMTT), no uso de suas atribuições legais contidas na Lei nicipal de Administração, Gestão de Pessoas e Inovação, torna pú‐ Complementar nº 060/2003, e em conformidade com as competências blico aos interessados a Dispensa de Licitação na forma eletrônica, do estabelecidas pela Lei Federal nº…",
+        "publicBody": "Companhia Municipal de Trânsito e Transporte de A Prefeitura Municipal de Anápolis-GO, através da Secretaria Mu‐",
+        "values": [
+          {
+            "original": "R$ 29,00",
+            "value": 29,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 58,00",
+            "value": 58,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 63,00",
+            "value": 63,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 252,00",
+            "value": 252,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 78,00",
+            "value": 78,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 780,00",
+            "value": 780,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 1.090,00",
+            "value": 1090,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 442,58",
+            "value": 442.58,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 148,00",
+            "value": 148,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 7.104,00",
+            "value": 7104,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 109,00",
+            "value": 109,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 01108.00000461",
+            "value": 110800000461,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "03.952.368/0001-48",
+          "10.736.263/0001-17",
+          "15.724.019/0001-58",
+          "18.760.966/0001-92",
+          "27.274.178/0001-87",
+          "30.985.388/0001-98",
+          "37.871.120/0001-74",
+          "38.323.446/0001-20",
+          "40.102.540/0001-09",
+          "44.280.969/0001-39",
+          "49.490.183/0001-60",
+          "51.382.835/0001-94"
+        ],
+        "referenceNumbers": [
+          "01111.00002149/2026-11",
+          "918/2022",
+          "14.133"
+        ],
+        "confidence": 0.82
+      },
+      "source": {
+        "name": "Diário Oficial de Anápolis",
+        "label": "Companhia Municipal de Trânsito e Transporte de A Prefeitura Municipal de Anápolis-GO, através da Secretaria Mu‐",
+        "url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/26104/EnO22TOnSRPA3DZjLwm90HhSDYAB2cGuV0Ww0ONV.pdf",
+        "editionId": "anapolis:24784",
+        "editionNumber": "4.043/2026",
+        "pageStart": 2,
+        "pageEnd": 4,
+        "documentReference": "Edição 4.043/2026 · páginas 2 a 4",
+        "documentSha256": "a1ae4ed3c9cb124dee54cae333582e78ef22d7e3c2d24478b75e3ddb35fd7dc1",
+        "actSha256": "c799bdee75cc3870422d870fb55b860bf9130e340c6d2f9f57f84c8fb667bd12"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
@@ -614,120 +799,6 @@
         "documentReference": "Edição 3717 · página 41",
         "documentSha256": "f65a7dd99da20000108b49f5fd139f8ee814fb34b14e8180833e860933fcecf9",
         "actSha256": "7af8ea3a952f710b114385da842aef7f9d7b68cf7ec2e38c5c49ff0b8092652b"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114641-BA8CFB2F-39",
-      "status": "pending",
-      "date": "2026-10-05",
-      "city": "Arenópolis",
-      "scope": "Municipal",
-      "actType": "dispensa",
-      "typeLabel": "Dispensa",
-      "priority": 75,
-      "importance": 75,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "ATO DECLARATÓRIO DE DISPENSA DE LICITAÇÃO",
-        "extractedTitle": "Arenópolis publica ATO DECLARATÓRIO DE DISPENSA DE LICITAÇÃO",
-        "extractedDeck": "Fica declarada a DISPENSA DE LICITAÇÃO, com fundamento no art. 75, inciso II, c/c art. 6º, inciso XIII, e art. 23, § 1º, inciso IV, da Lei Federal nº 14.133/2021, para a contratação de empresa especializada na prestação de serviços de recarga e manutenção em extintores de incêndio portáteis e…",
-        "extractedParagraphs": [
-          "FUNDO MUNICIPAL DE EDUCAÇÃO - FME publicou dispensa na edição 3717 de Diário Municipal de Goiás — AGM, datada de 5 de outubro de 2026. Fica declarada a DISPENSA DE LICITAÇÃO, com fundamento no art. 75, inciso II, c/c art. 6º, inciso XIII, e art. 23, § 1º, inciso IV, da Lei Federal nº 14.133/2021, para a contratação de empresa especializada na prestação de serviços de recarga e manutenção em extintores de incêndio portáteis e….",
-          "O maior valor monetário identificado no texto é R$ 996,00; o ato cita o CNPJ 46.972.455/0001-70; as referências documentais incluem 1294/2026, 1294/2026.. A conferência deve ser feita no documento original, em páginas 14 a 15."
-        ],
-        "evidenceExcerpt": "FUNDO MUNICIPAL DE EDUCAÇÃO - FME ATO DECLARATÓRIO DE DISPENSA DE LICITAÇÃO DISPENSA DE LICITAÇÃO Nº 255/2026 PROCESSO ADMINISTRATIVO Nº 1294/2026 O FUNDO MUNICIPAL DE EDUCAÇÃO DE ARENÓPOLIS – GO, por intermédio de sua autoridade competente, no uso de suas atribuições legais, e considerando o disposto na Lei Federal nº Goiás , 05 de Outubro de 2026 • Diario Municipal de Goiás • ANO XV | Nº 3717 www.diariomunicipal.com.br/agm 15 14.133, de 1º de abril de 2021, especialmente em seu art. 75, inciso II, c/c art. 6º,…",
-        "publicBody": "FUNDO MUNICIPAL DE EDUCAÇÃO - FME",
-        "values": [
-          {
-            "original": "R$ 996,00",
-            "value": 996,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "46.972.455/0001-70"
-        ],
-        "referenceNumbers": [
-          "1294/2026",
-          "1294/2026."
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "FUNDO MUNICIPAL DE EDUCAÇÃO - FME",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114641_2026-10-02_1726ea15c63e2bd090e3720a1e13ce19.pdf",
-        "editionId": "agm:114641",
-        "editionNumber": "3717",
-        "pageStart": 14,
-        "pageEnd": 15,
-        "documentReference": "Edição 3717 · páginas 14 a 15",
-        "documentSha256": "f65a7dd99da20000108b49f5fd139f8ee814fb34b14e8180833e860933fcecf9",
-        "actSha256": "457ab7736e0d213e865b7e807aa10775f9657c2911483841a3540c9617aff8ff"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114641-FC830A47-157",
-      "status": "pending",
-      "date": "2026-10-05",
-      "city": "Palmeiras",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 75,
-      "importance": 75,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS",
-        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS",
-        "extractedDeck": "204/2026 EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS FMS Nº.",
-        "extractedParagraphs": [
-          "Município de Palmeiras publicou contrato na edição 3717 de Diário Municipal de Goiás — AGM, datada de 5 de outubro de 2026. 204/2026 EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS FMS Nº.",
-          "O maior valor monetário identificado no texto é R$ 885,58; as referências documentais incluem 8853/2026, 14.133/2021. A conferência deve ser feita no documento original, em página 42."
-        ],
-        "evidenceExcerpt": "FMS EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS FMS Nº. 204/2026 EXTRATO AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS FMS Nº. 204/2026, PROCESSO ADMINISTRATIVO N. 8853/2026 E DISPENSA DE LICITAÇÃO N. 128/2026, FUNDO MUNICIPAL DE SAUDE -FMS, DE NOME FANTASIA/COMERCIAL FUNDO MUNICIPAL DE SAUDE DE PALMEIRAS DE GOIAS-FMS, NESTE ATO REPRESENTADO PELO SECRETÁRIO DE SAÚDE E VIGILÂNCIA SANITÁRIA O SR. GETULIO JOSE DE OLIVEIRA NETO, E DO OUTRO LADO, A EMPRESA SEGUROS SURA S/A; CLÁUSULA PRIMEIRA – DO OBJETO DESTE CONTRATO…",
-        "publicBody": "Município de Palmeiras",
-        "values": [
-          {
-            "original": "R$ 885,58",
-            "value": 885.58,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "8853/2026",
-          "14.133/2021"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "Município de Palmeiras",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114641_2026-10-02_1726ea15c63e2bd090e3720a1e13ce19.pdf",
-        "editionId": "agm:114641",
-        "editionNumber": "3717",
-        "pageStart": 42,
-        "pageEnd": 42,
-        "documentReference": "Edição 3717 · página 42",
-        "documentSha256": "f65a7dd99da20000108b49f5fd139f8ee814fb34b14e8180833e860933fcecf9",
-        "actSha256": "0b4fc1d706d7e6bcf151a67b8c05a02ad21683620204ad0dd4aeecbfe3e6bf7f"
       },
       "requestedOutput": {
         "kind": "editorial_brief",

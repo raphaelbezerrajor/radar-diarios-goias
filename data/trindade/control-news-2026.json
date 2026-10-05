@@ -9,11 +9,41 @@
   "summary": {
     "doego_editions": 40,
     "tcmgo_editions": 19,
-    "tcego_editions": 18,
-    "published_stories": 220,
-    "total_items": 220
+    "tcego_editions": 19,
+    "published_stories": 222,
+    "total_items": 222
   },
   "items": [
+    {
+      "id":"anapolis-4043-policlinica-reajuste-1-milhao",
+      "date":"2026-10-05","published_at":"2026-10-05","city":"Anápolis","scope":"Municipal","source_id":"anapolis",
+      "source_name":"Diário Oficial do Município de Anápolis","source_label":"Anápolis","official_url":"https://dom.anapolis.go.gov.br/diarios/lista/24784","source_landing_url":"https://dom.anapolis.go.gov.br/",
+      "edition_id":"anapolis:24784","edition_number":"4.043/2026","external_identifier":"Apostilamento I · Contrato 159/2025 · Concorrência 005/2025",
+      "local_path":"data/raw/municipal-diaries/anapolis/2026/10/2026-10-05-4.043-2026.pdf","document_sha256":"a1ae4ed3c9cb124dee54cae333582e78ef22d7e3c2d24478b75e3ddb35fd7dc1","page_start":1,"page_end":1,"preview_page":1,
+      "document_reference":"Diário de Anápolis nº 4.043/2026, de 5 de outubro · página 1",
+      "act_type":"reajuste_contrato_obra_saude","type_label":"Obra pública e saúde","official_title":"Apostilamento I do contrato de construção da policlínica",
+      "title":"Contrato da policlínica de Anápolis sobe R$ 1,13 milhão e chega a R$ 16,1 milhões",
+      "deck":"Apostilamento aplica reajuste de 7,54% pelo índice da construção ao contrato de 2025 ligado ao Novo PAC; valor contratual não representa despesa paga.",
+      "summary":"O município reajustou pelo INCC-DI o contrato para construir a unidade de atenção especializada em saúde.",
+      "paragraphs":["Anápolis acrescentou R$ 1.130.068,51 ao valor do contrato de construção de uma policlínica. O apostilamento publicado nesta segunda-feira aplica reajuste de 7,54267899808165% pelo INCC-DI, índice previsto no contrato. Com isso, o preço atualizado passa de R$ 14.982.322,72 para R$ 16.112.391,33.","A obra é descrita como Unidade de Atenção Especializada em Saúde do tipo policlínica, vinculada a proposta do Novo PAC entre o Ministério da Saúde e o município. O Contrato nº 159/2025 foi firmado em 23 de setembro de 2025 após a Concorrência Eletrônica nº 005/2025. O termo informa que as demais condições contratuais permanecem inalteradas.","O reajuste altera o valor contratado, mas o diário não informa quanto da obra foi executado, medido ou pago, nem um novo prazo de conclusão. Esses dados terão de ser confrontados com medições, empenhos, liquidações e pagamentos para mostrar o avanço físico e financeiro da policlínica."],
+      "public_body":"Secretarias municipais de Obras e Saúde de Anápolis","values":[{"original":"R$ 1.130.068,51","value":1130068.51,"currency":"BRL","stage":"valor_do_reajuste_contratual"},{"original":"R$ 16.112.391,33","value":16112391.33,"currency":"BRL","stage":"valor_total_atualizado_do_contrato_nao_pagamento"}],"value_highest":16112391.33,
+      "reference_numbers":["159/2025","005/2025","01120.00000431/2026-47","011526/2024","36000006734/2023"],"importance":286,"news_value":{"score":94,"reasons":["obra de saúde com reajuste de R$ 1,13 milhão","contrato atualizado para R$ 16,1 milhões","projeto vinculado ao Novo PAC"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"aparecida-2949-seis-contratos-insumos-saude-1-milhao",
+      "date":"2026-10-05","published_at":"2026-10-05","city":"Aparecida de Goiânia","scope":"Municipal","source_id":"aparecida",
+      "source_name":"Diário Oficial Eletrônico de Aparecida de Goiânia","source_label":"Aparecida de Goiânia","official_url":"https://webio.aparecida.go.gov.br/diariooficial/download/2949","source_landing_url":"https://doe.aparecida.go.gov.br/",
+      "edition_id":"aparecida:3061","edition_number":"2949","external_identifier":"Contratos 1.409 a 1.414/2026 · Pregão Eletrônico 038/2026-SRP · Processo 2025.289.273",
+      "local_path":"data/raw/municipal-diaries/aparecida/2026/10/2026-10-05-2949.pdf","document_sha256":"7531d6b542bbd3880431b6f836b09d6f94a18da0d4fe912a8581345474fbc7fc","page_start":11,"page_end":13,"preview_page":12,
+      "document_reference":"Diário de Aparecida de Goiânia nº 2.949, de 5 de outubro · páginas 11 a 13",
+      "act_type":"contratos_insumos_saude","type_label":"Saúde e compras públicas","official_title":"Seis extratos de contrato para dispositivos de infusão e acesso venoso",
+      "title":"Aparecida assina seis contratos de R$ 1,26 milhão para insumos da rede de saúde",
+      "deck":"Extratos do mesmo pregão abrangem equipos, seringas, agulhas e cateteres; soma contratual não equivale a entregas ou pagamentos.",
+      "summary":"O Fundo Municipal de Saúde publicou contratos com seis fornecedoras para dispositivos de infusão e acesso venoso.",
+      "paragraphs":["Aparecida de Goiânia publicou seis contratos que somam R$ 1.258.941,00 para abastecer a rede municipal de saúde com dispositivos de infusão e acesso venoso. Os extratos citam equipos, seringas, agulhas anestésicas, cateteres, escalpes e abocaths. Todos decorrem do Pregão Eletrônico nº 038/2026-SRP e do processo administrativo nº 2025.289.273.","O maior contrato é o da Biotec Biológica Indústria Farmacêutica, de R$ 626.400,00. Também aparecem C.A. Hospitalar (R$ 293.529,00), M Med Comercial (R$ 242.000,00), All Solutions Medical (R$ 55.200,00), HTS Tecnologia em Saúde (R$ 25.600,00) e Absoluta Comércio de Produtos Médicos e Hospitalares (R$ 16.212,00). Os extratos indicam vigência inicial de 12 meses a partir da publicação.","A soma reúne valores contratuais publicados, não prova de que todos os produtos já foram entregues ou pagos. O diário não traz o detalhamento de quantidades e preços por item nos extratos; a execução deverá ser conferida nas ordens de fornecimento, liquidações e pagamentos."],
+      "public_body":"Fundo Municipal de Saúde de Aparecida de Goiânia","values":[{"original":"R$ 1.258.941,00","value":1258941,"currency":"BRL","stage":"soma_de_seis_valores_contratuais_nao_pagamento"},{"original":"R$ 626.400,00","value":626400,"currency":"BRL","stage":"maior_contrato_biotec"}],"value_highest":1258941,
+      "reference_numbers":["1.409/2026","1.410/2026","1.411/2026","1.412/2026","1.413/2026","1.414/2026","038/2026-SRP","2025.289.273"],"importance":274,"news_value":{"score":90,"reasons":["seis contratos de insumos de saúde","soma de R$ 1,26 milhão","permite acompanhar entregas e pagamentos"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
     {
       "id":"doego-24879-ar-condicionado-pregao-70-milhoes",
       "date":"2026-10-05","published_at":"2026-10-05","city":"Goiás","scope":"Estadual","source_id":"doego",
