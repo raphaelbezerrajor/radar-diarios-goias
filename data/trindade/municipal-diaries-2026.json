@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-10-05T12:24:11.272Z",
+  "generated_at": "2026-10-05T20:32:25.960Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 435,
-    "downloaded": 433,
+    "editions": 437,
+    "downloaded": 435,
     "failed_downloads": 2,
-    "extraction_pending": 435
+    "extraction_pending": 437
   },
   "daily_check_windows": [
     {
@@ -2202,7 +2202,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-05T12:23:58.079Z",
+      "checked_at": "2026-10-05T20:32:12.272Z",
       "range_checked": {
         "from": "2026-09-29",
         "to": "2026-10-05"
@@ -3851,41 +3851,60 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "anapolis:24784",
+          "source_edition_id": "24784",
+          "edition_number": "4.043/2026",
+          "date": "2026-10-05",
+          "published_at": "2026-10-05 17:28:56",
+          "publication_timestamp_kind": "official_file_created_timestamp",
+          "extraordinary": false,
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/24784",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/26104/EnO22TOnSRPA3DZjLwm90HhSDYAB2cGuV0Ww0ONV.pdf",
+          "local_path": "data/raw/municipal-diaries/anapolis/2026/10/2026-10-05-4.043-2026.pdf",
+          "bytes": 443232,
+          "sha256": "a1ae4ed3c9cb124dee54cae333582e78ef22d7e3c2d24478b75e3ddb35fd7dc1",
+          "last_modified": "Mon, 05 Oct 2026 20:29:01 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-05T12:23:59.228Z",
+      "checked_at": "2026-10-05T20:32:15.418Z",
       "range_checked": {
         "from": "2026-09-29",
         "to": "2026-10-05"
       },
       "summary": {
-        "editions_total": 84,
-        "editions_in_checked_range": 4,
-        "downloaded": 84,
+        "editions_total": 85,
+        "editions_in_checked_range": 5,
+        "downloaded": 85,
         "failed_downloads": 0,
-        "extraction_pending": 84,
+        "extraction_pending": 85,
         "first_date": "2026-06-01",
-        "last_date": "2026-10-02",
+        "last_date": "2026-10-05",
         "observed_upload_times": {
           "all": {
-            "observations": 84,
+            "observations": 85,
             "earliest": "01:41",
-            "median": "21:25",
+            "median": "21:22",
             "latest": "23:57"
           },
           "ordinary": {
-            "observations": 84,
+            "observations": 85,
             "earliest": "01:41",
-            "median": "21:25",
+            "median": "21:22",
             "latest": "23:57"
           },
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 44,
+          "observations": 45,
           "earliest": "01:41",
-          "median": "21:01",
+          "median": "20:57",
           "latest": "23:31"
         }
       }
@@ -5447,22 +5466,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3061",
+          "source_edition_id": "3061",
+          "edition_number": "2949",
+          "date": "2026-10-05",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2949",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/10/2026-10-05-2949.pdf",
+          "bytes": 786215,
+          "sha256": "7531d6b542bbd3880431b6f836b09d6f94a18da0d4fe912a8581345474fbc7fc",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-05T12:23:59.829Z",
+      "checked_at": "2026-10-05T20:32:16.052Z",
       "range_checked": {
         "from": "2026-09-29",
         "to": "2026-10-05"
       },
       "summary": {
-        "editions_total": 81,
-        "editions_in_checked_range": 4,
-        "downloaded": 81,
+        "editions_total": 82,
+        "editions_in_checked_range": 5,
+        "downloaded": 82,
         "failed_downloads": 0,
-        "extraction_pending": 81,
+        "extraction_pending": 82,
         "first_date": "2026-06-01",
-        "last_date": "2026-10-02",
+        "last_date": "2026-10-05",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -6938,7 +6976,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-05T12:24:04.169Z",
+      "checked_at": "2026-10-05T20:32:19.622Z",
       "range_checked": {
         "from": "2026-09-29",
         "to": "2026-10-05"
@@ -8543,7 +8581,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-05T12:24:05.615Z",
+      "checked_at": "2026-10-05T20:32:21.024Z",
       "range_checked": {
         "from": "2026-09-29",
         "to": "2026-10-05"
