@@ -1,19 +1,79 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T17:35:00Z",
+  "generated_at": "2026-10-05T12:45:00Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-10-02"
+    "to": "2026-10-05"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
-    "doego_editions": 39,
-    "tcmgo_editions": 18,
+    "doego_editions": 40,
+    "tcmgo_editions": 19,
     "tcego_editions": 18,
-    "published_stories": 216,
-    "total_items": 216
+    "published_stories": 220,
+    "total_items": 220
   },
   "items": [
+    {
+      "id":"doego-24879-ar-condicionado-pregao-70-milhoes",
+      "date":"2026-10-05","published_at":"2026-10-05","city":"Goiás","scope":"Estadual","source_id":"doego",
+      "source_name":"Diário Oficial do Estado de Goiás","source_label":"Goiás","official_url":"https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7393/","source_landing_url":"https://diariooficial.abc.go.gov.br/",
+      "edition_id":"doego:7393","edition_number":"24.879","external_identifier":"Pregão Eletrônico SRP 306/2025 · Sislog 115975 · SEI 202500005025831",
+      "local_path":"data/raw/doego/2026/10/doego-2026-10-05-edicao-7393.pdf","document_sha256":"9e5fb10790f96d5d4e95b0cbde85094c71ef31e00906635e1d13908942e42b10","page_start":3,"page_end":3,"preview_page":3,
+      "document_reference":"DOE-GO nº 24.879, de 5 de outubro · página 3",
+      "act_type":"aviso_licitacao_registro_precos","type_label":"Compras públicas","official_title":"Aviso do Pregão Eletrônico SRP nº 306/2025 para aparelhos de ar-condicionado",
+      "title":"Goiás abre disputa de até R$ 70,4 milhões para comprar aparelhos de ar-condicionado",
+      "deck":"Pregão de registro de preços recebe propostas até 21 de outubro; valor é estimativa do edital, não compra concluída nem pagamento.",
+      "summary":"A Secretaria de Administração publicou edital de registro de preços para adquirir aparelhos de ar-condicionado, com disputa marcada para 21 de outubro.",
+      "paragraphs":["O governo de Goiás abriu um pregão eletrônico para registrar preços de aparelhos de ar-condicionado. O aviso publicado pela Secretaria de Estado da Administração (Sead) estima a contratação em R$ 70.457.052,90. As propostas podem ser cadastradas até as 8h45 de 21 de outubro, horário previsto também para a abertura da disputa eletrônica.","O julgamento será pelo menor preço por item. O aviso informa que os benefícios legais para micro e pequenas empresas serão aplicados apenas aos itens 8 e 9; segundo o órgão, os valores estimados dos itens 1 a 7 excedem o limite de enquadramento previsto na lei. O edital e seus anexos ficam nos sistemas Sislog e PNCP, sob o número de contratação 115975 no Sislog.","O total de R$ 70,4 milhões é uma estimativa para o procedimento de registro de preços. A publicação não identifica vencedores, contrato assinado, quantidade efetivamente comprada ou desembolsos. A dimensão real da compra dependerá da sessão, das atas e de eventuais contratos e pagamentos posteriores."],
+      "public_body":"Secretaria de Estado da Administração de Goiás","values":[{"original":"R$ 70.457.052,90","value":70457052.9,"currency":"BRL","stage":"valor_estimado_do_pregao_nao_pagamento"}],"value_highest":70457052.9,
+      "reference_numbers":["306/2025","115975","202500005025831"],"importance":305,"news_value":{"score":96,"reasons":["estimativa de R$ 70,4 milhões","compra centralizada de equipamentos","disputa agendada para 21 de outubro"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"doego-24879-policia-penal-encerra-chamamento-amendoeiras",
+      "date":"2026-10-05","published_at":"2026-10-05","city":"Goiânia e região metropolitana","scope":"Estadual","source_id":"doego",
+      "source_name":"Diário Oficial do Estado de Goiás","source_label":"Goiás","official_url":"https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7393/","source_landing_url":"https://diariooficial.abc.go.gov.br/",
+      "edition_id":"doego:7393","edition_number":"24.879","external_identifier":"Resultado definitivo do Chamamento Público 003/2026-DGPP",
+      "local_path":"data/raw/doego/2026/10/doego-2026-10-05-edicao-7393.pdf","document_sha256":"9e5fb10790f96d5d4e95b0cbde85094c71ef31e00906635e1d13908942e42b10","page_start":22,"page_end":22,"preview_page":22,
+      "document_reference":"DOE-GO nº 24.879, de 5 de outubro · página 22",
+      "act_type":"encerramento_chamamento_sem_parceria","type_label":"Polícia Penal e assistência","official_title":"Polícia Penal homologa encerramento do Chamamento Público 003/2026 sem celebrar parcerias",
+      "title":"Polícia Penal encerra seleção de R$ 3,23 milhões sem firmar parcerias para atendimento",
+      "deck":"Planos do Instituto Amendoeiras não foram aprovados porque os custos da política superaram os tetos do edital; decisão não é punição à entidade.",
+      "summary":"A seleção antes vencida pelo Instituto Amendoeiras terminou sem contratos para os dois lotes de atendimento vinculados à política penal.",
+      "paragraphs":["A Diretoria-Geral de Polícia Penal de Goiás encerrou o Chamamento Público nº 003/2026 sem celebrar as duas parcerias previstas. O Instituto Amendoeiras havia ficado em primeiro lugar nos dois lotes, com propostas de R$ 904 mil e R$ 2,33 milhões, mas os planos de trabalho readequados não foram aprovados. O órgão apontou que os custos atuais tornaram a execução inviável dentro dos limites financeiros do edital.","Os lotes alcançariam unidades de Goiânia, Aparecida de Goiânia e região metropolitana, vinculadas ao SIME, CIAP, CAP/APEC e Patronato/Escritório Social, com prazos previstos de 22 e 24 meses. Segundo o ato, alterar substancialmente os valores de referência ou as metas nesta etapa violaria as regras da seleção. A Polícia Penal mandou preparar novos estudos de custos, metas e indicadores para subsidiar eventual repactuação de repasses com a Senappen.","A homologação anterior havia registrado o primeiro lugar da entidade, mas não equivalia à assinatura da parceria ou a pagamento. O novo resultado definitivo registra expressamente que nenhuma das duas parcerias foi celebrada e que o encerramento não tem caráter punitivo: a regularidade cadastral do Instituto Amendoeiras foi preservada. O diário não informa quando haverá nova seleção ou como os serviços serão prestados até lá."],
+      "public_body":"Diretoria-Geral de Polícia Penal de Goiás","values":[{"original":"R$ 3.234.000,00","value":3234000,"currency":"BRL","stage":"soma_das_propostas_sem_parceria_celebrada"}],"value_highest":3234000,
+      "reference_numbers":["003/2026-DGPP","902291/2020","036/2023"],"importance":310,"news_value":{"score":97,"reasons":["dois lotes terminam sem parceria","atendimento ligado à política penal","seleção antes anunciada agora encerrada"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"senador-canedo-504-iamesc-compra-imoveis-6-milhoes",
+      "date":"2026-10-05","published_at":"2026-10-05","city":"Senador Canedo","scope":"Municipal","source_id":"senador-canedo",
+      "source_name":"Diário Oficial do Município de Senador Canedo","source_label":"Senador Canedo","official_url":"https://diario.senadorcanedo.go.gov.br/diario/5pga4ps503","source_landing_url":"https://diario.senadorcanedo.go.gov.br/",
+      "edition_id":"senador-canedo:700","edition_number":"504","external_identifier":"Contrato 05.05.29.001-2026 · Inexigibilidade 044/2026 · Processo 11.671/2026",
+      "local_path":"data/raw/municipal-diaries/senador-canedo/2026/10/2026-10-05-504.pdf","document_sha256":"f6cb16641dfb4ec8f1b03d6cc7fccd1b70519fe2fd10cb3252bc695446383888","page_start":3,"page_end":3,"preview_page":3,
+      "document_reference":"Diário de Senador Canedo nº 504, de 5 de outubro · página 3",
+      "act_type":"compra_imoveis_inexigibilidade","type_label":"Saúde do servidor e patrimônio","official_title":"Extrato de contrato do Iamesc para compra de três imóveis",
+      "title":"Instituto de saúde dos servidores de Senador Canedo contrata compra de três imóveis por R$ 6,88 milhões",
+      "deck":"Contrato por inexigibilidade identifica três matrículas no Jardim Todos os Santos; extrato não mostra escritura concluída nem pagamento.",
+      "summary":"O Iamesc publicou extrato de contrato para adquirir três imóveis da Futuro Empreendimentos Imobiliários Ltda.",
+      "paragraphs":["O Instituto de Assistência à Saúde do Servidor Público de Senador Canedo (Iamesc) publicou um contrato de R$ 6.878.690,25 para comprar três imóveis da Futuro Empreendimentos Imobiliários Ltda. A contratação foi feita por inexigibilidade de licitação e identifica terrenos e instalações nas ruas Prefeito José Francisco Teles e Senador Ozires Teixeira, no Jardim Todos os Santos.","O extrato relaciona as matrículas imobiliárias nº 24, 1.140 e 64.661 e diz que os bens atendem às necessidades descritas no termo de referência. O contrato foi datado de 25 de setembro. Sua vigência começa após a assinatura por ambas as partes e se encerra com o cumprimento das obrigações, limitada ao prazo estimado de 60 dias para formalizar a escritura pública.","A publicação informa o preço contratual, mas não apresenta laudo de avaliação, justificativa integral da escolha dos imóveis, comprovante da escritura ou pagamento. Esses documentos serão necessários para verificar a destinação das áreas e a execução financeira da compra."],
+      "public_body":"Instituto de Assistência à Saúde do Servidor Público de Senador Canedo","values":[{"original":"R$ 6.878.690,25","value":6878690.25,"currency":"BRL","stage":"valor_contratual_nao_pagamento"}],"value_highest":6878690.25,
+      "reference_numbers":["05.05.29.001-2026","044/2026","11.671/2026","24","1140","64661"],"importance":295,"news_value":{"score":94,"reasons":["aquisição de três imóveis por R$ 6,88 milhões","contratação direta","documentos de avaliação e pagamento não constam do extrato"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"tcmgo-2775-alexania-limpeza-urbana-licitacao-90-dias",
+      "date":"2026-10-05","published_at":"2026-10-05","city":"Alexânia","scope":"Municipal","source_id":"tcmgo",
+      "source_name":"Diário Oficial de Contas do TCM-GO","source_label":"TCM-GO","official_url":"https://www.tcmgo.tc.br/doc/index.jsf","source_landing_url":"https://www.tcmgo.tc.br/doc/index.jsf",
+      "edition_id":"tcmgo:2775","edition_number":"2775","external_identifier":"Acórdão 06968/2026 · Processo 02908/2026 · Dispensa 2789/2026",
+      "local_path":"data/raw/tcmgo/diario/2026/10/tcmgo-doc-2775-2026-10-05.pdf","document_sha256":"cb3ad78579a41db86e5ffcd05008767942e4e9fb9d06840b173a095ab9cc4d49","page_start":56,"page_end":58,"preview_page":57,
+      "document_reference":"Diário de Contas do TCM-GO nº 2.775, de 5 de outubro · páginas 56 a 58",
+      "act_type":"decisao_contratacao_emergencial","type_label":"Limpeza urbana e fiscalização","official_title":"Acórdão confirma cautelar e determina licitação para limpeza urbana em Alexânia",
+      "title":"TCM dá 90 dias para Alexânia licitar limpeza urbana e proíbe prorrogar contrato emergencial",
+      "deck":"Decisão sobre contratação estimada em R$ 6,34 milhões confirma medida cautelar; prazo começa após o trânsito em julgado, e o tribunal não aplicou multa neste processo.",
+      "summary":"O tribunal julgou parcialmente procedente uma denúncia sobre a dispensa emergencial e mandou abrir concorrência para o serviço de limpeza urbana.",
+      "paragraphs":["O Tribunal de Contas dos Municípios de Goiás (TCM-GO) determinou que Alexânia abra uma licitação ampla para os serviços de limpeza urbana e manejo de resíduos sólidos. O prazo máximo é de 90 dias a partir do trânsito em julgado da decisão. Até a conclusão do certame, a prestação emergencial deve durar somente o tempo necessário, sem prorrogação do Contrato nº 13103/2026.","A decisão trata de denúncia apresentada pela Elite Soluções e Construção Ltda. contra a dispensa de licitação nº 2789/2026, estimada em R$ 6.346.231,32. O contrato emergencial foi firmado com a Pai e Filha Construção e Paisagismo Ltda. O TCM confirmou a medida cautelar anterior e julgou a denúncia parcialmente procedente porque não encontrou nos autos demonstração e documentos suficientes para afastar a possibilidade de que a emergência tivesse resultado de falta de planejamento da administração.","O acórdão não aplica multa aos gestores e não comprova, por si, pagamento de R$ 6,34 milhões à contratada. Após o trânsito em julgado, o tribunal deverá abrir uma fase de monitoramento do cumprimento das determinações. O próximo ponto de acompanhamento é a publicação do novo edital, com critérios de competição, prazo e valores."],
+      "public_body":"Tribunal de Contas dos Municípios de Goiás e Prefeitura de Alexânia","values":[{"original":"R$ 6.346.231,32","value":6346231.32,"currency":"BRL","stage":"valor_estimado_da_dispensa_nao_pagamento"}],"value_highest":6346231.32,
+      "reference_numbers":["06968/2026","02908/2026","2789/2026","13103/2026","04130/2026"],"importance":320,"news_value":{"score":99,"reasons":["licitação de limpeza urbana determinada em 90 dias","contrato emergencial sem prorrogação","serviço público de impacto direto"]},"prominence":"cover","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
     {
       "id":"goiania-8876-fubog-renovacao-convenio-245-milhoes",
       "origin_item_id":"jul26-goiania-do_20261002_000008876.pdf-132a3d7db2d0-30",
@@ -5544,11 +5604,12 @@
       "type_label": "Seleção de organização social",
       "official_title": "HOMOLOGAÇÃO E RESULTADO DEFINITIVO DO CHAMAMENTO PÚBLICO Nº 003/2026-DGPP",
       "title": "Polícia Penal seleciona instituto em propostas de R$ 3,23 milhões",
-      "deck": "Instituto Amendoeiras ficou em primeiro lugar nos dois lotes, mas ainda passará por habilitação e ajuste do plano de trabalho.",
+      "deck": "Instituto Amendoeiras ficou em primeiro lugar nos dois lotes em agosto; atualização de 5 de outubro: a Polícia Penal encerrou o chamamento sem celebrar as parcerias.",
       "summary": "A Polícia Penal homologou o resultado de chamamento no qual o Instituto Amendoeiras apresentou propostas que somam R$ 3,23 milhões.",
       "paragraphs": [
         "A Diretoria-Geral de Polícia Penal homologou o resultado definitivo do Chamamento Público nº 003/2026. O Instituto Amendoeiras ficou em primeiro lugar nos dois lotes, com proposta de R$ 904 mil para o SIME e de R$ 2,33 milhões para CIAP, CAP/APEC e Patronato, totalizando R$ 3,234 milhões.",
-        "A organização foi convocada para a fase de habilitação e adequação do plano de trabalho. O resultado da seleção não equivale à assinatura de parceria, transferência ou pagamento dos valores; a formalização ainda depende das etapas posteriores previstas no edital."
+        "A organização foi convocada para a fase de habilitação e adequação do plano de trabalho. O resultado da seleção não equivale à assinatura de parceria, transferência ou pagamento dos valores; a formalização ainda dependia das etapas posteriores previstas no edital.",
+        "Atualização de 5 de outubro de 2026: a Polícia Penal publicou novo resultado definitivo e encerrou os dois lotes sem celebrar parcerias. O órgão informou que os custos dos planos readequados superaram os tetos orçamentários do edital e ressaltou que a decisão não é punição à entidade."
       ],
       "public_body": "Diretoria-Geral de Polícia Penal",
       "values": [
