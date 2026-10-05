@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-10-03T17:26:51.825Z",
+  "generated_at": "2026-10-05T12:24:11.272Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-10-03",
+    "to": "2026-10-05",
     "last_checked": {
-      "from": "2026-09-27",
-      "to": "2026-10-03"
+      "from": "2026-09-29",
+      "to": "2026-10-05"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 433,
-    "downloaded": 431,
+    "editions": 435,
+    "downloaded": 433,
     "failed_downloads": 2,
-    "extraction_pending": 433
+    "extraction_pending": 435
   },
   "daily_check_windows": [
     {
@@ -2180,22 +2180,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:114641",
+          "source_edition_id": "114641",
+          "edition_number": "3717",
+          "date": "2026-10-05",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114641_2026-10-02_1726ea15c63e2bd090e3720a1e13ce19.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/10/2026-10-05-3717.pdf",
+          "bytes": 1423044,
+          "sha256": "f65a7dd99da20000108b49f5fd139f8ee814fb34b14e8180833e860933fcecf9",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-03T17:26:39.924Z",
+      "checked_at": "2026-10-05T12:23:58.079Z",
       "range_checked": {
-        "from": "2026-09-27",
-        "to": "2026-10-03"
+        "from": "2026-09-29",
+        "to": "2026-10-05"
       },
       "summary": {
-        "editions_total": 111,
-        "editions_in_checked_range": 7,
-        "downloaded": 109,
+        "editions_total": 112,
+        "editions_in_checked_range": 6,
+        "downloaded": 110,
         "failed_downloads": 2,
-        "extraction_pending": 111,
+        "extraction_pending": 112,
         "first_date": "2026-06-01",
-        "last_date": "2026-10-02",
+        "last_date": "2026-10-05",
         "observed_upload_times": {
           "all": {
             "observations": 95,
@@ -3835,14 +3854,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-03T17:26:43.021Z",
+      "checked_at": "2026-10-05T12:23:59.228Z",
       "range_checked": {
-        "from": "2026-09-27",
-        "to": "2026-10-03"
+        "from": "2026-09-29",
+        "to": "2026-10-05"
       },
       "summary": {
         "editions_total": 84,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 84,
         "failed_downloads": 0,
         "extraction_pending": 84,
@@ -5431,14 +5450,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-03T17:26:43.763Z",
+      "checked_at": "2026-10-05T12:23:59.829Z",
       "range_checked": {
-        "from": "2026-09-27",
-        "to": "2026-10-03"
+        "from": "2026-09-29",
+        "to": "2026-10-05"
       },
       "summary": {
         "editions_total": 81,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 81,
         "failed_downloads": 0,
         "extraction_pending": 81,
@@ -6919,14 +6938,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-03T17:26:46.232Z",
+      "checked_at": "2026-10-05T12:24:04.169Z",
       "range_checked": {
-        "from": "2026-09-27",
-        "to": "2026-10-03"
+        "from": "2026-09-29",
+        "to": "2026-10-05"
       },
       "summary": {
         "editions_total": 76,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 76,
         "failed_downloads": 0,
         "extraction_pending": 76,
@@ -8502,22 +8521,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "senador-canedo:700",
+          "source_edition_id": "700",
+          "edition_number": "504",
+          "date": "2026-10-05",
+          "published_at": "2026-10-05T06:00:00.426Z",
+          "publication_timestamp_kind": "calendar_timestamp_not_upload_time",
+          "extraordinary": false,
+          "official_url": "https://diario.senadorcanedo.go.gov.br/diario/5pga4ps503",
+          "file_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=05-10-2026",
+          "local_path": "data/raw/municipal-diaries/senador-canedo/2026/10/2026-10-05-504.pdf",
+          "bytes": 491327,
+          "sha256": "f6cb16641dfb4ec8f1b03d6cc7fccd1b70519fe2fd10cb3252bc695446383888",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-03T17:26:47.694Z",
+      "checked_at": "2026-10-05T12:24:05.615Z",
       "range_checked": {
-        "from": "2026-09-27",
-        "to": "2026-10-03"
+        "from": "2026-09-29",
+        "to": "2026-10-05"
       },
       "summary": {
-        "editions_total": 81,
+        "editions_total": 82,
         "editions_in_checked_range": 5,
-        "downloaded": 81,
+        "downloaded": 82,
         "failed_downloads": 0,
-        "extraction_pending": 81,
+        "extraction_pending": 82,
         "first_date": "2026-06-01",
-        "last_date": "2026-10-02",
+        "last_date": "2026-10-05",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
