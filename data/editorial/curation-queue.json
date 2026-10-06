@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-10-06T20:35:35.144432+00:00",
+  "generatedAt": "2026-10-06T22:33:28.231609+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 10,
@@ -26,6 +26,76 @@
   },
   "invalidBriefs": [],
   "candidates": [
+    {
+      "id": "jul26-goiania-do_20261006_000008878.pdf-06ad588b9113-36",
+      "status": "pending",
+      "date": "2026-10-06",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Decreto Orçamentário nº 223/2026",
+        "extractedTitle": "Goiânia publica Decreto Orçamentário nº 223/2026",
+        "extractedDeck": "Fica aberto à Secretaria Municipal de Infraestrutura Urbana, um crédito adicional de natureza suplementar, no valor de R$ 8.747.000,00 (oito milhões, setecentos e quarenta e sete mil reais), destinado a atender à programação prevista no Anexo I deste Decreto",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou decreto na edição 8878 de Diário Oficial do Município de Goiânia, datada de 6 de outubro de 2026. Fica aberto à Secretaria Municipal de Infraestrutura Urbana, um crédito adicional de natureza suplementar, no valor de R$ 8.747.000,00 (oito milhões, setecentos e quarenta e sete mil reais), destinado a atender à programação prevista no Anexo I deste Decreto.",
+          "O maior valor monetário identificado no texto é R$ 8.747.000,00; as referências documentais incluem 11.510, 11.590, 134, 11.419/2006., 26.18.000003134-4. A conferência deve ser feita no documento original, em páginas 52 a 55."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8878, de 06 de outubro de 2026. Página 52 de 159 Prefeitura de Goiânia Gabinete do Prefeito DECRETO ORÇAMENTÁRIO Nº 223, DE 2026 Dispõe sobre a abertura de crédito suplementar, em favor da Secretaria Municipal de Infraestrutura Urbana, no valor de R$ 8.747.000,00 (oito milhões, setecentos e quarenta e sete mil reais). O PREFEITO DE GOIÂNIA, no uso das atribuições que lhe confere o art. 141 da Lei Orgânica do Município de Goiânia, tendo em vista o disposto nos arts. 41 a 43 da Lei federal…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 8.747.000,00",
+            "value": 8747000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 8.249.000,00",
+            "value": 8249000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 498.000,00",
+            "value": 498000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "11.510",
+          "11.590",
+          "134",
+          "11.419/2006.",
+          "26.18.000003134-4"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261006_000008878.pdf",
+        "editionId": "goiania:do_20261006_000008878.pdf",
+        "editionNumber": "8878",
+        "pageStart": 52,
+        "pageEnd": 55,
+        "documentReference": "Edição 8878 · páginas 52 a 55",
+        "documentSha256": "d8806cb62de652e2fac05b845ad15f0b304790b25e810a3f2a291bd144a52b95",
+        "actSha256": "06ad588b91139bcc07cb3f9a247fafc1f26cf406cd041aba1bf4395dc86d4f4d"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
     {
       "id": "jul26-agm-114642-62C4EF69-68",
       "status": "pending",
@@ -262,6 +332,72 @@
         "documentReference": "Edição 2950 · página 4",
         "documentSha256": "a965ec6aeb7beb32b66ad4d61961aff9b912773bbc9a2758940c60cbf90eb216",
         "actSha256": "6e7bc6b40c84378a619ef6b01f117010a12d7b219b892bace45b5ed78e2d8b55"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261006_000008878.pdf-a2faa17ed54c-89",
+      "status": "pending",
+      "date": "2026-10-06",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Extrato do Contrato nº 001/2026",
+        "extractedTitle": "Goiânia publica Extrato do Contrato nº 001/2026",
+        "extractedDeck": "OBJETO: Contratação de empresa para prestação de serviços de apoio operacional à autogestão do IMAS, conforme condições e especificações estabelecidas neste instrumento contratual, no Edital Pregão Eletrônico nº 90016/2025 e seus Anexos",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou contrato na edição 8878 de Diário Oficial do Município de Goiânia, datada de 6 de outubro de 2026. OBJETO: Contratação de empresa para prestação de serviços de apoio operacional à autogestão do IMAS, conforme condições e especificações estabelecidas neste instrumento contratual, no Edital Pregão Eletrônico nº 90016/2025 e seus Anexos.",
+          "O maior valor monetário identificado no texto é R$ 10.629.665,28; o ato cita o CNPJ 43.079.723/0001-30; as referências documentais incluem 001/2026, 14.133/2021, 11.419/2006., 25.14.000005981-3. A conferência deve ser feita no documento original, em página 157."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8878, de 06 de outubro de 2026. Página 157 de 159 Prefeitura de Goiânia Instituto Municipal de Assistência à Saúde dos Servidores de Goiânia Gerência de Apoio Administrativo e de Pessoal EXTRATO DO CONTRATO Nº 001/2026 PROCESSO SEI Nº: 25.14.000005981-3 CONTRATANTE: INSTITUTO MUNICIPAL DE ASSISTÊNCIA À SAÚDE DOS SERVIDORES DE GOIÂNIA - IMAS. CONTRATADO(A): TOTAL ASSISTÊNCIA MÉDICA HOSPITALAR LTDA, inscrito(a) no CNPJ sob o n.° 43.079.723/0001-30. OBJETO: Contratação de empresa para…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 885.805,44",
+            "value": 885805.44,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 10.629.665,28",
+            "value": 10629665.28,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "43.079.723/0001-30"
+        ],
+        "referenceNumbers": [
+          "001/2026",
+          "14.133/2021",
+          "11.419/2006.",
+          "25.14.000005981-3"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261006_000008878.pdf",
+        "editionId": "goiania:do_20261006_000008878.pdf",
+        "editionNumber": "8878",
+        "pageStart": 157,
+        "pageEnd": 157,
+        "documentReference": "Edição 8878 · página 157",
+        "documentSha256": "d8806cb62de652e2fac05b845ad15f0b304790b25e810a3f2a291bd144a52b95",
+        "actSha256": "a2faa17ed54c5a725133643b96b49efee5d9dbcaa0eef43975a454591dbbdf99"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
@@ -648,236 +784,73 @@
       }
     },
     {
-      "id": "jul26-agm-114642-DA538D38-2",
+      "id": "jul26-goiania-do_20261006_000008878.pdf-e1cd48ae5ad3-4",
       "status": "pending",
       "date": "2026-10-06",
-      "city": "Municípios de Goiás",
+      "city": "Goiânia",
       "scope": "Municipal",
-      "actType": "homologacao",
-      "typeLabel": "Homologação",
-      "priority": 83,
-      "importance": 79,
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 85,
+      "importance": 85,
       "curationReasons": [
-        "controle, correção ou responsabilização"
+        "alto valor-notícia calculado"
       ],
-      "mandatoryHumanReview": true,
+      "mandatoryHumanReview": false,
       "factPacket": {
-        "officialTitle": "TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº",
-        "extractedTitle": "Municípios de Goiás publica TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº",
-        "extractedDeck": "HOMOLOGAR o procedimento licitatório realizado na modalidade PREGÃO ELETRÔNICO as empresas: AMALFI COMERCIO E DISTRIBUICAO LTDA, inscrita no CNPJ nº 64.446.992/0001-68, estabelecida a Rua CONSTITUICAO, N 266, Sala 02, Zona 01, na cidade de Cianorte – PR, na importância",
+        "officialTitle": "Decreto nº 195/2026",
+        "extractedTitle": "Goiânia publica Decreto nº 195/2026",
+        "extractedDeck": "Fica declarada de utilidade pública, para fins de desapropriação, em favor do Município de Goiânia, parte da área das Chácaras nº 30 e nº 31 da Quadra nº 1, situadas na Avenida João Leite, no Bairro Santa Genoveva, com as descrições constantes dos Anexos I e II deste Decreto, destinada à…",
         "extractedParagraphs": [
-          "Município de São Francisco de Goiás/GO, para atendimento das publicou homologação na edição 3718 de Diário Municipal de Goiás — AGM, datada de 6 de outubro de 2026. HOMOLOGAR o procedimento licitatório realizado na modalidade PREGÃO ELETRÔNICO as empresas: AMALFI COMERCIO E DISTRIBUICAO LTDA, inscrita no CNPJ nº 64.446.992/0001-68, estabelecida a Rua CONSTITUICAO, N 266, Sala 02, Zona 01, na cidade de Cianorte – PR, na importância.",
-          "O maior valor monetário identificado no texto é R$ 2.875.350,00; o ato cita os CNPJs 09.304.078/0001-74, 57.150.841/0001-00, 64.446.992/0001-68; as referências documentais incluem 7966/2026. A conferência deve ser feita no documento original, em página 1."
+          "Prefeitura de Goiânia publicou decreto na edição 8878 de Diário Oficial do Município de Goiânia, datada de 6 de outubro de 2026. Fica declarada de utilidade pública, para fins de desapropriação, em favor do Município de Goiânia, parte da área das Chácaras nº 30 e nº 31 da Quadra nº 1, situadas na Avenida João Leite, no Bairro Santa Genoveva, com as descrições constantes dos Anexos I e II deste Decreto, destinada à….",
+          "O maior valor monetário identificado no texto é R$ 363.626,00; as referências documentais incluem 195, 11.419/2006., 23.18.000003671-4, 11.510, 11.589. A conferência deve ser feita no documento original, em páginas 11 a 15."
         ],
-        "evidenceExcerpt": "PREFEITURA TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº 017/2026 TERMO DE HOMOLOGAÇÃO PREGÃO ELETRÔNICO Nº 017/2026 Processo Administrativo nº 7966/2026 OBJETO: Registro de preços para futura e eventual contratação de empresa no fornecimento parcelado de combustíveis para abastecimento da frota de veículos, máquinas e equipamentos do Município de São Francisco de Goiás/GO, para atendimento das necessidades da Prefeitura Municipal e de todas as secretarias municipais, conforme condições, quantidades e exigências…",
-        "publicBody": "Município de São Francisco de Goiás/GO, para atendimento das",
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8878, de 06 de outubro de 2026. Página 11 de 159 Prefeitura de Goiânia Gabinete do Prefeito DECRETO Nº 195, DE 2026 Dispõe sobre a declaração de utilidade pública, para fins de desapropriação, parte da área das Chácaras nº 30 e 31, da Quadra 1, situada na Avenida João Leite, no Bairro Santa Genoveva, do Município de Goiânia-GO. O PREFEITO DE GOIÂNIA, no uso das atribuições que lhe confere o art. 115, incisos II, IV e XII, da Lei Orgânica do Município de Goiânia, tendo em vista o disposto…",
+        "publicBody": "Prefeitura de Goiânia",
         "values": [
           {
-            "original": "R$ 198.000,00",
-            "value": 198000,
+            "original": "R$ 182.711,00",
+            "value": 182711,
             "currency": "BRL"
           },
           {
-            "original": "R$ 1.238.750,00",
-            "value": 1238750,
+            "original": "R$ 180.915,00",
+            "value": 180915,
             "currency": "BRL"
           },
           {
-            "original": "R$ 1.438.600,00",
-            "value": 1438600,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 2.875.350,00",
-            "value": 2875350,
+            "original": "R$ 363.626,00",
+            "value": 363626,
             "currency": "BRL"
           }
         ],
-        "cnpjs": [
-          "09.304.078/0001-74",
-          "57.150.841/0001-00",
-          "64.446.992/0001-68"
-        ],
+        "cnpjs": [],
         "referenceNumbers": [
-          "7966/2026"
+          "195",
+          "11.419/2006.",
+          "23.18.000003671-4",
+          "11.510",
+          "11.589",
+          "11.590"
         ],
         "confidence": 0.94
       },
       "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "Município de São Francisco de Goiás/GO, para atendimento das",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114642_2026-10-05_4b671c00df29c15bd6635acea8c3339e.pdf",
-        "editionId": "agm:114642",
-        "editionNumber": "3718",
-        "pageStart": 1,
-        "pageEnd": 1,
-        "documentReference": "Edição 3718 · página 1",
-        "documentSha256": "bed5fc6f4c3feef9a9d1dba532f927fb36f46da7480d3aed341e78c98d009e99",
-        "actSha256": "dd47c50ebf5b90216ab4328f6981056367e95e8c9538896ea907828ac52c9271"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114642-EDEF48AA-54",
-      "status": "pending",
-      "date": "2026-10-06",
-      "city": "Faina",
-      "scope": "Municipal",
-      "actType": "homologacao",
-      "typeLabel": "Homologação",
-      "priority": 83,
-      "importance": 79,
-      "curationReasons": [
-        "controle, correção ou responsabilização"
-      ],
-      "mandatoryHumanReview": true,
-      "factPacket": {
-        "officialTitle": "HOMOLOGAÇÃO E ADJUDICAÇÃO",
-        "extractedTitle": "Faina publica HOMOLOGAÇÃO E ADJUDICAÇÃO",
-        "extractedDeck": "O documento apresenta o conteúdo integral de homologação.",
-        "extractedParagraphs": [
-          "PREFEITURA MUNICIPAL DE FAINA publicou homologação na edição 3718 de Diário Municipal de Goiás — AGM, datada de 6 de outubro de 2026. O documento apresenta o conteúdo integral de homologação.",
-          "O maior valor monetário identificado no texto é R$ 2.930.407,51; o ato cita o CNPJ 47.636.298/0001-94; as referências documentais incluem 12752026. A conferência deve ser feita no documento original, em página 15."
-        ],
-        "evidenceExcerpt": "PREFEITURA MUNICIPAL DE FAINA HOMOLOGAÇÃO E ADJUDICAÇÃO EXTRATO DE ADJUDICAÇÃO E HOMOLOGAÇÃO CONCORRÊNCIA ELETRÔNICA Nº 00000003/2026 PROCESSO ADMINISTRATIVO Nº 12752026 O Município de Faina/GO, por intermédio do Agente de Contratação, torna público que, referente à Concorrência Eletrônica nº 00000003/2026, cujo objeto é a contratação de empresa especializada em engenharia civil para construção de 20 (vinte) unidades habitacionais, no Município de Faina/GO, conforme Programa FNHIS Sub 50, nº TGOV, foi ADJUDICADO…",
-        "publicBody": "PREFEITURA MUNICIPAL DE FAINA",
-        "values": [
-          {
-            "original": "R$ 2.930.407,51",
-            "value": 2930407.51,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "47.636.298/0001-94"
-        ],
-        "referenceNumbers": [
-          "12752026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "PREFEITURA MUNICIPAL DE FAINA",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114642_2026-10-05_4b671c00df29c15bd6635acea8c3339e.pdf",
-        "editionId": "agm:114642",
-        "editionNumber": "3718",
-        "pageStart": 15,
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261006_000008878.pdf",
+        "editionId": "goiania:do_20261006_000008878.pdf",
+        "editionNumber": "8878",
+        "pageStart": 11,
         "pageEnd": 15,
-        "documentReference": "Edição 3718 · página 15",
-        "documentSha256": "bed5fc6f4c3feef9a9d1dba532f927fb36f46da7480d3aed341e78c98d009e99",
-        "actSha256": "436b2ed3eb08cbadc68890926fc137a9eb87edd5df83dba4c51a73559cc72185"
+        "documentReference": "Edição 8878 · páginas 11 a 15",
+        "documentSha256": "d8806cb62de652e2fac05b845ad15f0b304790b25e810a3f2a291bd144a52b95",
+        "actSha256": "e1cd48ae5ad395247f8604f251bf0bf1945e33605be820e85a547ae4c09e3f0b"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-senador-canedo-701-cdb433f576da-15",
-      "status": "pending",
-      "date": "2026-10-06",
-      "city": "Senador Canedo",
-      "scope": "Municipal",
-      "actType": "ato_administrativo",
-      "typeLabel": "Ato administrativo",
-      "priority": 83,
-      "importance": 79,
-      "curationReasons": [
-        "controle, correção ou responsabilização"
-      ],
-      "mandatoryHumanReview": true,
-      "factPacket": {
-        "officialTitle": "Ato 15 da edição",
-        "extractedTitle": "Senador Canedo publica Ato 15 da edição",
-        "extractedDeck": "0001 e 0051, no valor de R$2.316,00;",
-        "extractedParagraphs": [
-          "Prefeitura Municipal de Senador Canedo, através daHOSPITALARES LTDA, CNPJ/MF n°. publicou ato administrativo na edição 505 de Diário Oficial de Senador Canedo, datada de 6 de outubro de 2026. 0001 e 0051, no valor de R$2.316,00;.",
-          "O maior valor monetário identificado no texto é R$ 666.572,35; o ato cita os CNPJs 04.971.211/0001-22, 05.652.247/0001-06, 28.387.424/0001-70, 29.220.512/0001-45; as referências documentais incluem 9.503/1997. A conferência deve ser feita no documento original, em páginas 16 a 18."
-        ],
-        "evidenceExcerpt": "dos Itens: 0001 e 0051, no valor de R$2.316,00; ARP 517-2026 - ENDOIMPORTS MEDICAL LTDA, CNPJ/MF n°.51.204.144/0001-09, vencedora do Item: SECRETARIA MUNICIPAL DE INFRAESTRUTURA, 0072, no valor de R$1.236,50; ARP 518-2026 - SERVIÇOS E MOBILIDADE URBANA GTMED IMPORTADORA E DISTRIBUIDORA HOSPITALAR LTDA, CNPJ/MF EDITAL DE NOTIFICAÇÃO DA AUTUAÇÃO n°.39.707.683/0001-57, vencedora do Item: 0109, no POR INFRAÇÃO DE TRÂNSITO - 273/2026 valor de R$18.000,00; ARP 519-2026- LUMIAR HEALTH BUILDERS EQUIPAMENTOS A Prefeitura…",
-        "publicBody": "Prefeitura Municipal de Senador Canedo, através daHOSPITALARES LTDA, CNPJ/MF n°.",
-        "values": [
-          {
-            "original": "R$2.316,00",
-            "value": 2316,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$1.236,50",
-            "value": 1236.5,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$18.000,00",
-            "value": 18000,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$100.800,00",
-            "value": 100800,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$114.729,00",
-            "value": 114729,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$69.750,00",
-            "value": 69750,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$50.546,35",
-            "value": 50546.35,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$4.394,50",
-            "value": 4394.5,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$666.572,35",
-            "value": 666572.35,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "04.971.211/0001-22",
-          "05.652.247/0001-06",
-          "28.387.424/0001-70",
-          "29.220.512/0001-45",
-          "39.707.683/0001-57",
-          "51.204.144/0001-09"
-        ],
-        "referenceNumbers": [
-          "9.503/1997"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Oficial de Senador Canedo",
-        "label": "Prefeitura Municipal de Senador Canedo, através daHOSPITALARES LTDA, CNPJ/MF n°.",
-        "url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=06-10-2026",
-        "editionId": "senador-canedo:701",
-        "editionNumber": "505",
-        "pageStart": 16,
-        "pageEnd": 18,
-        "documentReference": "Edição 505 · páginas 16 a 18",
-        "documentSha256": "92c6f47d55d3555d2b8b32c733e38c166c0a370ec7d1c0de0f77436c8f66289e",
-        "actSha256": "cdb433f576dacb0f2b83ad0d47152148b08afd975ee26a8d8dc99135fa724b5d"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
+        "publishAutomatically": true
       }
     },
     {
