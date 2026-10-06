@@ -1,19 +1,64 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-05T12:45:00Z",
+  "generated_at": "2026-10-06T20:35:00Z",
   "period": {
     "from": "2026-08-04",
-    "to": "2026-10-05"
+    "to": "2026-10-06"
   },
   "method": "Leitura integral das edições oficiais, triagem por impacto e conferência das páginas citadas.",
   "summary": {
-    "doego_editions": 40,
-    "tcmgo_editions": 19,
-    "tcego_editions": 19,
-    "published_stories": 222,
-    "total_items": 222
+    "doego_editions": 42,
+    "tcmgo_editions": 20,
+    "tcego_editions": 20,
+    "published_stories": 225,
+    "total_items": 225
   },
   "items": [
+    {
+      "id":"tcego-181-goinfra-glosa-rodovias-1-78-milhao",
+      "date":"2026-10-06","published_at":"2026-10-06","city":"Goiás","scope":"Estadual","source_id":"tcego",
+      "source_name":"Diário Eletrônico de Contas do TCE-GO","source_label":"TCE-GO","official_url":"https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291942152461","source_landing_url":"https://dec.tce.go.gov.br/",
+      "edition_id":"tcego:331291942152461","edition_number":"181","external_identifier":"Acórdão 2867/2026 · Processo 202400036011464 · Contrato 043/2016-PR-NJ",
+      "local_path":"data/raw/tcego/2026/10/tcego-dec-181-2026-10-06.pdf","document_sha256":"92b52ea990bbcb847c53df64f255fd79b18f0f17b5560bf4aea4592e1defb797","page_start":20,"page_end":20,"preview_page":20,
+      "document_reference":"Diário Eletrônico de Contas do TCE-GO nº 181, de 6 de outubro · página 20 do PDF",
+      "act_type":"acordao_tomada_contas_especial_rodovias","type_label":"Rodovias e fiscalização","official_title":"Acórdão 2867/2026 sobre o Contrato 043/2016-PR-NJ",
+      "title":"TCE manda descontar R$ 1,78 milhão de contrato de rodovias e multa responsáveis por medições",
+      "deck":"Decisão sobre manutenção de rodovias, balsas e aeródromos aponta medições superfaturadas; Goinfra tem 30 dias úteis para comprovar retenções e formalizar a glosa.",
+      "summary":"O Tribunal de Contas do Estado determinou a glosa de R$ 1.780.778,26 em contrato da antiga Agetop com a Stadium Construtora e aplicou multas a três agentes e à empresa.",
+      "paragraphs":["O Tribunal de Contas do Estado de Goiás determinou que a Goinfra formalize o desconto de R$ 1.780.778,26 no Contrato nº 043/2016-PR-NJ, firmado pela antiga Agetop com a Stadium Construtora para manutenção de rodovias, balsas e aeródromos. O acórdão, publicado nesta terça-feira, atribui o valor a medições consideradas irregulares na tomada de contas especial do lote 15 do programa Rodovida – Fase II.","A presidente da agência, Eliane Simonini Baltazar, recebeu prazo de 30 dias úteis para comprovar que as retenções cautelares estão disponíveis, são suficientes e estão vinculadas ao contrato, além de providenciar a formalização administrativa, jurídica, contábil e financeira da glosa. O tribunal também aplicou multas a Divonei Vieira Carrijo, Reginaldo Rosa da Paixão e Adriano Mendes Ribeiro por aprovação de medições superfaturadas e sem respaldo técnico adequado, e à Stadium por se beneficiar delas. Cada multa corresponde a 30% do valor de referência previsto no artigo 112, inciso II, da lei orgânica do TCE; o acórdão não informa seu valor em reais.","A glosa é um desconto a formalizar sobre valores contratuais retidos, não prova de que R$ 1,78 milhão já voltou ao caixa do Estado. As multas são penalidades distintas desse desconto. A decisão não apresenta neste trecho o detalhamento de cada medição nem informa se já houve recurso; a próxima verificação é o cumprimento das providências exigidas da Goinfra."],
+      "public_body":"Tribunal de Contas do Estado de Goiás e Goinfra","values":[{"original":"R$ 1.780.778,26","value":1780778.26,"currency":"BRL","stage":"glosa_determinada_a_formalizar_nao_ressarcimento_comprovado"}],"value_highest":1780778.26,
+      "reference_numbers":["2867/2026","202400036011464","043/2016-PR-NJ","1772/2024","2085/2022"],"importance":348,"news_value":{"score":99,"reasons":["desconto de R$ 1,78 milhão determinado em contrato de rodovias","multas a três agentes e à contratada","prazo de 30 dias úteis para providências"]},"prominence":"cover","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"doego-24880-goinfra-aditivo-rodovias-12-milhoes",
+      "date":"2026-10-06","published_at":"2026-10-06","city":"Goiás","scope":"Estadual","source_id":"doego",
+      "source_name":"Diário Oficial do Estado de Goiás","source_label":"Goiás","official_url":"https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7395/","source_landing_url":"https://diariooficial.abc.go.gov.br/",
+      "edition_id":"doego:7395","edition_number":"24.880","external_identifier":"Termo Aditivo 350/2026-Goinfra · Contrato 191/2026 · Processo 202600036014646",
+      "local_path":"data/raw/doego/2026/10/doego-2026-10-06-edicao-7395.pdf","document_sha256":"8f17019a56cc81e2867b2b750a93b40502d9abcc9ca8652abcf2caaa127cb40e","page_start":38,"page_end":38,"preview_page":38,
+      "document_reference":"DOE-GO nº 24.880, de 6 de outubro · página 38",
+      "act_type":"aditivo_contrato_manutencao_rodovias","type_label":"Infraestrutura e contratos","official_title":"Extrato do Termo Aditivo nº 350/2026-Goinfra",
+      "title":"Goinfra acrescenta R$ 12 milhões a contrato de manutenção de rodovias, balsas e aeródromos",
+      "deck":"Aditivo com a Nortec Infraestrutura inclui serviços no lote 06 por readequação de projeto em fase de obras; o valor foi empenhado, não necessariamente pago.",
+      "summary":"A agência publicou um aditivo de R$ 12.019.146,53 ao contrato de conservação e manutenção do lote 06.",
+      "paragraphs":["A Agência Goiana de Infraestrutura e Transportes (Goinfra) publicou um aditivo de R$ 12.019.146,53 ao contrato com a Nortec Infraestrutura Ltda. para conservação e manutenção da malha rodoviária pavimentada e não pavimentada, de aeródromos e de balsas do Estado. O extrato identifica o lote 06 e descreve o acréscimo de itens e serviços como a primeira readequação do projeto em fase de obras.","O Termo Aditivo nº 350/2026 altera o Contrato nº 191/2026-Goinfra. O diário informa que o valor foi empenhado em duas notas datadas de 2 de outubro e associa a alteração ao processo SEI nº 202600036014646. O extrato, porém, não discrimina os novos quantitativos, as localidades atendidas pelo lote nem o valor total atualizado do contrato.","Empenho é a reserva orçamentária da despesa; não equivale à medição, liquidação ou pagamento dos serviços. Para avaliar o impacto do acréscimo, ainda é necessário confrontar o contrato original, as planilhas da readequação e a execução física e financeira do lote."],
+      "public_body":"Agência Goiana de Infraestrutura e Transportes","values":[{"original":"R$ 12.019.146,53","value":12019146.53,"currency":"BRL","stage":"acrescimo_contratual_empenhado_nao_pagamento"}],"value_highest":12019146.53,
+      "reference_numbers":["350/2026-Goinfra","191/2026-Goinfra","202600036014646","2026.4380.007.00022","2026.4380.008.00082"],"importance":305,"news_value":{"score":95,"reasons":["acréscimo de R$ 12 milhões a contrato de infraestrutura","obras e manutenção de rodovias, balsas e aeródromos","empenhos identificados permitem acompanhar execução"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
+    {
+      "id":"goiania-8877-multa-atraso-tubos-coleta-exames",
+      "date":"2026-10-05","published_at":"2026-10-06","city":"Goiânia","scope":"Municipal","source_id":"goiania",
+      "source_name":"Diário Oficial do Município de Goiânia","source_label":"Goiânia","official_url":"https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261005_000008877.pdf","source_landing_url":"https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id":"goiania:do_20261005_000008877.pdf","edition_number":"8877","external_identifier":"Decisão de PARF · Processo 26.29.000011361-1 · Pregão 90039/2025-SRP",
+      "local_path":"data/raw/municipal-diaries/goiania/2026/10/2026-10-05-8877.pdf","document_sha256":"234513e407bafa80813513a2b60a826992906c5afb36ee1d9b8637e17e03219d","page_start":121,"page_end":125,"preview_page":123,
+      "document_reference":"Diário de Goiânia nº 8.877, de 5 de outubro · páginas 121 a 125",
+      "act_type":"decisao_recurso_multa_atraso_insumo_saude","type_label":"Saúde e contratos","official_title":"Decisão de recurso administrativo da Ascle Brasil Ltda.",
+      "title":"Goiânia mantém multa por atraso em tubos para exames quando estoque estava crítico",
+      "deck":"Fornecedor entregou os insumos após o prazo contratual; Prefeitura rejeitou recurso e manteve multa de 3,5% sobre a parcela atrasada, sem divulgar o valor em reais.",
+      "summary":"O prefeito rejeitou o recurso da Ascle Brasil contra penalidade pelo atraso na entrega de tubos para coleta de sangue à rede municipal.",
+      "paragraphs":["A Prefeitura de Goiânia manteve uma multa à Ascle Brasil Ltda. pelo atraso na entrega de tubos para coleta de sangue usados nos exames da rede pública. Em decisão publicada no diário de segunda-feira, o prefeito Sandro Mabel negou o recurso da empresa e confirmou a penalidade de 3,5% sobre o valor da parcela entregue fora do prazo. O documento não informa quanto essa porcentagem representa em reais.","Segundo a decisão, o prazo de 15 dias úteis terminou em 25 de março de 2026. A empresa pediu agendamento para entrega em 1º de abril, e os produtos foram recebidos no dia 6. Para calcular a multa, a administração considerou sete dias de atraso, até o pedido de agendamento, à razão de 0,5% por dia. A empresa afirmou que o atraso foi pontual, que entregou tudo, que agiu de boa-fé e que não houve dano material comprovado; esses argumentos foram rejeitados no recurso.","A área técnica da Saúde registrou que os tubos eram necessários às análises clínicas e que o estoque estava em nível crítico, com risco de desabastecimento em período de maior demanda por arboviroses, como dengue. O ato descreve esse risco, mas não documenta exames cancelados ou pacientes prejudicados. A própria decisão registra que a liquidação da nota fiscal ocorreu em 18 de maio e o pagamento em 27 de maio; esses dados não mudaram a conclusão sobre o atraso anterior na entrega."],
+      "public_body":"Prefeitura e Secretaria Municipal de Saúde de Goiânia","values":[],"value_highest":null,
+      "reference_numbers":["26.29.000011361-1","90039/2025-SRP","004/2026","008","11426009"],"importance":312,"news_value":{"score":96,"reasons":["insumo essencial para exames laboratoriais","estoque crítico segundo área técnica","recurso negado e multa mantida"]},"prominence":"secondary","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
     {
       "id":"anapolis-4043-policlinica-reajuste-1-milhao",
       "date":"2026-10-05","published_at":"2026-10-05","city":"Anápolis","scope":"Municipal","source_id":"anapolis",
