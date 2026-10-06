@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T20:35:00Z",
+  "generated_at": "2026-10-06T22:36:00Z",
   "period": {
     "from": "2026-08-04",
     "to": "2026-10-06"
@@ -10,10 +10,25 @@
     "doego_editions": 42,
     "tcmgo_editions": 20,
     "tcego_editions": 20,
-    "published_stories": 225,
-    "total_items": 225
+    "published_stories": 226,
+    "total_items": 226
   },
   "items": [
+    {
+      "id":"goiania-8878-hospital-ortopedico-multa-cirurgia-joelho",
+      "date":"2026-10-06","published_at":"2026-10-06","city":"Goiânia","scope":"Municipal","source_id":"goiania",
+      "source_name":"Diário Oficial do Município de Goiânia","source_label":"Goiânia","official_url":"https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261006_000008878.pdf","source_landing_url":"https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+      "edition_id":"goiania:do_20261006_000008878.pdf","edition_number":"8878","external_identifier":"Decisão de PARF · Processo 23.29.000038441-4 · Contrato 379/2021",
+      "local_path":"data/raw/municipal-diaries/goiania/2026/10/2026-10-06-8878.pdf","document_sha256":"d8806cb62de652e2fac05b845ad15f0b304790b25e810a3f2a291bd144a52b95","page_start":73,"page_end":81,"preview_page":80,
+      "document_reference":"Diário de Goiânia nº 8.878, de 6 de outubro · páginas 73 a 81",
+      "act_type":"decisao_recurso_multa_servico_hospitalar_sus","type_label":"Saúde e fiscalização","official_title":"Decisão de recurso do Hospital Ortopédico de Goiânia Ltda.",
+      "title":"Goiânia mantém multa de 30% a hospital após cirurgia de joelho não realizada pelo SUS",
+      "deck":"Prefeitura rejeitou recurso do Hospital Ortopédico; paciente encaminhada em 2022 ainda não tinha cirurgia agendada na auditoria de 2023. Valor da penalidade em reais não foi divulgado.",
+      "summary":"O prefeito manteve a sanção administrativa ao hospital credenciado para atendimento de pacientes do SUS; a cobrança depende de memória de cálculo a ser juntada ao processo.",
+      "paragraphs":["A Prefeitura de Goiânia manteve multa de 30% sobre o valor do Contrato nº 379/2021 ao Hospital Ortopédico de Goiânia Ltda. pela não realização de uma cirurgia de artroplastia total primária de joelho em paciente encaminhada pelo SUS. O prefeito Sandro Mabel negou o recurso administrativo do hospital em decisão publicada nesta terça-feira. O documento não informa o valor da multa em reais e determina que a memória de cálculo seja apresentada antes da cobrança.","A cirurgia foi autorizada e encaminhada ao hospital em 11 de fevereiro de 2022. Segundo a decisão, o procedimento continuava sem agendamento quando a Secretaria Municipal de Saúde auditou a unidade, em outubro e novembro de 2023. A auditoria registrou falta de fornecedor de próteses de joelho, e o hospital informou que devolveria as autorizações para esse tipo de operação. O contrato estava vinculado a edital que previa a realização de procedimentos eletivos em até 60 dias após o recebimento do laudo autorizado.","Em sua defesa, o hospital argumentou que o contrato não o obrigava expressamente a fornecer a prótese, atribuiu a indisponibilidade do material a um fornecedor e alegou defasagem dos valores pagos pelo SUS. A Prefeitura concluiu que o hospital podia buscar outros fornecedores e que não apresentou prova de impossibilidade generalizada de obter a prótese; manteve a classificação contratual de inexecução total pelo atraso superior ao limite previsto. A decisão não informa se a paciente foi atendida posteriormente, nem comprova que a multa já foi cobrada ou paga."],
+      "public_body":"Prefeitura e Secretaria Municipal de Saúde de Goiânia","values":[],"value_highest":null,
+      "reference_numbers":["23.29.000038441-4","379/2021","005/2020","9460","11498329"],"importance":365,"news_value":{"score":99,"reasons":["cirurgia de alta complexidade não realizada no prazo contratual","auditoria indicou interrupção de modalidade de atendimento","multa administrativa de 30% mantida em recurso"]},"prominence":"cover","record_type":"story","editorial_status":"published","publication_mode":"edited_document_news","source_type":"official_document","confidence":0.99
+    },
     {
       "id":"tcego-181-goinfra-glosa-rodovias-1-78-milhao",
       "date":"2026-10-06","published_at":"2026-10-06","city":"Goiás","scope":"Estadual","source_id":"tcego",
