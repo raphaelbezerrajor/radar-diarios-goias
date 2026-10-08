@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Monitoramento documental, legislativo e financeiro da Assembleia Legislativa de Goias",
-  "generated_at": "2026-10-06T22:31:09.954Z",
+  "generated_at": "2026-10-08T18:01:42.519Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-10-06",
+    "to": "2026-10-08",
     "last_checked": {
-      "from": "2026-09-30",
-      "to": "2026-10-06"
+      "from": "2026-10-01",
+      "to": "2026-10-08"
     }
   },
   "summary": {
@@ -17,10 +17,10 @@
     "downloaded_diaries": 31,
     "failed_diary_downloads": 0,
     "extraction_pending": 31,
-    "vote_rows": 6336,
-    "roll_calls": 287,
-    "contracts": 91,
-    "current_contracts": 66,
+    "vote_rows": 6747,
+    "roll_calls": 306,
+    "contracts": 93,
+    "current_contracts": 68,
     "sanctions_registers": 1,
     "analysis_queue": 30
   },
@@ -73,8 +73,8 @@
       "status": "checked",
       "collection_method": "api_publica_oficial",
       "summary": {
-        "rows": 6336,
-        "roll_calls": 287
+        "rows": 6747,
+        "roll_calls": 306
       }
     },
     {
@@ -84,8 +84,8 @@
       "status": "checked",
       "collection_method": "api_publica_oficial",
       "summary": {
-        "records": 91,
-        "current": 66
+        "records": 93,
+        "current": 68
       }
     },
     {
@@ -100,6 +100,16 @@
     }
   ],
   "analysis_queue": [
+    {
+      "id": "alego-votacao:2026-10-07:42576",
+      "type": "votacao_nominal",
+      "date": "2026-10-07",
+      "priority": 90,
+      "title": "OBRIGA OS ESTABELECIMENTOS DE SAÚDE NO ESTADO DE GOIÁS A DISPONIBILIZAREM MACAS E CADEIRAS DE RODAS ADEQUADAS AO ATENDIMENTO DE PESSOAS OBESAS. (PROCESSO RECONSTITUÍDO EM 12/12/2024)",
+      "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 22 sim, 0 nao, 0 abstencoes.",
+      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
+      "document_reference": "Pauta 42576 · 75ª SESSÃO ORDINÁRIA HIBRIDA"
+    },
     {
       "id": "alego-votacao:2026-09-08:42012",
       "type": "votacao_nominal",
@@ -389,16 +399,6 @@
       "why": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO, À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO. · 21 sim, 1 nao, 0 abstencoes.",
       "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
       "document_reference": "Pauta 38501 · 14ª SESSÃO EXTRAORDINÁRIA HÍBRIDA"
-    },
-    {
-      "id": "alego-votacao:2026-06-18:38488",
-      "type": "votacao_nominal",
-      "date": "2026-06-18",
-      "priority": 90,
-      "title": "ALTERA A LEI N° 11.651, DE 26 DE DEZEMBRO DE 1991, QUE INSTITUI O CÓDIGO TRIBUTÁRIO DO ESTADO DE GOIÁS — CTE, E REVOGA DISPOSITIVO DA LEI N° 16.469, DE 19 DE JANEIRO DE 2009, QUE REGULA O PROCESSO ADMINISTRATIVO TRIBUTÁRIO E DISPÕE SOBRE OS ÓRGÃOS VINCULADOS AO JULGAMENTO ADMINISTRATIVO DE QUESTÕES DE NATUREZA TRIBUTÁRIA.",
-      "why": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO. · 21 sim, 0 nao, 0 abstencoes.",
-      "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
-      "document_reference": "Pauta 38488 · 47ª SESSÃO ORDINÁRIA HÍBRIDA"
     }
   ]
 }
