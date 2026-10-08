@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-10-08T18:06:57.766930+00:00",
+  "generatedAt": "2026-10-08T22:32:30.735341+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 10,
@@ -80,6 +80,199 @@
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
         "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261008_000008880.pdf-31c1e2489fe3-8",
+      "status": "pending",
+      "date": "2026-10-08",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "homologacao",
+      "typeLabel": "Homologação",
+      "priority": 93,
+      "importance": 89,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "controle, correção ou responsabilização"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "Termo de Homologação - Concorrência nº 90005/2026",
+        "extractedTitle": "Goiânia publica Termo de Homologação - Concorrência nº 90005/2026",
+        "extractedDeck": "convocar o anexo no sistema",
+        "extractedParagraphs": [
+          "SECRETARIA MUNICIPAL DE ARTICULAÇÃO INSTITUCIONAL E CAPTAÇÃO publicou homologação na edição 8880 de Diário Oficial do Município de Goiânia, datada de 8 de outubro de 2026. convocar o anexo no sistema.",
+          "O maior valor monetário identificado no texto é R$ 12.309.123,41; o ato cita os CNPJs 03.678.241/0001-82, 04.299.281/0001-86, 07.342.268/0001-50, 07.945.776/0001-23; as referências documentais incluem 25.9.000000991-0., 14.133/2021, 14.133/2021., 9.7, 9.3.2. A conferência deve ser feita no documento original, em páginas 11 a 26."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8880, de 08 de outubro de 2026. Página 11 de 300 SECRETARIA MUNICIPAL DE ARTICULAÇÃO INSTITUCIONAL E CAPTAÇÃO TERMO DE HOMOLOGAÇÃO UASG 928677 - CGO-SECRETARIA MUN ARTICULAÇ. INST E CAPTAÇÃO CONCORRÊNCIA 90005/2026 Às 12:00 horas do dia 06 de outubro do ano de 2026, após constatada a regularidade dos atos procedimentais, a autoridade competente, DANIELLE GOMES DE OLIVEIRA, HOMOLOGA e ADJUDICA o objeto referente ao item 1 da Concorrência nº 90005/2026, Processo nº 25.9.000000991-0.…",
+        "publicBody": "SECRETARIA MUNICIPAL DE ARTICULAÇÃO INSTITUCIONAL E CAPTAÇÃO",
+        "values": [
+          {
+            "original": "R$ 12.309.123,41",
+            "value": 12309123.41,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 10.900.000,00",
+            "value": 10900000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 11.800.000,00",
+            "value": 11800000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 12.309.000,00",
+            "value": 12309000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 11.070.000,00",
+            "value": 11070000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 12.300.000,00",
+            "value": 12300000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 10.462.754,90",
+            "value": 10462754.9,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 11.400.990,00",
+            "value": 11400990,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 12.186.032,18",
+            "value": 12186032.18,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 11.735.500,20",
+            "value": 11735500.2,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 12.209.123,41",
+            "value": 12209123.41,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 10.409.000,00",
+            "value": 10409000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "03.678.241/0001-82",
+          "04.299.281/0001-86",
+          "07.342.268/0001-50",
+          "07.945.776/0001-23",
+          "11.892.959/0001-03",
+          "15.493.716/0001-45",
+          "18.504.013/0001-63",
+          "19.560.627/0001-25",
+          "19.661.427/0001-69",
+          "26.791.812/0001-96",
+          "28.572.296/0001-34",
+          "37.838.257/0001-27"
+        ],
+        "referenceNumbers": [
+          "25.9.000000991-0.",
+          "14.133/2021",
+          "14.133/2021.",
+          "9.7",
+          "9.3.2",
+          "14.133/21",
+          "11.430/2023",
+          "12.304/2024"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "SECRETARIA MUNICIPAL DE ARTICULAÇÃO INSTITUCIONAL E CAPTAÇÃO",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261008_000008880.pdf",
+        "editionId": "goiania:do_20261008_000008880.pdf",
+        "editionNumber": "8880",
+        "pageStart": 11,
+        "pageEnd": 26,
+        "documentReference": "Edição 8880 · páginas 11 a 26",
+        "documentSha256": "302ea4b0d5622251907bdd54ad81271a9675d24786be9ce0cc60aad28ab95850",
+        "actSha256": "31c1e2489fe3bf561c60601c7cbd08146f4b411d5ac2640ffe4747cefbd3606c"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261008_000008880.pdf-82b26f526e0d-180",
+      "status": "pending",
+      "date": "2026-10-08",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "despacho",
+      "typeLabel": "Despacho",
+      "priority": 93,
+      "importance": 89,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "controle, correção ou responsabilização",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "Despacho nº 5786/2026",
+        "extractedTitle": "Goiânia publica Despacho nº 5786/2026",
+        "extractedDeck": "aplicar à Empresa NORTE PHARMA COMÉRCIO ATACADISTA DE PRODUTOS FARMACÊUTICOS E HOSPITALARES LTDA, CNPJ nº 43.975.707/0001-26 PENA DE MULTA, no valor total de R$ 1.460.260,80 (um milhão quatrocentos e sessenta mil e duzentos e sessenta reais e oitenta centavos), corre",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou despacho na edição 8880 de Diário Oficial do Município de Goiânia, datada de 8 de outubro de 2026. aplicar à Empresa NORTE PHARMA COMÉRCIO ATACADISTA DE PRODUTOS FARMACÊUTICOS E HOSPITALARES LTDA, CNPJ nº 43.975.707/0001-26 PENA DE MULTA, no valor total de R$ 1.460.260,80 (um milhão quatrocentos e sessenta mil e duzentos e sessenta reais e oitenta centavos), corre.",
+          "O maior valor monetário identificado no texto é R$ 1.460.260,80; o ato cita o CNPJ 43.975.707/0001-26; as referências documentais incluem 03/2025, 966/2022, 11.419/2006., 25.29.000017057-1. A conferência deve ser feita no documento original, em página 238."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8880, de 08 de outubro de 2026. Página 238 de 300 Prefeitura de Goiânia Secretaria Municipal de Saúde Secretaria Geral DESPACHO Nº 5786/2026 O SECRETÁRIO DA SAÚDE DO MUNICÍPIO DE GOIÂNIA, no uso de suas atribuições legais e regulamentares, conforme a Lei Complementar nº 335/2021 e o Decreto nº 03/2025, considerando o disposto no artigo 156, incisos II da Lei Federal n.º 14.133/2021, bem como o item 12.9 do Edital de Licitação Pregão Eletrônico nº 90029/2024 SRP - SAÚDE. Considerando a…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 1.460.260,80",
+            "value": 1460260.8,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "43.975.707/0001-26"
+        ],
+        "referenceNumbers": [
+          "03/2025",
+          "966/2022",
+          "11.419/2006.",
+          "25.29.000017057-1"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261008_000008880.pdf",
+        "editionId": "goiania:do_20261008_000008880.pdf",
+        "editionNumber": "8880",
+        "pageStart": 238,
+        "pageEnd": 238,
+        "documentReference": "Edição 8880 · página 238",
+        "documentSha256": "302ea4b0d5622251907bdd54ad81271a9675d24786be9ce0cc60aad28ab95850",
+        "actSha256": "82b26f526e0d9f0e0ddd5d30fa03073e50fa8756aaf0d8d566ab5772cb047cc3"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
       }
     },
     {
@@ -426,6 +619,150 @@
       }
     },
     {
+      "id": "jul26-goiania-do_20261008_000008880.pdf-50dbd0f098f2-204",
+      "status": "pending",
+      "date": "2026-10-08",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "dispensa",
+      "typeLabel": "Dispensa",
+      "priority": 85,
+      "importance": 81,
+      "curationReasons": [
+        "controle, correção ou responsabilização"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "Aviso de Dispensa Eletrônica - Republicação - Processo nº 26.20.000002469-9",
+        "extractedTitle": "Goiânia publica Aviso de Dispensa Eletrônica - Republicação - Processo nº 26.20.000002469-9",
+        "extractedDeck": "contratar em decorrência de sanção que lhe foi imposta; 2.3.3.2. aquele que mantenha vínculo de natureza técnica, comercial, econômica, financeira, trabalhista ou civil com dirigente do órgão ou entidade contratante ou com agente público que desempenhe função na licita",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou dispensa na edição 8880 de Diário Oficial do Município de Goiânia, datada de 8 de outubro de 2026. contratar em decorrência de sanção que lhe foi imposta; 2.3.3.2. aquele que mantenha vínculo de natureza técnica, comercial, econômica, financeira, trabalhista ou civil com dirigente do órgão ou entidade contratante ou com agente público que desempenhe função na licita.",
+          "O maior valor monetário identificado no texto é R$ 30.999,98; as referências documentais incluem 14.133, 6.404, 8.213/91, 8.429, 14.133/21. A conferência deve ser feita no documento original, em páginas 283 a 289."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8880, de 08 de outubro de 2026. Página 283 de 300 Prefeitura de Goiânia Instituto de Previdência dos Servidores do Município de Goiânia Diretoria Administrativa AVISO DE DISPENSA ELETRÔNICA (Republicação) Torna-se público que o Município de Goiânia, por meio do Instituto de Previdência dos Servidores do Município de Goiânia – GOIANIAPREV, realizará Dispensa Eletrônica, com critério de julgamento de menor preço global, na hipótese do art.75, inciso II, nos termos da Lei nº 14.133, de 1º de…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 5.722,91",
+            "value": 5722.91,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 8.725,91",
+            "value": 8725.91,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 8.275,58",
+            "value": 8275.58,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 30.999,98",
+            "value": 30999.98,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "14.133",
+          "6.404",
+          "8.213/91",
+          "8.429",
+          "14.133/21",
+          "5.452",
+          "11.419/2006.",
+          "26.20.000002469-9"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261008_000008880.pdf",
+        "editionId": "goiania:do_20261008_000008880.pdf",
+        "editionNumber": "8880",
+        "pageStart": 283,
+        "pageEnd": 289,
+        "documentReference": "Edição 8880 · páginas 283 a 289",
+        "documentSha256": "302ea4b0d5622251907bdd54ad81271a9675d24786be9ce0cc60aad28ab95850",
+        "actSha256": "50dbd0f098f2f1d76327d45d0fa03f2341257f606a6e6fd0e6263b47d2279018"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261008_000008880.pdf-8dc4fc4ced44-203",
+      "status": "pending",
+      "date": "2026-10-08",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "dispensa",
+      "typeLabel": "Dispensa",
+      "priority": 85,
+      "importance": 81,
+      "curationReasons": [
+        "controle, correção ou responsabilização"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "Aviso de Dispensa Eletrônica - Republicação - Processo nº 26.20.000001748-0",
+        "extractedTitle": "Goiânia publica Aviso de Dispensa Eletrônica - Republicação - Processo nº 26.20.000001748-0",
+        "extractedDeck": "contratar em decorrência de sanção que lhe foi imposta; 2.3.3.2. aquele que mantenha vínculo de natureza técnica, comercial, econômica, financeira, trabalhista ou civil com dirigente do órgão ou entidade contratante ou com agente público que desempenhe função na licita",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou dispensa na edição 8880 de Diário Oficial do Município de Goiânia, datada de 8 de outubro de 2026. contratar em decorrência de sanção que lhe foi imposta; 2.3.3.2. aquele que mantenha vínculo de natureza técnica, comercial, econômica, financeira, trabalhista ou civil com dirigente do órgão ou entidade contratante ou com agente público que desempenhe função na licita.",
+          "O maior valor monetário identificado no texto é R$ 62.000,00; as referências documentais incluem 14.133, 6.404, 8.213/91, 8.429, 14.133/21. A conferência deve ser feita no documento original, em páginas 276 a 282."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8880, de 08 de outubro de 2026. Página 276 de 300 Prefeitura de Goiânia Instituto de Previdência dos Servidores do Município de Goiânia Diretoria Administrativa AVISO DE DISPENSA ELETRÔNICA (Republicação) Torna-se público que o Município de Goiânia, por meio do Instituto de Previdência dos Servidores do Município de Goiânia – GOIANIAPREV, realizará Dispensa Eletrônica, com critério de julgamento de menor preço global, na hipótese do art.75, inciso II, nos termos da Lei nº 14.133, de 1º de…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 5.166,67",
+            "value": 5166.67,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 62.000,00",
+            "value": 62000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "14.133",
+          "6.404",
+          "8.213/91",
+          "8.429",
+          "14.133/21",
+          "5.452",
+          "11.419/2006.",
+          "26.20.000001748-0"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261008_000008880.pdf",
+        "editionId": "goiania:do_20261008_000008880.pdf",
+        "editionNumber": "8880",
+        "pageStart": 276,
+        "pageEnd": 282,
+        "documentReference": "Edição 8880 · páginas 276 a 282",
+        "documentSha256": "302ea4b0d5622251907bdd54ad81271a9675d24786be9ce0cc60aad28ab95850",
+        "actSha256": "8dc4fc4ced4425450721378a15dda1eb3dd73871e97d170f8d3e31a44302933c"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
       "id": "jul26-agm-114644-1AAED486-236",
       "status": "pending",
       "date": "2026-10-08",
@@ -517,230 +854,6 @@
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
         "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114644-5DC531CF-42",
-      "status": "pending",
-      "date": "2026-10-08",
-      "city": "Buriti de Goiás",
-      "scope": "Municipal",
-      "actType": "aditivo",
-      "typeLabel": "Termo aditivo",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DE TERMO ADITIVO AO CONTRATO Nº",
-        "extractedTitle": "Buriti de Goiás publica EXTRATO DE TERMO ADITIVO AO CONTRATO Nº",
-        "extractedDeck": "Objeto: Segundo Termo Aditivo de Valor e Supressão ao Contrato nº 056/2024, cujo objeto é a contratação de empresa especializada em serviços de engenharia civil, mediante o regime de empreitada global, para construção do Hospital Municipal Ramiro Ramos da Silva, neste município, conforme Projeto…",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE BURITI DE GOIÁS publicou termo aditivo na edição 3720 de Diário Municipal de Goiás — AGM, datada de 8 de outubro de 2026. Objeto: Segundo Termo Aditivo de Valor e Supressão ao Contrato nº 056/2024, cujo objeto é a contratação de empresa especializada em serviços de engenharia civil, mediante o regime de empreitada global, para construção do Hospital Municipal Ramiro Ramos da Silva, neste município, conforme Projeto….",
-          "O maior valor monetário identificado no texto é R$ 599.498,07; o ato cita o CNPJ 46.671.153/0001-61; as referências documentais incluem 056/2024, 1300/2026. A conferência deve ser feita no documento original, em páginas 14 a 15."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE BURITI DE GOIÁS FUNDO MUNICIPAL DE SAÚDE DE BURITI DE GOIÁS EXTRATO DE TERMO ADITIVO AO CONTRATO Nº 056/2024 Processo nº 1300/2026; CONCORRÊNCIA PUBLICA nº 001/2023; Contratante: FUNDO MUNICIPAL DE SAÚDE DE BURITI DE GOIÁS; Contratado: BORGES CONSULTORIA E ENGENHARIA LTDA, CNPJ: 46.671.153/0001-61; Objeto: Segundo Termo Aditivo de Valor e Supressão ao Contrato nº 056/2024, cujo objeto é a contratação de empresa especializada em serviços de engenharia civil, mediante o regime de…",
-        "publicBody": "MUNICÍPIO DE BURITI DE GOIÁS",
-        "values": [
-          {
-            "original": "R$ 599.498,07",
-            "value": 599498.07,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 139.574,99",
-            "value": 139574.99,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "46.671.153/0001-61"
-        ],
-        "referenceNumbers": [
-          "056/2024",
-          "1300/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE BURITI DE GOIÁS",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114644_2026-10-07_da630c20fe3762f762141d5a49fb8622.pdf",
-        "editionId": "agm:114644",
-        "editionNumber": "3720",
-        "pageStart": 14,
-        "pageEnd": 15,
-        "documentReference": "Edição 3720 · páginas 14 a 15",
-        "documentSha256": "64de13b23dbe055c3bd19c0017ad1625e55ad6b212bff83989971b06382e3768",
-        "actSha256": "47992b5dd38ac3b99198f9879444a4b1877d39f17a5c816f8649a33884f3cf60"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114644-33951FE5-225",
-      "status": "pending",
-      "date": "2026-10-08",
-      "city": "Palmeiras",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 75,
-      "importance": 75,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 180/2026",
-        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 180/2026",
-        "extractedDeck": "FMS - FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº.",
-        "extractedParagraphs": [
-          "FUNDO MUNICIPAL DE SAUDE publicou contrato na edição 3720 de Diário Municipal de Goiás — AGM, datada de 8 de outubro de 2026. FMS - FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº.",
-          "O maior valor monetário identificado no texto é R$ 1.408,00; as referências documentais incluem 3680/2026. A conferência deve ser feita no documento original, em página 66."
-        ],
-        "evidenceExcerpt": "FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 180/2026 - FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 180/2026, PROCESSO ADMINISTRATIVO N.3680/2026 E PREGÃO ELETRÔNICO N. 78/2026, FUNDO MUNICIPAL DE SAUDE DE PALMEIRAS DE GOIAS-FMS, NESTE ATO REPRESENTADO PELO SECRETÁRIO DE SAÚDE E VIGILÂNCIA SANITÁRIA O SR. GETULIO JOSE DE OLIVEIRA NETO; E, DE OUTRO LADO, A EMPRESA OP QUIRINO DISTRIBUIDORA DE PRODUTOS HOSPITALARES LTDA; CLÁUSULA PRIMEIRA – DO OBJETO DO CONTRATO CONSTITUI O OBJETO DESTE INSTRUMENTO A AQUISIÇÃO DE…",
-        "publicBody": "FUNDO MUNICIPAL DE SAUDE",
-        "values": [
-          {
-            "original": "R$ 1.408,00",
-            "value": 1408,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "3680/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "FUNDO MUNICIPAL DE SAUDE",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114644_2026-10-07_da630c20fe3762f762141d5a49fb8622.pdf",
-        "editionId": "agm:114644",
-        "editionNumber": "3720",
-        "pageStart": 66,
-        "pageEnd": 66,
-        "documentReference": "Edição 3720 · página 66",
-        "documentSha256": "64de13b23dbe055c3bd19c0017ad1625e55ad6b212bff83989971b06382e3768",
-        "actSha256": "7eca761a15f34a57cd7512fc9b5b299c767a71952e3567299a2a10f72aa72c59"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114644-367F53DF-38",
-      "status": "pending",
-      "date": "2026-10-08",
-      "city": "Buriti Alegre",
-      "scope": "Municipal",
-      "actType": "pregao",
-      "typeLabel": "Pregão",
-      "priority": 75,
-      "importance": 75,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "AVISO DE LICITAÇÃO PREGÃO ELETRÔNICO Nº 003/2026",
-        "extractedTitle": "Buriti Alegre publica AVISO DE LICITAÇÃO PREGÃO ELETRÔNICO Nº 003/2026",
-        "extractedDeck": "Objeto: Aquisição de materiais escolares de consumo para as Escolas Municipais, que serão adquiridos por meio do recurso proveniente da Emenda Parlamentar Estadual nº 838.14/2026, em conformidade com plano de trabalho firmado com a Secretaria de Estado de Educação, sob o convênio do processo nº…",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE BURITI ALEGRE publicou pregão na edição 3720 de Diário Municipal de Goiás — AGM, datada de 8 de outubro de 2026. Objeto: Aquisição de materiais escolares de consumo para as Escolas Municipais, que serão adquiridos por meio do recurso proveniente da Emenda Parlamentar Estadual nº 838.14/2026, em conformidade com plano de trabalho firmado com a Secretaria de Estado de Educação, sob o convênio do processo nº….",
-          "o ato cita o CNPJ 45.271.342/0001-84; as referências documentais incluem 202600005009865. A conferência deve ser feita no documento original, em página 11."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE BURITI ALEGRE SECRETARIA DE EDUCAÇAO AVISO DE LICITAÇÃO PREGÃO ELETRÔNICO Nº 003/2026. MODO DE DISPUTA: ABERTO E FECHADO - FME ESTADO DE GOIÁS MUNICÍPIO DE BURITI ALEGRE FUNDO MUNICIPAL DE EDUCAÇÃO AVISO DE LICITAÇÃO PREGÃO ELETRÔNICO Nº 003/2026. MODO DE DISPUTA: ABERTO e FECHADO Processo Administrativo nº: 05229/2026. O Fundo Municipal de Educação do Município de Buriti Alegre- Goiás, inscrito no CNPJ nº 45.271.342/0001-84, torna público, que realizará no dia 27/10/2026, com início…",
-        "publicBody": "MUNICÍPIO DE BURITI ALEGRE",
-        "values": [],
-        "cnpjs": [
-          "45.271.342/0001-84"
-        ],
-        "referenceNumbers": [
-          "202600005009865"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE BURITI ALEGRE",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114644_2026-10-07_da630c20fe3762f762141d5a49fb8622.pdf",
-        "editionId": "agm:114644",
-        "editionNumber": "3720",
-        "pageStart": 11,
-        "pageEnd": 11,
-        "documentReference": "Edição 3720 · página 11",
-        "documentSha256": "64de13b23dbe055c3bd19c0017ad1625e55ad6b212bff83989971b06382e3768",
-        "actSha256": "2e4fb51fc2f400b6fb4ce9c640e141e2f1f3fadd1672b5109e79b04d3610da52"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114644-3AD755EB-219",
-      "status": "pending",
-      "date": "2026-10-08",
-      "city": "Palmeiras",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 75,
-      "importance": 75,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 174/2026",
-        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 174/2026",
-        "extractedDeck": "FMS - FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº.",
-        "extractedParagraphs": [
-          "SECRETARIA MUNICIPAL DE SAÚDE. A AQUISIÇÃO TEM publicou contrato na edição 3720 de Diário Municipal de Goiás — AGM, datada de 8 de outubro de 2026. FMS - FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº.",
-          "O maior valor monetário identificado no texto é R$ 2.329,35; as referências documentais incluem 3680/2026. A conferência deve ser feita no documento original, em página 64."
-        ],
-        "evidenceExcerpt": "FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 174/2026 - FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 174/2026, PROCESSO ADMINISTRATIVO N.3680/2026 E PREGÃO ELETRÔNICO N. 78/2026, FUNDO MUNICIPAL DE SAUDE DE PALMEIRAS DE GOIAS-FMS, NESTE ATO REPRESENTADO PELO SECRETÁRIO DE SAÚDE E VIGILÂNCIA SANITÁRIA O SR. GETULIO JOSE DE OLIVEIRA NETO; E, DE OUTRO LADO, A EMPRESA YNEMED PRODUTOS MEDICOS E HOSPITALARES LTDA; CLÁUSULA PRIMEIRA – DO OBJETO DO CONTRATO CONSTITUI O OBJETO DESTE INSTRUMENTO A AQUISIÇÃO DE EQUIPAMENTOS…",
-        "publicBody": "SECRETARIA MUNICIPAL DE SAÚDE. A AQUISIÇÃO TEM",
-        "values": [
-          {
-            "original": "R$ 2.329,35",
-            "value": 2329.35,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "3680/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "SECRETARIA MUNICIPAL DE SAÚDE. A AQUISIÇÃO TEM",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114644_2026-10-07_da630c20fe3762f762141d5a49fb8622.pdf",
-        "editionId": "agm:114644",
-        "editionNumber": "3720",
-        "pageStart": 64,
-        "pageEnd": 64,
-        "documentReference": "Edição 3720 · página 64",
-        "documentSha256": "64de13b23dbe055c3bd19c0017ad1625e55ad6b212bff83989971b06382e3768",
-        "actSha256": "188dee2f729ae87a9a9780261e8bce9c97db1607c0a652d038238a487fa88bd8"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
       }
     },
     {
