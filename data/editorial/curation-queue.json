@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-10-09T11:45:59.103087+00:00",
+  "generatedAt": "2026-10-09T22:39:23.936362+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 10,
@@ -76,6 +76,195 @@
         "documentReference": "Edição 508 · páginas 25 a 26",
         "documentSha256": "0047fbefe2ef8e78a9a14437d2d6648dad8ff70efa7383453d448f38460ea5d5",
         "actSha256": "3123c5b7f748711b2c5bc91b4af18c659397a7819582055ed3a56d8cb166a21f"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261009_000008881.pdf-eac169a41a2b-3",
+      "status": "pending",
+      "date": "2026-10-09",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "lei",
+      "typeLabel": "Lei",
+      "priority": 93,
+      "importance": 89,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "controle, correção ou responsabilização"
+      ],
+      "mandatoryHumanReview": true,
+      "factPacket": {
+        "officialTitle": "Mensagem de Veto Parcial nº 106/2026, e Lei nº 11.722, de 9 de outubro de 2026",
+        "extractedTitle": "Goiânia publica Mensagem de Veto Parcial nº 106/2026, e Lei nº 11.722, de 9 de outubro de 2026",
+        "extractedDeck": "determinar a disponibilização de banheiros químicos também no entorno externo de estádios e arenas, inclusive quando esses equipamentos disponham de instalações sanitárias internas, o dispositivo amplia materialmente o alcance da obrigação imposta, sem que tenha sido de",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou lei na edição 8881 de Diário Oficial do Município de Goiânia, datada de 9 de outubro de 2026. determinar a disponibilização de banheiros químicos também no entorno externo de estádios e arenas, inclusive quando esses equipamentos disponham de instalações sanitárias internas, o dispositivo amplia materialmente o alcance da obrigação imposta, sem que tenha sido de.",
+          "as referências documentais incluem 175, 9.000/2010, 9.000, 1.600/2011, 1.600. A conferência deve ser feita no documento original, em páginas 4 a 9."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8881, de 09 de outubro de 2026. Página 4 de 185 Prefeitura de Goiânia Gabinete do Prefeito MENSAGEM Nº 106, DE 2026 Excelentíssimo Senhor Presidente e Senhores Vereadores, Com fundamento no art. 94, § 2º, da Lei Orgânica do Município de Goiânia, devolvo a essa Casa de Leis, vetado parcialmente, o Autógrafo de Lei nº 175, de 15 de setembro de 2026 (SEI nº 11552281), oriundo do Processo Legislativo nº 00000.001146.2021- 13, de autoria da ex-Vereadora Sabrina Garcês e do Vereador Tião…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "175",
+          "9.000/2010",
+          "9.000",
+          "1.600/2011",
+          "1.600",
+          "11.419/2006.",
+          "26.38.000000189-8",
+          "11.722"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261009_000008881.pdf",
+        "editionId": "goiania:do_20261009_000008881.pdf",
+        "editionNumber": "8881",
+        "pageStart": 4,
+        "pageEnd": 9,
+        "documentReference": "Edição 8881 · páginas 4 a 9",
+        "documentSha256": "f975c1be7593292f8b45eb7070bc6e498005cc787475e7077110c9e5bc1b43cc",
+        "actSha256": "eac169a41a2bbc14dcf87e340d1efdd5d3f90de9f9e1a6e5da7bdb975867b97d"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": false
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261009_000008881.pdf-4327e526af32-102",
+      "status": "pending",
+      "date": "2026-10-09",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "aditivo",
+      "typeLabel": "Termo aditivo",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Extrato do 4º Termo Aditivo ao Contrato nº 065/2026",
+        "extractedTitle": "Goiânia publica Extrato do 4º Termo Aditivo ao Contrato nº 065/2026",
+        "extractedDeck": "OBJETO: O presente Termo Aditivo tem como objeto a prorrogação do prazo de vigência e renovação do saldo do Contrato nº 065/2024. 5",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou termo aditivo na edição 8881 de Diário Oficial do Município de Goiânia, datada de 9 de outubro de 2026. OBJETO: O presente Termo Aditivo tem como objeto a prorrogação do prazo de vigência e renovação do saldo do Contrato nº 065/2024. 5.",
+          "O maior valor monetário identificado no texto é R$ 25.332.721,00; o ato cita o CNPJ 17.405.787/0001-74; as referências documentais incluem 065/2026, 065/2024., 14.133/2021., 11.419/2006., 26.18.000002948-0. A conferência deve ser feita no documento original, em página 126."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8881, de 09 de outubro de 2026. Página 126 de 185 Prefeitura de Goiânia Secretaria Municipal de Infraestrutura Urbana Diretoria de Supervisão de Obras EXTRATO DO 4º TERMO ADITIVO AO CONTRATO Nº 065/2026 1. PROCESSO SEI Nº: 26.18.000002948-0 2. CONTRATANTE: SECRETARIA MUNICIPAL DE INFRAESTRUTURA URBANA - SEINFRA. 3. CONTRATADA: CONSÓRCIO CUIDANDO GOIÂNIA., CNPJ/MF, sob o nº 17.405.787/0001-74. 4. OBJETO: O presente Termo Aditivo tem como objeto a prorrogação do prazo de vigência e…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 25.332.721,00",
+            "value": 25332721,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [
+          "17.405.787/0001-74"
+        ],
+        "referenceNumbers": [
+          "065/2026",
+          "065/2024.",
+          "14.133/2021.",
+          "11.419/2006.",
+          "26.18.000002948-0"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261009_000008881.pdf",
+        "editionId": "goiania:do_20261009_000008881.pdf",
+        "editionNumber": "8881",
+        "pageStart": 126,
+        "pageEnd": 126,
+        "documentReference": "Edição 8881 · página 126",
+        "documentSha256": "f975c1be7593292f8b45eb7070bc6e498005cc787475e7077110c9e5bc1b43cc",
+        "actSha256": "4327e526af32606ece4ee3bf6097b0515b8b6bbd3b1187c6d214416b340d4dd7"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261009_000008881.pdf-79d5da7275a8-116",
+      "status": "pending",
+      "date": "2026-10-09",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "aditivo",
+      "typeLabel": "Termo aditivo",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Extrato do 5º Termo Aditivo de Acréscimo de Serviços ao Contrato nº 068/2023",
+        "extractedTitle": "Goiânia publica Extrato do 5º Termo Aditivo de Acréscimo de Serviços ao Contrato nº 068/2023",
+        "extractedDeck": "OBJETO: Constitui objeto do presente Termo Aditivo o Acréscimo de Serviços ao valor inicial do Contrato nº 068/2023, no percentual de 7,47%, destinado à conclusão da construção do CMEI Aristoclides Teixeira, localizado na Rua Paraíso, esquina com Vasco dos Reis, Lotes 03 e 04, Vila Jardim Pompéia,…",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou termo aditivo na edição 8881 de Diário Oficial do Município de Goiânia, datada de 9 de outubro de 2026. OBJETO: Constitui objeto do presente Termo Aditivo o Acréscimo de Serviços ao valor inicial do Contrato nº 068/2023, no percentual de 7,47%, destinado à conclusão da construção do CMEI Aristoclides Teixeira, localizado na Rua Paraíso, esquina com Vasco dos Reis, Lotes 03 e 04, Vila Jardim Pompéia,….",
+          "O maior valor monetário identificado no texto é R$ 1.648.501,83; as referências documentais incluem 068, 068/2023, 8.666, 11.419/2006., 25.24.000012679-7. A conferência deve ser feita no documento original, em página 148."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8881, de 09 de outubro de 2026. Página 148 de 185 Prefeitura de Goiânia Secretaria Municipal de Educação Gerência de Acompanhamento e Manutenção da Rede Física EXTRATO DO 5º TERMO ADITIVO DE ACRÉSCIMO DE SERVIÇOS AO CONTRATO Nº 068 / 2023 PROCESSO SEI: 25.24.000012679-7 CONTRATANTE: MUNICÍPIO DE GOIÂNIA através da SECRETARIA MUNICIPAL DE EDUCAÇÃO/SME. CONTRATADA: SENIOR ENGENHARIA DE AUTOMAÇÃO E SERVIÇOS ESPECIALIZADOS LTDA. OBJETO: Constitui objeto do presente Termo Aditivo o Acréscimo…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 1.552.198,00",
+            "value": 1552198,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 96.303,83",
+            "value": 96303.83,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 1.648.501,83",
+            "value": 1648501.83,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "068",
+          "068/2023",
+          "8.666",
+          "11.419/2006.",
+          "25.24.000012679-7"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261009_000008881.pdf",
+        "editionId": "goiania:do_20261009_000008881.pdf",
+        "editionNumber": "8881",
+        "pageStart": 148,
+        "pageEnd": 148,
+        "documentReference": "Edição 8881 · página 148",
+        "documentSha256": "f975c1be7593292f8b45eb7070bc6e498005cc787475e7077110c9e5bc1b43cc",
+        "actSha256": "79d5da7275a8743e6455b9f296c17967a41de58cf38facbe7a5ead31675c6b48"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
@@ -617,181 +806,6 @@
         "documentReference": "Edição 3721 · páginas 67 a 68",
         "documentSha256": "da26690795599c17a7771d6e73b50f3122f010997d1f0c2057832dfebcd4aba1",
         "actSha256": "2675487cd3703a8688a3523fc133838d74adb4eedb0794c747268ad67097861d"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114645-A9B68C5A-127",
-      "status": "pending",
-      "date": "2026-10-09",
-      "city": "Indiara",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DO CONTRATO DE EXECUÇÃO DE OBRA",
-        "extractedTitle": "Indiara publica EXTRATO DO CONTRATO DE EXECUÇÃO DE OBRA",
-        "extractedDeck": "OBJETO: Contratação de empresa especializada par execução dos serviços de reforma e ampliação da sede da Prefeitura Municipal de Indiara/GO",
-        "extractedParagraphs": [
-          "PREFEITURA MUNICIPAL DE INDIARA publicou contrato na edição 3721 de Diário Municipal de Goiás — AGM, datada de 9 de outubro de 2026. OBJETO: Contratação de empresa especializada par execução dos serviços de reforma e ampliação da sede da Prefeitura Municipal de Indiara/GO.",
-          "O maior valor monetário identificado no texto é R$ 447.850,00; o ato cita os CNPJs 00.005.959/0001-10, 53.730.855/0001-34; as referências documentais incluem 3946/2026. A conferência deve ser feita no documento original, em página 41."
-        ],
-        "evidenceExcerpt": "PREFEITURA MUNICIPAL DE INDIARA EXTRATO DO CONTRATO DE EXECUÇÃO DE OBRA PÚBLICA Nº 550/2026 CONTRATANTE: MUNICÍPIO DE INDIARA, Estado de Goiás, através da Prefeitura Municipal, inscrito no CNPJ nº 00.005.959/0001-10, com sede na Rua Mizael Machado Mesquita, s/nº, Setor Central, Indiara/GO, CEP n° 75.955-000. SIGNATÁRIO: RAFAEL MARTINS GONÇALVES, nomeado pelo Decreto Municipal nº 183/2026, portador do CPF sob o nº [CPF REDIGIDO]. CONTRATADA: 2F SERVIÇOS DE ENGENHARIA LTDA, pessoa jurídica de direito privado,…",
-        "publicBody": "PREFEITURA MUNICIPAL DE INDIARA",
-        "values": [
-          {
-            "original": "R$ 447.850,00",
-            "value": 447850,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "00.005.959/0001-10",
-          "53.730.855/0001-34"
-        ],
-        "referenceNumbers": [
-          "3946/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "PREFEITURA MUNICIPAL DE INDIARA",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114645_2026-10-08_68e508a24bb31979e2ef226bd1b6c55f.pdf",
-        "editionId": "agm:114645",
-        "editionNumber": "3721",
-        "pageStart": 41,
-        "pageEnd": 41,
-        "documentReference": "Edição 3721 · página 41",
-        "documentSha256": "da26690795599c17a7771d6e73b50f3122f010997d1f0c2057832dfebcd4aba1",
-        "actSha256": "986890aadd770f7d74ea156b859382f9e4742638baae9776238a739ee07bcf3b"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114645-0FECC741-218",
-      "status": "pending",
-      "date": "2026-10-09",
-      "city": "Palmeiras",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 75,
-      "importance": 75,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 207/2026",
-        "extractedTitle": "Palmeiras publica EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 207/2026",
-        "extractedDeck": "FMS - FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº.",
-        "extractedParagraphs": [
-          "Município de Palmeiras publicou contrato na edição 3721 de Diário Municipal de Goiás — AGM, datada de 9 de outubro de 2026. FMS - FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº.",
-          "O maior valor monetário identificado no texto é R$ 6.985,00; as referências documentais incluem 8030/2026. A conferência deve ser feita no documento original, em páginas 62 a 63."
-        ],
-        "evidenceExcerpt": "FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 207/2026 - FMS EXTRATO AO CONTRATO DE AQUISIÇÃO Nº. 207/2026, PROCESSO ADMINISTRATIVO N.8030/2026 E PREGÃO ELETRÔNICO N. 141/2026, FUNDO MUNICIPAL DE SAÚDE - FMS, DE NOME FANTASIA/COMERCIAL FUNDO MUNICIPAL DE SAUDE DE PALMEIRAS DE GOIAS-FMS, NESTE ATO REPRESENTADO PELO SECRETÁRIO DE SAÚDE E VIGILÂNCIA SANITÁRIA O SR. GETULIO JOSE DE OLIVEIRA NETO; E, DE OUTRO LADO, A EMPRESA SERVING SOLLUTY LTDA; CLÁUSULA PRIMEIRA – DO OBJETO DO CONTRATO CONSTITUI O OBJETO DESTE…",
-        "publicBody": "Município de Palmeiras",
-        "values": [
-          {
-            "original": "R$ 6.985,00",
-            "value": 6985,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "8030/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "Município de Palmeiras",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114645_2026-10-08_68e508a24bb31979e2ef226bd1b6c55f.pdf",
-        "editionId": "agm:114645",
-        "editionNumber": "3721",
-        "pageStart": 62,
-        "pageEnd": 63,
-        "documentReference": "Edição 3721 · páginas 62 a 63",
-        "documentSha256": "da26690795599c17a7771d6e73b50f3122f010997d1f0c2057832dfebcd4aba1",
-        "actSha256": "e8c8cc6251ba7b3885f2584f2b7ce1539bc10d9b3c9bea1e9ab4c1b006cb9ded"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114645-29A60282-128",
-      "status": "pending",
-      "date": "2026-10-09",
-      "city": "Indiar",
-      "scope": "Municipal",
-      "actType": "dispensa",
-      "typeLabel": "Dispensa",
-      "priority": 75,
-      "importance": 75,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO",
-        "extractedTitle": "Indiar publica TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO",
-        "extractedDeck": "contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante",
-        "extractedParagraphs": [
-          "PREFEITURA MUNICIPAL DE INDIARA publicou dispensa na edição 3721 de Diário Municipal de Goiás — AGM, datada de 9 de outubro de 2026. contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante.",
-          "O maior valor monetário identificado no texto é R$ 65.492,11; o ato cita o CNPJ 47.590.024/0001-01; as referências documentais incluem 14.133/21. A conferência deve ser feita no documento original, em página 41."
-        ],
-        "evidenceExcerpt": "PREFEITURA MUNICIPAL DE INDIARA TERMO DE RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO Nº 263/2026 “Dispõe sobre termo de ratificação dispensa de licitação e dá outras providências.” O PREFEITO DO MUNICÍPIO DE INDIARA-GO, no uso de suas atribuições legais, e, Considerando que fora demonstrado a real necessidade de se contratar o presente objeto, por meio do Termo de Referência, elaborado pelo solicitante; Considerando que fora realizada planilha orçamentária de acordo com os orçamentos obtidos junto ao mercado, com…",
-        "publicBody": "PREFEITURA MUNICIPAL DE INDIARA",
-        "values": [
-          {
-            "original": "R$ 65.492,11",
-            "value": 65492.11,
-            "currency": "BRL"
-          },
-          {
-            "original": "R$ 3.300,00",
-            "value": 3300,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "47.590.024/0001-01"
-        ],
-        "referenceNumbers": [
-          "14.133/21"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "PREFEITURA MUNICIPAL DE INDIARA",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114645_2026-10-08_68e508a24bb31979e2ef226bd1b6c55f.pdf",
-        "editionId": "agm:114645",
-        "editionNumber": "3721",
-        "pageStart": 41,
-        "pageEnd": 41,
-        "documentReference": "Edição 3721 · página 41",
-        "documentSha256": "da26690795599c17a7771d6e73b50f3122f010997d1f0c2057832dfebcd4aba1",
-        "actSha256": "d401bda8de6ce5a5c0eb39890c4c7998f150be840456b3f6d5753d9be22bea76"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
