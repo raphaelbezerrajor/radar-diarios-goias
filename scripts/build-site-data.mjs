@@ -390,7 +390,8 @@ function normalizeJulyDocumentNews(item, preview) {
     actHash: item.act_sha256 || null,
     confidence: item.confidence || null,
     externalIdentifier: item.external_identifier || null,
-    updatedAt: item.updated_at || item.published_at || item.date
+    updatedAt: item.updated_at || item.published_at || item.date,
+    publishedAt: item.site_published_at || null
   };
 }
 
@@ -643,9 +644,9 @@ async function main() {
     String(controlNews.generated_at || "").slice(0, 10),
     controlNews.period?.to
   ].filter(Boolean).sort().at(-1);
-  const addPublicationMetadata = (item) => item.recordType === "story"
-    ? { ...item, publishedAt: item.publishedAt || editorialPublicationDate }
-    : item;
+  // A build timestamp is not the date on which an individual story was
+  // published. Preserve only dates explicitly recorded by the editorial flow.
+  const addPublicationMetadata = (item) => item;
   const trindadeActIds = new Set(normalizedTrindadeActs.map((item) => item.id));
   const residualUnified = trindadeUnifiedRecords
     .filter((item) => item.type !== "ato" && item.type !== "noticia" && !trindadeActIds.has(item.id))

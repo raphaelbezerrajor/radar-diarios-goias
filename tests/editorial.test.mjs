@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { EDITORIAL_STATES, PUBLICATION_ADAPTER, canTransition, requiresMandatoryHumanReview } from "../src/lib/editorial/workflow.mjs";
-import { buildBreadcrumbSchema, buildNewsArticleSchema, validateJsonLdSchema, validateStorySeo } from "../src/lib/editorial/seo.mjs";
+import { buildBreadcrumbSchema, buildDocumentArticleSchema, buildNewsArticleSchema, validateJsonLdSchema, validateStorySeo } from "../src/lib/editorial/seo.mjs";
 import { assessActNewsValue, assessTcmNewsValue } from "../src/lib/editorial/document-news.mjs";
 import {
   applyCuration,
@@ -184,6 +184,10 @@ test("valida metadados e constrói schemas editoriais", () => {
   const article = buildNewsArticleSchema({ story, canonical: story.canonical });
   assert.equal(article["@type"], "NewsArticle");
   assert.deepEqual(validateJsonLdSchema(article), { valid: true, issues: [] });
+  const undated = buildDocumentArticleSchema({ story, canonical: story.canonical });
+  assert.equal(undated["@type"], "Article");
+  assert.equal(undated.datePublished, undefined);
+  assert.deepEqual(validateJsonLdSchema(undated), { valid: true, issues: [] });
   assert.equal(buildBreadcrumbSchema([{ name: "Capa", url: "https://example.org" }]).itemListElement.length, 1);
 });
 

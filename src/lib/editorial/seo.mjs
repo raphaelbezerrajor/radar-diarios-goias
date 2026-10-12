@@ -4,9 +4,9 @@ export function validateJsonLdSchema(schema = {}) {
   const issues = [];
   if (schema["@context"] !== "https://schema.org") issues.push("contexto_invalido");
   if (!schema["@type"]) issues.push("tipo_ausente");
-  if (schema["@type"] === "NewsArticle") {
+  if (schema["@type"] === "NewsArticle" || schema["@type"] === "Article") {
     if (!schema.headline) issues.push("headline_ausente");
-    if (!schema.datePublished) issues.push("data_publicacao_ausente");
+    if (schema["@type"] === "NewsArticle" && !schema.datePublished) issues.push("data_publicacao_ausente");
     if (!schema.mainEntityOfPage || !absoluteHttpUrl(schema.mainEntityOfPage)) issues.push("pagina_principal_invalida");
     if (!schema.author?.name) issues.push("autoria_ausente");
     if (!schema.publisher?.name) issues.push("publicador_ausente");
@@ -54,6 +54,21 @@ export function buildNewsArticleSchema({ story = {}, canonical, publisher = "Pau
     description: story.metadescricao || story.linhaFina,
     datePublished: story.dataPublicacao,
     dateModified: story.dataAtualizacao || story.dataPublicacao,
+    mainEntityOfPage: canonical,
+    author: { "@type": "Organization", name: story.autor || publisher },
+    publisher: { "@type": "Organization", name: publisher }
+  };
+  if (story.imagem?.url) schema.image = [story.imagem.url];
+  if (story.fontes?.length) schema.citation = story.fontes.map((source) => source.url).filter(absoluteHttpUrl);
+  return schema;
+}
+
+export function buildDocumentArticleSchema({ story = {}, canonical, publisher = "Pauteiro" } = {}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: story.tituloEditorial,
+    description: story.metadescricao || story.linhaFina,
     mainEntityOfPage: canonical,
     author: { "@type": "Organization", name: story.autor || publisher },
     publisher: { "@type": "Organization", name: publisher }

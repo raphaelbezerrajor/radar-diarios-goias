@@ -95,7 +95,7 @@ for (const item of automatic) {
   assert(item.title && item.deck, `Matéria sem título ou olho: ${item.id}.`);
   assert(Array.isArray(item.paragraphs) && item.paragraphs.length >= 2, `Matéria sem dois parágrafos documentais: ${item.id}.`);
   assert(/^\d{4}-\d{2}-\d{2}$/.test(item.date || ""), `Matéria sem data válida do ato: ${item.id}.`);
-  assert(/^\d{4}-\d{2}-\d{2}$/.test(item.publishedAt || ""), `Matéria sem data de publicação: ${item.id}.`);
+  assert(!item.publishedAt || /^\d{4}-\d{2}-\d{2}$/.test(item.publishedAt), `Data editorial inválida: ${item.id}.`);
 }
 
 for (const preview of previews.items || []) {

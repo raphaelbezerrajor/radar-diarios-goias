@@ -59,4 +59,9 @@ test("matéria nova exige URL HTTPS e referência documental", () => {
   entry.sourceUrl = "https://diariooficial.abc.go.gov.br/edicao.pdf";
   assert.equal(validateStoryEntry(entry).valid, true);
   assert.equal(toNewStorySource(entry).publication_mode, "edited_document_news");
+  assert.equal(toNewStorySource(entry).site_published_at, null);
+  entry.publishedAt = "2026-09-24";
+  assert.equal(toNewStorySource(entry).site_published_at, "2026-09-24");
+  entry.publishedAt = "ontem";
+  assert.equal(validateStoryEntry(entry).valid, false);
 });
