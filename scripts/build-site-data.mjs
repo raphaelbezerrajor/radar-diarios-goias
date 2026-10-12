@@ -316,10 +316,16 @@ function normalizeJulyDocumentNews(item, preview) {
   const slug = `julho-documento-${slugify(item.id).slice(0, 96)}`;
   const structured = buildStructuredDocumentNews(item);
   const manuallyEdited = item.publication_mode === "edited_document_news";
+  // Generic budget reallocations are often routine and their extracted text
+  // is too tabular for an automatic lead. Keep them searchable until reviewed.
+  const routineBudgetChange = item.act_type === "decreto" &&
+    /cr[eé]dito adicional|decreto suplementar|or[cç]amento vigente/i.test(
+      [item.official_title, item.title, item.summary].filter(Boolean).join(" ")
+    );
   // The Anápolis gazette uses two columns and its generic heading boundaries
   // can still split a single act into multiple records. Keep unreviewed acts
   // searchable, but never promote them automatically to journalistic stories.
-  const isStory = manuallyEdited || (item.source_id !== "anapolis" && (Number(item.importance) || 0) >= 80);
+  const isStory = manuallyEdited || (!routineBudgetChange && item.source_id !== "anapolis" && (Number(item.importance) || 0) >= 80);
   return {
     id: item.id,
     slug,
