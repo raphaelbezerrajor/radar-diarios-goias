@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-10-09T22:37:18.054Z",
+  "generated_at": "2026-10-12T01:00:35.828Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-10-09",
+    "to": "2026-10-11",
     "last_checked": {
-      "from": "2026-10-03",
-      "to": "2026-10-09"
+      "from": "2026-10-04",
+      "to": "2026-10-11"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 458,
-    "downloaded": 456,
+    "editions": 459,
+    "downloaded": 457,
     "failed_downloads": 2,
-    "extraction_pending": 458
+    "extraction_pending": 459
   },
   "daily_check_windows": [
     {
@@ -2297,10 +2297,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-09T22:37:08.505Z",
+      "checked_at": "2026-10-12T01:00:17.042Z",
       "range_checked": {
-        "from": "2026-10-03",
-        "to": "2026-10-09"
+        "from": "2026-10-04",
+        "to": "2026-10-11"
       },
       "summary": {
         "editions_total": 117,
@@ -4022,41 +4022,60 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "anapolis:24916",
+          "source_edition_id": "24916",
+          "edition_number": "4.047/2026",
+          "date": "2026-10-09",
+          "published_at": "2026-10-09 20:43:04",
+          "publication_timestamp_kind": "official_file_created_timestamp",
+          "extraordinary": false,
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/24916",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/26236/E2iaxxs5yj7IxuH31LYTCNwNlzlOSPRBqCxa4nVv.pdf",
+          "local_path": "data/raw/municipal-diaries/anapolis/2026/10/2026-10-09-4.047-2026.pdf",
+          "bytes": 620978,
+          "sha256": "4b66a187e43f93508febd2d2f6d13de4885b866ede3247fd45416d2685336fea",
+          "last_modified": "Fri, 09 Oct 2026 23:43:07 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-09T22:37:10.638Z",
+      "checked_at": "2026-10-12T01:00:20.298Z",
       "range_checked": {
-        "from": "2026-10-03",
-        "to": "2026-10-09"
+        "from": "2026-10-04",
+        "to": "2026-10-11"
       },
       "summary": {
-        "editions_total": 88,
-        "editions_in_checked_range": 4,
-        "downloaded": 88,
+        "editions_total": 89,
+        "editions_in_checked_range": 5,
+        "downloaded": 89,
         "failed_downloads": 0,
-        "extraction_pending": 88,
+        "extraction_pending": 89,
         "first_date": "2026-06-01",
-        "last_date": "2026-10-08",
+        "last_date": "2026-10-09",
         "observed_upload_times": {
           "all": {
-            "observations": 88,
+            "observations": 89,
             "earliest": "01:41",
-            "median": "21:22",
+            "median": "21:16",
             "latest": "23:57"
           },
           "ordinary": {
-            "observations": 88,
+            "observations": 89,
             "earliest": "01:41",
-            "median": "21:22",
+            "median": "21:16",
             "latest": "23:57"
           },
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 48,
+          "observations": 49,
           "earliest": "01:41",
-          "median": "20:57",
+          "median": "20:56",
           "latest": "23:31"
         }
       }
@@ -5716,10 +5735,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-09T22:37:11.363Z",
+      "checked_at": "2026-10-12T01:00:21.985Z",
       "range_checked": {
-        "from": "2026-10-03",
-        "to": "2026-10-09"
+        "from": "2026-10-04",
+        "to": "2026-10-11"
       },
       "summary": {
         "editions_total": 86,
@@ -7299,10 +7318,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-09T22:37:12.934Z",
+      "checked_at": "2026-10-12T01:00:30.464Z",
       "range_checked": {
-        "from": "2026-10-03",
-        "to": "2026-10-09"
+        "from": "2026-10-04",
+        "to": "2026-10-11"
       },
       "summary": {
         "editions_total": 81,
@@ -8980,10 +8999,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-09T22:37:14.250Z",
+      "checked_at": "2026-10-12T01:00:31.837Z",
       "range_checked": {
-        "from": "2026-10-03",
-        "to": "2026-10-09"
+        "from": "2026-10-04",
+        "to": "2026-10-11"
       },
       "summary": {
         "editions_total": 86,

@@ -28,7 +28,9 @@ export function frontPageScore(item, latestDate) {
   const ageInDays = latest && published
     ? Math.max(0, Math.round((latest - published) / DAY_IN_MS))
     : 0;
-  const importance = Math.max(0, Number(item?.importance) || 0);
+  // Historical records may carry scores above the current 0–100 scale.
+  // Cap them so an old outlier cannot permanently lock the headline.
+  const importance = Math.max(0, Math.min(100, Number(item?.importance) || 0));
   const prominence = PROMINENCE_WEIGHT[item?.prominence] || 0;
   const publication = PUBLICATION_WEIGHT[item?.publicationMode] || 0;
   const originalDocumentImage = item?.image?.kind === "source-page" ? 10 : 0;
