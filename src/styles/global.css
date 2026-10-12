@@ -1286,6 +1286,16 @@ a.module-card:hover {
   margin-top: 14px;
 }
 
+.research-chat-button {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.research-chat-note {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 .editorial-group ul,
 .bullet-list {
   margin: 14px 0 0;

@@ -2,6 +2,7 @@
 import records from "../../generated/site-records.json";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatCurrency, formatDate, withBase } from "../../lib/format.js";
+import { buildResearchChatUrl } from "../../lib/research-chat.mjs";
 import { buildBreadcrumbSchema, buildDocumentArticleSchema, buildNewsArticleSchema } from "../../lib/editorial/seo.mjs";
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
@@ -20,6 +21,7 @@ const isDocumentNews = record.publicationMode === "automatic_document_news";
 const isRepositoryDocument = record.publicationMode === "repository_record";
 const hasEditorialReading = isStory;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const researchChatUrl = buildResearchChatUrl(record, canonical);
 const homeUrl = new URL(baseHref, Astro.site).toString();
 const searchUrl = new URL(`${baseHref}busca/`, Astro.site).toString();
 const schemas = [buildBreadcrumbSchema([
@@ -168,6 +170,8 @@ if (isStory) {
           </div>
         ) : null}
         <div class="detail-actions">
+          <a class="button-secondary research-chat-button" href={researchChatUrl}>Investigar no chat ↗</a>
+          <small class="research-chat-note">Abre uma nova conversa no aplicativo deste computador, com a fonte e a referência prontas para conferir. Revise a pergunta antes de enviar.</small>
           {record.sourceUrl && (
             <a class="button-primary" href={record.sourceUrl} target="_blank" rel="noreferrer">{record.sourceActionLabel || "Abrir fonte original"} ↗</a>
           )}
