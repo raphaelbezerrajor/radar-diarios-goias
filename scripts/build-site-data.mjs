@@ -316,7 +316,10 @@ function normalizeJulyDocumentNews(item, preview) {
   const slug = `julho-documento-${slugify(item.id).slice(0, 96)}`;
   const structured = buildStructuredDocumentNews(item);
   const manuallyEdited = item.publication_mode === "edited_document_news";
-  const isStory = manuallyEdited || (Number(item.importance) || 0) >= 80;
+  // The Anápolis gazette uses two columns and its generic heading boundaries
+  // can still split a single act into multiple records. Keep unreviewed acts
+  // searchable, but never promote them automatically to journalistic stories.
+  const isStory = manuallyEdited || (item.source_id !== "anapolis" && (Number(item.importance) || 0) >= 80);
   return {
     id: item.id,
     slug,
@@ -621,7 +624,7 @@ async function main() {
     .map((entry) => {
       const validation = validateStoryEntry(entry);
       if (!validation.valid) throw new Error(`Matéria editorial inválida ${entry.id}: ${validation.issues.join(", ")}`);
-      return { ...normalizeJulyDocumentNews(toNewStorySource(entry)), editorialEntryId: entry.id };
+      return { ...normalizeJulyDocumentNews(toNewStorySource(entry), previewByRecord.get(entry.id)), editorialEntryId: entry.id };
     });
   const editById = new Map(editorialEntries.filter((entry) => entry.kind === "edit").map((entry) => [entry.id, entry]));
   const applyEditorialEdit = (item) => applyStoryEntry(item, editById.get(item.id));

@@ -45,6 +45,15 @@ test("uma pauta excepcional pode superar uma pauta ligeiramente mais recente", (
   assert.equal(ranked.at(0).id, "forte");
 });
 
+test("pontuação legada acima de 100 não mantém uma manchete antiga no topo", () => {
+  const ranked = rankFrontPageStories([
+    { id: "antiga", recordType: "story", city: "A", date: "2026-10-06", importance: 365, prominence: "cover" },
+    { id: "nova", recordType: "story", city: "B", date: "2026-10-09", importance: 100, prominence: "section" }
+  ]);
+
+  assert.equal(ranked.at(0).id, "nova");
+});
+
 test("os destaques laterais evitam repetir o município enquanto houver alternativa", () => {
   const stories = [
     { id: "a1", recordType: "story", city: "A", date: "2026-08-10", importance: 99 },
