@@ -41,7 +41,7 @@ assert(timeline.includes("Linha do tempo") && timeline.includes("O mais recente 
 assert(july.includes("O mais recente sempre vem primeiro.") && july.includes("data-july-list"), "A cobertura navegável de julho não foi renderizada.");
 assert(searchPage.includes("data-search-root"), "A busca pública não foi renderizada.");
 assert(checkedStory.includes("Notícia documental") && checkedStory.includes("Publicado pelo Pauteiro"), "O acervo já publicado não recebeu a apresentação jornalística.");
-assert(checkedStory.includes('"@type":"NewsArticle"') && checkedStory.includes('"@type":"BreadcrumbList"'), "Os schemas editoriais não foram renderizados.");
+assert((checkedStory.includes('"@type":"NewsArticle"') || checkedStory.includes('"@type":"Article"')) && checkedStory.includes('"@type":"BreadcrumbList"'), "Os schemas editoriais não foram renderizados.");
 assert(checkedStory.includes("Crédito: Trindade Aberta"), "O crédito da imagem não aparece na matéria checada.");
 assert(checkedStory.match(/Dois extratos de contratos artísticos publicados pelo Município/g)?.length === 1, "A matéria checada repete o resumo no corpo.");
 assert(checkedActNews.includes("Documento no repositório"), "O ato burocrático não foi separado do noticiário.");

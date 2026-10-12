@@ -1,9 +1,8 @@
 ---
 import records from "../../generated/site-records.json";
-import siteData from "../../generated/site-data.json";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatCurrency, formatDate, withBase } from "../../lib/format.js";
-import { buildBreadcrumbSchema, buildNewsArticleSchema } from "../../lib/editorial/seo.mjs";
+import { buildBreadcrumbSchema, buildDocumentArticleSchema, buildNewsArticleSchema } from "../../lib/editorial/seo.mjs";
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
 export function getStaticPaths() {
@@ -29,14 +28,15 @@ const schemas = [buildBreadcrumbSchema([
   { name: record.title, url: canonical }
 ])];
 if (isStory) {
-  schemas.push(buildNewsArticleSchema({
+  const buildArticle = record.publishedAt ? buildNewsArticleSchema : buildDocumentArticleSchema;
+  schemas.push(buildArticle({
     canonical,
     story: {
       tituloEditorial: record.title,
       metadescricao: record.deck || record.summary,
       linhaFina: record.deck,
-      dataPublicacao: record.publishedAt || record.date,
-      dataAtualizacao: record.updatedAt || record.publishedAt || record.date,
+      dataPublicacao: record.publishedAt,
+      dataAtualizacao: record.updatedAt || record.publishedAt,
       autor: "Pauteiro",
       imagem: hasUsefulImage ? {
         url: new URL(imageSrc, Astro.site).toString(),
@@ -67,8 +67,7 @@ if (isStory) {
         {isStory && (
           <div class="editorial-provenance">
             <strong>Publicado pelo Pauteiro</strong>
-            <span>Matéria publicada em {formatDate(record.publishedAt || siteData.metadata.updatedAt)} · ato de {formatDate(record.date)}</span>
-            {record.updatedAt && record.updatedAt !== record.publishedAt && <span>Análise atualizada em {formatDate(record.updatedAt)}</span>}
+            <span>{record.publishedAt ? `Matéria publicada em ${formatDate(record.publishedAt)} · ` : ""}Data do ato/documento: {formatDate(record.date)}</span>
           </div>
         )}
         {hasUsefulImage && (
@@ -150,7 +149,7 @@ if (isStory) {
           <strong>{record.sourceFamily}</strong>
           <span>{record.sourceLabel}</span>
           <small>Data do ato: {formatDate(record.date)}</small>
-          {isStory && <small>Publicação no Pauteiro: {formatDate(record.publishedAt || siteData.metadata.updatedAt)}</small>}
+          {isStory && record.publishedAt && <small>Publicação no Pauteiro: {formatDate(record.publishedAt)}</small>}
           {isStory && <small>Autoria editorial: Redação Pauteiro</small>}
           {isStory && <small>Estado editorial: publicada · fonte oficial</small>}
           {record.processNumber && <small>Processo: {record.processNumber}</small>}
