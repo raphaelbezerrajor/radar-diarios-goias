@@ -10,6 +10,7 @@ export function validateStoryEntry(entry = {}, original = null) {
   if (entry.publishedAt && !validDate(entry.publishedAt)) issues.push("published_at");
   if (entry.kind === "edit" && (!original || original.recordType !== "story")) issues.push("original_story");
   if (entry.kind === "new" && original && original.editorialEntryId !== entry.id) issues.push("duplicate_id");
+  if (entry.importance !== undefined && (!Number.isFinite(Number(entry.importance)) || Number(entry.importance) < 0 || Number(entry.importance) > 100)) issues.push("importance");
   if (entry.status === "published") {
     if (clean(entry.title).length < 12 || clean(entry.title).length > 180) issues.push("title");
     if (clean(entry.deck).length < 20 || clean(entry.deck).length > 400) issues.push("deck");
@@ -40,6 +41,7 @@ export function applyStoryEntry(original, entry) {
     deck: clean(entry.deck),
     summary: paragraphs.join(" "),
     paragraphs,
+    importance: entry.importance === undefined ? original.importance : Number(entry.importance),
     updatedAt: validDate(entry.updatedAt) ? entry.updatedAt : original.updatedAt,
     publishedAt: validDate(entry.publishedAt) ? entry.publishedAt : original.publishedAt,
     publicationMode: "edited_document_news",

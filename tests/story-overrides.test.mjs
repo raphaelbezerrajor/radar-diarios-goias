@@ -34,6 +34,24 @@ test("edição publicada mantém fonte e substitui apenas texto editorial", () =
   assert.equal(updated.publicationMode, "edited_document_news");
 });
 
+test("edição verificada pode definir prioridade da capa sem mudar a fonte", () => {
+  const edit = {
+    kind: "edit", status: "published", id: source.id, sourceHash: source.sourceHash,
+    importance: 96,
+    title: "Novo título jornalístico sobre o ato",
+    deck: "Olho explicativo sobre o alcance do documento oficial",
+    paragraphs: [
+      "Primeiro parágrafo com os fatos do ato e sua data de publicação.",
+      "Segundo parágrafo com o contexto e os limites do documento."
+    ]
+  };
+  const updated = applyStoryEntry(source, edit);
+  assert.equal(updated.importance, 96);
+  assert.equal(updated.sourceUrl, source.sourceUrl);
+  assert.equal(updated.sourceHash, source.sourceHash);
+  assert.equal(validateStoryEntry({ ...edit, importance: 101 }, source).valid, false);
+});
+
 test("hash ou URL alterados bloqueiam a edição", () => {
   const edit = {
     kind: "edit", status: "published", id: source.id,

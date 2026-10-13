@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-12T14:51:06.111Z",
+  "generated_at": "2026-10-13T12:42:12.360Z",
   "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-10-12",
+    "to": "2026-10-13",
     "last_checked": {
-      "from": "2026-10-05",
-      "to": "2026-10-12"
+      "from": "2026-10-06",
+      "to": "2026-10-13"
     }
   },
   "rows": [
@@ -1284,22 +1284,6 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO WAGNER CAMARGO NETO\nASSUNTO - CONFERE AO MUNICÍPIO DE CRIXÁS O TÍTULO DE CAPITAL GOIANA DO PEQUI.",
       "pauta_id": 42636,
-      "parlamentar": "WILDE CAMBÃO",
-      "tipo_voto": "SIM",
-      "partido_sigla": "UB",
-      "partido_nome": "UNIÃO BRASIL",
-      "resultado_votacao": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO. À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-10-08",
-      "ano": 2026,
-      "mes": 10,
-      "dia": 8,
-      "nome_sessao": "76ª SESSÃO ORDINÁRIA HIBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO WAGNER CAMARGO NETO\nASSUNTO - CONFERE AO MUNICÍPIO DE CRIXÁS O TÍTULO DE CAPITAL GOIANA DO PEQUI.",
-      "pauta_id": 42636,
       "parlamentar": "AMAURI RIBEIRO",
       "tipo_voto": "SIM",
       "partido_sigla": "PL",
@@ -1672,6 +1656,22 @@
       "tipo_voto": "SIM",
       "partido_sigla": "SD",
       "partido_nome": "SOLIDARIEDADE",
+      "resultado_votacao": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO. À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-10-08",
+      "ano": 2026,
+      "mes": 10,
+      "dia": 8,
+      "nome_sessao": "76ª SESSÃO ORDINÁRIA HIBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO WAGNER CAMARGO NETO\nASSUNTO - CONFERE AO MUNICÍPIO DE CRIXÁS O TÍTULO DE CAPITAL GOIANA DO PEQUI.",
+      "pauta_id": 42636,
+      "parlamentar": "WILDE CAMBÃO",
+      "tipo_voto": "SIM",
+      "partido_sigla": "UB",
+      "partido_nome": "UNIÃO BRASIL",
       "resultado_votacao": "APROVADO EM 2ª DISCUSSÃO E VOTAÇÃO. À SECRETARIA PARA EXTRAÇÃO DE AUTÓGRAFO.",
       "tipo_votacao": "NOMINAL"
     },
@@ -3124,22 +3124,6 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO CRISTÓVÃO TORMMIN\nASSUNTO - DISPÕE A CRIAÇÃO DA ROTA TURÍSTICA DE FORMOSA, NO ÂMBITO DO ESTADO DE GOIÁS.",
       "pauta_id": 42591,
-      "parlamentar": "VIVIAN NAVES",
-      "tipo_voto": "SIM",
-      "partido_sigla": "REP",
-      "partido_nome": "REPUBLICANOS",
-      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-10-07",
-      "ano": 2026,
-      "mes": 10,
-      "dia": 7,
-      "nome_sessao": "75ª SESSÃO ORDINÁRIA HIBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO CRISTÓVÃO TORMMIN\nASSUNTO - DISPÕE A CRIAÇÃO DA ROTA TURÍSTICA DE FORMOSA, NO ÂMBITO DO ESTADO DE GOIÁS.",
-      "pauta_id": 42591,
       "parlamentar": "AMAURI RIBEIRO",
       "tipo_voto": "SIM",
       "partido_sigla": "PL",
@@ -3464,6 +3448,22 @@
       "tipo_voto": "SIM",
       "partido_sigla": "UB",
       "partido_nome": "UNIÃO BRASIL",
+      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-10-07",
+      "ano": 2026,
+      "mes": 10,
+      "dia": 7,
+      "nome_sessao": "75ª SESSÃO ORDINÁRIA HIBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO CRISTÓVÃO TORMMIN\nASSUNTO - DISPÕE A CRIAÇÃO DA ROTA TURÍSTICA DE FORMOSA, NO ÂMBITO DO ESTADO DE GOIÁS.",
+      "pauta_id": 42591,
+      "parlamentar": "VIVIAN NAVES",
+      "tipo_voto": "SIM",
+      "partido_sigla": "REP",
+      "partido_nome": "REPUBLICANOS",
       "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
       "tipo_votacao": "NOMINAL"
     },
@@ -110807,11 +110807,6 @@
       "absence_or_other": 0,
       "votes": [
         {
-          "parliamentarian": "WILDE CAMBÃO",
-          "party": "UB",
-          "vote": "SIM"
-        },
-        {
           "parliamentarian": "AMAURI RIBEIRO",
           "party": "PL",
           "vote": "SIM"
@@ -110929,6 +110924,11 @@
         {
           "parliamentarian": "WAGNER CAMARGO NETO",
           "party": "SD",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "WILDE CAMBÃO",
+          "party": "UB",
           "vote": "SIM"
         }
       ]
@@ -111462,11 +111462,6 @@
       "absence_or_other": 0,
       "votes": [
         {
-          "parliamentarian": "VIVIAN NAVES",
-          "party": "REP",
-          "vote": "SIM"
-        },
-        {
           "parliamentarian": "AMAURI RIBEIRO",
           "party": "PL",
           "vote": "SIM"
@@ -111569,6 +111564,11 @@
         {
           "parliamentarian": "VIRMONDES CRUVINEL",
           "party": "UB",
+          "vote": "SIM"
+        },
+        {
+          "parliamentarian": "VIVIAN NAVES",
+          "party": "REP",
           "vote": "SIM"
         }
       ]
