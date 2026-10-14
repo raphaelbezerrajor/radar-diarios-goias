@@ -535,7 +535,8 @@ async function main() {
     julyDocumentNews,
     controlNews,
     curatedBriefs,
-    storyOverrides
+    storyOverrides,
+    publicationHolds
   ] = await Promise.all([
     trindadeProvider.buscarAtos(),
     trindadeProvider.obterAnalise(),
@@ -552,7 +553,8 @@ async function main() {
     readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "july-document-news-2026.json"),
     readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "control-news-2026.json"),
     readJsonOptional({ briefs: [] }, "data", "editorial", "curated-briefs.json"),
-    readJsonOptional({ stories: [] }, "data", "editorial", "story-overrides.json")
+    readJsonOptional({ stories: [] }, "data", "editorial", "story-overrides.json"),
+    readJsonOptional({ items: [] }, "data", "editorial", "publication-holds.json")
   ]);
 
   const municipalityByName = new Map(
@@ -602,6 +604,9 @@ async function main() {
       .map((match) => `${match[1]}:${match[2].toUpperCase()}`)
   );
   const replacedDocumentIds = new Set((controlNews.items || []).map((item) => item.origin_item_id).filter(Boolean));
+  const holdEntries = publicationHolds.items || [];
+  const holdById = new Map(holdEntries.map((entry) => [entry.id, entry]));
+  if (holdById.size !== holdEntries.length) throw new Error("Há bloqueios editoriais duplicados.");
   const normalizedJulyDocumentNews = (julyDocumentNews.items || [])
     .filter((item) => item.editorial_status !== "needs_review")
     .filter((item) => !replacedDocumentIds.has(item.id))
@@ -611,7 +616,14 @@ async function main() {
       const externalId = String(item.external_identifier || "").toUpperCase();
       return !externalId || !existingTrindadeActKeys.has(`${editionId}:${externalId}`);
     })
-    .map((item) => normalizeJulyDocumentNews(item, previewByRecord.get(item.id)));
+    .map((item) => {
+      const hold = holdById.get(item.id);
+      if (hold && hold.documentSha256 !== item.document_sha256) {
+        throw new Error(`Hash divergente no bloqueio editorial ${item.id}.`);
+      }
+      const safeItem = hold ? { ...item, importance: 0, prominence: "archive" } : item;
+      return normalizeJulyDocumentNews(safeItem, previewByRecord.get(item.id));
+    });
   const normalizedControlNews = (controlNews.items || [])
     .filter((item) => item.editorial_status !== "needs_review")
     .map((item) => normalizeJulyDocumentNews(item, previewByRecord.get(item.id)));

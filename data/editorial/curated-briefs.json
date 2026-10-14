@@ -1,8 +1,288 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-08-13T14:57:56.089Z",
+  "updatedAt": "2026-10-14T20:40:00Z",
   "briefs": [
+    {
+      "id": "jul26-agm-114647-54315CD5-201",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-14T17:48:00-03:00",
+      "source": {
+        "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
+        "documentReference": "Diário Municipal de Goiás, edição 3723, 14/10/2026, página 59"
+      },
+      "editorial": {
+        "mainAngle": "A Saúde de Porangatu homologou um registro de preços de R$ 2,25 milhões para materiais de reparo das suas unidades, mas as compras serão futuras e eventuais.",
+        "whyItMatters": "Manutenção de unidades de saúde afeta as condições de atendimento; o registro estabelece fornecedores e preços, não comprova que os reparos já foram executados.",
+        "headlineOptions": [
+          "Porangatu homologa R$ 2,25 milhões em materiais para reparos na rede de saúde",
+          "Pregão de materiais para unidades de saúde em Porangatu soma R$ 2,25 milhões",
+          "Saúde de Porangatu define fornecedores para reparos em suas unidades"
+        ],
+        "leadDirection": "Abrir com resultado do pregão e finalidade dos materiais; explicar que registro de preços não é gasto realizado.",
+        "storyStructure": [
+          "Objeto, valor e dois fornecedores",
+          "Reparos previstos e estágio do registro de preços",
+          "O que falta sobre unidades, pedidos e execução"
+        ],
+        "verifiedFacts": [
+          "O Fundo Municipal de Saúde de Porangatu homologou o Pregão Eletrônico 25/2026, Processo Administrativo 5742/2026, para registro de preços de materiais de manutenção e reparo.",
+          "O ato informa valor total de R$ 2.252.499,36, dividido em R$ 258.589,20 para Consomar Material Elétrico e Hidráulico e R$ 1.993.910,16 para Diversa Distribuidora de Cimento.",
+          "O objeto descreve materiais hidráulicos, de pintura, ferragens e pequenas vedações para consertos e adequações rotineiras das unidades vinculadas ao Fundo Municipal de Saúde.",
+          "A homologação é de 24/09/2026 e foi publicada em 14/10/2026 na página 59 da edição 3723."
+        ],
+        "contextToFind": [
+          "Unidades de saúde beneficiadas e problemas de manutenção existentes",
+          "Quantidades e preços unitários por material",
+          "Atas, pedidos, recebimentos e pagamentos efetivos"
+        ],
+        "reportingQuestions": [
+          "Quais unidades precisam de reparo primeiro?",
+          "Qual o cronograma de aquisição e de execução dos consertos?",
+          "Que parcela do valor registrado já foi efetivamente solicitada?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Porangatu",
+          "Fornecedoras vencedoras sobre pedidos e entregas"
+        ],
+        "dataCrossChecks": [
+          "Edital e ata do Pregão Eletrônico 25/2026",
+          "Atas de registro de preços e ordens de fornecimento",
+          "Empenhos, liquidações e pagamentos do Fundo Municipal de Saúde"
+        ],
+        "doNotState": [
+          "Não apresentar R$ 2,25 milhões como pagamento ou compra já realizada.",
+          "Não afirmar que unidades foram reformadas sem ordens e medições.",
+          "Não confundir este pregão com o contrato de conclusão da creche publicado na mesma página."
+        ],
+        "publication": {
+          "title": "Porangatu homologa R$ 2,25 milhões em materiais para reparos na rede de saúde",
+          "deck": "Registro de preços define duas fornecedoras de materiais hidráulicos, de pintura e ferragens; compras e consertos dependerão de pedidos futuros.",
+          "paragraphs": [
+            "O Fundo Municipal de Saúde de Porangatu homologou um pregão de R$ 2.252.499,36 para o fornecimento futuro e eventual de materiais destinados a reparos nas unidades da rede municipal. O resultado do Pregão Eletrônico nº 25/2026 foi publicado no Diário Municipal de Goiás desta quarta-feira (14). O objeto inclui materiais hidráulicos, de pintura, ferragens e pequenas vedações.",
+            "A Consomar Material Elétrico e Hidráulico venceu lotes que somam R$ 258.589,20. A Diversa Distribuidora de Cimento ficou com os demais lotes, no total de R$ 1.993.910,16. A homologação foi assinada em 24 de setembro e está vinculada ao Processo Administrativo nº 5742/2026.",
+            "O procedimento constitui um registro de preços: os valores mostram o resultado da disputa, não material já entregue nem dinheiro pago. O ato não identifica quais unidades receberão os primeiros consertos ou quando os serviços ocorrerão. Essas informações dependem das solicitações de fornecimento e da execução posterior."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Leitura integral da página 59; homologação e contrato da creche são atos distintos."
+      }
+    },
+    {
+      "id": "jul26-agm-114647-618AD00B-34",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-14T17:46:00-03:00",
+      "source": {
+        "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
+        "documentReference": "Diário Municipal de Goiás, edição 3723, 14/10/2026, páginas 12 e 13"
+      },
+      "editorial": {
+        "mainAngle": "Castelândia concluiu a adjudicação de um pregão de R$ 2,26 milhões para medicamentos e materiais de saúde, distribuído entre 32 fornecedores.",
+        "whyItMatters": "O resultado define fornecedores e valores previstos para abastecer a rede municipal, mas não demonstra entrega nem disponibilidade dos itens nas unidades.",
+        "headlineOptions": [
+          "Castelândia adjudica R$ 2,26 milhões em medicamentos e insumos de saúde",
+          "Pregão de medicamentos em Castelândia tem 32 vencedoras e soma R$ 2,26 milhões",
+          "Saúde de Castelândia conclui disputa de R$ 2,26 milhões por medicamentos e insumos"
+        ],
+        "leadDirection": "Informar o resultado e seu estágio administrativo, o valor total e a destinação dos itens, sem sugerir pagamento ou entrega.",
+        "storyStructure": [
+          "Resultado do pregão e objeto",
+          "Distribuição entre fornecedores e fonte informada",
+          "O que falta sobre contratos, pedidos e entregas"
+        ],
+        "verifiedFacts": [
+          "O Termo de Adjudicação do Pregão Eletrônico 009/2026, publicado em 14/10/2026, informa valor total de R$ 2.259.380,57 para medicamentos e produtos hospitalares e odontológicos.",
+          "O ato lista 32 empresas vencedoras; as maiores parcelas informadas são R$ 651.500,94 à Genesis Distribuidora de Material Médico Hospitalar e R$ 329.137,75 à Quifarma Distribuidora de Medicamentos.",
+          "O objeto cita proposta 36000650941202500 e emenda parlamentar 29350007, além da Secretaria Municipal de Saúde.",
+          "A adjudicação foi assinada em 08/10/2026; a publicação não comprova contratos assinados, entregas ou pagamentos."
+        ],
+        "contextToFind": [
+          "Itens e quantidades contratados por fornecedor",
+          "Montante federal efetivamente repassado e eventual contrapartida municipal",
+          "Contratos, ordens de fornecimento, recebimentos e pagamentos"
+        ],
+        "reportingQuestions": [
+          "Quais medicamentos e materiais serão destinados ao atendimento imediato?",
+          "Quando as primeiras entregas devem ocorrer?",
+          "Qual parte do valor corresponde à emenda e qual é recurso municipal?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Saúde de Castelândia",
+          "Fornecedores adjudicatários, se houver questão de execução"
+        ],
+        "dataCrossChecks": [
+          "Edital e ata do Pregão Eletrônico 009/2026",
+          "Proposta 36000650941202500 e emenda 29350007",
+          "Contratos, empenhos, notas fiscais, liquidações e pagamentos"
+        ],
+        "doNotState": [
+          "Não chamar adjudicação de compra paga ou produtos entregues.",
+          "Não atribuir todo o valor à emenda federal sem demonstrativo financeiro.",
+          "Não somar o termo de homologação da mesma disputa como contratação adicional."
+        ],
+        "publication": {
+          "title": "Castelândia adjudica R$ 2,26 milhões em medicamentos e insumos de saúde",
+          "deck": "Pregão lista 32 fornecedores para abastecer a rede municipal; o resultado define vencedoras, mas não comprova entregas ou pagamentos.",
+          "paragraphs": [
+            "A Prefeitura de Castelândia adjudicou um pregão de R$ 2.259.380,57 para a aquisição de medicamentos, produtos hospitalares e materiais odontológicos destinados à rede municipal de saúde. O resultado do Pregão Eletrônico nº 009/2026, assinado em 8 de outubro, foi publicado no Diário Municipal de Goiás desta quarta-feira (14) e relaciona 32 empresas vencedoras.",
+            "A maior parcela informada no termo é de R$ 651.500,94 para a Genesis Distribuidora de Material Médico Hospitalar. A Quifarma Distribuidora de Medicamentos aparece com R$ 329.137,75. O objeto da licitação cita a proposta federal nº 36000650941202500 e a emenda parlamentar nº 29350007, mas o extrato não discrimina quanto de cada fonte financiará os fornecimentos.",
+            "Adjudicação é a atribuição do resultado da disputa às vencedoras; não significa que os produtos já tenham sido entregues ou pagos. Para verificar quando os itens chegarão às unidades de saúde, ainda é preciso acompanhar os contratos, as ordens de fornecimento e os registros de recebimento e pagamento."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Leitura das páginas 12 e 13; a homologação na página 13 refere-se ao mesmo pregão e não deve ser contada como nova compra."
+      }
+    },
+    {
+      "id": "jul26-agm-114647-7BAEC062-229",
+      "status": "needs_review",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-14T17:44:00-03:00",
+      "source": {
+        "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
+        "documentReference": "Diário Municipal de Goiás, edição 3723, 14/10/2026, páginas 87 e 88"
+      },
+      "editorial": {
+        "mainAngle": "O Fundo Municipal de Educação de Buriti Alegre firmou contrato para gerir o abastecimento da frota escolar, mas o valor em algarismos diverge do valor por extenso no próprio extrato.",
+        "whyItMatters": "A divergência precisa ser esclarecida antes de apresentar ao leitor um valor contratual inequívoco para o abastecimento da educação.",
+        "headlineOptions": [
+          "Extrato de contrato para combustível da educação em Buriti Alegre traz valores divergentes",
+          "Buriti Alegre publica contrato de abastecimento escolar com divergência no valor",
+          "Valor de contrato para combustível da educação exige confirmação em Buriti Alegre"
+        ],
+        "leadDirection": "Não publicar matéria até consultar contrato integral ou errata; depois informar o valor confirmado e a data da assinatura.",
+        "storyStructure": [
+          "Objeto e empresa contratada",
+          "Divergência entre número, extenso e dotações",
+          "Resposta do Fundo de Educação e documento corretivo"
+        ],
+        "verifiedFacts": [
+          "O extrato do Contrato 016/2026, Processo 5929/2026, identifica a NEO Consultoria e Administração de Benefícios Ltda. como gestora de sistema de abastecimento da frota do Fundo Municipal de Educação.",
+          "A página 87 informa R$ 206.746,07 em algarismos, enquanto o valor por extenso é 'duzentos e dezessete mil e setecentos e sessenta e cinco reais e nove centavos'.",
+          "As três dotações discriminadas somam R$ 206.746,07, mas a divergência formal exige confirmação no contrato integral ou errata.",
+          "O extrato indica assinatura em 16/09/2026 e vigência de seis meses; não comprova fornecimento ou pagamento de combustível."
+        ],
+        "contextToFind": [
+          "Contrato integral e eventual errata do extrato",
+          "Valor efetivamente registrado no sistema de contratos e nos empenhos",
+          "Consumo e pagamentos durante a vigência"
+        ],
+        "reportingQuestions": [
+          "Qual dos dois valores foi assinado pelas partes?",
+          "O município fará retificação da publicação?",
+          "Há empenho ou pagamento vinculado ao contrato?"
+        ],
+        "peopleToHear": [
+          "Fundo Municipal de Educação de Buriti Alegre",
+          "NEO Consultoria e Administração de Benefícios Ltda."
+        ],
+        "dataCrossChecks": [
+          "Contrato 016/2026 e Processo 5929/2026",
+          "Empenhos e pagamentos da educação para a contratada",
+          "Ata de Registro de Preços 005/2024"
+        ],
+        "doNotState": [
+          "Não escolher um dos dois valores como definitivo sem conferir o contrato integral.",
+          "Não somar a contratação ao contrato de combustível da Prefeitura publicado na mesma página.",
+          "Não tratar contrato como combustível entregue ou dinheiro pago."
+        ],
+        "publication": {
+          "title": "",
+          "deck": "",
+          "paragraphs": []
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Divergência de valor no próprio extrato; confirmar contrato integral ou errata antes de publicar."
+      },
+      "mandatoryHumanReview": true
+    },
+    {
+      "id": "jul26-agm-114647-A0EFFE81-200",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-14T17:40:00-03:00",
+      "source": {
+        "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
+        "documentReference": "Diário Municipal de Goiás, edição 3723, 14/10/2026, página 59"
+      },
+      "editorial": {
+        "mainAngle": "Porangatu firmou contrato de R$ 2,72 milhões para concluir uma creche municipal; o documento informa empresa e vigência, mas não demonstra início nem conclusão da obra.",
+        "whyItMatters": "A conclusão de uma creche pode ampliar a oferta de educação infantil, mas o efeito para as famílias depende da execução e da abertura efetiva da unidade.",
+        "headlineOptions": [
+          "Porangatu contrata conclusão de creche por R$ 2,72 milhões",
+          "Contrato de R$ 2,72 milhões prevê concluir creche em Porangatu",
+          "Creche da Rua do Ribeirão: Porangatu firma contrato para terminar construção"
+        ],
+        "leadDirection": "Abrir com a contratação para concluir a creche, o valor contratual, a empresa e o local; distinguir assinatura em setembro de publicação em outubro.",
+        "storyStructure": [
+          "Contrato, finalidade e valor",
+          "Empresa, concorrência e vigência",
+          "O que falta saber sobre obra, vagas e pagamentos"
+        ],
+        "verifiedFacts": [
+          "O Fundo Municipal de Educação de Porangatu contratou a HGC Construtora Ltda. para concluir a construção da Creche Pré-Escola Tipo 1 – Padrão FNDE, Escola Infantil Nossa Senhora da Piedade, chamada Creche da Rua do Ribeirão.",
+          "O valor total do Contrato 90/2026 é R$ 2.723.162,63; o extrato vincula o ajuste à Concorrência 001/2026 e ao Processo Administrativo 5346/2026.",
+          "O contrato foi assinado em 24/09/2026, prevê vigência de 15 meses até 24/12/2027 e foi publicado no Diário Municipal de Goiás de 14/10/2026, página 59.",
+          "O ato cita o Termo de Compromisso 15166 – Repactuação e as fontes orçamentárias 101 e 123, mas não comprova repasse, medição ou pagamento."
+        ],
+        "contextToFind": [
+          "Estado atual da obra e percentual físico já executado",
+          "Quantidade de vagas projetadas e data prevista de abertura",
+          "Origem efetiva dos recursos, cronograma de repasses e pagamentos",
+          "Motivo da necessidade de conclusão e histórico do contrato anterior"
+        ],
+        "reportingQuestions": [
+          "Quando os serviços começam e qual o cronograma de cada etapa?",
+          "Quantas crianças a unidade poderá atender quando estiver aberta?",
+          "Que obras foram executadas antes deste contrato e por que a construção ainda não foi concluída?",
+          "Onde serão divulgadas as medições e os pagamentos à construtora?"
+        ],
+        "peopleToHear": [
+          "Secretaria Municipal de Educação de Porangatu",
+          "HGC Construtora Ltda.",
+          "Conselho Municipal de Educação ou representantes das famílias"
+        ],
+        "dataCrossChecks": [
+          "Edital, ata e proposta vencedora da Concorrência 001/2026",
+          "Termo de Compromisso 15166 e histórico da obra no FNDE",
+          "Empenhos, medições, liquidações e pagamentos do Contrato 90/2026"
+        ],
+        "doNotState": [
+          "Não tratar o valor contratual como pagamento realizado.",
+          "Não afirmar que a obra começou, que haverá vagas em data determinada ou que houve abandono da construção.",
+          "Não atribuir integralmente o financiamento ao FNDE apenas porque o projeto segue seu padrão."
+        ],
+        "publication": {
+          "title": "Porangatu contrata conclusão de creche por R$ 2,72 milhões",
+          "deck": "A HGC Construtora foi contratada para terminar a Escola Infantil Nossa Senhora da Piedade, conhecida como Creche da Rua do Ribeirão; o extrato não informa quando as vagas estarão disponíveis.",
+          "paragraphs": [
+            "O Fundo Municipal de Educação de Porangatu firmou contrato de R$ 2.723.162,63 com a HGC Construtora Ltda. para concluir a construção da Escola Infantil Nossa Senhora da Piedade, conhecida como Creche da Rua do Ribeirão. O extrato foi publicado no Diário Municipal de Goiás desta quarta-feira (14), mas o contrato foi assinado em 24 de setembro.",
+            "A contratação resultou da Concorrência nº 001/2026 e está vinculada ao Processo Administrativo nº 5346/2026. O documento descreve a unidade como uma Creche Pré-Escola Tipo 1, padrão FNDE, e cita o Termo de Compromisso nº 15166, em repactuação. A vigência prevista é de 15 meses, até 24 de dezembro de 2027.",
+            "O extrato identifica o preço e o prazo do contrato, mas não apresenta o estágio atual da obra, a quantidade de vagas, um cronograma de execução ou pagamentos à construtora. Esses dados são necessários para saber quando a creche poderá atender as famílias; o valor contratado não significa que o dinheiro já foi gasto."
+          ]
+        }
+      },
+      "humanReview": {
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Leitura integral do extrato na página 59; pauta factual sem imputação de irregularidade."
+      }
+    },
     {
       "id": "jul26-agm-114590-608B28AC-243",
       "status": "draft",

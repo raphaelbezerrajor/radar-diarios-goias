@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-13T12:42:12.360Z",
+  "generated_at": "2026-10-14T20:35:27.690Z",
   "source_url": "https://transparencia.al.go.leg.br/gestao-parlamentar/painel-votacao-parlamentar",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-10-13",
+    "to": "2026-10-14",
     "last_checked": {
-      "from": "2026-10-06",
-      "to": "2026-10-13"
+      "from": "2026-10-07",
+      "to": "2026-10-14"
     }
   },
   "rows": [
@@ -3124,6 +3124,22 @@
       "categoria": "ORDINARIA",
       "ementa_projeto": "AUTOR - DEPUTADO CRISTÓVÃO TORMMIN\nASSUNTO - DISPÕE A CRIAÇÃO DA ROTA TURÍSTICA DE FORMOSA, NO ÂMBITO DO ESTADO DE GOIÁS.",
       "pauta_id": 42591,
+      "parlamentar": "VIVIAN NAVES",
+      "tipo_voto": "SIM",
+      "partido_sigla": "REP",
+      "partido_nome": "REPUBLICANOS",
+      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
+      "tipo_votacao": "NOMINAL"
+    },
+    {
+      "data_sessao": "2026-10-07",
+      "ano": 2026,
+      "mes": 10,
+      "dia": 7,
+      "nome_sessao": "75ª SESSÃO ORDINÁRIA HIBRIDA",
+      "categoria": "ORDINARIA",
+      "ementa_projeto": "AUTOR - DEPUTADO CRISTÓVÃO TORMMIN\nASSUNTO - DISPÕE A CRIAÇÃO DA ROTA TURÍSTICA DE FORMOSA, NO ÂMBITO DO ESTADO DE GOIÁS.",
+      "pauta_id": 42591,
       "parlamentar": "AMAURI RIBEIRO",
       "tipo_voto": "SIM",
       "partido_sigla": "PL",
@@ -3448,22 +3464,6 @@
       "tipo_voto": "SIM",
       "partido_sigla": "UB",
       "partido_nome": "UNIÃO BRASIL",
-      "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
-      "tipo_votacao": "NOMINAL"
-    },
-    {
-      "data_sessao": "2026-10-07",
-      "ano": 2026,
-      "mes": 10,
-      "dia": 7,
-      "nome_sessao": "75ª SESSÃO ORDINÁRIA HIBRIDA",
-      "categoria": "ORDINARIA",
-      "ementa_projeto": "AUTOR - DEPUTADO CRISTÓVÃO TORMMIN\nASSUNTO - DISPÕE A CRIAÇÃO DA ROTA TURÍSTICA DE FORMOSA, NO ÂMBITO DO ESTADO DE GOIÁS.",
-      "pauta_id": 42591,
-      "parlamentar": "VIVIAN NAVES",
-      "tipo_voto": "SIM",
-      "partido_sigla": "REP",
-      "partido_nome": "REPUBLICANOS",
       "resultado_votacao": "APROVADO EM 1ª DISCUSSÃO E VOTAÇÃO, À 2ª DISCUSSÃO E VOTAÇÃO.",
       "tipo_votacao": "NOMINAL"
     },
@@ -111462,6 +111462,11 @@
       "absence_or_other": 0,
       "votes": [
         {
+          "parliamentarian": "VIVIAN NAVES",
+          "party": "REP",
+          "vote": "SIM"
+        },
+        {
           "parliamentarian": "AMAURI RIBEIRO",
           "party": "PL",
           "vote": "SIM"
@@ -111564,11 +111569,6 @@
         {
           "parliamentarian": "VIRMONDES CRUVINEL",
           "party": "UB",
-          "vote": "SIM"
-        },
-        {
-          "parliamentarian": "VIVIAN NAVES",
-          "party": "REP",
           "vote": "SIM"
         }
       ]
