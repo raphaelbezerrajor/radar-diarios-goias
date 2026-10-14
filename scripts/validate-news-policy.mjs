@@ -17,10 +17,18 @@ const editedDocumentNews = await readJson("data", "trindade", "control-news-2026
 const previews = await readJson("data", "trindade", "source-previews.json");
 const curationQueue = await readJson("data", "editorial", "curation-queue.json");
 const curatedBriefs = await readJson("data", "editorial", "curated-briefs.json");
+const publicationHolds = await readJson("data", "editorial", "publication-holds.json");
 const automatic = records.filter((item) => item.publicationMode === "automatic_document_news");
 const institutionalPattern = /\/(?:noticia|noticias|news|imprensa|agencia-de-noticias)(?:\/|\?|$)/i;
 
 const recordIds = new Set(records.map((item) => item.id));
+assert(new Set((publicationHolds.items || []).map((item) => item.id)).size === (publicationHolds.items || []).length, "Há bloqueios editoriais duplicados.");
+for (const hold of publicationHolds.items || []) {
+  const source = (julySource.items || []).find((item) => item.id === hold.id);
+  const record = records.find((item) => item.id === hold.id);
+  assert(source?.document_sha256 === hold.documentSha256, `Fonte alterada no bloqueio editorial: ${hold.id}.`);
+  assert(record?.recordType === "record", `Pauta sob bloqueio editorial foi publicada como notícia: ${hold.id}.`);
+}
 const replacedDocumentIds = new Set((editedDocumentNews.items || []).map((item) => item.origin_item_id).filter(Boolean));
 assert((editedDocumentNews.items || []).filter((item) => item.origin_item_id).every((item) =>
   (julySource.items || []).some((source) => source.id === item.origin_item_id) && recordIds.has(item.id)
