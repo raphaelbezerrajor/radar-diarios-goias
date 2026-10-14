@@ -248,6 +248,7 @@ test("curadoria factual em rascunho entra na publicação sem aprovação redund
     title: "Título burocrático",
     deck: "Olho burocrático.",
     paragraphs: ["Parágrafo um.", "Parágrafo dois."],
+    importance: 70,
     sourceHash: "abc"
   };
   const draft = {
@@ -260,11 +261,12 @@ test("curadoria factual em rascunho entra na publicação sem aprovação redund
       reportingQuestions: ["Quanto será pago?", "Qual é o prazo?"],
       verifiedFacts: ["O contrato foi publicado."],
       doNotState: [],
-      publication: { title: "Novo título", deck: "Novo olho.", paragraphs: ["Lead.", "Contexto."] }
+      publication: { title: "Novo título", deck: "Novo olho.", paragraphs: ["Lead.", "Contexto."], importance: 88 }
     }
   };
   const curatedDraft = applyCuration(record, draft);
   assert.equal(curatedDraft.title, "Novo título");
+  assert.equal(curatedDraft.importance, 88);
   assert.equal(curatedDraft.publicationMode, "curated_document_news");
   assert.equal(curatedDraft.curation.appliedAutomatically, true);
 
@@ -310,4 +312,27 @@ test("curadoria usa a primeira manchete e o ângulo quando o bloco publicável e
   assert.equal(curated.title, "Município contrata reforma por R$ 920 mil");
   assert.equal(curated.deck, "Contrato destina R$ 920 mil à reforma do parque.");
   assert.deepEqual(curated.paragraphs, ["Fato um.", "Fato dois."]);
+});
+
+test("curadoria factual completa pode promover registro documentado a notícia", () => {
+  const record = { id: "ato-3", title: "Ato", recordType: "record", prominence: "archive", sourceHash: "abc" };
+  const brief = {
+    id: "ato-3",
+    status: "draft",
+    source: { documentSha256: "abc" },
+    editorial: {
+      mainAngle: "Mudança relevante no serviço público.",
+      whyItMatters: "Afeta a população.",
+      headlineOptions: ["Título factual", "Outra opção"],
+      reportingQuestions: ["Quando?", "Quanto?"],
+      verifiedFacts: ["O ato foi publicado."],
+      doNotState: [],
+      publication: { title: "Título factual", deck: "Olho factual completo.", paragraphs: ["Fato confirmado no documento.", "Contexto e limites do ato."], promoteToStory: true, importance: 90 }
+    }
+  };
+  const published = applyCuration(record, brief);
+  assert.equal(published.recordType, "story");
+  assert.equal(published.importance, 90);
+  assert.equal(published.prominence, "section");
+  assert.equal(applyCuration(record, { ...brief, status: "needs_review" }).recordType, "record");
 });

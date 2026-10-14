@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-10-14T20:35:47.333Z",
+  "generated_at": "2026-10-14T22:27:22.205Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 468,
-    "downloaded": 466,
+    "editions": 469,
+    "downloaded": 467,
     "failed_downloads": 2,
-    "extraction_pending": 468
+    "extraction_pending": 469
   },
   "daily_check_windows": [
     {
@@ -2354,7 +2354,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T20:35:42.013Z",
+      "checked_at": "2026-10-14T22:27:14.990Z",
       "range_checked": {
         "from": "2026-10-07",
         "to": "2026-10-14"
@@ -4120,7 +4120,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T20:35:43.268Z",
+      "checked_at": "2026-10-14T22:27:16.239Z",
       "range_checked": {
         "from": "2026-10-07",
         "to": "2026-10-14"
@@ -5849,7 +5849,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T20:35:43.900Z",
+      "checked_at": "2026-10-14T22:27:16.888Z",
       "range_checked": {
         "from": "2026-10-07",
         "to": "2026-10-14"
@@ -7448,29 +7448,48 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "goiania:do_20261014_000008883.pdf",
+          "source_edition_id": "do_20261014_000008883.pdf",
+          "edition_number": "8883",
+          "date": "2026-10-14",
+          "published_at": null,
+          "publication_timestamp_kind": "file_last_modified_only",
+          "extraordinary": false,
+          "official_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+          "file_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261014_000008883.pdf",
+          "local_path": "data/raw/municipal-diaries/goiania/2026/10/2026-10-14-8883.pdf",
+          "bytes": 18066687,
+          "sha256": "31b9e13c4a28cd0b4da3986dd52ed430a9cf50b4d5db3a8bf89f61b1b96b133a",
+          "last_modified": "Wed, 14 Oct 2026 21:07:02 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T20:35:45.288Z",
+      "checked_at": "2026-10-14T22:27:19.619Z",
       "range_checked": {
         "from": "2026-10-07",
         "to": "2026-10-14"
       },
       "summary": {
-        "editions_total": 82,
-        "editions_in_checked_range": 4,
-        "downloaded": 82,
+        "editions_total": 83,
+        "editions_in_checked_range": 5,
+        "downloaded": 83,
         "failed_downloads": 0,
-        "extraction_pending": 82,
+        "extraction_pending": 83,
         "first_date": "2026-06-01",
-        "last_date": "2026-10-13",
+        "last_date": "2026-10-14",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 82,
+          "observations": 83,
           "earliest": "11:39",
           "median": "18:04",
           "latest": "20:58"
@@ -9170,7 +9189,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T20:35:46.659Z",
+      "checked_at": "2026-10-14T22:27:21.092Z",
       "range_checked": {
         "from": "2026-10-07",
         "to": "2026-10-14"

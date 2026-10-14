@@ -154,6 +154,12 @@ export function validateEditorialBrief(brief = {}) {
     issues.push("fatos_confirmados");
   }
   if (!Array.isArray(brief.editorial?.doNotState)) issues.push("limites_editoriais");
+  const importance = brief.editorial?.publication?.importance;
+  if (importance !== undefined && (!Number.isFinite(Number(importance)) || Number(importance) < 0 || Number(importance) > 100)) {
+    issues.push("importance");
+  }
+  if (brief.editorial?.publication?.promoteToStory !== undefined
+    && typeof brief.editorial.publication.promoteToStory !== "boolean") issues.push("promote_to_story");
   return { valid: issues.length === 0, issues };
 }
 
@@ -176,9 +182,16 @@ export function applyCuration(record = {}, brief = null) {
     ? publication.paragraphs.map(clean).filter(Boolean)
     : [];
   const hasPublicationText = curatedParagraphs.length >= 2;
+  const requestedImportance = publication.importance === undefined ? NaN : Number(publication.importance);
+  const promoteToStory = publication.promoteToStory === true && hasPublicationText && Boolean(record.sourceHash);
 
   return {
     ...record,
+    recordType: promoteToStory ? "story" : record.recordType,
+    prominence: promoteToStory ? "section" : record.prominence,
+    importance: Number.isFinite(requestedImportance) && requestedImportance >= 0 && requestedImportance <= 100
+      ? requestedImportance
+      : record.importance,
     title: curatedTitle,
     deck: curatedDeck,
     summary: hasPublicationText ? curatedParagraphs.join(" ") : record.summary,

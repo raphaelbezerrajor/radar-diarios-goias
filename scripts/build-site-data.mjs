@@ -688,8 +688,8 @@ async function main() {
 
   const publishedNews = stateRecords
     .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedControlNews, normalizedTcmNews, newEditorialNews)
-    .filter((item) => item.recordType === "story")
     .map(applyEditorialCuration)
+    .filter((item) => item.recordType === "story")
     .map(applyEditorialEdit)
     .map(addPublicationMetadata);
   const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
@@ -726,7 +726,7 @@ async function main() {
       normalizedJulyDocumentNews.concat(
         normalizedTrindadeActs.filter((item) => item.month === "2026-07" && item.recordType === "story")
       )
-    ).filter((item) => item.recordType === "story").map(applyEditorialCuration)
+    ).map(applyEditorialCuration).filter((item) => item.recordType === "story")
   );
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "generatedAt": "2026-10-14T20:36:17.444322+00:00",
+  "generatedAt": "2026-10-14T22:28:17.439039+00:00",
   "sourcePeriod": {
     "year": 2026,
     "month": 10,
@@ -19,9 +19,9 @@
   },
   "summary": {
     "candidates": 240,
-    "pending": 236,
-    "withBrief": 4,
-    "existingBriefs": 69,
+    "pending": 234,
+    "withBrief": 6,
+    "existingBriefs": 72,
     "invalidBriefs": 0
   },
   "invalidBriefs": [],
@@ -155,6 +155,221 @@
         "documentReference": "Edição 3723 · páginas 87 a 88",
         "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
         "actSha256": "0ef40dd53de31e3fe72980c0a6a8889a078a7a431d907b597590ed9d72798075"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261014_000008883.pdf-1e7718254e41-57",
+      "status": "brief_exists",
+      "date": "2026-10-14",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Decreto Orçamentário nº 228/2026",
+        "extractedTitle": "Goiânia publica Decreto Orçamentário nº 228/2026",
+        "extractedDeck": "Ficam abertos à Secretaria Municipal de Infraestrutura Urbana, dois créditos adicionais de natureza suplementar, no valor de R$ 72.000.000,00 (setenta e dois milhões de reais), destinados a atender às programações previstas no Anexo I deste Decreto",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou decreto na edição 8883 de Diário Oficial do Município de Goiânia, datada de 14 de outubro de 2026. Ficam abertos à Secretaria Municipal de Infraestrutura Urbana, dois créditos adicionais de natureza suplementar, no valor de R$ 72.000.000,00 (setenta e dois milhões de reais), destinados a atender às programações previstas no Anexo I deste Decreto.",
+          "O maior valor monetário identificado no texto é R$ 72.000.000,00; as referências documentais incluem 11.510, 11.590, 134, 11.419/2006., 26.18.000003265-0. A conferência deve ser feita no documento original, em páginas 96 a 99."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8883, de 14 de outubro de 2026. Página 96 de 378 Prefeitura de Goiânia Gabinete do Prefeito DECRETO ORÇAMENTÁRIO Nº 228, DE 2026 Dispõe sobre a abertura de crédito suplementar, em favor da Secretaria Municipal de Infraestrutura Urbana, no valor de R$ 72.000.000,00 (setenta e dois milhões de…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 72.000.000,00",
+            "value": 72000000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 22.000.000,00",
+            "value": 22000000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 50.000.000,00",
+            "value": 50000000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 160.000,00",
+            "value": 160000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 3.340.000,00",
+            "value": 3340000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 10.000.000,00",
+            "value": 10000000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 4.500.000,00",
+            "value": 4500000,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 4.000.000,00",
+            "value": 4000000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "11.510",
+          "11.590",
+          "134",
+          "11.419/2006.",
+          "26.18.000003265-0"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261014_000008883.pdf",
+        "editionId": "goiania:do_20261014_000008883.pdf",
+        "editionNumber": "8883",
+        "pageStart": 96,
+        "pageEnd": 99,
+        "documentReference": "Edição 8883 · páginas 96 a 99",
+        "documentSha256": "31b9e13c4a28cd0b4da3986dd52ed430a9cf50b4d5db3a8bf89f61b1b96b133a",
+        "actSha256": "1e7718254e41ecc714800f4c017a6f2639a0fe14df442b2855b545da577525eb"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261014_000008883.pdf-85d6895bc931-56",
+      "status": "brief_exists",
+      "date": "2026-10-14",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Decreto Orçamentário nº 227/2026",
+        "extractedTitle": "Goiânia publica Decreto Orçamentário nº 227/2026",
+        "extractedDeck": "Fica aberto à Secretaria Municipal de Infraestrutura Urbana, um crédito adicional de natureza suplementar, no valor de R$ 10.000.000,00 (dez milhões de reais), destinado a atender à programação prevista no Anexo I deste Decreto",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou decreto na edição 8883 de Diário Oficial do Município de Goiânia, datada de 14 de outubro de 2026. Fica aberto à Secretaria Municipal de Infraestrutura Urbana, um crédito adicional de natureza suplementar, no valor de R$ 10.000.000,00 (dez milhões de reais), destinado a atender à programação prevista no Anexo I deste Decreto.",
+          "O maior valor monetário identificado no texto é R$ 10.000.000,00; as referências documentais incluem 11.510, 11.590, 134, 11.419/2006., 26.18.000003191-3. A conferência deve ser feita no documento original, em páginas 92 a 95."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8883, de 14 de outubro de 2026. Página 92 de 378 Prefeitura de Goiânia Gabinete do Prefeito DECRETO ORÇAMENTÁRIO Nº 227, DE 2026 Dispõe sobre a abertura de crédito suplementar, em favor da Secretaria Municipal de Infraestrutura Urbana, no valor de R$ 10.000.000,00 (dez milhões de reais). O…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 10.000.000,00",
+            "value": 10000000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "11.510",
+          "11.590",
+          "134",
+          "11.419/2006.",
+          "26.18.000003191-3"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261014_000008883.pdf",
+        "editionId": "goiania:do_20261014_000008883.pdf",
+        "editionNumber": "8883",
+        "pageStart": 92,
+        "pageEnd": 95,
+        "documentReference": "Edição 8883 · páginas 92 a 95",
+        "documentSha256": "31b9e13c4a28cd0b4da3986dd52ed430a9cf50b4d5db3a8bf89f61b1b96b133a",
+        "actSha256": "85d6895bc931c2eab277c13c9d0b77f23e28fdbdcc80cd729cf53525c0b640a0"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261014_000008883.pdf-9a1394b484c6-55",
+      "status": "pending",
+      "date": "2026-10-14",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "decreto",
+      "typeLabel": "Decreto",
+      "priority": 95,
+      "importance": 95,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Decreto Orçamentário nº 224/2026",
+        "extractedTitle": "Goiânia publica Decreto Orçamentário nº 224/2026",
+        "extractedDeck": "Fica aberto ao Instituto Municipal de Assistência à Saúde dos Servidores de Goiânia - IMAS, um crédito adicional de natureza suplementar, no valor de R$ 1.173.000,00 (um milhão, cento e setenta e três mil reais), destinado a atender à programação prevista no Anexo deste Decreto",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou decreto na edição 8883 de Diário Oficial do Município de Goiânia, datada de 14 de outubro de 2026. Fica aberto ao Instituto Municipal de Assistência à Saúde dos Servidores de Goiânia - IMAS, um crédito adicional de natureza suplementar, no valor de R$ 1.173.000,00 (um milhão, cento e setenta e três mil reais), destinado a atender à programação prevista no Anexo deste Decreto.",
+          "O maior valor monetário identificado no texto é R$ 1.173.000,00; as referências documentais incluem 11.510, 11.590, 134, 11.419/2006., 26.14.000000218-3. A conferência deve ser feita no documento original, em páginas 88 a 91."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8883, de 14 de outubro de 2026. Página 88 de 378 Prefeitura de Goiânia Gabinete do Prefeito DECRETO ORÇAMENTÁRIO Nº 224, DE 2026 Dispõe sobre a abertura de crédito suplementar, em favor do Instituto Municipal de Assistência à Saúde dos Servidores de Goiânia - IMAS, no valor de R$ 1.173.000,00…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 1.173.000,00",
+            "value": 1173000,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "11.510",
+          "11.590",
+          "134",
+          "11.419/2006.",
+          "26.14.000000218-3"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261014_000008883.pdf",
+        "editionId": "goiania:do_20261014_000008883.pdf",
+        "editionNumber": "8883",
+        "pageStart": 88,
+        "pageEnd": 91,
+        "documentReference": "Edição 8883 · páginas 88 a 91",
+        "documentSha256": "31b9e13c4a28cd0b4da3986dd52ed430a9cf50b4d5db3a8bf89f61b1b96b133a",
+        "actSha256": "9a1394b484c675e4ae9d8738d45f0377666a6f243927de82693c0711179a93a7"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
@@ -344,6 +559,75 @@
         "documentReference": "Edição 3723 · páginas 12 a 13",
         "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
         "actSha256": "1835917b3ed1eabf1c4c42775f2102117a22258ef7dfe5e28e3da621c5c6cf46"
+      },
+      "requestedOutput": {
+        "kind": "editorial_brief",
+        "promptVersion": "pauteiro-curadoria-v1",
+        "publishAutomatically": true
+      }
+    },
+    {
+      "id": "jul26-goiania-do_20261014_000008883.pdf-92db0f1d7eb9-167",
+      "status": "pending",
+      "date": "2026-10-14",
+      "city": "Goiânia",
+      "scope": "Municipal",
+      "actType": "contrato",
+      "typeLabel": "Contrato",
+      "priority": 87,
+      "importance": 87,
+      "curationReasons": [
+        "alto valor-notícia calculado",
+        "possível impacto em serviço, política ou patrimônio público"
+      ],
+      "mandatoryHumanReview": false,
+      "factPacket": {
+        "officialTitle": "Extrato do 2º Termo de Apostilamento ao Contrato nº 068/2023",
+        "extractedTitle": "Goiânia publica Extrato do 2º Termo de Apostilamento ao Contrato nº 068/2023",
+        "extractedDeck": "OBJETO: 2º Termo de Apostilamento ao Contrato nº 068/2023 para pagamento do 2º (segundo) reajuste devido ao saldo contratual",
+        "extractedParagraphs": [
+          "Prefeitura de Goiânia publicou contrato na edição 8883 de Diário Oficial do Município de Goiânia, datada de 14 de outubro de 2026. OBJETO: 2º Termo de Apostilamento ao Contrato nº 068/2023 para pagamento do 2º (segundo) reajuste devido ao saldo contratual.",
+          "O maior valor monetário identificado no texto é R$ 1.691.192,54; as referências documentais incluem 068/2023, 10.192/2021, 11.419/2006., 25.24.000035864-7. A conferência deve ser feita no documento original, em página 307."
+        ],
+        "evidenceExcerpt": "DOM Eletrônico Edição Nº 8883, de 14 de outubro de 2026. Página 307 de 378 Prefeitura de Goiânia Secretaria Municipal de Educação Gerência de Acompanhamento e Manutenção da Rede Física EXTRATO DO 2º TERMO DE APOSTILAMENTO AO CONTRATO Nº 068/2023 PROCESSO: SEI N.º 25.24.000035864-7 CONTRATANTE: Município de Goiânia,…",
+        "publicBody": "Prefeitura de Goiânia",
+        "values": [
+          {
+            "original": "R$ 1.552.198,00",
+            "value": 1552198,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 138.994,54",
+            "value": 138994.54,
+            "currency": "BRL"
+          },
+          {
+            "original": "R$ 1.691.192,54",
+            "value": 1691192.54,
+            "currency": "BRL"
+          }
+        ],
+        "cnpjs": [],
+        "referenceNumbers": [
+          "068/2023",
+          "10.192/2021",
+          "11.419/2006.",
+          "25.24.000035864-7"
+        ],
+        "confidence": 0.94
+      },
+      "source": {
+        "name": "Diário Oficial do Município de Goiânia",
+        "label": "Prefeitura de Goiânia",
+        "url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261014_000008883.pdf",
+        "editionId": "goiania:do_20261014_000008883.pdf",
+        "editionNumber": "8883",
+        "pageStart": 307,
+        "pageEnd": 307,
+        "documentReference": "Edição 8883 · página 307",
+        "documentSha256": "31b9e13c4a28cd0b4da3986dd52ed430a9cf50b4d5db3a8bf89f61b1b96b133a",
+        "actSha256": "92db0f1d7eb9abe1938c2e796eea03e9a03e18a798d4f48d5c0ed890fba5afa8"
       },
       "requestedOutput": {
         "kind": "editorial_brief",
@@ -642,224 +926,6 @@
         "kind": "editorial_brief",
         "promptVersion": "pauteiro-curadoria-v1",
         "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114647-A2338F80-199",
-      "status": "pending",
-      "date": "2026-10-14",
-      "city": "Perolândia",
-      "scope": "Municipal",
-      "actType": "lei",
-      "typeLabel": "Lei",
-      "priority": 83,
-      "importance": 79,
-      "curationReasons": [
-        "controle, correção ou responsabilização"
-      ],
-      "mandatoryHumanReview": true,
-      "factPacket": {
-        "officialTitle": "LEI 602/2026 De 25 de setembro 2026",
-        "extractedTitle": "Perolândia publica LEI 602/2026 De 25 de setembro 2026",
-        "extractedDeck": "Ficam as concessionárias prestadoras de serviços de energia elétrica, telefonia, televisão a cabo, internet, ou qualquer outro relacionado à rede aérea, obrigadas a remover os cabos e afiação por elas instalados, quando em excesso, sem uso ou rompidos",
-        "extractedParagraphs": [
-          "PREFEITURA MUNICIPAL DE PEROLÂNDIA publicou lei na edição 3723 de Diário Municipal de Goiás — AGM, datada de 14 de outubro de 2026. Ficam as concessionárias prestadoras de serviços de energia elétrica, telefonia, televisão a cabo, internet, ou qualquer outro relacionado à rede aérea, obrigadas a remover os cabos e afiação por elas instalados, quando em excesso, sem uso ou rompidos.",
-          "as referências documentais incluem 602, 602/2026. A conferência deve ser feita no documento original, em páginas 58 a 59."
-        ],
-        "evidenceExcerpt": "PREFEITURA MUNICIPAL DE PEROLÂNDIA LEI 602 LEI 602/2026 De 25 de setembro 2026. ―Dispõe sobre a obrigatoriedade de remoção dos cabos e fiação aérea, excedentes e sem uso, instalados por concessionárias que operam ou utilizam rede aérea, e da outras providências.‖ A PREFEITA DE PEROLÂNDIA, ESTADO DE GOIÁS, no uso de…",
-        "publicBody": "PREFEITURA MUNICIPAL DE PEROLÂNDIA",
-        "values": [],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "602",
-          "602/2026"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "PREFEITURA MUNICIPAL DE PEROLÂNDIA",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114647_2026-10-13_b3db48e7e4d151339f334c62e359aa8b.pdf",
-        "editionId": "agm:114647",
-        "editionNumber": "3723",
-        "pageStart": 58,
-        "pageEnd": 59,
-        "documentReference": "Edição 3723 · páginas 58 a 59",
-        "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
-        "actSha256": "6902c49dd4e86255a2c82b8fea2691ade5aa4059dd987061c4911f9ff8213004"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114647-CF9950E1-181",
-      "status": "pending",
-      "date": "2026-10-14",
-      "city": "Mutunópolis",
-      "scope": "Municipal",
-      "actType": "homologacao",
-      "typeLabel": "Homologação",
-      "priority": 83,
-      "importance": 79,
-      "curationReasons": [
-        "controle, correção ou responsabilização"
-      ],
-      "mandatoryHumanReview": true,
-      "factPacket": {
-        "officialTitle": "TERMO DE HOMOLOGAÇÃO - CONCORRÊNCIA",
-        "extractedTitle": "Mutunópolis publica TERMO DE HOMOLOGAÇÃO - CONCORRÊNCIA",
-        "extractedDeck": "resolve HOMOLOGAR o resultado dos trabalhos apresentados pela Comissão no atendimento ao objeto do processo licitatório acima especificado",
-        "extractedParagraphs": [
-          "MUNICIPIO DE MUTUNOPOLIS publicou homologação na edição 3723 de Diário Municipal de Goiás — AGM, datada de 14 de outubro de 2026. resolve HOMOLOGAR o resultado dos trabalhos apresentados pela Comissão no atendimento ao objeto do processo licitatório acima especificado.",
-          "O maior valor monetário identificado no texto é R$ 428.861,45; as referências documentais incluem 20260000501266. A conferência deve ser feita no documento original, em páginas 53 a 54."
-        ],
-        "evidenceExcerpt": "COMISSÃO DE LICITAÇÕES TERMO DE HOMOLOGAÇÃO - CONCORRÊNCIA ELETRÔNICA Nº 03/2026 MUTUNÓPOLIS - GOIÁS TERMO DE HOMOLOGAÇÃO - CONCORRÊNCIA ELETRÔNICA Nº 03/2026 Processo Adm: Nº 2047/2026 Objeto: Contratação de empresa especializada para execução dos serviços de ampliação e melhoramento da Escola Irmã Francisca,…",
-        "publicBody": "MUNICIPIO DE MUTUNOPOLIS",
-        "values": [
-          {
-            "original": "R$ 428.861,45",
-            "value": 428861.45,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "20260000501266"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICIPIO DE MUTUNOPOLIS",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114647_2026-10-13_b3db48e7e4d151339f334c62e359aa8b.pdf",
-        "editionId": "agm:114647",
-        "editionNumber": "3723",
-        "pageStart": 53,
-        "pageEnd": 54,
-        "documentReference": "Edição 3723 · páginas 53 a 54",
-        "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
-        "actSha256": "d07a9c982fb6d555cb2cfde17e2c8f7feddff37ee66d34109e2936b8650ac654"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": false
-      }
-    },
-    {
-      "id": "jul26-agm-114647-09066CC9-133",
-      "status": "pending",
-      "date": "2026-10-14",
-      "city": "Iporá",
-      "scope": "Municipal",
-      "actType": "aditivo",
-      "typeLabel": "Termo aditivo",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "EXTRATO DO II TERMO ADITIVO Nº 09/2026",
-        "extractedTitle": "Iporá publica EXTRATO DO II TERMO ADITIVO Nº 09/2026",
-        "extractedDeck": "OBJETO: Contratação de empresa de construção civil para a execução da obra de construção do Quartel do Corpo de Bombeiros Goiás , 14 de Outubro de 2026 • Diario Municipal de Goiás • ANO XV | Nº 3723 www.diariomunicipal.com.br/agm 38 Militar na cidade de Iporá-GO, com área total construída de…",
-        "extractedParagraphs": [
-          "MUNICÍPIO DE IPORÁ publicou termo aditivo na edição 3723 de Diário Municipal de Goiás — AGM, datada de 14 de outubro de 2026. OBJETO: Contratação de empresa de construção civil para a execução da obra de construção do Quartel do Corpo de Bombeiros Goiás , 14 de Outubro de 2026 • Diario Municipal de Goiás • ANO XV | Nº 3723 www.diariomunicipal.com.br/agm 38 Militar na cidade de Iporá-GO, com área total construída de….",
-          "O maior valor monetário identificado no texto é R$ 133.728,23; as referências documentais incluem 14.133/2021. A conferência deve ser feita no documento original, em páginas 37 a 38."
-        ],
-        "evidenceExcerpt": "ESTADO DE GOIÁS MUNICÍPIO DE IPORÁ DEPARTAMENTO DE LICITAÇÃO 2º TERMO ADITIVO Nº 09/2026 EXTRATO DO II TERMO ADITIVO Nº 09/2026 CONTRATANTE: MUNICÍPIO DE IPORÁ - GO CONTRATADA: ALMEIDA CONSTRUTORA E INCORPORADORA LTDA OBJETO: Contratação de empresa de construção civil para a execução da obra de construção do Quartel…",
-        "publicBody": "MUNICÍPIO DE IPORÁ",
-        "values": [
-          {
-            "original": "R$ 133.728,23",
-            "value": 133728.23,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [],
-        "referenceNumbers": [
-          "14.133/2021"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "MUNICÍPIO DE IPORÁ",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114647_2026-10-13_b3db48e7e4d151339f334c62e359aa8b.pdf",
-        "editionId": "agm:114647",
-        "editionNumber": "3723",
-        "pageStart": 37,
-        "pageEnd": 38,
-        "documentReference": "Edição 3723 · páginas 37 a 38",
-        "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
-        "actSha256": "5ca303cf30cd12cdf09e218b05b0c2d7d20e770f34747e0daaaed3786a7621fe"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
-      }
-    },
-    {
-      "id": "jul26-agm-114647-2C5955CF-104",
-      "status": "pending",
-      "date": "2026-10-14",
-      "city": "Ipameri",
-      "scope": "Municipal",
-      "actType": "contrato",
-      "typeLabel": "Contrato",
-      "priority": 77,
-      "importance": 77,
-      "curationReasons": [
-        "possível impacto em serviço, política ou patrimônio público"
-      ],
-      "mandatoryHumanReview": false,
-      "factPacket": {
-        "officialTitle": "TERMO DE APOSTILAMENTO Nº 001/2026 AO CONTRATO",
-        "extractedTitle": "Ipameri publica TERMO DE APOSTILAMENTO Nº 001/2026 AO CONTRATO",
-        "extractedDeck": "fica acrescido o subitem 2.4 à Cláusula Segunda do Contrato, com a seguinte redação: Onde se lê: CLÁUSULA SEGUNDA – DO VALOR CONTRATUAL E CONDIÇÕES DE PAGAMENTO: 2.1",
-        "extractedParagraphs": [
-          "FUNDO MUNICIPAL DE SAÚDE publicou contrato na edição 3723 de Diário Municipal de Goiás — AGM, datada de 14 de outubro de 2026. fica acrescido o subitem 2.4 à Cláusula Segunda do Contrato, com a seguinte redação: Onde se lê: CLÁUSULA SEGUNDA – DO VALOR CONTRATUAL E CONDIÇÕES DE PAGAMENTO: 2.1.",
-          "O maior valor monetário identificado no texto é R$ 479.426,81; o ato cita o CNPJ 07.777.639/0001-27; as referências documentais incluem 488/2026, 2026015637. A conferência deve ser feita no documento original, em página 28."
-        ],
-        "evidenceExcerpt": "FUNDO MUNICIPAL DE SAÚDE TERMO DE APOSTILAMENTO Nº 001/2026 AO CONTRATO Nº 488/2026 PRIMEIRO TERMO DE APOSTILAMENTO TERMO DE APOSTILAMENTO Nº 001/2026 AO CONTRATO Nº 488/2026, CELEBRADO ENTRE O FUNDO MUNICIPAL DA SAÚDE IPAMERI E A EMPRESA POSTO SANTA MARIA COM DE DERIVADOS DE PETROLEO LTDA. Pelo presente instrumento,…",
-        "publicBody": "FUNDO MUNICIPAL DE SAÚDE",
-        "values": [
-          {
-            "original": "R$ 479.426,81",
-            "value": 479426.81,
-            "currency": "BRL"
-          }
-        ],
-        "cnpjs": [
-          "07.777.639/0001-27"
-        ],
-        "referenceNumbers": [
-          "488/2026",
-          "2026015637"
-        ],
-        "confidence": 0.94
-      },
-      "source": {
-        "name": "Diário Municipal de Goiás — AGM",
-        "label": "FUNDO MUNICIPAL DE SAÚDE",
-        "url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114647_2026-10-13_b3db48e7e4d151339f334c62e359aa8b.pdf",
-        "editionId": "agm:114647",
-        "editionNumber": "3723",
-        "pageStart": 28,
-        "pageEnd": 28,
-        "documentReference": "Edição 3723 · página 28",
-        "documentSha256": "41fe4938b1cd06496240f8c4ad4da7c0aaaa3186ed55123d8e52634440634b0f",
-        "actSha256": "3513b4528fc95ebee6044b99603e6eabd523c6cd3437056e59422fbe66f131ff"
-      },
-      "requestedOutput": {
-        "kind": "editorial_brief",
-        "promptVersion": "pauteiro-curadoria-v1",
-        "publishAutomatically": true
       }
     },
     {

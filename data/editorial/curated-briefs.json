@@ -1,8 +1,135 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-10-14T20:40:00Z",
+  "updatedAt": "2026-10-14T22:40:00Z",
   "briefs": [
+    {
+      "id": "jul26-goiania-do_20261014_000008883.pdf-1e7718254e41-57",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-14T19:40:00-03:00",
+      "source": {
+        "documentSha256": "31b9e13c4a28cd0b4da3986dd52ed430a9cf50b4d5db3a8bf89f61b1b96b133a",
+        "documentReference": "Diário Oficial de Goiânia nº 8.883, 14/10/2026, páginas 96 a 99; Decreto Orçamentário 228/2026"
+      },
+      "editorial": {
+        "mainAngle": "Goiânia abriu R$ 72 milhões em créditos suplementares para limpeza pública e manejo de resíduos; R$ 50 milhões vêm de excesso de arrecadação e R$ 22 milhões de anulação de dotações.",
+        "whyItMatters": "A mudança aumenta a autorização orçamentária para serviços essenciais de limpeza, mas não equivale a contrato novo nem a gasto realizado.",
+        "headlineOptions": [
+          "Goiânia reforça orçamento da limpeza urbana em R$ 72 milhões",
+          "Decreto destina R$ 72 milhões adicionais à limpeza pública de Goiânia",
+          "Goiânia abre crédito de R$ 72 milhões para coleta e manejo de resíduos"
+        ],
+        "leadDirection": "Explicar a finalidade do crédito e separar as duas fontes dos recursos antes de tratar de contratos ou pagamentos.",
+        "storyStructure": ["Valor e destino", "Origem dos R$ 50 milhões e dos R$ 22 milhões", "O que o decreto não comprova sobre execução"],
+        "verifiedFacts": [
+          "O Decreto Orçamentário 228/2026 abre dois créditos suplementares de R$ 72 milhões para a Secretaria Municipal de Infraestrutura Urbana.",
+          "O Anexo I distribui R$ 50 milhões em despesa corrente de serviços de terceiros e R$ 22 milhões em despesa de capital de serviços de terceiros, na mesma ação orçamentária 17.512.0020.2753.",
+          "O art. 2º aponta R$ 50 milhões de excesso de arrecadação da fonte 100 e R$ 22 milhões de anulações de dotações da Secretaria da Fazenda, discriminadas no Anexo II.",
+          "A exposição de motivos vincula a suplementação à manutenção da limpeza pública, coleta e manejo de resíduos sólidos; o ato foi publicado em 14/10/2026."
+        ],
+        "contextToFind": ["Contratos de limpeza e saldo anterior da ação orçamentária", "Comprovação do excesso de arrecadação", "Empenhos, liquidações, pagamentos e medições após o decreto"],
+        "reportingQuestions": ["Quais contratos ou frentes de serviço receberão esses créditos?", "Quanto da dotação anterior já estava comprometido?", "Por que foram anuladas as dotações listadas no Anexo II?"],
+        "peopleToHear": ["Secretaria Municipal de Infraestrutura Urbana", "Secretaria Municipal da Fazenda", "Prestadores de serviços de limpeza urbana"],
+        "dataCrossChecks": ["LOA 2026 e execução da ação 17.512.0020.2753", "Decretos orçamentários anteriores e posteriores", "Contratos, empenhos e pagamentos da limpeza urbana"],
+        "doNotState": ["Não chamar crédito orçamentário de contrato ou pagamento.", "Não afirmar que R$ 72 milhões são despesa nova executada.", "Não atribuir a um fornecedor específico sem ato contratual correspondente."],
+        "publication": {
+          "importance": 100,
+          "title": "Goiânia reforça orçamento da limpeza urbana em R$ 72 milhões",
+          "deck": "Decreto publicado nesta quarta usa R$ 50 milhões de excesso de arrecadação e transfere R$ 22 milhões de outras dotações; abertura do crédito não comprova gasto.",
+          "paragraphs": [
+            "A Prefeitura de Goiânia abriu R$ 72 milhões em créditos suplementares para a Secretaria Municipal de Infraestrutura Urbana. A exposição de motivos do Decreto Orçamentário nº 228/2026, publicado nesta quarta-feira (14), diz que o reforço se destina à manutenção da limpeza pública e aos serviços de coleta e manejo de resíduos sólidos. A medida altera a autorização no orçamento, não registra um contrato novo nem comprova pagamento.",
+            "Do total, R$ 50 milhões são cobertos por excesso de arrecadação na fonte de recursos 100. Os outros R$ 22 milhões vêm da anulação de dotações da Secretaria Municipal da Fazenda, detalhadas no anexo do decreto. A programação de destino divide o crédito entre R$ 50 milhões em despesa corrente e R$ 22 milhões em despesa de capital, ambos na ação orçamentária de saneamento indicada pelo município.",
+            "O decreto não identifica quais contratos receberão o reforço, quanto já foi empenhado ou o custo efetivo dos serviços. Para medir o efeito da alteração, será preciso conferir a execução da dotação, os contratos de limpeza, as medições e os pagamentos posteriores."
+          ]
+        }
+      },
+      "humanReview": {"approvedBy": null, "approvedAt": null, "notes": "Decreto e anexos lidos integralmente nas páginas 96 a 99; não há imputação de irregularidade."}
+    },
+    {
+      "id": "jul26-goiania-do_20261014_000008883.pdf-85d6895bc931-56",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-14T19:42:00-03:00",
+      "source": {
+        "documentSha256": "31b9e13c4a28cd0b4da3986dd52ed430a9cf50b4d5db3a8bf89f61b1b96b133a",
+        "documentReference": "Diário Oficial de Goiânia nº 8.883, 14/10/2026, páginas 92 a 95; Decreto Orçamentário 227/2026"
+      },
+      "editorial": {
+        "mainAngle": "Goiânia abriu crédito suplementar de R$ 10 milhões para infraestrutura; a justificativa menciona contratação direta futura de serviços de iluminação pública pelo Consórcio Brilha Goiânia.",
+        "whyItMatters": "O orçamento foi reforçado para iluminação pública, mas o decreto sozinho não demonstra a contratação, a execução dos serviços ou desembolso.",
+        "headlineOptions": ["Goiânia reserva mais R$ 10 milhões para iluminação pública", "Decreto reforça em R$ 10 milhões orçamento da iluminação de Goiânia", "Crédito de R$ 10 milhões mira serviços do Consórcio Brilha Goiânia"],
+        "leadDirection": "Apresentar como crédito orçamentário e atribuir à exposição de motivos a indicação do Consórcio Brilha Goiânia.",
+        "storyStructure": ["Crédito e finalidade", "Origem da cobertura", "Contrato e execução ainda a verificar"],
+        "verifiedFacts": [
+          "O Decreto Orçamentário 227/2026 abre R$ 10 milhões para a Secretaria Municipal de Infraestrutura Urbana.",
+          "O art. 2º indica excesso de arrecadação na fonte 117 como cobertura.",
+          "A exposição de motivos afirma que os recursos se destinam a assegurar contratação direta de serviços técnicos especializados de iluminação pública a serem executados pelo Consórcio Brilha Goiânia.",
+          "O decreto foi publicado em 14/10/2026 e não contém extrato de contrato nem comprovante de despesa."
+        ],
+        "contextToFind": ["Ajuste e processo da contratação direta", "Saldo e execução anterior da iluminação pública", "Cronograma de serviços e pagamentos"],
+        "reportingQuestions": ["Qual instrumento contratará os serviços?", "O consórcio já executa esse objeto?", "Quais bairros e serviços estão previstos?"],
+        "peopleToHear": ["Secretaria Municipal de Infraestrutura Urbana", "Secretaria Municipal da Fazenda", "Consórcio Brilha Goiânia"],
+        "dataCrossChecks": ["Processo SEI 26.18.000003191-3", "Edital, contrato ou ato de contratação direta", "Empenhos, medições e pagamentos da fonte 117"],
+        "doNotState": ["Não afirmar que a contratação direta foi concluída.", "Não tratar o crédito como pagamento ao consórcio.", "Não identificar obra ou bairro não citado no ato."],
+        "publication": {
+          "promoteToStory": true,
+          "importance": 95,
+          "title": "Goiânia reserva mais R$ 10 milhões para iluminação pública",
+          "deck": "Crédito suplementar vem de excesso de arrecadação; justificativa cita serviços do Consórcio Brilha Goiânia, mas não comprova contratação ou pagamento.",
+          "paragraphs": [
+            "Goiânia abriu um crédito suplementar de R$ 10 milhões para a Secretaria Municipal de Infraestrutura Urbana. A exposição de motivos do Decreto Orçamentário nº 227/2026, publicado nesta quarta-feira (14), diz que o reforço pretende assegurar recursos para a contratação direta de serviços técnicos especializados de iluminação pública pelo Consórcio Brilha Goiânia.",
+            "Segundo o decreto, a cobertura do crédito vem de excesso de arrecadação na fonte 117 do orçamento municipal. O anexo destina o valor a uma programação da secretaria, mas não discrimina bairros, pontos de luz ou etapas do serviço. O processo administrativo citado é o SEI nº 26.18.000003191-3.",
+            "A abertura de crédito autoriza a despesa no orçamento; não demonstra que o município concluiu a contratação, emitiu empenho ou pagou o consórcio. A íntegra do processo, o instrumento contratual e os registros de execução serão necessários para acompanhar o destino dos R$ 10 milhões."
+          ]
+        }
+      },
+      "humanReview": {"approvedBy": null, "approvedAt": null, "notes": "Decreto e justificativa lidos nas páginas 92 a 95; contratação direta ainda não comprovada."}
+    },
+    {
+      "id": "jul26-goiania-do_20261014_000008883.pdf-9009fa85d2d3-73",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-14T19:45:00-03:00",
+      "source": {
+        "documentSha256": "31b9e13c4a28cd0b4da3986dd52ed430a9cf50b4d5db3a8bf89f61b1b96b133a",
+        "documentReference": "Diário Oficial de Goiânia nº 8.883, 14/10/2026, páginas 119 a 123; processo 26.29.000012349-8"
+      },
+      "editorial": {
+        "mainAngle": "Goiânia manteve multa à MCW após o recurso da empresa por não entregar 122 mil comprimidos de carbamazepina destinados à rede de urgência e emergência.",
+        "whyItMatters": "O ato identifica o medicamento, a quantidade e a cronologia do descumprimento; a falta de entrega pode afetar o abastecimento, mas o documento não comprova desassistência nem falta de estoque.",
+        "headlineOptions": ["Goiânia mantém multa após fornecedora deixar de entregar 122 mil comprimidos", "Recurso é negado em caso de remédio não entregue à Saúde de Goiânia", "Decisão confirma multa por falta de entrega de carbamazepina em Goiânia"],
+        "leadDirection": "Abrir com a decisão administrativa e a quantidade não entregue; informar que a multa é R$ 16.470, equivalente a 30% do empenho de R$ 54.900.",
+        "storyStructure": ["Decisão e medicamento", "Intimação e argumentos da empresa", "O que falta apurar sobre abastecimento e cobrança"],
+        "verifiedFacts": [
+          "O recurso da MCW Produtos Médicos e Hospitalares Ltda. foi negado e a multa de 30% do valor de R$ 54.900 foi mantida, equivalente a R$ 16.470.",
+          "O Empenho 0009, emitido em 04/03/2026, previa 122 mil comprimidos de carbamazepina 400 mg; a empresa foi intimada em 12/03/2026 e recebeu prazo de 20 dias corridos para entregar.",
+          "Segundo a decisão e os registros das unidades técnicas citados nela, não houve entrega relacionada ao empenho.",
+          "A empresa alegou pagamentos anteriores atrasados; a Prefeitura afirmou não haver comprovação de pagamento devido e vencido por mais de dois meses e rejeitou o pedido de substituir a multa por advertência.",
+          "A decisão diz que o medicamento é destinado a unidades de urgência e emergência, mas não informa estoque, compra substituta ou número de pacientes afetados."
+        ],
+        "contextToFind": ["Estoque de carbamazepina no período", "Outras aquisições e entregas substitutas", "Notificação de cobrança e eventual pagamento da multa"],
+        "reportingQuestions": ["Houve ruptura de estoque em alguma unidade?", "Outra fornecedora supriu os 122 mil comprimidos?", "A multa foi cobrada ou paga?"],
+        "peopleToHear": ["Secretaria Municipal de Saúde de Goiânia", "MCW Produtos Médicos e Hospitalares Ltda.", "Profissionais da assistência farmacêutica municipal"],
+        "dataCrossChecks": ["Pregão 90002/2025 e Ata de Registro de Preços 038/2025", "Empenho 0009 e processo 26.29.000012349-8", "Estoque, entregas substitutas e cobrança da multa"],
+        "doNotState": ["Não afirmar falta de remédio nas unidades ou prejuízo a pacientes sem dados de estoque e atendimento.", "Não afirmar que a multa foi recolhida.", "Não tratar a alegação de atraso de pagamento como fato comprovado."],
+        "publication": {
+          "promoteToStory": true,
+          "importance": 90,
+          "title": "Goiânia mantém multa após fornecedora deixar de entregar 122 mil comprimidos",
+          "deck": "Decisão sobre carbamazepina de 400 mg rejeita recurso da MCW e mantém penalidade de R$ 16,5 mil; ato não informa se houve desabastecimento.",
+          "paragraphs": [
+            "A Prefeitura de Goiânia manteve multa de R$ 16.470 à MCW Produtos Médicos e Hospitalares após negar recurso da empresa por não entregar 122 mil comprimidos de carbamazepina de 400 mg. A decisão, publicada no Diário Oficial desta quarta-feira (14), informa que o medicamento era destinado às unidades de urgência e emergência da rede municipal. O valor da penalidade corresponde a 30% do empenho de R$ 54.900; o ato não mostra que a multa já foi cobrada ou paga.",
+            "O empenho foi emitido em 4 de março de 2026. A fornecedora recebeu intimação em 12 de março, com prazo de 20 dias corridos para entregar os comprimidos. Segundo os registros técnicos citados na decisão, nenhum item desse empenho foi entregue. A empresa alegou que atrasos em pagamentos anteriores afetaram seu fluxo financeiro e impediram novos faturamentos. A Prefeitura rejeitou a justificativa por não encontrar comprovação de dívida vencida por mais de dois meses que autorizasse suspender o fornecimento.",
+            "A decisão manteve a multa e negou o pedido alternativo de advertência. Ela afirma que a falta de entrega poderia comprometer a assistência farmacêutica, mas não informa se houve ruptura de estoque, compra substituta ou pacientes afetados. Esses efeitos, assim como a cobrança da penalidade, dependem de apuração posterior."
+          ]
+        }
+      },
+      "humanReview": {"approvedBy": null, "approvedAt": null, "notes": "Decisão de recurso lida integralmente nas páginas 119 a 123; argumentos da empresa e da Prefeitura atribuídos."}
+    },
     {
       "id": "jul26-agm-114647-54315CD5-201",
       "status": "draft",
@@ -268,6 +395,7 @@
           "Não atribuir integralmente o financiamento ao FNDE apenas porque o projeto segue seu padrão."
         ],
         "publication": {
+          "importance": 98,
           "title": "Porangatu contrata conclusão de creche por R$ 2,72 milhões",
           "deck": "A HGC Construtora foi contratada para terminar a Escola Infantil Nossa Senhora da Piedade, conhecida como Creche da Rua do Ribeirão; o extrato não informa quando as vagas estarão disponíveis.",
           "paragraphs": [
