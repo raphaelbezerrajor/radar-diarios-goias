@@ -261,12 +261,13 @@ test("curadoria factual em rascunho entra na publicação sem aprovação redund
       reportingQuestions: ["Quanto será pago?", "Qual é o prazo?"],
       verifiedFacts: ["O contrato foi publicado."],
       doNotState: [],
-      publication: { title: "Novo título", deck: "Novo olho.", paragraphs: ["Lead.", "Contexto."], importance: 88 }
+      publication: { title: "Novo título", deck: "Novo olho.", paragraphs: ["Lead.", "Contexto."], importance: 88, city: "Cidade confirmada" }
     }
   };
   const curatedDraft = applyCuration(record, draft);
   assert.equal(curatedDraft.title, "Novo título");
   assert.equal(curatedDraft.importance, 88);
+  assert.equal(curatedDraft.city, "Cidade confirmada");
   assert.equal(curatedDraft.publicationMode, "curated_document_news");
   assert.equal(curatedDraft.curation.appliedAutomatically, true);
 
