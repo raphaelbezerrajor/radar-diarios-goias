@@ -160,6 +160,7 @@ export function validateEditorialBrief(brief = {}) {
   }
   if (brief.editorial?.publication?.promoteToStory !== undefined
     && typeof brief.editorial.publication.promoteToStory !== "boolean") issues.push("promote_to_story");
+  if (brief.editorial?.publication?.city !== undefined && clean(brief.editorial.publication.city).length < 3) issues.push("city");
   return { valid: issues.length === 0, issues };
 }
 
@@ -187,6 +188,7 @@ export function applyCuration(record = {}, brief = null) {
 
   return {
     ...record,
+    city: clean(publication.city) || record.city,
     recordType: promoteToStory ? "story" : record.recordType,
     prominence: promoteToStory ? "section" : record.prominence,
     importance: Number.isFinite(requestedImportance) && requestedImportance >= 0 && requestedImportance <= 100

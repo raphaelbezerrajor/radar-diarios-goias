@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-10-14T22:27:22.205Z",
+  "generated_at": "2026-10-15T13:33:39.456Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-10-14",
+    "to": "2026-10-15",
     "last_checked": {
-      "from": "2026-10-07",
-      "to": "2026-10-14"
+      "from": "2026-10-08",
+      "to": "2026-10-15"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 469,
-    "downloaded": 467,
+    "editions": 472,
+    "downloaded": 470,
     "failed_downloads": 2,
-    "extraction_pending": 469
+    "extraction_pending": 472
   },
   "daily_check_windows": [
     {
@@ -2351,22 +2351,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:114648",
+          "source_edition_id": "114648",
+          "edition_number": "3724",
+          "date": "2026-10-15",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114648_2026-10-14_93f20a96851ccc8238caec043a155d95.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/10/2026-10-15-3724.pdf",
+          "bytes": 1900168,
+          "sha256": "dc31e407c4c78b8647ddc4b41ee93d0ca1ac67ee07cdc9fc1076ad28ac21ccbb",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T22:27:14.990Z",
+      "checked_at": "2026-10-15T13:33:28.928Z",
       "range_checked": {
-        "from": "2026-10-07",
-        "to": "2026-10-14"
+        "from": "2026-10-08",
+        "to": "2026-10-15"
       },
       "summary": {
-        "editions_total": 120,
+        "editions_total": 121,
         "editions_in_checked_range": 7,
-        "downloaded": 118,
+        "downloaded": 119,
         "failed_downloads": 2,
-        "extraction_pending": 120,
+        "extraction_pending": 121,
         "first_date": "2026-06-01",
-        "last_date": "2026-10-14",
+        "last_date": "2026-10-15",
         "observed_upload_times": {
           "all": {
             "observations": 95,
@@ -4117,31 +4136,50 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "anapolis:24982",
+          "source_edition_id": "24982",
+          "edition_number": "4.049/2026",
+          "date": "2026-10-14",
+          "published_at": "2026-10-14 20:21:14",
+          "publication_timestamp_kind": "official_file_created_timestamp",
+          "extraordinary": false,
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/24982",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/26302/CBhosUO1yn5mbKCJ5QUhLeRlvo198qx6KN3zLUmy.pdf",
+          "local_path": "data/raw/municipal-diaries/anapolis/2026/10/2026-10-14-4.049-2026.pdf",
+          "bytes": 563445,
+          "sha256": "043a829d93b8112464d97c04f55d8f77acc66ced8dc4b0904d9899f95b7399df",
+          "last_modified": "Wed, 14 Oct 2026 23:21:17 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T22:27:16.239Z",
+      "checked_at": "2026-10-15T13:33:30.141Z",
       "range_checked": {
-        "from": "2026-10-07",
-        "to": "2026-10-14"
+        "from": "2026-10-08",
+        "to": "2026-10-15"
       },
       "summary": {
-        "editions_total": 90,
+        "editions_total": 91,
         "editions_in_checked_range": 4,
-        "downloaded": 90,
+        "downloaded": 91,
         "failed_downloads": 0,
-        "extraction_pending": 90,
+        "extraction_pending": 91,
         "first_date": "2026-06-01",
-        "last_date": "2026-10-13",
+        "last_date": "2026-10-14",
         "observed_upload_times": {
           "all": {
-            "observations": 90,
+            "observations": 91,
             "earliest": "01:41",
             "median": "21:16",
             "latest": "23:57"
           },
           "ordinary": {
-            "observations": 90,
+            "observations": 91,
             "earliest": "01:41",
             "median": "21:16",
             "latest": "23:57"
@@ -4149,9 +4187,9 @@
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 50,
+          "observations": 51,
           "earliest": "01:41",
-          "median": "20:56",
+          "median": "20:55",
           "latest": "23:31"
         }
       }
@@ -5849,14 +5887,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T22:27:16.888Z",
+      "checked_at": "2026-10-15T13:33:31.742Z",
       "range_checked": {
-        "from": "2026-10-07",
-        "to": "2026-10-14"
+        "from": "2026-10-08",
+        "to": "2026-10-15"
       },
       "summary": {
         "editions_total": 88,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 88,
         "failed_downloads": 0,
         "extraction_pending": 88,
@@ -7470,14 +7508,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T22:27:19.619Z",
+      "checked_at": "2026-10-15T13:33:33.058Z",
       "range_checked": {
-        "from": "2026-10-07",
-        "to": "2026-10-14"
+        "from": "2026-10-08",
+        "to": "2026-10-15"
       },
       "summary": {
         "editions_total": 83,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 83,
         "failed_downloads": 0,
         "extraction_pending": 83,
@@ -9186,22 +9224,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "senador-canedo:707",
+          "source_edition_id": "707",
+          "edition_number": "511",
+          "date": "2026-10-15",
+          "published_at": "2026-10-15T06:00:00.214Z",
+          "publication_timestamp_kind": "calendar_timestamp_not_upload_time",
+          "extraordinary": false,
+          "official_url": "https://diario.senadorcanedo.go.gov.br/diario/5b0tzdq510",
+          "file_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=15-10-2026",
+          "local_path": "data/raw/municipal-diaries/senador-canedo/2026/10/2026-10-15-511.pdf",
+          "bytes": 300823,
+          "sha256": "30218621214fdd7c6379a7d73322ab5e6934a9f312809446b8704f345967f92d",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-10-14T22:27:21.092Z",
+      "checked_at": "2026-10-15T13:33:34.448Z",
       "range_checked": {
-        "from": "2026-10-07",
-        "to": "2026-10-14"
+        "from": "2026-10-08",
+        "to": "2026-10-15"
       },
       "summary": {
-        "editions_total": 88,
+        "editions_total": 89,
         "editions_in_checked_range": 5,
-        "downloaded": 88,
+        "downloaded": 89,
         "failed_downloads": 0,
-        "extraction_pending": 88,
+        "extraction_pending": 89,
         "first_date": "2026-06-01",
-        "last_date": "2026-10-14",
+        "last_date": "2026-10-15",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,

@@ -1,8 +1,124 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-10-14T22:40:00Z",
+  "updatedAt": "2026-10-15T13:50:00Z",
   "briefs": [
+    {
+      "id": "jul26-agm-114648-102441D6-2",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-15T10:50:00-03:00",
+      "source": {
+        "documentSha256": "dc31e407c4c78b8647ddc4b41ee93d0ca1ac67ee07cdc9fc1076ad28ac21ccbb",
+        "documentReference": "Diário Municipal de Goiás nº 3724, 15/10/2026, página 1; aditivo do Contrato 056/2025"
+      },
+      "editorial": {
+        "mainAngle": "São Francisco de Goiás prorrogou por um ano o prazo de execução do contrato para construir 25 moradias sociais.",
+        "whyItMatters": "A prorrogação adia o prazo contratual de uma obra habitacional; o extrato não explica a causa do atraso nem informa quantas casas estão prontas.",
+        "headlineOptions": ["São Francisco de Goiás prorroga por um ano obra de 25 moradias sociais", "Prazo de construção de 25 casas populares é estendido até 2027 em São Francisco de Goiás", "Contrato de R$ 3,27 milhões para moradias sociais ganha novo prazo"],
+        "leadDirection": "Abrir com o novo período de execução, a quantidade de unidades e a empresa contratada; explicar que R$ 3,27 milhões é o valor total do contrato, não um acréscimo do aditivo.",
+        "storyStructure": ["Prazo e objeto da obra", "Valor contratual e empresa", "Andamento e justificativa ainda não divulgados"],
+        "verifiedFacts": [
+          "O município de São Francisco de Goiás publicou o primeiro termo aditivo de prorrogação do Contrato 056/2025 com a ACM Construtora Ltda. para a construção de 25 unidades habitacionais de interesse social.",
+          "O novo prazo de execução vai de 16/10/2026 a 16/10/2027.",
+          "O extrato informa R$ 3.270.000 como valor do contrato para a execução total do objeto, sem descrever acréscimo financeiro neste aditivo.",
+          "O ato é datado de 13/10/2026 e foi publicado no diário de 15/10/2026, página 1."
+        ],
+        "contextToFind": ["Cronograma original, medições e percentual de conclusão das casas", "Motivo da prorrogação", "Famílias selecionadas e previsão de entrega"],
+        "reportingQuestions": ["Por que o prazo original não foi suficiente?", "Quantas unidades estão concluídas?", "Quanto já foi liquidado e pago à construtora?"],
+        "peopleToHear": ["Prefeitura de São Francisco de Goiás", "ACM Construtora Ltda.", "Famílias inscritas no programa habitacional"],
+        "dataCrossChecks": ["Contrato 056/2025 e edital da contratação", "Medições da obra", "Empenhos, liquidações e pagamentos"],
+        "doNotState": ["Não tratar R$ 3,27 milhões como dinheiro adicional da prorrogação.", "Não afirmar abandono da obra ou atraso injustificado sem cronograma e justificativa.", "Não afirmar entrega das casas."],
+        "publication": {
+          "city": "São Francisco de Goiás",
+          "importance": 91,
+          "title": "São Francisco de Goiás prorroga por um ano obra de 25 moradias sociais",
+          "deck": "Contrato com a ACM Construtora, de R$ 3,27 milhões no total, agora prevê execução até outubro de 2027; extrato não informa quantas casas estão prontas.",
+          "paragraphs": [
+            "A Prefeitura de São Francisco de Goiás prorrogou por um ano o prazo de execução do contrato para construir 25 moradias de interesse social. O primeiro termo aditivo do Contrato nº 056/2025, publicado no Diário Municipal desta quinta-feira (15), estabelece o novo período de 16 de outubro de 2026 a 16 de outubro de 2027 para a ACM Construtora Ltda. realizar a obra.",
+            "O extrato informa R$ 3,27 milhões como valor do contrato para executar todas as unidades. Esse montante não é apresentado como acréscimo financeiro da prorrogação. O ato foi assinado em 13 de outubro, dois dias antes de sua publicação.",
+            "A publicação não traz o cronograma anterior, o motivo da extensão, o estágio de cada casa ou os pagamentos feitos à construtora. Esses registros são necessários para saber quando as famílias poderão receber as moradias e quanto da obra já foi executado."
+          ]
+        }
+      },
+      "humanReview": {"approvedBy": null, "approvedAt": null, "notes": "Extrato lido integralmente na página 1; cidade corrigida conforme identificação expressa do contratante."}
+    },
+    {
+      "id": "jul26-senador-canedo-707-61e187766cc5-26",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-15T10:52:00-03:00",
+      "source": {
+        "documentSha256": "30218621214fdd7c6379a7d73322ab5e6934a9f312809446b8704f345967f92d",
+        "documentReference": "Diário de Senador Canedo nº 511, 15/10/2026, páginas 27 e 28; 3º apostilamento do Contrato 03.11.14.001/2023"
+      },
+      "editorial": {
+        "mainAngle": "Apostilamento do empreendimento habitacional Campo das Flores I registra R$ 2,215 milhões já pagos de um reajuste contratual total de R$ 2,619 milhões.",
+        "whyItMatters": "O ato permite distinguir pagamento efetivo do saldo ainda previsto na obra habitacional e aponta ajustes de cálculo que precisam de conferência no contrato e nas medições.",
+        "headlineOptions": ["Senador Canedo registra R$ 2,2 milhões pagos em reajuste de obra habitacional", "Reajuste de empreendimento Campo das Flores I soma R$ 2,62 milhões", "Apostilamento detalha parcelas pagas e saldo de reajuste em Senador Canedo"],
+        "leadDirection": "Separar total do reajuste, valor já pago e saldo; deixar claro que se trata de reajuste do contrato existente, não preço integral da obra.",
+        "storyStructure": ["Valores do reajuste e pagamentos", "Índice e percentual físico da obra", "O que falta conferir nas medições"],
+        "verifiedFacts": [
+          "O terceiro apostilamento do Contrato 03.11.14.001/2023, empreendimento Campo das Flores I, registra reajuste pelo INCC-DI acumulado de outubro de 2023 a setembro de 2025.",
+          "O reajuste total indicado é R$ 2.618.749,63; R$ 2.215.224,35 foram pagos até a medição de abril de 2026 e R$ 403.525,28 são apontados como saldo a pagar.",
+          "O documento associa os pagamentos ao percentual físico acumulado de 88,82% e o saldo a 11,18% de execução física a partir de maio de 2026.",
+          "O ato registra R$ 391.860,94 pagos de janeiro a abril de 2026 e R$ 38.478,27 da NF 08 acima da parcela antes apostilada, com previsão de compensação, sem demonstrar prejuízo ou cobrança."
+        ],
+        "contextToFind": ["Valor e objeto integral do contrato habitacional", "Memória de cálculo do INCC-DI e anexos das medições", "Forma e conclusão da compensação anunciada"],
+        "reportingQuestions": ["Qual é o custo total atualizado do empreendimento?", "O saldo de R$ 403,5 mil já foi empenhado ou pago?", "Como serão compensados os valores indicados no apostilamento?"],
+        "peopleToHear": ["Secretaria Municipal de Habitação e Regularização Fundiária", "Riopar B3P SPE Ltda.", "Representantes das famílias beneficiárias"],
+        "dataCrossChecks": ["Contrato 03.11.14.001/2023 e apostilamentos anteriores", "Anexo I das medições e notas de empenho 2424/2025 e 1564/2026", "Liquidações e pagamentos após abril de 2026"],
+        "doNotState": ["Não confundir o reajuste com o preço integral do empreendimento.", "Não afirmar dano, superfaturamento ou pagamento indevido; o ato prevê compensação de parcela específica.", "Não afirmar conclusão ou entrega das unidades habitacionais."],
+        "publication": {
+          "importance": 93,
+          "title": "Senador Canedo registra R$ 2,2 milhões pagos em reajuste de obra habitacional",
+          "deck": "Apostilamento do Campo das Flores I aponta reajuste total de R$ 2,62 milhões e saldo de R$ 403,5 mil; valores dependem das medições e de compensação prevista no ato.",
+          "paragraphs": [
+            "A Prefeitura de Senador Canedo registrou R$ 2.215.224,35 já pagos como parte do reajuste do contrato do empreendimento habitacional Campo das Flores I. O terceiro apostilamento do ajuste, publicado no Diário Oficial desta quinta-feira (15), calcula o reajuste total em R$ 2.618.749,63 e aponta saldo de R$ 403.525,28 a pagar. Esses números se referem à correção do contrato existente, não ao custo integral das moradias.",
+            "O ato aplica o INCC-DI acumulado de outubro de 2023 a setembro de 2025 ao Contrato nº 03.11.14.001/2023, firmado com a Riopar B3P SPE Ltda. Segundo o documento, os pagamentos registrados até a medição de abril de 2026 correspondem a 88,82% da execução física considerada para o reajuste; os 11,18% restantes se referem às medições a partir de maio.",
+            "O apostilamento também reconhece R$ 391.860,94 pagos entre janeiro e abril de 2026 e R$ 38.478,27 da nota fiscal 08 acima do valor de reajuste antes apostilado, com previsão de compensação. A publicação não traz a memória completa das medições nem comprova que o saldo foi pago ou que a compensação ocorreu. Conferir esses anexos e o contrato integral é necessário para avaliar a conta final."
+          ]
+        }
+      },
+      "humanReview": {"approvedBy": null, "approvedAt": null, "notes": "Apostilamento lido nas páginas 27 e 28; texto limita-se aos valores e estágios expressos, sem imputação de irregularidade."}
+    },
+    {
+      "id": "jul26-agm-114648-99B4AC93-260",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-15T10:54:00-03:00",
+      "source": {
+        "documentSha256": "dc31e407c4c78b8647ddc4b41ee93d0ca1ac67ee07cdc9fc1076ad28ac21ccbb",
+        "documentReference": "Diário Municipal de Goiás nº 3724, 15/10/2026, página 69; aditivo da ARP 044/2025"
+      },
+      "editorial": {
+        "mainAngle": "Iporá renovou por 12 meses uma ata de preços de medicamentos da Bio Life, restabelecendo saldo registrado de R$ 5,13 milhões.",
+        "whyItMatters": "A ata mantém possibilidade de compras para unidades de saúde, mas valor registrado não é entrega nem pagamento.",
+        "headlineOptions": ["Iporá renova ata de medicamentos com saldo de R$ 5,13 milhões", "Registro de preços de remédios é estendido por mais um ano em Iporá", "Saúde de Iporá prorroga ata de fornecimento com a Bio Life"],
+        "leadDirection": "Informar fornecedor, prazo e saldo restaurado; diferenciar ata de contrato ou gasto realizado.",
+        "storyStructure": ["Renovação e valor", "Vigência e uso previsto", "Compras e entregas a confirmar"],
+        "verifiedFacts": ["O Fundo Municipal de Saúde de Iporá prorrogou a ARP 044/2025 com a Bio Life Distribuidora Hospitalar Ltda. para aquisição de medicamentos.", "O saldo da ata foi restabelecido em R$ 5.134.804,25 para o período de 19/09/2026 a 18/09/2027.", "O extrato é datado de 17/09/2026 e foi publicado no Diário Municipal de 15/10/2026."],
+        "contextToFind": ["Lista de medicamentos e preços unitários", "Compras efetivamente realizadas sob a ata", "Motivo da publicação um mês após a data do extrato"],
+        "reportingQuestions": ["Que itens e quantidades compõem o saldo?", "Quanto foi comprado no primeiro ano da ata?", "Por que o extrato saiu no diário de outubro?"],
+        "peopleToHear": ["Fundo Municipal de Saúde de Iporá", "Bio Life Distribuidora Hospitalar Ltda."],
+        "dataCrossChecks": ["Pregão 44/2025 e ARP 044/2025", "Ordens de fornecimento, empenhos e notas fiscais", "Pagamentos registrados no portal da transparência"],
+        "doNotState": ["Não tratar o saldo registrado como compra, entrega ou pagamento.", "Não somar automaticamente os saldos de outras empresas da mesma ata como valor deste termo."],
+        "publication": {
+          "importance": 88,
+          "title": "Iporá renova ata de medicamentos com saldo de R$ 5,13 milhões",
+          "deck": "Registro de preços com a Bio Life vale até setembro de 2027; o saldo autorizado para futuras compras não demonstra despesa realizada.",
+          "paragraphs": [
+            "O Fundo Municipal de Saúde de Iporá prorrogou por mais 12 meses a ata de registro de preços nº 044/2025 com a Bio Life Distribuidora Hospitalar Ltda. para aquisição de medicamentos destinados às unidades da rede municipal. O extrato, publicado no Diário Municipal desta quinta-feira (15), restabelece o saldo da ata em R$ 5.134.804,25 para o novo período, de 19 de setembro de 2026 a 18 de setembro de 2027.",
+            "A ata resulta do Pregão Eletrônico nº 44/2025. O documento é datado de 17 de setembro, quase um mês antes da publicação no diário. Na mesma página aparecem renovações com outras fornecedoras, mas o valor de R$ 5,13 milhões corresponde especificamente à Bio Life.",
+            "Registro de preços permite futuras contratações nas condições estabelecidas, sem provar que a prefeitura comprou, recebeu ou pagou todos os medicamentos. A relação de itens e preços, as ordens de fornecimento, os empenhos e as entregas mostrarão o uso efetivo da ata."
+          ]
+        }
+      },
+      "humanReview": {"approvedBy": null, "approvedAt": null, "notes": "Extrato da Bio Life lido na página 69 e separado dos aditivos de outras empresas."}
+    },
     {
       "id": "jul26-goiania-do_20261014_000008883.pdf-1e7718254e41-57",
       "status": "draft",
