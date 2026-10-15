@@ -1,8 +1,116 @@
 {
   "schemaVersion": 1,
   "promptVersion": "pauteiro-curadoria-v1",
-  "updatedAt": "2026-10-15T13:50:00Z",
+  "updatedAt": "2026-10-15T20:42:00Z",
   "briefs": [
+    {
+      "id": "jul26-agm-121453-4D49BE8C-9",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-15T17:36:00-03:00",
+      "source": {
+        "documentSha256": "d3cdb150c8d4176f8cbd824fc655d72f011130b8fa71d4ad532856dc29ea0b22",
+        "documentReference": "Diário Municipal de Goiás nº 3724a, edição extraordinária de 15/10/2026, páginas 3 e 4; Lei 2.532/2026"
+      },
+      "editorial": {
+        "mainAngle": "Lei de Trindade assegura a alunos autistas o uso de abafadores de ruído e outros recursos de regulação sensorial em escolas públicas e privadas.",
+        "whyItMatters": "A regra alcança a permanência e a participação do estudante em sala; implementação, orientação das escolas e oferta dos equipamentos ainda precisam ser apuradas.",
+        "headlineOptions": ["Trindade garante uso de abafadores de ruído por alunos autistas nas escolas", "Lei assegura recursos de regulação sensorial a estudantes autistas em Trindade", "Escolas de Trindade não podem restringir aluno autista pelo uso de abafadores"],
+        "leadDirection": "Abrir com o direito, o alcance nas redes pública e privada e a data de publicação; esclarecer que a lei não obriga o município a fornecer os equipamentos.",
+        "storyStructure": ["Direito e escolas abrangidas", "Documentação e vedação de constrangimento", "Como será implementado e o que falta saber"],
+        "verifiedFacts": ["A Lei 2.532, de 13/10/2026, foi publicada em 15/10/2026 e entra em vigor na data da publicação.", "Alunos com diagnóstico de TEA podem usar protetores auriculares, abafadores e recursos de regulação sensorial em instituições públicas e privadas de Trindade.", "As escolas devem assegurar que o uso não cause discriminação, constrangimento ou restrição de participação.", "O exercício do direito pode ocorrer mediante laudo, relatório multiprofissional ou outro documento comprobatório."],
+        "contextToFind": ["Como as escolas serão orientadas e fiscalizadas", "Se haverá aquisição ou distribuição de equipamentos", "Experiências de alunos e famílias nas redes municipal e privada"],
+        "reportingQuestions": ["Como famílias farão valer o direito em caso de recusa?", "Haverá treinamento para equipes escolares?", "Quem fornecerá os dispositivos?"],
+        "peopleToHear": ["Secretaria Municipal de Educação", "Conselho Municipal de Educação", "Famílias e organizações de pessoas autistas"],
+        "dataCrossChecks": ["Texto integral da Lei 2.532/2026", "Normas municipais de educação inclusiva", "Eventuais orientações e gastos posteriores"],
+        "doNotState": ["Não afirmar que o município fornecerá abafadores; a lei não cria essa obrigação expressa.", "Não afirmar implementação efetiva ou mudança já observada nas escolas."],
+        "publication": {
+          "importance": 91,
+          "promoteToStory": true,
+          "title": "Trindade garante uso de abafadores de ruído por alunos autistas nas escolas",
+          "deck": "Lei publicada em edição extraordinária vale para instituições públicas e privadas e proíbe constrangimento ou restrição de participação pelo uso dos dispositivos.",
+          "paragraphs": [
+            "Alunos diagnosticados com transtorno do espectro autista (TEA) passaram a ter o direito de usar abafadores de ruído, protetores auriculares e outros recursos de regulação sensorial nas escolas públicas e privadas de Trindade. A Lei nº 2.532, publicada na edição extraordinária do Diário Municipal desta quinta-feira (15), entrou em vigor na mesma data.",
+            "O texto diz que os equipamentos devem ajudar a reduzir os efeitos da hipersensibilidade auditiva e sensorial durante a permanência na escola. As instituições não podem usar o dispositivo como motivo para discriminar, constranger ou restringir a participação do estudante nas atividades. O direito pode ser exercido com laudo médico, relatório multiprofissional ou outro documento que comprove o diagnóstico.",
+            "A lei prevê que profissionais da educação poderão receber orientações e que o município poderá promover campanhas de conscientização. Não estabelece, porém, que a prefeitura ou as escolas fornecerão os equipamentos. Ainda é necessário saber como as unidades serão orientadas, como as famílias poderão comunicar uma recusa e se haverá medidas de acompanhamento da aplicação da norma."
+          ]
+        }
+      },
+      "humanReview": {"approvedBy": null, "approvedAt": null, "notes": "Lei lida integralmente nas páginas 3 e 4; nenhum efeito prático presumido além do texto legal."}
+    },
+    {
+      "id": "jul26-agm-121453-44C05D32-7",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-15T17:42:00-03:00",
+      "source": {
+        "documentSha256": "d3cdb150c8d4176f8cbd824fc655d72f011130b8fa71d4ad532856dc29ea0b22",
+        "documentReference": "Diário Municipal de Goiás nº 3724a, edição extraordinária de 15/10/2026, página 3; Lei 2.530/2026"
+      },
+      "editorial": {
+        "mainAngle": "Lei de Trindade veda o uso de recursos municipais para contratar apresentações que façam apologia a crimes, violência ou exploração sexual.",
+        "whyItMatters": "A norma altera as condições de contratação e patrocínio de eventos culturais pelo município, mas não informa critérios de avaliação ou casos já atingidos.",
+        "headlineOptions": ["Trindade proíbe contratar com verba pública shows que façam apologia a crimes", "Lei de Trindade impõe restrições a apresentações pagas pelo município", "Contratos de eventos de Trindade terão cláusula contra apologia a crimes"],
+        "leadDirection": "Descrever a vedação e seu alcance a eventos financiados ou apoiados pelo município; não atribuir conduta a artistas específicos.",
+        "storyStructure": ["Nova vedação e financiamento público", "Cláusula contratual e consequências previstas", "Critérios e aplicação concreta ainda não definidos"],
+        "verifiedFacts": ["A Lei 2.530, de 13/10/2026, foi publicada em 15/10/2026 e entrou em vigor nessa data.", "O texto veda contratação direta ou indireta com recursos municipais de apresentações que promovam, incentivem ou façam apologia ao crime organizado, tráfico, drogas ilícitas, exploração sexual, prostituição, violência ou práticas criminosas.", "A vedação abrange eventos promovidos, patrocinados, apoiados ou financiados total ou parcialmente pelo município.", "Contratos deverão incluir cláusula de observância, e o descumprimento poderá levar a rescisão e sanções conforme a legislação."],
+        "contextToFind": ["Critérios técnicos para avaliar apresentações", "Editais, contratos e eventos que precisarão da nova cláusula", "Eventual regulamentação e aplicação futura"],
+        "reportingQuestions": ["Quem avaliará o conteúdo das apresentações?", "A prefeitura pretende regulamentar o procedimento?", "Qual será o direito de defesa em caso de rescisão?"],
+        "peopleToHear": ["Prefeitura de Trindade", "Secretaria de Cultura", "Representantes de artistas e produtores culturais"],
+        "dataCrossChecks": ["Lei 2.530/2026 e futuros contratos de eventos", "Editais e despesas de eventos culturais", "Normas de contratação e de liberdade de expressão aplicáveis"],
+        "doNotState": ["Não dizer que shows foram cancelados ou artistas punidos; a lei não aponta casos.", "Não afirmar que a norma foi julgada constitucional ou inconstitucional.", "Não confundir vedação contratual com proibição geral de apresentações privadas."],
+        "publication": {
+          "importance": 90,
+          "promoteToStory": true,
+          "title": "Trindade proíbe contratar com verba pública shows que façam apologia a crimes",
+          "deck": "Lei alcança eventos financiados ou apoiados pelo município e exige cláusula nos contratos; ato não identifica artistas ou apresentações afetados.",
+          "paragraphs": [
+            "Trindade passou a vedar a contratação, com recursos municipais, de shows e outras apresentações que promovam, incentivem ou façam apologia ao crime organizado, ao tráfico, a drogas ilícitas, à exploração sexual, à violência ou a outras práticas criminosas. A Lei nº 2.530, publicada na edição extraordinária do Diário Municipal desta quinta-feira (15), alcança contratações diretas e indiretas do poder público.",
+            "A regra também se aplica a eventos promovidos, patrocinados, apoiados ou financiados, mesmo parcialmente, pelo município. Os contratos deverão conter cláusula de observância da lei. Em caso de descumprimento, o texto prevê a possibilidade de rescisão, penalidades e impedimento de nova contratação, conforme a legislação vigente.",
+            "A lei entrou em vigor com a publicação, mas não identifica artistas, contratos ou apresentações já afetados e não detalha quem avaliará o conteúdo das atrações. Esses critérios, o procedimento para eventual sanção e a aplicação nos próximos editais ainda precisam ser esclarecidos pela prefeitura. A norma trata do uso de dinheiro municipal, não de uma proibição geral de shows privados."
+          ]
+        }
+      },
+      "humanReview": {"approvedBy": null, "approvedAt": null, "notes": "Lei lida integralmente na página 3; sem imputar apologia a artistas ou eventos determinados."}
+    },
+    {
+      "id": "jul26-agm-121453-0C3E281C-6",
+      "status": "draft",
+      "promptVersion": "pauteiro-curadoria-v1",
+      "model": "ChatGPT",
+      "createdAt": "2026-10-15T17:38:00-03:00",
+      "source": {
+        "documentSha256": "d3cdb150c8d4176f8cbd824fc655d72f011130b8fa71d4ad532856dc29ea0b22",
+        "documentReference": "Diário Municipal de Goiás nº 3724a, edição extraordinária de 15/10/2026, páginas 2 e 3; Lei 2.529/2026"
+      },
+      "editorial": {
+        "mainAngle": "Trindade instituiu programa de apoio emocional e orientação a pais e cuidadores de pessoas autistas, mas a lei não informa início, equipe ou orçamento próprio.",
+        "whyItMatters": "As famílias podem passar a contar com grupos de apoio e encaminhamentos, desde que o município organize a execução prevista na lei.",
+        "headlineOptions": ["Trindade cria programa de apoio a pais e cuidadores de pessoas autistas", "Lei prevê acolhimento e orientação a famílias de pessoas autistas em Trindade", "Novo programa de Trindade mira desgaste emocional de cuidadores de pessoas autistas"],
+        "leadDirection": "Apresentar o programa e as ações facultativas, sem dizer que atendimento já foi iniciado.",
+        "storyStructure": ["Programa e público atendido", "Ações possíveis e locais previstos", "Execução, equipe e recursos ainda desconhecidos"],
+        "verifiedFacts": ["A Lei 2.529, de 13/10/2026, foi publicada em 15/10/2026 e entrou em vigor nessa data.", "O programa se destina a pais e cuidadores de pessoas com TEA.", "A prefeitura poderá desenvolver atendimento psicológico, grupos de apoio, orientação social e encaminhamento a serviços especializados.", "A lei cita unidades de saúde, CRAS, escolas e outros espaços públicos como locais possíveis, sem estabelecer cronograma ou verba específica."],
+        "contextToFind": ["Regulamentação, cronograma e equipe", "Rede atual de apoio a cuidadores", "Dotação e serviços que efetivamente serão oferecidos"],
+        "reportingQuestions": ["Quando o programa começará a atender?", "Como será feito o acesso das famílias?", "Há psicólogos e orçamento disponíveis?"],
+        "peopleToHear": ["Prefeitura de Trindade", "Secretarias municipais de Saúde e Assistência Social", "Famílias de pessoas com TEA"],
+        "dataCrossChecks": ["Regulamentação e planos das secretarias", "Orçamento e execução financeira", "Rede de atendimento já existente"],
+        "doNotState": ["Não afirmar que o atendimento psicológico já está disponível.", "Não afirmar criação de vagas, centros ou dotação específica que a lei não descreve."],
+        "publication": {
+          "importance": 85,
+          "promoteToStory": true,
+          "title": "Trindade cria programa de apoio a pais e cuidadores de pessoas autistas",
+          "deck": "Lei prevê acolhimento, grupos e orientação; prefeitura ainda não informa no ato quando os atendimentos começarão nem como serão financiados.",
+          "paragraphs": [
+            "Trindade instituiu um programa municipal para apoiar pais e cuidadores de pessoas com transtorno do espectro autista (TEA). A Lei nº 2.529, publicada na edição extraordinária do Diário Municipal desta quinta-feira (15), prevê acolhimento, orientação e ações voltadas a reduzir o esgotamento emocional de quem cuida, mas não informa uma data de início dos atendimentos.",
+            "O texto autoriza a prefeitura a desenvolver atendimento psicológico individual ou em grupo, rodas de conversa, palestras, orientação social e encaminhamentos a serviços especializados. As ações poderão ocorrer em unidades de saúde, centros de assistência social, escolas e outros espaços públicos. A lei também permite parcerias com universidades, entidades e profissionais especializados.",
+            "A norma entrou em vigor com a publicação, mas não cria uma equipe, abre um serviço específico ou reserva um valor próprio para o programa. Para saber o que estará disponível às famílias, ainda faltam a definição das atividades, dos locais de atendimento, do cronograma e dos recursos que serão usados."
+          ]
+        }
+      },
+      "humanReview": {"approvedBy": null, "approvedAt": null, "notes": "Lei lida integralmente nas páginas 2 e 3; execução futura é tratada como pendente."}
+    },
     {
       "id": "jul26-agm-114648-102441D6-2",
       "status": "draft",
