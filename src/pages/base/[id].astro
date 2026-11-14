@@ -15,7 +15,7 @@ export function getStaticPaths() {
 
 const { record } = Astro.props;
 const imageSrc = withBase(record.image?.src);
-const hasUsefulImage = Boolean(imageSrc && record.image?.kind !== "fallback");
+const hasSourcePage = Boolean(imageSrc && record.image?.kind === "source-page");
 const isStory = record.recordType === "story";
 const isDocumentNews = record.publicationMode === "automatic_document_news";
 const isRepositoryDocument = record.publicationMode === "repository_record";
@@ -40,12 +40,8 @@ if (isStory) {
       dataPublicacao: record.publishedAt,
       dataAtualizacao: record.updatedAt || record.publishedAt,
       autor: "Pauteiro",
-      imagem: hasUsefulImage ? {
-        url: new URL(imageSrc, Astro.site).toString(),
-        alt: record.image?.alt,
-        credito: record.image?.credit
-      } : null,
-      fontes: record.sourceUrl ? [{ url: record.sourceUrl }] : []
+      imagem: null,
+      fontes: [record.sourceUrl, ...(record.supportingSources || []).map((source) => source.url)].filter(Boolean).map((url) => ({ url }))
     }
   }));
 }
@@ -71,17 +67,6 @@ if (isStory) {
             <strong>Publicado pelo Pauteiro</strong>
             <span>{record.publishedAt ? `Matéria publicada em ${formatDate(record.publishedAt)} · ` : ""}Data do ato/documento: {formatDate(record.date)}</span>
           </div>
-        )}
-        {hasUsefulImage && (
-          <figure class="detail-figure">
-            <img class="detail-image" src={imageSrc} alt={record.image?.alt || record.title} decoding="async" />
-            {(record.image?.credit || record.image?.caption) && (
-              <figcaption>
-                {record.image?.caption && <span>{record.image.caption}</span>}
-                {record.image?.credit && <small>Crédito: {record.image.credit}</small>}
-              </figcaption>
-            )}
-          </figure>
         )}
         {record.summary && !record.paragraphs?.length && <p class="detail-summary">{record.summary}</p>}
         {record.keyFindings?.length ? (
@@ -152,7 +137,7 @@ if (isStory) {
           <span>{record.sourceLabel}</span>
           <small>Data do ato: {formatDate(record.date)}</small>
           {isStory && record.publishedAt && <small>Publicação no Pauteiro: {formatDate(record.publishedAt)}</small>}
-          {isStory && <small>Autoria editorial: Redação Pauteiro</small>}
+          {isStory && <small>Produção editorial: Pauteiro · agência de notícias documentais</small>}
           {isStory && <small>Estado editorial: publicada · fonte oficial</small>}
           {record.processNumber && <small>Processo: {record.processNumber}</small>}
           {isRepositoryDocument && <small>Estado editorial: repositório · sem destaque noticioso</small>}
@@ -175,6 +160,12 @@ if (isStory) {
           {record.sourceUrl && (
             <a class="button-primary" href={record.sourceUrl} target="_blank" rel="noreferrer">{record.sourceActionLabel || "Abrir fonte original"} ↗</a>
           )}
+          {hasSourcePage && (
+            <a class="button-secondary" href={imageSrc} target="_blank" rel="noreferrer" aria-label="Abrir reprodução da página usada como fonte">Conferir página citada ↗</a>
+          )}
+          {(record.supportingSources || []).map((source) => (
+            <a class="button-secondary" href={source.url} target="_blank" rel="noreferrer">{source.label} ↗</a>
+          ))}
           {record.processUrl && (
             <a class="button-secondary" href={record.processUrl} target="_blank" rel="noreferrer">Consultar processo completo ↗</a>
           )}

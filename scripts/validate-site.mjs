@@ -20,6 +20,7 @@ const timeline = await readFile(path.join(buildRoot, "linha-do-tempo", "index.ht
 const july = await readFile(path.join(buildRoot, "julho", "index.html"), "utf8");
 const searchPage = await readFile(path.join(buildRoot, "busca", "index.html"), "utf8");
 const checkedStory = await readFile(path.join(buildRoot, "base", "trindade-noticia-shows-festival-gastronomico-2026", "index.html"), "utf8");
+const checkedSourcePage = await readFile(path.join(buildRoot, "base", "julho-documento-goiania-8886-mutirama-contrato-emergencial-510-milhoes", "index.html"), "utf8");
 const checkedActNews = await readFile(path.join(buildRoot, "base", "trindade-ato-agm-106613-e4566c23-ccf266959c8d", "index.html"), "utf8");
 const ids = new Set(search.records.map((record) => record.id));
 const trindadeCount = search.records.filter((record) => record.city === "Trindade").length;
@@ -33,7 +34,9 @@ assert(summary.metrics.trindadeActs === 2919, "A base deveria preservar os 2.919
 assert(gzipSync(defaultShard).byteLength < 1_200_000, "O recorte padrão ficou pesado demais para celular.");
 assert(home.includes("PAUTEIRO"), "A identidade principal não aparece na capa.");
 assert(home.includes("Últimas notícias") && home.includes('aria-label="Outras notícias em destaque"'), "A hierarquia jornalística não aparece na capa.");
-assert(platform.includes("Plataforma editorial modular"), "A página da plataforma não foi renderizada.");
+assert(home.includes("Agência de notícias documentais"), "A capa não apresenta o Pauteiro como agência documental.");
+assert(!home.includes('class="hero-image"') && !home.includes('class="story-media"'), "O PDF voltou a ser usado como foto na capa.");
+assert(platform.includes("Uma agência organizada em nove etapas"), "A página da agência não foi renderizada.");
 assert(platform.includes("Publicação") && platform.includes("Matérias documentais verificadas entram diariamente"), "A publicação documental não aparece como ativa.");
 assert(trindade.includes("oito anos"), "A página de Trindade não explica o horizonte de cobertura.");
 assert(trindade.includes("Tudo de Trindade, organizado por área"), "Os módulos municipais de Trindade não aparecem.");
@@ -42,7 +45,9 @@ assert(july.includes("O mais recente sempre vem primeiro.") && july.includes("da
 assert(searchPage.includes("data-search-root"), "A busca pública não foi renderizada.");
 assert(checkedStory.includes("Notícia documental") && checkedStory.includes("Publicado pelo Pauteiro"), "O acervo já publicado não recebeu a apresentação jornalística.");
 assert((checkedStory.includes('"@type":"NewsArticle"') || checkedStory.includes('"@type":"Article"')) && checkedStory.includes('"@type":"BreadcrumbList"'), "Os schemas editoriais não foram renderizados.");
-assert(checkedStory.includes("Crédito: Trindade Aberta"), "O crédito da imagem não aparece na matéria checada.");
+assert(!checkedStory.includes('class="detail-figure"'), "A matéria voltou a exibir imagem documental como foto.");
+assert(checkedStory.includes("Abrir fonte original"), "A matéria não oferece o documento original.");
+assert(checkedSourcePage.includes("Conferir página citada") && checkedSourcePage.includes("do_20261019_000008886.pdf"), "A página citada ou o PDF original não estão acessíveis.");
 assert(checkedStory.match(/Dois extratos de contratos artísticos publicados pelo Município/g)?.length === 1, "A matéria checada repete o resumo no corpo.");
 assert(checkedActNews.includes("Documento no repositório"), "O ato burocrático não foi separado do noticiário.");
 assert(checkedActNews.includes("Estado editorial: repositório"), "O ato burocrático não foi preservado corretamente no repositório.");

@@ -34,7 +34,7 @@ const groups = Object.entries(
             <span>{stories.length} {stories.length === 1 ? "notícia" : "notícias"}</span>
           </header>
           <div class="timeline-stories">
-            {stories.map((record) => <StoryCard record={record} compact={true} imageMode="auto" />)}
+            {stories.map((record) => <StoryCard record={record} compact={true} />)}
           </div>
         </section>
       ))}

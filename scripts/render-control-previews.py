@@ -17,6 +17,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "trindade" / "control-news-2026.json"
+OVERRIDES_PATH = ROOT / "data" / "editorial" / "story-overrides.json"
 MANIFEST_PATH = ROOT / "data" / "trindade" / "source-previews.json"
 OUTPUT_DIR = ROOT / "public" / "assets" / "sources" / "control"
 
@@ -77,12 +78,30 @@ def main() -> None:
     failures = []
 
     selected = [item for item in payload.get("items", []) if not args.record_id or item["id"] in args.record_id]
+    if args.record_id:
+        overrides = json.loads(OVERRIDES_PATH.read_text(encoding="utf-8"))
+        selected.extend(
+            {
+                "id": entry["id"],
+                "local_path": entry["sourceLocalPath"],
+                "document_sha256": entry["sourceHash"],
+                "preview_page": entry["previewPage"],
+                "official_url": entry["sourceUrl"],
+            }
+            for entry in overrides.get("stories", [])
+            if entry.get("kind") == "new"
+            and entry.get("id") in args.record_id
+            and entry.get("sourceLocalPath")
+            and entry.get("previewPage")
+        )
     missing = set(args.record_id) - {item["id"] for item in selected}
     if missing:
         raise ValueError(f"Unknown record IDs: {sorted(missing)}")
     for item in selected:
         try:
-            pdf_path = source_root / item["local_path"]
+            pdf_path = (source_root / item["local_path"]).resolve()
+            if not pdf_path.is_relative_to(source_root):
+                raise ValueError("source PDF must stay inside the collection root")
             contents = pdf_path.read_bytes()
             source_hash = digest(contents)
             if source_hash != item["document_sha256"]:

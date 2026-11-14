@@ -28,6 +28,10 @@ for (const hold of publicationHolds.items || []) {
   const record = records.find((item) => item.id === hold.id);
   assert(source?.document_sha256 === hold.documentSha256, `Fonte alterada no bloqueio editorial: ${hold.id}.`);
   assert(record?.recordType === "record", `Pauta sob bloqueio editorial foi publicada como notícia: ${hold.id}.`);
+  if (hold.archiveCorrection) {
+    assert(record.title === hold.archiveCorrection.title, `Correção de acervo não aplicada: ${hold.id}.`);
+    assert(record.deck === hold.archiveCorrection.deck, `Olho corrigido não aplicado: ${hold.id}.`);
+  }
 }
 const replacedDocumentIds = new Set((editedDocumentNews.items || []).map((item) => item.origin_item_id).filter(Boolean));
 assert((editedDocumentNews.items || []).filter((item) => item.origin_item_id).every((item) =>

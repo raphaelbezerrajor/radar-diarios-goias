@@ -3,6 +3,7 @@ import { constants } from "node:fs";
 import path from "node:path";
 import process from "node:process";
 import { createHash } from "node:crypto";
+import { gzipSync } from "node:zlib";
 
 const configuredSource = process.argv[2] || process.env.TRINDADE_DATA_DIR;
 if (!configuredSource) {
@@ -99,6 +100,12 @@ await mkdir(targetDir, { recursive: true });
 for (const file of files) {
   await copyFile(path.join(sourceDir, file), path.join(targetDir, file));
 }
+
+// O corpus integral supera o limite de um blob Git. A cópia JSON continua
+// disponível localmente; o repositório guarda a mesma base em gzip sem perdas.
+const corpusFile = "july-document-news-2026.json";
+const corpus = await readFile(path.join(targetDir, corpusFile));
+await writeFile(path.join(targetDir, `${corpusFile}.gz`), gzipSync(corpus, { level: 9 }));
 
 const manifest = {
   schemaVersion: 1,

@@ -80,7 +80,7 @@ const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
       <p class="july-result-count" data-july-count>{compactNumber(july.total)} notícias</p>
 
       <div class="july-list" data-july-list>
-        {latestStories.map((record) => <StoryCard record={record} compact={true} showSummary={false} imageMode="hide" />)}
+        {latestStories.map((record) => <StoryCard record={record} compact={true} showSummary={false} />)}
       </div>
 
       <div class="july-load">

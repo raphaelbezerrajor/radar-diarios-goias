@@ -350,6 +350,7 @@ function normalizeJulyDocumentNews(item, preview) {
     sourceFamily: item.source_name || "Documento oficial",
     sourceLabel: item.source_label || item.public_body || "Fonte oficial",
     sourceUrl: item.official_url || item.source_landing_url || null,
+    supportingSources: item.supporting_sources || [],
     sourceActionLabel: item.source_action_label || null,
     processNumber: item.process_number || null,
     processUrl: item.process_url || null,
@@ -622,7 +623,19 @@ async function main() {
         throw new Error(`Hash divergente no bloqueio editorial ${item.id}.`);
       }
       const safeItem = hold ? { ...item, importance: 0, prominence: "archive" } : item;
-      return normalizeJulyDocumentNews(safeItem, previewByRecord.get(item.id));
+      const record = normalizeJulyDocumentNews(safeItem, previewByRecord.get(item.id));
+      const correction = hold?.archiveCorrection;
+      if (!correction) return record;
+      if (!correction.title || !correction.deck || !Array.isArray(correction.paragraphs) || correction.paragraphs.length < 2) {
+        throw new Error(`Correção de acervo incompleta: ${item.id}.`);
+      }
+      return {
+        ...record,
+        title: correction.title,
+        deck: correction.deck,
+        summary: correction.paragraphs.join(" "),
+        paragraphs: correction.paragraphs
+      };
     });
   const normalizedControlNews = (controlNews.items || [])
     .filter((item) => item.editorial_status !== "needs_review")
@@ -654,7 +667,8 @@ async function main() {
     String(julyDocumentNews.generated_at || "").slice(0, 10),
     julyDocumentNews.period?.to,
     String(controlNews.generated_at || "").slice(0, 10),
-    controlNews.period?.to
+    controlNews.period?.to,
+    ...newEditorialNews.map((item) => item.publishedAt || item.date).filter(Boolean)
   ].filter(Boolean).sort().at(-1);
   // A build timestamp is not the date on which an individual story was
   // published. Preserve only dates explicitly recorded by the editorial flow.

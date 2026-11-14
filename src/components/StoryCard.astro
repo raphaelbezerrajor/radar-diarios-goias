@@ -1,25 +1,12 @@
 ---
 import { formatDate, formatCurrency, withBase } from "../lib/format.js";
 
-const { record, compact = false, showSummary = true, imageMode = "auto" } = Astro.props;
-const hasImage = Boolean(record.image?.src);
-const hasUsefulImage = hasImage && record.image?.kind !== "fallback";
-const shouldShowImage = imageMode === "show"
-  ? hasImage
-  : imageMode === "hide"
-    ? false
-    : hasUsefulImage;
-const imageSrc = shouldShowImage ? withBase(record.image?.src) : "";
+const { record, compact = false, showSummary = true } = Astro.props;
 const storyHref = withBase(record.path);
 const actionLabel = record.recordType === "story" ? "Ler matéria" : "Ler registro";
 ---
 
-<article class:list={["story-card", compact && "is-compact", !shouldShowImage && "is-text-only"]}>
-  {shouldShowImage ? (
-    <a class="story-media" href={storyHref} aria-label={`Abrir: ${record.title}`}>
-      <img src={imageSrc} alt={record.image?.alt || record.title} loading="lazy" decoding="async" />
-    </a>
-  ) : null}
+<article class:list={["story-card", compact && "is-compact", "is-text-only"]}>
   <div class="story-body">
     <div class="story-kickers">
       <span class="pill">{record.type}</span>

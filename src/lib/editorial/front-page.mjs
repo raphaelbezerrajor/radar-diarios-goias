@@ -39,7 +39,12 @@ export function frontPageScore(item, latestDate) {
 }
 
 export function rankFrontPageStories(items = []) {
-  const eligible = items.filter((item) => item?.recordType === "story" && item?.date);
+  const eligible = items.filter((item) =>
+    item?.recordType === "story"
+    && item?.date
+    // A manchete automática interrompida pode continuar no acervo, mas não é texto de capa.
+    && !(item?.publicationMode === "automatic_document_news" && /…|\.\.\.|:/u.test(String(item?.title || "")))
+  );
   const latestDate = eligible.reduce(
     (latest, item) => String(item.date) > latest ? String(item.date) : latest,
     ""

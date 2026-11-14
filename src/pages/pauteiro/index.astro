@@ -6,7 +6,6 @@ import SectionHeader from "../../components/SectionHeader.astro";
 import { compactNumber } from "../../lib/format.js";
 
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-const portalTrindade = "https://trindade-aberta.raphaelbezerra.chatgpt.site";
 const modules = [
   { title: "Coleta", text: "Fontes públicas, inventário e snapshots com baseline.", status: "Preparado" },
   { title: "Processamento documental", text: "Hash, extração, normalização e classificação com proveniência.", status: "Em evolução" },
@@ -15,7 +14,7 @@ const modules = [
   { title: "Produção jornalística", text: "Título, olho, lead, detalhamento, contexto e fonte.", status: "Ativo" },
   { title: "Validação", text: "Nomes, datas, valores e páginas conferidos contra o documento.", status: "Protegido" },
   { title: "Bases municipais", text: "Trindade entra como primeiro módulo municipal completo.", status: "Ativo", href: `${baseHref}trindade/` },
-  { title: "Monitoramento", text: "Cobertura, lacunas, regressões e qualidade da base.", status: "Ativo", href: `${portalTrindade}/qualidade` },
+  { title: "Monitoramento", text: "Cobertura, lacunas, regressões e qualidade da base.", status: "Ativo" },
   { title: "Publicação", text: "Matérias documentais verificadas entram diariamente no Pauteiro.", status: "Ativa" }
 ];
 const metrics = [
@@ -26,13 +25,13 @@ const metrics = [
 ];
 ---
 
-<BaseLayout title="Pauteiro | Plataforma editorial modular" description="Coleta, análise documental, radar de pautas, apuração, produção assistida e edição humana em uma plataforma modular.">
+<BaseLayout title="Pauteiro | Como funciona a agência" description="Coleta, análise documental, seleção de pautas e publicação de notícias verificáveis a partir de fontes oficiais.">
   <section class="opening-band">
     <div class="shell opening-grid">
       <div class="opening-copy">
-        <p class="section-kicker section-kicker-light">Plataforma editorial modular</p>
+        <p class="section-kicker section-kicker-light">Agência de notícias documentais</p>
         <h1>Do documento público à matéria pronta para o leitor.</h1>
-        <p class="page-summary">O Pauteiro centraliza coleta, leitura documental, redação e publicação. O conteúdo nasce do ato oficial, ganha contexto jornalístico e mantém a prova ao alcance de um clique.</p>
+        <p class="page-summary">O Pauteiro reúne coleta, leitura documental, apuração e publicação. A notícia nasce do ato oficial, ganha contexto jornalístico e mantém a prova ao alcance de um clique.</p>
         <div class="hero-actions">
           <a class="button-primary" href={`${baseHref}busca/`}>Pesquisar documentos</a>
           <a class="button-secondary button-on-dark" href={`${baseHref}trindade/`}>Abrir base Trindade</a>
@@ -52,7 +51,7 @@ const metrics = [
     <div class="shell">
       <SectionHeader
         kicker="Módulos"
-        title="Uma redação organizada em nove partes"
+        title="Uma agência organizada em nove etapas"
         intro="Cada módulo tem uma responsabilidade clara. Os dados municipais entram por uma interface estável e podem migrar de JSON para banco sem reescrever as páginas."
       />
       <div class="module-grid">
@@ -96,7 +95,7 @@ const metrics = [
           "Comparar com o histórico",
           "Selecionar o fato noticiável",
           "Isolar a página usada como fonte",
-          "Gerar imagem leve da página",
+          "Preservar uma reprodução leve da página para conferência",
           "Escrever título, olho, lead e contexto",
           "Conferir nomes, números, datas e valores",
           "Publicar e manter o link para o original"
@@ -110,12 +109,12 @@ const metrics = [
       <div>
         <SectionHeader
           kicker="Primeira base municipal"
-          title="Trindade entra inteira, sem perder o portal próprio"
-          intro="Diário, atos, Câmara, orçamento, TCM, notícias, busca e qualidade continuam disponíveis no endereço municipal e passam a integrar o radar estadual."
+          title="Trindade integra a cobertura estadual"
+          intro="Diário, atos, Câmara, orçamento e decisões de controle alimentam a mesma base de notícias e documentos do Pauteiro."
         />
         <div class="hero-actions">
           <a class="button-primary" href={`${baseHref}trindade/`}>Ver Trindade no Pauteiro</a>
-          <a class="button-secondary" href={portalTrindade}>Abrir portal municipal ↗</a>
+          <a class="button-secondary" href={`${baseHref}busca/?city=Trindade`}>Pesquisar documentos de Trindade</a>
         </div>
       </div>
       <aside class="coverage-card">

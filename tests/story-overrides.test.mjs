@@ -83,3 +83,19 @@ test("matéria nova exige URL HTTPS e referência documental", () => {
   entry.publishedAt = "ontem";
   assert.equal(validateStoryEntry(entry).valid, false);
 });
+
+test("matéria documental preserva links HTTPS das fontes complementares", () => {
+  const entry = {
+    kind: "new", status: "published", id: "pauteiro-fontes", date: "2026-10-19", city: "Goiânia",
+    title: "Goiânia publica contrato para manutenção do parque",
+    deck: "A contratação é distinta da reforma anterior, que teve doação privada.",
+    paragraphs: ["O contrato foi publicado no Diário Oficial do município.", "O termo de doação anterior não informa o valor privado gasto."],
+    sourceLabel: "Diário Oficial de Goiânia", sourceUrl: "https://goiania.go.gov.br/diario-2026.pdf",
+    documentReference: "Diário nº 8.886, página 19",
+    supportingSources: [{ label: "Termo de doação", url: "https://goiania.go.gov.br/diario-2025.pdf" }]
+  };
+  assert.equal(validateStoryEntry(entry).valid, true);
+  assert.deepEqual(toNewStorySource(entry).supporting_sources, entry.supportingSources);
+  entry.supportingSources[0].url = "http://goiania.go.gov.br/diario-2025.pdf";
+  assert.equal(validateStoryEntry(entry).valid, false);
+});

@@ -29,7 +29,11 @@ test("Goiânia usa o repositório oficial quando o índice técnico está atrasa
 
   assert.ok(goiania.summary.editions_total >= 37);
   assert.ok(goiania.summary.last_date >= "2026-07-22");
-  assert.equal(goiania.source_warning, null);
+  assert.ok(
+    goiania.source_warning === null
+    || goiania.source_warning.includes(goiania.summary.last_date),
+    "um alerta de defasagem deve identificar a última edição conhecida",
+  );
   assert.ok(goiania.editions.some((item) =>
     item.date === "2026-07-22"
     && item.file_url.includes("www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/")

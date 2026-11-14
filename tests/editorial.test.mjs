@@ -54,6 +54,16 @@ test("pontuação legada acima de 100 não mantém uma manchete antiga no topo",
   assert.equal(ranked.at(0).id, "nova");
 });
 
+test("título automático truncado permanece fora da capa", () => {
+  const ranked = rankFrontPageStories([
+    { id: "truncado", recordType: "story", city: "A", date: "2026-10-26", importance: 100, prominence: "cover", publicationMode: "automatic_document_news", title: "Contrato de R$ 10 milhões: objeto incompleto…" },
+    { id: "trecho-bruto", recordType: "story", city: "C", date: "2026-10-26", importance: 99, prominence: "cover", publicationMode: "automatic_document_news", title: "Cidade firma contrato: 210/2026 EXTRATO AO CONTRATO" },
+    { id: "verificado", recordType: "story", city: "B", date: "2026-10-26", importance: 90, prominence: "section", publicationMode: "edited_document_news", title: "Município publica contrato de saneamento" }
+  ]);
+
+  assert.deepEqual(ranked.map((item) => item.id), ["verificado"]);
+});
+
 test("os destaques laterais evitam repetir o município enquanto houver alternativa", () => {
   const stories = [
     { id: "a1", recordType: "story", city: "A", date: "2026-08-10", importance: 99 },

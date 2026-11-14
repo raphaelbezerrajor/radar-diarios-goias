@@ -7,7 +7,6 @@ import { compactNumber, formatDate, withBase } from "../lib/format.js";
 
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const hero = siteData.leadStory;
-const heroImage = withBase(hero.image?.src);
 const latest = siteData.timeline.stories
   .filter((story) => story.id !== hero.id && story.publicationMode !== "automatic_document_news")
   .slice(0, 6);
@@ -19,10 +18,10 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
 }));
 ---
 
-<BaseLayout title="Pauteiro | Jornalismo baseado em documentos públicos" description="Notícias explicativas produzidas a partir de diários oficiais, contratos e decisões públicas de Goiás.">
+<BaseLayout title="Pauteiro | Agência de notícias documentais" description="Notícias explicativas produzidas a partir de diários oficiais, contratos e decisões públicas de Goiás.">
   <section class="newsroom-strip">
     <div class="shell newsroom-strip-inner">
-      <p><strong>Atualizado em {formatDate(siteData.metadata.updatedAt)}</strong><span>Goiás · documentos oficiais conferidos</span></p>
+      <p><strong>Agência de notícias documentais</strong><span>Atualizado em {formatDate(siteData.metadata.updatedAt)} · Goiás</span></p>
       <a href={`${baseHref}busca/`}>Pesquisar toda a base →</a>
     </div>
   </section>
@@ -30,9 +29,6 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
   <section class="hero-band hero-band-first">
     <div class="shell hero-grid">
       <article class="hero-lead">
-        <a class="hero-image" href={withBase(hero.path)} aria-label={`Abrir: ${hero.title}`}>
-          <img src={heroImage} alt={hero.image?.alt || hero.title} fetchpriority="high" decoding="async" />
-        </a>
         <div class="hero-copy">
           <p class="section-kicker">Manchete</p>
           <div class="hero-meta hero-meta-top"><span>{hero.city}</span><span>{hero.type}</span><span>{formatDate(hero.date)}</span></div>
@@ -42,6 +38,7 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
             <a class="button-primary" href={withBase(hero.path)}>Ler matéria</a>
             <a class="button-secondary" href={`${baseHref}linha-do-tempo/`}>Ver as últimas</a>
           </div>
+          <p class="hero-source">Fonte primária: {hero.sourceFamily || hero.sourceLabel || "documento oficial"}</p>
         </div>
       </article>
       <aside class="hero-side" aria-label="Outras notícias em destaque">
@@ -58,7 +55,7 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
   <section class="section-band section-band-newsprint content-auto">
     <div class="shell">
       <SectionHeader kicker="Últimas notícias" title="Goiás em pauta" actionHref={`${baseHref}linha-do-tempo/`} actionLabel="Ver todas as notícias" />
-      <div class="story-grid story-grid-three">{latest.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}</div>
+      <div class="story-grid story-grid-three">{latest.map((record) => <StoryCard record={record} compact={true} showSummary={true} />)}</div>
     </div>
   </section>
 
@@ -66,7 +63,7 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
     <div class="shell section-split-editorial">
       <div>
         <SectionHeader kicker="Controle público" title="O que decidiram os tribunais de contas" intro="Entenda as multas, os alertas e as decisões do TCM e do TCE — e o que ainda está em apuração." actionHref={`${baseHref}controle/`} actionLabel="Ver decisões" />
-        <div class="brief-list">{control.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="hide" />)}</div>
+        <div class="brief-list">{control.map((record) => <StoryCard record={record} compact={true} showSummary={true} />)}</div>
       </div>
       <aside class="editorial-principle">
         <p class="section-kicker">Nosso método</p><h2>Fato primeiro. Contexto logo depois.</h2>
@@ -80,7 +77,7 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
   <section class="section-band section-band-contrast content-auto">
     <div class="shell">
       <SectionHeader kicker="Municípios" title="O que muda nas cidades" intro="Onde o dinheiro público será usado, quais serviços estão previstos e o que as prefeituras decidiram." actionHref={`${baseHref}municipios/`} actionLabel="Ver municípios" />
-      <div class="story-grid story-grid-three">{municipalities.map((record) => <StoryCard record={record} compact={true} showSummary={true} imageMode="auto" />)}</div>
+      <div class="story-grid story-grid-three">{municipalities.map((record) => <StoryCard record={record} compact={true} showSummary={true} />)}</div>
       <div class="city-shortcuts" aria-label="Acesso rápido por município">{quickCities.map((item) => <a href={item.href}>{item.label}</a>)}</div>
     </div>
   </section>
