@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-14T22:30:23.242Z",
+  "generated_at": "2026-11-16T11:53:03.675Z",
   "timezone": "America/Sao_Paulo",
   "range": {
-    "from": "2026-11-07",
-    "to": "2026-11-14"
+    "from": "2026-11-09",
+    "to": "2026-11-16"
   },
   "summary": {
     "sources": 2,
-    "editions": 204,
-    "current_editions": 14,
-    "valid_pdfs": 204,
+    "editions": 205,
+    "current_editions": 15,
+    "valid_pdfs": 205,
     "failed_downloads": 0
   },
   "sources": [
@@ -19,13 +19,13 @@
       "name": "Diario Oficial do Estado de Goias",
       "official_url": "https://diariooficial.abc.go.gov.br/",
       "collection_method": "api_publica_oficial_e_pdf_certificado",
-      "generated_at": "2026-11-14T22:30:23.113Z",
+      "generated_at": "2026-11-16T11:53:03.465Z",
       "range": {
         "from": "2026-08-04",
-        "to": "2026-11-14",
+        "to": "2026-11-16",
         "last_checked": {
-          "from": "2026-11-07",
-          "to": "2026-11-14"
+          "from": "2026-11-09",
+          "to": "2026-11-16"
         }
       },
       "source_warning": null,
@@ -2323,6 +2323,23 @@
           "download_status": "download_success",
           "validation_status": "valid_pdf",
           "error": null
+        },
+        {
+          "id": "doego:7445",
+          "source_edition_id": "7445",
+          "edition_number": "24906",
+          "date": "2026-11-16",
+          "supplement": false,
+          "pages": 48,
+          "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7445/",
+          "file_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7445",
+          "local_path": "data/raw/doego/2026/11/doego-2026-11-16-edicao-7445.pdf",
+          "bytes": 3557283,
+          "sha256": "14e746bbc67305bf9da4fe93c6bcb6e34b28c8050d3662d792984a0ee2077fc1",
+          "last_modified": "Mon, 16 Nov 2026 10:32:11 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "error": null
         }
       ]
     },
@@ -2331,13 +2348,13 @@
       "name": "Diario Eletronico de Contas do TCE-GO",
       "official_url": "https://dec.tce.go.gov.br/",
       "collection_method": "calendario_publico_oficial_e_pdf",
-      "generated_at": "2026-11-14T22:30:23.242Z",
+      "generated_at": "2026-11-16T11:53:03.675Z",
       "range": {
         "from": "2026-08-04",
-        "to": "2026-11-14",
+        "to": "2026-11-16",
         "last_checked": {
-          "from": "2026-11-07",
-          "to": "2026-11-14"
+          "from": "2026-11-09",
+          "to": "2026-11-16"
         }
       },
       "source_warning": null,
