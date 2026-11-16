@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-11-16T11:52:55.915Z",
+  "generated_at": "2026-11-16T20:30:30.422Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 582,
-    "downloaded": 580,
+    "editions": 583,
+    "downloaded": 581,
     "failed_downloads": 2,
-    "extraction_pending": 582
+    "extraction_pending": 583
   },
   "daily_check_windows": [
     {
@@ -2962,7 +2962,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-16T11:52:47.144Z",
+      "checked_at": "2026-11-16T20:30:24.188Z",
       "range_checked": {
         "from": "2026-11-09",
         "to": "2026-11-16"
@@ -5146,7 +5146,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-16T11:52:48.457Z",
+      "checked_at": "2026-11-16T20:30:25.481Z",
       "range_checked": {
         "from": "2026-11-09",
         "to": "2026-11-16"
@@ -7252,22 +7252,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3088",
+          "source_edition_id": "3088",
+          "edition_number": "2976",
+          "date": "2026-11-16",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2976",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/11/2026-11-16-2976.pdf",
+          "bytes": 1010842,
+          "sha256": "ab4719f42e2963aec1793d062938c4095278448308c8b667a94899bf3d50b9c3",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-16T11:52:49.709Z",
+      "checked_at": "2026-11-16T20:30:26.146Z",
       "range_checked": {
         "from": "2026-11-09",
         "to": "2026-11-16"
       },
       "summary": {
-        "editions_total": 108,
-        "editions_in_checked_range": 5,
-        "downloaded": 108,
+        "editions_total": 109,
+        "editions_in_checked_range": 6,
+        "downloaded": 109,
         "failed_downloads": 0,
-        "extraction_pending": 108,
+        "extraction_pending": 109,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-13",
+        "last_date": "2026-11-16",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -9275,7 +9294,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-16T11:52:53.219Z",
+      "checked_at": "2026-11-16T20:30:29.360Z",
       "range_checked": {
         "from": "2026-11-09",
         "to": "2026-11-16"
@@ -11336,7 +11355,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-16T11:52:53.884Z",
+      "checked_at": "2026-11-16T20:30:29.824Z",
       "range_checked": {
         "from": "2026-11-09",
         "to": "2026-11-16"

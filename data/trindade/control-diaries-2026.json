@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-16T11:53:03.675Z",
+  "generated_at": "2026-11-16T20:30:37.290Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-11-09",
@@ -8,9 +8,9 @@
   },
   "summary": {
     "sources": 2,
-    "editions": 205,
-    "current_editions": 15,
-    "valid_pdfs": 205,
+    "editions": 206,
+    "current_editions": 16,
+    "valid_pdfs": 206,
     "failed_downloads": 0
   },
   "sources": [
@@ -19,7 +19,7 @@
       "name": "Diario Oficial do Estado de Goias",
       "official_url": "https://diariooficial.abc.go.gov.br/",
       "collection_method": "api_publica_oficial_e_pdf_certificado",
-      "generated_at": "2026-11-16T11:53:03.465Z",
+      "generated_at": "2026-11-16T20:30:36.951Z",
       "range": {
         "from": "2026-08-04",
         "to": "2026-11-16",
@@ -2348,7 +2348,7 @@
       "name": "Diario Eletronico de Contas do TCE-GO",
       "official_url": "https://dec.tce.go.gov.br/",
       "collection_method": "calendario_publico_oficial_e_pdf",
-      "generated_at": "2026-11-16T11:53:03.675Z",
+      "generated_at": "2026-11-16T20:30:37.290Z",
       "range": {
         "from": "2026-08-04",
         "to": "2026-11-16",
@@ -3523,6 +3523,23 @@
           "local_path": "data/raw/tcego/2026/11/tcego-dec-206-2026-11-13.pdf",
           "bytes": 564349,
           "sha256": "6fb3e9d10413f992ed2515266928e727870091577831f105437c622e17be090e",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "error": null
+        },
+        {
+          "id": "tcego:331291842842061",
+          "source_edition_id": "331291842842061",
+          "edition_number": "207",
+          "date": "2026-11-16",
+          "supplement": false,
+          "pages": null,
+          "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291842842061",
+          "file_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=331291842842061",
+          "local_path": "data/raw/tcego/2026/11/tcego-dec-207-2026-11-16.pdf",
+          "bytes": 1802668,
+          "sha256": "4895b3bb7fdadedde7bc06c0f8ee0bd15f04deab440fddb456727473edf01f82",
           "last_modified": null,
           "download_status": "download_success",
           "validation_status": "valid_pdf",
