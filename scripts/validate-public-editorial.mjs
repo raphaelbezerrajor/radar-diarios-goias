@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { assertPublicEditorial } from './public-editorial-policy.mjs';
+const dir = path.resolve('data/editorial');
+const names = ['curated-briefs.json','story-overrides.json','publication-holds.json','curation-queue.json'];
+const actual = await fs.readdir(dir);
+if(actual.some(name=>!names.includes(name))) throw Error('Arquivo não autorizado em data/editorial.');
+const docs=Object.fromEntries(await Promise.all(names.map(async name=>[name,JSON.parse(await fs.readFile(path.join(dir,name),'utf8'))])));
+assertPublicEditorial(docs);
+console.log('PUBLIC_EDITORIAL_OK');

@@ -16,3 +16,14 @@ build-*.log
 __pycache__/
 *.pyc
 data/trindade/july-document-news-2026.json
+private/
+backups/
+work/
+tmp/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+pauteiro-2026-pautas.txt
+public/downloads/pauteiro-2026-pautas.txt

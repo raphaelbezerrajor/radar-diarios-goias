@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import {
   CURATION_POLICY,
   selectCurationCandidates,
@@ -8,8 +9,10 @@ import {
 
 const root = process.cwd();
 const sourcePath = path.join(root, "data", "trindade", "july-document-news-2026.json");
-const briefsPath = path.join(root, "data", "editorial", "curated-briefs.json");
-const queuePath = path.join(root, "data", "editorial", "curation-queue.json");
+const privateDir = process.env.PAUTEIRO_PRIVATE_DIR;
+if (!privateDir) throw new Error('Defina PAUTEIRO_PRIVATE_DIR para gerar a fila somente na área privada.');
+const briefsPath = path.join(privateDir, "curated-briefs.json");
+const queuePath = path.join(privateDir, "curation-queue.json");
 
 function integerArg(name, fallback) {
   const prefix = `--${name}=`;
@@ -66,5 +69,14 @@ const queue = {
 };
 
 await fs.mkdir(path.dirname(queuePath), { recursive: true });
+try {
+  const previous = await fs.readFile(queuePath);
+  const history = path.join(privateDir, "queue-history");
+  await fs.mkdir(history, { recursive: true });
+  const hash = createHash("sha256").update(previous).digest("hex");
+  await fs.writeFile(path.join(history, `${hash}.json`), previous, { flag: "wx" }).catch(error => {
+    if (error.code !== "EEXIST") throw error;
+  });
+} catch (error) { if (error.code !== "ENOENT") throw error; }
 await fs.writeFile(queuePath, `${JSON.stringify(queue, null, 2)}\n`, "utf8");
 console.log(JSON.stringify(queue.summary, null, 2));

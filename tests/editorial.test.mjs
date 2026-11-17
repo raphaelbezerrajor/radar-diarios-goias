@@ -252,7 +252,7 @@ test("fila de curadoria respeita data, prioridade e limite diário", () => {
   assert.ok(queue.every((item) => item.status === "pending"));
 });
 
-test("curadoria factual em rascunho entra na publicação sem aprovação redundante", () => {
+test("curadoria em rascunho permanece privada até aprovação", () => {
   const record = {
     id: "ato-1",
     title: "Título burocrático",
@@ -275,11 +275,7 @@ test("curadoria factual em rascunho entra na publicação sem aprovação redund
     }
   };
   const curatedDraft = applyCuration(record, draft);
-  assert.equal(curatedDraft.title, "Novo título");
-  assert.equal(curatedDraft.importance, 88);
-  assert.equal(curatedDraft.city, "Cidade confirmada");
-  assert.equal(curatedDraft.publicationMode, "curated_document_news");
-  assert.equal(curatedDraft.curation.appliedAutomatically, true);
+  assert.deepEqual(curatedDraft, record);
 
   const blocked = applyCuration(record, { ...draft, status: "needs_review" });
   assert.equal(blocked.title, "Título burocrático");
@@ -306,7 +302,7 @@ test("curadoria usa a primeira manchete e o ângulo quando o bloco publicável e
   };
   const brief = {
     id: "ato-2",
-    status: "draft",
+    status: "approved",
     source: { documentSha256: "abc" },
     editorial: {
       mainAngle: "Contrato destina R$ 920 mil à reforma do parque.",
@@ -329,7 +325,7 @@ test("curadoria factual completa pode promover registro documentado a notícia",
   const record = { id: "ato-3", title: "Ato", recordType: "record", prominence: "archive", sourceHash: "abc" };
   const brief = {
     id: "ato-3",
-    status: "draft",
+    status: "approved",
     source: { documentSha256: "abc" },
     editorial: {
       mainAngle: "Mudança relevante no serviço público.",

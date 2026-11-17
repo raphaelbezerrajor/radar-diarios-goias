@@ -18,9 +18,9 @@ export const CURATION_POLICY = Object.freeze({
   maximumPerDate: 12,
   maximumPerRun: 240,
   automationBatchSize: 12,
-  publishableStatuses: ["draft", "approved"],
+  publishableStatuses: ["approved"],
   reviewStatuses: ["needs_review"],
-  modelRole: "ChatGPT produz e aplica a curadoria factual; casos sensíveis ficam em needs_review"
+  modelRole: "ChatGPT propõe curadoria; somente itens approved entram no pacote público"
 });
 
 export function evaluateCurationCandidate(item = {}, policy = CURATION_POLICY) {
@@ -108,7 +108,7 @@ export function buildCurationCandidate(item = {}, existingBrief = null, policy =
     requestedOutput: {
       kind: "editorial_brief",
       promptVersion: policy.promptVersion,
-      publishAutomatically: !assessment.mandatoryHumanReview
+      publishAutomatically: false
     }
   };
 }
@@ -140,6 +140,13 @@ export function selectCurationCandidates(items = [], existingBriefs = [], option
 
 export function validateEditorialBrief(brief = {}) {
   const issues = [];
+  if (brief.publicProjection === 1) {
+    if (!clean(brief.id) || brief.status !== 'approved') issues.push('public_status');
+    const p = brief.editorial?.publication;
+    if (!clean(p?.title) || !clean(p?.deck) || !Array.isArray(p?.paragraphs) || p.paragraphs.length < 2) issues.push('public_text');
+    if (!/^[a-f0-9]{64}$/.test(brief.source?.documentSha256 || '')) issues.push('source_hash');
+    return {valid: issues.length === 0, issues};
+  }
   if (!clean(brief.id)) issues.push("id");
   if (!["draft", "needs_review", "approved", "rejected"].includes(brief.status)) issues.push("status");
   if (!clean(brief.editorial?.mainAngle)) issues.push("angulo_principal");

@@ -912,10 +912,6 @@ async function main() {
     expansionQueue: radar.expansion_queue || [],
     archiveYears: radar.archive_years || [],
     coverageGoal: radar.coverage_goal || {},
-    textExport: {
-      label: radar.text_export?.label || "Caderno TXT",
-      href: "/downloads/pauteiro-2026-pautas.txt"
-    },
     trindadeStats: {
       coverage: trindadeCoverage,
       status: trindadeStatus,
@@ -1074,10 +1070,7 @@ async function main() {
       JSON.stringify(shardPayload)
     );
   }
-  await fs.copyFile(
-    path.join(root, "pauteiro-2026-pautas.txt"),
-    path.join(publicDownloadsDir, "pauteiro-2026-pautas.txt")
-  );
+  // O livro de pautas pertence ao acervo interno, não aos downloads públicos.
 }
 
 main().catch((error) => {

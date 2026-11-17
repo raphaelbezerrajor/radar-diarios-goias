@@ -40,6 +40,9 @@ jobs:
       - name: Test editorial rules
         run: pnpm test:unit
 
+      - name: Block private editorial data
+        run: node scripts/validate-public-editorial.mjs
+
       - name: Build site
         run: pnpm build
 

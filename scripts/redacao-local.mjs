@@ -10,7 +10,8 @@ const project = fileURLToPath(new URL("../", import.meta.url));
 const workspace = path.resolve(project, "../..");
 const editorDir = path.join(project, "editorial", "local");
 const distDir = path.join(project, "dist");
-const overridesPath = path.join(project, "data", "editorial", "story-overrides.json");
+const privateEditorialDir = process.env.PAUTEIRO_PRIVATE_DIR || path.join(workspace, "private", "editorial");
+const overridesPath = path.join(privateEditorialDir, "story-overrides.json");
 const draftsPath = process.env.PAUTEIRO_REDACTION_DRAFTS || path.join(workspace, "work", "pauteiro-editorial-drafts.json");
 const recordsPath = path.join(project, "src", "generated", "site-records.json");
 const siteBase = "/radar-diarios-goias/";
@@ -77,7 +78,7 @@ function normalizeEntry(value, status) {
 
 async function catalog() {
   const records = await readJson(recordsPath, []);
-  return records.filter((item) => item.recordType === "story").map((item) => ({
+  return records.filter((item) => ["story", "record"].includes(item.recordType)).map((item) => ({
     id: item.id, path: item.path, city: item.city, date: item.date, scope: item.scope,
     type: item.type, importance: item.importance, title: item.title, deck: item.deck,
     paragraphs: item.paragraphs || [], sourceLabel: item.sourceLabel, sourceUrl: item.sourceUrl,
@@ -101,6 +102,8 @@ function runNode(args) {
 async function buildAndValidate() {
   const tests = (await fs.readdir(path.join(project, "tests"))).filter((name) => name.endsWith(".test.mjs")).map((name) => `tests/${name}`);
   await runNode(["--test", ...tests]);
+  await runNode(["scripts/export-public-editorial.mjs", privateEditorialDir]);
+  await runNode(["scripts/validate-public-editorial.mjs"]);
   await runNode(["scripts/build-site-data.mjs"]);
   await runNode(["node_modules/astro/astro.js", "build"]);
   await runNode(["scripts/validate-news-policy.mjs"]);
@@ -124,6 +127,9 @@ const server = createServer(async (request, response) => {
   try {
     if (request.headers.host !== `127.0.0.1:${port}`) return sendJson(response, 403, { error: "Acesso apenas pelo endereço local." });
     const url = new URL(request.url, origin);
+    if (request.method === "GET" && url.pathname === "/api/health") {
+      return sendJson(response, 200, { ok: true, editorialStorageVersion: 2, building });
+    }
     if (request.method === "GET" && url.pathname === "/") {
       response.writeHead(302, { location: "/redacao/", ...securityHeaders });
       return response.end();
