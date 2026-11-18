@@ -8,6 +8,7 @@ export function validateStoryEntry(entry = {}, original = null) {
   if (!["draft", "published"].includes(entry.status)) issues.push("status");
   if (!clean(entry.id)) issues.push("id");
   if (entry.publishedAt && !validDate(entry.publishedAt)) issues.push("published_at");
+  if (entry.actDate && !validDate(entry.actDate)) issues.push("act_date");
   if (entry.kind === "edit" && (!original || original.recordType !== "story")) issues.push("original_story");
   if (entry.kind === "new" && original && original.editorialEntryId !== entry.id) issues.push("duplicate_id");
   if (entry.importance !== undefined && (!Number.isFinite(Number(entry.importance)) || Number(entry.importance) < 0 || Number(entry.importance) > 100)) issues.push("importance");
@@ -45,6 +46,7 @@ export function applyStoryEntry(original, entry) {
     importance: entry.importance === undefined ? original.importance : Number(entry.importance),
     updatedAt: validDate(entry.updatedAt) ? entry.updatedAt : original.updatedAt,
     publishedAt: validDate(entry.publishedAt) ? entry.publishedAt : original.publishedAt,
+    ...(validDate(entry.actDate) ? { actDate: entry.actDate } : {}),
     publicationMode: "edited_document_news",
     editorialStatus: "published",
     editorialEntryId: entry.id
@@ -78,6 +80,7 @@ export function toNewStorySource(entry) {
     prominence: "section",
     publication_mode: "edited_document_news",
     editorial_status: "published",
+    ...(validDate(entry.actDate) ? { act_date: entry.actDate } : {}),
     site_published_at: validDate(entry.publishedAt) ? entry.publishedAt : null,
     updated_at: validDate(entry.updatedAt) ? entry.updatedAt : entry.date
   };

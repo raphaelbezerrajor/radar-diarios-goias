@@ -395,6 +395,7 @@ function normalizeJulyDocumentNews(item, preview) {
     confidence: item.confidence || null,
     externalIdentifier: item.external_identifier || null,
     updatedAt: item.updated_at || item.published_at || item.date,
+    ...(item.act_date ? { actDate: item.act_date } : {}),
     publishedAt: item.site_published_at || null
   };
 }

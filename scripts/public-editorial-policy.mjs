@@ -1,6 +1,6 @@
 const pick = (value, keys) => Object.fromEntries(keys.filter(k => value?.[k] !== undefined).map(k => [k, value[k]]));
 const publicationKeys = ['title','deck','paragraphs','importance','city','promoteToStory'];
-const storyKeys = ['kind','status','id','city','date','publishedAt','scope','type','importance','title','deck','paragraphs','publicBody','officialTitle','sourceLabel','sourceUrl','sourceHash','previewPage','documentReference','updatedAt'];
+const storyKeys = ['kind','status','id','city','date','actDate','publishedAt','scope','type','importance','title','deck','paragraphs','publicBody','officialTitle','sourceLabel','sourceUrl','sourceHash','previewPage','documentReference','updatedAt'];
 const correctionKeys = ['title','deck','paragraphs'];
 
 export function projectEditorial(documents) {

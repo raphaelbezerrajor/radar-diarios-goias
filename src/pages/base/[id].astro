@@ -65,7 +65,7 @@ if (isStory) {
         {isStory && (
           <div class="editorial-provenance">
             <strong>Publicado pelo Pauteiro</strong>
-            <span>{record.publishedAt ? `Matéria publicada em ${formatDate(record.publishedAt)} · ` : ""}Data do ato/documento: {formatDate(record.date)}</span>
+            <span>{record.publishedAt ? `Matéria publicada em ${formatDate(record.publishedAt)} · ` : ""}{record.actDate ? `Data do ato: ${formatDate(record.actDate)} · Publicação do documento: ${formatDate(record.date)}` : `Data do ato/documento: ${formatDate(record.date)}`}</span>
           </div>
         )}
         {record.summary && !record.paragraphs?.length && <p class="detail-summary">{record.summary}</p>}
@@ -135,7 +135,8 @@ if (isStory) {
         <div class="hero-panel">
           <strong>{record.sourceFamily}</strong>
           <span>{record.sourceLabel}</span>
-          <small>Data do ato: {formatDate(record.date)}</small>
+          <small>Data do ato: {formatDate(record.actDate || record.date)}</small>
+          {record.actDate && <small>Publicação do documento: {formatDate(record.date)}</small>}
           {isStory && record.publishedAt && <small>Publicação no Pauteiro: {formatDate(record.publishedAt)}</small>}
           {isStory && <small>Produção editorial: Pauteiro · agência de notícias documentais</small>}
           {isStory && <small>Estado editorial: publicada · fonte oficial</small>}
