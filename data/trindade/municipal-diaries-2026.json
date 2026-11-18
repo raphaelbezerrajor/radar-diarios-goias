@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-11-18T09:58:43.450Z",
+  "generated_at": "2026-11-18T20:30:44.002Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -23,12 +23,12 @@
   ],
   "summary": {
     "sources": 5,
-    "sources_ok": 5,
+    "sources_ok": 4,
     "municipalities": 7,
-    "editions": 592,
-    "downloaded": 590,
+    "editions": 593,
+    "downloaded": 591,
     "failed_downloads": 2,
-    "extraction_pending": 592
+    "extraction_pending": 593
   },
   "daily_check_windows": [
     {
@@ -58,19 +58,8 @@
         "Rio Verde",
         "Trindade"
       ],
-      "collection_method": "calendario_publico_oficial",
-      "source_warning": null,
-      "publication_pattern": {
-        "certainty": "observed_from_official_timestamps",
-        "ordinary_window": "18:25–19:05, em geral na noite anterior",
-        "extraordinary_window": "16:30–17:00, em geral no proprio dia",
-        "recommended_checks": [
-          "06:30",
-          "17:30",
-          "19:30",
-          "00:30"
-        ]
-      },
+      "status": "degraded_prior_preserved",
+      "source_warning": "fetch failed Resposta vazia; 7 edicoes anteriores foram preservadas.",
       "editions": [
         {
           "id": "agm:114552",
@@ -2999,8 +2988,7 @@
           "error": null
         }
       ],
-      "status": "checked",
-      "checked_at": "2026-11-18T09:58:36.592Z",
+      "checked_at": "2026-11-18T20:30:39.755Z",
       "range_checked": {
         "from": "2026-11-11",
         "to": "2026-11-18"
@@ -5222,7 +5210,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-18T09:58:37.811Z",
+      "checked_at": "2026-11-18T20:30:41.020Z",
       "range_checked": {
         "from": "2026-11-11",
         "to": "2026-11-18"
@@ -7366,22 +7354,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3090",
+          "source_edition_id": "3090",
+          "edition_number": "2978",
+          "date": "2026-11-18",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2978",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/11/2026-11-18-2978.pdf",
+          "bytes": 1184584,
+          "sha256": "f8cc1b1e6a347a916474995ddfc6a57e8c763633789e9807e4a5b82220de5772",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-18T09:58:40.039Z",
+      "checked_at": "2026-11-18T20:30:41.707Z",
       "range_checked": {
         "from": "2026-11-11",
         "to": "2026-11-18"
       },
       "summary": {
-        "editions_total": 110,
-        "editions_in_checked_range": 5,
-        "downloaded": 110,
+        "editions_total": 111,
+        "editions_in_checked_range": 6,
+        "downloaded": 111,
         "failed_downloads": 0,
-        "extraction_pending": 110,
+        "extraction_pending": 111,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-17",
+        "last_date": "2026-11-18",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -9427,7 +9434,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-18T09:58:41.290Z",
+      "checked_at": "2026-11-18T20:30:42.973Z",
       "range_checked": {
         "from": "2026-11-11",
         "to": "2026-11-18"
@@ -11526,7 +11533,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-18T09:58:41.756Z",
+      "checked_at": "2026-11-18T20:30:43.425Z",
       "range_checked": {
         "from": "2026-11-11",
         "to": "2026-11-18"

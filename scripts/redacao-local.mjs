@@ -5,6 +5,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateStoryEntry } from "../src/lib/editorial/story-overrides.mjs";
+import { validateEditorialBrief } from "../src/lib/editorial/curation.mjs";
 
 const project = fileURLToPath(new URL("../", import.meta.url));
 const workspace = path.resolve(project, "../..");
@@ -12,6 +13,7 @@ const editorDir = path.join(project, "editorial", "local");
 const distDir = path.join(project, "dist");
 const privateEditorialDir = process.env.PAUTEIRO_PRIVATE_DIR || path.join(workspace, "private", "editorial");
 const overridesPath = path.join(privateEditorialDir, "story-overrides.json");
+const reviewDir = path.join(privateEditorialDir, "triagens");
 const draftsPath = process.env.PAUTEIRO_REDACTION_DRAFTS || path.join(workspace, "work", "pauteiro-editorial-drafts.json");
 const recordsPath = path.join(project, "src", "generated", "site-records.json");
 const siteBase = "/radar-diarios-goias/";
@@ -88,6 +90,50 @@ async function catalog() {
   }));
 }
 
+async function reviewQueue() {
+  const revisions = new Map();
+  let unreadable = 0;
+
+  async function walk(directory) {
+    const entries = await fs.readdir(directory, { withFileTypes: true });
+    if (entries.some((entry) => entry.isFile() && entry.name === "brief.json")) {
+      try {
+        const brief = await readJson(path.join(directory, "brief.json"), {});
+        if (!validateEditorialBrief(brief).valid) throw new Error("Brief inválido.");
+        const revision = path.relative(reviewDir, directory).split(path.sep).join("/");
+        const previous = revisions.get(brief.id);
+        if (previous && revision.localeCompare(previous.revision) <= 0) return;
+        const publication = brief.editorial.publication;
+        const pending = ["draft", "needs_review"].includes(brief.status);
+        if (pending && (!publication?.title || !publication.deck || !Array.isArray(publication.paragraphs) || !publication.paragraphs.length)) {
+          throw new Error("Texto da matéria ausente.");
+        }
+        revisions.set(brief.id, { revision, item: pending ? {
+          id: brief.id, revision, status: brief.status, date: String(brief.actDate || ""),
+          title: publication.title, deck: publication.deck, paragraphs: publication.paragraphs,
+          questions: brief.editorial.reportingQuestions, sourceUrl: brief.source?.url
+        } : null });
+      } catch {
+        unreadable++;
+      }
+    }
+    for (const entry of entries) {
+      if (entry.isDirectory() && !entry.isSymbolicLink()) await walk(path.join(directory, entry.name));
+    }
+  }
+
+  try {
+    await walk(reviewDir);
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+  return {
+    unreadable,
+    items: [...revisions.values()].map(({ item }) => item).filter(Boolean)
+      .sort((a, b) => b.date.localeCompare(a.date) || b.revision.localeCompare(a.revision))
+  };
+}
+
 function runNode(args) {
   return new Promise((resolve, reject) => {
     const child = spawn(process.execPath, args, { cwd: project, windowsHide: true });
@@ -128,7 +174,10 @@ const server = createServer(async (request, response) => {
     if (request.headers.host !== `127.0.0.1:${port}`) return sendJson(response, 403, { error: "Acesso apenas pelo endereço local." });
     const url = new URL(request.url, origin);
     if (request.method === "GET" && url.pathname === "/api/health") {
-      return sendJson(response, 200, { ok: true, editorialStorageVersion: 2, building });
+      return sendJson(response, 200, { ok: true, editorialStorageVersion: 3, building });
+    }
+    if (request.method === "GET" && url.pathname === "/api/review") {
+      return sendJson(response, 200, await reviewQueue());
     }
     if (request.method === "GET" && url.pathname === "/") {
       response.writeHead(302, { location: "/redacao/", ...securityHeaders });
