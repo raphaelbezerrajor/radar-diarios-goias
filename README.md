@@ -40,6 +40,12 @@ pnpm validate
 Publicacao atual:
 [https://raphaelbezerrajor.github.io/radar-diarios-goias/](https://raphaelbezerrajor.github.io/radar-diarios-goias/)
 
+## Metodologia editorial e publicação
+
+O Pauteiro preserva atos de fontes públicas primárias e publica matérias sobre os que têm interesse jornalístico. A página [Como funciona o Pauteiro](https://raphaelbezerrajor.github.io/radar-diarios-goias/pauteiro/#metodologia) explica a coleta, a comparação com o histórico, a conferência das fontes e os critérios de revisão.
+
+Para publicar, parta da `main` do GitHub e inclua apenas as mudanças aprovadas. Quando houver alterações editoriais, gere a projeção pública com `scripts/export-public-editorial.mjs`. A redação guarda a fila e os rascunhos na área privada. Execute `node scripts/validate-public-editorial.mjs`, `pnpm test:unit`, `pnpm build` e `pnpm validate`. O workflow do GitHub Pages publica a pasta `dist` após validar o pacote.
+
 ## Redação integrada no computador
 
 Execute `pnpm redacao:local` e abra `http://127.0.0.1:4317/redacao/`.
