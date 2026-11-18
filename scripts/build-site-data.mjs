@@ -347,9 +347,8 @@ function normalizeJulyDocumentNews(item, preview) {
     summary: text.summary,
     paragraphs: text.paragraphs || [],
     keyFindings: courtRecord ? [] : item.key_findings?.length ? item.key_findings : structured.explainer.facts,
-    // Reviewed stories retain only explicitly authored explanatory sections.
-    // Generic classifiers can mistake a quoted tender budget for a budget act.
-    explainerSections: courtRecord ? [] : item.explainer_sections?.length ? item.explainer_sections : manuallyEdited ? [] : structured.explainer.sections,
+    // An editor can suppress generic explanations that do not fit this story.
+    explainerSections: courtRecord ? [] : item.explainer_sections?.length ? item.explainer_sections : item.automatic_explainer === false ? [] : structured.explainer.sections,
     processTimeline: item.process_timeline || [],
     editoria: item.public_body || "Atos públicos",
     sourceFamily: item.source_name || "Documento oficial",

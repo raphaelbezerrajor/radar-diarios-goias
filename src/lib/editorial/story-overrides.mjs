@@ -7,6 +7,7 @@ export function validateStoryEntry(entry = {}, original = null) {
   if (!["edit", "new"].includes(entry.kind)) issues.push("kind");
   if (!["draft", "published"].includes(entry.status)) issues.push("status");
   if (!clean(entry.id)) issues.push("id");
+  if (entry.automaticExplainer !== undefined && typeof entry.automaticExplainer !== "boolean") issues.push("automatic_explainer");
   if (entry.publishedAt && !validDate(entry.publishedAt)) issues.push("published_at");
   if (entry.actDate && !validDate(entry.actDate)) issues.push("act_date");
   if (entry.kind === "edit" && (!original || original.recordType !== "story")) issues.push("original_story");
@@ -62,6 +63,7 @@ export function toNewStorySource(entry) {
     date: entry.date,
     scope: clean(entry.scope) || "Municipal",
     source_id: "pauteiro",
+    automatic_explainer: entry.automaticExplainer !== false,
     source_name: clean(entry.sourceLabel),
     source_label: clean(entry.sourceLabel),
     official_url: clean(entry.sourceUrl),
