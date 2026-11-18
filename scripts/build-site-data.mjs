@@ -14,6 +14,7 @@ import {
   isPrimaryOfficialSource
 } from "../src/lib/editorial/document-news.mjs";
 import { applyCuration } from "../src/lib/editorial/curation.mjs";
+import { buildControlCoverage, courtId, courtRecordText, isAlego, recentFirst } from '../src/lib/editorial/control-coverage.mjs';
 import { applyStoryEntry, toNewStorySource, validateStoryEntry } from "../src/lib/editorial/story-overrides.mjs";
 import { buildFrontPagePackage, rankFrontPageStories } from "../src/lib/editorial/front-page.mjs";
 
@@ -316,6 +317,8 @@ function normalizeJulyDocumentNews(item, preview) {
   const slug = `julho-documento-${slugify(item.id).slice(0, 96)}`;
   const structured = buildStructuredDocumentNews(item);
   const manuallyEdited = item.publication_mode === "edited_document_news";
+  const courtRecord = courtId(item) && !manuallyEdited;
+  const text = courtRecord ? courtRecordText(item) : manuallyEdited ? item : structured;
   // Generic budget reallocations are often routine and their extracted text
   // is too tabular for an automatic lead. Keep them searchable until reviewed.
   const routineBudgetChange = item.act_type === "decreto" &&
@@ -325,12 +328,12 @@ function normalizeJulyDocumentNews(item, preview) {
   // The Anápolis gazette uses two columns and its generic heading boundaries
   // can still split a single act into multiple records. Keep unreviewed acts
   // searchable, but never promote them automatically to journalistic stories.
-  const isStory = manuallyEdited || (!routineBudgetChange && item.source_id !== "anapolis" && (Number(item.importance) || 0) >= 80);
+  const isStory = manuallyEdited || (!courtRecord && !routineBudgetChange && item.source_id !== "anapolis" && (Number(item.importance) || 0) >= 80);
   return {
     id: item.id,
     slug,
     path: `/base/${slug}/`,
-    cluster: item.scope === "Estadual" || ["alego", "doego", "tcego"].includes(item.source_id) ? "goias" : "municipios",
+    cluster: item.scope === "Estadual" || ["alego", "doego", "tcego", "tcmgo"].includes(item.source_id) ? "goias" : "municipios",
     city: item.city,
     date: item.date,
     year: Number(String(item.date).slice(0, 4)),
@@ -338,13 +341,13 @@ function normalizeJulyDocumentNews(item, preview) {
     kind: "ato",
     actCode: item.act_type,
     type: item.type_label || titleCase(item.act_type || "ato"),
-    title: manuallyEdited ? item.title : structured.title,
+    title: text.title,
     officialTitle: item.official_title,
-    deck: manuallyEdited ? item.deck : structured.deck,
-    summary: manuallyEdited ? item.summary : structured.summary,
-    paragraphs: manuallyEdited ? (item.paragraphs || []) : structured.paragraphs,
-    keyFindings: item.key_findings?.length ? item.key_findings : structured.explainer.facts,
-    explainerSections: item.explainer_sections?.length ? item.explainer_sections : structured.explainer.sections,
+    deck: text.deck,
+    summary: text.summary,
+    paragraphs: text.paragraphs || [],
+    keyFindings: courtRecord ? [] : item.key_findings?.length ? item.key_findings : structured.explainer.facts,
+    explainerSections: courtRecord ? [] : item.explainer_sections?.length ? item.explainer_sections : structured.explainer.sections,
     processTimeline: item.process_timeline || [],
     editoria: item.public_body || "Atos públicos",
     sourceFamily: item.source_name || "Documento oficial",
@@ -532,7 +535,8 @@ async function main() {
     tcmDossiers,
     sourcePreviews,
     municipalDiaries,
-    alegoMonitor,
+    controlDiaries,
+    tcmDiaries,
     julyDocumentNews,
     controlNews,
     curatedBriefs,
@@ -550,7 +554,8 @@ async function main() {
     trindadeProvider.obterDossiesTCM(),
     readJsonOptional({ items: [] }, "data", "trindade", "source-previews.json"),
     readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], range: {} }, "data", "trindade", "municipal-diaries-2026.json"),
-    readJsonOptional({ sources: [], summary: {}, daily_check_windows: [], analysis_queue: [], range: {} }, "data", "trindade", "alego-monitor-2026.json"),
+    readJsonOptional({ sources: [] }, "data", "trindade", "control-diaries-2026.json"),
+    readJsonOptional({ sources: [] }, "data", "trindade", "tcm-diaries-2026.json"),
     readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "july-document-news-2026.json"),
     readJsonOptional({ items: [], summary: {}, period: {} }, "data", "trindade", "control-news-2026.json"),
     readJsonOptional({ briefs: [] }, "data", "editorial", "curated-briefs.json"),
@@ -703,16 +708,15 @@ async function main() {
   const publishedNews = stateRecords
     .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedControlNews, normalizedTcmNews, newEditorialNews)
     .map(applyEditorialCuration)
-    .filter((item) => item.recordType === "story")
+    .filter((item) => item.recordType === "story" && !isAlego(item))
     .map(applyEditorialEdit)
     .map(addPublicationMetadata);
   const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
   const frontPage = buildFrontPagePackage(timelineNews);
   const leadStory = frontPage.lead;
   const heroSidebar = frontPage.sidebar;
-  const rankedControlNews = rankFrontPageStories(
-    normalizedControlNews.filter((item) => item.recordType === "story" && /TC[EM]-GO/.test(item.sourceFamily || ""))
-  );
+  const rankedControlNews = dedupeById(publishedNews.filter(item => courtId(item) && Number(item.year) === editorialYear)).sort(recentFirst);
+  const controlCoverage = buildControlCoverage([tcmDiaries, controlDiaries], allRecords.filter(item => Number(item.year) === editorialYear));
   const controlFront = rankedControlNews.slice(0, 8);
   for (const requiredSource of ["TCM-GO", "TCE-GO"]) {
     if (controlFront.some((item) => item.sourceFamily?.includes(requiredSource))) continue;
@@ -723,9 +727,10 @@ async function main() {
     );
     controlFront.splice(replacementIndex >= 0 ? replacementIndex : controlFront.length - 1, 1, candidate);
   }
+  controlFront.sort(recentFirst);
 
   const stateFront = sortForSearch(stateRecords.map(applyEditorialCuration)
-    .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
+    .filter((item) => item.recordType === "story" && !isAlego(item) && Number(item.year) === editorialYear)).slice(0, 8);
   const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs).map(applyEditorialCuration)
     .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
   const actsFront = sortForSearch(
@@ -733,7 +738,7 @@ async function main() {
       .concat(normalizedJulyDocumentNews)
       .concat(normalizedControlNews)
       .map(applyEditorialCuration)
-      .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)
+      .filter((item) => item.recordType === "story" && !isAlego(item) && Number(item.year) === editorialYear)
   ).slice(0, 8);
   const julyPublishedNews = sortForSearch(
     dedupeById(
@@ -748,7 +753,7 @@ async function main() {
       entry,
       stateRecords.filter((item) => item.sourceFamily === entry.label).length
     )
-  );
+  ).filter(item => !isAlego({source_id:item.id, source_name:item.label}));
   sourceCards.push({
     id: "trindade",
     label: "Trindade | Portal integrado",
@@ -758,18 +763,11 @@ async function main() {
     nextStep: "continuar a expandir os recortes historicos e manter a busca unificada leve no celular.",
     stateCount: trindadeStatus.source_counts?.unified_search_records || 0
   });
-  sourceCards.push({
-    id: "alego",
-    label: "ALEGO | Diário, votações e contratos",
-    officialUrl: "https://transparencia.al.go.leg.br/",
-    analysisFocus: "Diário da Assembleia, votações nominais, contratos, aditivos e sanções administrativas.",
-    materialTypes: "atos legislativos, votos individualizados, contratos, valores empenhados e pagos.",
-    nextStep: "ler os PDFs ato a ato e promover os fatos de maior impacto para a capa.",
-    stateCount: Number(alegoMonitor.summary?.diary_editions || 0)
-      + Number(alegoMonitor.summary?.roll_calls || 0)
-      + Number(alegoMonitor.summary?.contracts || 0)
-      + normalizedJulyDocumentNews.filter((item) => item.sourceFamily?.includes("Assembleia")).length
-  });
+  for (const court of controlCoverage) {
+    const card = {id:court.id,label:court.label,officialUrl:court.officialUrl,analysisFocus:court.scope,materialTypes:'Diários e atos de controle público.',nextStep:'Coleta diária, preservação dos originais e leitura dos atos relevantes.',stateCount:allRecords.filter(item=>courtId(item)===court.id).length};
+    const index = sourceCards.findIndex(item => courtId({source_id:item.id,source_name:item.label}) === court.id);
+    if (index >= 0) sourceCards[index] = card; else sourceCards.unshift(card);
+  }
 
   const cityCounts = countBy(
     allRecords.filter((item) => item.city),
@@ -882,6 +880,7 @@ async function main() {
     leadStory,
     heroSidebar,
     controlFront,
+    controlCoverage,
     timeline: {
       year: editorialYear,
       total: timelineNews.length,
@@ -950,22 +949,6 @@ async function main() {
         publicationPattern: source.publication_pattern || {},
         summary: source.summary || {}
       }))
-    },
-    alego: {
-      generatedAt: alegoMonitor.generated_at || null,
-      range: alegoMonitor.range || {},
-      summary: alegoMonitor.summary || {},
-      dailyCheckWindows: alegoMonitor.daily_check_windows || [],
-      sources: (alegoMonitor.sources || []).map((source) => ({
-        id: source.id,
-        name: source.name,
-        officialUrl: source.official_url,
-        status: source.status,
-        collectionMethod: source.collection_method,
-        publicationPattern: source.publication_pattern || {},
-        summary: source.summary || {}
-      })),
-      analysisQueue: (alegoMonitor.analysis_queue || []).slice(0, 12)
     }
   };
 

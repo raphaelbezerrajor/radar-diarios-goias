@@ -52,6 +52,8 @@ const queue = {
     minimumScore: integerArg("min-score", CURATION_POLICY.minimumScore),
     localMinimumScore: CURATION_POLICY.localMinimumScore,
     controlMinimumScore: CURATION_POLICY.controlMinimumScore,
+    prioritySources: ['tcmgo', 'tcego'],
+    reservedPerCourtPerDate: CURATION_POLICY.reservedPerCourtPerDate,
     maximumPerDate: integerArg("per-date", CURATION_POLICY.maximumPerDate),
     maximumPerRun: integerArg("limit", CURATION_POLICY.maximumPerRun),
     automationBatchSize: CURATION_POLICY.automationBatchSize,

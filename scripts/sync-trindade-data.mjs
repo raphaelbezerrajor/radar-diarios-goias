@@ -32,6 +32,7 @@ const files = [
   "camara-legislative-index.json",
   "company-profiles.json",
   "control-diaries-2026.json",
+  "tcm-diaries-2026.json",
   "control-news-2026.json",
   "data-status.json",
   "july-document-news-2026.json",

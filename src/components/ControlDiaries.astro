@@ -1,0 +1,17 @@
+---
+import { formatDate } from '../lib/format.js';
+const { sources = [] } = Astro.props;
+---
+<div class="source-list source-list-wide municipal-source-list" aria-label="Últimos diários dos tribunais de contas">
+  {sources.map(source => (
+    <article class="source-card">
+      <div class="source-card-top"><strong>{source.label}</strong><span>{source.scope}</span></div>
+      {source.latest ? <>
+        <h3>Diário de {formatDate(source.latest.date)}</h3>
+        <p>Edição {source.latest.number} · {source.editions} edições preservadas nesta coleta.</p>
+        <a class="text-link" href={source.latest.url}>Consultar diário na fonte oficial ↗</a>
+      </> : <p>Aguardando a primeira edição validada.</p>}
+      <small>Documento para consulta. As matérias explicativas aparecem abaixo, com seu contexto.</small>
+    </article>
+  ))}
+</div>

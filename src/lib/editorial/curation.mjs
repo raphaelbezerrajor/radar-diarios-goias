@@ -1,3 +1,4 @@
+import { courtId, isAlego } from './control-coverage.mjs';
 const clean = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
 
 const normalize = (value) => clean(value)
@@ -16,6 +17,7 @@ export const CURATION_POLICY = Object.freeze({
   localMinimumScore: 75,
   controlMinimumScore: 70,
   maximumPerDate: 12,
+  reservedPerCourtPerDate: 2,
   maximumPerRun: 240,
   automationBatchSize: 12,
   publishableStatuses: ["approved"],
@@ -32,9 +34,11 @@ export function evaluateCurationCandidate(item = {}, policy = CURATION_POLICY) {
     item.summary,
     item.evidence_excerpt,
     item.public_body,
+    ...(item.paragraphs || []),
     ...(item.news_value?.reasons || [])
   ].filter(Boolean).join(" "));
   const reasons = [];
+  const court = courtId(item);
 
   if (score >= policy.minimumScore) reasons.push("alto valor-notícia calculado");
   if (normalize(item.city) === "trindade" && score >= policy.localMinimumScore) {
@@ -43,6 +47,7 @@ export function evaluateCurationCandidate(item = {}, policy = CURATION_POLICY) {
   if (controlPattern.test(text) && score >= policy.controlMinimumScore) {
     reasons.push("controle, correção ou responsabilização");
   }
+  if (court && controlPattern.test(text)) reasons.push('ato de tribunal de contas para leitura e revisão');
   if (publicImpactPattern.test(text) && score >= policy.localMinimumScore) {
     reasons.push("possível impacto em serviço, política ou patrimônio público");
   }
@@ -50,16 +55,16 @@ export function evaluateCurationCandidate(item = {}, policy = CURATION_POLICY) {
   const sourceUrl = clean(item.official_url || item.source_landing_url);
   const hasOfficialSource = /^https?:\/\//i.test(sourceUrl);
   const hasEvidence = Boolean(clean(item.evidence_excerpt) || (item.paragraphs || []).some(clean));
-  const eligible = hasOfficialSource && hasEvidence && reasons.length > 0;
+  const eligible = !isAlego(item) && hasOfficialSource && hasEvidence && reasons.length > 0;
 
   return {
     eligible,
     score,
-    priority: Math.min(100, score
+    priority: Math.min(100, Math.max(score, court && controlPattern.test(text) ? policy.controlMinimumScore : 0)
       + (normalize(item.city) === "trindade" ? 4 : 0)
       + (controlPattern.test(text) ? 4 : 0)),
     reasons: [...new Set(reasons)],
-    mandatoryHumanReview: sensitivePattern.test(text),
+    mandatoryHumanReview: Boolean(court) || sensitivePattern.test(text),
     issues: [
       !hasOfficialSource ? "fonte_oficial_ausente" : null,
       !hasEvidence ? "trecho_de_evidencia_ausente" : null
@@ -94,6 +99,7 @@ export function buildCurationCandidate(item = {}, existingBrief = null, policy =
       confidence: Number(item.confidence) || null
     },
     source: {
+      id: courtId(item) || clean(item.source_id),
       name: clean(item.source_name),
       label: clean(item.source_label),
       url: clean(item.official_url || item.source_landing_url),
@@ -125,15 +131,17 @@ export function selectCurationCandidates(items = [], existingBriefs = [], option
       || String(a.item.id || "").localeCompare(String(b.item.id || ""))
     );
 
-  const perDate = new Map();
   const selected = [];
-  for (const entry of eligible) {
+  for (const date of new Set(eligible.map(entry => clean(entry.item.date)))) {
+    const day = eligible.filter(entry => clean(entry.item.date) === date);
+    const reserved = ['tcmgo', 'tcego'].flatMap(id => day.filter(entry => courtId(entry.item) === id).slice(0, policy.reservedPerCourtPerDate));
+    const chosen = [...new Set([...reserved, ...day])].slice(0, policy.maximumPerDate);
+    chosen.sort((a, b) => b.assessment.priority - a.assessment.priority || String(a.item.id).localeCompare(String(b.item.id)));
+    for (const entry of chosen) {
+      if (selected.length >= policy.maximumPerRun) break;
+      selected.push(buildCurationCandidate(entry.item, briefById.get(entry.item.id), policy));
+    }
     if (selected.length >= policy.maximumPerRun) break;
-    const date = clean(entry.item.date) || "sem-data";
-    const dateCount = perDate.get(date) || 0;
-    if (dateCount >= policy.maximumPerDate) continue;
-    perDate.set(date, dateCount + 1);
-    selected.push(buildCurationCandidate(entry.item, briefById.get(entry.item.id), policy));
   }
   return selected;
 }

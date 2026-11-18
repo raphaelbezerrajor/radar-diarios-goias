@@ -3,6 +3,7 @@ import siteData from "../generated/site-data.json";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import StoryCard from "../components/StoryCard.astro";
+import ControlDiaries from '../components/ControlDiaries.astro';
 import { compactNumber, formatDate, withBase } from "../lib/format.js";
 
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
@@ -63,6 +64,7 @@ const quickCities = siteData.priorityMunicipalities.slice(0, 8).map((item) => ({
     <div class="shell section-split-editorial">
       <div>
         <SectionHeader kicker="Controle público" title="O que decidiram os tribunais de contas" intro="Entenda as multas, os alertas e as decisões do TCM e do TCE — e o que ainda está em apuração." actionHref={`${baseHref}controle/`} actionLabel="Ver decisões" />
+        <ControlDiaries sources={siteData.controlCoverage} />
         <div class="brief-list">{control.map((record) => <StoryCard record={record} compact={true} showSummary={true} />)}</div>
       </div>
       <aside class="editorial-principle">
