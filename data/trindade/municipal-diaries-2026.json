@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-11-20T03:30:26.290Z",
+  "generated_at": "2026-11-20T13:49:28.302Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 600,
-    "downloaded": 598,
+    "editions": 601,
+    "downloaded": 599,
     "failed_downloads": 2,
-    "extraction_pending": 600
+    "extraction_pending": 601
   },
   "daily_check_windows": [
     {
@@ -3019,7 +3019,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-20T03:30:22.534Z",
+      "checked_at": "2026-11-20T13:49:20.753Z",
       "range_checked": {
         "from": "2026-11-13",
         "to": "2026-11-20"
@@ -5279,7 +5279,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-20T03:30:23.793Z",
+      "checked_at": "2026-11-20T13:49:22.056Z",
       "range_checked": {
         "from": "2026-11-13",
         "to": "2026-11-20"
@@ -7464,7 +7464,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-20T03:30:24.433Z",
+      "checked_at": "2026-11-20T13:49:23.135Z",
       "range_checked": {
         "from": "2026-11-13",
         "to": "2026-11-20"
@@ -9560,7 +9560,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-20T03:30:25.635Z",
+      "checked_at": "2026-11-20T13:49:25.133Z",
       "range_checked": {
         "from": "2026-11-13",
         "to": "2026-11-20"
@@ -11675,29 +11675,48 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "senador-canedo:z87my1r534",
+          "source_edition_id": "z87my1r534",
+          "edition_number": "z87my1r534",
+          "date": "2026-11-20",
+          "published_at": "2026-11-20T06:00:00.899Z",
+          "publication_timestamp_kind": "calendar_timestamp_not_upload_time",
+          "extraordinary": false,
+          "official_url": "https://diario.senadorcanedo.go.gov.br/diario/z87my1r534",
+          "file_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=20-11-2026",
+          "local_path": "data/raw/municipal-diaries/senador-canedo/2026/11/2026-11-20-z87my1r534.pdf",
+          "bytes": 305142,
+          "sha256": "5adea8e34fab6e5d77841a3374a2570ba62e5bca4b5d88663c83c895c7c81f79",
+          "last_modified": "Fri, 20 Nov 2026 06:00:03 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-20T03:30:26.098Z",
+      "checked_at": "2026-11-20T13:49:25.587Z",
       "range_checked": {
         "from": "2026-11-13",
         "to": "2026-11-20"
       },
       "summary": {
-        "editions_total": 109,
-        "editions_in_checked_range": 5,
-        "downloaded": 109,
+        "editions_total": 110,
+        "editions_in_checked_range": 6,
+        "downloaded": 110,
         "failed_downloads": 0,
-        "extraction_pending": 109,
+        "extraction_pending": 110,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-19",
+        "last_date": "2026-11-20",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 13,
+          "observations": 14,
           "earliest": "03:00",
           "median": "03:00",
           "latest": "03:00"
