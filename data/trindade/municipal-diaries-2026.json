@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-11-19T20:30:35.141Z",
+  "generated_at": "2026-11-20T03:02:05.681Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-11-19",
+    "to": "2026-11-20",
     "last_checked": {
-      "from": "2026-11-12",
-      "to": "2026-11-19"
+      "from": "2026-11-13",
+      "to": "2026-11-20"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 597,
-    "downloaded": 595,
+    "editions": 600,
+    "downloaded": 598,
     "failed_downloads": 2,
-    "extraction_pending": 597
+    "extraction_pending": 600
   },
   "daily_check_windows": [
     {
@@ -3019,14 +3019,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-19T20:30:31.264Z",
+      "checked_at": "2026-11-20T03:01:57.843Z",
       "range_checked": {
-        "from": "2026-11-12",
-        "to": "2026-11-19"
+        "from": "2026-11-13",
+        "to": "2026-11-20"
       },
       "summary": {
         "editions_total": 155,
-        "editions_in_checked_range": 6,
+        "editions_in_checked_range": 5,
         "downloaded": 153,
         "failed_downloads": 2,
         "extraction_pending": 155,
@@ -5257,41 +5257,60 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "anapolis:25873",
+          "source_edition_id": "25873",
+          "edition_number": "4.074/2026",
+          "date": "2026-11-19",
+          "published_at": "2026-11-19 21:46:38",
+          "publication_timestamp_kind": "official_file_created_timestamp",
+          "extraordinary": false,
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/25873",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/27193/aHzUPWhiISWf7rrNAINs7UWxyEnlfFfQXKU7krW4.pdf",
+          "local_path": "data/raw/municipal-diaries/anapolis/2026/11/2026-11-19-4.074-2026.pdf",
+          "bytes": 842475,
+          "sha256": "50a927495cdb703997fe2c53039db13944edb1471934308faf7e01bceaad7d73",
+          "last_modified": "Fri, 20 Nov 2026 00:46:41 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-19T20:30:32.511Z",
+      "checked_at": "2026-11-20T03:01:59.481Z",
       "range_checked": {
-        "from": "2026-11-12",
-        "to": "2026-11-19"
+        "from": "2026-11-13",
+        "to": "2026-11-20"
       },
       "summary": {
-        "editions_total": 115,
+        "editions_total": 116,
         "editions_in_checked_range": 5,
-        "downloaded": 115,
+        "downloaded": 116,
         "failed_downloads": 0,
-        "extraction_pending": 115,
+        "extraction_pending": 116,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-18",
+        "last_date": "2026-11-19",
         "observed_upload_times": {
           "all": {
-            "observations": 115,
+            "observations": 116,
             "earliest": "01:41",
-            "median": "21:15",
+            "median": "21:16",
             "latest": "23:57"
           },
           "ordinary": {
-            "observations": 115,
+            "observations": 116,
             "earliest": "01:41",
-            "median": "21:15",
+            "median": "21:16",
             "latest": "23:57"
           },
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 75,
+          "observations": 76,
           "earliest": "01:41",
-          "median": "20:56",
+          "median": "20:57",
           "latest": "23:31"
         }
       }
@@ -7423,22 +7442,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3091",
+          "source_edition_id": "3091",
+          "edition_number": "2979",
+          "date": "2026-11-19",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2979",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/11/2026-11-19-2979.pdf",
+          "bytes": 2493788,
+          "sha256": "e123ecd6cc911328ade46ec6d651cf4579f1e1213bf316f5cba857cd3dc564a7",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-19T20:30:33.189Z",
+      "checked_at": "2026-11-20T03:02:00.330Z",
       "range_checked": {
-        "from": "2026-11-12",
-        "to": "2026-11-19"
+        "from": "2026-11-13",
+        "to": "2026-11-20"
       },
       "summary": {
-        "editions_total": 111,
+        "editions_total": 112,
         "editions_in_checked_range": 5,
-        "downloaded": 111,
+        "downloaded": 112,
         "failed_downloads": 0,
-        "extraction_pending": 111,
+        "extraction_pending": 112,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-18",
+        "last_date": "2026-11-19",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -9500,29 +9538,48 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "goiania:do_20261119_000008907.pdf",
+          "source_edition_id": "do_20261119_000008907.pdf",
+          "edition_number": "8907",
+          "date": "2026-11-19",
+          "published_at": null,
+          "publication_timestamp_kind": "file_last_modified_only",
+          "extraordinary": false,
+          "official_url": "https://www.goiania.go.gov.br/shtml/portal/casacivil/lista_diarios.asp?ano=2026",
+          "file_url": "https://www.goiania.go.gov.br/Download/legislacao/diariooficial/2026/do_20261119_000008907.pdf",
+          "local_path": "data/raw/municipal-diaries/goiania/2026/11/2026-11-19-8907.pdf",
+          "bytes": 8506412,
+          "sha256": "aca4417e5751b4e271520755fd10562846fc2d666001f89385db27d9e3fb6f56",
+          "last_modified": "Thu, 19 Nov 2026 21:01:02 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-19T20:30:34.449Z",
+      "checked_at": "2026-11-20T03:02:03.301Z",
       "range_checked": {
-        "from": "2026-11-12",
-        "to": "2026-11-19"
+        "from": "2026-11-13",
+        "to": "2026-11-20"
       },
       "summary": {
-        "editions_total": 107,
+        "editions_total": 108,
         "editions_in_checked_range": 5,
-        "downloaded": 107,
+        "downloaded": 108,
         "failed_downloads": 0,
-        "extraction_pending": 107,
+        "extraction_pending": 108,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-18",
+        "last_date": "2026-11-19",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 107,
+          "observations": 108,
           "earliest": "11:39",
           "median": "18:04",
           "latest": "21:20"
@@ -11621,14 +11678,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-19T20:30:34.926Z",
+      "checked_at": "2026-11-20T03:02:03.754Z",
       "range_checked": {
-        "from": "2026-11-12",
-        "to": "2026-11-19"
+        "from": "2026-11-13",
+        "to": "2026-11-20"
       },
       "summary": {
         "editions_total": 109,
-        "editions_in_checked_range": 6,
+        "editions_in_checked_range": 5,
         "downloaded": 109,
         "failed_downloads": 0,
         "extraction_pending": 109,
