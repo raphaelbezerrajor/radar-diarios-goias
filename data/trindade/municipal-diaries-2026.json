@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-11-22T22:30:33.456Z",
+  "generated_at": "2026-11-23T12:45:42.057Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-11-22",
+    "to": "2026-11-23",
     "last_checked": {
-      "from": "2026-11-15",
-      "to": "2026-11-22"
+      "from": "2026-11-16",
+      "to": "2026-11-23"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 601,
-    "downloaded": 599,
+    "editions": 603,
+    "downloaded": 601,
     "failed_downloads": 2,
-    "extraction_pending": 601
+    "extraction_pending": 603
   },
   "daily_check_windows": [
     {
@@ -3016,22 +3016,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:114674",
+          "source_edition_id": "114674",
+          "edition_number": "3749",
+          "date": "2026-11-23",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114674_2026-11-19_f7e5e574f3fed2a14f785ab175af35ca.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/11/2026-11-23-3749.pdf",
+          "bytes": 1405385,
+          "sha256": "799f031d583e29a38389ece0f18580de732a204e429de42770d17004be3d6f42",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-22T22:30:27.135Z",
+      "checked_at": "2026-11-23T12:45:33.221Z",
       "range_checked": {
-        "from": "2026-11-15",
-        "to": "2026-11-22"
+        "from": "2026-11-16",
+        "to": "2026-11-23"
       },
       "summary": {
-        "editions_total": 155,
-        "editions_in_checked_range": 4,
-        "downloaded": 153,
+        "editions_total": 156,
+        "editions_in_checked_range": 5,
+        "downloaded": 154,
         "failed_downloads": 2,
-        "extraction_pending": 155,
+        "extraction_pending": 156,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-19",
+        "last_date": "2026-11-23",
         "observed_upload_times": {
           "all": {
             "observations": 95,
@@ -5279,10 +5298,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-22T22:30:28.446Z",
+      "checked_at": "2026-11-23T12:45:34.499Z",
       "range_checked": {
-        "from": "2026-11-15",
-        "to": "2026-11-22"
+        "from": "2026-11-16",
+        "to": "2026-11-23"
       },
       "summary": {
         "editions_total": 116,
@@ -7464,10 +7483,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-22T22:30:29.751Z",
+      "checked_at": "2026-11-23T12:45:35.298Z",
       "range_checked": {
-        "from": "2026-11-15",
-        "to": "2026-11-22"
+        "from": "2026-11-16",
+        "to": "2026-11-23"
       },
       "summary": {
         "editions_total": 112,
@@ -9560,10 +9579,10 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-22T22:30:32.823Z",
+      "checked_at": "2026-11-23T12:45:40.403Z",
       "range_checked": {
-        "from": "2026-11-15",
-        "to": "2026-11-22"
+        "from": "2026-11-16",
+        "to": "2026-11-23"
       },
       "summary": {
         "editions_total": 108,
@@ -11694,29 +11713,48 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "senador-canedo:cnvejpm535",
+          "source_edition_id": "cnvejpm535",
+          "edition_number": "cnvejpm535",
+          "date": "2026-11-23",
+          "published_at": "2026-11-23T06:00:00.323Z",
+          "publication_timestamp_kind": "calendar_timestamp_not_upload_time",
+          "extraordinary": false,
+          "official_url": "https://diario.senadorcanedo.go.gov.br/diario/cnvejpm535",
+          "file_url": "https://diario.senadorcanedo.go.gov.br/api/diarios/di%C3%A1rio?d=23-11-2026",
+          "local_path": "data/raw/municipal-diaries/senador-canedo/2026/11/2026-11-23-cnvejpm535.pdf",
+          "bytes": 97988,
+          "sha256": "296c1a8172f81ecc258ad1e5000daa0a9b81035c56bc5e4d05212d738ce84232",
+          "last_modified": "Mon, 23 Nov 2026 06:00:00 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-22T22:30:33.270Z",
+      "checked_at": "2026-11-23T12:45:41.092Z",
       "range_checked": {
-        "from": "2026-11-15",
-        "to": "2026-11-22"
+        "from": "2026-11-16",
+        "to": "2026-11-23"
       },
       "summary": {
-        "editions_total": 110,
-        "editions_in_checked_range": 5,
-        "downloaded": 110,
+        "editions_total": 111,
+        "editions_in_checked_range": 6,
+        "downloaded": 111,
         "failed_downloads": 0,
-        "extraction_pending": 110,
+        "extraction_pending": 111,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-20",
+        "last_date": "2026-11-23",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 14,
+          "observations": 15,
           "earliest": "03:00",
           "median": "03:00",
           "latest": "03:00"
