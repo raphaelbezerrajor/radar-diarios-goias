@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-11-23T12:45:42.057Z",
+  "generated_at": "2026-11-23T20:30:43.529Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 603,
-    "downloaded": 601,
+    "editions": 605,
+    "downloaded": 603,
     "failed_downloads": 2,
-    "extraction_pending": 603
+    "extraction_pending": 605
   },
   "daily_check_windows": [
     {
@@ -3035,20 +3035,39 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:121678",
+          "source_edition_id": "121678",
+          "edition_number": "3749a",
+          "date": "2026-11-23",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": true,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_121678_2026-11-23_ca65d43981c9cc0cbc7507cfba59f637.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/11/2026-11-23-3749a.pdf",
+          "bytes": 318694,
+          "sha256": "e9847a139676c16e3124b268ad9de24fa2cdac0817615cfd9d494a90bc340f5c",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-23T12:45:33.221Z",
+      "checked_at": "2026-11-23T20:30:34.383Z",
       "range_checked": {
         "from": "2026-11-16",
         "to": "2026-11-23"
       },
       "summary": {
-        "editions_total": 156,
-        "editions_in_checked_range": 5,
-        "downloaded": 154,
+        "editions_total": 157,
+        "editions_in_checked_range": 6,
+        "downloaded": 155,
         "failed_downloads": 2,
-        "extraction_pending": 156,
+        "extraction_pending": 157,
         "first_date": "2026-06-01",
         "last_date": "2026-11-23",
         "observed_upload_times": {
@@ -5298,7 +5317,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-23T12:45:34.499Z",
+      "checked_at": "2026-11-23T20:30:36.509Z",
       "range_checked": {
         "from": "2026-11-16",
         "to": "2026-11-23"
@@ -7480,22 +7499,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "aparecida:3092",
+          "source_edition_id": "3092",
+          "edition_number": "2980",
+          "date": "2026-11-23",
+          "published_at": null,
+          "publication_timestamp_kind": "date_only",
+          "extraordinary": false,
+          "official_url": "https://doe.aparecida.go.gov.br/",
+          "file_url": "https://webio.aparecida.go.gov.br/diariooficial/download/2980",
+          "local_path": "data/raw/municipal-diaries/aparecida/2026/11/2026-11-23-2980.pdf",
+          "bytes": 956504,
+          "sha256": "63294c40d3808eb0160897fa0a9e105fe28ce81d0ddc67d7d1fdbd6a1da38303",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-23T12:45:35.298Z",
+      "checked_at": "2026-11-23T20:30:37.622Z",
       "range_checked": {
         "from": "2026-11-16",
         "to": "2026-11-23"
       },
       "summary": {
-        "editions_total": 112,
-        "editions_in_checked_range": 4,
-        "downloaded": 112,
+        "editions_total": 113,
+        "editions_in_checked_range": 5,
+        "downloaded": 113,
         "failed_downloads": 0,
-        "extraction_pending": 112,
+        "extraction_pending": 113,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-19",
+        "last_date": "2026-11-23",
         "observed_upload_times": {
           "all": null,
           "ordinary": null,
@@ -9579,7 +9617,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-23T12:45:40.403Z",
+      "checked_at": "2026-11-23T20:30:42.161Z",
       "range_checked": {
         "from": "2026-11-16",
         "to": "2026-11-23"
@@ -11735,7 +11773,7 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-23T12:45:41.092Z",
+      "checked_at": "2026-11-23T20:30:42.612Z",
       "range_checked": {
         "from": "2026-11-16",
         "to": "2026-11-23"
