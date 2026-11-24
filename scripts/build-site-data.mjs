@@ -712,6 +712,8 @@ async function main() {
   const byId = new Map(allRecords.map(item => [item.id, item]));
   const currentVersion = item => byId.get(item.id);
   const publishedNews = allRecords.filter(item => item.recordType === "story" && !isAlego(item));
+  const coverIds = new Set(cover.map(story => story.id));
+  const archiveStoryIds = publishedNews.filter(story => inGeneralNews(story) && !coverIds.has(story.id)).sort(recentFirst).map(story => story.id);
   const timelineNews = publishedNews.filter(item => Number(item.year) === editorialYear && inGeneralNews(item));
   const leadStory = cover[0] || null;
   const heroSidebar = cover.slice(1);
@@ -879,6 +881,7 @@ async function main() {
     },
     leadStory,
     heroSidebar,
+    archiveStoryIds,
     desks: Object.fromEntries(Object.entries(desks).map(([key, items]) => [key, items.map(item => ({
       id:item.id, title:item.title, deck:item.deck, path:item.path, date:item.date, city:item.city,
       sectionId:key, sourceUrl:item.sourceUrl, sourceLabel:item.sourceLabel, documentReference:item.documentReference,

@@ -64,6 +64,9 @@ assert(site.timeline.stories.every((item) => Number(item.year) === site.timeline
 const cover = [site.leadStory, ...site.heroSidebar].filter(Boolean);
 const expectedCover = records.filter(r => r.placement === "capa" && Number(r.year) === site.timeline.year).sort(recentFirst);
 assert(JSON.stringify(cover.map(r => r.id)) === JSON.stringify(expectedCover.map(r => r.id)), "A capa diverge da distribuição da redação.");
+const coverIds = new Set(cover.map(row => row.id));
+const expectedArchive = records.filter(row => row.recordType === 'story' && !isAlego(row) && inGeneralNews(row) && !coverIds.has(row.id)).sort(recentFirst);
+assert(JSON.stringify(site.archiveStoryIds) === JSON.stringify(expectedArchive.map(row => row.id)), "A paginação do arquivo perdeu matérias ou misturou destinos editoriais.");
 assert(cover.every(r => r.recordType === "story" && r.sourceType === "official_document"), "Matéria de capa sem fonte oficial.");
 assert(records.filter(r => r.recordType === 'story').every(r => Object.hasOwn(sections, r.sectionId)), 'Há matéria publicada sem editoria.');
 for (const id of Object.keys(sections)) {

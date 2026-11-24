@@ -2,18 +2,19 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import site from '../generated/site-data.json';
 import { sections } from '../lib/editorial/distribution.mjs';
+import { pageNumbers } from '../lib/editorial/caderno-pages.js';
 import { withBase, formatDate } from '../lib/format.js';
 
-const { section = 'capa', page = 1, items, pages = 1 } = Astro.props;
+const { section = 'capa', page = 1, items, pages = 1, isArchive = false } = Astro.props;
 const cover = section === 'capa';
-const label = cover ? 'Capa' : sections[section];
+const label = isArchive ? 'Arquivo de matérias' : cover ? 'Capa' : sections[section];
 const lead = page === 1 ? items[0] : null;
 const notes = lead ? items.slice(1) : items;
 const pageUrl = n => withBase(cover ? n === 1 ? '/' : '/capa/'+n+'/' : '/editorias/'+section+'/'+(n === 1 ? '' : n+'/'));
 const image = lead?.image?.kind === 'source-page' ? withBase(lead.image.src) : '';
 const diaries = site.controlCoverage.filter(c => c.latest).sort((a,b) => b.latest.date.localeCompare(a.latest.date));
 ---
-<BaseLayout title={label + ' | Pauteiro'} description={cover ? 'As principais notícias documentais de Goiás, selecionadas pela redação do Pauteiro.' : 'Matérias da editoria de ' + label + ' no Pauteiro.'} activeSection={section}>
+<BaseLayout title={label + (page > 1 ? ' · Página '+page : '') + ' | Pauteiro'} description={isArchive ? 'Noticiário documental do Pauteiro em ordem de publicação, do mais recente para o mais antigo.' : cover ? 'As principais notícias documentais de Goiás, selecionadas pela redação do Pauteiro.' : 'Matérias da editoria de ' + label + ' no Pauteiro.'} activeSection={section}>
   <div class="caderno caderno-page"><div class="shell"><div class="layout">
     <div class="news">
       {lead ? <article class="sheet" data-section={lead.sectionId}>
@@ -28,8 +29,8 @@ const diaries = site.controlCoverage.filter(c => c.latest).sort((a,b) => b.lates
           </div>
         </div></article> : <h1 class="index-title">{label}</h1>}
       {items.length === 0 && <p class="empty-edition">A redação ainda não selecionou matérias para {cover ? 'a capa deste ano' : 'esta editoria'}.</p>}
-      {notes.length > 0 && <section class="notes-section" aria-label={cover ? 'Outras notícias em destaque' : 'Matérias da editoria'}>
-        <div class="notes-head"><h2>{cover ? 'Também na capa' : 'Mais em '+label}</h2>
+      {notes.length > 0 && <section class="notes-section" aria-label={isArchive ? 'Matérias do arquivo' : cover ? 'Outras notícias em destaque' : 'Matérias da editoria'}>
+        <div class="notes-head"><h2>{isArchive ? 'Do mais recente ao mais antigo' : cover ? 'Também na capa' : 'Mais em '+label}</h2>
           <fieldset class="paper-control" hidden><legend>Estilo dos cartões</legend>
             <label><input type="radio" name="papel" value="adesivas" checked/><span>Adesivas</span></label>
             <label><input type="radio" name="papel" value="bloco"/><span>Bloco</span></label>
@@ -39,9 +40,6 @@ const diaries = site.controlCoverage.filter(c => c.latest).sort((a,b) => b.lates
           <h3><a href={withBase(item.path)}>{item.title}</a></h3><p>{item.deck}</p><small>{item.city}</small>
         </article>)}</div>
       </section>}
-      {pages > 1 && <nav class="page-links" aria-label="Páginas da seleção">
-        {page > 1 && <a href={pageUrl(page-1)}>Anterior</a>}<span>Página {page} de {pages}</span>{page < pages && <a href={pageUrl(page+1)}>Próxima</a>}
-      </nav>}
     </div>
     <aside>
       {lead?.sourceUrl && <section class="source-card"><h2>Documento em foco</h2>
@@ -53,6 +51,16 @@ const diaries = site.controlCoverage.filter(c => c.latest).sort((a,b) => b.lates
         <a class="text-link" href={withBase('/controle/')}>Ver cobertura dos tribunais</a></section>
     </aside>
   </div></div></div>
+  <Fragment slot="pager">{pages > 1 && <nav class="edition-pager" aria-label={cover ? 'Páginas da capa e do arquivo' : 'Páginas de '+label}>
+    <div class="shell pager-row">
+      <div class="pager-caption"><strong>{cover ? 'Capa e arquivo de matérias' : label}</strong><span>Página {page} de {pages}</span></div>
+      <div class="pager-steps">
+        {page > 1 && <a rel="prev" href={pageUrl(page-1)} aria-label="Página anterior">← Anterior</a>}
+        <div class="pager-numbers">{pageNumbers(page,pages).map(n => n === null ? <span class="pager-gap" aria-hidden="true">…</span> : n === page ? <span class="pager-current" aria-current="page" aria-label={'Página '+n}>{n}</span> : <a href={pageUrl(n)} aria-label={'Página '+n}>{n}</a>)}</div>
+        {page < pages && <a rel="next" href={pageUrl(page+1)} aria-label="Próxima página">Próxima →</a>}
+      </div>
+    </div>
+  </nav>}</Fragment>
 </BaseLayout>
 <script>
   const control = document.querySelector<HTMLFieldSetElement>('.paper-control');

@@ -35,6 +35,23 @@ assert(gzipSync(defaultShard).byteLength < 1_200_000, "O recorte padrão ficou p
 assert(home.includes("PAUTEIRO"), "A identidade principal não aparece na capa.");
 assert(home.includes('aria-label="Capa e editorias"') && (!summary.leadStory || home.includes('class="sheet"')), "A navegação por editorias ou a manchete não aparece na capa.");
 const paperAsset = "assets/caderno/papel.css";
+const selected = [summary.leadStory, ...summary.heroSidebar].filter(Boolean);
+const cardsById = new Map(Object.values(summary.desks).flat().map(row => [row.id,row]));
+const selectedPages = Math.max(1, Math.ceil(selected.length/13));
+const archivePages = Math.ceil(summary.archiveStoryIds.length/13);
+const pageTotal = selectedPages + archivePages;
+for (let number = 1; number <= pageTotal; number++) {
+  const html = number === 1 ? home : await readFile(path.join(buildRoot,'capa',String(number),'index.html'),'utf8');
+  const start = 13 * (number <= selectedPages ? number - 1 : number - selectedPages - 1);
+  const expected = number <= selectedPages ? selected.slice(start,start+13) : summary.archiveStoryIds.slice(start,start+13).map(id => cardsById.get(id));
+  const links = Array.from(html.matchAll(/<h[13][^>]*>\s*<a\s+href="([^"]+)"/g), m => m[1]);
+  assert(links.length === expected.length && links.every((url,i) => url.endsWith(expected[i].path)), 'Conteúdo incorreto na página '+number);
+  if (pageTotal > 1) {
+    const nav = html.match(/<footer\b[^>]*>\s*<nav class="edition-pager"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+    assert(nav?.includes('Página '+number+' de '+pageTotal) && nav.includes('aria-current="page"'), 'Falta paginador no rodapé da página '+number);
+    assert(nav.includes('rel="prev"') === (number > 1) && nav.includes('rel="next"') === (number < pageTotal), 'Setas incorretas na página '+number);
+  }
+}
 assert(home.includes(paperAsset) && (await stat(path.join(buildRoot, paperAsset))).size > 0, "A folha de estilo do caderno não foi empacotada.");
 const layoutPages = [platform, trindade, timeline, july, searchPage, checkedStory, checkedActNews,
   ...await Promise.all(["goias", "municipios", "controle"].map(route => readFile(path.join(buildRoot, route, "index.html"), "utf8")))];

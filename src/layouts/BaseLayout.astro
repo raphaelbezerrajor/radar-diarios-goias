@@ -5,6 +5,7 @@ import "../styles/caderno-internas.css";
 import { sections } from "../lib/editorial/distribution.mjs";
 import { formatDate } from "../lib/format.js";
 import siteData from "../generated/site-data.json";
+import { firstArchivePage } from "../lib/editorial/caderno-pages.js";
 
 const {
   title = "Pauteiro",
@@ -53,6 +54,7 @@ const navItems = [{id:'capa', label:'Capa', href:baseHref}, ...Object.entries(se
       <slot />
     </main>
     <footer class="site-footer">
+      <slot name="pager" />
       <div class="shell footer-grid">
         <div>
           <strong>PAUTEIRO</strong>
@@ -63,6 +65,7 @@ const navItems = [{id:'capa', label:'Capa', href:baseHref}, ...Object.entries(se
           <p>Um vínculo documental não constitui acusação. Confirme sempre a fonte original.</p>
         </div>
         <div class="footer-links">
+          {firstArchivePage && <a href={baseHref+'capa/'+firstArchivePage+'/'}>Arquivo de matérias</a>}
           <a href={`${baseHref}busca/`}>Buscar na base</a>
           <a href={`${baseHref}linha-do-tempo/`}>Últimas notícias</a>
           <a href={`${baseHref}municipios/`}>Municípios</a>

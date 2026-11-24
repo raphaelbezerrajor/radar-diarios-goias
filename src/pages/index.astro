@@ -1,5 +1,5 @@
 ---
 import Caderno from '../components/Caderno.astro';
-import { coverStories, pageProps } from '../lib/editorial/caderno-pages.js';
+import { coverPageProps } from '../lib/editorial/caderno-pages.js';
 ---
-<Caderno {...pageProps('capa', coverStories)}/>
+<Caderno {...coverPageProps(1)}/>
