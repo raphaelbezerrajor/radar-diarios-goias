@@ -1,4 +1,4 @@
-import { readFile, stat } from "node:fs/promises";
+import { readFile, readdir, stat } from "node:fs/promises";
 import { gzipSync } from "node:zlib";
 import path from "node:path";
 
@@ -87,12 +87,11 @@ assert(checkedStory.includes('class="fontes"'), "A matéria não oferece a refer
 assert(/href="[^"]*do_20261019_000008886\.pdf[^"]*"/.test(checkedSourcePage), "O PDF original não está acessível.");
 assert(checkedStory.match(/Dois extratos de contratos artísticos publicados pelo Município/g)?.length === 1, "A matéria checada repete o resumo no corpo.");
 assert(checkedActNews.includes("Registro documental"), "O ato burocrático não foi identificado como registro documental.");
-const inhumas = search.records.find(row => row.id === "jul26-agm-114675-27A78D49-135");
-if (inhumas?.recordType === "record") {
-  const extrato = await readFile(path.join(buildRoot, inhumas.path, "index.html"), "utf8");
-  assert(extrato.includes("Registro documental") && extrato.includes("081/2026") && !extrato.includes(">Raphael Bezerra</strong>"),
-    "O extrato de glicosímetros de Inhumas não foi apresentado como registro.");
-}
+const newsroomRecords = await readJson("src", "generated", "site-records.json");
+const paths = new Set(await readdir(path.join(buildRoot, "base")));
+const publicIds = new Set(newsroomRecords.filter(item => !item.reportingCandidate).map(item => item.id));
+assert(ids.size === publicIds.size && [...ids].every(id => publicIds.has(id)), "Busca divergente do catálogo público.");
+assert(newsroomRecords.every(item => paths.has(item.slug) === !item.reportingCandidate), "Uma pauta interna vazou ou uma página pública está ausente.");
 assert(checkedActNews.includes("Prefeitura Municipal de Trindade publicou PORTARIA Nº 060/2025-GAB"), "O texto documental do ato não aparece no repositório.");
 assert(checkedActNews.includes("O ato consta na edição 3411, na página 85"), "O detalhamento documental do ato não aparece no corpo.");
 assert(!checkedActNews.includes('class="detail-summary"'), "O lead documental do ato está repetido no corpo.");

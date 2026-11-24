@@ -1,6 +1,7 @@
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { isPublishedArticle } from "../src/lib/editorial/publication.mjs";
+import { reportingOrder, nextReportingBatch } from "../src/lib/editorial/reporting-intake.mjs";
 import { validateEditorialBrief } from "../src/lib/editorial/curation.mjs";
 import { recentFirst, courtId, isAlego } from "../src/lib/editorial/control-coverage.mjs";
 import { sections, inGeneralNews } from "../src/lib/editorial/distribution.mjs";
@@ -88,15 +89,16 @@ assert(
 if (privateQueueDir) {
   assert(curationQueue.candidates.length >= 150, "A fila privada de curadoria perdeu pautas relevantes.");
   assert(curationQueue.summary.candidates === curationQueue.candidates.length, "O resumo da fila privada diverge dos candidatos.");
+  const intakeIds = new Set(curationQueue.candidates.map(row => row.id));
+  assert(intakeIds.size === curationQueue.candidates.length && records.filter(row => row.reportingCandidate).every(row => intakeIds.has(row.id)), "Pauta retirada ausente ou duplicada na fila privada.");
+  assert(JSON.stringify(curationQueue.nextBatch) === JSON.stringify(nextReportingBatch(curationQueue.candidates,curationQueue.policy.automationBatchSize)), "O próximo lote diverge das prioridades.");
 }
 assert(curationQueue.candidates.every((item, index, items) =>
-  index === 0
-  || items[index - 1].date > item.date
-  || (items[index - 1].date === item.date && items[index - 1].priority >= item.priority)
+  index === 0 || reportingOrder(items[index - 1], item) <= 0
 ), "A fila de curadoria não está em ordem editorial.");
 
 for (const candidate of curationQueue.candidates) {
-  assert(["pending", "brief_exists"].includes(candidate.status), `Estado inválido na fila: ${candidate.id}.`);
+  assert(["pending", "watch", "handled", "brief_exists"].includes(candidate.status), `Estado inválido na fila: ${candidate.id}.`);
   assert(/^https?:\/\//i.test(candidate.source?.url || ""), `Candidato sem fonte oficial: ${candidate.id}.`);
   assert(
     candidate.requestedOutput?.publishAutomatically === false,

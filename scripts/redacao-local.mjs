@@ -7,6 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateStoryEntry } from "../src/lib/editorial/story-overrides.mjs";
 import { copiesDocumentBody } from "../src/lib/editorial/publication.mjs";
+import { nextReportingBatch, reportingOrder } from "../src/lib/editorial/reporting-intake.mjs";
 import { validateEditorialBrief } from "../src/lib/editorial/curation.mjs";
 import { sections } from "../src/lib/editorial/distribution.mjs";
 import { isAlego } from "../src/lib/editorial/control-coverage.mjs";
@@ -114,9 +115,9 @@ function triageCollectedAct(entry, hold) {
   const procurement = ["contrato", "aditivo", "dispensa", "homologacao", "pregao", "inexigibilidade", "adjudicacao"].includes(type);
   const impact = (entry.curationReasons || []).some((reason) => reason.startsWith("possível impacto"));
   const priority = Number(entry.priority) || 0;
-  const toInvestigate = !routine && evidence && (control ? decision : priority >= 85 && (procurement || impact));
+  const toInvestigate = !hold && (entry.routing ? entry.routing === "investigate" : !routine && evidence && (control ? decision : priority >= 85 && (procurement || impact)));
   const status = toInvestigate ? "investigate" : "watch";
-  const reason = hold?.reason || (toInvestigate
+  const reason = hold?.reason || (entry.routing === "investigate" ? "Conferir o efeito concreto indicado no ato e se há um fato novo para o leitor." : null) || (toInvestigate
     ? control ? "O texto extraído indica uma decisão de controle com possível efeito concreto."
       : "O ato combina prioridade alta na curadoria com contratação pública ou possível impacto em serviços, políticas ou patrimônio."
     : routine ? "O título indica rotina administrativa. A triagem preservou o registro para consulta."
@@ -130,8 +131,9 @@ function triageCollectedAct(entry, hold) {
       ...(entry.mandatoryHumanReview ? ["Submeter o texto à revisão humana e conferir a necessidade de contraditório."] : [])
     ];
   return {
-    id: entry.id, status, date: entry.date, title, deck: source.documentReference, paragraphs: [],
-    reason, pendingChecks, selectedBecause: entry.curationReasons || [], sourceUrl: source.url
+    id: entry.id, status, date: entry.date, title, deck: [facts.extractedDeck, source.documentReference].filter(Boolean).join(" · "), paragraphs: [],
+    reason, pendingChecks, selectedBecause: entry.impactReasons || entry.curationReasons || [], sourceUrl: source.url,
+    priority, withdrawnFromSite: Boolean(entry.withdrawnFromSite)
   };
 }
 
@@ -187,14 +189,15 @@ async function reviewQueue() {
   }
   const handledIds = new Set([
     ...revisions.keys(),
-    ...(overrides.stories || []).filter((story) => story.status === "published").map((story) => story.id),
+    ...(overrides.stories || []).filter(story => story.status === "published").flatMap(story => [story.id, story.id.replace(/^pauteiro-/, "")]),
     ...(curated.briefs || []).filter((brief) => ["approved", "rejected"].includes(brief.status)).map((brief) => brief.id)
   ]);
   const reviewedActs = new Set([...revisions.values()].map(({ actHash }) => actHash).filter(Boolean));
-  const incoming = (queue.candidates || [])
-    .filter((entry) => entry.id && !handledIds.has(entry.id) && !reviewedActs.has(entry.source?.actSha256))
-    .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")) || (b.priority || 0) - (a.priority || 0))
-    .map((entry) => triageCollectedAct(entry, holdsById.get(entry.id)));
+  const available = (queue.candidates || [])
+    .filter(entry => entry.id && entry.routing !== "in_workflow" && !handledIds.has(entry.id) && !reviewedActs.has(entry.source?.actSha256))
+    .sort(reportingOrder);
+  const batch = new Set(nextReportingBatch(available.filter(entry => !holdsById.has(entry.id)),queue.policy?.automationBatchSize || 12));
+  const incoming = available.map(entry => ({...triageCollectedAct(entry, holdsById.get(entry.id)), nextBatch:batch.has(entry.id)}));
   return {
     unreadable, incoming, generatedAt: queue.generatedAt || null,
     items: [...revisions.values()].map(({ item }) => item).filter(Boolean)
@@ -219,6 +222,7 @@ async function buildAndValidate() {
   await runNode(["scripts/export-public-editorial.mjs", privateEditorialDir]);
   await runNode(["scripts/validate-public-editorial.mjs"]);
   await runNode(["scripts/build-site-data.mjs"]);
+  await runNode(["scripts/build-curation-queue.mjs"], { PAUTEIRO_PRIVATE_DIR: privateEditorialDir });
   await runNode(["scripts/validate-news-policy.mjs"]);
   const workDir = path.join(project, "work");
   await fs.mkdir(workDir, { recursive: true });
@@ -280,7 +284,7 @@ const server = createServer(async (request, response) => {
     if (request.headers.host !== `127.0.0.1:${port}`) return sendJson(response, 403, { error: "Acesso apenas pelo endereço local." });
     const url = new URL(request.url, origin);
     if (request.method === "GET" && url.pathname === "/api/health") {
-      return sendJson(response, 200, { ok: true, editorialStorageVersion: 9, building: building || writing });
+      return sendJson(response, 200, { ok: true, editorialStorageVersion: 10, building: building || writing });
     }
     if (request.method === "GET" && url.pathname === "/api/review") {
       return sendJson(response, 200, await reviewQueue());

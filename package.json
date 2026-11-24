@@ -9,7 +9,7 @@
     "news:previews": "python scripts/render-source-previews.py --limit 24",
     "news:july-previews": "node scripts/restore-large-data.mjs && python scripts/render-july-previews.py --limit 24",
     "news:control-previews": "python scripts/render-control-previews.py",
-    "editorial:queue": "node scripts/restore-large-data.mjs && node scripts/build-curation-queue.mjs",
+    "editorial:queue": "node scripts/restore-large-data.mjs && node scripts/build-site-data.mjs && node scripts/build-curation-queue.mjs",
     "redacao:local": "node scripts/redacao-local.mjs",
     "build:data": "node scripts/restore-large-data.mjs && node scripts/build-site-data.mjs",
     "build": "node scripts/restore-large-data.mjs && node scripts/build-site-data.mjs && astro build",

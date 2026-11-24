@@ -9,7 +9,7 @@ const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
 
 export async function getStaticPaths() {
   const records = JSON.parse(await readFile('src/generated/site-records.json', 'utf8'));
-  return records.map((record) => ({
+  return records.filter(record => !record.reportingCandidate).map((record) => ({
     params: { id: record.slug },
     props: { record }
   }));

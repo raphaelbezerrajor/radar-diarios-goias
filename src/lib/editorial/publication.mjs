@@ -10,8 +10,8 @@ export function isPublishedArticle(item) {
     && new Set(item.paragraphs.filter(p => typeof p === "string").map(p => p.trim()).filter(Boolean)).size >= 2;
 }
 
-export function classifyPublication(item) {
-  if (item.recordType !== "story" || isPublishedArticle(item)) return item;
+export function classifyPublication(item, withdrawn = false) {
+  if (isPublishedArticle(item) || (item.recordType !== "story" && !withdrawn)) return item;
   return { ...item, recordType: "record", publicationMode: "repository_record",
     editorialStatus: "archived", prominence: "repository", reportingCandidate: true };
 }

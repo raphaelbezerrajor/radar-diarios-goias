@@ -684,7 +684,8 @@ async function main() {
     .filter((item) => item.type !== "ato" && item.type !== "noticia" && !trindadeActIds.has(item.id))
     .map(normalizeUnifiedRecord);
 
-  const allRecords = sortForSearch(
+  const withdrawn = new Set(await readJson("data", "withdrawn-record-ids.json"));
+  const newsroomRecords = sortForSearch(
     dedupeById(
       stateRecords
         .concat(normalizedTrindadeNews)
@@ -696,10 +697,11 @@ async function main() {
         .concat(residualUnified)
         .map(applyEditorialCuration)
         .map(applyEditorialEdit)
-        .map(classifyPublication)
+        .map(item => classifyPublication(item, withdrawn.has(item.id)))
         .map(attachSearch)
     )
   );
+  const allRecords = newsroomRecords.filter(item => !item.reportingCandidate);
   for (const entry of editorialEntries.filter((item) => item.kind === "edit" && item.status === "published")) {
     if (!allRecords.some((item) => item.id === entry.id && item.editorialEntryId === entry.id)) {
       throw new Error(`Edição editorial não aplicada: ${entry.id}`);
@@ -1000,7 +1002,7 @@ async function main() {
   );
   await fs.writeFile(
     path.join(generatedDir, "site-records.json"),
-    JSON.stringify(allRecords, null, 2)
+    JSON.stringify(newsroomRecords, null, 2)
   );
   await fs.writeFile(
     path.join(publicDataDir, "site-search.json"),

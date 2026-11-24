@@ -1,20 +1,14 @@
 # Curadoria editorial do Pauteiro
 
-O documento oficial continua sendo publicado como registro factual. A promoção
-para matéria jornalística depende de uma segunda camada: seleção por
-valor-notícia e diretriz factual do ChatGPT. Como o painel editorial é de uso
-individual, não existe uma aprovação redundante para a curadoria comum.
+As pautas extraídas automaticamente que chegaram a aparecer como matérias ficam na redação. O catálogo interno preserva o original, a referência e a identificação de cada ato. A busca pública e as páginas do site só recebem a matéria quando há texto próprio publicado pela redação.
 
 ## Fluxo
 
 1. A coleta preserva o ato, a edição, as páginas, os valores, os nomes, os
    identificadores e o endereço oficial.
-2. `pnpm editorial:queue` seleciona os candidatos de maior interesse público e
-   grava `data/editorial/curation-queue.json`.
-3. O ChatGPT lê somente os candidatos com `status: "pending"`, confere o pacote
-   factual e, quando necessário, as páginas indicadas no PDF.
-4. A resposta é gravada em `data/editorial/curated-briefs.json` como `draft` e
-   passa a orientar título e olho na próxima geração do portal.
+2. Após gerar o catálogo, `pnpm editorial:queue` atualiza `curation-queue.json` em `PAUTEIRO_PRIVATE_DIR` (na operação local, `D:\Pauteiro\private\editorial`). A fila reúne a seleção diária e todas as pautas retiradas do site.
+3. Quando a redação pedir para começar a apuração, leia os IDs de `nextBatch` nessa ordem e localize as fichas em `candidates`. O lote considera decisões de controle, efeitos em serviços, mudanças concretas, valores e qualidade da referência. Confira o ato, o estágio, a data do fato e eventual cobertura anterior. Registre o andamento em `triagens` para que o trabalho não volte a ser encaminhado. Os demais candidatos permanecem disponíveis para decisão editorial.
+4. Redija a matéria a partir do que foi confirmado. Rascunhos e pendências ficam no fluxo privado. A publicação usa a aprovação editorial existente, a escolha de editoria e o destino definidos na redação.
 5. Casos com conflito de valores, mistura de atos, sanção, responsabilização ou
    risco reputacional recebem `needs_review` e não alteram a publicação até que
    a pendência factual seja resolvida.
@@ -80,9 +74,4 @@ Cada item de `briefs` deve ter:
 }
 ```
 
-Enquanto o brief for `draft`, os campos de `publication` podem ficar vazios. O
-portal usa a primeira opção de título, o ângulo principal como olho e preserva
-os parágrafos factuais já extraídos. Se houver título, olho e texto completos no
-bloco `publication`, eles prevalecem. `needs_review` continua bloqueado até a
-correção da pendência; o status `approved` permanece apenas por compatibilidade
-com briefs antigos e não é mais necessário.
+Enquanto o brief for `draft`, os campos de `publication` podem ficar vazios. O material segue privado em `needs_review`. Para promover o ato via curadoria, aprove o brief com fonte conferida e bloco de publicação completo e marque `promoteToStory`. A mesa de edição também permite escrever uma matéria própria a partir da ficha.

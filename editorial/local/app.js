@@ -40,10 +40,12 @@ async function refreshReview() {
     $("review-count").textContent = (count === 1 ? "1 matéria pendente" : `${count} matérias pendentes`)
       + (queue.unreadable ? ` · ${queue.unreadable} ficha(s) com erro de leitura` : "");
     const incoming = queue.incoming || [];
-    const investigate = incoming.filter((item) => item.status === "investigate");
+    const batch = incoming.filter(item => item.nextBatch);
+    const investigate = incoming.filter(item => item.status === "investigate" && !item.nextBatch);
     const watch = incoming.filter((item) => item.status === "watch");
     $("review-intake-label").textContent = `${incoming.length} atos triados automaticamente`;
-    $("review-investigate-label").textContent = `Para apuração (${investigate.length})`;
+    $("review-batch-label").textContent = `Próximo lote de apuração (${batch.length})`;
+    $("review-investigate-label").textContent = `Na sequência para apuração (${investigate.length})`;
     $("review-watch-label").textContent = `Em acompanhamento (${watch.length})`;
     $("review-intake-date").textContent = queue.generatedAt
       ? `Fila gerada em ${new Date(queue.generatedAt).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })}`
@@ -62,7 +64,7 @@ async function refreshReview() {
       const meta = document.createElement("small");
       const stage = item.status === "investigate" ? "Aguardando apuração" : item.status === "watch" ? "Em acompanhamento"
         : item.stage === "em_apuracao" ? "Em apuração" : item.status === "needs_review" ? "Revisão humana" : "Rascunho";
-      meta.textContent = [stage, item.date].filter(Boolean).join(" · ");
+      meta.textContent = [stage, Number.isFinite(item.priority) ? `Prioridade ${item.priority}/100` : "", item.date].filter(Boolean).join(" · ");
       summary.append(meta);
       const review = document.createElement("section");
       review.className = "review-pending";
@@ -104,11 +106,37 @@ async function refreshReview() {
         source.textContent = "Abrir documento oficial ↗";
         article.append(source);
       }
+      if (item.withdrawnFromSite) {
+        const open = document.createElement("button");
+        open.type = "button";
+        open.textContent = "Abrir na mesa de edição";
+        open.addEventListener("click", async () => {
+          if (!state.stories.some(row => row.id === item.id)) await refresh();
+          selectStory(item.id);
+          $("editor-heading").scrollIntoView({block:"start"});
+        });
+        article.append(open);
+      }
       return article;
     };
     list.replaceChildren(...queue.items.map(renderItem));
+    $("review-batch-list").replaceChildren(...batch.map(renderItem));
     $("review-investigate-list").replaceChildren(...investigate.map(renderItem));
-    intakeList.replaceChildren(...watch.map(renderItem));
+    intakeList.replaceChildren();
+    let visible = 0;
+    function moreWatched() {
+      const group = watch.slice(visible, visible + 30);
+      visible += group.length;
+      intakeList.append(...group.map(renderItem));
+      if (visible < watch.length) {
+        const more = document.createElement("button");
+        more.type = "button";
+        more.textContent = "Ver mais atos em acompanhamento";
+        more.addEventListener("click", () => { more.remove(); moreWatched(); });
+        intakeList.append(more);
+      }
+    }
+    moreWatched();
     reviewSnapshot = snapshot;
   } catch {
     $("review-count").textContent = "Fila indisponível. A redação tentará atualizar novamente.";
@@ -223,7 +251,7 @@ function selectStory(id) {
     const draft = state.drafts.find((item) => item.id === draftId);
     selectedId = draftId;
     selectedKind = "new";
-    selectedPath = story.path || "";
+    selectedPath = story.reportingCandidate ? "" : story.path || "";
     setFields({ ...story, title: "", deck: "", paragraphs: [], ...draft, id: draftId });
     status(draft ? "Rascunho local carregado." : "Ato do acervo carregado. Confira o documento e escreva a matéria; o registro original será preservado.");
     return;
