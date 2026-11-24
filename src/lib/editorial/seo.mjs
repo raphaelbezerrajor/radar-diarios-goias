@@ -1,4 +1,5 @@
 const absoluteHttpUrl = (value) => /^https?:\/\//i.test(String(value || ""));
+export const pauteiroAuthor = Object.freeze({ "@type": "Person", name: "Raphael Bezerra" });
 
 export function validateJsonLdSchema(schema = {}) {
   const issues = [];
@@ -46,7 +47,7 @@ export function validateStorySeo(story = {}, { knownInternalPaths } = {}) {
   return { valid: issues.length === 0, issues };
 }
 
-export function buildNewsArticleSchema({ story = {}, canonical, publisher = "Pauteiro" } = {}) {
+export function buildNewsArticleSchema({ story = {}, canonical, publisher = "Pauteiro", author } = {}) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -55,7 +56,7 @@ export function buildNewsArticleSchema({ story = {}, canonical, publisher = "Pau
     datePublished: story.dataPublicacao,
     dateModified: story.dataAtualizacao || story.dataPublicacao,
     mainEntityOfPage: canonical,
-    author: { "@type": "Organization", name: story.autor || publisher },
+    author: author || { "@type": "Organization", name: story.autor || publisher },
     publisher: { "@type": "Organization", name: publisher }
   };
   if (story.imagem?.url) schema.image = [story.imagem.url];
@@ -63,14 +64,14 @@ export function buildNewsArticleSchema({ story = {}, canonical, publisher = "Pau
   return schema;
 }
 
-export function buildDocumentArticleSchema({ story = {}, canonical, publisher = "Pauteiro" } = {}) {
+export function buildDocumentArticleSchema({ story = {}, canonical, publisher = "Pauteiro", author } = {}) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: story.tituloEditorial,
     description: story.metadescricao || story.linhaFina,
     mainEntityOfPage: canonical,
-    author: { "@type": "Organization", name: story.autor || publisher },
+    author: author || { "@type": "Organization", name: story.autor || publisher },
     publisher: { "@type": "Organization", name: publisher }
   };
   if (story.imagem?.url) schema.image = [story.imagem.url];

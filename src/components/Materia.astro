@@ -1,0 +1,84 @@
+---
+import { sections } from '../lib/editorial/distribution.mjs';
+import { pauteiroAuthor } from '../lib/editorial/seo.mjs';
+import { formatCurrency, formatDate, withBase } from '../lib/format.js';
+
+const { record, researchChatUrl } = Astro.props;
+const section = sections[record.sectionId];
+const paragraphs = record.paragraphs?.length ? record.paragraphs : [record.summary].filter(Boolean);
+const dropCap = /^[“"'‘(«]*\p{L}/u.test(paragraphs[0]?.trimStart() || '');
+const reasons = (record.newsValue?.reasons || []).filter(reason => !reason.includes('rotina administrativa'));
+const reference = record.documentReference || record.marker;
+const supporting = (record.supportingSources || []).filter(source => source.url !== record.sourceUrl);
+---
+<article class="materia" aria-labelledby="materia-titulo">
+  <header class="abertura">
+    <div class="rubrica">
+      {section && <a href={withBase('/editorias/'+record.sectionId+'/')}>{section}</a>}
+      {record.city && <span>{record.city}</span>}
+    </div>
+    <h1 id="materia-titulo">{record.title}</h1>
+    {record.deck && <p class="olho">{record.deck}</p>}
+    <div class="assinatura">
+      <span>Por <strong>{pauteiroAuthor.name}</strong></span>
+      {record.publishedAt ? <span>Publicado em <time datetime={record.publishedAt}>{formatDate(record.publishedAt)}</time></span>
+        : record.date && <span>Documento de <time datetime={record.date}>{formatDate(record.date)}</time></span>}
+    </div>
+  </header>
+  <div class="coluna">
+    <div class:list={['texto', { capitular: dropCap }]}>
+      {paragraphs.map(paragraph => <p>{paragraph}</p>)}
+    </div>
+    {record.processTimeline?.length > 0 && <section class="cronologia">
+      <h2>Como o processo avançou</h2>
+      <ol>{record.processTimeline.map(event => <li><time datetime={event.date}>{formatDate(event.date)}</time> {event.label}</li>)}</ol>
+    </section>}
+    <section class="fontes" aria-labelledby="fontes-titulo">
+      <h2 id="fontes-titulo">Fonte documental</h2>
+      {record.sourceUrl ? <a href={record.sourceUrl} target="_blank" rel="noreferrer">{record.sourceLabel || record.sourceFamily || 'Abrir fonte original'} ↗</a>
+        : <span>{record.sourceLabel || record.sourceFamily}</span>}
+      {reference && <p>{reference}</p>}
+      {record.actDate && <p>Ato de <time datetime={record.actDate}>{formatDate(record.actDate)}</time>{record.date && <> · Documento publicado em <time datetime={record.date}>{formatDate(record.date)}</time></>}</p>}
+      {record.processNumber && !reference?.includes(record.processNumber) && <p>Processo {record.processNumber}</p>}
+      {(supporting.length > 0 || record.processUrl) && <ul>{supporting.map(source => <li><a href={source.url} target="_blank" rel="noreferrer">{source.label} ↗</a></li>)}
+        {record.processUrl && !supporting.some(source => source.url === record.processUrl) && <li><a href={record.processUrl} target="_blank" rel="noreferrer">Consultar processo completo ↗</a></li>}
+      </ul>}
+    </section>
+    {record.relatedReads?.length > 0 && <section class="relacionadas"><h2>Leia também</h2>
+      <ul>{record.relatedReads.map(item => <li><a href={withBase(item.path)}>{item.title}</a> <time datetime={item.date}>{formatDate(item.date)}</time></li>)}</ul>
+    </section>}
+    <details class="apuracao"><summary>Ferramentas de apuração</summary>
+      {record.valueTotal > 0 && <p>Valor encontrado no recorte · {formatCurrency(record.valueTotal)}</p>}
+      {reasons.length > 0 && <div><strong>Por que importa</strong><ul>{reasons.map(reason => <li>{reason}</li>)}</ul></div>}
+      <p><a href={researchChatUrl}>Investigar no chat ↗</a></p>
+      <p><a href={withBase('/busca/?city='+encodeURIComponent(record.city || '')+'&q='+encodeURIComponent(record.title))}>Buscar relacionados no acervo</a></p>
+    </details>
+  </div>
+</article>
+<style>
+  .materia { width: min(1020px, calc(100% - 48px)); margin: clamp(20px, 4vw, 54px) auto; padding: clamp(28px, 5vw, 68px) clamp(24px, 6vw, 88px); color: var(--caderno-tinta); background: var(--caderno-papel); border-top: 3px solid var(--caderno-verde); box-shadow: var(--caderno-pilha); }
+  .abertura { padding-bottom: 1.3rem; border-bottom: 1px solid var(--caderno-linha); }
+  .rubrica, .assinatura { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1rem; }
+  .rubrica { font: bold .79rem/1.55 var(--caderno-mono); color: var(--caderno-texto-secundario); letter-spacing: .04em; text-transform: uppercase; }
+  .rubrica a { color: var(--caderno-verde); border-bottom: 2px solid var(--caderno-ferrugem); text-decoration: none; }
+  .materia h1 { max-width: 24ch; margin: .95rem 0 .85rem; font: bold clamp(2.2rem, 4.9vw, 4.15rem)/1.04 var(--caderno-serif); letter-spacing: -.045em; text-wrap: balance; overflow-wrap: break-word; }
+  .olho { max-width: 62ch; margin: 0; color: #3f5145; font: 400 clamp(1.12rem, 2vw, 1.4rem)/1.52 var(--caderno-sans); }
+  .assinatura { margin-top: 1.35rem; font: .9rem/1.6 var(--caderno-sans); color: var(--caderno-texto-secundario); }
+  .assinatura strong { color: var(--caderno-tinta); }
+  .coluna { max-width: 69ch; margin: clamp(1.5rem, 3vw, 2.7rem) auto 0; }
+  .texto { font: clamp(1.14rem, 1.65vw, 1.3rem)/1.7 var(--caderno-serif); overflow-wrap: break-word; }
+  .texto p { margin: 0 0 1.05em; }
+  .texto.capitular > p:first-child::first-letter { float: left; padding: .095em .105em 0 0; color: var(--caderno-verde); font: bold 3.6em/.78 var(--caderno-serif); }
+  .coluna h2 { margin: 0 0 .6rem; font: bold 1.45rem/1.2 var(--caderno-serif); }
+  .coluna :is(.cronologia, .fontes, .relacionadas, .apuracao) { margin-top: 1.8rem; border-top: 1px solid var(--caderno-linha); padding-top: 1rem; font: 1rem/1.55 var(--caderno-sans); overflow-wrap: anywhere; }
+  .coluna :is(.fontes p, .apuracao p) { margin: .35rem 0; color: var(--caderno-texto-secundario); }
+  .coluna :is(ol,ul) { padding-left: 1.15rem; margin: .5rem 0 0; }
+  .coluna li + li { margin-top: .4rem; }
+  .coluna a, .rubrica a:hover { color: var(--caderno-verde); text-decoration: underline; text-underline-offset: .16em; }
+  .relacionadas time { color: var(--caderno-texto-secundario); font-size: .86rem; }
+  .apuracao summary { width: fit-content; cursor: pointer; }
+  @media (max-width: 600px) {
+    .materia { width: 100%; margin: 0 auto; padding: 24px max(18px, 5vw) 32px; box-shadow: none; }
+    .texto.capitular > p:first-child::first-letter { font-size: 3.25em; }
+  }
+</style>

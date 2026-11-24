@@ -71,11 +71,20 @@ assert(trindade.includes("Tudo de Trindade, organizado por área"), "Os módulos
 assert(timeline.includes("Linha do tempo") && timeline.includes("O mais recente vem primeiro."), "A linha do tempo não apresenta a ordenação cronológica.");
 assert(july.includes("O mais recente sempre vem primeiro.") && july.includes("data-july-list"), "A cobertura navegável de julho não foi renderizada.");
 assert(searchPage.includes("data-search-root"), "A busca pública não foi renderizada.");
-assert(checkedStory.includes("Notícia documental") && checkedStory.includes("Publicado pelo Pauteiro"), "O acervo já publicado não recebeu a apresentação jornalística.");
+const celiaCamara = await readFile(path.join(buildRoot, "base", "julho-documento-maternidade-celia-camara-tcm-8051-2026", "index.html"), "utf8");
+for (const html of [checkedStory, checkedSourcePage, celiaCamara]) {
+  assert(html.includes(">Raphael Bezerra</strong>") && html.includes('"author":{"@type":"Person","name":"Raphael Bezerra"}'), "A assinatura da matéria diverge da autoria estruturada.");
+  assert(html.includes('"publisher":{"@type":"Organization","name":"Pauteiro"}'), "O veículo da publicação não foi identificado.");
+  for (const removed of ["Publicado pelo Pauteiro", "Ver página citada", "Conferir página citada", "O que o processo permite afirmar", "Entenda o documento", "Título do ato no documento:", "Esta matéria usa documento oficial como fonte primária"]) {
+    assert(!html.includes(removed), "A página da matéria ainda contém o trecho removido: "+removed);
+  }
+}
+assert(celiaCamara.includes('class="texto capitular"') && celiaCamara.includes("Acórdão 08051/2026") && celiaCamara.includes('href="https://www.tcmgo.tc.br/doc/index.jsf"'), "A abertura ou a referência ao acórdão não foi preservada.");
+assert(!checkedActNews.includes("Raphael Bezerra"), "O registro documental recebeu uma assinatura jornalística.");
 assert((checkedStory.includes('"@type":"NewsArticle"') || checkedStory.includes('"@type":"Article"')) && checkedStory.includes('"@type":"BreadcrumbList"'), "Os schemas editoriais não foram renderizados.");
 assert(!checkedStory.includes('class="detail-figure"'), "A matéria voltou a exibir imagem documental como foto.");
-assert(checkedStory.includes("Abrir fonte original"), "A matéria não oferece o documento original.");
-assert(checkedSourcePage.includes("Conferir página citada") && checkedSourcePage.includes("do_20261019_000008886.pdf"), "A página citada ou o PDF original não estão acessíveis.");
+assert(checkedStory.includes('class="fontes"'), "A matéria não oferece a referência documental.");
+assert(/href="[^"]*do_20261019_000008886\.pdf[^"]*"/.test(checkedSourcePage), "O PDF original não está acessível.");
 assert(checkedStory.match(/Dois extratos de contratos artísticos publicados pelo Município/g)?.length === 1, "A matéria checada repete o resumo no corpo.");
 assert(checkedActNews.includes("Documento no repositório"), "O ato burocrático não foi separado do noticiário.");
 assert(checkedActNews.includes("Estado editorial: repositório"), "O ato burocrático não foi preservado corretamente no repositório.");
