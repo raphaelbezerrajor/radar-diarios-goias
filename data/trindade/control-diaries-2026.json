@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T20:30:11.924Z",
+  "generated_at": "2026-11-24T13:15:08.412Z",
   "timezone": "America/Sao_Paulo",
   "range": {
-    "from": "2026-11-16",
-    "to": "2026-11-23"
+    "from": "2026-11-17",
+    "to": "2026-11-24"
   },
   "summary": {
     "sources": 2,
-    "editions": 218,
-    "current_editions": 14,
-    "valid_pdfs": 218,
+    "editions": 220,
+    "current_editions": 13,
+    "valid_pdfs": 220,
     "failed_downloads": 0
   },
   "sources": [
@@ -19,13 +19,13 @@
       "name": "Diario Oficial do Estado de Goias",
       "official_url": "https://diariooficial.abc.go.gov.br/",
       "collection_method": "api_publica_oficial_e_pdf_certificado",
-      "generated_at": "2026-11-23T20:30:11.630Z",
+      "generated_at": "2026-11-24T13:15:07.058Z",
       "range": {
         "from": "2026-08-04",
-        "to": "2026-11-23",
+        "to": "2026-11-24",
         "last_checked": {
-          "from": "2026-11-16",
-          "to": "2026-11-23"
+          "from": "2026-11-17",
+          "to": "2026-11-24"
         }
       },
       "source_warning": null,
@@ -2476,6 +2476,40 @@
           "download_status": "download_success",
           "validation_status": "valid_pdf",
           "error": null
+        },
+        {
+          "id": "doego:7454",
+          "source_edition_id": "7454",
+          "edition_number": "24910",
+          "date": "2026-11-23",
+          "supplement": true,
+          "pages": 3,
+          "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7454/",
+          "file_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7454",
+          "local_path": "data/raw/doego/2026/11/doego-2026-11-23-edicao-7454-suplemento.pdf",
+          "bytes": 789934,
+          "sha256": "609a1ed40b4704e981c0deb2b1daa9808085c2241f77341fa7551582e06d73c9",
+          "last_modified": "Tue, 24 Nov 2026 02:25:22 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "error": null
+        },
+        {
+          "id": "doego:7455",
+          "source_edition_id": "7455",
+          "edition_number": "24911",
+          "date": "2026-11-24",
+          "supplement": false,
+          "pages": 69,
+          "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7455/",
+          "file_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7455",
+          "local_path": "data/raw/doego/2026/11/doego-2026-11-24-edicao-7455.pdf",
+          "bytes": 6671710,
+          "sha256": "92d49e280128e9ceae0d12ec1399aa7bc0e45cef33c6d01eb731502a9b562524",
+          "last_modified": "Tue, 24 Nov 2026 10:38:52 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "error": null
         }
       ]
     },
@@ -2484,13 +2518,13 @@
       "name": "Diario Eletronico de Contas do TCE-GO",
       "official_url": "https://dec.tce.go.gov.br/",
       "collection_method": "calendario_publico_oficial_e_pdf",
-      "generated_at": "2026-11-23T20:30:11.924Z",
+      "generated_at": "2026-11-24T13:15:08.412Z",
       "range": {
         "from": "2026-08-04",
-        "to": "2026-11-23",
+        "to": "2026-11-24",
         "last_checked": {
-          "from": "2026-11-16",
-          "to": "2026-11-23"
+          "from": "2026-11-17",
+          "to": "2026-11-24"
         }
       },
       "source_warning": null,
