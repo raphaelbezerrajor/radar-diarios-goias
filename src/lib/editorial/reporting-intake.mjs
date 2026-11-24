@@ -8,6 +8,33 @@ const materialChange = /amplia|implantacao|construcao|reforma|emergencial|conven
 const routine = /\b(ferias|diarias?|licenca premio|licenca medica|folha de ponto)\b|(?:nomear|designar|designa|designacao).{0,80}(?:gestor|fiscal)|reparo de mobiliario|reforma de (?:cadeiras|mobiliario)/;
 const highAmount = /\br\$\s*[\d.,]+\s*(?:milh(?:ao|oes)|bilh(?:ao|oes))\b|\br\$\s*\d{1,3}(?:\.\d{3}){2,}(?:,\d{2})?\b/;
 
+function actNumbers(text) {
+  const mentions = normalize(text).matchAll(/\b(contrato|acordao|despacho|decreto|portaria|resolucao|convenio|pregao)\s+(?:administrativo\s+|eletronico\s+)?(?:n[º°o.]*\s*)?([\d.]+)\s*\/\s*(20\d{2})\b/g);
+  return new Set(Array.from(mentions, ([,type,number,year]) => type + Number(number.replaceAll(".","")) + "/" + year));
+}
+
+export function coverageFor(entry, stories) {
+  const facts = entry.factPacket;
+  const numbers = actNumbers(facts.officialTitle);
+  const page = entry.source.pageStart;
+  if (!page) return null;
+  const object = normalize(facts.extractedDeck).replace(/^objeto:\s*/, "").replace(/[^a-z0-9]+/g, " ").trim();
+  for (const story of stories) {
+    const samePdf = (story.sourceHash && story.sourceHash === entry.source.documentSha256) ||
+      (story.sourceUrl === entry.source.url && /\.pdf(?:\b|$)/i.test(story.sourceUrl));
+    if (!samePdf) continue;
+    const pages = String(story.documentReference || "").match(/\b(?:p{1,2}\.|páginas?)\s*(\d+)(?:\s*(?:[-–]|a)\s*(\d+))?/i);
+    const start = Number(story.pageStart || pages?.[1]);
+    const end = Number(story.pageEnd || pages?.[2] || start);
+    if (!start || page < start || page > end) continue;
+    const identifiers = actNumbers([story.documentReference,story.officialTitle,...(story.paragraphs || [])].join(" "));
+    if ([...numbers].some(number => identifiers.has(number))) return story.id;
+    const copy = normalize([story.deck,...(story.paragraphs || [])].join(" ")).replace(/[^a-z0-9]+/g, " ");
+    if (!numbers.size && object.length >= 90 && copy.includes(object)) return story.id;
+  }
+  return null;
+}
+
 export function candidateFromRecord(record, raw, brief) {
   const firstPage = record.pageStart || Number(record.documentReference?.match(/\bp\.\s*(\d+)/i)?.[1]) || null;
   const source = raw || {

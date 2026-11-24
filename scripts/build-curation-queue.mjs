@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { createHash, randomUUID } from "node:crypto";
-import { candidateFromRecord, routePitch, reportingOrder, nextReportingBatch } from "../src/lib/editorial/reporting-intake.mjs";
+import { candidateFromRecord, coverageFor, routePitch, reportingOrder, nextReportingBatch } from "../src/lib/editorial/reporting-intake.mjs";
 import {
   CURATION_POLICY,
   selectCurationCandidates,
@@ -48,7 +48,8 @@ const privateJson = async (file, fallback) => {
 const holds = new Set((await privateJson("publication-holds.json", {})).items?.map(row => row.id));
 const handled = new Set(briefs.map(row => row.id));
 const handledActs = new Set(briefs.map(row => row.source?.actSha256).filter(Boolean));
-for (const record of records.filter(row => row.recordType === "story")) {
+const published = records.filter(row => row.recordType === "story");
+for (const record of published) {
   handled.add(record.id);
   if (record.id.startsWith("pauteiro-")) handled.add(record.id.slice("pauteiro-".length));
   if (record.actHash) handledActs.add(record.actHash);
@@ -75,9 +76,13 @@ const candidatesById = new Map(daily.map(item => [item.id,item]));
 for (const record of records.filter(item => item.reportingCandidate)) {
   candidatesById.set(record.id, candidateFromRecord(record,rawById.get(record.id),briefById.get(record.id)));
 }
-const candidates = [...candidatesById.values()].map(entry => routePitch(entry,{
-  year, cutoff:source.period.to, handled: handled.has(entry.id) || handledActs.has(entry.source.actSha256), held: holds.has(entry.id)
-})).sort(reportingOrder);
+const candidates = [...candidatesById.values()].map(entry => {
+  const coveredBy = coverageFor(entry,published);
+  const routed = routePitch(entry,{
+    year, cutoff:source.period.to, handled: Boolean(coveredBy) || handled.has(entry.id) || handledActs.has(entry.source.actSha256), held: holds.has(entry.id)
+  });
+  return coveredBy ? {...routed, coveredBy} : routed;
+}).sort(reportingOrder);
 const nextBatch = nextReportingBatch(candidates,CURATION_POLICY.automationBatchSize);
 const statusCounts = candidates.reduce((counts, candidate) => {
   counts[candidate.status] = (counts[candidate.status] || 0) + 1;

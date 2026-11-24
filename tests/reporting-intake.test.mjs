@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { routePitch, reportingOrder, nextReportingBatch } from "../src/lib/editorial/reporting-intake.mjs";
+import { coverageFor, routePitch, reportingOrder, nextReportingBatch } from "../src/lib/editorial/reporting-intake.mjs";
 import { classifyPublication } from "../src/lib/editorial/publication.mjs";
 
 const entry = {id:"obra", status:"pending",date:"2026-07-01",importance:85,
@@ -24,4 +24,12 @@ test("a queda de pontuação de um extrato retirado mantém a pauta fora do site
   const row = {id:"extrato",recordType:"record",importance:1};
   assert.ok(classifyPublication(row,true).reportingCandidate);
   assert.equal(classifyPublication(row,false),row);
+});
+
+test("outro ID pode cobrir o mesmo ato, mas a mesma página pode reunir contratos distintos", () => {
+  const pitch = {...entry,factPacket:{officialTitle:"Extrato do Contrato nº 091/2026"}};
+  const story = {id:"reportagem",sourceHash:"pdf",documentReference:"Diário municipal, p. 2; Contrato 91/2026"};
+  assert.equal(coverageFor(pitch,[story]),story.id);
+  assert.equal(coverageFor(pitch,[{...story,documentReference:"p. 2; contrato 92/2026"}]),null);
+  assert.equal(coverageFor(pitch,[{...story,documentReference:"p. 3; contrato 91/2026"}]),null);
 });
