@@ -34,6 +34,13 @@ assert(summary.metrics.trindadeActs === 2919, "A base deveria preservar os 2.919
 assert(gzipSync(defaultShard).byteLength < 1_200_000, "O recorte padrão ficou pesado demais para celular.");
 assert(home.includes("PAUTEIRO"), "A identidade principal não aparece na capa.");
 assert(home.includes('aria-label="Capa e editorias"') && (!summary.leadStory || home.includes('class="sheet"')), "A navegação por editorias ou a manchete não aparece na capa.");
+const paperAsset = "assets/caderno/papel.css";
+assert(home.includes(paperAsset) && (await stat(path.join(buildRoot, paperAsset))).size > 0, "A folha de estilo do caderno não foi empacotada.");
+const layoutPages = [platform, trindade, timeline, july, searchPage, checkedStory, checkedActNews,
+  ...await Promise.all(["goias", "municipios", "controle"].map(route => readFile(path.join(buildRoot, route, "index.html"), "utf8")))];
+assert(layoutPages.every(html => html.includes('class="caderno-interno"') && html.includes(paperAsset)), "Uma página interna ainda usa a apresentação anterior.");
+const newsroom = await readFile(path.join(root, "editorial", "local", "index.html"), "utf8");
+assert(newsroom.includes(paperAsset) && newsroom.includes('id="placement"') && newsroom.includes('id="section-id"'), "A redação está sem o caderno ou os campos de distribuição.");
 for (const section of Object.keys(summary.desks)) {
   const sectionHtml = await readFile(path.join(buildRoot, 'editorias', section, 'index.html'), 'utf8');
   assert(sectionHtml.includes('aria-current="page"'), "Editoria sem página ativa: " + section);

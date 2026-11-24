@@ -136,6 +136,11 @@ if (isStory) {
         )}
       </div>
       <aside class="detail-side">
+        {hasSourcePage && isStory && <a class="pagina-citada" href={imageSrc}>
+          <strong>Página citada</strong>
+          <img src={imageSrc} alt={record.image.alt || 'Página do documento oficial'} loading="lazy" width="280" height="170" />
+          <span>Ampliar documento ↗</span>
+        </a>}
         {record.relatedReads?.length > 0 && <section class="detail-related"><h2>Leia também</h2><ul>{record.relatedReads.map(item => <li>
           <a href={withBase(item.path)}>{item.title}</a> <small>{formatDate(item.date)}</small></li>)}</ul></section>}
         <div class="hero-panel">

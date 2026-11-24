@@ -4,6 +4,8 @@ import { formatDate, formatCurrency, withBase } from "../lib/format.js";
 const { record, compact = false, showSummary = true } = Astro.props;
 const storyHref = withBase(record.path);
 const actionLabel = record.recordType === "story" ? "Ler matéria" : "Ler registro";
+const words = showSummary && !record.deck ? (record.summary || "").trim().split(/\s+/) : [];
+const excerpt = words.slice(0, 42).join(" ") + (words.length > 42 ? "…" : "");
 ---
 
 <article class:list={["story-card", compact && "is-compact", "is-text-only"]}>
@@ -15,7 +17,7 @@ const actionLabel = record.recordType === "story" ? "Ler matéria" : "Ler regist
     </div>
     <h3><a href={storyHref}>{record.title}</a></h3>
     {record.deck && <p class="story-deck">{record.deck}</p>}
-    {showSummary && record.summary && <p class="story-summary">{record.summary}</p>}
+    {excerpt && <p class="story-summary">{excerpt}</p>}
     {record.recordType === "story" && record.newsValue?.reasons?.[0] ? (
       <p class="news-reason"><strong>Por que importa:</strong> {record.newsValue.reasons[0]}</p>
     ) : null}

@@ -4,12 +4,116 @@ const fields = {
   title: $("title"), deck: $("deck"), body: $("body"), sourceLabel: $("source-label"),
   documentReference: $("reference"), sourceUrl: $("source-url")
 };
-let state = { stories: [], overrides: [], drafts: [], csrf: "", siteBase: "/radar-diarios-goias/" };
+let state = { stories: [], overrides: [], placements: [], drafts: [], csrf: "", siteBase: "/radar-diarios-goias/" };
 let selectedId = null;
 let selectedKind = "edit";
 let selectedSourceHash = "";
 let selectedPath = "";
 let working = false;
+let reviewSnapshot = "";
+
+function articleParagraph(text) {
+  text = String(text);
+  const paragraph = document.createElement("p");
+  const citation = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/gi;
+  let offset = 0;
+  for (const match of text.matchAll(citation)) {
+    paragraph.append(text.slice(offset, match.index));
+    const link = document.createElement("a");
+    link.href = match[2];
+    link.textContent = match[1];
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    paragraph.append(link);
+    offset = match.index + match[0].length;
+  }
+  paragraph.append(text.slice(offset));
+  return paragraph;
+}
+
+async function refreshReview() {
+  try {
+    const response = await fetch("/api/review", { cache: "no-store" });
+    if (!response.ok) throw new Error("Fila indisponível.");
+    const queue = await response.json();
+    const count = queue.items.length;
+    $("review-count").textContent = (count === 1 ? "1 matéria pendente" : `${count} matérias pendentes`)
+      + (queue.unreadable ? ` · ${queue.unreadable} ficha(s) com erro de leitura` : "");
+    const incoming = queue.incoming || [];
+    const investigate = incoming.filter((item) => item.status === "investigate");
+    const watch = incoming.filter((item) => item.status === "watch");
+    $("review-intake-label").textContent = `${incoming.length} atos triados automaticamente`;
+    $("review-investigate-label").textContent = `Para apuração (${investigate.length})`;
+    $("review-watch-label").textContent = `Em acompanhamento (${watch.length})`;
+    $("review-intake-date").textContent = queue.generatedAt
+      ? `Fila gerada em ${new Date(queue.generatedAt).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })}`
+      : "A curadoria ainda não informou a data da fila.";
+    const snapshot = JSON.stringify([queue.items, incoming]);
+    if (snapshot === reviewSnapshot) return;
+    const list = $("review-list");
+    const intakeList = $("review-intake-list");
+    const opened = new Set([...$("revisao").querySelectorAll("details[data-id][open]")].map((item) => item.dataset.id));
+    const renderItem = (item) => {
+      const article = document.createElement("details");
+      article.dataset.id = item.id;
+      article.open = opened.has(item.id);
+      const summary = document.createElement("summary");
+      summary.textContent = item.title;
+      const meta = document.createElement("small");
+      const stage = item.status === "investigate" ? "Aguardando apuração" : item.status === "watch" ? "Em acompanhamento"
+        : item.stage === "em_apuracao" ? "Em apuração" : item.status === "needs_review" ? "Revisão humana" : "Rascunho";
+      meta.textContent = [stage, item.date].filter(Boolean).join(" · ");
+      summary.append(meta);
+      const review = document.createElement("section");
+      review.className = "review-pending";
+      const reason = document.createElement("h3");
+      reason.textContent = "Por que ainda não foi para edição";
+      const explanation = item.reason || (item.status === "needs_review"
+        ? "A pauta aguarda revisão humana. A ficha não traz um motivo específico além das verificações registradas abaixo."
+        : "O rascunho aguarda avaliação editorial. Confira as pendências registradas abaixo.");
+      review.append(reason, articleParagraph(explanation));
+      if (item.selectedBecause?.length) {
+        review.append(articleParagraph(`Critérios da triagem — ${item.selectedBecause.join(", ")}.`));
+      }
+      const next = document.createElement("h3");
+      next.textContent = "O que falta para avançar";
+      review.append(next);
+      const checks = [...new Set([...(item.pendingChecks || []), ...(item.questions || [])])];
+      if (checks.length) {
+        const list = document.createElement("ul");
+        for (const check of checks) {
+          const row = document.createElement("li");
+          row.textContent = check;
+          list.append(row);
+        }
+        review.append(list);
+      } else {
+        review.append(articleParagraph("A ficha ainda não registra pendências específicas."));
+      }
+      const deck = document.createElement("p");
+      deck.className = "review-deck";
+      deck.textContent = item.deck || "";
+      article.append(summary, review);
+      if (item.deck) article.append(deck);
+      article.append(...item.paragraphs.map(articleParagraph));
+      if (/^https?:\/\//i.test(item.sourceUrl || "")) {
+        const source = document.createElement("a");
+        source.href = item.sourceUrl;
+        source.target = "_blank";
+        source.rel = "noopener noreferrer";
+        source.textContent = "Abrir documento oficial ↗";
+        article.append(source);
+      }
+      return article;
+    };
+    list.replaceChildren(...queue.items.map(renderItem));
+    $("review-investigate-list").replaceChildren(...investigate.map(renderItem));
+    intakeList.replaceChildren(...watch.map(renderItem));
+    reviewSnapshot = snapshot;
+  } catch {
+    $("review-count").textContent = "Fila indisponível. A redação tentará atualizar novamente.";
+  }
+}
 
 function status(message, error = false) {
   $("status").textContent = message;
@@ -28,6 +132,8 @@ function paragraphs() {
 function currentEntry() {
   return {
     kind: selectedKind, id: selectedId,
+    sectionId: $("section-id").value, placement: $("placement").value,
+    relatedTo: $("placement").value === "relacionada" ? $("related-to").value : "",
     city: fields.city.value.trim(), date: fields.date.value, scope: fields.scope.value,
     type: fields.type.value.trim(), importance: Number(fields.importance.value) || 80,
     title: fields.title.value.trim(), deck: fields.deck.value.trim(), paragraphs: paragraphs(),
@@ -50,7 +156,34 @@ function renderPreview() {
   }
 }
 
+function updateRelated(parentId = "", query = "") {
+  const enabled = $("placement").value === "relacionada";
+  $("related-field").hidden = !enabled;
+  const select = $("related-to");
+  select.disabled = !enabled;
+  select.required = enabled;
+  select.replaceChildren(new Option("Escolha a matéria principal", ""));
+  if (!enabled) return;
+  const normalize = value => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const term = normalize(query.trim());
+  const internal = new Set(state.placements.filter(p => p.placement === "relacionada").map(p => p.id));
+  const choices = document.createDocumentFragment();
+  for (const story of state.stories) {
+    if (story.id !== selectedId && story.distributionEligible && !internal.has(story.id)) {
+      const label = story.title + " · " + story.date + " · " + story.city;
+      if (!term || story.id === parentId || normalize(label).includes(term)) choices.append(new Option(label, story.id));
+    }
+  }
+  select.append(choices);
+  select.value = parentId;
+}
+
 function setFields(item) {
+  $("section-id").value = item.sectionId || "";
+  $("placement").value = item.placement || "editoria";
+  $("related-search").value = "";
+  updateRelated(item.relatedTo);
+  $("apply-placement").hidden = !state.stories.some(s => s.id === selectedId && s.distributionEligible);
   fields.city.value = item.city || "";
   fields.date.value = /^\d{4}-\d{2}-\d{2}$/.test(item.date || "") ? item.date : "";
   fields.scope.value = item.scope === "Estadual" ? "Estadual" : "Municipal";
@@ -97,7 +230,8 @@ function selectStory(id) {
   selectedId = id;
   selectedKind = draft?.kind || override?.kind || (story?.editorialEntryId ? "new" : "edit");
   selectedPath = story?.path || "";
-  setFields({ ...story, ...override, ...draft });
+  const placement = state.placements.find(p => p.id === id);
+  setFields({ ...story, ...override, ...placement, ...draft });
   $("list").querySelectorAll("button").forEach((button) => button.setAttribute("aria-current", button.dataset.id === id ? "true" : "false"));
   status(draft ? "Rascunho local carregado." : "Matéria carregada.");
 }
@@ -139,6 +273,7 @@ async function refresh() {
   const response = await fetch("/api/state", { cache: "no-store" });
   if (!response.ok) throw new Error("Não foi possível carregar a base editorial.");
   state = await response.json();
+  $("section-id").replaceChildren(new Option("Escolha a editoria", ""), ...Object.entries(state.sections).map(([id,label]) => new Option(label,id)));
   renderList();
 }
 
@@ -155,29 +290,57 @@ async function send(route, entry) {
 
 async function save(route) {
   if (!selectedId || working) return;
+  const placementOnly = route === "/api/placement";
+  if (placementOnly && (!$("section-id").reportValidity() || !$("related-to").reportValidity())) return;
   if (route === "/api/publish") {
     if (!$("editor").reportValidity()) return;
     if (!$("verified").checked) return status("Confirme a conferência do documento oficial antes de aplicar.", true);
     if (paragraphs().length < 2) return status("Escreva pelo menos dois parágrafos.", true);
   }
   working = true;
-  for (const button of [$("save-draft"), $("apply-story")]) button.disabled = true;
-  status(route === "/api/publish" ? "Gerando e validando o site local. Isso pode levar alguns minutos…" : "Salvando rascunho…");
+  for (const button of [$("save-draft"), $("apply-story"), $("apply-placement")]) button.disabled = true;
+  status(route === "/api/draft" ? "Salvando rascunho…" : "Gerando e validando o site local. Isso pode levar alguns minutos…");
   try {
-    const result = await send(route, currentEntry());
+    const input = currentEntry();
+    const {id, sectionId, placement, relatedTo} = input;
+    const distribution = {id, sectionId, placement, relatedTo};
+    const result = await send(route, placementOnly ? distribution : input);
+    if (placementOnly) {
+      state.placements = [...state.placements.filter(p => p.id !== id), distribution];
+      const draft = state.drafts.find(d => d.id === input.id);
+      if (draft) Object.assign(draft, distribution);
+      status("Distribuição aplicada e validada no site local.");
+      return;
+    }
     await refresh();
     selectStory(selectedId);
     status(result.message);
   } catch (error) { status(error.message, true); }
   finally {
     working = false;
-    for (const button of [$("save-draft"), $("apply-story")]) button.disabled = false;
+    for (const button of [$("save-draft"), $("apply-story"), $("apply-placement")]) button.disabled = false;
   }
 }
 
 $("new-button").addEventListener("click", newStory);
+function showReviewQueue() {
+  if (location.hash === "#revisao") $("revisao").open = true;
+}
+document.querySelector('.masthead-links a[href="#revisao"]').addEventListener("click", () => { $("revisao").open = true; });
+window.addEventListener("hashchange", showReviewQueue);
+showReviewQueue();
 $("search").addEventListener("input", renderList);
 $("save-draft").addEventListener("click", () => save("/api/draft"));
+$("apply-placement").addEventListener("click", () => save("/api/placement"));
+$("placement").addEventListener("change", () => {
+  $("related-search").value = "";
+  updateRelated();
+});
+$("related-search").addEventListener("input", event => updateRelated($("related-to").value, event.target.value));
 $("editor").addEventListener("submit", (event) => { event.preventDefault(); save("/api/publish"); });
 $("editor").addEventListener("input", renderPreview);
 refresh().then(() => status("Redação local pronta.")).catch((error) => status(error.message, true));
+function pollReview() {
+  refreshReview().finally(() => setTimeout(pollReview, 30_000));
+}
+pollReview();

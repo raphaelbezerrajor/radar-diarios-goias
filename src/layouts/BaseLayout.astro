@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import "../styles/caderno.css";
+import "../styles/caderno-internas.css";
 import { sections } from "../lib/editorial/distribution.mjs";
 import { formatDate } from "../lib/format.js";
 import siteData from "../generated/site-data.json";
@@ -23,6 +24,7 @@ const navItems = [{id:'capa', label:'Capa', href:baseHref}, ...Object.entries(se
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <link rel="stylesheet" href={baseHref+'assets/caderno/papel.css'} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#0d211c" />
@@ -47,7 +49,7 @@ const navItems = [{id:'capa', label:'Capa', href:baseHref}, ...Object.entries(se
         {navItems.map(item => <a href={item.href} data-section={item.id} aria-current={currentPath === item.href ? 'page' : item.id === activeSection ? 'location' : undefined}><i aria-hidden="true"></i>{item.label}</a>)}
       </nav>
     </header></div>
-    <main id="conteudo">
+    <main id="conteudo" class={currentPath === baseHref || currentPath.startsWith(baseHref+'editorias/') || currentPath.startsWith(baseHref+'capa/') ? undefined : 'caderno-interno'}>
       <slot />
     </main>
     <footer class="site-footer">
@@ -70,4 +72,3 @@ const navItems = [{id:'capa', label:'Capa', href:baseHref}, ...Object.entries(se
     </footer>
   </body>
 </html>
-

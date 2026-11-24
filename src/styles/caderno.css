@@ -1,15 +1,15 @@
 .caderno {
   color-scheme: light;
-  --ink: #172c23;
-  --forest: #193c30;
-  --rust: #973b25;
-  --muted: #525e55;
-  --rule: #c3c7b9;
-  --ground: #efefe5;
-  --paper: #fffdf4;
-  --serif: Georgia, 'Times New Roman', serif;
-  --sans: 'Segoe UI', Arial, sans-serif;
-  --mono: Consolas, 'Courier New', monospace;
+  --ink: var(--caderno-tinta);
+  --forest: var(--caderno-verde);
+  --rust: var(--caderno-ferrugem);
+  --muted: var(--caderno-texto-secundario);
+  --rule: var(--caderno-linha);
+  --ground: var(--caderno-mesa);
+  --paper: var(--caderno-papel);
+  --serif: var(--caderno-serif);
+  --sans: var(--caderno-sans);
+  --mono: var(--caderno-mono);
   font-family: var(--sans);
   color: var(--ink);
   background: var(--ground);

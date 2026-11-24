@@ -5,23 +5,58 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Redação local | Pauteiro</title>
+  <link rel="stylesheet" href="/radar-diarios-goias/assets/caderno/papel.css">
   <link rel="stylesheet" href="/redacao/style.css">
   <script type="module" src="/redacao/app.js"></script>
 </head>
 <body>
-  <header class="masthead"><div class="wrap masthead-inner"><a class="brand" href="/redacao/">PAUTEIRO<span> / REDAÇÃO</span></a><a class="site-link" href="/radar-diarios-goias/" target="_blank" rel="noopener">Ver site local ↗</a></div></header>
+  <a class="skip" href="#edicao">Ir para a mesa de edição</a>
+  <header class="masthead">
+    <div class="topline"><div class="wrap">Goiás · Agência de notícias documentais</div></div>
+    <div class="wrap masthead-inner"><a class="brand" href="/redacao/">Pauteiro<span>.</span></a><span class="local-label">Redação local</span></div>
+    <nav class="wrap masthead-links" aria-label="Redação">
+      <a href="#edicao">Mesa de edição</a><a href="#revisao">Fila de revisão</a><a href="/radar-diarios-goias/" target="_blank" rel="noopener">Ver capa local ↗</a>
+    </nav>
+  </header>
   <main class="wrap">
-    <section class="intro"><div><p class="eyebrow">Área de trabalho neste computador</p><h1>Da fonte à matéria.</h1><p>Encontre um ato, ajuste a notícia e confira a página oficial antes de aplicar a mudança ao site local.</p></div><div class="intro-badge">Rascunhos privados<br><strong>no disco D:</strong></div></section>
+    <section class="intro" id="edicao"><h1>Mesa de edição</h1><p>Busque um ato ou uma matéria para editar o texto, conferir a fonte e escolher onde a notícia aparece.</p></section>
+    <details class="queue-drawer" id="revisao">
+      <summary>Fila de revisão <span id="review-count" role="status">Carregando pautas…</span></summary>
+    <section class="review-queue" aria-label="Pautas em revisão">
+      <div id="review-list"></div>
+      <details class="review-intake">
+        <summary><span id="review-intake-label">Atos coletados para triagem</span></summary>
+        <p id="review-intake-date" class="hint"></p>
+        <h3 id="review-investigate-label">Para apuração</h3>
+        <div id="review-investigate-list"></div>
+        <h3 id="review-watch-label">Em acompanhamento</h3>
+        <div id="review-intake-list"></div>
+      </details>
+    </section>
+    </details>
     <div id="status" class="status" role="status" aria-live="polite"></div>
     <div class="workspace">
       <aside class="sidebar" aria-label="Atos e matérias"><div class="sidebar-head"><h2>Atos e matérias</h2><button id="new-button" type="button">+ Nova</button></div><label for="search">Buscar</label><input id="search" type="search" placeholder="Título, cidade, data ou ID"><p id="count" class="hint"></p><div id="list" class="story-list"></div></aside>
       <div class="main-column">
-        <div id="empty" class="empty">Escolha uma matéria à esquerda ou comece uma nova.</div>
+        <div id="empty" class="empty">Escolha um item em “Atos e matérias” ou use “+ Nova” para começar.</div>
         <form id="editor" hidden>
           <div class="editor-head"><div><p class="eyebrow" id="mode"></p><h2 id="editor-heading">Editar matéria</h2></div><a id="page-link" target="_blank" rel="noopener" hidden>Ver página local ↗</a></div>
           <div class="two"><div><label for="city">Cidade ou âmbito</label><input id="city" required></div><div><label for="date">Data do ato</label><input id="date" type="date" required></div></div>
           <label for="scope">Abrangência</label><select id="scope"><option value="Municipal">Municipal</option><option value="Estadual">Estadual</option></select>
           <div class="two"><div><label for="type">Tipo do ato</label><input id="type" required></div><div><label for="importance">Relevância na base</label><input id="importance" type="number" min="0" value="80"></div></div>
+          <fieldset class="distribution"><legend>Distribuição da matéria</legend>
+            <div class="two"><div><label for="section-id">Editoria</label><select id="section-id" required><option value="">Escolha a editoria</option></select></div>
+              <div><label for="placement">Onde aparece</label><select id="placement" required>
+                <option value="editoria">Somente na editoria</option><option value="capa">Capa e editoria</option><option value="relacionada">Apenas como leitura relacionada</option>
+              </select></div></div>
+            <div id="related-field" hidden>
+              <label for="related-search">Buscar matéria principal</label>
+              <input id="related-search" type="search" placeholder="Título, cidade ou data" autocomplete="off">
+              <label for="related-to">Exibir em “Leia também” de qual matéria?</label><select id="related-to"></select>
+            </div>
+            <button type="button" id="apply-placement" hidden>Aplicar somente a distribuição</button>
+            <p class="hint">A capa reúne matérias do ano corrente. A busca preserva as matérias em todos os destinos.</p>
+          </fieldset>
           <label for="title">Manchete</label><input id="title" maxlength="180" required>
           <label for="deck">Olho</label><textarea id="deck" rows="3" maxlength="400" required></textarea>
           <label for="body">Texto</label><textarea id="body" rows="13" placeholder="Separe os parágrafos com uma linha em branco" required></textarea>

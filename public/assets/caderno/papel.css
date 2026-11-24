@@ -1,0 +1,16 @@
+:root {
+  --caderno-tinta: #172c23;
+  --caderno-verde: #193c30;
+  --caderno-ferrugem: #973b25;
+  --caderno-texto-secundario: #505e53;
+  --caderno-linha: #c3c7b9;
+  --caderno-mesa: #efefe5;
+  --caderno-papel: #fffdf4;
+  --caderno-amarelo: #f5e9bb;
+  --caderno-serif: Georgia, "Times New Roman", serif;
+  --caderno-sans: "Segoe UI", Arial, sans-serif;
+  --caderno-mono: Consolas, "Courier New", monospace;
+  --caderno-pontos: radial-gradient(#47594117 .7px, transparent .9px);
+  --caderno-pauta: repeating-linear-gradient(to bottom, transparent 0 30px, #405f4616 30px 31px);
+  --caderno-pilha: 0 3px 0 -1px #faf8ef, 0 4px 0 -1px #b6bdae;
+}
