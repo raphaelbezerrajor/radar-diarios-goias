@@ -217,6 +217,7 @@ export function applyCuration(record = {}, brief = null) {
     editorialStatus: "published",
     curation: {
       status: brief.status,
+      promotedToStory: promoteToStory && brief.status === "approved",
       promptVersion: brief.promptVersion || CURATION_POLICY.promptVersion,
       appliedAutomatically: brief.status === "draft",
       approvedBy: clean(brief.humanReview?.approvedBy) || null,

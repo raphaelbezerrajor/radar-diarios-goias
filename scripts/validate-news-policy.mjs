@@ -1,5 +1,6 @@
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
+import { isPublishedArticle } from "../src/lib/editorial/publication.mjs";
 import { validateEditorialBrief } from "../src/lib/editorial/curation.mjs";
 import { recentFirst, courtId, isAlego } from "../src/lib/editorial/control-coverage.mjs";
 import { sections, inGeneralNews } from "../src/lib/editorial/distribution.mjs";
@@ -24,7 +25,7 @@ const curationQueue = privateQueueDir
   : publicQueue;
 const curatedBriefs = await readJson("data", "editorial", "curated-briefs.json");
 const publicationHolds = await readJson("data", "editorial", "publication-holds.json");
-const automatic = records.filter((item) => item.publicationMode === "automatic_document_news");
+const stories = records.filter(item => item.recordType === "story");
 const institutionalPattern = /\/(?:noticia|noticias|news|imprensa|agencia-de-noticias)(?:\/|\?|$)/i;
 
 const recordIds = new Set(records.map((item) => item.id));
@@ -48,11 +49,9 @@ const nonDuplicatedJulySource = (julySource.items || [])
   .filter((item) => !replacedDocumentIds.has(item.id))
   .filter((item) => !(item.source_id === "agm" && item.city === "Trindade"));
 assert(nonDuplicatedJulySource.every((item) => recordIds.has(item.id)), "Há documentos de julho ausentes do acervo unificado.");
-assert(automatic.length >= 500, `O noticiário documental relevante ficou abaixo do baseline: ${automatic.length}.`);
-assert(
-  records.filter((item) => item.recordType === "story" && item.publicationMode === "automatic_document_news" && item.id?.startsWith("jul26-")).every((item) => Number(item.importance) >= 80),
-  "Atos de baixo valor-notícia continuam apresentados como reportagem."
-);
+assert(stories.every(isPublishedArticle), "A lista de matérias contém material sem texto editorial publicado.");
+assert(records.filter(item => item.reportingCandidate).every(item => item.recordType === "record" && !item.sectionId && !item.placement),
+  "Um documento em apuração entrou na distribuição editorial.");
 assert(records.filter((item) => item.kind === "ato").length >= 2_919, "Os 2.919 atos de Trindade não foram preservados.");
 assert(records.filter((item) => item.kind === "tcm_process").length === 445, "Os 445 dossiês confirmados do TCM-GO não foram preservados.");
 assert(records.filter((item) => item.publicationMode === "repository_record").length >= 18_000, "Atos burocráticos demais entraram no noticiário.");
@@ -116,7 +115,7 @@ for (const brief of curatedBriefs.briefs || []) {
   }
 }
 
-for (const item of automatic) {
+for (const item of stories) {
   assert(item.sourceType === "official_document", `Fonte não oficial em publicação automática: ${item.id}.`);
   assert(/^https?:\/\//i.test(item.sourceUrl || ""), `Matéria sem URL oficial: ${item.id}.`);
   assert(!institutionalPattern.test(item.sourceUrl), `Reportagem institucional entrou na coleta: ${item.id}.`);
@@ -137,7 +136,8 @@ for (const preview of previews.items || []) {
 }
 
 console.log(JSON.stringify({
-  automaticDocumentNews: automatic.length,
+  publishedArticles: stories.length,
+  reportingCandidates: records.filter(item => item.reportingCandidate).length,
   julyDocumentNews: julyIndex.total,
   repositoryOnly: records.filter((item) => item.publicationMode === "repository_record").length,
   currentYear: site.timeline.year,

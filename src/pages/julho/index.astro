@@ -12,14 +12,14 @@ const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
 
 <BaseLayout
   title="Notícias dos diários oficiais de 2026 | Pauteiro"
-  description={`Consulte ${july.total} notícias factuais extraídas dos atos publicados nos diários oficiais de 2026, atualizadas até ${formatDate(july.through)}.`}
+  description={`Leia a cobertura do Pauteiro a partir dos diários oficiais de 2026, atualizada até ${formatDate(july.through)}.`}
 >
   <section class="opening-band july-opening">
     <div class="shell opening-grid">
       <div class="opening-copy">
-        <p class="section-kicker section-kicker-light">Cobertura de 2026 · publicação ato a ato</p>
-        <h1>O mais recente sempre vem primeiro.</h1>
-        <p class="page-summary">Cada ato segmentado nos PDFs oficiais vira uma notícia factual com edição, página e fonte. A relevância define o destaque visual; nenhum item deixa de ser publicado por ser burocrático.</p>
+        <p class="section-kicker section-kicker-light">Cobertura de 2026</p>
+        <h1>Notícias dos diários oficiais</h1>
+        <p class="page-summary">Matérias da redação sobre decisões, contratos e serviços públicos. Para consultar um extrato ou localizar um documento original, use a <a href={withBase("/busca/?recordType=record")}>busca de registros documentais</a>.</p>
       </div>
       <aside class="opening-side">
         <p>Cobertura processada</p>

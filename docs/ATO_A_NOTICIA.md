@@ -8,6 +8,8 @@ O corpus atual possui 2.919 atos estruturados. A regra é `1 ato = 1 registro au
 
 ## O que é publicado como notícia
 
+Um extrato, transcrição, resumo automático ou ficha de andamento entra como registro documental. A relevância do ato sinaliza uma pauta para apurar. Para publicar uma matéria, a redação confere o original e edita um texto próprio que explica quem fez o quê, em qual estágio e com quais consequências documentadas. O registro conserva endereço, referências e fonte.
+
 Entram no noticiário atos ligados a dinheiro público, contratos, licitações, orçamento, obras, serviços, direitos, mudanças estratégicas, decisões de controle, sanções, correções e efeitos concretos para a população. Diárias, férias, licenças, rotinas internas e atos sem consequência pública clara permanecem apenas no repositório.
 
 Cada matéria documental contém:
@@ -18,6 +20,7 @@ Cada matéria documental contém:
 - parágrafo de detalhamento com edição, página, referências, nomes e valores disponíveis;
 - parágrafo de contexto que explica o estágio administrativo sem extrapolar o documento;
 - data do ato separada da data de publicação no Pauteiro;
+- data de assinatura ou vigência do instrumento separada da data de publicação do Diário Oficial;
 - URL do PDF original;
 - imagem WebP da página usada como fonte, com hash do PDF e da imagem.
 
@@ -35,6 +38,7 @@ A linha do tempo pública mostra somente o ano corrente. Em 2026, fatos de 2018 
 4. Extrair e normalizar o texto.
 5. Classificar município, órgão, tema e tipo.
 6. Extrair nomes, empresas, CNPJs, valores, datas e referências.
+   Antes de chamar uma contratação de nova, buscar pelo número do processo, contrato, CNPJ e objeto no histórico; confrontar assinatura, vigência, extratos, aditivos e republicações.
 7. Isolar a página usada como fonte e gerar WebP leve.
 8. Calcular e registrar o valor-notícia; separar rotina de interesse público.
 9. Produzir título, olho, lead, detalhamento e contexto somente para o recorte relevante.
@@ -44,6 +48,8 @@ A linha do tempo pública mostra somente o ano corrente. Em 2026, fatos de 2018 
 ## Regras de linguagem
 
 - Contrato não equivale a pagamento.
+- Publicação recente de extrato, dispensa, retificação ou decisão sobre processo antigo não equivale a contratação recente. A manchete deve nomear o evento novo e datar o fato anterior.
+- Se dois atos do mesmo processo divergirem em valor, empresa/CNPJ ou estágio, manter a pauta em revisão até explicar a diferença; não somar valores como contratações independentes.
 - Abertura de licitação não equivale a contratação concluída.
 - Proposição legislativa não equivale a política executada.
 - Alerta, multa, correção ou processo deve indicar a decisão, o estágio e a autoridade responsável.

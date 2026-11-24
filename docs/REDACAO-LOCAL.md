@@ -14,7 +14,7 @@ Abra `http://127.0.0.1:4317/redacao/`. O servidor também apresenta a versão lo
 
 ## Fluxo
 
-1. Escolha uma matéria existente pelo título ou cidade, ou clique em **Nova**.
+1. Em **Matérias publicadas**, escolha um texto para editar. Em **Documentos para apurar**, abra um ato do acervo para escrever a partir dele. A redação aproveita a referência e o link do documento e abre título, olho e corpo em branco. Um rascunho já salvo recupera o texto escrito. Use **Nova** para começar sem selecionar um registro.
 2. Confira o PDF ou ato oficial. Para matérias existentes, a identidade da fonte fica bloqueada na edição.
 3. Escolha a editoria e o destino. **Capa e editoria** inclui a matéria na capa do ano corrente e na página temática. **Somente na editoria** publica a chamada na página temática. **Apenas como leitura relacionada** exige selecionar a matéria que receberá o link em **Leia também**. Todos os destinos preservam a página da matéria e a consulta pelo acervo. Matérias anteriores à classificação mantêm seus endereços e podem ser distribuídas pelo editor.
    Toda matéria publicada recebe uma editoria inicial pelo assunto e pela fonte. A escolha da redação tem prioridade. A capa depende de seleção expressa. Para incluir também um vínculo de leitura, marque **Vincular também em “Leia também”** e selecione a matéria principal.

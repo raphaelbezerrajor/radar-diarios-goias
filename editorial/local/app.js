@@ -219,11 +219,12 @@ function selectStory(id) {
   const story = state.stories.find((item) => item.id === id);
   if (story?.recordType === "record") {
     const draftId = `pauteiro-${story.id}`;
+    if (state.stories.some(item => item.id === draftId && item.recordType === "story")) return selectStory(draftId);
     const draft = state.drafts.find((item) => item.id === draftId);
     selectedId = draftId;
     selectedKind = "new";
     selectedPath = story.path || "";
-    setFields({ ...story, ...draft, id: draftId });
+    setFields({ ...story, title: "", deck: "", paragraphs: [], ...draft, id: draftId });
     status(draft ? "Rascunho local carregado." : "Ato do acervo carregado. Confira o documento e escreva a matéria; o registro original será preservado.");
     return;
   }
@@ -254,7 +255,13 @@ function renderList() {
     ...state.stories.map((item) => ({ ...item, draft: draftsById.has(item.id) })),
     ...state.drafts.filter((item) => !state.stories.some((story) => story.id === item.id)).map((item) => ({ ...item, draft: true }))
   ].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")) || (Number(b.importance) || 0) - (Number(a.importance) || 0));
-  const matching = merged.filter((item) => !query || [item.title, item.city, item.id, item.date, item.documentReference].join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(query));
+  const kind = $("catalog-filter").value;
+  const matching = merged.filter(item => {
+    if (kind === "candidate" && !item.reportingCandidate) return false;
+    if (kind === "draft" && !item.draft) return false;
+    if (["story", "record"].includes(kind) && item.recordType !== kind) return false;
+    return !query || [item.title, item.city, item.id, item.date, item.documentReference].join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(query);
+  });
   $("count").textContent = `${matching.length} de ${merged.length} atos, matérias e rascunhos`;
   const list = $("list");
   list.replaceChildren();
@@ -265,7 +272,7 @@ function renderList() {
     button.setAttribute("aria-current", item.id === selectedId ? "true" : "false");
     button.textContent = item.title || "Rascunho sem título";
     const meta = document.createElement("small");
-    meta.textContent = `${item.city || "Sem cidade"} · ${item.date || "Sem data"}${item.draft ? " · Rascunho" : item.recordType === "record" ? " · Ato do acervo" : " · Matéria"}`;
+    meta.textContent = `${item.city || "Sem cidade"} · ${item.date || "Sem data"} · ${item.draft ? "Rascunho" : item.reportingCandidate ? "Documento para apurar" : item.recordType === "record" ? "Registro documental" : "Matéria publicada"}`;
     button.appendChild(meta);
     button.addEventListener("click", () => selectStory(item.id));
     list.appendChild(button);
@@ -333,6 +340,7 @@ document.querySelector('.masthead-links a[href="#revisao"]').addEventListener("c
 window.addEventListener("hashchange", showReviewQueue);
 showReviewQueue();
 $("search").addEventListener("input", renderList);
+$("catalog-filter").addEventListener("change", renderList);
 $("save-draft").addEventListener("click", () => save("/api/draft"));
 $("apply-placement").addEventListener("click", () => save("/api/placement"));
 $("placement").addEventListener("change", () => {

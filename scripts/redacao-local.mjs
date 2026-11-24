@@ -6,6 +6,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateStoryEntry } from "../src/lib/editorial/story-overrides.mjs";
+import { copiesDocumentBody } from "../src/lib/editorial/publication.mjs";
 import { validateEditorialBrief } from "../src/lib/editorial/curation.mjs";
 import { sections } from "../src/lib/editorial/distribution.mjs";
 import { isAlego } from "../src/lib/editorial/control-coverage.mjs";
@@ -91,6 +92,7 @@ async function catalog() {
     paragraphs: item.paragraphs || [], sourceLabel: item.sourceLabel, sourceUrl: item.sourceUrl,
     sourceHash: item.sourceHash || "", documentReference: item.documentReference || item.sourceNote || "",
     recordType: item.recordType, publicationMode: item.publicationMode,
+    reportingCandidate: item.reportingCandidate === true,
     distributionEligible: item.recordType === "story", historicalAlego: isAlego(item),
     sectionId: item.sectionId, placement: item.placement, relatedTo: item.relatedTo,
     editorialEntryId: item.editorialEntryId || null
@@ -278,7 +280,7 @@ const server = createServer(async (request, response) => {
     if (request.headers.host !== `127.0.0.1:${port}`) return sendJson(response, 403, { error: "Acesso apenas pelo endereço local." });
     const url = new URL(request.url, origin);
     if (request.method === "GET" && url.pathname === "/api/health") {
-      return sendJson(response, 200, { ok: true, editorialStorageVersion: 8, building: building || writing });
+      return sendJson(response, 200, { ok: true, editorialStorageVersion: 9, building: building || writing });
     }
     if (request.method === "GET" && url.pathname === "/api/review") {
       return sendJson(response, 200, await reviewQueue());
@@ -310,6 +312,12 @@ const server = createServer(async (request, response) => {
       if (!placementOnly) {
         const validation = validateStoryEntry(entry, original);
         if (!validation.valid) return sendJson(response, 400, { error: `Campos a corrigir: ${validation.issues.join(", ")}.` });
+        if (entry.kind === "new" && entry.status === "published" && entry.id.startsWith("pauteiro-")) {
+          const document = stories.find(item => item.recordType === "record" && `pauteiro-${item.id}` === entry.id);
+          if (document && copiesDocumentBody(entry.paragraphs, document)) {
+            return sendJson(response, 400, { error: "O corpo reproduz o registro documental. Escreva o que aconteceu e explique o alcance do ato antes de publicar." });
+          }
+        }
       }
       const published = new Set(stories.filter(s => s.distributionEligible).map(s => s.id));
       const site = await readJson(path.join(project, 'src/generated/site-data.json'), {});

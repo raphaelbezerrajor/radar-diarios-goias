@@ -15,11 +15,11 @@ const modules = [
   { title: "Validação", text: "Nomes, datas, valores e páginas conferidos contra o documento.", status: "Protegido" },
   { title: "Bases municipais", text: "Trindade entra como primeiro módulo municipal completo.", status: "Ativo", href: `${baseHref}trindade/` },
   { title: "Monitoramento", text: "Cobertura, lacunas, regressões e qualidade da base.", status: "Ativo" },
-  { title: "Publicação", text: "Matérias documentais verificadas entram diariamente no Pauteiro.", status: "Ativa" }
+  { title: "Publicação", text: "A redação confere a fonte e publica a matéria que explica o ato.", status: "Ativa" }
 ];
 const metrics = [
   { label: "Matérias publicadas", value: compactNumber(siteData.metrics.publishedOfficialStories), note: "com fonte oficial" },
-  { label: "Atos de Trindade", value: compactNumber(siteData.metrics.trindadeActs), note: "em formato jornalístico" },
+  { label: "Atos de Trindade", value: compactNumber(siteData.metrics.trindadeActs), note: "no acervo documental" },
   { label: "Processos do TCM", value: compactNumber(siteData.metrics.tcmStories), note: "em notícia" },
   { label: "Atualização", value: "Diária", note: "novos PDFs e atos" }
 ];
@@ -119,7 +119,7 @@ const metrics = [
       </div>
       <aside class="coverage-card">
         <p class="section-kicker">Linha de publicação</p>
-        <h2>O acervo verificado vira notícia em escala.</h2>
+        <h2>Do documento à matéria</h2>
         <p class="coverage-note">O Pauteiro publica o que está sustentado por fonte primária e identifica com clareza a origem, a data e o alcance de cada ato.</p>
       </aside>
     </div>

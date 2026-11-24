@@ -1,6 +1,5 @@
 ---
 import { readFile } from 'node:fs/promises';
-import { sections } from '../../lib/editorial/distribution.mjs';
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Materia from "../../components/Materia.astro";
 import { formatCurrency, formatDate, withBase } from "../../lib/format.js";
@@ -20,8 +19,6 @@ const { record } = Astro.props;
 const imageSrc = withBase(record.image?.src);
 const hasSourcePage = Boolean(imageSrc && record.image?.kind === "source-page");
 const isStory = record.recordType === "story";
-const isDocumentNews = record.publicationMode === "automatic_document_news";
-const isRepositoryDocument = record.publicationMode === "repository_record";
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const researchChatUrl = buildResearchChatUrl(record, canonical);
 const homeUrl = new URL(baseHref, Astro.site).toString();
@@ -55,18 +52,15 @@ if (isStory) {
     <div class="detail-grid">
       <div class="detail-main">
         <div class="story-kickers">
-          {record.sectionId && <a class="pill" href={withBase('/editorias/'+record.sectionId+'/')}>{sections[record.sectionId]}</a>}
           <p class="section-kicker">{record.type} · {record.city}</p>
-          {isDocumentNews
-            ? <span class="archive-badge">Matéria baseada em documento oficial</span>
-            : isRepositoryDocument && <span class="archive-badge">Documento no repositório</span>}
+          <span class="archive-badge">Registro documental</span>
         </div>
-        <h1>{record.title}</h1>
+        <h1>{record.reportingCandidate && record.officialTitle ? record.officialTitle : record.title}</h1>
         {record.deck && <p class="detail-deck">{record.deck}</p>}
         {record.summary && !record.paragraphs?.length && <p class="detail-summary">{record.summary}</p>}
         {record.keyFindings?.length ? (
           <section class="analysis-facts" aria-labelledby="analysis-facts-title">
-            <h2 id="analysis-facts-title">O que o processo permite afirmar</h2>
+            <h2 id="analysis-facts-title">Dados do ato</h2>
             <dl>
               {record.keyFindings.map((fact) => (
                 <div>
@@ -77,26 +71,10 @@ if (isStory) {
             </dl>
           </section>
         ) : null}
-        {record.paragraphs?.length ? (
+        {record.paragraphs?.length && !(record.reportingCandidate && record.officialTitle && record.deck && record.keyFindings?.length) ? (
           <div class="detail-copy">
-            {record.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {record.paragraphs.map((paragraph) => <p>{paragraph.replace(/^A matéria consta na edição /, "O ato consta na edição ")}</p>)}
           </div>
-        ) : null}
-        {record.explainerSections?.length ? (
-          <section class="story-explainer" aria-labelledby="story-explainer-title">
-            <div class="story-explainer-heading">
-              <p class="section-kicker">Entenda o documento</p>
-              <h2 id="story-explainer-title">O fato, o efeito e o que falta conferir</h2>
-            </div>
-            <div class="story-explainer-grid">
-              {record.explainerSections.map((section) => (
-                <article>
-                  <h3>{section.title}</h3>
-                  <p>{section.text}</p>
-                </article>
-              ))}
-            </div>
-          </section>
         ) : null}
         {record.processTimeline?.length ? (
           <section class="analysis-timeline" aria-labelledby="process-timeline-title">
@@ -111,11 +89,6 @@ if (isStory) {
             </ol>
           </section>
         ) : null}
-        {record.officialTitle && record.officialTitle !== record.title ? (
-          <div class="editorial-note">
-            <strong>Título do ato no documento:</strong> {record.officialTitle}
-          </div>
-        ) : null}
       </div>
       <aside class="detail-side">
         {record.relatedReads?.length > 0 && <section class="detail-related"><h2>Leia também</h2><ul>{record.relatedReads.map(item => <li>
@@ -126,7 +99,6 @@ if (isStory) {
           <small>Data do ato: {formatDate(record.actDate || record.date)}</small>
           {record.actDate && <small>Publicação do documento: {formatDate(record.date)}</small>}
           {record.processNumber && <small>Processo: {record.processNumber}</small>}
-          {isRepositoryDocument && <small>Estado editorial: repositório · sem destaque noticioso</small>}
         </div>
         {record.valueTotal ? (
           <div class="hero-panel">

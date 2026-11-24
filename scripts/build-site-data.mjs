@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import { classifyPublication } from "../src/lib/editorial/publication.mjs";
 import path from "node:path";
 import vm from "node:vm";
 import { createTrindadeJsonProvider, isPublicDocumentUrl } from "../src/lib/municipal/trindade-json-provider.mjs";
@@ -317,7 +318,7 @@ function normalizeTrindadeAct(item, preview) {
 function normalizeJulyDocumentNews(item, preview) {
   const slug = `julho-documento-${slugify(item.id).slice(0, 96)}`;
   const structured = buildStructuredDocumentNews(item);
-  const manuallyEdited = item.publication_mode === "edited_document_news";
+  const manuallyEdited = item.publication_mode === "edited_document_news" && item.editorial_status === "published";
   const courtRecord = courtId(item) && !manuallyEdited;
   const text = courtRecord ? courtRecordText(item) : manuallyEdited ? item : structured;
   // Generic budget reallocations are often routine and their extracted text
@@ -387,7 +388,7 @@ function normalizeJulyDocumentNews(item, preview) {
     hasOriginalSource: Boolean(item.official_url || item.source_landing_url),
     recordType: isStory ? "story" : "record",
     sourceType: "official_document",
-    publicationMode: isStory ? (item.publication_mode || "automatic_document_news") : "repository_record",
+    publicationMode: manuallyEdited ? "edited_document_news" : isStory ? "automatic_document_news" : "repository_record",
     editorialStatus: isStory ? "published" : "archived",
     pageStart: item.page_start,
     pageEnd: item.page_end,
@@ -630,7 +631,7 @@ async function main() {
       if (hold && hold.documentSha256 !== item.document_sha256) {
         throw new Error(`Hash divergente no bloqueio editorial ${item.id}.`);
       }
-      const safeItem = hold ? { ...item, importance: 0, prominence: "archive" } : item;
+      const safeItem = hold ? { ...item, importance: 0, prominence: "archive", publication_mode: "repository_record" } : item;
       const record = normalizeJulyDocumentNews(safeItem, previewByRecord.get(item.id));
       const correction = hold?.archiveCorrection;
       if (!correction) return record;
@@ -678,9 +679,6 @@ async function main() {
     controlNews.period?.to,
     ...newEditorialNews.map((item) => item.publishedAt || item.date).filter(Boolean)
   ].filter(Boolean).sort().at(-1);
-  // A build timestamp is not the date on which an individual story was
-  // published. Preserve only dates explicitly recorded by the editorial flow.
-  const addPublicationMetadata = (item) => item;
   const trindadeActIds = new Set(normalizedTrindadeActs.map((item) => item.id));
   const residualUnified = trindadeUnifiedRecords
     .filter((item) => item.type !== "ato" && item.type !== "noticia" && !trindadeActIds.has(item.id))
@@ -698,7 +696,7 @@ async function main() {
         .concat(residualUnified)
         .map(applyEditorialCuration)
         .map(applyEditorialEdit)
-        .map(addPublicationMetadata)
+        .map(classifyPublication)
         .map(attachSearch)
     )
   );
@@ -709,8 +707,6 @@ async function main() {
   }
 
   const {cover, desks} = assignDistribution(allRecords, storyOverrides.placements || [], editorialYear);
-  const byId = new Map(allRecords.map(item => [item.id, item]));
-  const currentVersion = item => byId.get(item.id);
   const publishedNews = allRecords.filter(item => item.recordType === "story" && !isAlego(item));
   const coverIds = new Set(cover.map(story => story.id));
   const archiveStoryIds = publishedNews.filter(story => inGeneralNews(story) && !coverIds.has(story.id)).sort(recentFirst).map(story => story.id);
@@ -718,7 +714,7 @@ async function main() {
   const leadStory = cover[0] || null;
   const heroSidebar = cover.slice(1);
   const rankedControlNews = timelineNews.filter(item => courtId(item)).sort(recentFirst);
-  const controlCoverage = buildControlCoverage([tcmDiaries, controlDiaries], allRecords.filter(item => Number(item.year) === editorialYear && inGeneralNews(item)));
+  const controlCoverage = buildControlCoverage([tcmDiaries, controlDiaries], allRecords.filter(item => Number(item.year) === editorialYear && item.recordType === "record"));
   const controlFront = rankedControlNews.slice(0, 8);
   for (const requiredSource of ["TCM-GO", "TCE-GO"]) {
     if (controlFront.some((item) => item.sourceFamily?.includes(requiredSource))) continue;
@@ -731,24 +727,12 @@ async function main() {
   }
   controlFront.sort(recentFirst);
 
-  const stateFront = sortForSearch(stateRecords.map(currentVersion).filter(inGeneralNews)
-    .filter((item) => item.recordType === "story" && !isAlego(item) && Number(item.year) === editorialYear)).slice(0, 8);
-  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs).map(currentVersion).filter(inGeneralNews)
-    .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
-  const actsFront = sortForSearch(
-    normalizedTrindadeActs
-      .concat(normalizedJulyDocumentNews)
-      .concat(normalizedControlNews)
-      .map(currentVersion).filter(inGeneralNews)
-      .filter((item) => item.recordType === "story" && !isAlego(item) && Number(item.year) === editorialYear)
-  ).slice(0, 8);
-  const julyPublishedNews = sortForSearch(
-    dedupeById(
-      normalizedJulyDocumentNews.concat(
-        normalizedTrindadeActs.filter((item) => item.month === "2026-07" && item.recordType === "story")
-      )
-    ).map(currentVersion).filter(item => item.recordType === "story" && inGeneralNews(item))
-  );
+  const stateStories = timelineNews.filter(item => item.cluster === "goias").sort(recentFirst);
+  const stateFront = stateStories.slice(0, 8);
+  const trindadeFront = timelineNews.filter(item => item.city === "Trindade").sort(recentFirst).slice(0, 8);
+  const actsFront = allRecords.filter(item => item.city === "Trindade" && item.kind === "ato" && item.recordType === "record"
+    && Number(item.year) === editorialYear).sort(recentFirst).slice(0, 8);
+  const julyPublishedNews = [...timelineNews].sort(recentFirst);
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>
     sourceCardFromLibrary(
@@ -822,13 +806,13 @@ async function main() {
   };
 
   const stateEditorialSections = countBy(
-    stateRecords.filter((item) => item.editoria),
+    stateStories.filter((item) => item.editoria),
     (item) => item.editoria
   )
     .slice(0, 4)
     .map((bucket) => ({
       label: bucket.label,
-      items: sortForSearch(stateRecords.filter((item) => item.editoria === bucket.label)).slice(0, 3)
+      items: stateStories.filter((item) => item.editoria === bucket.label).slice(0, 3)
     }));
 
   const monthlyActs = Object.entries(trindadeAnalysis.monthly || {})
@@ -861,17 +845,14 @@ async function main() {
       julyPages: Number(julyDocumentNews.summary?.pages || 0),
       currentYear: editorialYear,
       repositoryRecords: allRecords.length,
-      routineRecordsArchived: normalizedTrindadeActs.filter((item) => item.recordType !== "story").length
-        + normalizedJulyDocumentNews.filter((item) => item.recordType !== "story").length
-        + normalizedTcmNews.filter((item) => item.recordType !== "story").length,
+      routineRecordsArchived: allRecords.filter(item => item.recordType === "record").length,
       excludedInstitutionalNews: (radar.entries || []).filter((item) => !isPrimaryOfficialSource(item)).length
         + trindadeNews.filter((item) => !hasPrimarySource(item)).length,
       trindadeActs: normalizedTrindadeActs.length,
-      tcmStories: normalizedTcmNews.filter((item) => item.recordType === "story").length
-        + normalizedControlNews.filter((item) => item.sourceFamily?.includes("TCM-GO")).length,
+      tcmStories: publishedNews.filter(item => courtId(item) === "tcmgo").length,
       tcmDocuments: normalizedTcmNews.length,
-      controlStories: normalizedControlNews.filter((item) => item.recordType === "story").length,
-      tceStories: normalizedControlNews.filter((item) => item.recordType === "story" && item.sourceFamily?.includes("TCE-GO")).length,
+      controlStories: publishedNews.filter(item => courtId(item)).length,
+      tceStories: publishedNews.filter(item => courtId(item) === "tcego").length,
       consultedSources: sourceCards.length,
       pagesReviewed: trindadeCoverage.pages || 0,
       municipalities: coverage.summary?.municipalities_total || radar.coverage_goal?.municipalities_total || 0,

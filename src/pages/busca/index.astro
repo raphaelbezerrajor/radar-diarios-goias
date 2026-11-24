@@ -32,6 +32,14 @@ const defaultMonth = siteData.searchFilters.months?.[0]?.label || "";
           <input type="search" name="q" placeholder="empresa, contrato, pessoa ou assunto" autocomplete="off" />
         </label>
         <label>
+          <span>Conteúdo</span>
+          <select name="recordType">
+            <option value="">Todo o acervo</option>
+            <option value="story">Matérias publicadas</option>
+            <option value="record">Registros documentais</option>
+          </select>
+        </label>
+        <label>
           <span>Cidade</span>
           <select name="city">
             <option value="">Todas</option>
@@ -145,7 +153,8 @@ const defaultMonth = siteData.searchFilters.months?.[0]?.label || "";
           <article class="story-card is-compact is-text-only">
             <div class="story-body">
               <div class="story-kickers">
-                <span class="pill">${escapeHtml(record.type)}</span>
+                <span class="pill">${record.recordType === "story" ? "Matéria" : "Registro documental"}</span>
+                <span>${escapeHtml(record.type)}</span>
                 <span class="muted">${escapeHtml(record.city || "Base integrada")}</span>
                 <span class="muted">${escapeHtml(record.date || "Sem data")}</span>
               </div>
@@ -165,6 +174,7 @@ const defaultMonth = siteData.searchFilters.months?.[0]?.label || "";
         const q = filters.q.toLowerCase();
         if (q && !record.search.includes(q.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) return false;
         if (filters.city && record.city !== filters.city) return false;
+        if (filters.recordType && record.recordType !== filters.recordType) return false;
         if (filters.year && filters.year !== "all" && String(record.year || "") !== filters.year) return false;
         if (filters.month && record.month !== filters.month) return false;
         if (filters.type && record.type !== filters.type) return false;
@@ -175,6 +185,7 @@ const defaultMonth = siteData.searchFilters.months?.[0]?.label || "";
       function collectFilters() {
         return {
           q: value("q"),
+          recordType: value("recordType"),
           city: value("city"),
           year: value("year"),
           month: value("month"),

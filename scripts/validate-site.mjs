@@ -65,12 +65,12 @@ for (const section of Object.keys(summary.desks)) {
 assert(home.includes("Agência de notícias documentais"), "A capa não apresenta o Pauteiro como agência documental.");
 assert(!home.includes('class="hero-image"') && !home.includes('class="story-media"'), "O PDF voltou a ser usado como foto na capa.");
 assert(platform.includes("Uma agência organizada em nove etapas"), "A página da agência não foi renderizada.");
-assert(platform.includes("Publicação") && platform.includes("Matérias documentais verificadas entram diariamente"), "A publicação documental não aparece como ativa.");
+assert(platform.includes("Publicação") && platform.includes("A redação confere a fonte"), "O fluxo de publicação editorial está ausente.");
 assert(trindade.includes("oito anos"), "A página de Trindade não explica o horizonte de cobertura.");
 assert(trindade.includes("Tudo de Trindade, organizado por área"), "Os módulos municipais de Trindade não aparecem.");
 assert(timeline.includes("Linha do tempo") && timeline.includes("O mais recente vem primeiro."), "A linha do tempo não apresenta a ordenação cronológica.");
-assert(july.includes("O mais recente sempre vem primeiro.") && july.includes("data-july-list"), "A cobertura navegável de julho não foi renderizada.");
-assert(searchPage.includes("data-search-root"), "A busca pública não foi renderizada.");
+assert(july.includes("Notícias dos diários oficiais") && july.includes("data-july-list"), "A cobertura navegável não foi renderizada.");
+assert(searchPage.includes("data-search-root") && searchPage.includes('name="recordType"'), "A busca não permite separar matérias de documentos.");
 const celiaCamara = await readFile(path.join(buildRoot, "base", "julho-documento-maternidade-celia-camara-tcm-8051-2026", "index.html"), "utf8");
 for (const html of [checkedStory, checkedSourcePage, celiaCamara]) {
   assert(html.includes(">Raphael Bezerra</strong>") && html.includes('"author":{"@type":"Person","name":"Raphael Bezerra"}'), "A assinatura da matéria diverge da autoria estruturada.");
@@ -86,10 +86,15 @@ assert(!checkedStory.includes('class="detail-figure"'), "A matéria voltou a exi
 assert(checkedStory.includes('class="fontes"'), "A matéria não oferece a referência documental.");
 assert(/href="[^"]*do_20261019_000008886\.pdf[^"]*"/.test(checkedSourcePage), "O PDF original não está acessível.");
 assert(checkedStory.match(/Dois extratos de contratos artísticos publicados pelo Município/g)?.length === 1, "A matéria checada repete o resumo no corpo.");
-assert(checkedActNews.includes("Documento no repositório"), "O ato burocrático não foi separado do noticiário.");
-assert(checkedActNews.includes("Estado editorial: repositório"), "O ato burocrático não foi preservado corretamente no repositório.");
+assert(checkedActNews.includes("Registro documental"), "O ato burocrático não foi identificado como registro documental.");
+const inhumas = search.records.find(row => row.id === "jul26-agm-114675-27A78D49-135");
+if (inhumas?.recordType === "record") {
+  const extrato = await readFile(path.join(buildRoot, inhumas.path, "index.html"), "utf8");
+  assert(extrato.includes("Registro documental") && extrato.includes("081/2026") && !extrato.includes(">Raphael Bezerra</strong>"),
+    "O extrato de glicosímetros de Inhumas não foi apresentado como registro.");
+}
 assert(checkedActNews.includes("Prefeitura Municipal de Trindade publicou PORTARIA Nº 060/2025-GAB"), "O texto documental do ato não aparece no repositório.");
-assert(checkedActNews.includes("A matéria consta na edição 3411, na página 85"), "O detalhamento documental do ato não aparece no corpo.");
+assert(checkedActNews.includes("O ato consta na edição 3411, na página 85"), "O detalhamento documental do ato não aparece no corpo.");
 assert(!checkedActNews.includes('class="detail-summary"'), "O lead documental do ato está repetido no corpo.");
 assert((await stat(path.join(buildRoot, "index.html"))).size < 90_000, "A capa HTML ultrapassou o limite de peso.");
 
