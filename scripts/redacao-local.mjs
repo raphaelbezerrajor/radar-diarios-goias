@@ -1,5 +1,6 @@
 import { createServer } from "node:http";
-import { randomBytes, randomUUID } from "node:crypto";
+import { randomBytes, randomUUID, createHash } from "node:crypto";
+import { createReadStream } from "node:fs";
 import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -90,7 +91,8 @@ async function catalog() {
     paragraphs: item.paragraphs || [], sourceLabel: item.sourceLabel, sourceUrl: item.sourceUrl,
     sourceHash: item.sourceHash || "", documentReference: item.documentReference || item.sourceNote || "",
     recordType: item.recordType, publicationMode: item.publicationMode,
-    distributionEligible: item.recordType === "story" && !isAlego(item),
+    distributionEligible: item.recordType === "story", historicalAlego: isAlego(item),
+    sectionId: item.sectionId, placement: item.placement, relatedTo: item.relatedTo,
     editorialEntryId: item.editorialEntryId || null
   }));
 }
@@ -231,7 +233,19 @@ async function buildAndValidate() {
     } catch (error) {
       if (error.code !== "ENOENT") throw error;
     }
+    const hashes = {};
+    for (const name of ['site-data.json', 'site-records.json']) {
+      const digest = createHash('sha256');
+      for await (const chunk of createReadStream(path.join(project, 'src/generated', name))) digest.update(chunk);
+      hashes[name] = digest.digest('hex');
+    }
     await fs.rename(candidate, distDir);
+    try {
+      await atomicJson(path.join(workspace, 'work/local-release.json'), {validated: true, createdAt: new Date().toISOString(), hashes});
+    } catch (error) {
+      await fs.rename(distDir, candidate);
+      throw error;
+    }
     movedPrevious = false;
   } catch (error) {
     if (movedPrevious) {
@@ -264,7 +278,7 @@ const server = createServer(async (request, response) => {
     if (request.headers.host !== `127.0.0.1:${port}`) return sendJson(response, 403, { error: "Acesso apenas pelo endereço local." });
     const url = new URL(request.url, origin);
     if (request.method === "GET" && url.pathname === "/api/health") {
-      return sendJson(response, 200, { ok: true, editorialStorageVersion: 7, building: building || writing });
+      return sendJson(response, 200, { ok: true, editorialStorageVersion: 8, building: building || writing });
     }
     if (request.method === "GET" && url.pathname === "/api/review") {
       return sendJson(response, 200, await reviewQueue());
@@ -290,6 +304,7 @@ const server = createServer(async (request, response) => {
       const previous = await readJson(overridesPath, { schemaVersion: 1, stories: [] });
       const stories = await catalog();
       const original = stories.find((item) => item.id === entry.id) || null;
+      if (entry.status === 'published' && original?.historicalAlego && choice.placement === 'capa') return sendJson(response, 400, {error:'A cobertura histórica da ALEGO fica nas editorias e no acervo.'});
       if (placementOnly && !original?.distributionEligible) return sendJson(response, 400, {error:"Escolha uma matéria publicada."});
       if (entry.status === "published" && original && !original.distributionEligible) return sendJson(response, 400, {error:"Esta unidade do acervo não participa da distribuição editorial."});
       if (!placementOnly) {

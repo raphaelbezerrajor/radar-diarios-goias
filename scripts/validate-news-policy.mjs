@@ -65,8 +65,9 @@ const cover = [site.leadStory, ...site.heroSidebar].filter(Boolean);
 const expectedCover = records.filter(r => r.placement === "capa" && Number(r.year) === site.timeline.year).sort(recentFirst);
 assert(JSON.stringify(cover.map(r => r.id)) === JSON.stringify(expectedCover.map(r => r.id)), "A capa diverge da distribuição da redação.");
 assert(cover.every(r => r.recordType === "story" && r.sourceType === "official_document"), "Matéria de capa sem fonte oficial.");
+assert(records.filter(r => r.recordType === 'story').every(r => Object.hasOwn(sections, r.sectionId)), 'Há matéria publicada sem editoria.');
 for (const id of Object.keys(sections)) {
-  const expected = records.filter(r => r.sectionId === id && ['editoria','capa'].includes(r.placement)).sort(recentFirst);
+  const expected = records.filter(r => r.recordType === 'story' && r.sectionId === id && r.placement !== 'relacionada').sort(recentFirst);
   assert(JSON.stringify(site.desks[id].map(r => r.id)) === JSON.stringify(expected.map(r => r.id)), "Distribuição incorreta na editoria " + id);
 }
 assert(site.metrics.controlStories >= 19, "A cobertura verificada de DOE, TCM e TCE está incompleta.");

@@ -133,7 +133,7 @@ function currentEntry() {
   return {
     kind: selectedKind, id: selectedId,
     sectionId: $("section-id").value, placement: $("placement").value,
-    relatedTo: $("placement").value === "relacionada" ? $("related-to").value : "",
+    relatedTo: $("related-to").disabled ? "" : $("related-to").value,
     city: fields.city.value.trim(), date: fields.date.value, scope: fields.scope.value,
     type: fields.type.value.trim(), importance: Number(fields.importance.value) || 80,
     title: fields.title.value.trim(), deck: fields.deck.value.trim(), paragraphs: paragraphs(),
@@ -157,7 +157,9 @@ function renderPreview() {
 }
 
 function updateRelated(parentId = "", query = "") {
-  const enabled = $("placement").value === "relacionada";
+  const exclusive = $("placement").value === "relacionada";
+  $("also-related-field").hidden = exclusive;
+  const enabled = exclusive || $("also-related").checked;
   $("related-field").hidden = !enabled;
   const select = $("related-to");
   select.disabled = !enabled;
@@ -181,6 +183,7 @@ function updateRelated(parentId = "", query = "") {
 function setFields(item) {
   $("section-id").value = item.sectionId || "";
   $("placement").value = item.placement || "editoria";
+  $("also-related").checked = Boolean(item.relatedTo && item.placement !== "relacionada");
   $("related-search").value = "";
   updateRelated(item.relatedTo);
   $("apply-placement").hidden = !state.stories.some(s => s.id === selectedId && s.distributionEligible);
@@ -334,8 +337,9 @@ $("save-draft").addEventListener("click", () => save("/api/draft"));
 $("apply-placement").addEventListener("click", () => save("/api/placement"));
 $("placement").addEventListener("change", () => {
   $("related-search").value = "";
-  updateRelated();
+  updateRelated($("related-to").value);
 });
+$("also-related").addEventListener("change", () => updateRelated($("related-to").value));
 $("related-search").addEventListener("input", event => updateRelated($("related-to").value, event.target.value));
 $("editor").addEventListener("submit", (event) => { event.preventDefault(); save("/api/publish"); });
 $("editor").addEventListener("input", renderPreview);

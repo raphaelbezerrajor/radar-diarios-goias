@@ -59,6 +59,7 @@ textarea { resize: vertical; line-height: 1.6; }
 .two { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
 .confirm { display: flex; align-items: start; gap: .65rem; font-weight: normal; }
 .confirm input { width: auto; margin-top: .25rem; }
+#also-related { width: auto; margin-inline-end: .4rem; }
 button { cursor: pointer; background: #193c30; border: 1px solid #193c30; color: white; border-radius: 2px; padding: .7rem .9rem; font: inherit; font-weight: 650; }
 button:disabled { opacity: .6; cursor: wait; }
 .actions { flex-wrap: wrap; margin: 1.2rem 0; }

@@ -17,6 +17,7 @@ Abra `http://127.0.0.1:4317/redacao/`. O servidor também apresenta a versão lo
 1. Escolha uma matéria existente pelo título ou cidade, ou clique em **Nova**.
 2. Confira o PDF ou ato oficial. Para matérias existentes, a identidade da fonte fica bloqueada na edição.
 3. Escolha a editoria e o destino. **Capa e editoria** inclui a matéria na capa do ano corrente e na página temática. **Somente na editoria** publica a chamada na página temática. **Apenas como leitura relacionada** exige selecionar a matéria que receberá o link em **Leia também**. Todos os destinos preservam a página da matéria e a consulta pelo acervo. Matérias anteriores à classificação mantêm seus endereços e podem ser distribuídas pelo editor.
+   Toda matéria publicada recebe uma editoria inicial pelo assunto e pela fonte. A escolha da redação tem prioridade. A capa depende de seleção expressa. Para incluir também um vínculo de leitura, marque **Vincular também em “Leia também”** e selecione a matéria principal.
    Para mudar apenas essas escolhas em matéria existente, use **Aplicar somente a distribuição**. Para editar o conteúdo, escreva título, olho e texto em parágrafos. **Salvar rascunho** guarda o trabalho no computador.
 4. **Aplicar ao site local** executa testes, gera o site e valida a base. Se algo falhar, a alteração editorial é revertida.
 5. Confira a matéria na prévia local. O site público continua igual até uma publicação separada do repositório.

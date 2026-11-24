@@ -51,3 +51,26 @@ test('exige matéria publicada para o vínculo e impede ciclos, duplicatas, atos
   assert.throws(() => assignDistribution(records(), [...initial,initial[0]], 2026));
   assert.throws(() => assignDistribution([{...records()[0],recordType:'record'}], [initial[0]], 2026));
 });
+
+test('todo o noticiário publicado ganha editoria, inclusive o histórico, sem promover registros ou escolher capa', () => {
+  const examples = [
+    ['saude','Contrato de medicamentos para hospital'], ['obras','Prefeitura homologa pavimentação'],
+    ['contratos','Município publica pregão'], ['controle','Auditoria de contas'],
+    ['direitos','Assembleia amplia acesso a bolsas']
+  ];
+  const stories = examples.map(([,title], i) => ({...records()[i], title, sourceLabel:i === 4 ? 'ALEGO' : ''}));
+  const document = {...stories[0], id:'documento', recordType:'record'};
+  const {cover, desks} = assignDistribution([...stories, document], [], 2026);
+  assert.deepEqual(cover, []);
+  for (const [index, [section]] of examples.entries()) assert.deepEqual(desks[section], [stories[index]]);
+  assert.equal(document.sectionId, undefined);
+});
+
+test('uma matéria de editoria também pode aparecer no Leia também de outra', () => {
+  const all = records();
+  const stayLinked = choice('interna', 'editoria', 'principal');
+  const {desks} = assignDistribution(all, withChoice({stories:[], placements:initial}, stayLinked).placements, 2026);
+  assert.ok(desks.obras.some(story => story.id === 'interna'));
+  assert.deepEqual(all[0].relatedReads.map(story => story.path), ['/base/interna/']);
+  assert.ok(checkChoice(choice('editoria', 'editoria', 'interna'), new Set(all.map(s => s.id)), initial, {year:2026}));
+});
