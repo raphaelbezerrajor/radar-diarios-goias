@@ -19,6 +19,7 @@ const defaultMonth = siteData.searchFilters.months?.[0]?.label || "";
     <div
       class="shell search-shell"
       data-search-root
+      data-site-base={baseHref}
       data-search-manifest-url={`${baseHref}data/site-search-manifest.json`}
       data-search-all-url={`${baseHref}data/site-search.json`}
       data-search-base={`${baseHref}data/search/`}
@@ -89,14 +90,15 @@ const defaultMonth = siteData.searchFilters.months?.[0]?.label || "";
     </div>
   </section>
 
-  <script type="module" is:inline define:vars={{ baseUrl: baseHref, defaultYear, defaultMonth }}>
+  <script>
     const root = document.querySelector("[data-search-root]");
     if (root) {
       const manifestUrl = root.dataset.searchManifestUrl;
       const allUrl = root.dataset.searchAllUrl;
       const searchBaseUrl = root.dataset.searchBase;
-      const fallbackYear = root.dataset.defaultYear || defaultYear;
-      const fallbackMonth = root.dataset.defaultMonth || defaultMonth;
+      const baseUrl = root.dataset.siteBase;
+      const fallbackYear = root.dataset.defaultYear;
+      const fallbackMonth = root.dataset.defaultMonth;
       const form = root.querySelector("[data-search-form]");
       const resultsNode = root.querySelector("[data-search-results]");
       const summaryNode = root.querySelector("[data-search-summary]");

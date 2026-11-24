@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../generated/site-data.json';
+import { sections } from '../lib/editorial/distribution.mjs';
+import { withBase, formatDate } from '../lib/format.js';
+
+const { section = 'capa', page = 1, items, pages = 1 } = Astro.props;
+const cover = section === 'capa';
+const label = cover ? 'Capa' : sections[section];
+const lead = page === 1 ? items[0] : null;
+const notes = lead ? items.slice(1) : items;
+const pageUrl = n => withBase(cover ? n === 1 ? '/' : '/capa/'+n+'/' : '/editorias/'+section+'/'+(n === 1 ? '' : n+'/'));
+const image = lead?.image?.kind === 'source-page' ? withBase(lead.image.src) : '';
+const diaries = site.controlCoverage.filter(c => c.latest).sort((a,b) => b.latest.date.localeCompare(a.latest.date));
+---
+<BaseLayout title={label + ' | Pauteiro'} description={cover ? 'As principais notícias documentais de Goiás, selecionadas pela redação do Pauteiro.' : 'Matérias da editoria de ' + label + ' no Pauteiro.'} activeSection={section}>
+  <div class="caderno caderno-page"><div class="shell"><div class="layout">
+    <div class="news">
+      {lead ? <article class="sheet" data-section={lead.sectionId}>
+        <div class="sheet-gutter" aria-hidden="true"></div>
+        <div class="sheet-content">
+          <div class="sheet-meta"><span class="stamp">{cover ? 'Manchete' : 'Nesta editoria'}</span><a class="sheet-topic" href={withBase('/editorias/'+lead.sectionId+'/')}>{sections[lead.sectionId]}</a></div>
+          <h1><a href={withBase(lead.path)}>{lead.title}</a></h1>
+          <p class="lead-deck">{lead.deck}</p>
+          <div class="sheet-foot"><a class="read" href={withBase(lead.path)}>Ler matéria</a>
+            {lead.sourceUrl && <a class="mobile-source text-link" href={image || lead.sourceUrl}>{image ? 'Ver página citada' : 'Ver documento'}</a>}
+            <div class="dateline">{lead.city} <i aria-hidden="true"></i> <time datetime={lead.date}>{formatDate(lead.date)}</time></div>
+          </div>
+        </div></article> : <h1 class="index-title">{label}</h1>}
+      {items.length === 0 && <p class="empty-edition">A redação ainda não selecionou matérias para {cover ? 'a capa deste ano' : 'esta editoria'}.</p>}
+      {notes.length > 0 && <section class="notes-section" aria-label={cover ? 'Outras notícias em destaque' : 'Matérias da editoria'}>
+        <div class="notes-head"><h2>{cover ? 'Também na capa' : 'Mais em '+label}</h2>
+          <fieldset class="paper-control" hidden><legend>Estilo dos cartões</legend>
+            <label><input type="radio" name="papel" value="adesivas" checked/><span>Adesivas</span></label>
+            <label><input type="radio" name="papel" value="bloco"/><span>Bloco</span></label>
+          </fieldset></div>
+        <div class="notes" data-paper="adesivas">{notes.map(item => <article class="note" data-section={item.sectionId}>
+          <div class="note-meta"><a class="topic" href={withBase('/editorias/'+item.sectionId+'/')}>{sections[item.sectionId]}</a><time datetime={item.date}>{formatDate(item.date)}</time></div>
+          <h3><a href={withBase(item.path)}>{item.title}</a></h3><p>{item.deck}</p><small>{item.city}</small>
+        </article>)}</div>
+      </section>}
+      {pages > 1 && <nav class="page-links" aria-label="Páginas da seleção">
+        {page > 1 && <a href={pageUrl(page-1)}>Anterior</a>}<span>Página {page} de {pages}</span>{page < pages && <a href={pageUrl(page+1)}>Próxima</a>}
+      </nav>}
+    </div>
+    <aside>
+      {lead?.sourceUrl && <section class="source-card"><h2>Documento em foco</h2>
+        {image && <a class="doc-board" href={image} aria-label="Ampliar a página do documento"><img src={image} alt={lead.image.alt}/></a>}
+        <div class="doc-details"><strong>{lead.sourceLabel || lead.sourceFamily}</strong><p>{lead.documentReference}</p>
+          <a class="text-link" href={image || lead.sourceUrl}>{image ? 'Ampliar página citada' : 'Consultar fonte oficial'}</a></div>
+      </section>}
+      <section class="diaries"><h2>Últimos diários</h2><ul>{diaries.map(d => <li><a href={d.latest.url}><b>{d.label}</b><span>Edição {d.latest.number}</span><time datetime={d.latest.date}>{formatDate(d.latest.date)}</time></a></li>)}</ul>
+        <a class="text-link" href={withBase('/controle/')}>Ver cobertura dos tribunais</a></section>
+    </aside>
+  </div></div></div>
+</BaseLayout>
+<script>
+  const control = document.querySelector<HTMLFieldSetElement>('.paper-control');
+  const notes = document.querySelector<HTMLElement>('.notes');
+  if (control && notes) {
+    control.hidden = false;
+    try {
+      if (localStorage.getItem('pauteiro-caderno-papel') === 'bloco') {
+        notes.dataset.paper = 'bloco';
+        control.querySelector<HTMLInputElement>('[value="bloco"]').checked = true;
+      }
+    } catch {}
+    control.addEventListener('change', event => {
+      const value = (event.target as HTMLInputElement).value;
+      notes.dataset.paper = value;
+      try { localStorage.setItem('pauteiro-caderno-papel', value); } catch {}
+    });
+  }
+</script>

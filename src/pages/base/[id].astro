@@ -1,12 +1,14 @@
 ---
-import records from "../../generated/site-records.json";
+import { readFile } from 'node:fs/promises';
+import { sections } from '../../lib/editorial/distribution.mjs';
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatCurrency, formatDate, withBase } from "../../lib/format.js";
 import { buildResearchChatUrl } from "../../lib/research-chat.mjs";
 import { buildBreadcrumbSchema, buildDocumentArticleSchema, buildNewsArticleSchema } from "../../lib/editorial/seo.mjs";
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
+  const records = JSON.parse(await readFile('src/generated/site-records.json', 'utf8'));
   return records.map((record) => ({
     params: { id: record.slug },
     props: { record }
@@ -47,12 +49,13 @@ if (isStory) {
 }
 ---
 
-<BaseLayout title={`Pauteiro | ${record.title}`} description={record.deck || record.summary || record.title} schemas={schemas}>
+<BaseLayout title={`Pauteiro | ${record.title}`} description={record.deck || record.summary || record.title} schemas={schemas} activeSection={record.sectionId}>
   <article class="detail-shell shell">
     <a class="back-link" href={`${baseHref}busca/`}>Voltar para a busca</a>
     <div class="detail-grid">
       <div class="detail-main">
         <div class="story-kickers">
+          {record.sectionId && <a class="pill" href={withBase('/editorias/'+record.sectionId+'/')}>{sections[record.sectionId]}</a>}
           <p class="section-kicker">{record.type} · {record.city}</p>
           {isDocumentNews
             ? <span class="archive-badge">Matéria baseada em documento oficial</span>
@@ -62,6 +65,7 @@ if (isStory) {
         </div>
         <h1>{record.title}</h1>
         {record.deck && <p class="detail-deck">{record.deck}</p>}
+        {isStory && record.sourceUrl && <a class="detail-source-link" href={hasSourcePage ? imageSrc : record.sourceUrl}>{hasSourcePage ? 'Ver página citada' : 'Consultar fonte oficial'}</a>}
         {isStory && (
           <div class="editorial-provenance">
             <strong>Publicado pelo Pauteiro</strong>
@@ -132,6 +136,8 @@ if (isStory) {
         )}
       </div>
       <aside class="detail-side">
+        {record.relatedReads?.length > 0 && <section class="detail-related"><h2>Leia também</h2><ul>{record.relatedReads.map(item => <li>
+          <a href={withBase(item.path)}>{item.title}</a> <small>{formatDate(item.date)}</small></li>)}</ul></section>}
         <div class="hero-panel">
           <strong>{record.sourceFamily}</strong>
           <span>{record.sourceLabel}</span>

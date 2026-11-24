@@ -1,0 +1,12 @@
+---
+import Caderno from '../../components/Caderno.astro';
+import site from '../../generated/site-data.json';
+import { pageSize, pageProps } from '../../lib/editorial/caderno-pages.js';
+export function getStaticPaths() {
+  return Object.entries(site.desks).flatMap(([section, items]) => Array.from(
+    {length: Math.max(1, Math.ceil(items.length / pageSize))}, (_, i) => ({
+      params:{rota: i ? section+'/'+(i+1) : section}, props:pageProps(section, items, i+1)
+    })));
+}
+---
+<Caderno {...Astro.props}/>

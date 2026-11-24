@@ -6,6 +6,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateStoryEntry } from "../src/lib/editorial/story-overrides.mjs";
 import { validateEditorialBrief } from "../src/lib/editorial/curation.mjs";
+import { sections } from "../src/lib/editorial/distribution.mjs";
+import { isAlego } from "../src/lib/editorial/control-coverage.mjs";
+import { readChoice, checkChoice, withChoice } from "./distribution-choice.mjs";
 
 const project = fileURLToPath(new URL("../", import.meta.url));
 const workspace = path.resolve(project, "../..");
@@ -21,6 +24,7 @@ const port = Number(process.env.PAUTEIRO_REDACTION_PORT || 4317);
 const origin = `http://127.0.0.1:${port}`;
 const csrf = randomBytes(32).toString("hex");
 let building = false;
+let writing = false;
 
 const mime = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".json": "application/json; charset=utf-8", ".svg": "image/svg+xml", ".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg", ".pdf": "application/pdf" };
 const securityHeaders = {
@@ -86,13 +90,57 @@ async function catalog() {
     paragraphs: item.paragraphs || [], sourceLabel: item.sourceLabel, sourceUrl: item.sourceUrl,
     sourceHash: item.sourceHash || "", documentReference: item.documentReference || item.sourceNote || "",
     recordType: item.recordType, publicationMode: item.publicationMode,
+    distributionEligible: item.recordType === "story" && !isAlego(item),
     editorialEntryId: item.editorialEntryId || null
   }));
+}
+
+function triageCollectedAct(entry, hold) {
+  const source = entry.source || {};
+  const facts = entry.factPacket || {};
+  const type = entry.actType;
+  const title = facts.extractedTitle || facts.officialTitle || entry.typeLabel || "Ato coletado";
+  const subject = [facts.officialTitle, facts.extractedTitle, facts.extractedDeck]
+    .join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const routine = /\b(ferias|diarias|licenca premio|licenca medica|folha de ponto)\b/.test(subject);
+  const evidence = Boolean(source.documentSha256 && source.pageStart && source.url);
+  const control = ["tcmgo", "tcego"].includes(source.id);
+  const decision = /cautelar|ressarcimento|multa|rejeicao|improceden|irregular|\bsuspensao\b|determina/.test(subject + " " +
+    String(facts.evidenceExcerpt || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase());
+  const procurement = ["contrato", "aditivo", "dispensa", "homologacao", "pregao", "inexigibilidade", "adjudicacao"].includes(type);
+  const impact = (entry.curationReasons || []).some((reason) => reason.startsWith("possível impacto"));
+  const priority = Number(entry.priority) || 0;
+  const toInvestigate = !routine && evidence && (control ? decision : priority >= 85 && (procurement || impact));
+  const status = toInvestigate ? "investigate" : "watch";
+  const reason = hold?.reason || (toInvestigate
+    ? control ? "O texto extraído indica uma decisão de controle com possível efeito concreto."
+      : "O ato combina prioridade alta na curadoria com contratação pública ou possível impacto em serviços, políticas ou patrimônio."
+    : routine ? "O título indica rotina administrativa. A triagem preservou o registro para consulta."
+      : !evidence ? "A referência ainda precisa de PDF com hash e página identificada."
+        : "A triagem automática ainda não identificou um efeito concreto suficiente para encaminhar este ato à apuração.");
+  const pendingChecks = routine && !hold ? ["Reavaliar se aparecer um efeito público além da rotina administrativa."]
+    : [
+      "Conferir o PDF e a página citada, cruzar o identificador com o histórico e apontar o fato novo.",
+      ...(procurement ? ["Confirmar objeto, processo, valor, fornecedor e estágio da contratação."] : []),
+      ...(control ? ["Ler o dispositivo e verificar o alcance da decisão, a vigência e eventual recurso."] : []),
+      ...(entry.mandatoryHumanReview ? ["Submeter o texto à revisão humana e conferir a necessidade de contraditório."] : [])
+    ];
+  return {
+    id: entry.id, status, date: entry.date, title, deck: source.documentReference, paragraphs: [],
+    reason, pendingChecks, selectedBecause: entry.curationReasons || [], sourceUrl: source.url
+  };
 }
 
 async function reviewQueue() {
   const revisions = new Map();
   let unreadable = 0;
+  const [queue, curated, holds, overrides] = await Promise.all([
+    readJson(path.join(privateEditorialDir, "curation-queue.json"), {}),
+    readJson(path.join(privateEditorialDir, "curated-briefs.json"), {}),
+    readJson(path.join(privateEditorialDir, "publication-holds.json"), {}),
+    readJson(overridesPath, {})
+  ]);
+  const holdsById = new Map((holds.items || []).map((item) => [item.id, item]));
 
   async function walk(directory) {
     const entries = await fs.readdir(directory, { withFileTypes: true });
@@ -103,15 +151,21 @@ async function reviewQueue() {
         const revision = path.relative(reviewDir, directory).split(path.sep).join("/");
         const previous = revisions.get(brief.id);
         if (previous && revision.localeCompare(previous.revision) <= 0) return;
-        const publication = brief.editorial.publication;
+        const editorial = brief.editorial;
+        const publication = editorial?.publication;
         const pending = ["draft", "needs_review"].includes(brief.status);
-        if (pending && (!publication?.title || !publication.deck || !Array.isArray(publication.paragraphs) || !publication.paragraphs.length)) {
-          throw new Error("Texto da matéria ausente.");
-        }
-        revisions.set(brief.id, { revision, item: pending ? {
-          id: brief.id, revision, status: brief.status, date: String(brief.actDate || ""),
-          title: publication.title, deck: publication.deck, paragraphs: publication.paragraphs,
-          questions: brief.editorial.reportingQuestions, sourceUrl: brief.source?.url
+        const nextActions = Array.isArray(brief.workflow?.actions) ? brief.workflow.actions
+          .filter(({ status }) => ["pending", "in_progress", "blocked"].includes(status))
+          .map(({ action }) => action).filter(Boolean) : [];
+        const questions = editorial?.reportingQuestions || [];
+        revisions.set(brief.id, { revision, actHash: brief.source?.actSha256, item: pending ? {
+          id: brief.id, revision, status: brief.status, stage: brief.workflow?.stage,
+          date: String(brief.officialPublicationDate || brief.actDate || ""),
+          title: publication?.title || editorial.headlineOptions[0], deck: publication?.deck,
+          paragraphs: Array.isArray(publication?.paragraphs) ? publication.paragraphs : [],
+          reason: brief.workflow?.editingReason || holdsById.get(brief.id)?.reason || brief.humanReview?.notes || "",
+          pendingChecks: [...new Set([...nextActions, ...(Array.isArray(editorial.contextToFind) ? editorial.contextToFind : [])])],
+          questions, sourceUrl: brief.source?.url
         } : null });
       } catch {
         unreadable++;
@@ -127,16 +181,26 @@ async function reviewQueue() {
   } catch (error) {
     if (error.code !== "ENOENT") throw error;
   }
+  const handledIds = new Set([
+    ...revisions.keys(),
+    ...(overrides.stories || []).filter((story) => story.status === "published").map((story) => story.id),
+    ...(curated.briefs || []).filter((brief) => ["approved", "rejected"].includes(brief.status)).map((brief) => brief.id)
+  ]);
+  const reviewedActs = new Set([...revisions.values()].map(({ actHash }) => actHash).filter(Boolean));
+  const incoming = (queue.candidates || [])
+    .filter((entry) => entry.id && !handledIds.has(entry.id) && !reviewedActs.has(entry.source?.actSha256))
+    .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")) || (b.priority || 0) - (a.priority || 0))
+    .map((entry) => triageCollectedAct(entry, holdsById.get(entry.id)));
   return {
-    unreadable,
+    unreadable, incoming, generatedAt: queue.generatedAt || null,
     items: [...revisions.values()].map(({ item }) => item).filter(Boolean)
       .sort((a, b) => b.date.localeCompare(a.date) || b.revision.localeCompare(a.revision))
   };
 }
 
-function runNode(args) {
+function runNode(args, env = {}) {
   return new Promise((resolve, reject) => {
-    const child = spawn(process.execPath, args, { cwd: project, windowsHide: true });
+    const child = spawn(process.execPath, args, { cwd: project, windowsHide: true, env: { ...process.env, ASTRO_TELEMETRY_DISABLED: "1", ...env } });
     let output = "";
     child.stdout.on("data", (chunk) => { output = (output + chunk).slice(-3500); });
     child.stderr.on("data", (chunk) => { output = (output + chunk).slice(-3500); });
@@ -151,9 +215,34 @@ async function buildAndValidate() {
   await runNode(["scripts/export-public-editorial.mjs", privateEditorialDir]);
   await runNode(["scripts/validate-public-editorial.mjs"]);
   await runNode(["scripts/build-site-data.mjs"]);
-  await runNode(["node_modules/astro/astro.js", "build"]);
   await runNode(["scripts/validate-news-policy.mjs"]);
-  await runNode(["scripts/validate-site.mjs"]);
+  const workDir = path.join(project, "work");
+  await fs.mkdir(workDir, { recursive: true });
+  const buildDir = await fs.mkdtemp(path.join(workDir, "redacao-build-"));
+  const candidate = path.join(buildDir, "candidato");
+  const previous = path.join(buildDir, "anterior");
+  let movedPrevious = false;
+  try {
+    await runNode(["--max-old-space-size=8192", "node_modules/astro/astro.js", "build", "--outDir", candidate]);
+    await runNode(["scripts/validate-site.mjs"], { PAUTEIRO_BUILD_DIR: candidate });
+    try {
+      await fs.rename(distDir, previous);
+      movedPrevious = true;
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+    await fs.rename(candidate, distDir);
+    movedPrevious = false;
+  } catch (error) {
+    if (movedPrevious) {
+      await fs.rename(previous, distDir);
+      movedPrevious = false;
+    }
+    throw error;
+  } finally {
+    // Se a restauração falhar, conserva a versão anterior no diretório de trabalho.
+    if (!movedPrevious) await fs.rm(buildDir, {recursive:true, force:true}).catch(error => console.error(error.message));
+  }
 }
 
 async function serveFile(response, root, relative) {
@@ -170,11 +259,12 @@ async function serveFile(response, root, relative) {
 }
 
 const server = createServer(async (request, response) => {
+  let ownsWrite = false;
   try {
     if (request.headers.host !== `127.0.0.1:${port}`) return sendJson(response, 403, { error: "Acesso apenas pelo endereço local." });
     const url = new URL(request.url, origin);
     if (request.method === "GET" && url.pathname === "/api/health") {
-      return sendJson(response, 200, { ok: true, editorialStorageVersion: 3, building });
+      return sendJson(response, 200, { ok: true, editorialStorageVersion: 7, building: building || writing });
     }
     if (request.method === "GET" && url.pathname === "/api/review") {
       return sendJson(response, 200, await reviewQueue());
@@ -187,30 +277,46 @@ const server = createServer(async (request, response) => {
       const [stories, overrides, drafts] = await Promise.all([
         catalog(), readJson(overridesPath, { schemaVersion: 1, stories: [] }), readJson(draftsPath, { schemaVersion: 1, drafts: [] })
       ]);
-      return sendJson(response, 200, { csrf, stories, overrides: overrides.stories || [], drafts: drafts.drafts || [], siteBase });
+      return sendJson(response, 200, { csrf, stories, overrides: overrides.stories || [], placements: overrides.placements || [], sections, drafts: drafts.drafts || [], siteBase });
     }
-    if (request.method === "POST" && ["/api/draft", "/api/publish"].includes(url.pathname)) {
+    if (request.method === "POST" && ["/api/draft", "/api/publish", "/api/placement"].includes(url.pathname)) {
       if (request.headers.origin !== origin || request.headers["x-pauteiro-csrf"] !== csrf) return sendJson(response, 403, { error: "Sessão local inválida." });
-      if (building) return sendJson(response, 409, { error: "A redação está gerando o site. Aguarde." });
-      const entry = normalizeEntry(await readBody(request), url.pathname === "/api/draft" ? "draft" : "published");
+      if (writing) return sendJson(response, 409, { error: "Há uma gravação em andamento. Aguarde." });
+      writing = ownsWrite = true;
+      const input = await readBody(request);
+      const entry = normalizeEntry(input, url.pathname === "/api/draft" ? "draft" : "published");
+      const choice = readChoice({...input, id:entry.id});
+      const placementOnly = url.pathname === "/api/placement";
+      const previous = await readJson(overridesPath, { schemaVersion: 1, stories: [] });
       const stories = await catalog();
       const original = stories.find((item) => item.id === entry.id) || null;
-      const validation = validateStoryEntry(entry, original);
-      if (!validation.valid) return sendJson(response, 400, { error: `Campos a corrigir: ${validation.issues.join(", ")}.` });
+      if (placementOnly && !original?.distributionEligible) return sendJson(response, 400, {error:"Escolha uma matéria publicada."});
+      if (entry.status === "published" && original && !original.distributionEligible) return sendJson(response, 400, {error:"Esta unidade do acervo não participa da distribuição editorial."});
+      if (!placementOnly) {
+        const validation = validateStoryEntry(entry, original);
+        if (!validation.valid) return sendJson(response, 400, { error: `Campos a corrigir: ${validation.issues.join(", ")}.` });
+      }
+      const published = new Set(stories.filter(s => s.distributionEligible).map(s => s.id));
+      const site = await readJson(path.join(project, 'src/generated/site-data.json'), {});
+      const issue = checkChoice(choice, published, previous.placements || [], {
+        draft:entry.status === "draft", year:site.timeline.year, date:original?.date || entry.date
+      });
+      if (issue) return sendJson(response, 400, {error:issue});
       if (entry.status === "draft") {
         const drafts = await readJson(draftsPath, { schemaVersion: 1, drafts: [] });
-        drafts.drafts = [...(drafts.drafts || []).filter((item) => item.id !== entry.id), entry];
+        drafts.drafts = [...(drafts.drafts || []).filter((item) => item.id !== entry.id), {...entry, ...choice}];
         await atomicJson(draftsPath, drafts);
         return sendJson(response, 200, { ok: true, message: "Rascunho salvo somente neste computador." });
       }
       building = true;
-      const previous = await readJson(overridesPath, { schemaVersion: 1, stories: [] });
-      const next = { schemaVersion: 1, stories: [...(previous.stories || []).filter((item) => item.id !== entry.id), entry] };
+      const priorEntry = previous.stories.find(s => s.id === entry.id);
+      const next = withChoice(previous, choice, placementOnly ? null : {...priorEntry, ...entry});
       try {
         await atomicJson(overridesPath, next);
         await buildAndValidate();
         const drafts = await readJson(draftsPath, { schemaVersion: 1, drafts: [] });
-        drafts.drafts = (drafts.drafts || []).filter((item) => item.id !== entry.id);
+        drafts.drafts = placementOnly ? (drafts.drafts || []).map(d => d.id === entry.id ? {...d, ...choice, relatedTo:choice.relatedTo || ''} : d)
+          : (drafts.drafts || []).filter((item) => item.id !== entry.id);
         await atomicJson(draftsPath, drafts);
         return sendJson(response, 200, { ok: true, message: "Matéria aplicada e validada no site local. A versão pública ainda depende do envio do projeto.", localPath: `${siteBase}base/${entry.kind === "new" ? `julho-documento-${entry.id}` : original?.path.split("/").filter(Boolean).at(-1)}/` });
       } catch (error) {
@@ -229,6 +335,8 @@ const server = createServer(async (request, response) => {
     return sendJson(response, 404, { error: "Endereço não encontrado." });
   } catch (error) {
     sendJson(response, 500, { error: error.message || "Falha na redação local." });
+  } finally {
+    if (ownsWrite) writing = false;
   }
 });
 

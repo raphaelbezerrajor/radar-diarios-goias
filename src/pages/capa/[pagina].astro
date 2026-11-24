@@ -1,0 +1,10 @@
+---
+import Caderno from '../../components/Caderno.astro';
+import { coverStories, pageProps, pageSize } from '../../lib/editorial/caderno-pages.js';
+export function getStaticPaths() {
+  return Array.from({length:Math.max(0, Math.ceil(coverStories.length/pageSize)-1)}, (_, i) => ({
+    params:{pagina:String(i+2)}, props:pageProps('capa',coverStories,i+2)
+  }));
+}
+---
+<Caderno {...Astro.props}/>

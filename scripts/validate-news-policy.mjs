@@ -1,7 +1,8 @@
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { validateEditorialBrief } from "../src/lib/editorial/curation.mjs";
-import { buildFrontPagePackage } from "../src/lib/editorial/front-page.mjs";
+import { recentFirst, courtId, isAlego } from "../src/lib/editorial/control-coverage.mjs";
+import { sections, inGeneralNews } from "../src/lib/editorial/distribution.mjs";
 
 const root = process.cwd();
 const readJson = async (...parts) => JSON.parse(await readFile(path.join(root, ...parts), "utf8"));
@@ -60,18 +61,22 @@ assert(julyIndex.total === site.metrics.julyStories, "A contagem pública de jul
 assert(julyIndex.records.every((item, index, items) => index === 0 || items[index - 1].date >= item.date), "Julho não está ordenado do mais recente para o mais antigo.");
 assert(site.timeline.year === site.metrics.currentYear, "A linha do tempo não usa o ano editorial corrente.");
 assert(site.timeline.stories.every((item) => Number(item.year) === site.timeline.year), "A linha do tempo mistura fatos históricos com o ano corrente.");
-assert(site.leadStory.year === site.timeline.year, "A manchete principal não pertence ao ano corrente.");
-const expectedFrontPage = buildFrontPagePackage(records.filter(
-  (item) => item.recordType === "story" && Number(item.year) === site.timeline.year
-));
-assert(site.leadStory.id === expectedFrontPage.lead?.id, "A manchete principal não é a pauta de maior força editorial.");
-assert(site.leadStory.sourceType === "official_document", "A manchete principal não está apoiada em documento oficial.");
-assert(Number(site.leadStory.importance) > 0, "A manchete principal não possui valor-notícia calculado.");
+const cover = [site.leadStory, ...site.heroSidebar].filter(Boolean);
+const expectedCover = records.filter(r => r.placement === "capa" && Number(r.year) === site.timeline.year).sort(recentFirst);
+assert(JSON.stringify(cover.map(r => r.id)) === JSON.stringify(expectedCover.map(r => r.id)), "A capa diverge da distribuição da redação.");
+assert(cover.every(r => r.recordType === "story" && r.sourceType === "official_document"), "Matéria de capa sem fonte oficial.");
+for (const id of Object.keys(sections)) {
+  const expected = records.filter(r => r.sectionId === id && ['editoria','capa'].includes(r.placement)).sort(recentFirst);
+  assert(JSON.stringify(site.desks[id].map(r => r.id)) === JSON.stringify(expected.map(r => r.id)), "Distribuição incorreta na editoria " + id);
+}
 assert(site.metrics.controlStories >= 19, "A cobertura verificada de DOE, TCM e TCE está incompleta.");
 assert(site.metrics.tceStories >= 5, "A cobertura semanal verificada do TCE-GO está incompleta.");
-assert(Array.isArray(site.controlFront) && site.controlFront.length === 8, "O bloco semanal de fiscalização não foi montado.");
-assert(site.controlFront.some((item) => item.sourceFamily?.includes("TCM-GO")), "O bloco semanal não inclui decisões do TCM-GO.");
-assert(site.controlFront.some((item) => item.sourceFamily?.includes("TCE-GO")), "O bloco semanal não inclui decisões do TCE-GO.");
+const courtCandidates = records.filter(r => r.recordType === "story" && !isAlego(r) && courtId(r) && Number(r.year) === site.timeline.year && inGeneralNews(r));
+assert(site.controlFront.length === Math.min(courtCandidates.length, 8), "Bloco semanal de fiscalização incompleto.");
+for (const court of new Set(courtCandidates.map(courtId))) {
+  assert(site.controlFront.some(r => courtId(r) === court), "Tribunal ausente da seleção de controle: " + court);
+}
+assert(site.controlFront.every(r => !r.placement || r.placement === 'capa'), "A cobertura de controle promoveu leitura restrita.");
 assert(site.controlFront.every((item) => /^https:\/\//i.test(item.sourceUrl || "")), "O bloco semanal contém matéria sem fonte oficial HTTPS.");
 assert(
   site.heroSidebar.every((item) => item.id !== site.leadStory.id),

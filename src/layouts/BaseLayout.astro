@@ -1,23 +1,20 @@
 ---
 import "../styles/global.css";
+import "../styles/caderno.css";
+import { sections } from "../lib/editorial/distribution.mjs";
+import { formatDate } from "../lib/format.js";
+import siteData from "../generated/site-data.json";
 
 const {
   title = "Pauteiro",
   description = "Notícias produzidas a partir de documentos públicos e fontes oficiais.",
-  schemas = []
+  activeSection = "", schemas = []
 } = Astro.props;
 const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const socialImage = new URL(`${baseHref}assets/trindade/og.png`, Astro.site);
 const currentPath = Astro.url.pathname;
-const navItems = [
-  { label: "Capa", href: baseHref, active: currentPath === baseHref },
-  { label: "Últimas", href: `${baseHref}linha-do-tempo/`, active: currentPath.includes("/linha-do-tempo/") },
-  { label: "Municípios", href: `${baseHref}municipios/`, active: currentPath.includes("/municipios/") || currentPath.includes("/trindade/") },
-  { label: "Goiás", href: `${baseHref}goias/`, active: currentPath.includes("/goias/") },
-  { label: "Controle", href: `${baseHref}controle/`, active: currentPath.includes("/controle/") },
-  { label: "Base", href: `${baseHref}busca/`, active: currentPath.includes("/busca/") }
-];
+const navItems = [{id:'capa', label:'Capa', href:baseHref}, ...Object.entries(sections).map(([id,label]) => ({id,label,href:baseHref+'editorias/'+id+'/'}))];
 ---
 
 <!doctype html>
@@ -40,19 +37,16 @@ const navItems = [
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-    <header class="site-header">
-      <div class="shell header-bar">
-        <a class="brand" href={baseHref}>
-          <span class="brand-mark">PAUTEIRO</span>
-          <span class="brand-copy">Agência de notícias documentais · Goiás</span>
-        </a>
-        <nav class="site-nav" aria-label="Principal">
-          {navItems.map((item) => (
-            <a href={item.href} aria-current={item.active ? "page" : undefined}>{item.label}</a>
-          ))}
-        </nav>
+    <div class="caderno"><header>
+      <div class="topline"><div class="shell"><span>Goiás <i aria-hidden="true"></i> Agência de notícias documentais</span><span class="edition-date">Acervo atualizado em {formatDate(siteData.metadata.updatedAt)}</span></div></div>
+      <div class="shell mast">
+        <a class="brand" href={baseHref} aria-label="Pauteiro, capa">Pauteiro<span>.</span></a>
+        <div class="mast-links"><a class="territory" href={baseHref+'municipios/'}>Municípios</a><a class="search" href={baseHref+'busca/'} aria-label="Buscar no acervo"><span class="magnifier" aria-hidden="true"></span><span>Buscar<span class="search-extra"> no acervo</span></span></a></div>
       </div>
-    </header>
+      <nav class="shell tabs" aria-label="Capa e editorias">
+        {navItems.map(item => <a href={item.href} data-section={item.id} aria-current={currentPath === item.href ? 'page' : item.id === activeSection ? 'location' : undefined}><i aria-hidden="true"></i>{item.label}</a>)}
+      </nav>
+    </header></div>
     <main id="conteudo">
       <slot />
     </main>
@@ -70,8 +64,10 @@ const navItems = [
           <a href={`${baseHref}busca/`}>Buscar na base</a>
           <a href={`${baseHref}linha-do-tempo/`}>Últimas notícias</a>
           <a href={`${baseHref}municipios/`}>Municípios</a>
+          <a href={baseHref+"goias/"}>Goiás</a><a href={baseHref+"controle/"}>Tribunais de contas</a><a href={baseHref+"pauteiro/"}>Como trabalhamos</a>
         </div>
       </div>
     </footer>
   </body>
 </html>
+

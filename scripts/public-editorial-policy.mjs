@@ -17,7 +17,8 @@ export function projectEditorial(documents) {
   const items = (documents['publication-holds.json']?.items || []).map(x => ({...pick(x,['id','documentSha256']), ...(x.archiveCorrection ? {archiveCorrection:pick(x.archiveCorrection,correctionKeys)} : {})}));
   return {
     'curated-briefs.json':{schemaVersion:1,briefs},
-    'story-overrides.json':{schemaVersion:1,stories},
+    'story-overrides.json':{schemaVersion:1,stories,
+      ...(documents['story-overrides.json']?.placements ? {placements:documents['story-overrides.json'].placements.map(x => pick(x,['id','sectionId','placement','relatedTo']))} : {})},
     'publication-holds.json':{schemaVersion:1,items},
     'curation-queue.json':{schemaVersion:1,candidates:[],invalidBriefs:[]}
   };

@@ -33,7 +33,11 @@ assert(summary.metrics.records === search.total, "Resumo do site e base de busca
 assert(summary.metrics.trindadeActs === 2919, "A base deveria preservar os 2.919 atos estruturados.");
 assert(gzipSync(defaultShard).byteLength < 1_200_000, "O recorte padrão ficou pesado demais para celular.");
 assert(home.includes("PAUTEIRO"), "A identidade principal não aparece na capa.");
-assert(home.includes("Últimas notícias") && home.includes('aria-label="Outras notícias em destaque"'), "A hierarquia jornalística não aparece na capa.");
+assert(home.includes('aria-label="Capa e editorias"') && (!summary.leadStory || home.includes('class="sheet"')), "A navegação por editorias ou a manchete não aparece na capa.");
+for (const section of Object.keys(summary.desks)) {
+  const sectionHtml = await readFile(path.join(buildRoot, 'editorias', section, 'index.html'), 'utf8');
+  assert(sectionHtml.includes('aria-current="page"'), "Editoria sem página ativa: " + section);
+}
 assert(home.includes("Agência de notícias documentais"), "A capa não apresenta o Pauteiro como agência documental.");
 assert(!home.includes('class="hero-image"') && !home.includes('class="story-media"'), "O PDF voltou a ser usado como foto na capa.");
 assert(platform.includes("Uma agência organizada em nove etapas"), "A página da agência não foi renderizada.");

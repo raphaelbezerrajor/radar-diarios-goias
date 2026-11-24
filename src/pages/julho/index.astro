@@ -79,7 +79,7 @@ const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
 
       <p class="july-result-count" data-july-count>{compactNumber(july.total)} notícias</p>
 
-      <div class="july-list" data-july-list>
+      <div class="july-list" data-july-list data-index-url={indexUrl} data-site-base={baseHref}>
         {latestStories.map((record) => <StoryCard record={record} compact={true} showSummary={false} />)}
       </div>
 
@@ -92,16 +92,14 @@ const baseHref = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
     </div>
   </section>
 
-  <script
-    is:inline
-    define:vars={{ indexUrl, baseHref }}
-  >
+  <script>
     (() => {
       const list = document.querySelector("[data-july-list]");
       const count = document.querySelector("[data-july-count]");
       const more = document.querySelector("[data-july-more]");
       const controls = [...document.querySelectorAll("[data-july-filters] [data-filter]")];
       if (!list || !count || !more || !controls.length) return;
+      const { indexUrl, siteBase: baseHref } = list.dataset;
 
       let records = [];
       let filtered = [];

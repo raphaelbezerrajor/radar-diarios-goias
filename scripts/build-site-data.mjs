@@ -16,7 +16,8 @@ import {
 import { applyCuration } from "../src/lib/editorial/curation.mjs";
 import { buildControlCoverage, courtId, courtRecordText, isAlego, recentFirst } from '../src/lib/editorial/control-coverage.mjs';
 import { applyStoryEntry, toNewStorySource, validateStoryEntry } from "../src/lib/editorial/story-overrides.mjs";
-import { buildFrontPagePackage, rankFrontPageStories } from "../src/lib/editorial/front-page.mjs";
+import { rankFrontPageStories } from "../src/lib/editorial/front-page.mjs";
+import { assignDistribution, inGeneralNews } from "../src/lib/editorial/distribution.mjs";
 
 const root = process.cwd();
 const generatedDir = path.join(root, "src", "generated");
@@ -707,18 +708,15 @@ async function main() {
     }
   }
 
-  const publishedNews = stateRecords
-    .concat(normalizedTrindadeNews, normalizedTrindadeActs, normalizedJulyDocumentNews, normalizedControlNews, normalizedTcmNews, newEditorialNews)
-    .map(applyEditorialCuration)
-    .filter((item) => item.recordType === "story" && !isAlego(item))
-    .map(applyEditorialEdit)
-    .map(addPublicationMetadata);
-  const timelineNews = sortForSearch(publishedNews.filter((item) => Number(item.year) === editorialYear));
-  const frontPage = buildFrontPagePackage(timelineNews);
-  const leadStory = frontPage.lead;
-  const heroSidebar = frontPage.sidebar;
-  const rankedControlNews = dedupeById(publishedNews.filter(item => courtId(item) && Number(item.year) === editorialYear)).sort(recentFirst);
-  const controlCoverage = buildControlCoverage([tcmDiaries, controlDiaries], allRecords.filter(item => Number(item.year) === editorialYear));
+  const {cover, desks} = assignDistribution(allRecords, storyOverrides.placements || [], editorialYear);
+  const byId = new Map(allRecords.map(item => [item.id, item]));
+  const currentVersion = item => byId.get(item.id);
+  const publishedNews = allRecords.filter(item => item.recordType === "story" && !isAlego(item));
+  const timelineNews = publishedNews.filter(item => Number(item.year) === editorialYear && inGeneralNews(item));
+  const leadStory = cover[0] || null;
+  const heroSidebar = cover.slice(1);
+  const rankedControlNews = timelineNews.filter(item => courtId(item)).sort(recentFirst);
+  const controlCoverage = buildControlCoverage([tcmDiaries, controlDiaries], allRecords.filter(item => Number(item.year) === editorialYear && inGeneralNews(item)));
   const controlFront = rankedControlNews.slice(0, 8);
   for (const requiredSource of ["TCM-GO", "TCE-GO"]) {
     if (controlFront.some((item) => item.sourceFamily?.includes(requiredSource))) continue;
@@ -731,15 +729,15 @@ async function main() {
   }
   controlFront.sort(recentFirst);
 
-  const stateFront = sortForSearch(stateRecords.map(applyEditorialCuration)
+  const stateFront = sortForSearch(stateRecords.map(currentVersion).filter(inGeneralNews)
     .filter((item) => item.recordType === "story" && !isAlego(item) && Number(item.year) === editorialYear)).slice(0, 8);
-  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs).map(applyEditorialCuration)
+  const trindadeFront = sortForSearch(normalizedTrindadeNews.concat(normalizedTrindadeActs).map(currentVersion).filter(inGeneralNews)
     .filter((item) => item.recordType === "story" && Number(item.year) === editorialYear)).slice(0, 8);
   const actsFront = sortForSearch(
     normalizedTrindadeActs
       .concat(normalizedJulyDocumentNews)
       .concat(normalizedControlNews)
-      .map(applyEditorialCuration)
+      .map(currentVersion).filter(inGeneralNews)
       .filter((item) => item.recordType === "story" && !isAlego(item) && Number(item.year) === editorialYear)
   ).slice(0, 8);
   const julyPublishedNews = sortForSearch(
@@ -747,7 +745,7 @@ async function main() {
       normalizedJulyDocumentNews.concat(
         normalizedTrindadeActs.filter((item) => item.month === "2026-07" && item.recordType === "story")
       )
-    ).map(applyEditorialCuration).filter((item) => item.recordType === "story")
+    ).map(currentVersion).filter(item => item.recordType === "story" && inGeneralNews(item))
   );
 
   const sourceCards = Object.values(sourceLibrary).map((entry) =>
@@ -807,7 +805,7 @@ async function main() {
       year: bucket.label,
       count: bucket.count,
       href: `/busca/?year=${bucket.label}`,
-      lead: rankFrontPageStories(items.filter((item) => item.recordType === "story")).at(0) || null,
+      lead: rankFrontPageStories(items.filter((item) => item.recordType === "story" && inGeneralNews(item))).at(0) || null,
       cities: countBy(items.filter((item) => item.city), (item) => item.city).slice(0, 3)
     };
   });
@@ -881,6 +879,11 @@ async function main() {
     },
     leadStory,
     heroSidebar,
+    desks: Object.fromEntries(Object.entries(desks).map(([key, items]) => [key, items.map(item => ({
+      id:item.id, title:item.title, deck:item.deck, path:item.path, date:item.date, city:item.city,
+      sectionId:key, sourceUrl:item.sourceUrl, sourceLabel:item.sourceLabel, documentReference:item.documentReference,
+      image:item.image?.kind === 'source-page' ? item.image : null
+    }))])),
     controlFront,
     controlCoverage,
     timeline: {
