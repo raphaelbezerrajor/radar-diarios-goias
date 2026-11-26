@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T09:30:08.502Z",
+  "generated_at": "2026-11-26T20:30:08.101Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-11-19",
@@ -8,9 +8,9 @@
   },
   "summary": {
     "sources": 2,
-    "editions": 225,
-    "current_editions": 12,
-    "valid_pdfs": 225,
+    "editions": 227,
+    "current_editions": 14,
+    "valid_pdfs": 227,
     "failed_downloads": 0
   },
   "sources": [
@@ -19,7 +19,7 @@
       "name": "Diario Oficial do Estado de Goias",
       "official_url": "https://diariooficial.abc.go.gov.br/",
       "collection_method": "api_publica_oficial_e_pdf_certificado",
-      "generated_at": "2026-11-26T09:30:08.420Z",
+      "generated_at": "2026-11-26T20:30:07.790Z",
       "range": {
         "from": "2026-08-04",
         "to": "2026-11-26",
@@ -2561,6 +2561,23 @@
           "download_status": "download_success",
           "validation_status": "valid_pdf",
           "error": null
+        },
+        {
+          "id": "doego:7459",
+          "source_edition_id": "7459",
+          "edition_number": "24913",
+          "date": "2026-11-26",
+          "supplement": false,
+          "pages": 42,
+          "official_url": "https://diariooficial.abc.go.gov.br/portal/visualizacoes/pdf/7459/",
+          "file_url": "https://diariooficial.abc.go.gov.br/portal/edicoes/download/7459",
+          "local_path": "data/raw/doego/2026/11/doego-2026-11-26-edicao-7459.pdf",
+          "bytes": 2654286,
+          "sha256": "c463fc3cd1a167268ad6777660e80bfc222641c844454e1e4993aed2196b28ca",
+          "last_modified": "Thu, 26 Nov 2026 10:41:30 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "error": null
         }
       ]
     },
@@ -2569,7 +2586,7 @@
       "name": "Diario Eletronico de Contas do TCE-GO",
       "official_url": "https://dec.tce.go.gov.br/",
       "collection_method": "calendario_publico_oficial_e_pdf",
-      "generated_at": "2026-11-26T09:30:08.502Z",
+      "generated_at": "2026-11-26T20:30:08.101Z",
       "range": {
         "from": "2026-08-04",
         "to": "2026-11-26",
@@ -3863,6 +3880,23 @@
           "local_path": "data/raw/tcego/2026/11/tcego-dec-213-2026-11-25.pdf",
           "bytes": 489297,
           "sha256": "26b6e6c8ac579f3a4c0e45c23f942eaf4aa759d65c831c252f072371605b756f",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "error": null
+        },
+        {
+          "id": "tcego:031102142452461",
+          "source_edition_id": "031102142452461",
+          "edition_number": "214",
+          "date": "2026-11-26",
+          "supplement": false,
+          "pages": null,
+          "official_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=031102142452461",
+          "file_url": "https://dec.tce.go.gov.br/ConsultaDiario/CarregaDocumento?documento=031102142452461",
+          "local_path": "data/raw/tcego/2026/11/tcego-dec-214-2026-11-26.pdf",
+          "bytes": 514549,
+          "sha256": "5c1368a70fe434542107fad6d759496d4c0c599806a6c9141997fb4b45abd810",
           "last_modified": null,
           "download_status": "download_success",
           "validation_status": "valid_pdf",
