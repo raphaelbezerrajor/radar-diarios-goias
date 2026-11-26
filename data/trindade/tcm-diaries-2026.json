@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:30:10.249Z",
+  "generated_at": "2026-11-26T03:30:10.922Z",
   "range": {
-    "from": "2026-11-18",
-    "to": "2026-11-25"
+    "from": "2026-11-19",
+    "to": "2026-11-26"
   },
   "summary": {
     "sources": 1,
     "sources_ok": 1,
-    "editions": 11,
-    "downloaded": 11,
+    "editions": 12,
+    "downloaded": 12,
     "failed_downloads": 0
   },
   "sources": [
@@ -18,7 +18,7 @@
       "name": "Diário Oficial de Contas do TCM-GO",
       "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
       "collection_method": "calendario_oficial_jsf_e_original_preservado",
-      "checked_at": "2026-11-25T22:30:10.249Z",
+      "checked_at": "2026-11-26T03:30:10.922Z",
       "status": "checked",
       "source_warning": null,
       "editions": [
@@ -238,6 +238,26 @@
           "signature_verified": false,
           "bytes": 1925148,
           "sha256": "05b718af091624bd3406170c89bbd1142dc8976e269d6b7f996b0bbfbd0ef3ea",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "error": null
+        },
+        {
+          "id": "tcmgo:2810",
+          "source_edition_id": "2810",
+          "edition_number": "2810",
+          "date": "2026-11-26",
+          "document_index": 0,
+          "official_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+          "file_url": "https://www.tcmgo.tc.br/doc/index.jsf",
+          "local_path": "data/raw/tcmgo/diario/2026/11/tcmgo-doc-2810-2026-11-26.pdf",
+          "extraction_status": "pending",
+          "signed_path": "data/raw/tcmgo/diario/2026/11/tcmgo-doc-2810-2026-11-26.p7s",
+          "signed_sha256": "96ef3b98d280c9b5cabe11e30497df9b68bcdabfe497c7e9d891d9000ee9c516",
+          "signed_bytes": 2375729,
+          "signature_verified": false,
+          "bytes": 2367810,
+          "sha256": "48e42f5cc7746a3f6d077142d74c8645b0fb3772604f8acb27f4454df82b6677",
           "download_status": "download_success",
           "validation_status": "valid_pdf",
           "error": null
