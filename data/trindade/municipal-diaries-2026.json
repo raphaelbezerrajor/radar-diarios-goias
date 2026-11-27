@@ -2,14 +2,14 @@
   "schema_version": 1,
   "project": "Pauteiro",
   "purpose": "Conferencia diaria de diarios municipais e fila de leitura ato a ato",
-  "generated_at": "2026-11-26T22:30:23.518Z",
+  "generated_at": "2026-11-27T03:30:24.120Z",
   "timezone": "America/Sao_Paulo",
   "range": {
     "from": "2026-06-01",
-    "to": "2026-11-26",
+    "to": "2026-11-27",
     "last_checked": {
-      "from": "2026-11-19",
-      "to": "2026-11-26"
+      "from": "2026-11-20",
+      "to": "2026-11-27"
     }
   },
   "monitored_municipalities": [
@@ -25,10 +25,10 @@
     "sources": 5,
     "sources_ok": 5,
     "municipalities": 7,
-    "editions": 622,
-    "downloaded": 620,
+    "editions": 624,
+    "downloaded": 622,
     "failed_downloads": 2,
-    "extraction_pending": 622
+    "extraction_pending": 624
   },
   "daily_check_windows": [
     {
@@ -3130,22 +3130,41 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "agm:114678",
+          "source_edition_id": "114678",
+          "edition_number": "3753",
+          "date": "2026-11-27",
+          "published_at": null,
+          "publication_timestamp_kind": "official_upload_timestamp",
+          "extraordinary": false,
+          "official_url": "https://www.diariomunicipal.com.br/agm/",
+          "file_url": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=3392&i=publicado_114678_2026-11-26_c7793f446a8c57135aaefdaefb82a956.pdf",
+          "local_path": "data/raw/municipal-diaries/agm/2026/11/2026-11-27-3753.pdf",
+          "bytes": 1101039,
+          "sha256": "0f953be04db10fdbb88da4caa348c904b2fb7a2e59c4633c8ab9f34d8b0e0f81",
+          "last_modified": null,
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-26T22:30:19.265Z",
+      "checked_at": "2026-11-27T03:30:19.507Z",
       "range_checked": {
-        "from": "2026-11-19",
-        "to": "2026-11-26"
+        "from": "2026-11-20",
+        "to": "2026-11-27"
       },
       "summary": {
-        "editions_total": 161,
+        "editions_total": 162,
         "editions_in_checked_range": 7,
-        "downloaded": 159,
+        "downloaded": 160,
         "failed_downloads": 2,
-        "extraction_pending": 161,
+        "extraction_pending": 162,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-26",
+        "last_date": "2026-11-27",
         "observed_upload_times": {
           "all": {
             "observations": 95,
@@ -5447,31 +5466,50 @@
           "validation_status": "valid_pdf",
           "extraction_status": "pending",
           "error": null
+        },
+        {
+          "id": "anapolis:26038",
+          "source_edition_id": "26038",
+          "edition_number": "4.078/2026",
+          "date": "2026-11-26",
+          "published_at": "2026-11-26 21:00:37",
+          "publication_timestamp_kind": "official_file_created_timestamp",
+          "extraordinary": false,
+          "official_url": "https://dom.anapolis.go.gov.br/diarios/lista/26038",
+          "file_url": "https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/27358/PqjDVJ7FXY9vTVCGGxJufbg7XUwNXZxa14T2NjzQ.pdf",
+          "local_path": "data/raw/municipal-diaries/anapolis/2026/11/2026-11-26-4.078-2026.pdf",
+          "bytes": 495861,
+          "sha256": "36397062610df5dbf9008ca061d9547b98f9d56fbdd7fd2e8a77c21b4053bb45",
+          "last_modified": "Fri, 27 Nov 2026 00:00:41 GMT",
+          "download_status": "download_success",
+          "validation_status": "valid_pdf",
+          "extraction_status": "pending",
+          "error": null
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-26T22:30:20.462Z",
+      "checked_at": "2026-11-27T03:30:20.698Z",
       "range_checked": {
-        "from": "2026-11-19",
-        "to": "2026-11-26"
+        "from": "2026-11-20",
+        "to": "2026-11-27"
       },
       "summary": {
-        "editions_total": 119,
+        "editions_total": 120,
         "editions_in_checked_range": 4,
-        "downloaded": 119,
+        "downloaded": 120,
         "failed_downloads": 0,
-        "extraction_pending": 119,
+        "extraction_pending": 120,
         "first_date": "2026-06-01",
-        "last_date": "2026-11-25",
+        "last_date": "2026-11-26",
         "observed_upload_times": {
           "all": {
-            "observations": 119,
+            "observations": 120,
             "earliest": "01:41",
             "median": "21:13",
             "latest": "23:57"
           },
           "ordinary": {
-            "observations": 119,
+            "observations": 120,
             "earliest": "01:41",
             "median": "21:13",
             "latest": "23:57"
@@ -5479,7 +5517,7 @@
           "extraordinary": null
         },
         "observed_file_last_modified": {
-          "observations": 79,
+          "observations": 80,
           "earliest": "01:41",
           "median": "21:00",
           "latest": "23:31"
@@ -7711,14 +7749,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-26T22:30:21.167Z",
+      "checked_at": "2026-11-27T03:30:21.374Z",
       "range_checked": {
-        "from": "2026-11-19",
-        "to": "2026-11-26"
+        "from": "2026-11-20",
+        "to": "2026-11-27"
       },
       "summary": {
         "editions_total": 116,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 116,
         "failed_downloads": 0,
         "extraction_pending": 116,
@@ -9883,14 +9921,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-26T22:30:22.568Z",
+      "checked_at": "2026-11-27T03:30:22.549Z",
       "range_checked": {
-        "from": "2026-11-19",
-        "to": "2026-11-26"
+        "from": "2026-11-20",
+        "to": "2026-11-27"
       },
       "summary": {
         "editions_total": 112,
-        "editions_in_checked_range": 5,
+        "editions_in_checked_range": 4,
         "downloaded": 112,
         "failed_downloads": 0,
         "extraction_pending": 112,
@@ -12096,14 +12134,14 @@
         }
       ],
       "status": "checked",
-      "checked_at": "2026-11-26T22:30:22.995Z",
+      "checked_at": "2026-11-27T03:30:22.959Z",
       "range_checked": {
-        "from": "2026-11-19",
-        "to": "2026-11-26"
+        "from": "2026-11-20",
+        "to": "2026-11-27"
       },
       "summary": {
         "editions_total": 114,
-        "editions_in_checked_range": 6,
+        "editions_in_checked_range": 5,
         "downloaded": 114,
         "failed_downloads": 0,
         "extraction_pending": 114,
